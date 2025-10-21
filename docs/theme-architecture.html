@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Architecture & Customization - XeroShoes</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <div class="two-column-layout">
+            <!-- Table of Contents -->
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">Theme Overview</a></li>
+                    <li><a href="#base-theme">Base Theme: Fluid Framework</a></li>
+                    <li><a href="#custom-sections">Custom Sections</a>
+                        <ul>
+                            <li><a href="#xero-custom-landing">Xero Custom Landing</a></li>
+                            <li><a href="#product-sections">Product-Specific Sections</a></li>
+                            <li><a href="#global-sections">Global Sections</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#liquid-templates">Liquid Templates</a>
+                        <ul>
+                            <li><a href="#product-templates">Product Templates</a></li>
+                            <li><a href="#page-templates">Page Templates</a></li>
+                            <li><a href="#collection-templates">Collection Templates</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#customization-areas">Key Customization Areas</a>
+                        <ul>
+                            <li><a href="#styling">CSS & Styling</a></li>
+                            <li><a href="#javascript">JavaScript Modules</a></li>
+                            <li><a href="#metafields">Custom Metafields</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#branding">Branding & Design System</a></li>
+                    <li><a href="#performance">Performance Optimizations</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main>
+                <section id="overview">
+                    <h2>Theme Architecture Overview</h2>
+                    <p>The XeroShoes eCommerce platform is built on a heavily customized version of the Fluid Framework theme (v3.0.0) by Praella Agency. The theme has been extensively modified to support XeroShoes' unique barefoot/minimalist shoe business model with custom sections, templates, and functionality.</p>
+                    
+                    <div class="alert info">
+                        <strong>Theme Details:</strong> Fluid Framework v3.0.0 by Praella Agency, extensively customized for XeroShoes' barefoot shoe business model.
+                    </div>
+                </section>
+                
+                <section id="base-theme">
+                    <h2>Base Theme: Fluid Framework</h2>
+                    <p>The foundation is the Fluid Framework theme, which provides:</p>
+                    <ul>
+                        <li>Modern, responsive design architecture</li>
+                        <li>Advanced section and block system</li>
+                        <li>Built-in performance optimizations</li>
+                        <li>Extensive customization options through settings schema</li>
+                    </ul>
+                    
+                    <h3>Theme Configuration</h3>
+                    <p>The theme includes comprehensive settings for:</p>
+                    <ul>
+                        <li><strong>Color System:</strong> Base colors, main colors, accent colors, and gradient options</li>
+                        <li><strong>Typography:</strong> Font families, sizes, weights, and spacing</li>
+                        <li><strong>Layout:</strong> Container widths, spacing, and responsive breakpoints</li>
+                        <li><strong>Product Display:</strong> Grid layouts, image ratios, and product card styling</li>
+                    </ul>
+                </section>
+                
+                <section id="custom-sections">
+                    <h2>Custom Sections</h2>
+                    <p>XeroShoes has developed numerous custom sections to support their specific business needs and marketing requirements.</p>
+                    
+                    <section id="xero-custom-landing">
+                        <h3>Xero Custom Landing</h3>
+                        <p>The flagship custom section for barefoot shoe marketing, featuring:</p>
+                        <ul>
+                            <li>Hero section with brand messaging ("Unlock Your Natural Power™")</li>
+                            <li>Value proposition sections explaining barefoot benefits</li>
+                            <li>Product showcase with shoe finder integration</li>
+                            <li>Educational content about foot health and movement</li>
+                            <li>Custom styling with XeroShoes brand colors (#53CAEC, #F3F0EA)</li>
+                        </ul>
+                        
+                        <div class="code-block">
+<pre><code>{% comment %} Xero Shoes Complete Section - Barefoot Shoes Landing {% endcomment %}
+&lt;section class="xero-complete-section" data-section-id="{{ section.id }}"&gt;
+  &lt;div class="hero-wrapper" style="background-color: #F3F0EA;"&gt;
+    &lt;h1 class="hero-title"&gt;The Best Barefoot Shoes for Walking or Running&lt;/h1&gt;
+    &lt;p class="hero-subtitle"&gt;Revolutionize the way your feet – and body! – move and feel.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                    </section>
+                    
+                    <section id="product-sections">
+                        <h3>Product-Specific Sections</h3>
+                        <ul>
+                            <li><strong>Product Comfort Dynamic:</strong> Dynamic comfort information based on product attributes</li>
+                            <li><strong>Product Media Banner:</strong> Enhanced product imagery and video content</li>
+                            <li><strong>Product Two Image Text:</strong> Side-by-side image and text layouts</li>
+                            <li><strong>Product Variant Attributes:</strong> Custom variant selection and display</li>
+                            <li><strong>Bundle Thickness Selector:</strong> Custom product bundling functionality</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="global-sections">
+                        <h3>Global Sections</h3>
+                        <ul>
+                            <li><strong>Global Header Slider:</strong> Hero banner with product integration</li>
+                            <li><strong>Global Featured Collection:</strong> Dynamic collection displays</li>
+                            <li><strong>Global Blog Posts:</strong> Content marketing integration</li>
+                            <li><strong>Global Newsletter Banner:</strong> Email capture and marketing</li>
+                            <li><strong>Global Auto Scroll:</strong> Automated content rotation</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="liquid-templates">
+                    <h2>Liquid Templates</h2>
+                    <p>The theme includes extensive template customizations for different page types and use cases.</p>
+                    
+                    <section id="product-templates">
+                        <h3>Product Templates</h3>
+                        <ul>
+                            <li><strong>template-product.liquid:</strong> Main product page template</li>
+                            <li><strong>template-product-quickshop.liquid:</strong> Quick shop modal functionality</li>
+                            <li><strong>template-product-related.liquid:</strong> Related products display</li>
+                            <li><strong>template-product-tabs.liquid:</strong> Tabbed product information</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="page-templates">
+                        <h3>Page Templates</h3>
+                        <p>Extensive page template library including:</p>
+                        <ul>
+                            <li><strong>Educational Pages:</strong> barefoot-2, barefoot-myths-and-truth, minimalist</li>
+                            <li><strong>Activity-Specific:</strong> basketball, climbing, crossfit, hiking, yoga</li>
+                            <li><strong>Product Categories:</strong> boots-minimalist, recovery-shoes, trail-running</li>
+                            <li><strong>Support Pages:</strong> faq, sizing, returns, warranty</li>
+                            <li><strong>Marketing Pages:</strong> shoe-finder, what-s-wrong, xero-circle</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="collection-templates">
+                        <h3>Collection Templates</h3>
+                        <ul>
+                            <li><strong>template-collection.liquid:</strong> Main collection page</li>
+                            <li><strong>template-collection-banner.liquid:</strong> Collection with banner</li>
+                            <li><strong>template-list-collections.liquid:</strong> Collection listing page</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="customization-areas">
+                    <h2>Key Customization Areas</h2>
+                    
+                    <section id="styling">
+                        <h3>CSS & Styling</h3>
+                        <p>The theme includes extensive custom CSS files for specific functionality:</p>
+                        <ul>
+                            <li><strong>Product-specific styles:</strong> product-comfort.css, product-recently-viewed.js</li>
+                            <li><strong>Template styles:</strong> template-*.css for specific page types</li>
+                            <li><strong>Component styles:</strong> Component-specific styling for cart, search, etc.</li>
+                            <li><strong>Global styles:</strong> global.css, utilities.css, spacing.css</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="javascript">
+                        <h3>JavaScript Modules</h3>
+                        <p>Custom JavaScript functionality includes:</p>
+                        <ul>
+                            <li><strong>Product functionality:</strong> variant selection, image zoom, quickshop</li>
+                            <li><strong>Cart enhancements:</strong> cart form, discount handling, upsell</li>
+                            <li><strong>Search features:</strong> predictive search, search modal</li>
+                            <li><strong>Performance:</strong> lazy loading, optimization scripts</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="metafields">
+                        <h3>Custom Metafields</h3>
+                        <p>Extensive metafield system for product data:</p>
+                        <ul>
+                            <li><strong>Product attributes:</strong> color, activity, gender, collection</li>
+                            <li><strong>Marketing data:</strong> mega menu images, hover images, display titles</li>
+                            <li><strong>Content management:</strong> product highlights, descriptions, FAQs</li>
+                            <li><strong>Integration data:</strong> Google Shopping, reviews, bundles</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="branding">
+                    <h2>Branding & Design System</h2>
+                    <p>XeroShoes maintains a consistent brand identity throughout the theme:</p>
+                    
+                    <h3>Color Palette</h3>
+                    <ul>
+                        <li><strong>Primary Blue:</strong> #53CAEC (brand accent)</li>
+                        <li><strong>Background:</strong> #F3F0EA (warm neutral)</li>
+                        <li><strong>Text:</strong> #0F172B (dark navy)</li>
+                        <li><strong>Accent:</strong> Various activity-specific colors</li>
+                    </ul>
+                    
+                    <h3>Typography</h3>
+                    <ul>
+                        <li><strong>Headings:</strong> Paralucent (custom font family)</li>
+                        <li><strong>Body Text:</strong> Inter (web-safe fallback)</li>
+                        <li><strong>Special Use:</strong> Custom font weights and styles</li>
+                    </ul>
+                </section>
+                
+                <section id="performance">
+                    <h2>Performance Optimizations</h2>
+                    <p>The theme includes several performance optimization features:</p>
+                    <ul>
+                        <li><strong>Lazy Loading:</strong> lozad.js for image optimization</li>
+                        <li><strong>Preloading:</strong> Critical asset preloading</li>
+                        <li><strong>Bundle Optimization:</strong> Custom bundling for product variants</li>
+                        <li><strong>Speed Scripts:</strong> Performance optimization scripts</li>
+                        <li><strong>Image Optimization:</strong> Responsive images and WebP support</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load header and footer -->
+    <script>
+        // Load header
+        fetch('../templates/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize header menu functionality
+                const menuToggle = document.getElementById('menu-toggle');
+                const headerMenu = document.getElementById('header-menu');
+                
+                if (menuToggle && headerMenu) {
+                    menuToggle.addEventListener('click', function() {
+                        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                        
+                        menuToggle.setAttribute('aria-expanded', !isExpanded);
+                        menuToggle.classList.toggle('active');
+                        headerMenu.classList.toggle('show');
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('active');
+                            headerMenu.classList.remove('show');
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('../templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
+</body>
+</html>
