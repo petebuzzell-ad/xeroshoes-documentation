@@ -628,38 +628,11 @@
                         </ul>
                     </section>
                     
-                    <section id="product-workflows">
-                        <h3>Product Management Workflows</h3>
-                        <p>Standardized procedures for product creation, updates, and management across both instances.</p>
+                    <section id="variant-visibility-management">
+                        <h3>Variant Visibility Management</h3>
+                        <p>Managing variant visibility using the <code>custom.draft_variant</code> metafield - a custom implementation specific to XeroShoes that extends beyond standard Shopify functionality.</p>
                         
-                        <h4>New Product Creation</h4>
-                        <ol>
-                            <li>Access Products → Add product</li>
-                            <li>Enter basic product information (title, description, vendor)</li>
-                            <li>Set product type and add relevant tags</li>
-                            <li>Upload product images (minimum 3-5 images)</li>
-                            <li>Configure variants (sizes, colors, styles)</li>
-                            <li>Set pricing and inventory quantities</li>
-                            <li>Add custom metafields for detailed attributes</li>
-                            <li>Configure SEO settings</li>
-                            <li>Save and publish product</li>
-                            <li>Repeat process on both US and EU instances</li>
-                        </ol>
-                        
-                        <h4>Product Update Workflow</h4>
-                        <ol>
-                            <li>Identify product requiring updates</li>
-                            <li>Access product in Shopify Admin</li>
-                            <li>Update relevant information (pricing, inventory, descriptions)</li>
-                            <li>Update metafields if necessary</li>
-                            <li>Preview changes before publishing</li>
-                            <li>Save and publish updates</li>
-                            <li>Apply same changes to corresponding instance</li>
-                            <li>Verify changes on live site</li>
-                        </ol>
-                        
-                        <h4>Variant Visibility Management</h4>
-                        <p>Managing variant visibility using the <code>custom.draft_variant</code> metafield:</p>
+                        <h4>Variant Visibility Control</h4>
                         <ol>
                             <li>Access product in Shopify Admin</li>
                             <li>Navigate to the Variants section</li>
@@ -680,6 +653,14 @@
                         <div class="alert info">
                             <strong>Pro Tip:</strong> Use variant visibility management for seasonal inventory control, testing new variants, or managing regional availability without deleting variant data.
                         </div>
+                        
+                        <h4>Advanced Use Cases</h4>
+                        <ul>
+                            <li><strong>Seasonal Product Management:</strong> Hide winter boots during summer without losing variant data</li>
+                            <li><strong>A/B Testing:</strong> Test new color variants with limited visibility before full launch</li>
+                            <li><strong>Regional Rollouts:</strong> Gradually introduce products to different markets</li>
+                            <li><strong>Inventory Transitions:</strong> Manage product discontinuation while maintaining data integrity</li>
+                        </ul>
                     </section>
                 </section>
                 
@@ -782,89 +763,71 @@
                     </section>
                 </section>
                 
-                <section id="operations">
-                    <h2>Operations & Runbooks</h2>
+                <section id="custom-implementations">
+                    <h2>Custom Implementations & Technical Details</h2>
                     
-                    <section id="user-management">
-                        <h3>User & Access Management</h3>
-                        <p>User access provisioning and permission management across both instances.</p>
+                    <section id="theme-customizations">
+                        <h3>Theme Customizations</h3>
+                        <p>XeroShoes-specific customizations that extend beyond standard Shopify functionality.</p>
                         
-                        <h4>User Roles & Permissions</h4>
+                        <h4>Custom Sections</h4>
                         <ul>
-                            <li><strong>Store Owner:</strong> Full access to all features and settings</li>
-                            <li><strong>Admin:</strong> Full access except billing and user management</li>
-                            <li><strong>Content Manager:</strong> Products, pages, blog posts, collections</li>
-                            <li><strong>Order Manager:</strong> Orders, customers, fulfillment</li>
-                            <li><strong>Analytics Viewer:</strong> Reports and analytics only</li>
+                            <li><strong>Xero Custom Landing:</strong> Specialized landing page sections for product launches</li>
+                            <li><strong>Product Group Blocks:</strong> Custom product grouping and display logic</li>
+                            <li><strong>Video Banners:</strong> Enhanced video integration with custom controls</li>
+                            <li><strong>Multi-Layer Sales Motivators:</strong> Advanced promotional display system</li>
                         </ul>
                         
-                        <h4>Access Provisioning Process</h4>
-                        <ol>
-                            <li>Determine required access level based on role</li>
-                            <li>Create user account in Shopify Admin</li>
-                            <li>Assign appropriate permissions</li>
-                            <li>Send invitation email to user</li>
-                            <li>User completes account setup</li>
-                            <li>Verify access and permissions</li>
-                            <li>Repeat process for both instances if needed</li>
-                        </ol>
-                    </section>
-                    
-                    <section id="content-procedures">
-                        <h3>Content Management Procedures</h3>
-                        <p>Standardized procedures for content management across both instances.</p>
-                        
-                        <h4>Daily Content Tasks</h4>
+                        <h4>Custom Liquid Logic</h4>
                         <ul>
-                            <li>Review and respond to customer inquiries</li>
-                            <li>Monitor site performance and uptime</li>
-                            <li>Check for content updates or corrections needed</li>
-                            <li>Review analytics for content performance</li>
-                        </ul>
-                        
-                        <h4>Weekly Content Tasks</h4>
-                        <ul>
-                            <li>Create and publish new blog posts</li>
-                            <li>Update product information and pricing</li>
-                            <li>Review and update collection pages</li>
-                            <li>Check for broken links or images</li>
+                            <li><strong>Variant Visibility Control:</strong> <code>custom.draft_variant</code> metafield implementation</li>
+                            <li><strong>Dynamic Option Filtering:</strong> Real-time variant option filtering based on availability</li>
+                            <li><strong>Color Swatch Logic:</strong> Custom color matching and display algorithms</li>
+                            <li><strong>Inventory Status Display:</strong> Custom low-stock and availability messaging</li>
                         </ul>
                     </section>
                     
-                    <section id="product-procedures">
-                        <h3>Product Management Procedures</h3>
-                        <p>Product management workflows and procedures for both instances.</p>
+                    <section id="metafield-architecture">
+                        <h3>Metafield Architecture</h3>
+                        <p>Custom metafield system designed specifically for XeroShoes product data requirements.</p>
                         
-                        <h4>Product Update Procedures</h4>
-                        <ol>
-                            <li>Identify products requiring updates</li>
-                            <li>Gather updated information and assets</li>
-                            <li>Update product in US instance first</li>
-                            <li>Test changes on staging environment</li>
-                            <li>Apply changes to EU instance</li>
-                            <li>Verify changes on both live sites</li>
-                            <li>Update any related marketing materials</li>
-                        </ol>
-                    </section>
-                    
-                    <section id="troubleshooting">
-                        <h3>Troubleshooting Guides</h3>
-                        <p>Common issues and resolution procedures for the XeroShoes platform.</p>
-                        
-                        <h4>Common Issues</h4>
+                        <h4>Product-Specific Metafields</h4>
                         <ul>
-                            <li><strong>Images Not Loading:</strong> Check file size and format, clear cache</li>
-                            <li><strong>Payment Processing Errors:</strong> Verify payment gateway configuration</li>
-                            <li><strong>Inventory Sync Issues:</strong> Check metafield configurations</li>
-                            <li><strong>Email Delivery Problems:</strong> Verify Klaviyo integration settings</li>
+                            <li><strong>custom.display_title:</strong> Custom product titles for different contexts</li>
+                            <li><strong>custom.feed_description:</strong> SEO-optimized descriptions for product feeds</li>
+                            <li><strong>custom.product_highlights:</strong> Rich text feature highlights with formatting</li>
+                            <li><strong>custom.activity:</strong> Activity-based categorization for filtering</li>
+                            <li><strong>custom.color:</strong> Color information for swatch generation</li>
+                            <li><strong>custom.draft_variant:</strong> Variant visibility control system</li>
                         </ul>
                         
-                        <h4>Emergency Procedures</h4>
+                        <h4>Metafield Dependencies</h4>
                         <ul>
-                            <li><strong>Site Down:</strong> Contact Shopify support immediately</li>
-                            <li><strong>Payment Issues:</strong> Switch to backup payment method</li>
-                            <li><strong>Data Loss:</strong> Restore from Matrixify backup</li>
-                            <li><strong>Security Breach:</strong> Follow incident response protocol</li>
+                            <li><strong>Variant Picker Logic:</strong> Depends on <code>custom.draft_variant</code> for visibility control</li>
+                            <li><strong>Search Functionality:</strong> Uses <code>custom.activity</code> and <code>custom.color</code> for filtering</li>
+                            <li><strong>Product Feeds:</strong> Leverages <code>custom.feed_description</code> for external integrations</li>
+                            <li><strong>Collection Logic:</strong> Utilizes metafield data for smart collection rules</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="integration-customizations">
+                        <h3>Integration Customizations</h3>
+                        <p>Custom implementations and configurations specific to XeroShoes' business requirements.</p>
+                        
+                        <h4>App-Specific Customizations</h4>
+                        <ul>
+                            <li><strong>Stamped Reviews:</strong> Custom review display logic and styling</li>
+                            <li><strong>Klaviyo Integration:</strong> Custom event tracking and segmentation logic</li>
+                            <li><strong>Searchanise:</strong> Custom search filters and result ranking</li>
+                            <li><strong>Elevar Tracking:</strong> Custom conversion tracking implementation</li>
+                        </ul>
+                        
+                        <h4>Custom JavaScript Modules</h4>
+                        <ul>
+                            <li><strong>Variant Options Component:</strong> Enhanced variant selection with draft variant support</li>
+                            <li><strong>Product Form Handler:</strong> Custom form submission and validation logic</li>
+                            <li><strong>Cart Drawer Controller:</strong> Enhanced cart functionality with custom features</li>
+                            <li><strong>Search Enhancement:</strong> Custom search behavior and result display</li>
                         </ul>
                     </section>
                 </section>
