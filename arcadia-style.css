@@ -922,7 +922,7 @@ button:hover, .cta:hover, .download-btn:hover, .video-btn:hover {
 /* Logo link treatment */
 .logo-link {
     display: inline-block;
-    background-color: #2D2D2D;
+    /* background-color: #2D2D2D; */
     padding: 0 5px;
     border-radius: 10px;
     text-decoration: none;
@@ -930,7 +930,7 @@ button:hover, .cta:hover, .download-btn:hover, .video-btn:hover {
 }
 
 .logo-link:hover {
-    background-color: #3D3D3D;
+    /* background-color: #3D3D3D; */
 }
 
 .logo-link .logo {
