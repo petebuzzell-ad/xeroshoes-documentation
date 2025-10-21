@@ -1,0 +1,634 @@
+{% liquid
+  assign product = block.settings.product
+  assign template_type = block.settings.template_type
+  assign media = product.media.first
+  assign class_list = ''
+  if block.settings.image_zoom == 'in_image_block'
+    assign class_list = 'image-magnify-hover'
+  endif
+%}
+{%- capture img_sizes -%}
+    (min-width: {{ settings.container_width }}) calc({{ settings.container_width }} / 2), 100vw
+{%- endcapture -%}
+
+  <div class="{% if template.name == 'product' %}col-lg-8{% endif %} product-images-wrapper justify-content-between {% if template_type == 'classic-vertical' %}d-lg-flex{% else %}d-block{% endif %} position-relative">
+    <a class="skip-to-content-link button d-none" href="#ProductInfo-{{ section.id }}">
+      {{ "accessibility.skip_to_product_info" | t }}
+    </a>
+    <span class="badges badges-pdp m-lg-4 m-1 end-0 px-lg-4 position-absolute d-flex flex-wrap gap-1 gap-lg-2 {{ block.settings.badge_position }}">
+        {%- liquid
+            assign on_sale = false
+            assign sold_out = false
+            assign selected_variant = product.selected_or_first_available_variant
+    
+            if settings.show_sale_badge 
+            if selected_variant.compare_at_price > selected_variant.price
+                assign on_sale = true
+            endif
+            endif
+            if settings.show_soldout_badge and product.available == false
+            assign sold_out = true
+            endif
+    
+            assign product_badges = settings.custom_badges | newline_to_br | split: '<br />'
+        -%}
+        
+        {%- assign tags = product.tags | downcase -%}
+        {%- for badge in product_badges -%}
+            {% liquid
+                assign badge_data = badge | strip | split: ':'
+                assign badge_label = badge_data[1] | strip
+                assign badgebg = badge_data[2] | strip
+                assign badgecolor = badge_data[3] | strip
+            %}
+            {%- if tags contains badge_data[0] -%}
+            <span class="badge badge-new" style="background-color: {{ badgebg }}; color: {{ badgecolor }};">
+                {{ badge_label }}
+            </span>
+            {%- endif -%}
+        {%- endfor -%}
+    
+        {%- if on_sale -%}
+            <span class="badge badge-sale" >
+            {{ 'products.product.on_sale' | t | escape }}
+            </span>
+        {%- endif -%}
+    
+        {%- if sold_out -%}
+            <span class="badge badge-sold">
+            {{ 'products.product.sold_out' | t | escape }}
+            </span>
+        {%- endif -%}
+
+        {% comment %} {%- assign tags = product.tags | downcase -%}
+        {%- if tags contains 'waterproof' -%}
+            <span class="badge badge-best-seller text-capitalize" >waterproof</span>
+        {%- endif -%}
+
+        {%- if tags contains 'new-color' -%}
+            <span class="badge badge-new text-capitalize" >New Color</span>
+        {%- endif -%}
+
+        {%- if tags contains 'back-in-stock' -%}
+            <span class="badge badge-new text-capitalize" >Back In Stock</span>
+        {%- endif -%} {% endcomment %}
+
+    </span>
+    {% if product.media == blank %}
+        <div class="product--media {{ block.settings.ratio }}" data-media-id="{{ product.featured_image.id }}">
+            {% comment %} {{ 'detailed-apparel-1' | placeholder_svg_tag: 'w-100' }} {% endcomment %}
+            {% render 'placeholder-image' %}
+        </div>
+    {% elsif product.media.size > 1 %}
+        <div class="swiper-wrapper__custom swiper-wrapper__custom--main {{ block.settings.template_type }} d-flex flex-column" data-attributegallarypdp="{% if product.metafields.product.attribute_galleries %}true{% else %}false{% endif %}">
+            <div class="order-2 swiper-scrollbar swiper-scrollbar-pdp d-block d-lg-none"></div>
+            {%- if block.settings.nav_dots -%}
+                <div class="swiper-pagination order-2 mt-6 swiper-pagination-main {{ block.settings.pagination_visible }} {{ block.settings.pagination_color }}"></div>
+            {%- endif -%}
+            <div class="swiper-wrapper__custom">
+                {%- if block.settings.nav_arrows -%}
+                    <div class="custom-swiper-navigation {{ block.settings.nav_arrows_color }} {{ block.settings.nav_arrows_outside }} {{ block.settings.nav_arrows_visible }} {{ block.settings.nav_arrows_size }}">
+                        <button class="swiper-button-prev button-prev-main"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-left"></use></svg></button>
+                        <button class="swiper-button-next button-next-main"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></button>
+                    </div>
+                {%- endif -%}
+                {% liquid
+                    assign countvariants = product.variants_count
+                    assign count = 0
+
+                    for variant in product.variants
+                        if variant.metafields.product_variant.draft_variant == true
+                        assign count = count | plus: 1
+                        endif
+                    endfor
+                %}
+
+                {% comment %} CREATE ARRAY OF COLOR VALUES FROM STYLE OPTION {% endcomment %}
+                {% liquid
+                    assign colorvalues = ''
+                    for value in product.options_by_name['style'].values
+                        assign val = value | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-'
+                        assign colorvalues = colorvalues | append: val | append: ","
+                    endfor
+
+                    assign attrcolors = ''
+                    for gallery in product.metafields.product.attribute_galleries.value
+                        assign colordowncase = gallery.style_color | downcase
+                        assign attrcolors = attrcolors | append: colordowncase | append: ","
+                    endfor
+
+                    assign arr_colorvalues = colorvalues | split: ","
+                    assign arr_attrcolors = attrcolors | split: ","
+
+                    assign find_not_attr_gal = ''
+                    for item in arr_colorvalues
+                        if item != "" and arr_attrcolors contains item 
+                        elsif item != ""
+                            assign find_not_attr_gal = find_not_attr_gal | append: item | append: ","
+                        endif
+                    endfor
+
+                    assign array_notfound = find_not_attr_gal | split: ','
+                    %}
+
+                {% for arrayval in array_notfound %}
+                {%- assign selectedcolor = product.selected_or_first_available_variant.option1 | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-' -%}
+                        
+                {% if arrayval == selectedcolor %}
+                <swiper-container  class=" 1" data-pdp-slider="{{ arrayval }}" data-productSlider thumbs-swiper=".product-image-thumbs" slides-per-view="1.155" space-between="3" scrollbar='{
+                    "el": ".swiper-scrollbar-pdp"
+                }'
+                    {%- if block.settings.nav_arrows -%}
+                        navigation='{
+                            "nextEl": ".button-next-main",
+                            "prevEl": ".button-prev-main"
+                        }'
+                    {%- endif -%}
+                    {%- if block.settings.nav_dots -%}
+                        pagination='{
+                            "el": ".swiper-pagination-main",
+                            "clickable": true,
+                            "type": "bullets"
+                        }'
+                    {%- endif -%}
+                    role="region" aria-label="Product image slider"> 
+
+                {% for value in product.options_by_name['style'].values %}
+                    {%- liquid 
+                        assign color_variant = product.variants | where: "option1", value | first
+                        assign slugvalue = value | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-'
+                    -%}
+                    {% if arrayval == slugvalue %}
+                        {% if color_variant.featured_image %}
+                            <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ color_variant.featured_image.id }}">
+                                <div class="product--media {{ block.settings.ratio }}">
+                                    {%- capture attributes_list -%}
+                                        data-variant-title="{{ color_variant.featured_image.alt | escape }}"
+                                    {%- endcapture -%}
+                                    {%- render 'image',
+                                        image: color_variant.featured_image,
+                                        sizes: img_sizes,
+                                        class: class_list,
+                                        preload: forloop.first,
+                                        attributes: attributes_list
+                                    -%}
+                                </div>
+                            </swiper-slide>
+                        {% endif %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+                </swiper-container>
+            {% endif %}
+                {% endfor %} 
+               
+
+                {%- if product.metafields.product.attribute_galleries.value.count > 0 and product.variants.size > 1 and countvariants != count -%}
+                    {%- for gallery in product.metafields.product.attribute_galleries.value -%}
+                        {% liquid
+                            assign colordowncase = gallery.style_color | downcase
+                            assign selectedcolor = product.selected_or_first_available_variant.option1 | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-'
+                        %}
+                        {% if colordowncase == selectedcolor %}
+                        <swiper-container  class="2" data-pdp-slider="{{ colordowncase }}" data-productSlider thumbs-swiper=".product-image-thumbs" slides-per-view="1.155" space-between="3" scrollbar='{
+                            "el": ".swiper-scrollbar-pdp"
+                        }'
+                            {%- if block.settings.nav_arrows -%}
+                                navigation='{
+                                    "nextEl": ".button-next-main",
+                                    "prevEl": ".button-prev-main"
+                                }'
+                            {%- endif -%}
+                            {%- if block.settings.nav_dots -%}
+                                pagination='{
+                                    "el": ".swiper-pagination-main",
+                                    "clickable": true,
+                                    "type": "bullets"
+                                }'
+                            {%- endif -%}
+                            role="region" aria-label="Product image slider"> 
+                            
+                            {% if product.tags contains 'featured-in-gallery' %}
+                            {% for value in product.options_by_name['style'].values %}
+                                {% liquid
+                                    assign color_variant = product.variants | where: "option1", value | first
+                                    assign slugvalue = value | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-'
+                                %}
+                                {% if colordowncase == slugvalue %}
+                                    {% if color_variant.featured_image %}
+                                        <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ color_variant.featured_image.id }}">
+                                            <div class="product--media {{ block.settings.ratio }}">
+                                                {%- capture attributes_list -%}
+                                                    data-variant-title="{{ color_variant.featured_image.alt | escape }}"
+                                                {%- endcapture -%}
+                                                {%- render 'image',
+                                                    image: color_variant.featured_image,
+                                                    sizes: img_sizes,
+                                                    class: class_list,
+                                                    preload: forloop.first,
+                                                    attributes: attributes_list
+                                                -%}
+                                            </div>
+                                        </swiper-slide>
+                                    {% endif %}
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            {% for media in gallery.image_gallery.value %}
+                                <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ media.id }}">
+                                {% if media.media_type == 'image' %}
+                                    <div class="product--media {{ block.settings.ratio }}">
+                                        {%- capture attributes_list -%}
+                                            data-variant-title="{{ media.alt | escape }}"
+                                        {%- endcapture -%}
+                                        {%- render 'image',
+                                            image: media,
+                                            sizes: img_sizes,
+                                            class: class_list,
+                                            preload: forloop.first,
+                                            attributes: attributes_list
+                                        -%}
+                                    </div>
+                                {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                                    {%- render 'media', media: media, class_list: block.settings.ratio, placement: 'popup' -%}
+                                {% endif %}
+                                </swiper-slide>
+                            {% endfor %}
+                        </swiper-container>
+                        {% endif %}
+                    {%- endfor -%}
+                {%- else -%}
+                <swiper-container data-productSlider thumbs-swiper=".product-image-thumbs" slides-per-view="1.155" space-between="3" scrollbar='{
+                    "el": ".swiper-scrollbar-pdp"
+                }'
+                    {%- if block.settings.nav_arrows -%}
+                        navigation='{
+                            "nextEl": ".button-next-main",
+                            "prevEl": ".button-prev-main"
+                        }'
+                    {%- endif -%}
+                    {%- if block.settings.nav_dots -%}
+                        pagination='{
+                            "el": ".swiper-pagination-main",
+                            "clickable": true,
+                            "type": "bullets"
+                        }'
+                    {%- endif -%}
+                    role="region" aria-label="Product image slider">   
+                    {% for media in product.media %}
+                        <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ media.id }}">
+                        {% if media.media_type == 'image' %}
+                            <div class="product--media {{ block.settings.ratio }}">
+                                {%- capture attributes_list -%}
+                                    data-variant-title="{{ media.alt | escape }}"
+                                {%- endcapture -%}
+                                {%- render 'image',
+                                    image: media,
+                                    sizes: img_sizes,
+                                    class: class_list,
+                                    preload: forloop.first,
+                                    attributes: attributes_list
+                                -%}
+                            </div>
+                        {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                            {%- render 'media', media: media, class_list: block.settings.ratio, placement: 'popup' -%}
+                        {% endif %}
+                        </swiper-slide>
+                    {% endfor %}
+                </swiper-container>
+                {%- endif -%}
+            </div>
+        </div>
+    {% else %}
+        <div class="product--media landscape" data-media-id="{{ product.featured_image.id }}">
+            {%- render 'image',
+                image: product.featured_image,
+                sizes: img_sizes,
+                preload: true,
+                class: class_list,
+            -%}
+        </div>
+    {% endif %}
+  </div>
+
+{% schema %}
+    {
+        "name": "Product media",
+        "tag": null,
+        "settings": [
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "range",
+                "id": "width",
+                "min": 20,
+                "max": 100,
+                "step": 5,
+                "unit": "%",
+                "label": "Width",
+                "default": 100
+            },
+            {
+                "type": "select",
+                "id": "template_type",
+                "label": "Template Type",
+                "options": [
+                    {
+                        "value": "classic-horizontal",
+                        "label": "Classic: Horizontal Thumbs"
+                    },
+                    {
+                        "value": "classic-vertical",
+                        "label": "Classic: Vertical Thumbs"
+                    }
+                ],
+                "default": "classic-horizontal"
+            },
+            {
+                "type": "checkbox",
+                "id": "thumb_image",
+                "label": "Display thumb image",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Main Image Slider Option"
+            },
+            {
+                "type": "checkbox", 
+                "id": "nav_arrows",
+                "label": "t:slider.navigation_arrows",
+                "default": true
+            },
+            {
+                "type": "select", 
+                "id": "nav_arrows_visible",
+                "label": "t:slider.navigation_arrows_visible",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "show_only_desktop",
+                        "label": "t:slider.hide_desktop"
+                    },
+                    {
+                        "value": "show_only_mobile",
+                        "label": "t:slider.hide_mobile"
+                    },
+                    {
+                        "value": "both",
+                        "label": "t:slider.both"
+                    }
+                ],
+                "default": "both"
+            },
+            {
+                "type": "select",
+                "id": "nav_arrows_color",
+                "label": "t:slider.navigation_arrows_color",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "light-arrow",
+                        "label": "t:slider.light"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.dark"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select",
+                "id": "nav_arrows_size",
+                "label": "t:slider.navigation_arrows_size",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "arrow-small",
+                        "label": "t:slider.size_small"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.size_default"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select", 
+                "id": "nav_arrows_outside",
+                "label": "t:slider.navigation_arrows_position",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "inside",
+                        "label": "t:slider.navigation_arrows_inside"
+                    },
+                    {
+                        "value": "outside",
+                        "label": "t:slider.navigation_arrows_outside"
+                    }
+                ],
+                "default": "inside"
+            },
+            {
+                "type": "checkbox",
+                "id": "nav_dots",
+                "label": "t:slider.pagination",
+                "default": false
+            },
+            {
+                "type": "select", 
+                "id": "pagination_visible",
+                "label": "t:slider.pagination_visible",
+                "visible_if": "{{ block.settings.nav_dots == true  }}",
+                "options": [
+                    {
+                        "value": "show_only_desktop",
+                        "label": "t:slider.hide_desktop"
+                    },
+                    {
+                        "value": "show_only_mobile",
+                        "label": "t:slider.hide_mobile"
+                    },
+                    {
+                        "value": "both",
+                        "label": "t:slider.both"
+                    }
+                ],
+                "default": "both"
+            },
+            {
+                "type": "select",
+                "id": "pagination_color",
+                "label": "t:slider.pagination_color",
+                "visible_if": "{{ block.settings.nav_dots == true  }}",
+                "options": [
+                    {
+                        "value": "pagination-light",
+                        "label": "t:slider.light"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.dark"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "header",
+                "content": "Thumbs Image Slider Options"
+            },
+            {
+                "type": "checkbox", 
+                "id": "thumbs_nav_arrows",
+                "label": "t:slider.navigation_arrows",
+                "default": true
+            },
+            {
+                "type": "select", 
+                "id": "thumbs_nav_arrows_visible",
+                "label": "t:slider.navigation_arrows_visible",
+                "visible_if": "{{ block.settings.thumbs_nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "show_only_desktop",
+                        "label": "t:slider.hide_desktop"
+                    },
+                    {
+                        "value": "show_only_mobile",
+                        "label": "t:slider.hide_mobile"
+                    },
+                    {
+                        "value": "both",
+                        "label": "t:slider.both"
+                    }
+                ],
+                "default": "both"
+            },
+            {
+                "type": "select",
+                "id": "thumbs_nav_arrows_color",
+                "label": "t:slider.navigation_arrows_color",
+                "visible_if": "{{ block.settings.thumbs_nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "light-arrow",
+                        "label": "t:slider.light"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.dark"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select",
+                "id": "thumbs_nav_arrows_size",
+                "label": "t:slider.navigation_arrows_size",
+                "visible_if": "{{ block.settings.thumbs_nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "arrow-small",
+                        "label": "t:slider.size_small"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.size_default"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "paragraph",
+                "content": "Classic Horizontal Thumbs: Product Thumbnails below."
+            },
+            {
+                "type": "paragraph",
+                "content": "Classic Vertical Thumbs: Product Thumbnails on Left."
+            },
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
+                "type": "select",
+                "id": "ratio",
+                "label": "Image ratio",
+                "options": [
+                    {
+                        "value": "square",
+                        "label": "Square"
+                    },
+                    {
+                        "value": "landscape",
+                        "label": "Landscape"
+                    },
+                    {
+                        "value": "portrait",
+                        "label": "Portrait"
+                    }
+                ],
+                "default": "square"
+            },
+            {
+                "type": "select",
+                "id": "image_zoom",
+                "label": "Image Zoom",
+                "options": [
+                    {
+                        "value": "no_zoom",
+                        "label": "No zoom Effect"
+                    },
+                    {
+                        "value": "in_image_block",
+                        "label": "Click & hover"
+                    }
+                ],
+                "default": "no_zoom"
+            },
+            {
+                "type": "select",
+                "id": "badge_position",
+                "label": "Badge Position",
+                "options": [
+                {
+                    "value": "top_left start-0 top-0",
+                    "label": "Top Left"
+                },
+                {
+                    "value": "top_right end-0 top-0",
+                    "label": "Top Right"
+                },
+                {
+                    "value": "bottom_left start-0 bottom-0",
+                    "label": "Bottom Left"
+                },
+                {
+                    "value": "bottom_right end-0 bottom-0",
+                    "label": "Bottom Right"
+                }
+                ],
+                "default": "top_right end-0 top-0"
+            }
+        ],
+        "presets": [
+            {
+            "name": "Product media",
+                "settings": {
+                    "product": "{{ closest.product }}"
+                }
+            }
+        ]
+    }
+{% endschema %}

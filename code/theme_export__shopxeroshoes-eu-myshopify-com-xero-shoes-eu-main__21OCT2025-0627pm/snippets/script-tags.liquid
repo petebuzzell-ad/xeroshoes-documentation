@@ -1,0 +1,67 @@
+{% comment %}theme-check-disable ParserBlockingScript{% endcomment %}
+<script src="{{ 'utility.js' | asset_url }}"></script>
+{% comment %}theme-check-enable ParserBlockingScript{% endcomment %}
+ 
+<script src="{{ 'global.js' | asset_url }}" async></script>
+<script>
+    let lazyImageObserver;
+    const lozadInterval = setInterval(() => {
+        if(typeof lozad == 'function'){
+            lazyImageObserver = lozad('.lozad', {
+                rootMargin: '50px 0px',
+                enableAutoReload: true
+            });
+            lazyImageObserver.observe();
+            clearInterval(lozadInterval);
+        }
+    }, 500);
+</script>
+
+<script data-src="{{ 'component-variant-options.js' | asset_url }}" data-loadtype="window-onload" defer></script>
+
+{%- comment -%} Template specific JS {%- endcomment -%}
+{%- if template.name == 'collection' or template.name == 'search' -%}
+    <script data-src="{{ 'storefront-filters.js' | asset_url }}" defer></script>
+{%- elsif template.name == 'product' -%}
+    <script data-src="{{ 'template-product.js' | asset_url }}" defer></script>
+    {%- comment -%} <script data-src="{{ 'imageZoom.js' | asset_url }}" defer></script> {%- endcomment -%}
+    <script data-src="{{ 'product-recommendations.js' | asset_url }}" defer></script>
+{%- elsif template.name == 'cart' -%}
+    <script src="{{ 'template-cart.js' | asset_url }}" defer></script>
+{%- elsif template.name == 'search' -%}
+    <script src="{{ 'template-search.js' | asset_url }}" defer></script>
+{%- elsif template.name == 'login' or template.name == 'register' -%}
+    <script src="{{ 'template-login-register.js' | asset_url }}" defer></script>
+{%- elsif template.name == 'addresses' -%}
+    <script src="{{ 'template-account-address.js' | asset_url }}" defer></script>
+{%- elsif template.name == 'password' -%}
+    <script src="{{ 'template-password.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+{%- if template.name == 'cart' -%}
+    <script data-src="{{ 'component-cart-form.js' | asset_url }}" class="lazyload-asset" defer></script>
+{%- endif -%}
+
+<script data-src="{{ 'component-product-form.js' | asset_url }}" defer></script>
+
+<script data-loadtype="window-onload" data-src="{{ 'custom-components.js' | asset_url }}" class="lazyload-asset"></script>
+
+<script data-src="{{ 'component-quantity-picker.js' | asset_url }}" class="lazyload-asset"></script>
+
+<script data-src="{{ 'component-quickshop.js' | asset_url }}" class="lazyload-asset"></script>
+
+{% if template.suffix == 'press' %}
+<script data-src="{{ 'jszip.min.js' | asset_url }}" class="lazyload-asset"></script>
+{% endif %}
+{%- comment -%} Customization page JS {%- endcomment -%}
+{%- if request.design_mode -%}
+    <script src="{{ 'theme-editor.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+<script src="{{ 'gsap.min.js' | asset_url }}"></script>
+<script src="{{ 'ScrollTrigger.min.js' | asset_url }}"></script>
+<script data-src="{{ 'gsap-index.js' | asset_url }}" defer></script>
+
+
+<script data-src="{{ 'ada.js' | asset_url }}" defer></script> 
+

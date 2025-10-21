@@ -1,0 +1,81 @@
+{% comment %}
+  Renders grid item for article listing.
+  Accepts:
+  - article: {Object} article object
+  - placeholder_image: {String} placeholder image title
+
+  Usage:
+  {% render 'card-article-generic', article: article, placeholder_image: placeholder_image %}
+{% endcomment %}
+
+{%- liquid 
+    assign article_category = ''
+    assign article_category_handle = ''
+    assign categoty_start = 'cat_'
+    assign count = 0
+    for tag in article.tags
+        if tag contains 'cat' and tag != 'cat_Tying' and tag != 'cat_Contest' and tag != 'cat_Born to Run' and tag != 'cat_Barefoot Sandal Tying'
+            assign tagr = tag | replace: 'cat_','' 
+            if count == 0
+                assign article_category = tagr 
+            else
+                assign article_category = tagr | append: ',' | append: article_category
+            endif
+            assign count = count | plus: 1
+        endif
+    endfor
+
+    assign tagsplit = article_category | split: ','
+    assign count = tagsplit.size
+
+    if count == 1
+        assign article_category = article_category | replace: ',', '' 
+        assign article_category_handle = categoty_start | append: article_category | replace: ',', '' | replace: '&amp;', '-amp-' | replace: '&', '' | strip
+    endif
+-%}
+
+<div class="card bg-white article-card border-0">
+  {%- if article.image != blank -%}
+    <a href="{{ article.url }}" class="card-img d-block">
+        {%- capture sizes -%}
+            (min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 3 }}px, (min-width: 992px) calc(100vw / 3), (min-width: 768px) calc(100vw - 130px), calc(100vw + 100px)
+        {%- endcapture -%}
+        {%- render 'image',
+            image: article.image.src,
+            sizes: sizes,
+            class: 'w-100'
+        -%}
+    </a>
+    {%- else -%}
+        <a href="{{ article.url }}" class="card-img d-block">
+            {% render 'placeholder-image' %}
+        </a>
+    {%- endif -%}
+
+    <div class="card-body px-0 pt-4 pb-3 text-start">
+        {% comment %} <div class="text-gray-800 fs-md mb-2">
+            <time datetime="{{ article.published_at | date: "%a, %b %d, %Y" }}"> {{ article.published_at | date: "%a, %b %d, %Y" }}</time>
+        </div> {% endcomment %}
+        <div class="align-items-center article-meta d-flex flex-wrap font-family-heading fs-sm column-gap-1 row-gap-2 lh-11 mb-2 text-uppercase">
+            {%- if article_category != '' -%}
+                <ul class="align-items-center article-category-tags d-flex list-unstyled m-0 p-0 ls-sm">
+                    {% if count == 1 %}
+                        <li class=""><a href="/blogs/{{ blog.handle }}/tagged/{{ article_category_handle | strip | handle }}" class="text-secondary">{{ article_category }}</a></li>
+                    {% else %}
+                        {% for tag in tagsplit %}
+                            {% assign article_category = tag %}
+                            {% assign article_category_handle = categoty_start | append: article_category | replace: ',', '' | replace: '&amp;', '-amp-' | replace: '&', '' | strip %}
+                            <li class=""><a href="/blogs/{{ blog.handle }}/tagged/{{ article_category_handle | handle }}" class="text-secondary">{{ article_category }}{% unless forloop.last %}, {% endunless %}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            {%- endif -%}
+            <span class="mx-1">|</span> <span class="article-date ls-xxl text-gray-700">{{ article.published_at | date: "%B %d, %Y" }}</span>
+        </div>
+        <h4 class="h5 mb-2"><a href="{{ article.url }}" class="text-secondary text-transform-none">{{ article.title }}</a></h4>
+        <p class="article-excerpt fs-14 ls-base mb-0 text-secondary-900">{{ article.content | strip_html }}</p>
+    </div>
+    <div class="card-footer p-0">
+        <a href="{{ article.url }}" class="btn btn-sm btn-primary">{{ 'general.labels.read_more' | t }} <span class="visually-hidden-skip">{{ article.title | escape }}</span></a>
+    </div>
+</div>

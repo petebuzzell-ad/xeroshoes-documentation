@@ -1,0 +1,81 @@
+.product-comfort-section .comfort-icon
+{
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    margin-bottom: 21px;
+}
+.comfort-trust-image svg path:first-child
+{
+    transform-origin: center;
+    animation: rotate-center 8s linear infinite both;
+}
+@keyframes rotate-center {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.comfort-trust-image-banner
+{
+    aspect-ratio: 605/735;
+}
+.comfort-item .metafield-rich_text_field :is(h2, h3, h4, h5, h6)
+{
+    margin-bottom: 0.2em;
+}
+.comfort-item .metafield-rich_text_field p,
+.mwt-content-wrapper .metafield-rich_text_field p,
+.inbetween-testimonial .metafield-single_line_text_field,
+.collapsible-panel-section .metafield-rich_text_field p
+{
+    color: #1D293D;
+}
+.comfortdata-title
+{
+    margin-bottom: 47px;
+}
+@media (min-width:992px)
+{
+    .comfort-trust-image
+    {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+    }
+    .comfort-trust-image img, .comfort-trust-image svg
+    {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        left: -62%;
+        top: 32%;
+        position: relative;
+    }
+    .comfortdata-title
+    {
+        max-width: 420px;
+        margin-bottom: 44px;
+    }
+    .comfort-item .metafield-rich_text_field :is(h2, h3, h4, h5, h6)
+    {
+        margin-bottom: 0.5em;
+    }
+}
+@media (min-width:1025px)
+{
+    .comfortdata-title
+    {
+        max-width: 500px;
+    }
+}
+@media (min-width:1200px)
+{
+    .comfort-trust-image
+    {
+        width: 136px;
+        height: 136px;
+    }
+}

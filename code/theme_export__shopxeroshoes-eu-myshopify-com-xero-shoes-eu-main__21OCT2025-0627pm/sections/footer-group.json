@@ -1,0 +1,178 @@
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "Footer",
+      "blocks": {
+        "logo_fr9dfm": {
+          "type": "logo",
+          "settings": {
+            "footer_logo": "shopify:\/\/shop_images\/Xero_Footer_logo.svg",
+            "logo_max_width": 75
+          }
+        },
+        "newsletter_AjQX64": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "Join The Xero Circle",
+            "text": "<p>We promise to only send you great Xero Shoes deals, information, inspiration, and fun!<\/p>",
+            "show_newsletter": true
+          }
+        },
+        "menu_ztgAbN": {
+          "type": "menu",
+          "settings": {
+            "enable_nav_1": true,
+            "heading_1": "Company",
+            "linklist_1": "praella-footer-menu-1",
+            "enable_nav_2": true,
+            "heading_2": "Your Orders",
+            "linklist_2": "praella-footer-menu-2",
+            "enable_nav_3": true,
+            "heading_3": "Resources",
+            "linklist_3": "praella-footer-menu-3",
+            "enable_nav_4": true,
+            "heading_4": "More",
+            "linklist_4": "praella-footer-menu-4"
+          }
+        },
+        "social_media_7AVdpV": {
+          "type": "socialMedia",
+          "settings": {
+            "text": "<p><a href=\"tel:+420-228-880-373\" title=\"tel:+420-228-880-373\">+420-228-880-373<\/a><\/p><p><strong>Corporate Office<\/strong><br\/>Vinohradská 35\/25<br\/>120 00 Prague<br\/>Czech Republic<br\/>VAT No.: CZ11770589<br\/><br\/><strong>Xero Shoes Store<\/strong><br\/>11777 E 55th Ave,<br\/>Suite 101<br\/>Denver, CO 80239<\/p>",
+            "social_icon_facebook": true,
+            "social_icon_twitter": true,
+            "social_icon_youtube": true,
+            "social_icon_pinterest": true,
+            "social_icon_instagram": true
+          }
+        }
+      },
+      "block_order": [
+        "logo_fr9dfm",
+        "newsletter_AjQX64",
+        "menu_ztgAbN",
+        "social_media_7AVdpV"
+      ],
+      "settings": {
+        "fluid_footer": false,
+        "footer_top_bg_color": "#0F172B",
+        "footer_top_txt_color": "#e2e8f0",
+        "footer_top_link_color": "#e2e8f0",
+        "footer_bottom_bg_color": "#0F172B",
+        "footer_bottom_txt_color": "#e2e8f0",
+        "bottom_footer_linklist": "praella-footer-menu",
+        "bottom_footer_linklist_2": "praella-footer-websites",
+        "show_payment_icons": true,
+        "payment_icon_visa": true,
+        "payment_icon_mastercard": true,
+        "payment_icon_ae": true,
+        "payment_icon_diners": true,
+        "payment_icon_paypal": true,
+        "payment_icon_applepay": true,
+        "payment_icon_amazonpay": true
+      }
+    },
+    "app_optimization_GrdwHj": {
+      "type": "app-optimization",
+      "blocks": {
+        "app_8wifi7": {
+          "type": "app",
+          "settings": {
+            "title": "GTM",
+            "url": "https:\/\/www.googletagmanager.com\/gtm.js?id=GTM-N8MQGZ",
+            "block_index": true,
+            "block_product": false,
+            "block_collection": false,
+            "block_page": false,
+            "block_blog": false,
+            "block_article": false,
+            "block_cart": false,
+            "block_search": false,
+            "block_customers": false,
+            "block_gift_card": false,
+            "scroll_index": true,
+            "scroll_product": false,
+            "scroll_collection": false,
+            "scroll_page": false,
+            "scroll_blog": false,
+            "scroll_article": false,
+            "scroll_cart": false,
+            "scroll_search": false,
+            "scroll_customers": false,
+            "scroll_gift_card": false,
+            "interaction_index": false,
+            "interaction_product": false,
+            "interaction_collection": false,
+            "interaction_page": false,
+            "interaction_blog": false,
+            "interaction_article": false,
+            "interaction_cart": false,
+            "interaction_search": false,
+            "interaction_customers": false,
+            "interaction_gift_card": false,
+            "interaction_selectors_1": "",
+            "interaction_event_1": "click",
+            "interaction_selectors_2": "",
+            "interaction_event_2": "click"
+          }
+        },
+        "app_cHHpzE": {
+          "type": "app",
+          "settings": {
+            "title": "Gtag",
+            "url": "https:\/\/www.googletagmanager.com\/gtag\/js?id=G-6KKDDJF7DB&cx=c>m=4e59h0",
+            "block_index": true,
+            "block_product": false,
+            "block_collection": false,
+            "block_page": false,
+            "block_blog": false,
+            "block_article": false,
+            "block_cart": false,
+            "block_search": false,
+            "block_customers": false,
+            "block_gift_card": false,
+            "scroll_index": true,
+            "scroll_product": false,
+            "scroll_collection": false,
+            "scroll_page": false,
+            "scroll_blog": false,
+            "scroll_article": false,
+            "scroll_cart": false,
+            "scroll_search": false,
+            "scroll_customers": false,
+            "scroll_gift_card": false,
+            "interaction_index": false,
+            "interaction_product": false,
+            "interaction_collection": false,
+            "interaction_page": false,
+            "interaction_blog": false,
+            "interaction_article": false,
+            "interaction_cart": false,
+            "interaction_search": false,
+            "interaction_customers": false,
+            "interaction_gift_card": false,
+            "interaction_selectors_1": "",
+            "interaction_event_1": "click",
+            "interaction_selectors_2": "",
+            "interaction_event_2": "click"
+          }
+        }
+      },
+      "block_order": [
+        "app_8wifi7",
+        "app_cHHpzE"
+      ],
+      "name": "App Optimization",
+      "settings": {
+        "enable": true,
+        "debug_enable": false
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "app_optimization_GrdwHj"
+  ]
+}

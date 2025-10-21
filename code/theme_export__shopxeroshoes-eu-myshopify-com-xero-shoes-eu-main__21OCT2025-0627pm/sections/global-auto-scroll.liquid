@@ -1,0 +1,203 @@
+{{ 'global-auto-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="position-relative w-100 overflow-hidden" style="background:{{ section.settings.slide_bg_color }} ;">
+    <div class="auto-scroll-parent d-flex">
+        <div class="auto-scroll-loop d-flex flex-md-row flex-row flex-nowrap align-items-start justify-content-start column-gap-md-2 row-gap-md-0 column-gap-2 row-gap-0" id="track1-{{ section.id }}">
+            {% content_for 'blocks' %}
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .auto-scroll-loop {
+        --pe-smooth-scroll-time: {{ section.settings.scroll_time }}s;
+        animation: scroll-left var(--pe-smooth-scroll-time) linear infinite;
+        white-space: nowrap;
+        flex-shrink:0;
+    }
+
+    .auto-scroll-loop .image-block img{
+        -webkit-transform: translateZ(0);
+    }
+
+    @keyframes scroll-left {
+        from {
+            transform: translateX(0) translateZ(0);
+        }
+        to {
+            transform: translateX(-100%) translateZ(0);
+        }
+    }
+</style>
+
+<script>
+
+   let loopCount = {{ section.settings.scroll_loop }}; 
+
+    const track1 = document.querySelector('#track1-{{ section.id }}')
+    if (track1) {
+        for (let i = 0; i < loopCount; i++) {
+            const clone = track1.cloneNode(true); // Clone the element
+            clone.id = `track1-{{ section.id }}-clone-${i + 1}`; // Assign a unique ID
+            track1.parentNode.appendChild(clone); // Append to the same parent
+
+            const parentContainerWidth = document.querySelector('.auto-scroll-parent')?.offsetWidth;
+            const maximumWidth = window.innerWidth * 2;
+            if (parentContainerWidth > maximumWidth) {
+                break;
+            }
+        }
+    }
+</script>
+
+{% schema %}
+    {
+        "name": "t:names.marquee",
+        "disabled_on": {
+            "groups": ["header", "footer"]
+        },
+        "blocks": [{ "type": "_auto_slide" }],
+        "settings": [
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "color",
+                "id": "slide_bg_color",
+                "label": "t:settings.background_color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "scroll_loop",
+                "label": "Slide Loop",
+                "min": 3,
+                "max": 50, 
+                "step": 1,
+                "default": 5
+            },
+            {
+                "type": "range",
+                "id": "scroll_time",
+                "label": "Slide Scroll Time ( Second )",
+                "min": 10,
+                "max": 50,
+                "step": 1,
+                "default": 20
+            } 
+        ],
+        "presets": [
+            {
+                "name": "t:names.marquee",
+                "category": "t:categories.content",
+                "settings": {
+                    "slide_bg_color": "#0F172B"
+                }, 
+                "blocks": {
+                    "auto_slide_1": {
+                        "type": "_auto_slide",
+                        "name": "Auto Slide",
+                        "settings": {
+                            "width": "col-lg-auto",
+                            "width_md": "col-md-auto",
+                            "width_sm": "col-auto",
+                            "display": "d-block",
+                            "padding_top_desktop": "pt-md-4",
+                            "padding_top_mobile": "pt-3",
+                            "padding_bottom_desktop": "pb-md-4",
+                            "padding_bottom_mobile": "pb-3",
+                            "padding_left_desktop": "ps-md-3",
+                            "padding_left_mobile": "ps-3",
+                            "padding_right_desktop": "pe-md-3",
+                            "padding_right_mobile": "pe-3"
+                        },
+                        "blocks": {
+                            "heading": {
+                                "type": "heading",
+                                "name": "Auto Slide",
+                                "settings": {
+                                    "text": "<h2>Auto Slide</h2>",
+                                    "color": "#ffffff",
+                                    "margin_top_desktop": "mb-md-0",
+                                    "margin_top_mobile": "mb-0",
+                                    "margin_bottom_desktop": "mb-md-0",
+                                    "margin_bottom_mobile": "mb-0"
+                                }
+                            }
+                        },
+                        "block_order": ["heading"] 
+                    },
+                    "auto_slide_2": {
+                        "type": "_auto_slide",
+                        "name": "Auto Slide",
+                        "settings": {
+                            "width": "col-lg-auto",
+                            "width_md": "col-md-auto",
+                            "width_sm": "col-auto",
+                            "display": "d-block",
+                            "padding_top_desktop": "pt-md-4",
+                            "padding_top_mobile": "pt-3",
+                            "padding_bottom_desktop": "pb-md-4",
+                            "padding_bottom_mobile": "pb-3",
+                            "padding_left_desktop": "ps-md-3",
+                            "padding_left_mobile": "ps-3",
+                            "padding_right_desktop": "pe-md-3",
+                            "padding_right_mobile": "pe-3"
+                        },
+                        "blocks": {
+                            "heading": {
+                                "type": "heading",
+                                "name": "Auto Slide",
+                                "settings": {
+                                    "text": "<h2>Auto Slide</h2>",
+                                    "color": "#ffffff",
+                                    "margin_top_desktop": "mb-md-0",
+                                    "margin_top_mobile": "mb-0",
+                                    "margin_bottom_desktop": "mb-md-0",
+                                    "margin_bottom_mobile": "mb-0"
+                                }
+                            }
+                        },
+                        "block_order": ["heading"] 
+                    },
+                    "auto_slide_3": {
+                        "type": "_auto_slide",
+                        "name": "Auto Slide",
+                        "settings": {
+                            "width": "col-lg-auto",
+                            "width_md": "col-md-auto",
+                            "width_sm": "col-auto",
+                            "display": "d-block",
+                            "padding_top_desktop": "pt-md-4",
+                            "padding_top_mobile": "pt-3",
+                            "padding_bottom_desktop": "pb-md-4",
+                            "padding_bottom_mobile": "pb-3",
+                            "padding_left_desktop": "ps-md-3",
+                            "padding_left_mobile": "ps-3",
+                            "padding_right_desktop": "pe-md-3",
+                            "padding_right_mobile": "pe-3"
+                        },
+                        "blocks": {
+                            "heading": {
+                                "type": "heading",
+                                "name": "Auto Slide",
+                                "settings": {
+                                    "text": "<h2>Auto Slide</h2>",
+                                    "color": "#ffffff",
+                                    "margin_top_desktop": "mb-md-0",
+                                    "margin_top_mobile": "mb-0",
+                                    "margin_bottom_desktop": "mb-md-0",
+                                    "margin_bottom_mobile": "mb-0"
+                                }
+                            }
+                        },
+                        "block_order": ["heading"] 
+                    }
+                },
+                "block_order": ["auto_slide_1", "auto_slide_2", "auto_slide_3"] 
+            }
+        ]
+    }
+    {% endschema %}

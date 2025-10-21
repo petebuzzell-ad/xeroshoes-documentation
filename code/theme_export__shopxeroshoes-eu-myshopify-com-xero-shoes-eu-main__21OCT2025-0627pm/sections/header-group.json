@@ -1,0 +1,249 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement_bar_ijPQNU": {
+      "type": "announcement-bar",
+      "blocks": {
+        "group_biJEyc": {
+          "type": "group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-row",
+            "wrap": "flex-wrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-1",
+            "padding_bottom_desktop": "pb-md-1",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-1",
+            "padding_bottom_mobile": "pb-1",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_xw4dRp": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>15% Off Sitewide. Limited Time Only. <a href=\"https:\/\/xeroshoes.com\/collections\/top-rated\"><span style=\"text-decoration:underline\">Shop Now<\/span><\/a><\/p>",
+                "font_family": "font-family-heading",
+                "text_size": "fs-15-13",
+                "font_weight": "fw-light",
+                "text_letter_spacing": "ls-sm",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "#0f172b",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_CmEqEr": {
+              "type": "text",
+              "name": "Text",
+              "disabled": true,
+              "settings": {
+                "text": "<p>Now Get Free Shipping on All Orders Over $99!<\/p>",
+                "font_family": "font-family-heading",
+                "text_size": "fs-15-13",
+                "font_weight": "fw-light",
+                "text_letter_spacing": "ls-sm",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "#0f172b",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_xw4dRp",
+            "text_CmEqEr"
+          ]
+        }
+      },
+      "block_order": [
+        "group_biJEyc"
+      ],
+      "name": "t:names.announcement_bar",
+      "settings": {
+        "fluid_layout": false,
+        "topbar_bg_color": "#53CAEC",
+        "topbar_height": 40,
+        "padding_top_desktop": "pt-md-0",
+        "padding_bottom_desktop": "pb-md-0",
+        "padding_top_mobile": "pt-0",
+        "padding_bottom_mobile": "pb-0"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "5f1e41a7-b8fe-460b-a63e-25715cc8ff62": {
+          "type": "megamenu",
+          "settings": {
+            "title": "Men",
+            "shop_all_text": "Shop All Men's",
+            "shop_all_text_mobile": "Shop All",
+            "best_sellers": [
+              "prio-men",
+              "nexus-knit-men",
+              "hfs-men",
+              "dillon-canvas-slip-on-men"
+            ],
+            "best_sellers_heading": "Best Sellers",
+            "image": "shopify:\/\/shop_images\/Wynn-Xero_1_1.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Wynn-Xero_1_1.webp",
+            "mega_heading": "Wynn",
+            "mega_content": "Natural movement in a retro look that turns heads. Lightweight & flexible for unbeatable comfort.",
+            "link_text": "Shop Wynn",
+            "link_url": "shopify:\/\/products\/wynn-men",
+            "badge_text": "Featured",
+            "badge_color": "#f3f0ea",
+            "badge_text_color": "#0f172b",
+            "bg_color": "#00000033",
+            "text_color": "#ffffff"
+          }
+        },
+        "megamenu_eWJnhx": {
+          "type": "megamenu",
+          "settings": {
+            "title": "Women",
+            "shop_all_text": "Shop All Women's",
+            "shop_all_text_mobile": "Shop All",
+            "best_sellers": [
+              "prio-women",
+              "kelso-women",
+              "hfs-women",
+              "dillon-canvas-slip-on-women"
+            ],
+            "best_sellers_heading": "Best Sellers",
+            "image": "shopify:\/\/shop_images\/Wynn-Xero_1_1.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Wynn-Xero_1_1.webp",
+            "mega_heading": "Wynn",
+            "mega_content": "Natural movement in a retro look that turns heads. Lightweight & flexible for unbeatable comfort.",
+            "link_text": "Shop Wynn",
+            "link_url": "shopify:\/\/products\/wynn-women",
+            "badge_text": "Featured",
+            "badge_color": "#f3f0ea",
+            "badge_text_color": "#0f172b",
+            "bg_color": "#00000033",
+            "text_color": "#ffffff"
+          }
+        },
+        "megamenu_links_tYzG6x": {
+          "type": "megamenu-links",
+          "settings": {
+            "title": "Sandals"
+          }
+        },
+        "megamenu_TtBaxX": {
+          "type": "megamenu",
+          "settings": {
+            "title": "Explore",
+            "shop_all_text": "Barefoot Shoe Resources",
+            "shop_all_text_mobile": "Barefoot Shoe Resources",
+            "best_sellers": [],
+            "best_sellers_heading": "Popular Topics",
+            "mega_heading": "",
+            "mega_content": "",
+            "link_text": "",
+            "link_url": "",
+            "badge_text": "Featured",
+            "badge_color": "#0f172b",
+            "badge_text_color": "#f3f0ea",
+            "bg_color": "#00000033",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "5f1e41a7-b8fe-460b-a63e-25715cc8ff62",
+        "megamenu_eWJnhx",
+        "megamenu_links_tYzG6x",
+        "megamenu_TtBaxX"
+      ],
+      "settings": {
+        "fluid_header": false,
+        "sticky_header_type": "always",
+        "header_bg_color": "#ffffff",
+        "show_line_separator": false,
+        "logo": "shopify:\/\/shop_images\/XEROSHOES_Logo.svg",
+        "logo_mobile": "shopify:\/\/shop_images\/Xero_Menu_Logo.svg",
+        "logo_width": 180,
+        "logo_width_mobile": 145,
+        "logo_width_menu": 38,
+        "menu": "main-menu-1",
+        "menu_mobile_secondary": "",
+        "mobile_drawer_width": 350,
+        "best_sellers_scrollable": true,
+        "best_sellers": [],
+        "best_sellers_heading": "Best Sellers"
+      }
+    },
+    "featured-mobile-header": {
+      "type": "featured-mobile-header",
+      "settings": {
+        "menu_featured": "praella-featured-menu"
+      }
+    },
+    "search-layer": {
+      "type": "search-layer",
+      "disabled": true,
+      "settings": {
+        "enable_search": true,
+        "search_type": "predictive"
+      }
+    },
+    "newsletter_3edHgG": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "popup_delay": 1,
+        "popup_period_until": 7,
+        "heading": "Subscribe to Newsletter",
+        "text": "<p>Subscribe and get exclusive offers!<\/p>",
+        "footer_notes": "<p>No SPAM! We not share your email to any 3rd part companies!<\/p>",
+        "btn_txt": "Subscribe",
+        "template_type": "image_bg",
+        "bg_color_inner": "#ffffff",
+        "txt_color": "#5b5b5b"
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_ijPQNU",
+    "header",
+    "featured-mobile-header",
+    "search-layer",
+    "newsletter_3edHgG"
+  ]
+}

@@ -1,0 +1,658 @@
+{%- liquid
+    assign block_image = block.settings.article_img | default: block.settings.article.image
+%}
+
+{% capture class_list %}
+    {{ block.settings.padding_top_desktop }} {{ block.settings.padding_bottom_desktop }} {{ block.settings.padding_left_desktop }} {{ block.settings.padding_right_desktop }} {{ block.settings.padding_top_mobile }} {{ block.settings.padding_bottom_mobile }} {{ block.settings.padding_left_mobile }} {{ block.settings.padding_right_mobile }}
+{% endcapture %}
+
+{% if section.settings.layout_type == 'grid' %}
+    <div class="collection-list__item" data-block-id="{{ block.id }}" {{ block.shopify_attributes }} >
+{% else %}
+    <swiper-slide data-block-id="{{ block.id }}" {{ block.shopify_attributes }}>   
+{% endif %}
+        <div class="card-collection {{ block.settings.custom_class }} links-wrapper-hover position-relative {{ section.settings.hover_effect }} {{ class_list }}" style="background:{{ block.settings.card_bg_color }}; {% if block.settings.border_radius > 0 %} border-radius: {{ block.settings.border_radius }}px; overflow:hidden;{% endif %} {% if block.settings.border == 'solid' %} border:{{ block.settings.border_width }}px solid {{ block.settings.border_color }};{% endif %}">
+            {% if block.settings.article.url != blank %}
+                <a href="{{ block.settings.article.url }}" class="collection-card__link">
+                    <span class="visually-hidden-skip">{{ block.settings.article.title }} Article</span>
+                </a>   
+            {% endif %}
+            <div class="collection-card__inner">
+                <div class="card-collection-image position-relative d-block {{ block.settings.image_ratio }}">
+                    {% if block.settings.enable_overlay %}
+                        <div class="card-overlay" style="background: {{ block.settings.overlay_bg_color }}; opacity: {{ block.settings.overlay_opacity }}; mix-blend-mode: {{ block.settings.blend_mode}};"></div>
+                    {% endif %}
+
+                    {%- if block_image != blank -%}
+                        {% render 'image',
+                            image: block_image,
+                            class: 'w-100' %}
+                    {%- else -%} 
+                        {% render 'placeholder-image' %}
+                    {%- endif -%}
+                </div>
+                <div class="card-collection-caption {{ section.settings.placement }} {{ section.settings.content_position_area }}">
+                    {%  content_for 'blocks' %}
+                </div> 
+            </div>  
+        </div>
+
+{% if section.settings.layout_type == 'grid' %}
+    </div>
+{% else %}
+    </swiper-slide>
+{% endif %}
+
+{% schema %}
+    {
+        "name": "Article card",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "settings": [
+            {
+                "type": "header",
+                "content": "Article"
+            },
+            {
+                "type": "article",
+                "id": "article",
+                "label": "Article"
+            },
+            {
+                "type": "image_picker",
+                "id": "article_img",
+                "label": "Custom Article Image"
+            },
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "select",
+                "id": "image_ratio",
+                "options": [
+                    {
+                        "value": "adapt",
+                        "label": "Adapt to image"
+                    },
+                    {
+                        "value": "portrait",
+                        "label": "Portrait"
+                    },
+                    {
+                        "value": "square",
+                        "label": "Square"
+                    },
+                    {
+                        "value": "landscape",
+                        "label": "Landscape"
+                    },
+                    {
+                        "value": "landscape-sm",
+                        "label": "Landscape SM"
+                    },
+                    {
+                        "value": "portrait-lg",
+                        "label": "Portrait LG"
+                    },
+                    {
+                        "value": "portrait-xl",
+                        "label": "Portrait XL"
+                    },
+                    {
+                        "value": "portrait-xxl",
+                        "label": "Portrait XXL"
+                    }
+                ],
+                "default": "square",
+                "label": "Image ratio",
+                "info": "To add images, [edit your articles](https://help.shopify.com/en/manual/articles)"
+            },
+            {
+                "type": "color_background",
+                "id": "card_bg_color",
+                "label": "Card Background Color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "header",
+                "content": "Overlay"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_overlay",
+                "label": "Overlay Enabled?",
+                "default": false
+            },
+            {
+                "type": "color_background",
+                "id": "overlay_bg_color",
+                "label": "t:settings.overlay_color",
+                "default": "#000000",
+                "visible_if": "{{ block.settings.enable_overlay == true }}"
+            },
+            {
+                "type": "range",
+                "id": "overlay_opacity",
+                "label": "t:settings.overlay_opacity",
+                "min": 0.1,
+                "max": 1,
+                "step": 0.1,
+                "default": 0.5,
+                "visible_if": "{{ block.settings.enable_overlay == true }}"
+            },
+            {
+                "type": "select",
+                "id": "blend_mode",
+                "label": "Mix Blend Mode",
+                "visible_if": "{{ block.settings.enable_overlay == true }}",
+                "options": [
+                    {
+                        "value": "multiply",
+                        "label": "Multiply"
+                    },
+                    {
+                        "value": "darken",
+                        "label": "Darken"
+                    },
+                    {
+                        "value": "lighten",
+                        "label": "Lighten"
+                    },
+                    {
+                        "value": "soft-light",
+                        "label": "Soft Light"
+                    },
+                    {
+                        "value": "none",
+                        "label": "None"
+                    }
+                ],
+                "default": "none"
+            },                         
+            {
+                "type":"header",
+                "content":"Border"
+            },
+            {
+                "type": "select",
+                "id": "border",
+                "label": "t:settings.borders",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "t:options.none"
+                    },
+                    {
+                        "value": "solid",
+                        "label": "t:options.solid"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "range",
+                "id": "border_width",
+                "min": 0,
+                "max": 10,
+                "step": 1,
+                "unit": "px",
+                "label": "t:settings.border_width",
+                "default": 1,
+                "visible_if": "{{ block.settings.border != 'none' }}"
+            },
+            {
+                "type": "color",
+                "id": "border_color",
+                "label": "t:settings.border_color",
+                "default": "#666666",
+                "visible_if": "{{ block.settings.border != 'none' }}"
+            },
+            {
+                "type": "range",
+                "id": "border_radius",
+                "label": "t:settings.border_radius",
+                "min": 0,
+                "max": 40,
+                "step": 1,
+                "unit": "px",
+                "default": 0
+            },                         
+            {
+                "type":"header",
+                "content":"Padding: Desktop"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_desktop",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_desktop",
+                "label": "Padding Bottom",
+                "options": [ 
+                    {
+                        "value": "pb-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_desktop",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_desktop",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-md-0"
+            },
+            {
+                "type":"header",
+                "content":"Padding: Mobile"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_mobile",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_mobile",
+                "label": "Padding Bottom",
+                "options": [
+                    {
+                        "value": "pb-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_mobile",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_mobile",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-0"
+            },
+            {
+                "type": "text",
+                "id": "custom_class",
+                "label": "Custom Class"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Article card"
+            }
+        ]
+    }
+{% endschema %}
+    

@@ -1,0 +1,213 @@
+{% style %}
+  #PopupModal-newsletter .btn-close{
+      position: absolute;
+      right: 0;
+      top: 0;
+      line-height: 1;
+      font-size: 2rem;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1160;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+  }
+
+  .modal.open{
+    display: block;
+  }
+{% endstyle %}
+
+<modal-dialog id="PopupModal-newsletter" role="dialog" aria-modal="true" aria-hidden="true">
+  {% assign template_type = section.settings.template_type %}
+  <div
+      data-section-id="{{ section.id }}"
+      data-newsletter-popup
+      data-newsletter_enabled="{% if section.settings.enabled %}true{% else %}false{% endif %}"
+      data-popup_delay="{{ section.settings.popup_delay }}"
+      data-period_until="{{ section.settings.popup_period_until }}"
+      class="newsletter-popup modal"
+      style="{% if section.settings.popup_img and template_type == 'image_bg' %}url({{ section.settings.popup_img | image_url: width: 1024, crop: 'center', format: 'pjpg' }}){% endif %};"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-5">
+              {% if template_type == 'image_left' %}
+                <div class="bg-img w-30 d-none d-md-inline-block" style="background-image: url({{ section.settings.popup_img | image_url: width: 1024, crop: 'center', format: 'pjpg' }});"></div>
+              {% endif %}
+
+              <div class="inner text-center {% if template_type == 'image_bg' %}has-image-bg w-100{% else %}has-image-left w-70{% endif %}"
+                style="background: {{ section.settings.bg_color_inner }};">
+
+              <button data-newsletter-close-btn class="btn py-2 px-3 btn-link btn-close" aria-label="close newsletter popup">
+                <span class="icon-close"></span>
+                <span class="visually-hidden">{{ 'general.modal.close' | t }}</span>
+              </button>
+
+              {% if section.settings.heading != blank %}
+                <h2>{{ section.settings.heading }}</h2>
+              {% endif %}
+
+              {% form 'customer', id: 'NewsletterPopUp' %}
+
+                {% if section.settings.text != blank %}
+                    <div>{{ section.settings.text }}</div>
+                  {% endif %}
+                  <div class="input-group mx-auto my-4">
+                    <input type="email" name="contact[email]" aria-label="email" id="newsletterPopupEmail" class="form-control" placeholder="{{ 'general.social.newsletter_form.newsletter_email' | t }}" value="{% if customer %}{{ customer.email }}{% endif %}" autocorrect="off" autocapitalize="off" required>
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <button type="submit" name="commit" class="btn btn-sm btn-primary" >{{ section.settings.btn_txt }}</button>
+                  </div>
+
+                  {% if form.errors %}
+                    <div class="alert alert-danger text-start">
+                      {{ form.errors | default_errors }}
+                    </div>
+                  {% endif %}
+  
+                  {% if form.posted_successfully? %}
+                    <h5 class="mt-2 text-start">{{ 'general.social.newsletter_form.newsletter_confirmation' | t }}</h5>
+                  {% else %}
+
+                  {% if section.settings.footer_notes != blank %}
+                    <div class="small">{{ section.settings.footer_notes }}</div>
+                  {% endif %}
+
+                {% endif %}
+
+              {% endform %}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</modal-dialog>
+<script src="{{ 'global-newsletter.js' | asset_url }}" defer></script>
+
+{% schema %}
+  {
+    "name": "Email signup",
+    "tag": "section",
+    "limit": 1,
+    "enabled_on": {
+      "groups": ["header"]
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": "Info"
+      },
+      {
+        "type": "paragraph",
+        "content": "Any customer who sign up will have an account created for them in Shopify. [View customers](/admin/customers?query=&accepts_marketing=1)"
+      },
+      {
+        "type": "header",
+        "content": "Popup Controls"
+      },
+      {
+        "type": "range",
+        "id": "popup_delay",
+        "label": "Popup Delay",
+        "info": "Popup delay (in seconds) before showing up.",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "popup_period_until",
+        "label": "Do Not Show Until",
+        "info": "Select period (in days) that the popup will stay hidden after is being closed.",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "default": 7
+      },
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Subscribe to Newsletter"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Lead Text",
+        "default": "<p>Subscribe and get exclusive offers!</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "footer_notes",
+        "label": "Footer Notes",
+        "default": "<p>No SPAM! We not share your email to any 3rd part companies!</p>"
+      },
+      {
+        "type": "text",
+        "id": "btn_txt",
+        "label": "Button Text",
+        "default": "Subscribe"
+      },
+      {
+        "type": "header",
+        "content": "Template"
+      },
+      {
+        "type": "select",
+        "id": "template_type",
+        "label": "Template Type",
+        "options": [
+          {
+            "value": "image_bg",
+            "label": "Image as background"
+          },
+          {
+            "value": "image_left",
+            "label": "Image on the left"
+          }
+        ],
+        "default": "image_bg"
+      },
+      {
+        "type": "header",
+        "content": "Styling"
+      },
+      {
+        "type": "image_picker",
+        "id": "popup_img",
+        "label": "Popup Image"
+      },
+      {
+        "type": "color_background",
+        "id": "bg_color_inner",
+        "label": "Inner Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "txt_color",
+        "label": "t:settings.text_color",
+        "default": "#5b5b5b"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Newsletter",
+        "category": "Signup"
+      }
+    ]
+  }
+{% endschema %}
+
+

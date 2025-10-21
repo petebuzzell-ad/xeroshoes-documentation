@@ -1,0 +1,1303 @@
+{
+  "sections": {
+    "global_page_header_banner_8rAmFa": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_8zaHDD": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_UFeBWn": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_REywbQ": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-1",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_xqFQ9D": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>Barefoot Trail Running Shoes<\/h1>",
+                        "text_size": "h1",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_xqFQ9D"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_REywbQ"
+              ]
+            }
+          },
+          "block_order": [
+            "group_UFeBWn"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_8zaHDD"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "custom_section_Ktgdiq": {
+      "type": "custom-section",
+      "blocks": {
+        "group_xEayVi": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-2",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-2",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_jFYCAC": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-3",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-3",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "text_Vy33kD": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>Are you looking for the best trail running shoe? Xero Shoes is a lightweight option that provides maximum comfort.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_B4GmUn": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>The joy of trail running is being able to feel the dirt, rocks and roots beneath your feet – so why would you use a shoe with excessive padding? With minimalist footwear, you’re connected to the ground, with a thin layer of protection for any terrain.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_YbK9Un": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>Browse trailing running shoes and sandals men and women.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Vy33kD",
+                "text_B4GmUn",
+                "text_YbK9Un"
+              ]
+            }
+          },
+          "block_order": [
+            "group_jFYCAC"
+          ]
+        }
+      },
+      "block_order": [
+        "group_xEayVi"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-xs",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-xs",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-xs",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "global_featured_products_mxegMq": {
+      "type": "global-featured-products",
+      "blocks": {
+        "static-section-header": {
+          "type": "_section-header",
+          "name": "t:names.section_header",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-end",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-between",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-6",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-5",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0
+          },
+          "blocks": {
+            "group_DctXGz": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "width": "col-lg-9",
+                "width_md": "col-md-9",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-block",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_ttrXDH": {
+                  "type": "heading",
+                  "name": "t:names.collection_title",
+                  "settings": {
+                    "text": "<h3>Here are some of the shoes Alberto is talking about:<\/h3>",
+                    "text_size": "h4",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-3",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_ttrXDH"
+              ]
+            }
+          },
+          "block_order": [
+            "group_DctXGz"
+          ]
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0"
+          },
+          "blocks": {
+            "product_image_qYGR3F": {
+              "type": "product-image",
+              "name": "Product Image",
+              "settings": {
+                "width": 100,
+                "product": "{{ closest.product }}",
+                "show_secondary_media": false
+              },
+              "blocks": {}
+            },
+            "group_z9rVVC": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-2",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "stamped_reviews_star_rating_badge_AFbYBm": {
+                  "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
+                  "disabled": true,
+                  "settings": {
+                    "use_metafields": false,
+                    "sku_tagtype": "sku",
+                    "is_featured_product": false,
+                    "featured_product_handle": ""
+                  }
+                },
+                "custom_liquid_qP3VUj": {
+                  "type": "custom-liquid",
+                  "name": "Custom Liquid",
+                  "disabled": true,
+                  "settings": {
+                    "custom_liquid": "<svg style=\"margin-top: 0;\" width=\"93\" height=\"17\" viewBox=\"0 0 93 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M2.55722 13.5738C2.18956 13.8027 1.97508 13.6501 2.07466 13.2381L2.90191 9.7593L0.19802 7.44008C-0.12369 7.16544 -0.0470923 6.90605 0.381854 6.87554L3.92832 6.59326L5.29942 3.29753C5.45261 2.90082 5.7207 2.90082 5.88156 3.29753L7.26031 6.59326L10.7991 6.87554C11.2281 6.91368 11.3123 7.15781 10.983 7.44008L8.27906 9.7593L9.10632 13.2381C9.20589 13.6501 8.99908 13.8027 8.62375 13.5738L5.59049 11.72L2.55722 13.5738Z\" fill=\"#0F172B\"\/>\n<path d=\"M15.4303 13.7337C15.0626 13.9626 14.8481 13.81 14.9477 13.398L15.775 9.91921L13.0711 7.6C12.7494 7.32535 12.826 7.06596 13.2549 7.03545L16.8014 6.75318L18.1725 3.45744C18.3257 3.06073 18.5938 3.06073 18.7546 3.45744L20.1334 6.75318L23.6722 7.03545C24.1011 7.07359 24.1854 7.31772 23.856 7.6L21.1521 9.91921L21.9794 13.398C22.0789 13.81 21.8721 13.9626 21.4968 13.7337L18.4635 11.8799L15.4303 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M28.4352 13.7337C28.0675 13.9626 27.853 13.81 27.9526 13.398L28.7798 9.91921L26.0759 7.6C25.7542 7.32535 25.8308 7.06596 26.2598 7.03545L29.8063 6.75318L31.1773 3.45744C31.3305 3.06073 31.5986 3.06073 31.7595 3.45744L33.1382 6.75318L36.6771 7.03545C37.106 7.07359 37.1903 7.31772 36.8609 7.6L34.157 9.91921L34.9842 13.398C35.0838 13.81 34.877 13.9626 34.5017 13.7337L31.4684 11.8799L28.4352 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M41.4391 13.7337C41.0714 13.9626 40.8569 13.81 40.9565 13.398L41.7837 9.91921L39.0799 7.6C38.7581 7.32535 38.8347 7.06596 39.2637 7.03545L42.8102 6.75318L44.1813 3.45744C44.3344 3.06073 44.6025 3.06073 44.7634 3.45744L46.1422 6.75318L49.681 7.03545C50.1099 7.07359 50.1942 7.31772 49.8648 7.6L47.1609 9.91921L47.9882 13.398C48.0877 13.81 47.8809 13.9626 47.5056 13.7337L44.4723 11.8799L41.4391 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M54.3727 13.8934C54.005 14.1223 53.7905 13.9697 53.8901 13.5577L54.7173 10.0789L52.0134 7.75966C51.6917 7.48502 51.7683 7.22563 52.1973 7.19512L55.7438 6.91284L57.1148 3.61711C57.268 3.2204 57.5361 3.2204 57.697 3.61711L59.0757 6.91284L62.6146 7.19512C63.0435 7.23326 63.1278 7.47739 62.7984 7.75966L60.0945 10.0789L60.9217 13.5577C61.0213 13.9697 60.8145 14.1223 60.4392 13.8934L57.4059 12.0395L54.3727 13.8934Z\" fill=\"#0F172B\"\/>\n<path d=\"M75.28 13.014L68.574 13V11.642C68.588 8.198 73.656 8.912 73.768 6.812C73.838 5.832 73.32 5.202 71.99 5.202C70.618 5.202 70.156 5.972 70.156 7.134H68.658C68.658 5.314 69.498 3.942 71.948 3.942C74.454 3.942 75.378 5.202 75.294 6.896C75.126 10.004 70.058 9.36 70.058 11.572V11.74H75.28V13.014ZM80.6875 13V11.124H75.9555V9.724L80.1835 4.04H82.2275V9.892H83.7955V11.124H82.2275V13H80.6875ZM77.4255 9.892H80.6875V5.566L77.4255 9.892ZM88.4983 13.098C85.5443 13.098 84.7603 11.502 84.7603 8.506C84.7603 5.286 85.8803 3.942 88.4003 3.942C90.6123 3.942 91.7743 4.754 91.7743 6.812H90.2623C90.2623 5.706 89.7303 5.202 88.4003 5.202C86.4963 5.202 86.2023 6.63 86.2443 8.632C86.4123 8.002 87.1543 7.33 88.7503 7.33C90.3883 7.33 91.9703 8.044 91.9703 10.13C91.9703 11.74 90.9623 13.098 88.4983 13.098ZM86.3843 10.13C86.3843 11.04 87.0423 11.852 88.5123 11.852C89.7023 11.852 90.4583 11.194 90.4583 10.13C90.4583 9.234 89.9683 8.534 88.4003 8.534C87.0003 8.534 86.3843 9.262 86.3843 10.13Z\" fill=\"#646465\"\/>\n<\/svg>",
+                    "text_style": "",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                },
+                "product_star_rating_4eLTUQ": {
+                  "type": "product-star-rating",
+                  "name": "Product star rating",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "stamped_reviews_star_rating_badge_AFbYBm",
+                "custom_liquid_qP3VUj",
+                "product_star_rating_4eLTUQ"
+              ]
+            },
+            "product_title_x3ecMH": {
+              "type": "product-title",
+              "name": "t:names.product_information",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "title": "",
+                "font_size": "fs-xl",
+                "font_weight": "fw-medium",
+                "text_style": "text-math-auto",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "link_product_title": true,
+                "margin_top_desktop": "mt-md-1",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-1",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_price_7wnDhr": {
+              "type": "product-price",
+              "name": "t:names.product_price",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "price_font_size": "fs-16-14",
+                "price_font_weight": "fw-normal",
+                "color": "#0f172b",
+                "sale_price_font_size": "fs-md",
+                "sale_price_font_weight": "fw-normal",
+                "sale_color": "#646465",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_form_KfbH7T": {
+              "type": "product-form",
+              "name": "t:names.product_form",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "form_style": "product-card"
+              },
+              "blocks": {
+                "product_variant_picker_JAeAft": {
+                  "type": "_product-variant-picker",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "variant_picker_type": "swatches",
+                    "show_variant_label": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "title": "Size Guide"
+                  },
+                  "blocks": {}
+                },
+                "buy_buttons_gQyz6k": {
+                  "type": "_buy-buttons",
+                  "name": "Product Buy Buttons",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "show_addtocart": true,
+                    "addtocart_full": true,
+                    "label": "",
+                    "btn_style": "btn-primary",
+                    "size_class": "",
+                    "show_quickview": false,
+                    "quickview_full": false,
+                    "quickview_label": "Quick Shop",
+                    "quickview_icon": "none",
+                    "quickview_btn_style": "btn-primary",
+                    "quickview_size_class": "",
+                    "show_dynamic_checkout": false,
+                    "show_gift_recipient_form": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_variant_picker_JAeAft",
+                "buy_buttons_gQyz6k"
+              ]
+            }
+          },
+          "block_order": [
+            "product_image_qYGR3F",
+            "group_z9rVVC",
+            "product_title_x3ecMH",
+            "product_price_7wnDhr",
+            "product_form_KfbH7T"
+          ]
+        }
+      },
+      "name": "t:names.products_list",
+      "settings": {
+        "fluid_layout": true,
+        "container_width": "container-small",
+        "right_side_fullwidth": false,
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "featured_products": [
+          "terraflex-ii-men-clearance",
+          "terraflex-ii-women-clearance"
+        ],
+        "layout_type": "grid",
+        "max_products": 9,
+        "columns": 2,
+        "ipad_columns": 2,
+        "mobile_columns": 1,
+        "slides_per_view": 4,
+        "slides_per_view_ipad": 3.2,
+        "slides_per_view_mobile": 2,
+        "columns_gap": 0,
+        "columns_gap_ipad": 20,
+        "columns_gap_mobile": 20,
+        "rows_gap": 0,
+        "rows_gap_ipad": 20,
+        "rows_gap_mobile": 20,
+        "section_bg_color": "",
+        "ratio": "square",
+        "button_style": false,
+        "button_position": "card_bottom",
+        "nav_arrows": true,
+        "nav_arrows_visible": "both",
+        "nav_arrows_color": "",
+        "nav_arrows_size": "",
+        "nav_arrows_outside": "inside",
+        "nav_dots": false,
+        "pagination_visible": "both",
+        "pagination_color": "",
+        "nav_scrollbar": true,
+        "scrollbar_visible": "both",
+        "scrollbar_color": ""
+      }
+    },
+    "custom_section_4CPmex": {
+      "type": "custom-section",
+      "blocks": {
+        "group_4xgUfr": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-3",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_WbjFMP": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h3>Men and Women, find your new favorite trail running shoes (great for hiking, too)<\/h3>",
+                "text_size": "h5",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_jeUk8H": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>If you’re looking for a lightweight, responsive, trail-gripping shoe for your next adventure, check out the new TerraFlex.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_WbjFMP",
+            "text_jeUk8H"
+          ]
+        },
+        "group_ahgp3Y": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-3",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_kqk8UQ": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>What’s the best trail running shoe?<\/h2>",
+                "text_size": "h5",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_DUdwzq": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>The most important features for a trail running shoe are:<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_zyihHV": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<ul><li>Grip – you want a sole that gives you great traction<\/li><li>Weight – you don’t want heavy bricks on your feet<\/li><li>Low-to-the-ground for balance and agility<\/li><li>Comfort – real comfort comes from these featuresWide toe box so your toes can spread and splayNon-elevated zero-drop heel for proper postureLESS padding — paradoxically, more padding makes you put MORE force on the ground, as your brain tries to get feedback from your feetFlexible sole so your feet can move through their full range of motion<\/li><li>Breathable upper to keep your feet cool<\/li><\/ul>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_QrH4Ta": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Depending on your needs, you may want a waterproof upper, but keep in mind that this will come with a much higher cost. It may be better to simply have an upper that can dry out fast and, maybe, keep a pair of super lightweight <a href=\"\/pages\/barefoot-sandals\" title=\"Barefoot Sandals\">barefoot sandals<\/a> with you for water crossings.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_xPeUdw": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Not surprisingly, we think the trail hiking and running shoe that gives you what you need is the Xero Shoes TerraFlex.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_kqk8UQ",
+            "text_DUdwzq",
+            "text_zyihHV",
+            "text_QrH4Ta",
+            "text_xPeUdw"
+          ]
+        },
+        "group_TmyM9f": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "image_VtqR4n": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/TerraFlex-roll-385x351.jpg",
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "custom_image_width": true,
+                "custom_image_width_value": 380,
+                "object_fit": "contain",
+                "aspect_ratio": "",
+                "enable_link": false,
+                "enable_preload": true,
+                "url": "",
+                "enable_overlay": false,
+                "overlay_bg_color": "#000000",
+                "overlay_opacity": 0.5,
+                "blend_mode": "none",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_XJ9qJj": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>You can see the trail gripping sole, the low-to-the-ground design, the breathable upper, the wide toe box, and the adjustable ankle and mid-foot straps for security.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_zGzJ48": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>What you can’t see is the 3mm layer of BareFoam™ “hiding” in the sole for just the right amount of protection, while still letting you FEEL The World® below you.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_VtqR4n",
+            "text_XJ9qJj",
+            "text_zGzJ48"
+          ]
+        },
+        "group_ajrXxK": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "image_UL3eH8": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/TerraFlex-SloMo-480-2-1.webp",
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "custom_image_width": true,
+                "custom_image_width_value": 480,
+                "object_fit": "contain",
+                "aspect_ratio": "",
+                "enable_link": false,
+                "enable_preload": true,
+                "url": "",
+                "enable_overlay": false,
+                "overlay_bg_color": "#000000",
+                "overlay_opacity": 0.5,
+                "blend_mode": "none",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "heading_7m37fc": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h4>Where can you get a good trail shoe (for running or hiking)?<\/h4>",
+                "text_size": "h5",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_kkc6kF": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Thanks to the Internet, practically anywhere.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_m9dinD": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>We have runners and hikers in the TerraFlex all over the world — from the Philippines to South Africa to Australia to Germany, and everywhere in between.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-3",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-3",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_jetUDX": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>If you order trail shoes online, keep in mind that no two shoes will necessarily fit the same. In fact, if you took 3 people with identical feet and put them in the same shoe, their reaction to fit and sizing would be like Goldilocks — one would say “Too small,” one would say “Too big,” and one would say “Just right.”<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-3",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-3",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_A7Nrpn": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Make sure you can try the shoe on to see what’s right for you. Xero Shoes, to help with sizing, has a free domestic exchange policy. Plus we have stores that carry the TerraFlex listed <a href=\"\/pages\/stores\" title=\"Xero Shoes Stores\">here<\/a>.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-3",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-3",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "heading_wLCE6g": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Don’t I need ankle support for trail running and hiking?<\/h2>",
+                "text_size": "h5",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_with_id_j8DUXh": {
+              "type": "text-with-id",
+              "name": "Text with ID",
+              "settings": {
+                "text": "<p>In short… NO.<\/p><p>But let me clarify.<\/p><p>If you’re wearing a shoe with a stiff sole, YES. If you’re wearing a shoe whose sole lets your foot bend and flex naturally, then, no.<\/p><p>Here’s why.<\/p><p>Imagine wearing a stiff-soled shoe, and stepping on a rock on the outside edge. Because the sole is stiff, the rock will act like a fulcrum and make your whole foot twist inward… and that’s WHY you needed ankle support: to accommodate the stiff sole.<\/p><p>But with a sole that FLEXES, your foot can flex as well, and it won’t get twisted and, therefore, you don’t need the support.<\/p><p>Besides anything that keeps your joints from moving naturally is, ultimately, making them weaker.<\/p><p>Similarly, by having a sole that lets you FEEL the ground, your brain gets the feedback it needs to help you move your body efficiently. When you have a stiff (or, just thick) sole, you’ve dampened and reduced the information that your body needs to effective functioning.<\/p><p>That’s why we made the TerraFlex (and all our shoes and sandals) with flexible soles that provide a combination of protection and “ground feel.”<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": "",
+                "custom_id": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_UL3eH8",
+            "heading_7m37fc",
+            "text_kkc6kF",
+            "text_m9dinD",
+            "text_jetUDX",
+            "text_A7Nrpn",
+            "heading_wLCE6g",
+            "text_with_id_j8DUXh"
+          ]
+        }
+      },
+      "block_order": [
+        "group_4xgUfr",
+        "group_ahgp3Y",
+        "group_TmyM9f",
+        "group_ajrXxK"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-xs",
+        "section_top_spacing_ipad": "spacing-top-ipad-xs",
+        "section_top_spacing_mobile": "spacing-top-mobile-xs",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-6",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-4",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_8rAmFa",
+    "custom_section_Ktgdiq",
+    "global_featured_products_mxegMq",
+    "custom_section_4CPmex"
+  ]
+}

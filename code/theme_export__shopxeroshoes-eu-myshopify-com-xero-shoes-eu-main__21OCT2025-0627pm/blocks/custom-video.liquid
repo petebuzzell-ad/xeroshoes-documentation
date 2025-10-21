@@ -1,0 +1,850 @@
+{{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- liquid 
+    assign postervideo = block.settings.poster_video_local | image_url: width: 600
+    assign video_url = block.settings.video_url
+    if block.settings.video_type == 'local'
+        assign video_obj = block.settings.video_local.sources | where: "format", "mp4"
+        assign video_url = video_obj[0].url
+    endif
+-%}
+
+{% capture class_list %}
+    {{ block.settings.padding_top_desktop }} {{ block.settings.padding_bottom_desktop }} {{ block.settings.padding_left_desktop }} {{ block.settings.padding_right_desktop }} {{ block.settings.padding_top_mobile }} {{ block.settings.padding_bottom_mobile }} {{ block.settings.padding_left_mobile }} {{ block.settings.padding_right_mobile }}
+{% endcapture %}
+
+<div class="{{ class_list }} custom-video-container flex-shrink-1 h-100 {{ block.settings.width }} {{ block.settings.width_md }} {{ block.settings.width_sm }}">
+    <custom-video class="video-with--text h-100 d-block position-relative placement--{{ block.settings.placement }} poster--{{ block.settings.poster_type }} media-height-{{ block.settings.media_height }}" 
+        data-loop="{{ block.settings.video_loop }}" data-autoplay="{{ block.settings.video_autoplay }}"
+        data-controls="{{ block.settings.video_controls }}" data-muted="{{ block.settings.video_muted }}"
+        data-video-type="{{ block.settings.video_type }}"  data-placement="{{ block.settings.placement }}"
+        data-video-id="{{ video_url }}">
+
+        {% if block.settings.video_play_button %}<div data-trigger-video-whole class="trigger-from-whole-video-click"></div>{% endif %}
+        <div class="cta-btn {% unless block.settings.video_play_button %} d-none{% endunless %}">
+            <button class="play__button btn btn-light" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                <svg class="video-play-icon" aria-hidden="true" focusable="false" style="width:24px;height:24px;"><use href="#icon-play"></use></svg>
+                <svg class="video-pause-icon" aria-hidden="true" focusable="false" style="width:24px;height:24px;"><use href="#icon-pause"></use></svg>
+            </button>
+        </div>
+
+        {% unless block.settings.poster_type == 'none' %}  
+            <div class="content-section h-100 w-100">
+                <div class="poster-image h-100">
+                    {%- if block.settings.poster_type == 'video' and video_url != blank -%}
+                        
+                        <video data-posterVideo preload="true" playsinline muted loop 
+                            poster="{{ postervideo }}" data-src="{{ video_url }}" class="w-100 h-100 d-block">
+                        </video>
+                    {%- elsif block.settings.poster_image != blank -%}
+                    <img {% if block.settings.preview_poster_image == false %}data-{% endif %}srcset="
+                        {%- if block.settings.poster_image.width >= 350 -%}{{ block.settings.poster_image | image_url: width: 350 }} 350w,{%- endif -%}
+                        {%- if block.settings.poster_image.width >= 550 -%}{{ block.settings.poster_image | image_url: width: 550 }} 550w,{%- endif -%}
+                        {%- if block.settings.poster_image.width >= 750 -%}{{ block.settings.poster_image | image_url: width: 750 }} 750w,{%- endif -%}
+                        {%- if block.settings.poster_image.width >= 991 -%}{{ block.settings.poster_image | image_url: width: 991 }} 991w,{%- endif -%}
+                        {%- if block.settings.poster_image.width >= 1200 -%}{{ block.settings.poster_image | image_url: width: 1200 }} 1200w,{%- endif -%}
+                        {%- if block.settings.poster_image.width >= 1500 -%}{{ block.settings.poster_image | image_url: width: 1500 }} 1500w{%- endif -%}
+                        {{ block.settings.poster_image | image_url }} {{ block.settings.poster_image.width }}w"
+                         {% if block.settings.preview_poster_image == false %}
+                         src="{{ 'animated-placeholder.svg' | asset_url }}" data-src="{{ block.settings.poster_image | image_url }}" loading="lazy" class="lozad"
+                         {% else %}
+                         src="{{ block.settings.poster_image | image_url }}" loading="eager" fetchpriority="high" 
+                         {% endif %}
+                         sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width }}, 100vw"
+                        alt="{{ block.settings.poster_image.alt | default: block.settings.title | escape }}"
+                        width="{{ block.settings.poster_image.width }}"
+                        height="{{ block.settings.poster_image.width | divided_by: block.settings.poster_image.aspect_ratio | round }}"
+                        >
+                    {%- else -%}
+                        {% render 'placeholder-image' %}
+                    {%- endif -%}
+                </div>
+            </div>
+        {% endunless %}
+
+        {%- if block.settings.placement == 'grid' and video_url != blank -%}
+            <div class="video-section w-100" aria-hidden="true"></div>
+        {%- endif -%}
+
+    </custom-video>
+</div>
+ 
+{% schema %}
+    {
+        "name": "Video",
+        "tag": null,
+        "settings": [
+            {
+                "type": "header",
+                "content": "Size"
+            },
+            {
+                "type": "select",
+                "id": "width",
+                "label": "t:settings.width_desktop",
+                "options": [
+                    {
+                        "value": "col-lg-1",
+                        "label": "8%"
+                    },
+                    {
+                        "value": "col-lg-2",
+                        "label": "16%"
+                    },
+                    {
+                        "value": "col-lg-3",
+                        "label": "25%"
+                    },
+                    {
+                        "value": "col-lg-4",
+                        "label": "33%"
+                    },
+                    {
+                        "value": "col-lg-5",
+                        "label": "41%"
+                    },
+                    {
+                        "value": "col-lg-6",
+                        "label": "Half"
+                    },
+                    {
+                        "value": "col-lg-7",
+                        "label": "58%"
+                    },
+                    {
+                        "value": "col-lg-8",
+                        "label": "66%"
+                    },
+                    {
+                        "value": "col-lg-9",
+                        "label": "75%"
+                    },
+                    {
+                        "value": "col-lg-10",
+                        "label": "83%"
+                    },
+                    {
+                        "value": "col-lg-11",
+                        "label": "92%"
+                    },
+                    {
+                        "value": "col-lg-12",
+                        "label": "Full"
+                    },
+                    {
+                        "value": "col-lg-auto",
+                        "label": "Auto"
+                    }
+                ],
+                "default": "col-lg-12"
+            },
+            {
+                "type": "select",
+                "id": "width_md",
+                "label": "t:settings.width_ipad",
+                "options": [
+                    {
+                        "value": "col-md-1",
+                        "label": "8%"
+                    },
+                    {
+                        "value": "col-md-2",
+                        "label": "16%"
+                    },
+                    {
+                        "value": "col-md-3",
+                        "label": "25%"
+                    },
+                    {
+                        "value": "col-md-4",
+                        "label": "33%"
+                    },
+                    {
+                        "value": "col-md-5",
+                        "label": "41%"
+                    },
+                    {
+                        "value": "col-md-6",
+                        "label": "Half"
+                    },
+                    {
+                        "value": "col-md-7",
+                        "label": "58%"
+                    },
+                    {
+                        "value": "col-md-8",
+                        "label": "66%"
+                    },
+                    {
+                        "value": "col-md-9",
+                        "label": "75%"
+                    },
+                    {
+                        "value": "col-md-10",
+                        "label": "83%"
+                    },
+                    {
+                        "value": "col-md-11",
+                        "label": "92%"
+                    },
+                    {
+                        "value": "col-md-12",
+                        "label": "Full"
+                    },
+                    {
+                        "value": "col-md-auto",
+                        "label": "Auto"
+                    }
+                ],
+                "default": "col-md-12"
+            },
+            {
+                "type": "select",
+                "id": "width_sm",
+                "label": "t:settings.width_mobile",
+                "options": [
+                    {
+                        "value": "col-1",
+                        "label": "8%"
+                    },
+                    {
+                        "value": "col-2",
+                        "label": "16%"
+                    },
+                    {
+                        "value": "col-3",
+                        "label": "25%"
+                    },
+                    {
+                        "value": "col-4",
+                        "label": "33%"
+                    },
+                    {
+                        "value": "col-5",
+                        "label": "41%"
+                    },
+                    {
+                        "value": "col-6",
+                        "label": "Half"
+                    },
+                    {
+                        "value": "col-7",
+                        "label": "58%"
+                    },
+                    {
+                        "value": "col-8",
+                        "label": "66%"
+                    },
+                    {
+                        "value": "col-9",
+                        "label": "75%"
+                    },
+                    {
+                        "value": "col-10",
+                        "label": "83%"
+                    },
+                    {
+                        "value": "col-11",
+                        "label": "92%"
+                    },
+                    {
+                        "value": "col-12",
+                        "label": "Full"
+                    },
+                    {
+                        "value": "col-auto",
+                        "label": "Auto"
+                    }
+                ],
+                "default": "col-12"
+            },
+            {
+                "type": "header",
+                "content": "Video playback controls"
+            },
+            {
+                "type": "checkbox",
+                "id": "video_muted",
+                "label": "Video Muted",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "video_autoplay",
+                "label": "Video Autoplay",
+                "visible_if": "{{ block.settings.video_muted == true }}",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "video_controls",
+                "label": "Video Controls",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "video_loop",
+                "label": "Loop Video",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "video_play_button",
+                "label": "Video Play Button",
+                "default": true
+            },
+            {
+                "type": "header",
+                "content": "Poster Video/Image",
+            },
+            {
+                "type": "select",
+                "id": "poster_type",
+                "label": "Poster Type",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "value": "video",
+                        "label": "Video"
+                    }
+                ],
+                "default": "image"
+            },
+            {
+                "type": "video",
+                "id": "poster_video_local",
+                "label": "Poster Video(Local)",
+                "visible_if": "{{ block.settings.poster_type == 'video' }}",
+                "info": "[Learn more about Autoplay policies.](https://developer.chrome.com/blog/autoplay/#new-behaviors)"
+            },
+            {
+                "type": "image_picker",
+                "id": "poster_image",
+                "label": "Select Image",
+                "visible_if": "{{ block.settings.poster_type == 'image'  }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "preview_poster_image",
+                "label": "Preload Poster Image",
+                "default": false,
+                "info": "Only enable for above fold video",
+                "visible_if": "{{ block.settings.poster_type == 'image'  }}"
+            },
+            {
+                "type": "header",
+                "content": "Video"
+            },
+            {
+                "type": "select",
+                "id": "video_type",
+                "label": "Video Type",
+                "options": [
+                    {
+                        "value": "local",
+                        "label": "Local Video"
+                    },
+                    {
+                        "value": "youtube",
+                        "label": "Youtube"
+                    }
+                ],
+                "default": "youtube"
+            },
+            {
+                "type": "select",
+                "id": "placement",
+                "label": "Placement",
+                "options": [
+                    {
+                        "value": "grid",
+                        "label": "Grid"
+                    },
+                    {
+                        "value": "popup",
+                        "label": "Modal"
+                    }
+                ],
+                "default": "grid"
+            },
+            {
+                "type": "video",
+                "id": "video_local",
+                "label": "Local Video",
+                "visible_if": "{{ block.settings.video_type == 'local' }}",
+                "info": "Use this to select/upload local video."
+            },
+            {
+                "type": "video_url",
+                "id": "video_url",
+                "label": "Video URL",
+                "accept": [
+                    "youtube"
+                ],
+                "visible_if": "{{ block.settings.video_type == 'youtube' }}",
+                "default": "https://www.youtube.com/watch?v=rgZU5pDf6mw",
+                "info": "Use this for Youtube video. Youtube link [example](https://www.youtube.com/watch?v=rgZU5pDf6mw)."
+            },
+            {
+                "type": "select",
+                "id": "media_height",
+                "label": "Height",
+                "options": [
+                    {
+                        "value": "auto",
+                        "label": "Auto"
+                    },
+                    {
+                        "value": "square",
+                        "label": "Square"
+                    },
+                    {
+                        "value": "landscape",
+                        "label": "Landscape"
+                    },
+                    {
+                        "value": "portrait",
+                        "label": "Portrait"
+                    }
+                ],
+                "default": "portrait"
+            },
+            {
+                "type":"header",
+                "content":"Padding: Desktop"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_desktop",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_desktop",
+                "label": "Padding Bottom",
+                "options": [ 
+                    {
+                        "value": "pb-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_desktop",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_desktop",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-md-0"
+            },
+            {
+                "type":"header",
+                "content":"Padding: Mobile"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_mobile",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_mobile",
+                "label": "Padding Bottom",
+                "options": [
+                    {
+                        "value": "pb-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_mobile",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_mobile",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-0"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Video"
+            }
+        ]
+    }
+{% endschema %}

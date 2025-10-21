@@ -1,0 +1,78 @@
+{%- liquid  
+    render 'theme-style'
+-%}
+
+{% comment %} Global css {% endcomment %}
+{{ 'global.css' | asset_url | stylesheet_tag }}
+{{ 'utilities.css' | asset_url | stylesheet_tag }}
+{{ 'spacing.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'grid.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'colors.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'buttons-badges.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'global-header.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'swiper-bundle.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'form.css' | asset_url | stylesheet_tag }}
+
+{% comment %} Individual Page css {% endcomment %}
+{%- if template.name == 'list-collections' or template.name == 'collection' or template.name == 'index' or template.name == 'cart'  or template == 'search' or template.suffix == 'basketball' or template.name == 'article' -%}
+    {{ 'component-card.css' | asset_url | stylesheet_tag }}
+    {% if template.name == 'cart' %}
+        {{ 'template-cart.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+    {% if template.name == 'collection' or template == 'search' %}
+        {{ 'component-filter.css' | asset_url | stylesheet_tag }}
+        {{ 'template-collection.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+{%- elsif template.name == 'product' or template == 'search' -%}
+    {{ 'template-product.css' | asset_url | stylesheet_tag }}
+    {% comment %} {{ 'component-card.css' | asset_url | stylesheet_tag }} {% endcomment %}
+    {{ 'customer-reviews.css' | asset_url | stylesheet_tag }}
+ 
+{%- elsif template.name == 'blog' or template.name == 'article' -%}
+    {{ 'template-blog.css' | asset_url | stylesheet_tag }}
+{%- elsif template.directory == 'customers' -%}
+    {{ 'template-account.css' | asset_url | stylesheet_tag }}
+{%- elsif page.handle == 'faq' -%}
+    {{ 'template-faq.css' | asset_url | stylesheet_tag }}
+{%- elsif page.handle == 'contact' -%}
+    {{ 'template-contact.css' | asset_url | stylesheet_tag }} 
+{%- elsif page.handle == 'returns' -%}
+    {{ 'template-returns.css' | asset_url | stylesheet_tag }} 
+{%- elsif page.handle == 'xerocircle' -%}
+    {{ 'template-xerocircle.css' | asset_url | stylesheet_tag }} 
+    {%- elsif page.handle == 'whatswrong' -%}
+{{ 'template-whatswrong.css' | asset_url | stylesheet_tag }} 
+{%- elsif page.handle == 'military-discount' or template.suffix == "quadpay" -%}
+    {{ 'template-military-discount.css' | asset_url | stylesheet_tag }}
+    {{ 'template-minimalist.css' | asset_url | stylesheet_tag }}
+{%- elsif template.suffix == 'street-release' -%}
+    {{ 'template-minimalist.css' | asset_url | stylesheet_tag }}
+{%- elsif template.suffix == 'minimalist' or template.suffix == 'minimalist-sandals' or template.suffix == 'affiliate-faq' or template.suffix contains '-minimalist' -%}
+    {{ 'component-card.css' | asset_url | stylesheet_tag }}
+    {{ 'template-minimalist.css' | asset_url | stylesheet_tag }}
+{%- elsif template.suffix == 'shoe-finder' -%}
+    {{ 'template-shoe-finder.css' | asset_url | stylesheet_tag }}
+{%- elsif template.suffix == 'pick-a-running-shoe' -%}
+    {{ 'template-pick-a-running-shoe.css' | asset_url | stylesheet_tag }}
+    {{ 'component-card.css' | asset_url | stylesheet_tag }}
+{%- elsif template.suffix == 'xero-racing' -%}
+    {{ 'component-card.css' | asset_url | stylesheet_tag }}
+    {{ 'xero-racing.css' | asset_url | stylesheet_tag: preload: true }}
+{%- elsif template.suffix == 'yoga' -%}
+    {{ 'component-card.css' | asset_url |stylesheet_tag }}
+{%- endif -%}
+{%-if template.suffix == 'xero-shoes-reviews' -%}
+    {{ 'xero-shoes-reviews.css' | asset_url |stylesheet_tag }}
+{%- endif -%}  
+{%-if template.suffix == 'martial-arts' -%}
+    {{ 'template-martial-arts.css' | asset_url |stylesheet_tag }}
+{%- endif -%}
+{%-if template.suffix == 'recovery-shoes' -%}
+    {{ 'template-recovery-shoes.css' | asset_url |stylesheet_tag }}
+{%- endif -%}
+{%-if template.suffix == 'born-to-run' -%}
+    {{ 'born-to-run.css' | asset_url |stylesheet_tag }}
+{%- endif -%}
+{%-if template.suffix == 'boots-minimalist' -%}
+    {{ 'boots-minimalist.css' | asset_url |stylesheet_tag }}
+{%- endif -%}

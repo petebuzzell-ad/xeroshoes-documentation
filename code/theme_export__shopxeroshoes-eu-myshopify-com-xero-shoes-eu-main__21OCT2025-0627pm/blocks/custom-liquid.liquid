@@ -1,0 +1,48 @@
+<div class="text-block d-flex flex-column custom-liquid-block {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
+    {{ block.shopify_attributes }}  >
+    {{ block.settings.custom_liquid }}
+  </div>
+  {% schema %}
+  {
+    "name": "Custom Liquid",
+    "tag": null,
+    "settings": [
+        {
+            "type": "liquid",
+            "id": "custom_liquid",
+            "label": "Liquid code",
+            "info": "Add app snippets or other code to create advanced customizations. [Learn more](https://shopify.dev/docs/api/liquid)"
+        },
+        {
+            "type": "select",
+            "id": "text_style",
+            "label": "Style",
+            "options": [
+            {
+                "value": "",
+                "label": "Body"
+            },
+            {
+                "value": "text-block-subtitle",
+                "label": "Subtitle"
+            },
+            {
+                "value": "text-block-caption",
+                "label": "Caption"
+            }
+            ],
+            "default": ""
+        },
+        {
+            "type": "text_alignment",
+            "id": "alignment",
+            "label": "Text alignment",
+            "default": "left"
+        }
+    ],
+    "presets": [
+      { "name": "Custom Liquid" }
+    ]
+  }
+  {% endschema %}
+  

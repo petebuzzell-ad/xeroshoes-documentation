@@ -1,0 +1,62 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  
+  Usage:
+  {% render 'product-price', product: product %}
+{% endcomment %}
+  
+{% unless product.tags contains 'donate' %}
+  
+
+  {% comment %} Sale price display {% endcomment %}
+  <span class="price m-0 p-0 money fs-16-14 {{ block.settings.price_font_weight }} {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}text-danger{%- endif -%}" data-currentPrice style="color:{{ block.settings.color }}">
+    {%- if product.selected_or_first_available_variant != blank -%}
+      {{ product.selected_or_first_available_variant.price | money }}
+    {% comment %} {%- elsif product.price_varies -%}
+      {%-  liquid
+        assign minPrice = product.price_min | money
+        assign maxPrice = product.price_max | money
+      -%}
+      {{- 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape -}}
+      {%- if product.quantity_price_breaks_configured? -%}
+        <div class="volume-pricing-note fs-xs">
+          <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+        </div>
+      {%- endif -%} {% endcomment %}
+    {%- else -%}
+      {{- product.price | money -}}
+    {%- endif -%}
+  </span>
+
+  {% comment %} Compare at price display {% endcomment %}
+  {%- if product.selected_variant and product.selected_variant.compare_at_price > product.selected_variant.price -%}
+    <del class="price small m-0 p-0 me-1 money {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}d-inline-block{% else %}d-none{% endif %} fs-14-12 {{ block.settings.sale_price_font_weight }}" data-comparePrice  style="color:{{ block.settings.sale_color }}">{{ product.selected_variant.compare_at_price | money }}</del>
+
+      {% if template == 'product' %}
+        {% if settings.show_save_price %}
+        {% if product.selected_variant.compare_at_price > product.selected_variant.price %}
+          {% assign savings = product.selected_variant.compare_at_price | minus: product.selected_variant.price %}
+          <span class="custom-1 fs-14 fw-semibold ms-1 text-green text-uppercase">save <span data-saleprice>{{ savings | money }}</span>!</span>
+        {% endif %}
+        {% endif %}
+      {% endif %}
+  {%- elsif product.compare_at_price > product.price -%}
+    <del class="price small m-0 p-0 me-1 money {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}d-inline-block{% else %}d-none{% endif %} fs-14-12 {{ block.settings.sale_price_font_weight }}" data-comparePrice style="color:{{ block.settings.sale_color }}">{{ product.compare_at_price | money }}</del>
+
+    {% if template == 'product' %}
+      {% if settings.show_save_price %}
+      {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+        {% assign savings = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price %}
+         <span class="fs-14 fw-semibold ms-1 text-green text-uppercase">save <span data-saleprice>{{ savings | money }}</span>!</span>
+      {% endif %}
+      {% endif %}
+    {% endif %}
+  {%- endif -%}
+  {% endunless %}
+
+  {% comment %} {% if product.gift_card? %}
+    <span class="price m-0 p-0 money fs-16-14 {{ block.settings.price_font_weight }}" style="color:{{ block.settings.color }}">{{ product.price_min | money }} minimum</span>
+  {% endif %} {% endcomment %}

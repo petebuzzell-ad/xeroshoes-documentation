@@ -1,0 +1,39 @@
+.klaviyo-form form > .needsclick [data-testid="form-row"] [data-testid="form-component"] > .needsclick > input,
+.klaviyo-form form > .needsclick [data-testid="form-row"] [data-testid="form-component"] > .needsclick > input::placeholder {
+    background-color: transparent !important;
+    letter-spacing: 0.17px !important;
+    line-height: 1.1 !important;
+    font-family: var(--pe-font-family-heading) !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    outline: none !important;
+}
+.klaviyo-form form > .needsclick [data-testid="form-row"] [data-testid="form-component"] > .needsclick > input {
+    padding-left: 10px !important;
+}
+form.klaviyo-form>.needsclick>.needsclick >.needsclick{
+    padding-inline: 0 !important;
+}
+form.klaviyo-form>.needsclick>.needsclick >.needsclick h1 span {
+    font-family: var(--pe-body-font-family) !important;
+    text-transform: capitalize !important;
+    line-height: 1.5;
+    color: var(--pe-color-success);
+    font-size: 18px !important;
+    padding: 5px 0 2px !important;
+    font-weight: 600 !important;
+}
+form.klaviyo-form .needsclick h1,form.klaviyo-form .needsclick p {
+    text-align: left !important;
+}
+form.klaviyo-form .needsclick p span{
+    text-transform: capitalize !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: var(--pe-body-color) !important;
+    font-weight: 400 !important;
+    font-family: var(--pe-body-font-family) !important;
+    margin-top: 5px;
+    display: inline-block !important;
+}

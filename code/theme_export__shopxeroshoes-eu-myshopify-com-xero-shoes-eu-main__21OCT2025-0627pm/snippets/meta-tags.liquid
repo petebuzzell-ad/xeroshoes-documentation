@@ -1,0 +1,61 @@
+{%- liquid
+  assign default_page_title = page_title | default: shop.name
+  assign default_page_description = page_description | default: shop.description | default: shop.name
+  if template contains 'blog' and current_tags.size > 0
+    assign current_tag = current_tags.first | downcase
+    assign blog_cat_seo_entry = shop.metaobjects.category_meta_data_meta_title_and_description.values
+    for seo_entry in blog_cat_seo_entry
+      assign seo_entry_category = seo_entry.category_name | downcase
+      if seo_entry_category == current_tag
+        assign default_page_title = seo_entry.meta_title | default: default_page_title
+        assign default_page_description = seo_entry.meta_description | default: default_page_description
+        break
+      endif
+    endfor
+  endif
+  
+  assign og_title = default_page_title | default: shop.name
+  assign og_url = canonical_url | default: shop.url
+  assign og_type = 'website'
+  assign og_description = default_page_description | default: shop.description | default: shop.name
+
+  if request.page_type == 'product'
+    assign og_type = 'product'
+  elsif request.page_type == 'article'
+    assign og_type = 'article'
+  elsif request.page_type == 'collection'
+    assign og_type = 'product.group'
+  elsif request.page_type == 'password'
+    assign og_url = shop.url
+  endif
+%}
+
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:title" content="{{ og_title | escape }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:description" content="{{ og_description | escape }}">
+
+{%- if page_image -%}
+  <meta property="og:image" content="http:{{ page_image | image_url }}">
+  <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
+  <meta property="og:image:width" content="{{ page_image.width }}">
+  <meta property="og:image:height" content="{{ page_image.height }}">
+{% else %}
+  <meta property="og:image" content="http:{{ settings.main_logo_socials | image_url: width: 600 }}">
+  <meta property="og:image:secure_url" content="https:{{ settings.main_logo_socials | image_url }}">
+  <meta property="og:image:width" content="{{ settings.main_logo_socials.width }}">
+  <meta property="og:image:height" content="{{ settings.main_logo_socials.height }}">
+{%- endif -%}
+
+{%- if request.page_type == 'product' -%}
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+{%- endif -%}
+
+{%- if settings.social_twitter_link != blank -%}
+  <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+{%- endif -%}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title | escape }}">
+<meta name="twitter:description" content="{{ og_description | escape }}">

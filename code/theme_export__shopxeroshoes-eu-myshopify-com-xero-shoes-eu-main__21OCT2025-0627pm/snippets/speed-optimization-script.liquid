@@ -1,0 +1,160 @@
+{%- comment -%}
+  Renders speed script based on injection type.
+  Accepts:
+  - injectionType: {String} two options available are "head" OR "body".
+
+  Usage:
+  {% render 'speed-optimization-script', injectionType: 'head' %}
+  OR
+  {% render 'speed-optimization-script', injectionType: 'body' %}
+{%- endcomment -%}
+
+{%- if injectionType == 'head' and request.design_mode != true %}
+    <script type="text/javascript"> 
+        window.observerSpeed = new MutationObserver((elements) => {
+            elements.forEach(({ addedNodes: nodes }) => {
+                nodes.forEach((e) => {
+                    //e.src.includes("cdn.shopify.com/extensions") || 
+                    if(e.nodeType == 1 && e.tagName == 'SCRIPT' && e.src != ""){
+                        if(e.src.includes("assets/storefront/load_feature") || e.src.includes("cdn.shopify.com/extensions") || e.src.includes("static-tracking.klaviyo.com") || e.src.includes("static.klaviyo.com") || e.src.includes("klaviyo.js") || e.src.includes('intelligems.io') || e.src.includes('stapecdn.com') || e.src.includes('preloads.js') || e.src.includes('cdn/wpm') || e.src.includes("assets/shopify_pay/") || e.src.includes("otpo") || e.src.includes("tag/js") || e.src.includes("onsite") || e.src.includes("well") || e.src.includes("googletagmanager") || e.src.includes("connect.facebook.net") || e.src.includes("trekkie.storefront") || e.src.includes("storefront/bars") || e.src.includes("cdn/shopifycloud") || e.src.includes("app/web-pixel") || e.src.includes("klarna") || e.src.includes("preview-bar") || e.src.includes("cdn1.stamped.io") || e.id == 'klarna-osm-script-tag' || e.src.includes("clarity.js") || e.src.includes("fbevents.js") || e.src.includes("connect.facebook.net") || e.src.includes("js.klarna.com") || e.src.includes("id-shop.govx.com") || e.src.includes("www.upsellit.com")){
+                            e.removeAttribute("defer");
+                            e.setAttribute("data-src", e.src);
+                            e.removeAttribute("src");
+                        }
+                    }
+                    else if(e.nodeType == 1 && e.tagName == 'SCRIPT') {
+                        if (e.textContent.includes('s.src = urls[i];')) {
+                            e.textContent = e.textContent.replace('s.src', 's.dataset.src');
+                        } else if (e.textContent.includes('eventsListenerScript.src')) {
+                            let finalText = ''
+                            finalText = e.textContent.replace('eventsListenerScript.src', 'eventsListenerScript.dataset.src');
+                            finalText = finalText.replace('scriptFallback.src','scriptFallback.dataset.src');
+                            finalText = finalText.replace('script.src','script.dataset.src');
+                            e.textContent = finalText;
+                        } else if (e.textContent.includes('instafeedScript.src')) {
+                            let finalText = ''
+                            finalText = e.textContent.replace('instafeedScript.src', 'instafeedScript.dataset.src');
+                            e.textContent = finalText;
+                        } else if (e.nodeType == 1 && e.innerHTML.includes("PreviewBarInjector") || e.innerHTML.includes("adminBarInjector")) {
+                            e.innerHTML = e.innerHTML.replace("DOMContentLoaded","asyncLazyLoad");
+                        } else if(e.className == 'analytics' || e.className == 'boomerang' || e.innerText.includes("webPixelsManager") || e.id == 'web-pixels-manager-setup'){
+                            e.setAttribute('type', 'text/lazyload');
+                        }
+                    }
+                    else if(e.nodeType == 1 && e.tagName == 'LINK') {
+                        if (e.href.includes('static.klaviyo.com') || e.href.includes('instafeed') || e.href.includes('accelerated-checkout-backwards-compat') || e.href.includes('klarna') || e.href.includes("cdn.shopify.com/extensions") || e.href.includes('preview-bar') || e.href.includes('cdn1.stamped.io')) {
+                            e.dataset.href = e.href;
+                            e.removeAttribute('href');
+                        }
+                    } else if (e.nodeType == 1 && e.tagName == 'IFRAME' && (e.id.includes('web-pixel-sandbox') || e.src.includes('youtube.com/embed'))) { 
+                        e.dataset.src = e.src; e.removeAttribute('src'); 
+                    } else if (e.nodeType == 1 && e.tagName == 'A' && !e.href) {
+                        e.role = "button";
+                    } else if (e.nodeType == 1 && e.tagName == 'SPAN' && e.classList.contains('swiper-pagination-bullet')) {
+                        e.removeAttribute('role');
+                        e.removeAttribute('aria-label');
+                        e.removeAttribute('tabindex');
+                    }
+                });
+            });
+        });
+        observerSpeed.observe(document.documentElement, { childList: !0, subtree: !0 });
+
+        (() => {
+            var e = class extends HTMLElement {
+                constructor() {
+                    super();
+                    this._shadowRoot = this.attachShadow({ mode: "open" });
+                    this._shadowRoot.innerHTML = '<style>:host img { pointer-events: none; position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; max-width: 99vw; max-height: 99vh;</style><img id="page_performance" alt="performance-optimization"/>';
+                }
+                connectedCallback() {
+                    this._fullImageEl = this._shadowRoot.querySelector("#page_performance");
+                    this._fullImageEl.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3C/svg%3E";
+                }
+            };
+            customElements.define("performance-optimization", e);
+        })();
+        document.head.insertAdjacentHTML("afterend", `<performance-optimization></performance-optimization>`);
+    </script>    
+{%- elsif injectionType == 'body' %}
+    <script type="text/javascript">
+        var script_loaded = false;
+        function loadJSscripts() {
+            if(script_loaded || (void 0 !== observerSpeed)) {
+                observerSpeed.disconnect();
+                // sandBoxObserver.disconnect();
+                script_loaded = true;
+            }
+            document.querySelectorAll("script[data-src], iframe[data-src]").forEach((e) => {
+                let datasrc = e.dataset.src;
+                if(datasrc != null) e.src = datasrc;
+            });
+            document.querySelectorAll("video source[data-src]").forEach((e) => {
+                let datasrc = e.dataset.src;
+                if(datasrc != null) e.src = datasrc;
+            });
+            document.querySelectorAll("[data-preview-video][data-src]").forEach((e) => {
+
+                let datasrcset = e.dataset.srcset;
+                if(datasrcset != null) {
+                    e.srcset = datasrcset;
+                    e.removeAttribute('data-srcset');
+                }
+
+                let datasrc = e.dataset.src;
+                if(datasrc != null) {
+                    e.src = datasrc;
+                    e.removeAttribute('data-src');
+                }
+            });
+            document.querySelectorAll('[data-style]')?.forEach(e => {
+                let datastyle = e.dataset.style;
+                if(datastyle != null) {
+                    e.style = datastyle;
+                    e.removeAttribute('data-style')
+                }
+            });
+            document.querySelectorAll("link[data-href]").forEach((e) => {
+                let datahref = e.dataset.href;
+                if(datahref != null) e.href = datahref;
+            });
+            document.querySelectorAll("script[type='text/lazyload']").forEach((e) => {
+                var t = document.createElement("script");
+                for (a = 0; a < e.attributes.length; a++) {
+                    var r = e.attributes[a];
+                    t.setAttribute(r.name, r.value);
+                }
+                (t.type = "text/javascript"), (t.innerHTML = e.innerHTML), e.parentNode.insertBefore(t, e), e.parentNode.removeChild(e);
+            });
+            setTimeout(() => {
+                document.dispatchEvent(new CustomEvent("asyncLazyLoad"));
+            }, 1000);
+        }
+        var activityEvents = ["mousedown", "mousemove", "keydown", "scroll", "touchstart", "click", "keypress", "touchmove"];
+        activityEvents.forEach((e)=> {
+            window.addEventListener(e, loadJSscripts, { once: true });
+        });
+        // if (window.innerWidth <= 991){
+        //     window.onload = ()=>{
+        //         setTimeout(()=>{
+        //             window.dispatchEvent(new Event('click'));
+        //         }, 1000);
+        //     };
+        // }
+        window.onload = ()=>{
+          setTimeout(()=>{
+            document.querySelectorAll("script[data-src][data-loadtype='window-onload']").forEach((e) => {
+                let datasrc = e.dataset.src;
+                if(datasrc != null){
+                  e.src = datasrc;
+                  e.removeAttribute("data-src");
+                  e.setAttribute("data-loaded", "true");
+                }
+            });
+            window.dispatchEvent(new Event('click'));
+          }, 1000);
+        }; 
+    </script>   
+{%- endif -%}
+
+

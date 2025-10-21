@@ -1,0 +1,870 @@
+{%- liquid 
+    assign cart_subtotal = cart.total_price
+    assign free_shipping_threshold = block.settings.free_shipping_threshold | times: 100 | default: 0
+    assign free_gift_threshold = block.settings.free_gift_threshold | times: 100 | default: 0
+    assign discount_threshold = block.settings.discount_threshold | times: 100 | default: 0
+    
+    assign free_shipping_progress = 0
+    assign free_gift_progress = 0
+    assign discount_progress = 0
+    
+    if free_shipping_threshold > 0
+        assign free_shipping_progress = cart_subtotal | divided_by: free_shipping_threshold | at_most: 100
+    endif
+    
+    if free_gift_threshold > 0
+        assign free_gift_progress = cart_subtotal | divided_by: free_gift_threshold | at_most: 100
+    endif
+    
+    if discount_threshold > 0
+        assign discount_progress = cart_subtotal | divided_by: discount_threshold | at_most: 100
+    endif
+    if cart_subtotal >= free_shipping_threshold and free_shipping_threshold > 0
+        assign has_free_shipping = true
+    endif
+    if cart_subtotal >= free_gift_threshold and free_gift_threshold > 0
+        assign has_free_gift = true
+    endif
+    if cart_subtotal >= discount_threshold and discount_threshold > 0
+        assign has_discount = true
+    endif
+    
+    assign next_threshold = 0
+    assign next_reward = ""
+    
+    if has_free_shipping == false and free_shipping_threshold > 0
+        assign next_threshold = free_shipping_threshold
+        assign next_reward = "free_shipping"
+    elsif has_free_gift == false and free_gift_threshold > 0
+        assign next_threshold = free_gift_threshold
+        assign next_reward = "free_gift"
+    elsif has_discount == false and discount_threshold > 0
+        assign next_threshold = discount_threshold
+        assign next_reward = "discount"
+    endif
+-%}
+
+{% capture class_list %}
+    {{ block.settings.padding_top_desktop }} {{ block.settings.padding_bottom_desktop }} {{ block.settings.padding_left_desktop }} {{ block.settings.padding_right_desktop }} {{ block.settings.padding_top_mobile }} {{ block.settings.padding_bottom_mobile }} {{ block.settings.padding_left_mobile }} {{ block.settings.padding_right_mobile }}
+{% endcapture %}
+
+{%- if free_shipping_threshold > 0 or free_gift_threshold > 0 or discount_threshold > 0 -%}
+    <div class="{{ class_list }} {{ block.settings.border }} multi-layer-sales-motivator" {{ block.attributes }} style="background:{{ block.settings.bg_color }}; border-color:{{ block.settings.border_color }};">
+        
+        <!-- Rewards Status Display -->
+        <div class="rewards-status mb-3">
+            {%- if has_free_shipping -%}
+                <div class="reward-item achieved mb-2">
+                    <span class="reward-icon">🚚</span>
+                    <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.free_shipping_color | default: block.settings.color }}">{{ block.settings.free_shipping_achieved_text | default: "Free Shipping Unlocked!" }}</span>
+                </div>
+            {%- endif -%}
+            
+            {%- if has_free_gift -%}
+                <div class="reward-item achieved mb-2">
+                    <span class="reward-icon">🎁</span>
+                    <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.free_gift_color | default: block.settings.color }}">{{ block.settings.free_gift_achieved_text | default: "Free Gift Unlocked!" }}</span>
+                </div>
+            {%- endif -%}
+            
+            {%- if has_discount -%}
+                <div class="reward-item achieved mb-2">
+                    <span class="reward-icon">💰</span>
+                    <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.discount_color | default: block.settings.color }}">{{ block.settings.discount_achieved_text | default: "Discount Unlocked!" }}</span>
+                </div>
+            {%- endif -%}
+        </div>
+        
+        <!-- Next Reward Progress -->
+        {%- if next_threshold > 0 -%}
+            <div class="next-reward-progress mb-3">
+                {%- liquid
+                    assign left_amount = next_threshold | minus: cart_subtotal | default: 0 | money
+                    assign progress_percentage = cart_subtotal | divided_by: next_threshold | at_most: 100
+                -%}
+                
+                {%- case next_reward -%}
+                    {%- when 'free_shipping' -%}
+                        {%- assign next_message = block.settings.free_shipping_progress_text | replace: "${left_amount}", left_amount -%}
+                        {%- assign progress_color = block.settings.free_shipping_progress_color | default: "#28a745" -%}
+                    {%- when 'free_gift' -%}
+                        {%- assign next_message = block.settings.free_gift_progress_text | replace: "${left_amount}", left_amount -%}
+                        {%- assign progress_color = block.settings.free_gift_progress_color | default: "#FAD65A" -%}
+                    {%- when 'discount' -%}
+                        {%- assign next_message = block.settings.discount_progress_text | replace: "${left_amount}", left_amount -%}
+                        {%- assign progress_color = block.settings.discount_progress_color | default: "#C34029" -%}
+                {%- endcase -%}
+                
+                <p class="mb-2 {{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">{{ next_message }}</p>
+                <div class="progress mb-2" style="height: 8px;">
+                    <div class="progress-bar" style="width:{{ progress_percentage }}%; background-color:{{ progress_color }};" role="progressbar"></div>
+                </div>
+            </div>
+        {%- endif -%}
+        
+        <!-- Multi-Layer Progress Bars -->
+        <div class="multi-layer-progress">
+            {%- if free_shipping_threshold > 0 -%}
+                <div class="progress-layer mb-2">
+                    <div class="progress-label d-flex justify-content-between align-items-center mb-1">
+                        <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">Free Shipping</span>
+                        <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">{{ free_shipping_threshold | money }}</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar" style="width:{{ free_shipping_progress }}%; background-color:{{ block.settings.free_shipping_progress_color | default: "#28a745" }};" role="progressbar"></div>
+                    </div>
+                </div>
+            {%- endif -%}
+            
+            {%- if free_gift_threshold > 0 -%}
+                <div class="progress-layer mb-2">
+                    <div class="progress-label d-flex justify-content-between align-items-center mb-1">
+                        <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">Free Gift</span>
+                        <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">{{ free_gift_threshold | money }}</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar" style="width:{{ free_gift_progress }}%; background-color:{{ block.settings.free_gift_progress_color | default: "#FAD65A" }};" role="progressbar"></div>
+                    </div>
+                </div>
+            {%- endif -%}
+            
+            {%- if discount_threshold > 0 -%}
+                <div class="progress-layer mb-2">
+                    <div class="progress-label d-flex justify-content-between align-items-center mb-1">
+                        <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">Discount</span>
+                        <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">{{ discount_threshold | money }}</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar" style="width:{{ discount_progress }}%; background-color:{{ block.settings.discount_progress_color | default: "#C34029" }};" role="progressbar"></div>
+                    </div>
+                </div>
+            {%- endif -%}
+        </div>
+        
+        <!-- Current Cart Total -->
+        <div class="cart-total mt-3 text-center">
+            <span class="{{ block.settings.text_size }} {{ block.settings.font_family }}" style="color:{{ block.settings.color }}">Current Total: {{ cart_subtotal | money }}</span>
+        </div>
+    </div>
+{%- endif -%}
+
+<style>
+.multi-layer-sales-motivator .reward-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.multi-layer-sales-motivator .reward-item.achieved {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left: 3px solid #28a745;
+}
+
+.multi-layer-sales-motivator .reward-icon {
+    font-size: 1.2em;
+}
+
+.multi-layer-sales-motivator .progress {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.multi-layer-sales-motivator .progress-bar {
+    transition: width 0.6s ease;
+}
+
+.multi-layer-sales-motivator .progress-layer {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px;
+    border-radius: 6px;
+}
+</style>
+
+{% schema %}
+    {
+        "name": "Sales Motivator",
+        "tag": null,
+        "settings": [
+            {
+                "type": "header",
+                "content": "Free Shipping Settings"
+            },
+            {
+                "type": "text",
+                "id": "free_shipping_threshold",
+                "label": "Free Shipping Threshold",
+                "default": "70.00",
+                "info": "Use money format stripped values. Ex: 50.00 for $50"
+            },
+            {
+                "type": "textarea",
+                "id": "free_shipping_achieved_text",
+                "label": "Free Shipping Achieved Text",
+                "default": "🚚 Free Shipping Unlocked!"
+            },
+            {
+                "type": "liquid",
+                "id": "free_shipping_progress_text",
+                "label": "Free Shipping Progress Text",
+                "default": "Just ${left_amount} away from FREE shipping!",
+                "info": "Do not remove ${left_amount} from the message."
+            },
+            {
+                "type": "color",
+                "id": "free_shipping_color",
+                "label": "Free Shipping Text Color",
+                "default": "#28a745"
+            },
+            {
+                "type": "color",
+                "id": "free_shipping_progress_color",
+                "label": "Free Shipping Progress Bar Color",
+                "default": "#28a745"
+            },
+            {
+                "type": "header",
+                "content": "Free Gift Settings"
+            },
+            {
+                "type": "text",
+                "id": "free_gift_threshold",
+                "label": "Free Gift Threshold",
+                "default": "100.00",
+                "info": "Use money format stripped values. Ex: 100.00 for $100"
+            },
+            {
+                "type": "textarea",
+                "id": "free_gift_achieved_text",
+                "label": "Free Gift Achieved Text",
+                "default": "🎁 Free Gift Unlocked!"
+            },
+            {
+                "type": "liquid",
+                "id": "free_gift_progress_text",
+                "label": "Free Gift Progress Text",
+                "default": "Just ${left_amount} away from a FREE gift!",
+                "info": "Do not remove ${left_amount} from the message."
+            },
+            {
+                "type": "color",
+                "id": "free_gift_color",
+                "label": "Free Gift Text Color",
+                "default": "#FAD65A"
+            },
+            {
+                "type": "color",
+                "id": "free_gift_progress_color",
+                "label": "Free Gift Progress Bar Color",
+                "default": "#FAD65A"
+            },
+            {
+                "type": "header",
+                "content": "Discount Settings"
+            },
+            {
+                "type": "text",
+                "id": "discount_threshold",
+                "label": "Discount Threshold",
+                "default": "150.00",
+                "info": "Use money format stripped values. Ex: 150.00 for $150"
+            },
+            {
+                "type": "textarea",
+                "id": "discount_achieved_text",
+                "label": "Discount Achieved Text",
+                "default": "💰 10% Discount Unlocked!"
+            },
+            {
+                "type": "liquid",
+                "id": "discount_progress_text",
+                "label": "Discount Progress Text",
+                "default": "Just ${left_amount} away from 10% discount!",
+                "info": "Do not remove ${left_amount} from the message."
+            },
+            {
+                "type": "color",
+                "id": "discount_color",
+                "label": "Discount Text Color",
+                "default": "#C34029"
+            },
+            {
+                "type": "color",
+                "id": "discount_progress_color",
+                "label": "Discount Progress Bar Color",
+                "default": "#C34029"
+            },
+            {
+                "type": "header",
+                "content": "Typography Settings"
+            },
+            {
+                "type": "select",
+                "id": "text_size",
+                "label": "Text Size",
+                "options": [
+                    {
+                        "value": "h1",
+                        "label": "H1"
+                    },
+                    {
+                        "value": "h2",
+                        "label": "H2"
+                    },
+                    {
+                        "value": "h3",
+                        "label": "H3"
+                    },
+                    {
+                        "value": "h4",
+                        "label": "H4"
+                    },
+                    {
+                        "value": "h5",
+                        "label": "H5"
+                    },
+                    {
+                        "value": "h6",
+                        "label": "H6"
+                    },
+                    {
+                        "value": "fs-xs",
+                        "label": "Extra Small"
+                    },
+                    {
+                        "value": "fs-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "fs-md",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "fs-base",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "fs-lg",
+                        "label": "Large"
+                    },
+                    {
+                        "value": "fs-xl",
+                        "label": "Extra Large"
+                    },
+                    {
+                        "value": "",
+                        "label": "Initial"
+                    }
+                ],
+                "default": "fs-lg"
+            },
+            {
+                "type": "select",
+                "id": "font_family",
+                "label": "Font Family",
+                "options": [
+                    {
+                        "value": "font-family-base",
+                        "label": "Body Font family"
+                    },
+                    {
+                        "value": "font-family-heading",
+                        "label": "Heading Font family"
+                    }
+                ],
+                "default": "font-family-base"
+            },
+            {
+                "type": "color",
+                "id": "color",
+                "label": "Default Text Color"
+            },
+            {
+                "type":"header",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color_background",
+                "id": "bg_color",
+                "label": "t:settings.background_color",
+                "default": "transparent"
+            },
+            {
+                "type": "select",
+                "id": "border",
+                "label": "Border",
+                "options": [
+                    {
+                        "value": "border",
+                        "label": "Border"
+                    },
+                    {
+                        "value": "border-top",
+                        "label": "Border Top"
+                    },
+                    {
+                        "value": "border-end",
+                        "label": "Border Right"
+                    },
+                    {
+                        "value": "border-bottom",
+                        "label": "Border Bottom"
+                    },
+                    {
+                        "value": "border-start",
+                        "label": "Border Left"
+                    },
+                    {
+                        "value": "border-0",
+                        "label": "Border 0"
+                    }
+                ],
+                "default": "border-0"
+            },
+            {
+                "type": "color",
+                "id": "border_color",
+                "label": "t:settings.border_color",
+                "default": "#666666",
+                "visible_if": "{{ block.settings.border != 'border-0' }}"
+            },
+            {
+                "type":"header",
+                "content":"Padding: Desktop"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_desktop",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-md-3"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_desktop",
+                "label": "Padding Bottom",
+                "options": [ 
+                    {
+                        "value": "pb-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-md-3"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_desktop",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-md-3"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_desktop",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-md-3"
+            },
+            {
+                "type":"header",
+                "content":"Padding: Mobile"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_mobile",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-3"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_mobile",
+                "label": "Padding Bottom",
+                "options": [
+                    {
+                        "value": "pb-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-3"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_mobile",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-3"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_mobile",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-3"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Multi-Layer Sales Motivator",
+                "settings": {
+                    "free_shipping_threshold": "70.00",
+                    "free_gift_threshold": "100.00",
+                    "discount_threshold": "150.00"
+                }
+            }
+        ]
+    }
+{% endschema %}

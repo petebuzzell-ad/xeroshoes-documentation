@@ -1,0 +1,31 @@
+{%- if block.settings.page != blank %}
+<div class="page-content text-{{ block.settings.alignment }} rte" {{ block.shopify_attributes }}>
+    {{ block.settings.page.content }}
+</div>
+{%- endif -%}
+{% schema %}
+  {
+    "name": "Page content",
+    "tag": null,
+    "settings": [
+        {
+            "type": "page",
+            "id": "page",
+            "label": "Page"
+        },
+        {
+            "type": "text_alignment",
+            "id": "alignment",
+            "label": "Text alignment",
+            "default": "left"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Page content",
+        "settings": {}
+      }
+    ]
+  }
+  {% endschema %}
+  

@@ -1,0 +1,6 @@
+body[data-suffix="recovery-shoes"] .recovery-shoes-content h3{
+  margin-top: 25px;
+}
+body[data-suffix="recovery-shoes"] .featured-collection-products>section{
+  padding: 10px 0;
+}

@@ -1,0 +1,91 @@
+{% liquid
+  assign product = block.settings.product
+  assign has_size_option = false
+
+  for option in product.options_with_values
+    if option.name contains 'Size' or option.name contains 'size'
+      assign has_size_option = true
+    endif
+  endfor
+
+  assign countvariants = product.variants_count
+  assign count = 0
+
+  for variant in product.variants
+    if variant.metafields.product_variant.draft_variant == true
+      assign count = count | plus: 1
+    endif
+  endfor
+
+  if countvariants == count
+    assign has_size_option = false
+  endif
+%}
+{% unless has_size_option %}
+{% if product.metafields.product.sizing_chart != blank %}
+  <div class="size-chart-popup-wrapper py-2">
+      <button class="link-block btn-link btn-link-dark ContentPopup-link underline-on-text" data-toggledrawer="ContentPopup-{{ product.id }}" aria-expanded="false">Size Guide</button>
+  </div>
+{% endif %} 
+{% endunless %} 
+
+{% if product.metafields.product.multiple_gender_product != blank %}
+  {% assign alt_product_url = product.metafields.product.multiple_gender_product.value %}
+  <div class="product-alternate-product flex-wrap" {{ block.shopify_attributes }}>
+  {% liquid
+      assign gender_order = 'men,women,big,little' | split: ','
+      assign label_order = 'Men,Women,Big Kids,Little Kids' | split: ',' 
+      assign checkwomen = false
+  %}
+  <div class="w-100 d-flex flex-wrap gap-1">
+  {% for gender in gender_order %}
+    {% liquid
+      assign label_index = forloop.index0
+      assign smallproduct = product.title | downcase | split: ' '
+      assign checkwomen = false
+    %}
+    {% if smallproduct contains gender %}
+      {% liquid
+        if gender == 'women'
+          assign checkwomen = true
+        endif
+      %}
+      <a href="{{ product.url }}" class="btn-active btn-gender 1 {{ checkwomen }}">{{ label_order[label_index] }}</a>
+    {% else %}
+      {% for altprod in alt_product_url %}
+        {% assign produsmall = altprod.title | downcase | split: ' ' %}
+        {% if produsmall contains gender %}
+          {% liquid
+            if gender == 'women'
+              assign checkwomen = true
+            endif
+          %}
+          <a href="{{ altprod.url }}" class="btn-gender 2">{{ label_order[label_index] }}</a>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>
+</div>
+{% endif %}
+
+  {% schema %}
+  {
+    "name": "Product Alternate Gender",
+    "tag": null,
+    "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Product Alternate Gender",
+        "settings": { "product": "{{ closest.product }}" }
+      }
+    ]
+  }
+  {% endschema %}
+  

@@ -1,0 +1,13 @@
+<div class="rounded-3 p-4 bg-gray-100">
+    <div class="d-flex align-items-center mb-3 mb-lg-4">
+        <div class="profile position-relative me-3">
+            <p class="profile-name m-0 font-family-heading text-uppercase bg-primary text-white">{{ customer.first_name | slice: 0 -}}{{- customer.last_name | slice: 0 }}</p>
+        </div>
+        <h5 class="text-capitalize profile-text m-0">{{ customer.name }}</h5>
+    </div>
+    <ul class="mb-0 list-unstyled d-flex flex-column row-gap-2">
+        <li>{{ customer.email }}</li>
+        <li>{{ 'customer.account.password_label' | t }}: ******** <a href="{{ routes.account_login_url }}#recover" aria-labelledby="{{- 'customer.account.reset_label' | t -}}" title="{{- 'customer.account.reset_label' | t -}}" class="text-primary">{{- 'customer.account.reset_label' | t -}}</a></li>
+        <li>{{ 'customer.account.total_orders' | t }}: {{ customer.orders.size }}</li>
+    </ul>
+</div>

@@ -1,0 +1,103 @@
+{% liquid
+  assign product = block.settings.product
+  assign selected_variant = product.selected_or_first_available_variant
+  assign product_form_id = 'productform' | append: product.id | append: '-' | append: section.id
+  assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+  assign variant_price = selected_variant.price | money
+%}
+
+<div class="d-block quantity-wrapper" id="Quantity-{{ product.id }}" {{ block.shopify_attributes }} data-qty-container>
+    <quantity-input>
+        {% if block.settings.show_quantity_label %}<span class="fw-medium text-uppercase fs-sm mb-2 d-inline-block" title="Label {{ 'products.product.quantity.label' | t }}">{{ 'products.product.quantity.label' | t }}</span>{% endif %}
+        <div class="input-group border">
+            <a href="#" class="input-group-text min-h-100 border-0 disabled" rel="nofollow" aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}" title="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}" data-for="decrease" data-qty-btn>
+                <span class="btn-decrease d-flex h-100 align-items-center px-2">
+                    <svg aria-hidden="true" focusable="false" style="width:14px;height:3px;">
+                        <use href="#icon-minus"></use>
+                    </svg>
+                </span>
+                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+            </a>
+            <input type="text" name="quantity" aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}" 
+                value="{{ selected_variant.quantity_rule.min }}"
+                inputmode="numeric" data-qty-input
+                data-cart-quantity="{{ cart_qty }}"
+                min="{{ selected_variant.quantity_rule.min | default: 1 }}"
+                {% if selected_variant.quantity_rule.max != null %}
+                max="{{ selected_variant.quantity_rule.max }}"
+                {% endif %}
+                step="{{ selected_variant.quantity_rule.increment }}"
+                class="quantity form-control border-0 text-center" form="{{ product_form_id }}">
+            <a href="#" class="input-group-text min-h-100 border-0" rel="nofollow" aria-label="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}" title="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}" data-for="increase" data-qty-btn>
+                <span class="btn-increase d-flex h-100 align-items-center px-2">
+                    <svg aria-hidden="true" focusable="false" style="width:14px;height:15px;">
+                    <use href="#icon-plus"></use>
+                    </svg>
+                </span>
+                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+            </a>
+        </div>
+
+      {% comment %} Product quantity price break {% endcomment %}
+      {%- if product.quantity_price_breaks_configured? -%}
+        <div class="price-per-item fs-sm ms-3">
+          <span class="price-per-item--current" data-price-per-item>
+            {{ 'products.product.volume_pricing.price_at_each' | t: price: variant_price }}
+          </span>
+          <ul class="align-items-center flex-wrap fs-xs list-unstyled quantity__rules">
+            {%- if selected_variant.quantity_rule.increment > 1 -%}
+              <li>{{ 'products.product.volume_pricing.multiples_of' | t: quantity: selected_variant.quantity_rule.increment }}</li>
+            {%- endif -%}
+            {%- if selected_variant.quantity_rule.min > 1 -%}
+              <li>{{ 'products.product.volume_pricing.minimum_of' | t: quantity: selected_variant.quantity_rule.min }}</li>
+            {%- endif -%}
+            {%- if selected_variant.quantity_rule.max -%}
+              <li>{{ 'products.product.volume_pricing.maximum_of' | t: quantity: selected_variant.quantity_rule.max }}</li>
+            {%- endif -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      {%- if selected_variant.quantity_price_breaks.size > 0 -%}
+        <script data-price-break-json type="application/json">
+            [
+              {%- for price_break in selected_variant.quantity_price_breaks -%}
+                {%- unless forloop.first -%},{%- endunless -%}{
+                  "price": {{- price_break.price -}},
+                  "minimum_quantity": {{- price_break.minimum_quantity -}}
+                }
+              {%- endfor -%}
+            ]
+        </script>
+      {%- endif -%}
+      {% comment %} end of Product quantity price break {% endcomment %}
+  </quantity-input>
+</div>
+
+{% schema %}
+    {
+        "name": "Product Quantity Select",
+        "tag": null,
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_quantity_label",
+                "label": "Show Quantity Label",
+                "default": false
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Quantity Select",
+                "settings": {
+                "product": "{{ closest.product }}"
+                }
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,447 @@
+<style>
+
+    .breadcrumb.pipe{
+        --pe-breadcrumb-divider: '|';
+    }
+
+    .breadcrumb.slash{
+        --pe-breadcrumb-divider: '/';
+    }
+
+    .breadcrumb.arrow .breadcrumb-item{
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumb.arrow .breadcrumb-item:before{
+        --pe-breadcrumb-divider: '';
+        --pe-breadcrumb-divider-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='none' stroke='%23000' d='M2.5 7L5.5 4L2.5 1'/%3e%3c/svg%3e");
+        background: var(--pe-breadcrumb-divider-bg) center no-repeat;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        margin-right: var(--pe-breadcrumb-item-padding-x);
+        margin-top: -2px;
+    }
+
+    .breadcrumb .breadcrumb-item > *{
+        font-size:{{ block.settings.font_size_mb }}px;
+    }
+    .breadcrumb-item > a{
+        color: {{ block.settings.color }} !important;  
+        font-weight:{{ block.settings.font_weight }};
+    }
+    .breadcrumb .breadcrumb-item span{
+        color: {{ block.settings.color_active }} !important;  
+        font-weight:{{ block.settings.font_weight_active }};
+    }
+
+    @media (min-width: 768px) {
+        .breadcrumb .breadcrumb-item > *{
+            font-size:{{ block.settings.font_size }}px;
+        }
+    }
+
+    .breadcrumbs .breadcrumb.defalut-position{
+        position: absolute;
+        top: 20px;
+        right: 0;
+        left: 0;
+        margin-inline: auto;
+        max-width: var(--pe-container-width);
+        padding-inline: var(--pe-container-x-padding);
+    }
+</style>
+
+{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+    {{ 'breadcrumbs.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- assign t = template | split: '.' | first -%}
+  
+    <nav class="breadcrumbs {{ block.settings.mb-desktop }} {{ block.settings.mb-mobile }} {{ block.settings.mt-desktop }} {{ block.settings.mt-mobile }} " role="navigation" aria-label="breadcrumbs">
+      <ul class="breadcrumb {{ block.settings.breadcrumbs_divider }} list-unstyled mb-0 fw-normal {{ block.settings.breadcrumbs_position }}">
+        <li class="breadcrumb-item">
+          <a href="{{ routes.root_url }}">Home</a>
+        </li>
+        {%- case t -%}
+          {%- when 'page' -%}
+            <li class="breadcrumb-item">
+              <span aria-current="page">{{ page.title }}</span>
+            </li>
+          {%- when 'product' -%}
+            {%- comment -%} Check if product belongs to specific collections {%- endcomment -%}
+            {%- assign target_collections = settings.breadcrumbs_target_collections | default: 'Shoes,Boots,Sandals,Accessories' | split: ',' -%}
+            {%- assign found_collection = null -%}
+            
+            {%- for target_collection in target_collections -%}
+                {%- for product_collection in product.collections -%}
+                    {%- if product_collection.title == target_collection -%}
+                        {%- assign found_collection = product_collection -%}
+                        {%- break -%}
+                    {%- endif -%}
+                {%- endfor -%}
+                {%- if found_collection -%}
+                    {%- break -%}
+                {%- endif -%}
+            {%- endfor -%}
+            
+            {%- if found_collection -%}
+                <li class="breadcrumb-item">
+                {{ found_collection.title | link_to: found_collection.url }}
+                </li>
+            {%- elsif collection.url -%}
+                <li class="breadcrumb-item">
+                {{ collection.title | link_to: collection.url }}
+                </li>
+            {%- endif -%}
+            <li class="breadcrumb-item">
+              <span aria-current="page">{{ product.title }}</span>
+            </li>
+          {%- when 'collection' and collection.handle -%}
+            {%- if current_tags -%}
+              <li class="breadcrumb-item">
+                {{ collection.title | link_to: collection.url }}
+              </li>
+              <li class="breadcrumb-item">
+                {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+" }}{%- endcapture -%}
+                <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+              </li>
+            {%- else -%}
+              <li class="breadcrumb-item">
+                <span aria-current="page">{{ collection.title }}</span>
+              </li>
+            {%- endif -%}
+          {%- when 'blog' -%}
+            {%- if current_tags -%}
+              <li class="breadcrumb-item">
+                {{ blog.title | link_to: blog.url }}
+              </li>
+              <li class="breadcrumb-item">
+                {%- capture tag_url -%}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+                <span aria-current="page">{{ current_tags | join: " + " | replace: 'cat_', '' }}</span>
+              </li>
+            {%- else -%}
+              <li class="breadcrumb-item">
+                <span aria-current="page">{{ blog.title }}</span>
+              </li>
+            {%- endif -%}
+          {%- when 'article' -%}
+            <li class="breadcrumb-item">
+              {{ blog.title | link_to: blog.url }}
+            </li>
+            <li class="breadcrumb-item">
+              <span aria-current="page">{{ article.title }}</span>
+            </li>
+          {%- else -%}
+            <li class="breadcrumb-item">
+              <a href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+            </li>
+        {%- endcase -%}
+          </ul>
+    </nav>
+  {%- endunless -%}
+  
+
+
+  {% schema %}
+    {
+        "name": "Breadcrumbs",
+        "tag": null,
+        "settings": [
+            {
+                "type": "header",
+                "content": "Style"
+            },
+            {
+                "type": "range",
+                "id": "font_size",
+                "min": 7,
+                "max": 20,
+                "step": 1,
+                "default": 12,
+                "unit": "px",
+                "label": "Desktop Font Size"
+            },
+            {
+                "type": "range",
+                "id": "font_size_mb",
+                "min": 7,
+                "max": 20,
+                "step": 1,
+                "default": 12,
+                "unit": "px",
+                "label": "Mobile Font Size"
+            },
+            {
+                "type": "select",
+                "id": "breadcrumbs_divider",
+                "label": "Breadcrumbs Divider Style",
+                "options": [
+                    {
+                        "value": "slash",
+                        "label": "/"
+                    },
+                    {
+                        "value": "pipe",
+                        "label": "|"
+                    },
+                    {
+                        "value": "arrow",
+                        "label": ">"
+                    }
+                ],
+                "default": "slash"
+            },
+            {
+                "type": "select",
+                "id": "breadcrumbs_position",
+                "label": "Breadcrumbs Position",
+                "options": [
+                    {
+                        "value": "defalut-position",
+                        "label": "Defalut Position"
+                    },
+                    {
+                        "value": "static-position",
+                        "label": "Static Position"
+                    }
+                ],
+                "default": "defalut-position"
+            },
+            {
+                "type": "header",
+                "content": "Default Style"
+            },
+            {
+                "type": "range",
+                "id": "font_weight",
+                "min": 100,
+                "max": 900,
+                "step": 100,
+                "default": 300,
+                "label": "Font Weight"
+            },
+            {
+                "type": "color",
+                "id": "color",
+                "label": "Breadcrumbs Default Color",
+                "default": "#0F172B"
+            },
+            {
+                "type": "header",
+                "content": "Active Style"
+            },
+            {
+                "type": "color",
+                "id": "color_active",
+                "label": "Breadcrumbs active Color",
+                "default": "#0F172B"
+            },
+            {
+                "type": "range",
+                "id": "font_weight_active",
+                "min": 100,
+                "max": 900,
+                "step": 100,
+                "default": 400,
+                "label": "Active Font Weight"
+            },
+            {
+                "type": "select",
+                "id": "mb-desktop",
+                "label": "Spacing Bottom Desktop",
+                "options": [
+                    {
+                        "value": "mb-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mb-md-1",
+                        "label": "5px"
+                    },
+                    {
+                        "value": "mb-md-2",
+                        "label": "10px"
+                    },
+                    {
+                        "value": "mb-md-3",
+                        "label": "15px"
+                    },
+                    {
+                        "value": "mb-md-4",
+                        "label": "20px"
+                    },
+                    {
+                        "value": "mb-md-5",
+                        "label": "25px"
+                    },
+                    {
+                        "value": "mb-md-6",
+                        "label": "30px"
+                    },
+                    {
+                        "value": "mb-md-7",
+                        "label": "35px"
+                    },
+                    {
+                        "value": "mb-md-8",
+                        "label": "40px"
+                    },
+                    {
+                        "value": "mb-md-9",
+                        "label": "45px"
+                    }
+                ],
+                "default": "mb-md-3"
+            },
+            {
+                "type": "select",
+                "id": "mb-mobile",
+                "label": "Spacing Bottom Mobile",
+                "options": [
+                    {
+                        "value": "mb-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mb-1",
+                        "label": "5px"
+                    },
+                    {
+                        "value": "mb-2",
+                        "label": "10px"
+                    },
+                    {
+                        "value": "mb-3",
+                        "label": "15px"
+                    },
+                    {
+                        "value": "mb-4",
+                        "label": "20px"
+                    },
+                    {
+                        "value": "mb-5",
+                        "label": "25px"
+                    },
+                    {
+                        "value": "mb-6",
+                        "label": "30px"
+                    },
+                    {
+                        "value": "mb-7",
+                        "label": "35px"
+                    },
+                    {
+                        "value": "mb-8",
+                        "label": "40px"
+                    },
+                    {
+                        "value": "mb-9",
+                        "label": "45px"
+                    }
+                ],
+                "default": "mb-2"
+            },
+            {
+                "type": "select",
+                "id": "mt-desktop",
+                "label": "Spacing Top Desktop",
+                "options": [
+                    {
+                        "value": "mt-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mt-md-1",
+                        "label": "5px"
+                    },
+                    {
+                        "value": "mt-md-2",
+                        "label": "10px"
+                    },
+                    {
+                        "value": "mt-md-3",
+                        "label": "15px"
+                    },
+                    {
+                        "value": "mt-md-4",
+                        "label": "20px"
+                    },
+                    {
+                        "value": "mt-md-5",
+                        "label": "25px"
+                    },
+                    {
+                        "value": "mt-md-6",
+                        "label": "30px"
+                    },
+                    {
+                        "value": "mt-md-7",
+                        "label": "35px"
+                    },
+                    {
+                        "value": "mt-md-8",
+                        "label": "40px"
+                    },
+                    {
+                        "value": "mt-md-9",
+                        "label": "45px"
+                    }
+                ],
+                "default": "mt-md-0"
+            },
+            {
+                "type": "select",
+                "id": "mt-mobile",
+                "label": "Spacing Top Mobile",
+                "options": [
+                    {
+                        "value": "mt-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mt-1",
+                        "label": "5px"
+                    },
+                    {
+                        "value": "mt-2",
+                        "label": "10px"
+                    },
+                    {
+                        "value": "mt-3",
+                        "label": "15px"
+                    },
+                    {
+                        "value": "mt-4",
+                        "label": "20px"
+                    },
+                    {
+                        "value": "mt-5",
+                        "label": "25px"
+                    },
+                    {
+                        "value": "mt-6",
+                        "label": "30px"
+                    },
+                    {
+                        "value": "mt-7",
+                        "label": "35px"
+                    },
+                    {
+                        "value": "mt-8",
+                        "label": "40px"
+                    },
+                    {
+                        "value": "mt-9",
+                        "label": "45px"
+                    }
+                ],
+                "default": "mt-0"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Breadcrumbs"
+            }
+        ]
+    }
+{% endschema %}

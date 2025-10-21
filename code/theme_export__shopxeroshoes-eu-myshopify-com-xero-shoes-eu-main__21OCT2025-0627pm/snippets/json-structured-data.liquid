@@ -1,0 +1,235 @@
+{%- liquid
+  assign title = page_title | default: shop.name
+  assign description = page_description | default: shop.description | default: shop.name | escape
+  assign product_exclude_tag = settings.product_exclude_tag_text
+%}
+
+{% comment %} Organization schema markup {% endcomment %}
+<script type="application/ld+json" id="schema-org-graph">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ shop.name }}",
+    "url": "{{ shop.url }}",
+    "sameAs": [
+      {%- if settings.social_facebook_link != blank -%}"{{ settings.social_facebook_link }}"{%- endif -%}
+      {%- if settings.social_twitter_link != blank -%},"{{ settings.social_twitter_link }}"{%- endif -%}
+      {%- if settings.social_pinterest_link != blank -%},"{{ settings.social_pinterest_link }}"{%- endif -%}
+      {%- if settings.social_instagram_link != blank -%},"{{ settings.social_instagram_link }}"{%- endif -%}
+      {%- if settings.social_tiktok_link != blank -%},"{{ settings.social_tiktok_link }}"{%- endif -%}
+      {%- if settings.social_tumblr_link != blank -%},"{{ settings.social_tumblr_link }}"{%- endif -%}
+      {%- if settings.social_snapchat_link != blank -%},"{{ settings.social_snapchat_link }}"{%- endif -%}
+      {%- if settings.social_youtube_link != blank -%},"{{ settings.social_youtube_link }}"{%- endif -%}
+      {%- if settings.social_vimeo_link != blank -%},"{{ settings.social_vimeo_link }}"{%- endif -%}
+    ],
+    "logo": "https://xeroshoes.com/cdn/shop/files/XEROSHOES_Logo.svg?v=1753695753&width=360",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "{{ shop.address.phone | replace: ' ', '-' }}",
+        "contactType": "Customer Service"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ shop.address.address1 }}",
+      "addressLocality": "{{ shop.address.city }}",
+      "addressRegion": "{{ shop.address.province_code }}",
+      "postalCode": "{{ shop.address.zip }}",
+      "addressCountry": "{{ shop.address.country_code }}"
+    }
+  }
+</script>
+        
+{% comment %} Global WebSite and WebPage schema markup {% endcomment %}
+<script type="application/ld+json" id="schema-website-graph">
+  {
+    "@context": "https://schema.org",
+    "@graph": [{
+      "@id": "{{ shop.url }}#website",
+      "@type": "WebSite",
+      "description": "{{ description }}",
+      "inLanguage": "{{ request.locale.iso_code }}",
+      "name": "{{ shop.name }}",
+      "url": "{{ shop.url }}"
+    },
+    {
+      "@id": "https://{{ request.host | append: request.path }}#webpage",
+      "@type": "WebPage",
+      "description": "{{ description }}",
+      "name": "{{ title }}",
+      "url": "https://{{ request.host | append: request.path }}",
+      "isPartOf": {
+        "@id": "{{ shop.url }}/#website",
+        "@type": "WebSite"
+      },
+      "potentialAction": [{
+        "@type": "ReadAction",
+        "target": ["https://{{ request.host | append: request.path }}"]
+      }]
+    }]
+  }
+</script>
+
+{% comment %} Breadcrumbs {% endcomment %}
+{% unless template.name == 'index' or template.name == 'cart' %}
+<script type="application/ld+json" id="schema-breadcrums-graph">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "{{ shop.url }}",
+        "name": "{{ 'general.breadcrumbs.home' | t }}"
+      }
+    }
+    {%- if template contains 'product' -%}
+      {%- if collection -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/collections/{{ collection.handle }}",
+          "name": "{{ collection.title | escape }}"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/collections/{{ collection.handle }}/products/{{ product.handle }}",
+          "name": "{{ product.title | escape }}"
+        }
+      }
+      {%- else -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/products/{{ product.handle }}",
+          "name": "{{ product.title | escape }}"
+        }
+      }
+      {%- endif -%}
+    {%- endif -%}
+    {%- if template contains 'collection' and collection.handle -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/collections",
+          "name": "Shop All"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/collections/{{ collection.handle }}",
+          "name": "{{ collection.title | escape }}"
+        }
+      }
+    {%- endif -%}
+    {%- if template contains 'blog' -%}
+      {%- if current_tags -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}",
+          "name": "{{ blog.title | escape }}"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/tagged/{{ current_tags.first | handleize }}",
+          "name": "{{ blog.title | escape }} tagged {{ current_tags.first }}"
+        }
+      }
+      {%- else -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}",
+          "name": "{{ blog.title | escape }}"
+        }
+      }
+      {%- endif -%}
+    {%- endif -%}
+    {%- if template contains 'article' -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}",
+          "name": "{{ blog.title | escape }}"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}",
+          "name": "{{ article.title | escape }}"
+        }
+      }
+    {%- endif -%}
+
+    {%- if template contains 'page' -%}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/pages/{{ page.handle }}",
+          "name": "{{ page.title | escape }}"
+        }
+      }
+    {%- endif -%}
+  ]
+}
+</script>
+{% endunless %}
+
+{% comment %} Collection Carousel {% endcomment %}
+{% if template.name == 'collection' %}
+<script type="application/ld+json" id="schema-category-graph">
+  {
+    "@context": "http://schema.org/",
+    "@type":"ItemList",
+    "itemListElement":[
+      {%- paginate collection.products by 12 -%}
+        {%- for product in collection.products -%}
+          {%- unless product.tags contains product_exclude_tag -%}
+          {
+            "@type":"ListItem",
+            "position": {{ forloop.index }},
+            "url": "{{ shop.url }}{{ product.url }}"
+          }{%- unless forloop.last == true -%},{%- endunless -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endpaginate -%}
+    ]
+  }
+</script>
+{% endif %}
+
+{% comment %} Product {% endcomment %}
+{% comment %} Do not remove or change the ID {% endcomment %}
+{% if template.name contains 'product' %}
+  <script type="application/ld+json" id="schema-product-graph">
+    {{ product | structured_data }}
+  </script>
+{% endif %}
+
+{% comment %} Article {% endcomment %}
+{% if template.name contains 'article' %}
+  <script type="application/ld+json" id="schema-article-graph">
+    {{ article | structured_data }}
+  </script>
+{% endif %}

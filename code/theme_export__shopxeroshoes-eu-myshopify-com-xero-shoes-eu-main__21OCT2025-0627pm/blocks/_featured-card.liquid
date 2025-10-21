@@ -1,0 +1,250 @@
+<div class="col-lg-{{ block.settings.grid_size }} col-md-{{ block.settings.grid_size_md }} col-{{ block.settings.grid_size_sm }} {{ block.settings.border }}" style="background:{{ block.settings.bg_color }}; border-color: {{ block.settings.border_color }} !important; border-radius:{{ block.settings.border_radius }}px;">
+    {%  content_for 'blocks' %}
+</div>
+{% schema %}
+    {
+        "name": "Feature card",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "settings": [
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "select",
+                "id": "grid_size",
+                "label": "Grid Size",
+                "options": [
+                    {
+                        "value": "2",
+                        "label": "2"
+                    },
+                    {
+                        "value": "3",
+                        "label": "3"
+                    },
+                    {
+                        "value": "4",
+                        "label": "4"
+                    },
+                    {
+                        "value": "5",
+                        "label": "5"
+                    },
+                    {
+                        "value": "6",
+                        "label": "6"
+                    },
+                    {
+                        "value": "8",
+                        "label": "8"
+                    },
+                    {
+                        "value": "7",
+                        "label": "7"
+                    },
+                    {
+                        "value": "9",
+                        "label": "9"
+                    },
+                    {
+                        "value": "12",
+                        "label": "12"
+                    }
+                ],
+                "default": "3"
+            },
+            {
+                "type": "select", 
+                "id": "grid_size_md",
+                "label": "Grid Size Ipad/Small Screen",
+                "options": [
+                    {
+                        "value": "2",
+                        "label": "2"
+                    },
+                    {
+                        "value": "3",
+                        "label": "3"
+                    },
+                    {
+                        "value": "4",
+                        "label": "4"
+                    },
+                    {
+                        "value": "5",
+                        "label": "5"
+                    },
+                    {
+                        "value": "6",
+                        "label": "6"
+                    },
+                    {
+                        "value": "8",
+                        "label": "8"
+                    },
+                    {
+                        "value": "7",
+                        "label": "7"
+                    },
+                    {
+                        "value": "9",
+                        "label": "9"
+                    },
+                    {
+                        "value": "12",
+                        "label": "12"
+                    }
+                ],
+                "default": "3"
+            },
+            {
+                "type": "select",
+                "id": "grid_size_sm",
+                "label": "Grid Size mobile",
+                "options": [
+                    {
+                        "value": "2",
+                        "label": "2"
+                    },
+                    {
+                        "value": "3",
+                        "label": "3"
+                    },
+                    {
+                        "value": "4",
+                        "label": "4"
+                    },
+                    {
+                        "value": "5",
+                        "label": "5"
+                    },
+                    {
+                        "value": "6",
+                        "label": "6"
+                    },
+                    {
+                        "value": "8",
+                        "label": "8"
+                    },
+                    {
+                        "value": "7",
+                        "label": "7"
+                    },
+                    {
+                        "value": "9",
+                        "label": "9"
+                    },
+                    {
+                        "value": "12",
+                        "label": "12"
+                    }
+                ],
+                "default": "3"
+            },
+            {
+                "type":"header",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color_background",
+                "id": "bg_color",
+                "label": "t:settings.background_color",
+                "default": "transparent"
+            },
+            {
+                "type": "select",
+                "id": "border",
+                "label": "Border",
+                "options": [
+                    {
+                        "value": "border",
+                        "label": "Border"
+                    },
+                    {
+                        "value": "border-top",
+                        "label": "Border Top"
+                    },
+                    {
+                        "value": "border-end",
+                        "label": "Border Right"
+                    },
+                    {
+                        "value": "border-bottom",
+                        "label": "Border Bottom"
+                    },
+                    {
+                        "value": "border-start",
+                        "label": "Border Left"
+                    },
+                    {
+                        "value": "border-0",
+                        "label": "Border 0"
+                    }
+                ],
+                "default": "border-0"
+            },
+            {
+                "type": "color",
+                "id": "border_color",
+                "label": "t:settings.border_color",
+                "visible_if": "{{ block.settings.border != 'border-0' }}"
+            },
+            {
+                "type": "range",
+                "id": "border_radius",
+                "label": "t:settings.border_radius",
+                "min": 0,
+                "max": 40,
+                "step": 1,
+                "unit": "px",
+                "default": 0
+            }
+        ],
+        "presets": [
+            {
+                "name": "Feature card",
+                "blocks": [
+                    {
+                        "type": "group",
+                        "settings": {
+                        },
+                        "blocks": [
+                            {
+                                "type": "group",
+                                "settings": {
+                                },
+                                "blocks": [
+                                    {
+                                        "type": "icon"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "group",
+                                "settings": {
+                                },
+                                "blocks": [
+                                    {
+                                        "type": "heading",
+                                        "settings": {
+                                            "text": "<h6>founded in Connecticut</h6>"
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "settings": {
+                                            "text": "<p>Family owned Since 1995</p>"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]                
+            }
+        ]
+    }
+{% endschema %}
+    

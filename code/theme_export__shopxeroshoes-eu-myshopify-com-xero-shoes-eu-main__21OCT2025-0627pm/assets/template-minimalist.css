@@ -1,0 +1,168 @@
+.page_header_banner.page-banner--medium
+{
+    min-height: 57.7vw;
+}
+.text-block ul
+{
+    padding-left: 23px;
+    display: flex;
+    flex-direction: column;
+}
+.media_banner_with_text>*:not(.media-banner__wrapper)
+{
+    min-height: 600px;
+}
+.warranty-badge-wrapper > .custom-liquid-block
+{
+    margin: 20px 20px 0 auto;
+    width: 134px;
+    height: 134px;
+}
+.warranty-badge-wrapper > .custom-liquid-block svg path:first-child
+{
+    transform-origin: center;
+    transform: rotate(20deg);
+    animation: rotate-center 8s linear infinite both;
+
+}
+@keyframes rotate-center {
+0% {
+    transform: rotate(0);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+.natural-movement-collapsible .collapsible_panel .panel_toggle
+{
+    padding-bottom: 29px !important; 
+    transition: padding-bottom .3s ease-out;  
+}
+.natural-movement-collapsible .collapsible_panel.open .panel_toggle
+{
+    padding-bottom: 15px !important;   
+}
+.natural-movement-collapsible .collapsible_panel + .collapsible_panel
+{
+    margin-top: 25px !important;
+}
+.natural-movement-collapsible .collapsible_panel .toggle-content-wrap>*:first-child
+{
+    margin-top: 0 !important;
+}
+#MainContent .collapsible_panel .icon-collapsible
+{
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    margin: 5px 4px 0 auto;
+}
+/* .faqs-block .collapsible_panel strong, .faqs-block .collapsible_panel b
+{
+    font-weight: 600;
+} */
+.natural-movement-collapsible.faqs-block .collapsible_panel:not(.open) .panel_toggle
+{
+    padding-bottom: 20px !important;   
+}
+.natural-movement-collapsible.faqs-block .collapsible_panel.open .panel_toggle
+{
+    padding-bottom: 15px !important;   
+}
+.natural-movement-collapsible.faqs-block .collapsible_panel .toggle-content-wrap>p
+{
+    margin-bottom: 24px;
+}
+.natural-movement-collapsible.faqs-block .collapsible_panel .toggle-content-wrap>*:last-child
+{
+    margin-bottom: 20px;
+}
+.natural-movement-collapsible.faqs-block .collapsible_panel .toggle-content-wrap>p:has(+ul)
+{
+    margin-bottom: 5px;
+}
+.natural-movement-collapsible.faqs-block .collapsible_panel+.collapsible_panel
+{
+    margin-top: 20px !important;
+}
+.natural-movement-collapsible.faqs-block .collapsible_panel .collapsible_panel:last-child {
+    border-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+.natural-movement-collapsible.faqs-block .collapsible_panel .collapsible_panel {
+    padding-left: 20px;
+}
+@media (max-width:767px)
+{
+    #customTabs
+    {
+        margin-bottom: -7px;
+    }
+    .warranty-badge-wrapper > .custom-liquid-block
+    {
+        display: none !important;
+    }
+    .warranty-badge-wrapper .h1
+    {
+        line-height: 1.1;
+    }
+}
+@media (min-width:768px)
+{
+    .page_header_banner.page-banner--medium
+    {
+        min-height: 32vw;
+    }
+    .text-block ul,
+    .faqs-block 
+    {
+        gap: 4px;
+    }
+    .media_banner_with_text>*:not(.media-banner__wrapper)
+    {
+        min-height: 52.431vw;
+    }
+    .natural-movement-collapsible .toggle-content-wrap
+    {
+        line-height: 1.63;
+    }
+    .natural-movement-collapsible .collapsible_panel.open .panel_toggle
+    {
+        padding-bottom: 25px !important;   
+    }
+    .natural-movement-collapsible.faqs-block .collapsible_panel:not(.open) .panel_toggle,
+    .natural-movement-collapsible.faqs-block .collapsible_panel.open .panel_toggle
+    {
+        padding-bottom: 24px !important;   
+    }
+    .natural-movement-collapsible.faqs-block .collapsible_panel .toggle-content-wrap>p
+    {
+        margin-bottom: 26px;
+    }
+    .natural-movement-collapsible.faqs-block .collapsible_panel .toggle-content-wrap>*:first-child
+    {
+        margin-top: 2px !important;
+    }
+    .natural-movement-collapsible.faqs-block .collapsible_panel .toggle-content-wrap>*:last-child
+    {
+        margin-bottom: 24px;
+    }
+    .natural-movement-collapsible.faqs-block .collapsible_panel+.collapsible_panel
+    {
+        margin-top: 25px !important;
+    }
+}
+@media (min-width:1441px)
+{
+    .warranty-badge-wrapper > .group-block
+    {
+        min-width: clamp(544px, 37vw, 100%);
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px)
+{
+    .shoes-are-lighter
+    {
+        padding-left: 0 !important;
+    }
+}

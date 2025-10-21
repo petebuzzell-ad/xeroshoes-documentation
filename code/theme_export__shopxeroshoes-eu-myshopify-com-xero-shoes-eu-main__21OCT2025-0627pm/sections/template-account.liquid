@@ -1,0 +1,248 @@
+{%- render 'account-header' -%}
+{% capture spacing_class_list %}
+    {{ section.settings.section_top_spacing }} {{ section.settings.section_top_spacing_ipad }} {{ section.settings.section_top_spacing_mobile }} {{ section.settings.section_bottom_spacing }} {{ section.settings.section_bottom_spacing_ipad }} {{ section.settings.section_bottom_spacing_mobile }}
+{% endcapture %}
+<div data-section-id="{{ section.id }}" class="{{ spacing_class_list }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xl-3 mb-lg-0 mb-8">
+                {%- render 'account-sidebar' -%}
+            </div>
+            <div class="col-xl-9 col-lg-8">
+                <div class="ps-lg-4">
+                    <h4 class="mb-0 pb-md-6 pb-4 text-capitalize order_title">{{ 'customer.orders.title' | t }}</h4>
+                    {%- if customer.orders.size > 0 -%}
+                        {% paginate customer.orders by 15 %}
+                        <table role="table" class="order-history account-table table mb-0">
+                            <caption class="visually-hidden">{{ 'customer.orders.title' | t }}</caption>
+                            <thead role="rowgroup" class="group-name">
+                                <tr role="row">
+                                    <th id="ColumnOrder" scope="col" role="columnheader" class="border-bottom border-black fw-bold border-0">{{ 'customer.orders.order_number' | t }} & {{ 'customer.orders.date' | t }}</th>
+                                    <th id="ColumnFulfillment" scope="col" role="columnheader" class="border-bottom border-black fw-bold border-0 d-xl-table-cell d-none">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                                    <th id="ColumnTotal" scope="col" role="columnheader" class="border-bottom border-black fw-bold border-0 text-end">{{ 'customer.orders.total' | t }}</th>
+                                </tr>
+                            </thead>
+                            <tbody role="rowgroup" class="bg-white">
+                                {%- for order in customer.orders -%}
+                                    <tr role="row">
+                                        <td role="cell" headers="ColumnOrder" data-label="{{ 'customer.orders.order_number' | t }}" >
+                                            <span class="d-md-inline-block d-block">
+                                                <a href="{{ order.customer_url }}" class="fw-semibold order_link" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}" title="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }} </a>
+                                            </span>
+                                            on {{ order.created_at | time_tag: format: 'date' }}
+                                            <div class="fs-lg d-xl-none">
+                                                <span class="fw-bold">{{ 'customer.orders.fulfillment_status' | t }}:</span>{{ order.fulfillment_status_label }}
+                                            </div>
+                                        </td>
+                                        <td headers="ColumnFulfillment" role="cell" class=" d-xl-table-cell d-none" data-label="{{ 'customer.orders.fulfillment_status' | t }}">
+                                            {{ order.fulfillment_status_label }}
+                                        </td>
+                                        <td class="text-end" headers="ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                                            {{ order.total_price | money }}
+                                        </td>
+                                    </tr>
+                                {%- endfor -%}
+                            </tbody>
+                        </table>
+                        {%- if paginate.pages > 1 -%}
+                            <div class="mt-4">
+                            {% render 'pagination', paginate: paginate %}
+                            </div>
+                        {%- endif -%}
+                        {% endpaginate %}
+                    {%- else -%}
+                        <p>{{ 'customer.orders.none' | t }}</p>
+                    {%- endif -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+{% schema %}
+    {
+        "name": "Account Page",
+        "class": "section-account",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "header",
+                "content": "t:spacing.section_spacing"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing",
+                "label": "t:spacing.desktop_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_ipad",
+                "label": "t:spacing.ipad_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_mobile",
+                "label": "t:spacing.mobile_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-mobile-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing",
+                "label": "t:spacing.desktop_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_ipad",
+                "label": "t:spacing.ipad_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_mobile",
+                "label": "t:spacing.mobile_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-mobile-sm"
+            },
+            {
+                "type": "color_background",
+                "id": "section_bg_color",
+                "label": "t:settings.background_color",
+                "default": "#f3f3f3"
+            }
+        ]
+    }
+{% endschema %}

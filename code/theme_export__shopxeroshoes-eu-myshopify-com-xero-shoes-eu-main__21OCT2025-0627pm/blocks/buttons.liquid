@@ -1,0 +1,240 @@
+{% style %}
+    .link-block {
+        display: inline-flex;
+    }
+  
+    .link-block-icon-right {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+  
+    .link-block svg {
+        fill: rgb(var(--fill-link-icon-color));
+    }
+  
+    .link--with-icon {
+        gap: 5px;
+    }
+    @media (max-width: 767px) {
+        .link-block.full_width {
+            width: 100%;
+            justify-content: center; 
+        }
+    }
+{% endstyle %}
+
+<a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="button" tabindex="0"{% endif %} class="link-block {{ block.settings.text_style }} {{ block.settings.custom_class }} {% if block.settings.style_class == 'btn-link-dark' or block.settings.style_class == 'btn-link-light' %} btn-link {% else %}btn {% endif %} {{ block.settings.style_class }} {{ block.settings.size_class }} {% if block.settings.icon != "none" %} link--with-icon{% endif %} {% if block.settings.hide_mobile %} d-none d-md-inline-flex {% endif %} {% if block.settings.hide_desktop %} d-inline-flex d-md-none {% endif %} {% if block.settings.full_width %} full_width {% endif %}"
+        {%- if block.settings.open_in_new_tab -%}
+            target="_blank" rel="noopener noreferrer" 
+        {%- endif -%} 
+        {%- if block.settings.download_link -%}
+            download 
+        {%- endif -%} 
+    {{ block.shopify_attributes }} {% if block.settings.custom_video_play_button %}data-custom-video-play-button{% endif %} {% if block.settings.download_all_logos_in_the_section %}data-download_all_logos_in_the_section{% endif %}>
+            {%- if block.settings.icon != 'none' -%}
+                <svg aria-hidden="true" focusable="false" style="width:16px;height:16px;"><use href="#{{ block.settings.icon }}"></use></svg>
+            {%- endif -%}
+        {{ block.settings.label }} {% if block.settings.add_hidden_text_for_SEO %}<span class="visually-hidden-skip">{{ block.settings.hidden_text_for_seo | escape }}</span>{% endif %}
+    </a>
+  
+{% schema %}
+    {
+        "name": "Button",
+        "tag": null,
+        "settings": [
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "custom_video_play_button",
+                "label": "Enable custom video play button",
+                "default": false,
+                "info": "Enable this to play the custom video used in the same section."
+            },
+            {
+                "type": "select",
+                "id": "icon",
+                "label": "Icon",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "icon-arrow-left",
+                        "label": "Arrow left"
+                    },
+                    {
+                        "value": "icon-arrow-right",
+                        "label": "Arrow right"
+                    },
+                    {
+                        "value": "icon-arrow-next",
+                        "label": "Arrow Next"
+                    },
+                    {
+                        "value": "icon-arrow-prev",
+                        "label": "Arrow Previous"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "text",
+                "id": "label",
+                "label": "Label",
+                "default": "Button label"
+            },
+            {
+                "type": "select",
+                "id": "style_class",
+                "label": "Style",
+                "options": [
+                    {
+                        "value": "btn-primary",
+                        "label": "Primary"
+                    },
+                    {
+                        "value": "btn-secondary",
+                        "label": "Secondary"
+                    },
+                    {
+                        "value": "btn-dark",
+                        "label": "Dark"
+                    },
+                    {
+                        "value": "btn-light",
+                        "label": "Light"
+                    },
+                    {
+                        "value": "btn-link-dark",
+                        "label": "Link Dark"
+                    },
+                    {
+                        "value": "btn-link-light",
+                        "label": "Link Light"
+                    }
+                ],
+                "default": "btn-primary"
+            },
+            {
+                "type": "select",
+                "id": "size_class",
+                "label": "Button Size",
+                "options": [
+                    {
+                        "value": "btn-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "btn-lg",
+                        "label": "Large"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select",
+                "id": "text_style",
+                "label": "Text Style",
+                "options": [
+                    {
+                        "value": "text-uppercase",
+                        "label": "Uppercase"
+                    },
+                    {
+                        "value": "text-capitalize",
+                        "label": "Capitalize"
+                    },
+                    {
+                        "value": "text-lowercase",
+                        "label": "Lowercase"
+                    },
+                    {
+                        "value": "text-math-auto",
+                        "label": "Auto"
+                    },
+                    {
+                        "value": "",
+                        "label": "Default"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "checkbox",
+                "id": "open_in_new_tab",
+                "label": "Open this link in a new window",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "hide_desktop",
+                "label": "Hide In Desktop",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "hide_mobile",
+                "label": "Hide In Mobile",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Button Full Width In Mobile",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "download_link",
+                "label": "Download Link",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "download_all_logos_in_the_section",
+                "label": "Download all logos in the section",
+                "default": false,
+                "info": "Enable this to download all logos in the section."
+            },
+            {
+                "type": "checkbox",
+                "id": "add_hidden_text_for_SEO",
+                "label": "Add hidden text for SEO",
+                "default": false,
+                "info": "Enable this to add visually hidden text for SEO."
+            },
+            {
+                "type": "text",
+                "id": "hidden_text_for_seo",
+                "label": "Hidden Text for SEO",
+                "default": "Hidden Text",
+                "info": "This text will be visually hidden but accessible to search engines.",
+                "visible_if": "{{ block.settings.add_hidden_text_for_SEO }}"
+            },
+            {
+                "type": "text",
+                "id": "custom_class",
+                "label": "Custom Class"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Button",
+                "settings": {
+                    "label": "Button label",
+                    "style_class": "btn-primary"
+                }
+            }
+        ]
+    }
+{% endschema %}
+  

@@ -1,0 +1,53 @@
+{% comment %}
+  Renders social sharing links.
+  Accepts:
+  - share_title: {String}  Title for share link
+  - share_permalink: ${String} partial share link(handle based link for specified object)
+  - share_image: ${Object} Image object for share link
+
+  Usage:
+  {% render social-sharing', share_title: share_title, share_permalink: share_permalink, share_image: share_image %}
+{% endcomment %}
+
+<ul class="align-items-center d-flex lh-1 mb-0 social-sharing">
+  <li class="d-inline-block">
+      <a href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}" target="_blank" rel="noopener noreferrer"  title="{{ 'general.social.alt_text.share_on_facebook' | t }}">
+        <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-facebook"></use></svg>
+      </a>
+      <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_facebook' | t }}</span>
+      <span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+  </li>
+  <li class="d-inline-block">
+    <a href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" target="_blank" rel="noopener noreferrer"  title="{{ 'general.social.alt_text.share_on_twitter' | t }}">
+      <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-twitter"></use></svg>
+    </a>
+    <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+    <span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+  </li>
+  <li class="d-inline-block">
+    <a href="//pinterest.com/pin/create/button/?url={{ shop.url | append: share_permalink }}&amp;media={{ share_image | image_url: width: 1024, height: 1024 }}&amp;description={{ share_title | url_param_escape }}" target="_blank" rel="noopener noreferrer"  title="{{ 'general.social.alt_text.share_on_pinterest' | t }}">
+      <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-pinterest"></use></svg>
+    </a>
+    <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_pinterest' | t }}</span>
+    <span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+  </li>
+  <li class="d-inline-block">
+    <a href="//www.linkedin.com/sharing/share-offsite/?url={{ shop.url | append: share_permalink }}" target="_blank" rel="noopener noreferrer"  title="{{ 'general.social.alt_text.share_on_linkedin' | t }}">
+      <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-linkedin"></use></svg>
+    </a>
+    <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_linkedin' | t }}</span>
+    <span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+  </li>
+  <li class="d-inline-block">
+    <a href="mailto:?subject={{ share_title | url_param_escape }}&amp;body={{ shop.url | append: share_permalink }}" title="{{ 'general.social.alt_text.share_via_email' | t }}">
+      <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-email"></use></svg>
+    </a>
+    <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_via_email' | t }}</span>
+  </li>
+  <li class="d-inline-block">
+    <a href="#" onclick="navigator.clipboard.writeText('{{ shop.url | append: share_permalink }}'); return false;" title="{{ 'general.social.alt_text.copy_link' | t }}">
+      <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-link"></use></svg>
+    </a>
+    <span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.copy_link' | t }}</span>
+  </li>
+</ul>

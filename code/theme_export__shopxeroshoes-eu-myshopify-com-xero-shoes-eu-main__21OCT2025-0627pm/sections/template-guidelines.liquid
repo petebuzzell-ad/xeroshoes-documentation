@@ -1,0 +1,1004 @@
+{% style %}
+    .row-cols-7>* {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 12.5%;
+    }
+
+    kbd{
+        background-color: #f1f1f1;
+        color: #000;
+        padding: 3px 10px;
+    }
+
+    .border-dashed{
+        border-style:dashed !important;
+    }
+
+{% endstyle %}
+
+<div class="spacing-top-sm spacing-bottom-sm">
+    <div class="container mb-10">
+        <p class="mb-3 text-gray-600">Primary Color Palette</p>
+        <div class="row row-cols-7">
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_white }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">White</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_white }}</p>    
+                </div>
+            </div>
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_primary }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Primary</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_primary }}</p>    
+                </div>
+            </div>
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_secondary }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Secondary</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_secondary }}</p>    
+                </div>
+            </div>
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_black }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Black</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_black }}</p>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-10">
+        <p class="mb-3 text-gray-600">Color Tints</p>
+        <div class="row">
+            <div class="col-3 col-xl-2">
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_110 }};">
+                    {{ settings.color_primary_110 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_900 }};">
+                    {{ settings.color_primary_900 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_800 }};">
+                    {{ settings.color_primary_800 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_700 }};">
+                    {{ settings.color_primary_700 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_600 }};">
+                    {{ settings.color_primary_600 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_500 }};">
+                    {{ settings.color_primary_500 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_400 }};">
+                    {{ settings.color_primary_400 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_primary_300 }};">
+                    {{ settings.color_primary_300 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_primary_200 }};">
+                    {{ settings.color_primary_200 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_primary_100 }};">
+                    {{ settings.color_primary_100 }}
+                </div>
+            </div>
+
+            <div class="col-3 col-xl-2">
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_secondary_110 }};">
+                    {{ settings.color_secondary_110 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_secondary_900 }};">
+                    {{ settings.color_secondary_900 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_secondary_800 }};">
+                    {{ settings.color_secondary_800 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_secondary_700 }};">
+                    {{ settings.color_secondary_700 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_secondary_600 }};">
+                    {{ settings.color_secondary_600 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_secondary_500 }};">
+                    {{ settings.color_secondary_500 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_secondary_400 }};">
+                    {{ settings.color_secondary_400 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_secondary_300 }};">
+                    {{ settings.color_secondary_300 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_secondary_200 }};">
+                    {{ settings.color_secondary_200 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_secondary_100 }};">
+                    {{ settings.color_secondary_100 }}
+                </div>
+            </div>
+            <div class="col-3 col-xl-2">
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_sand_110 }};">
+                    {{ settings.color_sand_110 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_sand_900 }};">
+                    {{ settings.color_sand_900 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_sand_800 }};">
+                    {{ settings.color_sand_800 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_sand_700 }};">
+                    {{ settings.color_sand_700 }}
+                </div>
+
+                <div class="py-2 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_sand_600 }};">
+                    {{ settings.color_sand_600 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_sand_500 }};">
+                    {{ settings.color_sand_500 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_sand_400 }};">
+                    {{ settings.color_sand_400 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_sand_300 }};">
+                    {{ settings.color_sand_300 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_sand_200 }};">
+                    {{ settings.color_sand_200 }}
+                </div>
+
+                <div class="py-2 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_sand_100 }};">
+                    {{ settings.color_sand_100 }}
+                </div>
+            
+        </div>
+        </div>
+
+        
+
+        <div class="mt-7 mb-7">
+            <p class="mb-3 text-gray-600">Color Grayscale</p>
+            <div class="row no-gutter">
+                <div class="col py-5 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_black }};">
+                    {{ settings.color_black }}
+                </div>
+                <div class="col py-5 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_gray_900 }};">
+                    {{ settings.color_gray_900 }}
+                </div>
+                <div class="col py-5 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_gray_800 }};">
+                    {{ settings.color_gray_800 }}
+                </div>
+                <div class="col py-5 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_gray_700 }};">
+                    {{ settings.color_gray_700 }}
+                </div>
+                <div class="col py-5 px-3 text-white text-end text-uppercase" style="background: {{ settings.color_gray_600 }};">
+                    {{ settings.color_gray_600 }}
+                </div>
+                <div class="col py-5 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_gray_500 }};">
+                    {{ settings.color_gray_500 }}
+                </div>
+                <div class="col py-5 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_gray_400 }};">
+                    {{ settings.color_gray_400 }}
+                </div>
+                <div class="col py-5 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_gray_300 }};">
+                    {{ settings.color_gray_300 }}
+                </div>
+                <div class="col py-5 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_gray_200 }};">
+                    {{ settings.color_gray_200 }}
+                </div>
+                <div class="col py-5 px-3 text-black text-end text-uppercase" style="background: {{ settings.color_gray_100 }};">
+                    {{ settings.color_gray_100 }}
+                </div>
+            </div>
+        </div>
+
+
+        <p class="mb-3 text-gray-600">Secondary Color Palette</p>
+        <div class="row row row-cols-7">
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_sand }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Sand</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_sand }}</p>    
+                </div>
+            </div>
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_green }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Green</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_green }}</p>    
+                </div>
+            </div>
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_yellow }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Yellow</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_yellow }}</p>    
+                </div>
+            </div>
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_danger }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Red Alert</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_danger }}</p>    
+                </div>
+            </div>
+            <div class="col">
+                <div class="py-9" style="background: {{ settings.color_dark_red }};">
+
+                </div>
+                <div class="py-3 px-2 border border-top-0 border-gray-200">
+                    <p class="fs-xs text-uppercase fw-bold mb-1">Red Alert Dark Form</p>
+                    <p class="fs-xs mb-0 text-gray-500">{{ settings.color_dark_red }}</p>    
+                </div>
+            </div>
+        </div>
+
+        <div class="border-bottom pb-10"></div>
+    </div> 
+
+    <div class="container mb-10">
+        <p class="mb-3 text-gray-600">Typography</p>
+        <div class="row">
+            <div class="col-3">
+                <div class="card p-3 border">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1 class="font-family-heading">Aa</h1>
+                            <h6 class="font-family-heading ls-0">{{ settings.type_header_font }}</h6>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled m-0 font-family-heading">
+                                <li class="fw-light">Light</li>
+                                <li class="fw-normal">Medium</li>
+                                <li class="fw-medium">Semi Bold</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 border">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1 class="font-family-base">Aa</h1>
+                            <h6 class="font-family-base ls-0">{{ settings.type_body_font }}</h6>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled m-0 font-family-base">
+                                <li class="fw-regular">Regular</li>
+                                <li class="fw-medium">Medium</li>
+                                <li class="fw-semibold">Semi Bold</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+
+    <div class="container mb-10">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="ls-0">H1 Display</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_header_font }}</div>
+                    <div class="mb-3">Font weight: {{ settings.type_header_font_weight }}</div>
+                    <div>Font Size: {{ settings.h1_display_font_size }}px</div>
+                    <div>Line Height: 1.0</div> 
+                    <div>Lettet Spacing: {{ settings.heading_letter_spacing }}</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <h1 class="h1-display">The quick brown fox jumps over the lazy dog.</h1>
+            </div>
+        </div>
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="ls-0">H1 Display Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Size: {{ settings.h1_display_font_size_sm }}px</div>
+                    <div>Line Height: 1.0</div> 
+                </div>
+            </div>
+            <div class="col-8">
+                <h1 style="font-size: {{ settings.h1_display_font_size_sm }}px">The quick brown fox jumps over the lazy dog.</h1>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="ls-0">H1</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_header_font }}</div>
+                    <div class="mb-3">Font weight: {{ settings.type_header_font_weight }}</div>
+                    <div>Font Size: {{ settings.h1_font_size }}px</div>
+                    <div>Line Height: {{ settings.type_heading_line_height }}</div> 
+                    <div>Lettet Spacing: {{ settings.heading_letter_spacing }}</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <h1>The quick brown fox jumps over the lazy dog.</h1>
+            </div>
+        </div>
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="ls-0">H1 Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Size: {{ settings.h1_font_size_sm }}px</div>
+                    <div>Line Height: 1.0</div> 
+                </div>
+            </div>
+            <div class="col-8">
+                <h1 style="font-size: {{ settings.h1_font_size_sm }}px">The quick brown fox jumps over the lazy dog.</h1>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="ls-0">H2</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_header_font }}</div>
+                    <div class="mb-3">Font weight: {{ settings.type_header_font_weight }}</div>
+                    <div>Font Size: {{ settings.h2_font_size }}px</div>
+                    <div>Line Height: {{ settings.type_heading_line_height }}</div> 
+                    <div>Lettet Spacing: {{ settings.heading_letter_spacing }}</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <h2>The quick brown fox jumps over the lazy dog.</h2>
+            </div>
+        </div>
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="ls-0">H2 Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Size: {{ settings.h2_font_size_sm }}px</div>
+                    <div>Line Height: {{ settings.type_heading_line_height }}</div> 
+                </div>
+            </div>
+            <div class="col-8">
+                <h2 style="font-size: {{ settings.h2_font_size_sm }}px">The quick brown fox jumps over the lazy dog.</h2>
+            </div>
+        </div> 
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="ls-0">H3</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_header_font }}</div>
+                    <div class="mb-3">Font weight: {{ settings.type_header_font_weight }}</div>
+                    <div>Font Size: {{ settings.h3_font_size }}px</div>
+                    <div>Line Height: {{ settings.type_heading_line_height }}</div> 
+                    <div>Lettet Spacing: {{ settings.heading_letter_spacing }}</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <h3>The quick brown fox jumps over the lazy dog.</h3>
+            </div>
+        </div>
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="ls-0">H3 Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Size: {{ settings.h3_font_size_sm }}px</div>
+                    <div>Line Height: {{ settings.type_heading_line_height }}</div> 
+                </div>
+            </div>
+            <div class="col-8">
+                <h3 style="font-size: {{ settings.h3_font_size_sm }}px">The quick brown fox jumps over the lazy dog.</h3>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="ls-0">H4</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_header_font }}</div>
+                    <div class="mb-3">Font weight: {{ settings.type_header_font_weight }}</div>
+                    <div>Font Size: {{ settings.h4_font_size }}px</div>
+                    <div>Line Height: {{ settings.type_heading_line_height }}</div> 
+                    <div>Lettet Spacing: {{ settings.heading_letter_spacing }}</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <h4>The quick brown fox jumps over the lazy dog.</h4>
+            </div>
+        </div>
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="ls-0">H4 Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Size: {{ settings.h4_font_size_sm }}px</div>
+                    <div>Line Height: 1.2</div> 
+                </div>
+            </div>
+            <div class="col-8">
+                <h4 style="font-size: {{ settings.h4_font_size_sm }}px">The quick brown fox jumps over the lazy dog.</h4>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="ls-0">H5</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_header_font }}</div>
+                    <div class="mb-3">Font weight: {{ settings.type_header_font_weight }}</div>
+                    <div>Font Size: {{ settings.h5_font_size }}px</div>
+                    <div>Line Height: 1.25</div> 
+                    <div>Lettet Spacing: {{ settings.heading_letter_spacing }}</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <h5>The quick brown fox jumps over the lazy dog.</h5>
+            </div>
+        </div>
+
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="ls-0">H5 Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Size: {{ settings.h5_font_size_sm }}px</div>
+                    <div>Line Height: 1.25</div> 
+                </div>
+            </div>
+            <div class="col-8">
+                <h5 style="font-size: {{ settings.h5_font_size_sm }}px">The quick brown fox jumps over the lazy dog.</h5>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="ls-0">H6</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_header_font }}</div>
+                    <div class="mb-3">Font weight: {{ settings.type_header_font_weight }}</div>
+                    <div>Font Size: {{ settings.h6_font_size }}px</div>
+                    <div>Line Height: 1.5</div> 
+                    <div>Lettet Spacing: {{ settings.heading_letter_spacing }}</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <h6>The quick brown fox jumps over the lazy dog.</h6>
+            </div>
+        </div>
+
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="ls-0">H6 Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-500 fs-md font-family-base">
+                    <div>Font Size: {{ settings.h6_font_size_sm }}px</div>
+                    <div>Line Height: 1.5</div> 
+                </div>
+            </div>
+            <div class="col-8">
+                <h6 style="font-size: {{ settings.h6_font_size_sm }}px">The quick brown fox jumps over the lazy dog.</h6>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="font-family-base ls-0">Paragraph Large </h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-400 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_body_font }}</div>
+                    <div>Font Weight: {{ settings.type_body_font_weight }}</div>
+                    <div>Font Size: 18px</div>
+                    <div>Line Height: {{ settings.type_body_line_height }}</div> 
+                    <div>Letter Spacing: {{ settings.type_body_letter_spacing }}</div>
+                    <div>Font Color: #1D293D</div>
+                </div>
+            </div>
+            <div class="col-8 fs-xl text-secondary-900">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+                <div class="py-2 px-3 col-6 rounded" style="border: 1px dashed var(--pe-color-primary);">
+                    <p class="mb-0"><a href="mailto:info@xeroshoes.com">info@xeroshoes.com</a></p>
+                </div>
+            </div>
+        </div> 
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="font-family-base ls-0">Paragraph Large Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-400 fs-md font-family-base">
+                    <div>Font Size: 17px</div>
+                    <div>Line Height: {{ settings.type_body_line_height }}</div> 
+                </div>
+            </div>
+            <div class="col-8 col-8 fs-17 text-secondary-900">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+                <div class="py-2 px-3 col-6 rounded" style="border: 1px dashed var(--pe-color-primary);">
+                    <p class="mb-0"><a href="mailto:info@xeroshoes.com">info@xeroshoes.com</a></p>
+                </div>
+            </div>
+        </div> 
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="font-family-base ls-0">Paragraph</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-400 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_body_font }}</div>
+                    <div>Font Weight: {{ settings.type_body_font_weight }}</div>
+                    <div>Font Size: {{ settings.type_body_font_size }}px</div>
+                    <div>Line Height: {{ settings.type_body_line_height }}</div> 
+                    <div>Letter Spacing: {{ settings.type_body_letter_spacing }}</div>
+                    <div>Font Color: #1D293D</div>
+                </div>
+            </div>
+            <div class="col-8 text-secondary-900">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+                <div class="py-2 px-3 col-6 rounded" style="border: 1px dashed var(--pe-color-primary);">
+                    <p class="mb-0"><a href="mailto:info@xeroshoes.com">info@xeroshoes.com</a></p>
+                </div>
+            </div>
+        </div> 
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="font-family-base ls-0">Paragraph Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-400 fs-md font-family-base">
+                    <div>Font Size: 15px</div>
+                    <div>Line Height: {{ settings.type_body_line_height }}</div> 
+                </div>
+            </div>
+            <div class="col-8 col-8 fs-md text-secondary-900">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+                <div class="py-2 px-3 col-6 rounded" style="border: 1px dashed var(--pe-color-primary);">
+                    <p class="mb-0"><a href="mailto:info@xeroshoes.com">info@xeroshoes.com</a></p>
+                </div>
+            </div>
+        </div> 
+        <div class="row mb-5">
+            <div class="col-12">
+                <h6 class="font-family-base ls-0">Paragraph Small </h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-400 fs-md font-family-base">
+                    <div>Font Family: {{ settings.type_body_font }}</div>
+                    <div>Font Weight: {{ settings.type_body_font_weight }}</div>
+                    <div>Font Size: 14px</div>
+                    <div>Line Height: {{ settings.type_body_line_height }}</div> 
+                    <div>Letter Spacing: {{ settings.type_body_letter_spacing }}</div>
+                    <div>Font Color: #1D293D</div>
+                </div>
+            </div>
+            <div class="col-8 fs-sm text-secondary-900">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+                <div class="py-2 px-3 col-6 rounded" style="border: 1px dashed var(--pe-color-primary);">
+                    <p class="mb-0"><a href="mailto:info@xeroshoes.com">info@xeroshoes.com</a></p>
+                </div>
+            </div>
+        </div> 
+        <div class="row mb-10">
+            <div class="col-12">
+                <h6 class="font-family-base ls-0">Paragraph Small Mobile</h6>
+            </div>
+            <div class="col-4">
+                <div class="text-gray-400 fs-md font-family-base">
+                    <div>Font Size: 13px</div>
+                    <div>Line Height: {{ settings.type_body_line_height }}</div> 
+                </div>
+            </div>
+            <div class="col-8 col-8 fs-13 text-secondary-900">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+                <div class="py-2 px-3 col-6 rounded" style="border: 1px dashed var(--pe-color-primary);">
+                    <p class="mb-0"><a href="mailto:info@xeroshoes.com">info@xeroshoes.com</a></p>
+                </div>
+            </div>
+        </div> 
+        <div class="border-top d-block"></div>  
+    </div>
+
+    <div class="container mb-10">
+        <h2 class="mb-7">Button Style</h2>
+        <div class="row row-cols-4 mb-10 row-gap-4">
+            <div class="col-3">
+                <div class="border border-primary border-dashed py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-primary">Shop Now</a>
+                </div>
+                <kbd>btn btn-primary</kbd>
+            </div>
+            <div class="col-3">
+                <div class="border border-primary border-dashed bg-primary py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-secondary">Shop Now</a>
+                </div>
+                <kbd>btn btn-secondary</kbd>
+            </div>
+            <div class="col-3">
+                <div class="border border-primary border-dashed bg-primary py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-light">Shop Now</a>
+                </div>
+                <kbd>btn btn-light</kbd>
+            </div>
+            <div class="col-3">
+                <div class="border border-primary border-dashed py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-dark">Shop Now</a>
+                </div>
+                <kbd>btn btn-dark</kbd>
+            </div>
+            <div class="col-3">
+                <div class="border border-primary border-dashed py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-lg btn-primary">Shop Now</a>
+                </div>
+                <kbd>btn btn-lg</kbd>
+            </div>
+            <div class="col-3">
+                <div class="border border-primary border-dashed bg-primary py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-sm btn-secondary">Shop Now</a>
+                </div>
+                <kbd>btn btn-sm</kbd>
+            </div>
+
+            <div class="col-3">
+                <div class="border border-primary border-dashed bg-primary py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-link btn-link-light">Shop Now</a>
+                </div>
+                <kbd>btn btn-link btn-link-light</kbd>
+            </div>
+
+            <div class="col-3">
+                <div class="border border-primary border-dashed py-3 px-3 rounded mb-2">
+                    <a href="" class="btn btn-link btn-link-dark">Shop Now</a>
+                </div>
+                <kbd>btn btn-link btn-link-dark</kbd>
+            </div>
+        </div>
+        <div class=" border-top d-block"></div>
+    </div>
+
+
+    <div class="container mb-10">
+        <div class="row">
+            <h2 class="mb-5">Text Fields</h2>
+            <div class="col-md-4 py-3">
+                <h6 class="text-capitalize mb-3 ls-0">Floating Form</h6>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email Address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="password" value="password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating d-none">
+                    <select class="form-select" id="floatingSelectGrid">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelectGrid">Works with selects</label>
+                </div>
+            </div>
+            <div class="col-md-4 bg-black py-3">
+                <h6 class="text-capitalize mb-3 ls-0 text-white">Floating Form Light</h6>
+                <div class="form-floating form-floating-light mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email Address</label>
+                </div>
+                <div class="form-floating form-floating-light mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="password" value="password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating d-none">
+                    <select class="form-select" id="floatingSelectGrid">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelectGrid">Works with selects</label>
+                </div>
+            </div>
+        </div>  
+        <div class="mt-10 border-top"></div>
+    </div>
+
+     <div class="container mb-10">
+        <div class="row">
+            <h2 class="mb-5">Selections</h2>
+            <div class="col-md-3">
+                <h6 class="text-capitalize mb-3 ls-0">Checkbox</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">Option 1</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">Option 2</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" disabled>
+                    <label class="form-check-label" for="flexCheckChecked">Option 3</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked disabled>
+                    <label class="form-check-label" for="flexCheckChecked">Option 4</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-capitalize mb-3 ls-0">Radio button</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Default radio</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">Checked Radio</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefaul" id="flexRadioDefault" checked disabled>
+                    <label class="form-check-label" for="flexRadioDefault2">Checked Disabled Radio</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" disabled>
+                    <label class="form-check-label" for="flexRadioDefault">Disabled Radio</label>
+                </div>
+
+                
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-capitalize mb-3 ls-0">form Dropdown</h6>
+                <custom-select class="custom-dropdown custom-dropdown-only-text position-relative d-flex justify-content-end" aria-label="Sort by options">
+                    <button id="custom-select-toggle" class="default tab_toggle" 
+                        data-toggle="options" aria-controls="custom-select"
+                        aria-expanded="false" aria-haspopup="true" >
+                        <span class="option_txt">Sort By</span>
+                        <svg aria-hidden="true" focusable="false" style="width:12px; height:12px;" class="ms-2"><use href="#icon-arrow-down"></use></svg>
+                    </button>
+                    <div class="toggle-content text-end" id="custom-select" data-type="content" data-selectcontainer
+                        role="menu" aria-hidden="true" aria-labelledby="custom-select-toggle">
+                        <ul class="list-unstyled m-0 toggle-content-wrap">
+                            <li data-value="manual" class="form-check selected" role="menuitem" tabindex="0">
+                                <input type="radio" value="manual" class="sortby_options form-check-input" name="custom_sort_by" id="sort_by-option1" tabindex="-1" checked>
+                                <label for="sort_by-option1" class="option_txt form-check-label" title="Label for Featured">Featured</label>
+                            </li>
+                            <li data-value="best-selling" class="form-check" role="menuitem" tabindex="0">
+                                <input type="radio" value="best-selling" class="sortby_options form-check-input" name="custom_sort_by" id="sort_by-option2" tabindex="-1">
+                                <label for="sort_by-option2" class="option_txt form-check-label" title="Label for Best selling">Best selling</label>
+                            </li>
+                            <li data-value="title-ascending" class="form-check" role="menuitem" tabindex="0">
+                                <input type="radio" value="title-ascending" class="sortby_options form-check-input" name="custom_sort_by" id="sort_by-option3" tabindex="-1">
+                                <label for="sort_by-option3" class="option_txt form-check-label" title="Label for New Release">New Release</label>
+                            </li>
+                            <li data-value="title-descending" class="form-check" role="menuitem" tabindex="0">
+                                <input type="radio" value="title-descending" class="sortby_options form-check-input" name="custom_sort_by" id="sort_by-option4" tabindex="-1">
+                                <label for="sort_by-option4" class="option_txt form-check-label" title="Label for Price, Low-Hight">Price, Low-High</label>
+                            </li>
+                            <li data-value="title-descending" class="form-check" role="menuitem" tabindex="0">
+                                <input type="radio" value="title-descending" class="sortby_options form-check-input" name="custom_sort_by" id="sort_by-option4" tabindex="-1">
+                                <label for="sort_by-option4" class="option_txt form-check-label" title="Label for Price, High-Low">Price, High-Low</label>
+                            </li>
+                        </ul>
+                    </div>
+                </custom-select>
+            </div>
+        </div>  
+        <div class="row mt-8 d-none">
+            <div class="col-md-6">
+                <h6 class="text-capitalize mb-3 ls-0">Collapsible Panel</h6>
+                <div class="collapsible_panel tab_container" is="collapsiblePanel">
+                    <button id="toggle1" class="panel_toggle"
+                        data-toggle="panel" aria-expanded="false" aria-controls="panel1" 
+                        aria-label="Toggle Custom Collapsible Panel 1">
+                        Custom Collapsible Panel 1
+                        <span class="icon-collapsible"></span>
+                    </button>
+                    <div id="panel1" class="panel_content toggle-content" role="region"
+                        data-type="content" data-panelcontent
+                        aria-hidden="true" aria-labelledby="toggle1">
+                        <div class="toggle-content-wrap">
+                            <p>Featuring a unique combination of modern art and minimalist perspective, our Helix Bag is perfectly sized to fit just the essentials - think small wallet, keys, sunglasses and large phone. It has a wind spinner silhouette that will remind you summer breezes out on the porch. The top handle is cleverly linked to the body through its hidden joint; it can fall down when you use the bag with shoulder strap. Made from smooth leather and has a suede internal with a drawstring top to keep all you have stowed inside safe and secure.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="collapsible_panel tab_container" is="collapsiblePanel">
+                    <button id="toggle2" class="panel_toggle" 
+                        data-toggle="panel" aria-expanded="false" aria-controls="panel2" 
+                        aria-label="Toggle Custom Collapsible Panel 2">
+                        Custom Collapsible Panel 2
+                        <span class="icon-collapsible"></span>
+                    </button>
+                    <div id="panel2" class="panel_content toggle-content" 
+                        data-type="content" data-panelcontent 
+                        aria-hidden="true" role="region" aria-labelledby="toggle2">
+                        <div class="toggle-content-wrap">
+                            <p>Featuring a unique combination of modern art and minimalist perspective, our Helix Bag is perfectly sized to fit just the essentials - think small wallet, keys, sunglasses and large phone. It has a wind spinner silhouette that will remind you summer breezes out on the porch. The top handle is cleverly linked to the body through its hidden joint; it can fall down when you use the bag with shoulder strap. Made from smooth leather and has a suede internal with a drawstring top to keep all you have stowed inside safe and secure.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-md-6">
+                <h6 class="text-capitalize mb-3 ls-0">Custom Tabify</h6>
+                <custom-tabs class="d-block">
+                    <div id="customTabs" data-custom-tabs>
+                        <div class="tabs d-flex list-unstyled text-uppercase fw-medium mb-0" role="tablist">
+                            <button class="tablink active" data-toggle="tab" id="tab1" 
+                                role="tab" aria-selected="true" aria-controls="custom-tab-1" 
+                                aria-expanded="true"
+                                data-target="#custom-tab-1">Tab 1</button>
+                            <button class="tablink" data-toggle="tab" id="tab2" 
+                                role="tab" aria-selected="false" aria-controls="custom-tab-2" 
+                                aria-expanded="false"
+                                data-target="#custom-tab-2">Tab 2</button>
+                            <button class="tablink open" data-toggle="tab" id="tab3" 
+                                role="tab" aria-selected="false" aria-controls="custom-tab-3" 
+                                aria-expanded="false"
+                                data-target="#custom-tab-3">Tab 3</button>
+                        </div>
+                
+                        <div class="tab-content text-start" id="customTabsContent">
+                            <div class="tab-pane tabcontent open" id="custom-tab-1" 
+                                role="tabpanel" aria-labelledby="tab1" 
+                                aria-hidden="false" data-tabpanel>
+                                <div class="rte pt-md-5 pt-3 px-lg-4">
+                                    <p>Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.</p>
+                                    <p>We offer refund and/or exchange within the first 30 days of your purchase, if 30 days have passed since your purchase, you will not be offered a refund and/or exchange of any kind.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane tabcontent" id="custom-tab-2" 
+                                role="tabpanel" aria-labelledby="tab2" 
+                                aria-hidden="true" data-tabpanel>
+                                <div class="rte pt-md-5 pt-3 px-lg-4">
+                                    <p>Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.</p>
+                                    <p>We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at (Add Relevant Email Address) and send your item to: (Relevant Address).</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane tabcontent" id="custom-tab-3" 
+                                role="tabpanel" aria-labelledby="tab3" 
+                                aria-hidden="true" data-tabpanel>
+                                <div class="rte pt-md-5 pt-3 px-lg-4">
+                                    <p>Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.</p>
+                                    <p>We only replace items if they are defective or damaged. If you need to exchange it for the same item, send us an email at (Add Relevant Email Address) and send your item to: (Relevant Address).</p>
+                                    <p>Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </custom-tabs>
+            </div>
+        </div>
+    </div>
+
+     <div class="container">
+        <div class="row">
+            <h2 class="mb-5">Tags</h2>
+            <div class="col-md-3">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><span class="badge badge-sale">25% Off</span></li>
+                    <li class="mb-3"><span class="badge badge-new">New</span></li>
+                    <li class="mb-3"><span class="badge badge-new">New Color</span></li>
+                    <li class="mb-3"><span class="badge badge-new">Back in Stock</span></li>
+                    <li class="mb-3"><span class="badge badge-best-seller">Waterproof</span></li>
+                    <li class="mb-3"><span class="badge badge-sold">Featured</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+    
+    
+    <div class="container mb-10 d-none">
+        <div class="row">
+            <div class="col-4">
+                <div class="bg-gray-200 p-8 border-gray-400">
+                    <div class="custom-swiper-navigation d-block mb-3">
+                        <button class="swiper-button-prev"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-left"></use></svg></button>
+                        <button class="swiper-button-next"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></button>
+                    </div>
+
+                    <div class="custom-swiper-navigation d-block light-arrow mb-3">
+                        <button class="swiper-button-prev"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-left"></use></svg></button>
+                        <button class="swiper-button-next"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></button>
+                    </div>
+
+                    <div class="custom-swiper-navigation d-block mb-3 arrow-small">
+                        <button class="swiper-button-prev"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-left"></use></svg></button>
+                        <button class="swiper-button-next"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></button>
+                    </div>
+
+                    <div class="custom-swiper-navigation d-block light-arrow arrow-small">
+                        <button class="swiper-button-prev"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-left"></use></svg></button>
+                        <button class="swiper-button-next"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Design Guidelines",
+  "tag": "section",
+  "settings": [
+   
+  ]
+}
+{% endschema %}

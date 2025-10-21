@@ -1,0 +1,1327 @@
+{
+  "sections": {
+    "global_page_header_banner_hy6yME": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_47MciB": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-stretch",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_VBznkM": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_NeQE8j": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-row",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-stretch",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "group_Mejby9": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-5",
+                        "width_md": "col-md-5",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-row",
+                        "direction_mobile": "flex-row",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-10",
+                        "padding_right_desktop": "pe-md-3",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "#53CAEC",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "group_rxYTrJ": {
+                          "type": "group",
+                          "settings": {
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "max_width": 350,
+                            "display": "d-flex",
+                            "direction": "flex-md-column",
+                            "direction_mobile": "flex-column",
+                            "wrap": "flex-nowrap",
+                            "align_items": "align-items-md-start",
+                            "align_items_mb": "align-items-start",
+                            "justify_content": "justify-content-md-start",
+                            "justify_content_mb": "justify-content-start",
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-5",
+                            "padding_bottom_mobile": "pb-5",
+                            "padding_left_mobile": "ps-3",
+                            "padding_right_mobile": "pe-3",
+                            "gap_column": "column-gap-md-0",
+                            "gap_row": "row-gap-md-2",
+                            "gap_column_mobile": "column-gap-0",
+                            "gap_row_mobile": "row-gap-0",
+                            "bg_color": "transparent",
+                            "border": "border-0",
+                            "border_width": 0,
+                            "border_color": "#0f172b",
+                            "border_radius": 0,
+                            "custom_class": ""
+                          },
+                          "blocks": {
+                            "heading_MyL9kJ": {
+                              "type": "heading",
+                              "settings": {
+                                "text": "<h1>{{ closest.page.title }}<\/h1>",
+                                "text_size": "",
+                                "font_family": "font-family-heading",
+                                "text_style": "text-math-auto",
+                                "font_weight": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "#ffffff",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-2",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            },
+                            "text_YfrF8h": {
+                              "type": "text",
+                              "name": "Text",
+                              "settings": {
+                                "text": "<p>Just select Klarna at checkout to split your total purchase into 4 <span style=\"text-decoration:underline\">interest-free<\/span> installments.<\/p>",
+                                "font_family": "font-family-base",
+                                "text_size": "fs-base",
+                                "font_weight": "fw-normal",
+                                "text_letter_spacing": "",
+                                "text_style": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "#ffffff",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-0",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            },
+                            "group_htWJF4": {
+                              "type": "group",
+                              "name": "Group",
+                              "settings": {
+                                "width": "col-lg-12",
+                                "width_md": "col-md-12",
+                                "width_sm": "col-12",
+                                "max_width": 100,
+                                "display": "d-flex",
+                                "direction": "flex-md-column",
+                                "direction_mobile": "flex-column",
+                                "wrap": "flex-nowrap",
+                                "align_items": "align-items-md-start",
+                                "align_items_mb": "align-items-start",
+                                "justify_content": "justify-content-md-start",
+                                "justify_content_mb": "justify-content-start",
+                                "padding_top_desktop": "pt-md-3",
+                                "padding_bottom_desktop": "pb-md-0",
+                                "padding_left_desktop": "ps-md-0",
+                                "padding_right_desktop": "pe-md-0",
+                                "padding_top_mobile": "pt-3",
+                                "padding_bottom_mobile": "pb-0",
+                                "padding_left_mobile": "ps-0",
+                                "padding_right_mobile": "pe-0",
+                                "gap_column": "column-gap-md-0",
+                                "gap_row": "row-gap-md-0",
+                                "gap_column_mobile": "column-gap-0",
+                                "gap_row_mobile": "row-gap-0",
+                                "bg_color": "transparent",
+                                "border": "border-0",
+                                "border_width": 0,
+                                "border_color": "#666666",
+                                "border_radius": 0,
+                                "custom_class": ""
+                              },
+                              "blocks": {
+                                "image_3JpU7M": {
+                                  "type": "image",
+                                  "name": "Image",
+                                  "settings": {
+                                    "image": "shopify:\/\/shop_images\/Klarna-logo.png",
+                                    "width": "col-lg-12",
+                                    "width_md": "col-md-12",
+                                    "width_sm": "col-12",
+                                    "object_fit": "cover",
+                                    "aspect_ratio": "",
+                                    "enable_link": false,
+                                    "enable_preload": false,
+                                    "url": "",
+                                    "enable_overlay": false,
+                                    "overlay_bg_color": "#000000",
+                                    "overlay_opacity": 0.5,
+                                    "blend_mode": "none",
+                                    "padding_top_desktop": "pt-md-0",
+                                    "padding_bottom_desktop": "pb-md-0",
+                                    "padding_left_desktop": "ps-md-0",
+                                    "padding_right_desktop": "pe-md-0",
+                                    "padding_top_mobile": "pt-0",
+                                    "padding_bottom_mobile": "pb-0",
+                                    "padding_left_mobile": "ps-0",
+                                    "padding_right_mobile": "pe-0",
+                                    "custom_class": ""
+                                  },
+                                  "blocks": {}
+                                }
+                              },
+                              "block_order": [
+                                "image_3JpU7M"
+                              ]
+                            }
+                          },
+                          "block_order": [
+                            "heading_MyL9kJ",
+                            "text_YfrF8h",
+                            "group_htWJF4"
+                          ]
+                        }
+                      },
+                      "block_order": [
+                        "group_rxYTrJ"
+                      ]
+                    },
+                    "image_A9UzeW": {
+                      "type": "image",
+                      "name": "Image",
+                      "settings": {
+                        "image": "shopify:\/\/shop_images\/APW-BLK_Aptos-Black_LS_4142-scaled-1-2048x1366.jpg",
+                        "width": "col-lg-7",
+                        "width_md": "col-md-7",
+                        "width_sm": "col-12",
+                        "object_fit": "cover",
+                        "aspect_ratio": "1.49770642",
+                        "enable_link": false,
+                        "enable_preload": true,
+                        "url": "",
+                        "enable_overlay": false,
+                        "overlay_bg_color": "#000000",
+                        "overlay_opacity": 0.5,
+                        "blend_mode": "none",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "group_Mejby9",
+                    "image_A9UzeW"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_NeQE8j"
+              ]
+            },
+            "image_qYQGkX": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/waves-white.svg",
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "object_fit": "cover",
+                "aspect_ratio": "",
+                "enable_link": false,
+                "enable_preload": true,
+                "url": "",
+                "enable_overlay": false,
+                "overlay_bg_color": "#000000",
+                "overlay_opacity": 0.5,
+                "blend_mode": "none",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": "waves"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_VBznkM",
+            "image_qYQGkX"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_47MciB"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    },
+    "global_features_grid_WwbiHd": {
+      "type": "global-features-grid",
+      "blocks": {
+        "static-featured-grid-list": {
+          "type": "featured-grid-list",
+          "name": "Icons with text list",
+          "static": true,
+          "settings": {
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-row",
+            "wrap": "flex-wrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-6",
+            "section_bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "",
+            "border_radius": 0
+          },
+          "blocks": {
+            "featured_card_RmRQfj": {
+              "type": "_featured-card",
+              "name": "Featured card",
+              "settings": {
+                "grid_size": "4",
+                "grid_size_md": "4",
+                "grid_size_sm": "12",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_color": "",
+                "border_radius": 0
+              },
+              "blocks": {
+                "group_HJej9D": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "group_PpyTHU": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-center",
+                        "justify_content_mb": "justify-content-center",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-5",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-4",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "icon_pGcVqr": {
+                          "type": "icon",
+                          "name": "t:names.icon",
+                          "settings": {
+                            "icon": "founded",
+                            "icon_color": "#4b6b2f",
+                            "icon_color_bg": "",
+                            "border_width": 0,
+                            "border_color": "",
+                            "border_corner": 0,
+                            "image_upload": "shopify:\/\/shop_images\/basket_c8c6079c-59c9-412c-8cc7-8efc0023ca70.svg",
+                            "width": 60,
+                            "height": 44,
+                            "width_mobile": 40,
+                            "height_mobile": 36,
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "icon_pGcVqr"
+                      ]
+                    },
+                    "group_hmLRcC": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-block",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "heading_JpmYwb": {
+                          "type": "heading",
+                          "name": "t:names.heading",
+                          "settings": {
+                            "text": "<h6>Add items to your cart<\/h6>",
+                            "text_size": "",
+                            "font_family": "font-family-heading",
+                            "text_style": "",
+                            "font_weight": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "#1d293d",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-2",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-2",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        },
+                        "text_qAdwGK": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>Once you're done shopping, head to the checkout and select Klarna to pay.<\/p>",
+                            "font_family": "font-family-base",
+                            "text_size": "fs-md",
+                            "font_weight": "fw-normal",
+                            "text_letter_spacing": "",
+                            "text_style": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-0",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "heading_JpmYwb",
+                        "text_qAdwGK"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "group_PpyTHU",
+                    "group_hmLRcC"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_HJej9D"
+              ]
+            },
+            "featured_card_qXKw7N": {
+              "type": "_featured-card",
+              "name": "Featured card",
+              "settings": {
+                "grid_size": "4",
+                "grid_size_md": "4",
+                "grid_size_sm": "12",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_color": "",
+                "border_radius": 0
+              },
+              "blocks": {
+                "group_qCyKbP": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "group_3P8aVQ": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-center",
+                        "justify_content_mb": "justify-content-center",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-5",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-4",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "icon_MLUADc": {
+                          "type": "icon",
+                          "name": "t:names.icon",
+                          "settings": {
+                            "icon": "program",
+                            "icon_color": "#1d293d",
+                            "icon_color_bg": "",
+                            "border_width": 0,
+                            "border_color": "",
+                            "border_corner": 0,
+                            "image_upload": "shopify:\/\/shop_images\/credit-card-solid_e6c311c3-3c49-4c48-bebc-f24cdb5c1d1b.svg",
+                            "width": 60,
+                            "height": 44,
+                            "width_mobile": 40,
+                            "height_mobile": 36,
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "icon_MLUADc"
+                      ]
+                    },
+                    "group_MKtpyx": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-block",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "heading_UFJwpV": {
+                          "type": "heading",
+                          "name": "t:names.heading",
+                          "settings": {
+                            "text": "<h6>Make one payment now<\/h6>",
+                            "text_size": "",
+                            "font_family": "font-family-heading",
+                            "text_style": "",
+                            "font_weight": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "#1d293d",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-2",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-2",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        },
+                        "text_L9drqX": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>You'll make three additional interest-free payments over the next six weeks.<\/p>",
+                            "font_family": "font-family-base",
+                            "text_size": "fs-md",
+                            "font_weight": "fw-normal",
+                            "text_letter_spacing": "",
+                            "text_style": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-0",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "heading_UFJwpV",
+                        "text_L9drqX"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "group_3P8aVQ",
+                    "group_MKtpyx"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_qCyKbP"
+              ]
+            },
+            "featured_card_FtXw4C": {
+              "type": "_featured-card",
+              "name": "Featured card",
+              "settings": {
+                "grid_size": "4",
+                "grid_size_md": "4",
+                "grid_size_sm": "12",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_color": "",
+                "border_radius": 0
+              },
+              "blocks": {
+                "group_KJfWtD": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "group_GMxaYy": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-center",
+                        "justify_content_mb": "justify-content-center",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-5",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-4",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "icon_cwL3Ly": {
+                          "type": "icon",
+                          "name": "t:names.icon",
+                          "settings": {
+                            "icon": "shipping",
+                            "icon_color": "#1d293d",
+                            "icon_color_bg": "",
+                            "border_width": 0,
+                            "border_color": "",
+                            "border_corner": 0,
+                            "image_upload": "shopify:\/\/shop_images\/mobile_a4f9646e-6f63-4333-8029-e49829aede5e.svg",
+                            "width": 60,
+                            "height": 44,
+                            "width_mobile": 40,
+                            "height_mobile": 36,
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "icon_cwL3Ly"
+                      ]
+                    },
+                    "group_BLrw4g": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-block",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "heading_eJeaAn": {
+                          "type": "heading",
+                          "name": "t:names.heading",
+                          "settings": {
+                            "text": "<h6>Manage Your Orders<\/h6>",
+                            "text_size": "",
+                            "font_family": "font-family-heading",
+                            "text_style": "",
+                            "font_weight": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "#1d293d",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-2",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-2",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        },
+                        "text_JHMEp7": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>You can mange your orders and future payments through your Klarna account.<\/p>",
+                            "font_family": "font-family-base",
+                            "text_size": "fs-md",
+                            "font_weight": "fw-normal",
+                            "text_letter_spacing": "",
+                            "text_style": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-0",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "heading_eJeaAn",
+                        "text_JHMEp7"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "group_GMxaYy",
+                    "group_BLrw4g"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_KJfWtD"
+              ]
+            }
+          },
+          "block_order": [
+            "featured_card_RmRQfj",
+            "featured_card_qXKw7N",
+            "featured_card_FtXw4C"
+          ]
+        }
+      },
+      "name": "t:names.icons_with_text",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-md",
+        "section_top_spacing_mobile": "spacing-top-mobile-md",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "section_bg_color": "",
+        "custom_class": ""
+      }
+    },
+    "custom_section_AbXzCX": {
+      "type": "custom-section",
+      "blocks": {
+        "heading_qpMFpd": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "text": "<h2>How to manage your payment account<\/h2>",
+            "text_size": "",
+            "font_family": "font-family-heading",
+            "text_style": "",
+            "font_weight": "",
+            "alignment": "text-md-center",
+            "alignment_mobile": "text-center",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": ""
+          },
+          "blocks": {}
+        },
+        "text_6Uk4KC": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p>Once your order is processed, you can log in to your <a href=\"https:\/\/app.klarna.com\/login\">Klarna account<\/a> to view your purchase and make a payment. <\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-center",
+            "alignment_mobile": "text-center",
+            "color": "",
+            "margin_top_desktop": "mt-md-3",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-3",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_qpMFpd",
+        "text_6Uk4KC"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-center",
+        "align_items_mb": "align-items-center",
+        "justify_content": "justify-content-md-center",
+        "justify_content_mb": "justify-content-center",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "#F3F0EA"
+      }
+    },
+    "custom_section_HgwhDW": {
+      "type": "custom-section",
+      "blocks": {
+        "heading_yaPPpX": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "text": "<h3>Frequently asked questions<\/h3>",
+            "text_size": "",
+            "font_family": "font-family-heading",
+            "text_style": "",
+            "font_weight": "",
+            "alignment": "text-md-center",
+            "alignment_mobile": "text-center",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-6",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-4",
+            "custom_class": ""
+          },
+          "blocks": {}
+        },
+        "group_MVm4qj": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": "natural-movement-collapsible faqs-block"
+          },
+          "blocks": {
+            "collapsible_row_m8nhVB": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "What happens if I make a return?",
+                "text": "<p>If you need to return part or all of your order, Klarna will issue you with a new statement. Simply follow our <a href=\"https:\/\/shopxeroshoes.myshopify.com\/pages\/returns\" title=\"https:\/\/shopxeroshoes.myshopify.com\/pages\/returns\">return instructions<\/a> and make sure to take note of the tracking number. Log into your Klarna account, select “report a return”, and we’ll pause your statement. As soon as we have processed your return, Klarna will send an adjusted invoice.<\/p>",
+                "page": "",
+                "open_by_default": true,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_Bix34X": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "There’s something wrong with my order. Do I still need to pay for it?",
+                "text": "<p>You do not need to pay for goods that are received damaged, broken, or defective. Contact our Customer Happiness Team at <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com<\/a> and “report a problem” in your Klarna account to pause your statement until the issue is resolved. As soon as we have processed your return, the refund will be processed within 5-7 business days.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_aUHKML": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "I have not received my order. What happens to my statement?",
+                "text": "<p>You do not need to pay the statement until you have received your order. Check your email or contact us for a delivery update before reporting any problems to Klarna.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_aH9PdK": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "My statement is incorrect. What should I do?",
+                "text": "<p>If your statement does not match your order details, please contact our Customer Happiness Team at <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com<\/a> for help. Log into your Klarna account and “report a problem” to pause your statement until the details have been corrected.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_dQgPBD": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "What happened to Viabill?",
+                "text": "<p>We are no longer offering Viabill as a payment option, but all previous and current orders will still be fulfilled. For any future payment-deferred orders we recommend using Klarna.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "collapsible_row_m8nhVB",
+            "collapsible_row_Bix34X",
+            "collapsible_row_aUHKML",
+            "collapsible_row_aH9PdK",
+            "collapsible_row_dQgPBD"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_yaPPpX",
+        "group_MVm4qj"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_hy6yME",
+    "main",
+    "global_features_grid_WwbiHd",
+    "custom_section_AbXzCX",
+    "custom_section_HgwhDW"
+  ]
+}

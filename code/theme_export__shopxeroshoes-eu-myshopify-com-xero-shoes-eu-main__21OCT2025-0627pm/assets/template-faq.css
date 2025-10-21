@@ -1,0 +1,55 @@
+
+.faq-container h6 p{
+    margin-bottom:0;
+}
+
+#title-color ul li.faq-listing a.active {
+    color: #111111;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #111111;
+}
+.faq-Banner{
+    height: 55vh;
+    min-height: 510px;
+    position: relative;
+}
+/* .faq-container.open span::before{
+    content: "\e918";
+    transition: all 0.3s;
+} */
+.faq-sidebar ul{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;
+}
+#title-color ul li.faq-listing{
+    padding: 7px 12px;
+}
+@media (min-width: 992px) {
+    .faq-sidebar ul{
+        display: block;
+        overflow: visible;
+        white-space: wrap;
+    }
+    #title-color ul li.faq-listing{
+        padding: 7px 0;
+    }
+}
+
+.faq-container.collapsible_panel .toggle-content-wrap>*:first-child{
+    margin-top: 0;
+}
+.nested-faq-container .collapsible_panel:last-child{
+    border-bottom: none !important;
+}
+.nested-faq-container .faq-container.collapsible_panel.open svg {
+    rotate: 90deg;
+}
+.nested-faq-container .faq-container.collapsible_panel svg {
+    rotate: none;
+    transition: rotate 200ms ease-out;
+}
+.faq-container.collapsible_panel .toggle-content-wrap p {
+    margin-bottom: 1.68rem;
+}

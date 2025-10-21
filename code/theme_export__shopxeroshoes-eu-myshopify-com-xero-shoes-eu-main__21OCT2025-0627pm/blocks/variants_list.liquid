@@ -1,0 +1,395 @@
+ {{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+{% liquid 
+    assign classes = 'resource-list--grid'
+    capture styles
+        echo '--resource-list-column-gap-desktop: ' | append: block.settings.columns_gap | append: 'px;'
+        echo '--resource-list-row-gap-desktop: ' | append: block.settings.rows_gap | append: 'px;'
+        echo '--resource-list-column-gap-mobile: ' | append: block.settings.columns_gap_mobile | append: 'px;'
+        echo '--resource-list-row-gap-mobile: ' | append: block.settings.rows_gap_mobile | append: 'px;'
+        echo '--resource-list-columns: repeat(' | append: block.settings.columns | append: ', 1fr);'
+        echo '--resource-list-columns-mobile: repeat(' | append: block.settings.mobile_columns | append: ', 1fr);'
+      endcapture
+%}
+
+{% style %}
+        .section-resource-list {
+        row-gap: var(--gap);
+    }
+  
+    .resource-list--carousel-mobile {
+        display: block;
+        @media screen and (width >= 750px) {
+            display: none;
+        }
+    }
+  
+    .resource-list {
+      --resource-list-column-gap: var(--resource-list-column-gap-mobile);
+        --resource-list-row-gap: var(--resource-list-row-gap-mobile);
+        width: 100%;
+        @media screen and (width >= 991px) {
+            --resource-list-column-gap: var(--resource-list-column-gap-desktop);
+            --resource-list-row-gap: var(--resource-list-row-gap-desktop);
+        }
+    }
+  
+    .resource-list--grid {
+        display: grid;
+        column-gap: var(--resource-list-column-gap);
+        row-gap: var(--resource-list-row-gap);
+        grid-template-columns: var(--resource-list-columns-mobile);
+    
+        @media screen and (width >= 991px) {
+            grid-template-columns: var(--resource-list-columns);
+        }
+    }
+  
+    .resource-list__item {
+        height: 100%;
+        text-decoration: none;
+        display:grid;
+    }
+{% endstyle %}
+
+<section-variant-list>
+<div class="text-block {{ block.settings.custom_class }}  {{ block.settings.font_family }} {{ block.settings.margin_top_desktop }} {{ block.settings.margin_top_mobile }} {{ block.settings.margin_bottom_desktop }} {{ block.settings.margin_bottom_mobile }}" {{ block.shopify_attributes }}>
+    {% assign variant_ids = block.settings.variant_list | split: "," %}
+    <div id="variant-list" class="resource-list resource-list--{{ section.id }}  {{ classes }}" style="{{ styles }}" data-testid="resource-list-grid">
+        {% for v_id in variant_ids %}
+            <div data-variant-id="{{ v_id }}" class="resource-list__item">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</section-variant-list>
+
+{% schema %}
+    {
+        "name": "Variant List",
+        "tag": null,
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "variant_list",
+                "label": "Variant List",
+                "info": "Add comma seperated variant IDs"
+            },
+            {
+                "type":"header",
+                "content":"Margin: Desktop"
+            },
+            {
+                "type": "select",
+                "id": "margin_top_desktop",
+                "label": "Margin Top",
+                "options": [
+                    {
+                        "value": "mt-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mt-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mt-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mt-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mt-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mt-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mt-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mt-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mt-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mt-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mt-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mt-md-0"
+            },
+            {
+                "type": "select",
+                "id": "margin_bottom_desktop",
+                "label": "Margin Bottom",
+                "options": [ 
+                    {
+                        "value": "mb-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mb-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mb-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mb-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mb-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mb-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mb-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mb-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mb-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mb-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mb-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mb-md-0"
+            },
+            {
+                "type":"header",
+                "content":"Margin: Mobile"
+            },
+            {
+                "type": "select",
+                "id": "margin_top_mobile",
+                "label": "Margin Top",
+                "options": [
+                    {
+                        "value": "mt-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mt-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mt-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mt-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mt-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mt-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mt-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mt-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mt-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mt-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mt-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mt-0"
+            },
+            {
+                "type": "select",
+                "id": "margin_bottom_mobile",
+                "label": "Margin Bottom",
+                "options": [
+                    {
+                        "value": "mb-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mb-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mb-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mb-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mb-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mb-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mb-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mb-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mb-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mb-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mb-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mb-0"
+            },
+            {
+                "type": "range",
+                "id": "columns",
+                "label": "t:settings.columns",
+                "min": 1,
+                "max": 8,
+                "step": 1,
+                "default": 4
+            },
+            {
+                "type": "range",
+                "id": "ipad_columns",
+                "label": "t:settings.Ipad_columns",
+                "min": 1,
+                "max": 4,
+                "step": 1,
+                "default": 3
+            },
+            {
+                "type": "range",
+                "id": "mobile_columns",
+                "label": "t:settings.mobile_columns",
+                "min": 1,
+                "max": 3,
+                "step": 1,
+                "default": 2
+            },
+            {
+                "type": "range",
+                "id": "columns_gap",
+                "label": "t:settings.horizontal_gap",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "columns_gap_ipad",
+                "label": "t:settings.horizontal_gap_ipad",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "columns_gap_mobile",
+                "label": "t:settings.horizontal_gap_mobile",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 15
+            },
+            {
+                "type": "range",
+                "id": "rows_gap",
+                "label": "t:settings.vertical_gap",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "rows_gap_ipad",
+                "label": "t:settings.vertical_gap_ipad",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "rows_gap_mobile",
+                "label": "t:settings.vertical_gap_mobile",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 15
+            },
+            {
+                "type": "text",
+                "id": "custom_class",
+                "label": "Custom Class"
+            }
+        ],
+        "presets": [
+            { "name": "Variant List",
+                "settings": {
+                    
+                } 
+            }
+        ]
+    }
+{% endschema %} 

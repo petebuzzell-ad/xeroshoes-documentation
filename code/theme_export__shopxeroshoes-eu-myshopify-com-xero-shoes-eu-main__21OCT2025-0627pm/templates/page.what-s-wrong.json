@@ -1,0 +1,353 @@
+{
+  "sections": {
+    "global_page_header_banner_nez6hz": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_YtYt9j": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "fluid_layout",
+            "image_enable": true,
+            "first_image": "shopify:\/\/shop_images\/Shoe-Finder-Quiz-Banner-Image.png",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.2,
+            "blend_mode": "none",
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_4cMqbj": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-auto",
+                "width_md": "col-md-auto",
+                "width_sm": "col-auto",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-center",
+                "justify_content_mb": "justify-content-center",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-3",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-3",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_HM6gKf": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 320,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-center",
+                    "align_items_mb": "align-items-center",
+                    "justify_content": "justify-content-md-center",
+                    "justify_content_mb": "justify-content-center",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-4",
+                    "padding_left_desktop": "ps-md-10",
+                    "padding_right_desktop": "pe-md-10",
+                    "padding_top_mobile": "pt-2",
+                    "padding_bottom_mobile": "pb-2",
+                    "padding_left_mobile": "ps-10",
+                    "padding_right_mobile": "pe-10",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_mmJj8U": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<p>Find your new favorite xero shoes<\/p>",
+                        "text_size": "h4",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "fw-medium",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "buttons_mpiKwT": {
+                      "type": "buttons",
+                      "name": "Button",
+                      "settings": {
+                        "link": "https:\/\/shopxeroshoes.myshopify.com\/pages\/shoe-finder",
+                        "custom_video_play_button": false,
+                        "icon": "none",
+                        "label": "Take the Quiz",
+                        "style_class": "btn-primary",
+                        "size_class": "",
+                        "text_style": "",
+                        "open_in_new_tab": false,
+                        "hide_desktop": false,
+                        "hide_mobile": false,
+                        "full_width": false,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_mmJj8U",
+                    "buttons_mpiKwT"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_HM6gKf"
+              ]
+            }
+          },
+          "block_order": [
+            "group_4cMqbj"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_YtYt9j"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    },
+    "global_page_header_banner_rXTcmr": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_gwN7pW": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "fluid_layout",
+            "image_enable": true,
+            "first_image": "shopify:\/\/shop_images\/Shoe-Finder-Quiz-Banner-Image.png",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.2,
+            "blend_mode": "none",
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_D4LaDj": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-auto",
+                "width_md": "col-md-auto",
+                "width_sm": "col-auto",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-center",
+                "justify_content_mb": "justify-content-center",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-3",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-3",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_pnxgwy": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 320,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-center",
+                    "align_items_mb": "align-items-center",
+                    "justify_content": "justify-content-md-center",
+                    "justify_content_mb": "justify-content-center",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-4",
+                    "padding_left_desktop": "ps-md-10",
+                    "padding_right_desktop": "pe-md-10",
+                    "padding_top_mobile": "pt-2",
+                    "padding_bottom_mobile": "pb-2",
+                    "padding_left_mobile": "ps-10",
+                    "padding_right_mobile": "pe-10",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_JaPbxp": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<p>Find your new favorite xero shoes<\/p>",
+                        "text_size": "h4",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "fw-medium",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "buttons_i3NPtk": {
+                      "type": "buttons",
+                      "name": "Button",
+                      "settings": {
+                        "link": "https:\/\/shopxeroshoes.myshopify.com\/pages\/shoe-finder",
+                        "custom_video_play_button": false,
+                        "icon": "none",
+                        "label": "Take the Quiz",
+                        "style_class": "btn-primary",
+                        "size_class": "",
+                        "text_style": "",
+                        "open_in_new_tab": false,
+                        "hide_desktop": false,
+                        "hide_mobile": false,
+                        "full_width": false,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_JaPbxp",
+                    "buttons_i3NPtk"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_pnxgwy"
+              ]
+            }
+          },
+          "block_order": [
+            "group_D4LaDj"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_gwN7pW"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_nez6hz",
+    "main",
+    "global_page_header_banner_rXTcmr"
+  ]
+}

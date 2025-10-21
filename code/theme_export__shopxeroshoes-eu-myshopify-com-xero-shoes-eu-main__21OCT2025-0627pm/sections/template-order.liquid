@@ -1,0 +1,330 @@
+
+{%- render 'account-header' -%}
+{% capture spacing_class_list %}
+    {{ section.settings.section_top_spacing }} {{ section.settings.section_top_spacing_ipad }} {{ section.settings.section_top_spacing_mobile }} {{ section.settings.section_bottom_spacing }} {{ section.settings.section_bottom_spacing_ipad }} {{ section.settings.section_bottom_spacing_mobile }}
+{% endcapture %}
+<div data-template="account" data-section-id="{{ section.id }}"  class="{{ spacing_class_list }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="d-flex mb-5">
+                    <a href="{{ routes.account_url }}" class="btn-link btn-link-dark">
+                        <svg aria-hidden="true" focusable="false" style="width:12px;height:12px;"><use href="#icon-arrow-left"></use></svg> {{ 'customer.account.return' | t -}}
+                    </a>
+                </div>
+                <div class="d-flex flex-wrap mb-5 mb-md-6 mb-lg-9">
+                    <h4 class="text-capitalize mb-4">{{ 'customer.order.title' | t: name: order.name }}</h4>
+                    <ul class="list-unstyled w-100 d-sm-flex gap-6 mb-0">
+                        <li>
+                            {{ 'customer.order.date_html' | t: date: order.created_at | date: '%B %d, %Y %I:%M%p' }}
+                        </li>
+                        <li>
+                            <strong>{{ 'customer.order.fulfillment_status' | t }}: </strong>{{ order.fulfillment_status_label }}
+                        </li>
+                        <li>
+                            <strong>{{ 'customer.order.payment_status' | t }}: </strong>{{ order.financial_status_label }}
+                        </li>
+                    </ul>
+                </div>
+
+                {%- if order.cancelled -%}
+                    <div class="row mb-5">
+                        <div class="col text-center">
+                            <div class="alert alert-danger alert-danger-bg rounded">
+                                {% assign cancelled_at = order.cancelled_at | date: '%B %d, %Y %I:%M%p' %}
+                                <h5>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</h5>
+                                <p class="my-0">{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {%- endif -%}
+
+                <div class="row">
+                    <div class="col-lg-3 order-lg-2 ps-lg-5 ps-xl-9">
+                        <div class="row">
+                            {% if order.note != blank %}
+                                <div class="col-lg-12 col-md-6 col-12 billing-address pb-4">
+                                    <div class="text-uppercase fw-bold mb-2">{{ 'customer.order.order_note' | t }}</div>
+                                    <p class="mb-0">{{ order.note }}</p>
+                                </div>
+                            {% endif %}
+                            <div class="col-lg-12 col-md-6 col-12 billing-address pb-4">
+                                <div class="text-uppercase fw-bold mb-2">{{ 'customer.order.billing_address' | t }}</div>
+                                <p class="mb-0">{{ order.billing_address | format_address }}</p>
+                            </div>
+                            <div class="col-lg-12 col-md-6 col-12 shipping-address pb-4">
+                                <div class="text-uppercase fw-bold mb-2">{{ 'customer.order.shipping_address' | t }}</div>
+                                <p class="mb-0">{{ order.shipping_address | format_address }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 order-lg-1">
+                        <div class="order-table">
+                            <div class="pb-3 mb-0 text-uppercase fw-bold fs-lg border-bottom border-black">
+                                <div class="row">
+                                    <div class="col-md-6 col-4">{{ 'customer.order.product' | t }}</div>
+                                    <div class="col-2 d-md-block d-none">{{ 'customer.order.price' | t }}</div>
+                                    <div class="col-md-2 col-4 d-md-block text-center">{{ 'customer.order.quantity' | t }}</div>
+                                    <div class="col-md-2 col-4 text-end">{{ 'customer.order.total' | t }}</div>
+                                </div>
+                            </div>
+
+                            {%- for line_item in order.line_items -%}
+                                <div class="py-4 border-bottom border-gray-200">
+                                    <div class="row" id="{{ line_item.id }}">
+                                        <div class="col-md-6 col-12 mb-md-0 mb-4">
+                                        <div class="d-flex" style="min-width: 270px">
+                                            <div class="pe-3">
+                                            <img
+                                                src="{{ line_item.image | image_url: width: 75 }}"
+                                                alt="{{ line_item.title | escape }}"
+                                                loading="lazy"
+                                                class="mr-3"
+                                                width="150"
+                                                height="150"
+                                            >
+                                            </div>
+                                            <div>
+                                            {{ line_item.title | link_to: line_item.product.url }}
+                                            {%- if line_item.sku != '' -%}
+                                                <p class="small">{{ 'customer.order.sku' | t }}: {{ line_item.sku }}</p>
+                                            {%- endif -%}
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-2 col-4">{{ line_item.price | money }}</div>
+                                        <div class="col-md-2 col-4 text-center">{{ line_item.quantity }}</div>
+                                        <div class="col-md-2 col-4 text-end">{{ line_item.quantity | times: line_item.price | money }}</div>
+                                    </div>
+                                </div>
+                            {%- endfor -%}
+
+                            <div class="col-xl-5 col-lg-6 col-md-7 col-sm-10 ms-auto pt-3 pb-3">
+                                <div class="row no-gutter mt-3">
+                                    <div class="col-8 text-start">
+                                        {{ 'customer.order.subtotal' | t }}
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        {{ order.line_items_subtotal_price | money }}
+                                    </div>
+                                </div>
+                                {%- for discount in order.discount_applications -%}
+                                    <div class="row no-gutter order_summary discount mt-3">
+                                        <div class="col-8 text-start">{{ discount.title }}({{ 'customer.order.discount' | t }})</div>
+                                        <div class="col-4 text-end">{{ discount.total_allocated_amount | money }}</div>
+                                    </div>
+                                {%- endfor -%}
+                                {%- for shipping_method in order.shipping_methods -%}
+                                    <div class="row no-gutter mt-3">
+                                        <div class="col-8 text-start">{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</div>
+                                        <div class="col-4 text-end">{{ shipping_method.price | money }}</div>
+                                    </div>
+                                {%- endfor -%}
+                                {%- for tax_line in order.tax_lines -%}
+                                    <div class="row no-gutter mt-3">
+                                        <div class="col-8 text-start">{{ 'customer.order.tax' | t }} ({{ tax_line.title }}{{ tax_line.rate | times: 100 }}%)</div>
+                                        <div class="col-4 text-end">{{ tax_line.price | money }}</div>
+                                    </div>
+                                {%- endfor -%}
+
+                                <div class="row no-gutter mt-5">
+                                    <div class="col-6 text-uppercase text-start fw-bold h5 mb-0 font-family-base">
+                                        {{ 'customer.order.total' | t }}
+                                    </div>
+                                    <div class="col-6 text-end fw-bold h5 mb-0 font-family-base">
+                                        {{ order.total_price | money }}
+                                        {{ order.currency }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "Order Page",
+        "class": "section-order",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "header",
+                "content": "t:spacing.section_spacing"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing",
+                "label": "t:spacing.desktop_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_ipad",
+                "label": "t:spacing.ipad_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_mobile",
+                "label": "t:spacing.mobile_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-mobile-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing",
+                "label": "t:spacing.desktop_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_ipad",
+                "label": "t:spacing.ipad_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_mobile",
+                "label": "t:spacing.mobile_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-mobile-sm"
+            }
+        ]
+    }
+{% endschema %}

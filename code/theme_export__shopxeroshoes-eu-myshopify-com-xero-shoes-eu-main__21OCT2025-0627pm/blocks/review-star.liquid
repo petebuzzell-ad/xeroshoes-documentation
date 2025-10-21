@@ -1,0 +1,61 @@
+<div class="d-flex align-items-center review-rating" style="gap: 2.5px;">
+    {%- for i in (1..5) -%}
+        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.60519 12.6854C3.17067 12.9558 2.9172 12.7755 3.03489 12.2886L4.01255 8.17728L0.817032 5.43637C0.436829 5.11179 0.527353 4.80524 1.03429 4.76917L5.22558 4.43557L6.84597 0.540595C7.02702 0.0717548 7.34386 0.0717548 7.53396 0.540595L9.1634 4.43557L13.3456 4.76917C13.8526 4.81425 13.9522 5.10277 13.5629 5.43637L10.3674 8.17728L11.345 12.2886C11.4627 12.7755 11.2183 12.9558 10.7747 12.6854L7.18997 10.4944L3.60519 12.6854Z" fill="{% if block.settings.star_num >= forloop.index %}{{ block.settings.active_star }}{% else %}{{ block.settings.dective_star }}{% endif %}"/>
+        </svg>
+    {%- endfor -%}
+</div>
+
+<style>
+    .review-rating svg{
+        width:{{ block.settings.star_size }}px;
+        height:{{ block.settings.star_size }}px;
+    }
+</style>
+
+
+
+
+{% schema %}
+    {
+        "name": "Review Star",
+        "tag": null,
+        "settings": [
+            {
+                "type": "range",
+                "id": "star_num",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "default": 5,
+                "label": "Reviewer rating"
+            },
+            {
+                "type": "color",
+                "id":"active_star",
+                "label": "Active Star Color",
+                "default": "#1D293D"
+            },
+            {
+                "type": "color",
+                "id":"dective_star",
+                "label": " Dective Star Color",
+                "default": "#0F172B"
+            },
+            {
+                "type": "range",
+                "id": "star_size",
+                "min": 10,
+                "max": 50,
+                "step": 1,
+                "default": 20,
+                "label": "Icon Size"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Review Star"
+            }
+        ]
+    }
+{% endschema %}

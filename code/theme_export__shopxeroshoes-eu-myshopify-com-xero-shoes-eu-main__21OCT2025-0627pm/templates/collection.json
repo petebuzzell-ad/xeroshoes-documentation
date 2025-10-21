@@ -1,0 +1,897 @@
+{
+  "wrapper": "section",
+  "sections": {
+    "custom_section_JACQMY": {
+      "type": "custom-section",
+      "blocks": {
+        "group_cUbFxM": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-9",
+            "padding_bottom_desktop": "pb-md-6",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-5",
+            "padding_bottom_mobile": "pb-5",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "breadcrumbs_at3ffU": {
+              "type": "breadcrumbs",
+              "name": "Breadcrumbs",
+              "settings": {
+                "font_size": 12,
+                "font_size_mb": 12,
+                "breadcrumbs_divider": "slash",
+                "breadcrumbs_position": "static-position",
+                "font_weight": 400,
+                "color": "#0f172b",
+                "color_active": "#0f172b",
+                "font_weight_active": 400,
+                "mb-desktop": "mb-md-0",
+                "mb-mobile": "mb-0",
+                "mt-desktop": "mt-md-0",
+                "mt-mobile": "mt-0"
+              },
+              "blocks": {}
+            },
+            "heading_HE9xWW": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h1>{{ collection.metafields.collection.marketing_h1.value }}<\/h1>",
+                "text_fallback": "<h1>{{ closest.collection.title }}<\/h1>",
+                "text_size": "h1",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#0f172b",
+                "margin_top_desktop": "mt-md-2",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-2",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_QPY8LK": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "{{ closest.collection.description }}",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-2",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-2",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": "collection-text"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "breadcrumbs_at3ffU",
+            "heading_HE9xWW",
+            "text_QPY8LK"
+          ]
+        }
+      },
+      "block_order": [
+        "group_cUbFxM"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "collection_all_list_K3Q6pg": {
+      "type": "collection-all-list",
+      "name": "Collection All List",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-row",
+        "direction_mobile": "flex-row",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-2",
+        "gap_row": "row-gap-md-2",
+        "gap_column_mobile": "column-gap-2",
+        "gap_row_mobile": "row-gap-2",
+        "section_bg_color": "",
+        "list_collection": []
+      }
+    },
+    "template-collection": {
+      "type": "template-collection",
+      "blocks": {
+        "collection-promo-card": {
+          "type": "promotional-card",
+          "static": true,
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Join_the_Xero_Circle.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Join_the_Xero_Circle_Mobile.jpg",
+            "content_position": "above-image",
+            "width": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "linear-gradient(0deg, rgba(0, 0, 0, 0.6) 1.52%, rgba(0, 0, 0, 0) 100%)",
+            "overlay_opacity": 1,
+            "blend_mode": "none"
+          },
+          "blocks": {
+            "heading_69tpiM": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Join the Xero Circle<\/h2>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h4",
+                "font_family": "font-family-heading",
+                "text_style": "text-math-auto",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#ffffff",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_nH8WaD": {
+              "type": "text",
+              "settings": {
+                "text": "<p>We promise to only send you great Xero Shoes deals, information, inspiration, and FUN!<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-sm",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "text-math-auto",
+                "alignment": "center",
+                "alignment_mobile": "text-start",
+                "color": "#ffffff",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "group_xNxRzW": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-stretch",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "buttons_3REhTV": {
+                  "type": "buttons",
+                  "settings": {
+                    "link": "shopify:\/\/pages\/xerocircle",
+                    "custom_video_play_button": false,
+                    "icon": "none",
+                    "label": "Subscribe",
+                    "style_class": "btn-secondary",
+                    "size_class": "btn-sm",
+                    "text_style": "",
+                    "open_in_new_tab": false,
+                    "hide_desktop": false,
+                    "hide_mobile": false,
+                    "full_width": false,
+                    "download_link": false,
+                    "download_all_logos_in_the_section": false,
+                    "hidden_text_for_seo": "Hidden Text",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "buttons_3REhTV"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_69tpiM",
+            "text_nH8WaD",
+            "group_xNxRzW"
+          ]
+        },
+        "collection-promo-card2": {
+          "type": "promotional-bar",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "promo-card-image": {
+              "type": "image",
+              "static": true,
+              "settings": {
+                "image": "shopify:\/\/shop_images\/Find_the_Shoe_That_Moves_Like_You_Do..png",
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "custom_image_width": false,
+                "custom_image_width_value": 160,
+                "object_fit": "contain",
+                "aspect_ratio": "",
+                "enable_link": false,
+                "enable_preload": false,
+                "url": "shopify:\/\/products\/bo-ivy-black",
+                "enable_overlay": false,
+                "overlay_bg_color": "#000000",
+                "overlay_opacity": 0.3,
+                "blend_mode": "darken",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "promo-card-heading": {
+              "type": "heading",
+              "static": true,
+              "settings": {
+                "text": "<h2>Find the Shoe That Moves Like You Do.<\/h2>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h3",
+                "font_family": "font-family-heading",
+                "text_style": "text-math-auto",
+                "font_weight": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-start",
+                "color": "#0f172b",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "button-bar": {
+              "type": "buttons",
+              "static": true,
+              "settings": {
+                "link": "shopify:\/\/pages\/shoe-finder",
+                "custom_video_play_button": false,
+                "icon": "none",
+                "label": "Take the Quiz",
+                "style_class": "btn-secondary",
+                "size_class": "",
+                "text_style": "",
+                "open_in_new_tab": false,
+                "hide_desktop": false,
+                "hide_mobile": false,
+                "full_width": true,
+                "download_link": false,
+                "download_all_logos_in_the_section": false,
+                "hidden_text_for_seo": "Hidden Text",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "promo-button-background": {
+              "type": "image",
+              "static": true,
+              "settings": {
+                "image": "shopify:\/\/shop_images\/promo-button-background.png",
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "custom_image_width": false,
+                "custom_image_width_value": 160,
+                "object_fit": "cover",
+                "aspect_ratio": "",
+                "enable_link": false,
+                "enable_preload": false,
+                "url": "",
+                "enable_overlay": false,
+                "overlay_bg_color": "#0000000",
+                "overlay_opacity": 0.1,
+                "blend_mode": "multiply",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        },
+        "collection-promo-card3": {
+          "type": "promotional-card",
+          "static": true,
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Shop_Hiking_Trail.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Shop_Hiking_Trail_Mobile.jpg",
+            "content_position": "above-image",
+            "width": "grid-span-2",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "blend_mode": "none"
+          },
+          "blocks": {
+            "group_6UNhhb": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-end",
+                "align_items_mb": "align-items-end",
+                "justify_content": "justify-content-md-end",
+                "justify_content_mb": "justify-content-end",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "buttons_iqNaeP": {
+                  "type": "buttons",
+                  "settings": {
+                    "link": "shopify:\/\/collections\/hiking-trail-womens",
+                    "custom_video_play_button": false,
+                    "icon": "none",
+                    "label": "Shop Hiking \/ Trail",
+                    "style_class": "btn-secondary",
+                    "size_class": "btn-sm",
+                    "text_style": "",
+                    "open_in_new_tab": false,
+                    "hide_desktop": false,
+                    "hide_mobile": false,
+                    "full_width": false,
+                    "download_link": false,
+                    "download_all_logos_in_the_section": false,
+                    "hidden_text_for_seo": "Hidden Text",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "buttons_iqNaeP"
+              ]
+            }
+          },
+          "block_order": [
+            "group_6UNhhb"
+          ]
+        },
+        "collection-promo-card4": {
+          "type": "promotional-card",
+          "static": true,
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/I_LOVE_these_shoes_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/I_LOVE_these_shoes_MObile.jpg",
+            "content_position": "above-image",
+            "width": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#00000059",
+            "overlay_opacity": 1,
+            "blend_mode": "none"
+          },
+          "blocks": {
+            "text_9imtqT": {
+              "type": "text",
+              "settings": {
+                "text": "<p>“I LOVE these shoes! They are really comfortable, easy to slip on and off and still look stylish! I can’t wear “regular” shoes anymore so am really happy to have found these.”<\/p>",
+                "font_family": "font-family-heading",
+                "text_size": "fs-xl",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "text-math-auto",
+                "alignment": "center",
+                "alignment_mobile": "text-start",
+                "color": "#ffffff",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-2",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_DL8TmF": {
+              "type": "text",
+              "settings": {
+                "text": "<p>– Theresa<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-xl",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "text-math-auto",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#ffffff",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-5",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "group_JtrAC6": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-stretch",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-1",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "buttons_LCtVQL": {
+                  "type": "buttons",
+                  "settings": {
+                    "link": "shopify:\/\/collections\/dillon-canvas-slip-on",
+                    "custom_video_play_button": false,
+                    "icon": "none",
+                    "label": "Shop Slip-ons",
+                    "style_class": "btn-secondary",
+                    "size_class": "btn-sm",
+                    "text_style": "",
+                    "open_in_new_tab": false,
+                    "hide_desktop": false,
+                    "hide_mobile": false,
+                    "full_width": false,
+                    "download_link": false,
+                    "download_all_logos_in_the_section": false,
+                    "hidden_text_for_seo": "Hidden Text",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "buttons_LCtVQL"
+              ]
+            }
+          },
+          "block_order": [
+            "text_9imtqT",
+            "text_DL8TmF",
+            "group_JtrAC6"
+          ]
+        },
+        "collection-product-card": {
+          "type": "product-card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0"
+          },
+          "blocks": {
+            "product_image_XFPJDW": {
+              "type": "product-image",
+              "settings": {
+                "width": 100,
+                "product": "{{ closest.product }}",
+                "show_secondary_media": false
+              },
+              "blocks": {}
+            },
+            "group_mpzDRA": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-2",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "product_star_rating_Uhj3qq": {
+                  "type": "product-star-rating",
+                  "name": "Product star rating",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_star_rating_Uhj3qq"
+              ]
+            },
+            "product_title_dz7J84": {
+              "type": "product-title",
+              "name": "t:names.product_information",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "title": "",
+                "font_size": "fs-xl",
+                "font_weight": "fw-medium",
+                "text_style": "text-math-auto",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "link_product_title": true,
+                "margin_top_desktop": "mt-md-1",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-1",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_price_rARQx9": {
+              "type": "product-price",
+              "name": "t:names.product_price",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "price_font_size": "fs-16-14",
+                "price_font_weight": "fw-normal",
+                "color": "#0f172b",
+                "sale_price_font_size": "fs-md",
+                "sale_price_font_weight": "fw-light",
+                "sale_color": "#646465",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_form_KDgAA6": {
+              "type": "product-form",
+              "name": "t:names.product_form",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "form_style": "product-card"
+              },
+              "blocks": {
+                "product_variant_picker_FeHaMF": {
+                  "type": "_product-variant-picker",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "variant_picker_type": "swatches",
+                    "show_variant_label": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "title": "Size Guide"
+                  },
+                  "blocks": {}
+                },
+                "buy_buttons_j7KY9i": {
+                  "type": "_buy-buttons",
+                  "name": "Product Buy Buttons",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "show_addtocart": true,
+                    "addtocart_full": true,
+                    "label": "",
+                    "btn_style": "btn-primary",
+                    "size_class": "",
+                    "show_quickview": false,
+                    "quickview_full": false,
+                    "quickview_label": "Quick Shop",
+                    "quickview_icon": "none",
+                    "quickview_btn_style": "btn-primary",
+                    "quickview_size_class": "",
+                    "show_dynamic_checkout": false,
+                    "show_gift_recipient_form": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_variant_picker_FeHaMF",
+                "buy_buttons_j7KY9i"
+              ]
+            }
+          },
+          "block_order": [
+            "product_image_XFPJDW",
+            "group_mpzDRA",
+            "product_title_dz7J84",
+            "product_price_rARQx9",
+            "product_form_KDgAA6"
+          ]
+        }
+      },
+      "settings": {
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "columns": 4,
+        "columns_gap": 0,
+        "rows_gap": 30,
+        "ipad_columns": 3,
+        "columns_gap_ipad": 16,
+        "rows_gap_ipad": 20,
+        "mobile_columns": 2,
+        "columns_gap_mobile": 16,
+        "rows_gap_mobile": 20,
+        "ratio": "square",
+        "button_style": false,
+        "button_position": "card_bottom",
+        "products_per_page": 28,
+        "enable_product_result": true,
+        "enable_sub_collections": false,
+        "sub_collections": [],
+        "enable_sorting": true,
+        "sorting_type": "separate_drawer",
+        "enable_filtering": true,
+        "filter_type": "topbar",
+        "enable_promo": true,
+        "block_index": "7",
+        "enable_promo2": true,
+        "block_index2": "11",
+        "enable_promo3": true,
+        "block_index3": "15",
+        "enable_promo4": true,
+        "block_index4": "24",
+        "btn_text": "Shop All",
+        "btn_link": "shopify:\/\/collections"
+      }
+    },
+    "template_faq_38jhcV": {
+      "type": "template-faq",
+      "blocks": {
+        "faq_item_ExPkbY": {
+          "type": "faq_item",
+          "repeater": "{{ collection.metafields.collection.collection_bottom_description.value }}",
+          "settings": {
+            "heading": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answer | metafield_tag }}",
+            "answer_html": ""
+          }
+        },
+        "faq_item_3DbEUh": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "heading": "Women’s Barefoot Footwear for Every Activity & Lifestyle",
+            "answer": "<p>How do barefoot shoes differ from standard footwear?<\/p><p>Barefoot-style shoes (also referred to as “minimalist shoes”) have a thin, flexible sole that allows you to feel the ground beneath while providing your just the right amount of protection.<\/p><h3>The Benefits You’ve Been Missing With “Normal” Shoes<\/h3><p>The features of women’s barefoot shoes help your feet – and body – do what they’re made to do naturally, in a way that “normal” shoes don’t.<\/p><p><strong>Natural comfort.<\/strong> Barefoot shoes have wider, foot-shaped toe boxes. Instead of squeezing your toes like “normal” shoes with pointy toe boxes do, barefoot shoes allow your toes to spread and splay naturally.<\/p><p><strong>Proper posture.<\/strong> Normal shoes with raised heels for your body into an unnatural posture, tipping you slightly forward, and putting strain on your ankles, knees, hips, and back. Barefoot-style shoes have a flat, “zero drop” design that positions your feet level with the ground, allowing for natural posture.<\/p><p><strong>Balance.<\/strong> Barefoot shoes are low to the ground, which is good for balance. The wider, foot-shaped toe box allows you to use your toes, which also helps with balance. With no elevated heel or unnecessary padding, barefoot shoes make it easier for your feet to contact the ground, getting the feedback you need to adjust and shift effortlessly as you walk and move.<\/p><p><strong>Foot strength.<\/strong> If you want to make any part of your body weak, you keep it from moving. To get stronger, you move (think about having your arm in a cast versus doing bicep curls). The stiffness of regular shoes is like wearing a cast — it restricts movement. Barefoot shoes have thin, flexible soles that let your feet move naturally and build strength.<\/p><p><strong>Lightweight.<\/strong> Barefoot shoes are a lightweight option for women, so you expend less energy than when wearing heavier “normal” shoes. They are so light, it feels like you’re not wearing anything – yet, they have a strong layer of protection. And with less weight, they’re perfect for travel.<\/p><p><strong>Agility and Mobility.<\/strong> Your soles have more nerve endings than anywhere but your fingertips and lips – and there’s a reason for this: it’s so your brain can tell what you’re stepping on or stepping in, and then control your body to handle the terrain. Barefoot shoe soles that give you the traction and protection you want, but also let the nerves in your feet safely FEEL the world beneath you, help you move more efficiently, effectively, and enjoyably.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_mpBUD9": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "heading": "How to Safely Transition to Women’s Barefoot Shoes",
+            "answer": "<p>How do barefoot shoes differ from standard footwear?<\/p><p>Barefoot-style shoes (also referred to as “minimalist shoes”) have a thin, flexible sole that allows you to feel the ground beneath while providing your just the right amount of protection.<\/p><h3>The Benefits You’ve Been Missing With “Normal” Shoes<\/h3><p>The features of women’s barefoot shoes help your feet – and body – do what they’re made to do naturally, in a way that “normal” shoes don’t.<\/p><p><strong>Natural comfort.<\/strong> Barefoot shoes have wider, foot-shaped toe boxes. Instead of squeezing your toes like “normal” shoes with pointy toe boxes do, barefoot shoes allow your toes to spread and splay naturally.<\/p><p><strong>Proper posture.<\/strong> Normal shoes with raised heels for your body into an unnatural posture, tipping you slightly forward, and putting strain on your ankles, knees, hips, and back. Barefoot-style shoes have a flat, “zero drop” design that positions your feet level with the ground, allowing for natural posture.<\/p><p><strong>Balance.<\/strong> Barefoot shoes are low to the ground, which is good for balance. The wider, foot-shaped toe box allows you to use your toes, which also helps with balance. With no elevated heel or unnecessary padding, barefoot shoes make it easier for your feet to contact the ground, getting the feedback you need to adjust and shift effortlessly as you walk and move.<\/p><p><strong>Foot strength.<\/strong> If you want to make any part of your body weak, you keep it from moving. To get stronger, you move (think about having your arm in a cast versus doing bicep curls). The stiffness of regular shoes is like wearing a cast — it restricts movement. Barefoot shoes have thin, flexible soles that let your feet move naturally and build strength.<\/p><p><strong>Lightweight.<\/strong> Barefoot shoes are a lightweight option for women, so you expend less energy than when wearing heavier “normal” shoes. They are so light, it feels like you’re not wearing anything – yet, they have a strong layer of protection. And with less weight, they’re perfect for travel.<\/p><p><strong>Agility and Mobility.<\/strong> Your soles have more nerve endings than anywhere but your fingertips and lips – and there’s a reason for this: it’s so your brain can tell what you’re stepping on or stepping in, and then control your body to handle the terrain. Barefoot shoe soles that give you the traction and protection you want, but also let the nerves in your feet safely FEEL the world beneath you, help you move more efficiently, effectively, and enjoyably.<\/p>",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_ExPkbY",
+        "faq_item_3DbEUh",
+        "faq_item_mpBUD9"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#0f172b",
+        "text_alignment": "text-left",
+        "heading": "",
+        "txt": "",
+        "border_hide": false,
+        "width_auto": false
+      }
+    }
+  },
+  "order": [
+    "custom_section_JACQMY",
+    "collection_all_list_K3Q6pg",
+    "template-collection",
+    "template_faq_38jhcV"
+  ]
+}

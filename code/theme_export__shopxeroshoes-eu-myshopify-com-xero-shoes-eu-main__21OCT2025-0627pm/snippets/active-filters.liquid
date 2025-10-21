@@ -1,0 +1,37 @@
+<div data-activeFilters class="{{ class_list }}">
+    {% assign active_entries = object.filters | map: 'active_values' | compact %}
+    
+    {%- for value in active_entries -%}
+        {%-  assign filter_label = value.param_name | split: '.' | last | handle -%}
+        <a class="filter-option-clear bg-sand-200" href="{{ value.url_to_remove }}">
+            {% if filter_label == 'size' %}{{ filter_label }}{% endif %} {{ value.label | escape }}
+            <svg aria-hidden="true" focusable="false" style="width:11px;height:11px;margin-left: 8px;"><use href="#icon-close-dark"></use></svg>
+        </a>
+    {%- endfor -%}
+
+    {%- if price_filter and max_value != blank or min_value != blank -%}
+        <a class="filter-option-clear bg-sand-200" href="{{ price_filter.url_to_remove }}">
+            {%- if price_filter.min_value.value -%}
+                {{ price_filter.min_value.value | money }}
+            {%- else -%}
+                {{ 0 | money }}
+            {%- endif -%} - 
+            {%- if price_filter.max_value.value -%}
+                {{ price_filter.max_value.value | money }}
+            {%- else -%}
+                {{ price_filter.range_max | money }}
+            {%- endif -%}
+            
+        </a>
+    {%- endif -%}
+
+    {%- if active_entries.size > 0 or max_value !=blank and max_value != 0 and max_value != filter.range_max -%}
+        {%- capture reset_url -%}
+            {{ object.url }}{%- if template.name == 'search' -%}?type=product&q={{ search.terms }}{%- endif -%}
+            {%- if object.sort_by != blank -%}{%- if template.name == 'search' -%}&{%- else -%}?{%- endif -%}sort_by={{ object.sort_by }}&type=product{%- endif -%}
+        {%-  endcapture -%}
+        <a href="{{- reset_url -}}" data-reset-filters class="filter-option-clear fs-md my-auto lh-1 px-0 py-0">
+            {{ 'general.filters.clear_all_2' | t }}
+        </a>
+    {%- endif -%}
+</div>

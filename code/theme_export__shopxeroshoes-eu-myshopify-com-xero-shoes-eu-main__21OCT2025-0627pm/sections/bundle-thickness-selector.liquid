@@ -1,0 +1,192 @@
+{% comment %} Bundle Thickness Selector {% endcomment %}
+{% assign bundle_4mm_handle = 'diy-feeltrue-sandal-kit' %}
+{% assign bundle_6mm_handle = 'diy-feeltrue-sandal-kit-bundle-6mm' %}
+
+{% if product.handle == bundle_4mm_handle or product.handle == bundle_6mm_handle %}
+  
+  <div class="bundle-thickness-selector" style="margin: {{ section.settings.margin_top }}px 0 {{ section.settings.margin_bottom }}px 0;">
+    {% if section.settings.show_selector %}
+      <p class="thickness-selector-title">{{ section.settings.selector_title }}</p>
+      
+      <div class="thickness-buttons">
+        <a href="/products/{{ bundle_4mm_handle }}" 
+           class="thickness-btn {% if product.handle == bundle_4mm_handle %}active{% endif %}">
+          <span class="thickness-size">4mm</span>
+          <span class="thickness-type">Connect</span>
+        </a>
+        
+        <a href="/products/{{ bundle_6mm_handle }}" 
+           class="thickness-btn {% if product.handle == bundle_6mm_handle %}active{% endif %}">
+          <span class="thickness-size">6mm</span>
+          <span class="thickness-type">Connect</span>
+        </a>
+      </div>
+    {% endif %}
+    
+    {% comment %} Additional Custom Liquid Code {% endcomment %}
+    {% if section.settings.custom_liquid != blank %}
+      <div class="custom-liquid-content">
+        {{ section.settings.custom_liquid }}
+      </div>
+    {% endif %}
+  </div>
+
+  <style>
+    .bundle-thickness-selector {
+      margin: 20px 0;
+    }
+    
+    .thickness-selector-title {
+      font-size: 14px;
+      color: var(--pe-body-color, #1a1a1a);
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+    
+    .thickness-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .thickness-btn {
+      min-width: 68px;
+      min-height: 39px;
+      padding: 2px 5px;
+      background: #ffffff;
+      border: 1px solid var(--pe-color-gray-200, #d4d4d4);
+      border-radius: 3px;
+      text-decoration: none;
+      color: var(--pe-body-color, #1a1a1a);
+      font-size: 17px;
+      font-weight: 400;
+      font-family: var(--pe-font-family-heading, inherit);
+      transition: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      cursor: pointer;
+      text-align: center;
+    }
+    
+    .thickness-btn:hover:not(.active) {
+      background-color: var(--pe-color-secondary-200, #fafafa);
+      color: var(--pe-body-color, #1a1a1a);
+      border-color: var(--pe-body-color, #1a1a1a);
+    }
+    
+    .thickness-btn.active {
+      background-color: var(--pe-color-secondary-200, #333);
+      color: var(--pe-body-color, #1a1a1a);
+      border-color: var(--pe-body-color, #1a1a1a);
+      cursor: default;
+      pointer-events: none;
+    }
+    
+    .thickness-size {
+      display: block;
+      font-size: 17px;
+      line-height: 1.1;
+    }
+    
+    .thickness-type {
+      display: block;
+      font-size: 12px;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+    
+    @media (min-width: 992px) {
+      .thickness-btn {
+        min-width: 43px;
+        min-height: 39px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .thickness-buttons {
+        gap: 6px;
+      }
+    }
+    
+    /* Custom Liquid Content Styling */
+    .custom-liquid-content {
+      margin-top: 15px;
+    }
+  </style>
+
+  {% comment %} Additional Custom CSS from settings {% endcomment %}
+  {% if section.settings.custom_css != blank %}
+    <style>
+      {{ section.settings.custom_css }}
+    </style>
+  {% endif %}
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Bundle Thickness Selector",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Bundle Selector Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_selector",
+      "label": "Show thickness selector",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "selector_title",
+      "label": "Selector title",
+      "default": "Choose Sole Thickness:"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Custom Code"
+    },
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "Additional Liquid code",
+      "info": "Add any additional Liquid code here. This will appear below the thickness selector."
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Additional CSS",
+      "info": "Add any additional CSS styles here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Thickness Selector"
+    }
+  ]
+}
+{% endschema %}

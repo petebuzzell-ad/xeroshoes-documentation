@@ -1,0 +1,50 @@
+{% liquid
+  assign product = block.settings.product
+  assign block_title = 'products.product.share' | t
+%}
+
+<div class="d-flex align-items-center mt-5">
+    <p class="me-2 mb-0">{{ block.settings.text | default: block_title }}</p>
+    {% render 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_image %}
+</div>
+
+{% schema %}
+{
+  "name": "Social Sharing",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. [Learn more](https://help.shopify.com/manual/online-store/images/showing-social-media-thumbnail-images)."
+    },
+    {
+      "type": "paragraph",
+      "content": "A store title and description are included with the preview image. [Learn more](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "Share: "
+    },
+    {
+        "type": "text_alignment",
+        "id": "alignment",
+        "label": "Text alignment",
+        "default": "left"
+    }
+  ],
+  "presets": [
+    { "name": "Social Sharing",
+      "settings": {
+        "product": "{{ closest.product }}"
+      } 
+    }
+  ]
+}
+{% endschema %}

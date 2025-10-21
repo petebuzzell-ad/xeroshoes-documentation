@@ -1,0 +1,21 @@
+.page_header_banner{
+    overflow: hidden;
+}
+.page_header_banner .container-small>.group-block + .image-block {
+    width: 100vw;
+    bottom: 0;
+    z-index: 1;
+    height: 100px;
+    /* filter: invert(1); */
+    left: 50%;
+    transform: rotate(180deg) translateX(50%);
+    position: absolute !important;
+}
+.page_header_banner .object-fit-cover img,.page_header_banner .object-fit-contain img {
+object-fit: initial;
+}
+@media (max-width:767px) {
+    .page_header_banner .container-small>.group-block + .image-block{
+        height: 60px;
+    }
+}

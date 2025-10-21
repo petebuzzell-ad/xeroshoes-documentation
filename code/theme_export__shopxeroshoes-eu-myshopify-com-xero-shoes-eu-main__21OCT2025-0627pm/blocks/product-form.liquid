@@ -1,0 +1,52 @@
+{% liquid
+  assign product = block.settings.product
+%}
+<div class="w-100 flex-1 d-flex product-form-wrapper" {{ block.shopify_attributes }} >
+    <product-form class="product-form d-flex w-100 flex-column flex-1 {% if section.settings.button_style %} button_show_hover {{ section.settings.button_position }} {% endif %}" data-format="{{ block.settings.form_style }}">
+        {% content_for "blocks", closest.product: product %} 
+    </product-form>
+</div>
+
+  {% schema %}
+    {
+        "name": "Product Form",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }, { "type": "_product-variant-picker" }, { "type": "_buy-buttons" },  { "type": "_product-quantity-select" }],
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
+                "type": "select",
+                "id": "form_style",
+                "label": "Style",
+                "options": [
+                    {
+                        "value": "product-page",
+                        "label": "Product Page"
+                    },
+                    {
+                        "value": "quickview",
+                        "label": "Quickview"
+                    },
+                    {
+                        "value": "product-card",
+                        "label": "Product Card"
+                    }
+                ],
+                "default": "product-card"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product form",
+                "settings": {
+                    "product": "{{ closest.product }}"
+                }
+            }
+        ]
+    }
+  {% endschema %}
+  

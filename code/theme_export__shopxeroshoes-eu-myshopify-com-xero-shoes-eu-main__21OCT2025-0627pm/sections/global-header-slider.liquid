@@ -1,0 +1,338 @@
+{{ 'global-header-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="position-relative header-slider-wrapper">
+    {%- if section.settings.nav_dots -%}
+        <div class="swiper-pagination position-absolute swiper-pagination-{{ section.id }} {{ section.settings.pagination_visible }} {{ section.settings.pagination_color }}"></div>
+    {%- endif -%}
+    <div class="swiper-wrapper__custom hover-arrows">     
+        {%- if section.settings.nav_arrows -%}
+            <div class="custom-swiper-navigation {{ section.settings.nav_arrows_color }} {{ section.settings.nav_arrows_outside }} {{ section.settings.nav_arrows_visible }} {{ section.settings.nav_arrows_size }}">
+                <button class="swiper-button-prev button-prev-{{ section.id }}"><svg aria-hidden="true" focusable="false"><use href="#icon-swiper-arrow-left"></use></svg></button>
+                <button class="swiper-button-next button-next-{{ section.id }}"><svg aria-hidden="true" focusable="false"><use href="#icon-swiper-arrow-right"></use></svg></button>
+            </div>
+        {%- endif -%} 
+        
+        <swiper-container class="header-slider {{ section.settings.height }} {% if section.settings.ratio_height %} ratio__height {% endif %} {% if section.settings. content_below %} content_below {% endif %}"
+            slides-per-view="1"
+            {%- if section.settings.nav_dots -%}
+                pagination='{
+                    "el": ".swiper-pagination-{{ section.id }}",
+                    "clickable": true,
+                    "type": "bullets"
+                }'
+            {%- endif -%}
+            {%- if section.settings.nav_arrows -%}
+                navigation='{
+                    "nextEl": ".button-next-{{ section.id }}",
+                    "prevEl": ".button-prev-{{ section.id }}"
+                }'
+            {%- endif -%} >
+
+            {% content_for 'blocks' %}
+        </swiper-container>
+    </div>
+</div>        
+
+{% schema %}
+{
+    "name": "Slideshow",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "blocks": [{ "type": "_slide" }, { "type": "_slide_video" }],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Slider Layout"
+        },
+        {
+            "type": "select",
+            "id": "height",
+            "label": "Slider Height",
+            "options": [
+                {
+                    "value": "adapt",
+                    "label": "Adapt"
+                },
+                {
+                    "value": "shortheight",
+                    "label": "Short"
+                },
+                {
+                    "value": "mediumheight",
+                    "label": "medium"
+                },
+                {
+                    "value": "tallheight",
+                    "label": "Tall"
+                },
+                {
+                    "value": "fullheight",
+                    "label": "Full Height"
+                }
+            ],
+            "default": "mediumheight"
+        },
+        {
+            "type": "checkbox",
+            "id": "ratio_height",
+            "label": "Height adjusts to screen width.",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "content_below",
+            "label": "Content below image in Mobile",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Slider Control"
+        },
+        {
+            "type": "checkbox", 
+            "id": "nav_arrows",
+            "label": "t:slider.navigation_arrows",
+            "default": true
+        },
+        {
+            "type": "select", 
+            "id": "nav_arrows_visible",
+            "label": "t:slider.navigation_arrows_visible",
+            "visible_if": "{{ section.settings.nav_arrows == true }}",
+            "options": [
+                {
+                    "value": "show_only_desktop",
+                    "label": "t:slider.hide_desktop"
+                },
+                {
+                    "value": "show_only_mobile",
+                    "label": "t:slider.hide_mobile"
+                },
+                {
+                    "value": "both",
+                    "label": "t:slider.both"
+                }
+            ],
+            "default": "both"
+        },
+        {
+            "type": "select",
+            "id": "nav_arrows_color",
+            "label": "Arrow Color",
+            "visible_if": "{{ section.settings.nav_arrows == true }}",
+            "options": [
+                {
+                    "value": "light-arrow",
+                    "label": "Light"
+                },
+                {
+                    "value": "",
+                    "label": "Dark"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "type": "select",
+            "id": "nav_arrows_size",
+            "label": "t:slider.navigation_arrows_size",
+            "visible_if": "{{ section.settings.nav_arrows == true }}",
+            "options": [
+                {
+                    "value": "arrow-small",
+                    "label": "t:slider.size_small"
+                },
+                {
+                    "value": "",
+                    "label": "t:slider.size_default"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "type": "checkbox",
+            "id": "nav_dots",
+            "label": "t:slider.pagination",
+            "default": false
+        },
+        {
+            "type": "select", 
+            "id": "pagination_visible",
+            "label": "t:slider.pagination_visible",
+            "visible_if": "{{ section.settings.nav_dots == true  }}",
+            "options": [
+                {
+                    "value": "show_only_desktop",
+                    "label": "t:slider.hide_desktop"
+                },
+                {
+                    "value": "show_only_mobile",
+                    "label": "t:slider.hide_mobile"
+                },
+                {
+                    "value": "both",
+                    "label": "t:slider.both"
+                }
+            ],
+            "default": "both"
+        },
+        {
+            "type": "select",
+            "id": "pagination_color",
+            "label": "t:slider.pagination_color",
+            "visible_if": "{{ section.settings.nav_dots == true  }}",
+            "options": [
+                {
+                    "value": "pagination-light",
+                    "label": "t:slider.light"
+                },
+                {
+                    "value": "",
+                    "label": "t:slider.dark"
+                }
+            ],
+            "default": ""
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:names.slideshow",
+            "category": "t:categories.content",
+            "blocks": {
+                "slide": {
+                    "type": "_slide",
+                    "settings": {
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-center",
+                        "overlay_on_mobile": false
+                    },
+                    "blocks": {
+                        "group":{
+                            "type": "group",
+                            "settings": {
+                                "width": "col-lg-5",
+                                "width_md": "col-md-6",
+                                "width_sm": "col-12",
+                                "align_items": "align-items-md-start",
+                                "align_items_mb": "align-items-center",
+                                "justify_content": "justify-content-md-start",
+                                "justify_content_mb": "justify-content-center",
+                                "padding_left_desktop": "ps-md-3",
+                                "padding_left_mobile": "ps-3",
+                                "padding_right_desktop": "pe-md-3",
+                                "padding_right_mobile": "pe-3",
+                                "padding_top_desktop": "pt-md-9",
+                                "padding_top_mobile": "pt-6",
+                                "padding_bottom_desktop": "pb-md-9",
+                                "padding_bottom_mobile": "pb-6"
+                            },
+                            "blocks": {
+                                "heading": {
+                                    "type": "heading",
+                                    "settings": {
+                                        "text": "<h1>Image Banner</h1>",
+                                        "margin_bottom_desktop": "mb-md-3",
+                                        "margin_bottom_mobile": "mb-2",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "text": {
+                                    "type": "text",
+                                    "settings": {
+                                        "text": "<p>A lead text is an opening paragraph that gives the audience the most important information in a concise and clear manner.</p>",
+                                        "margin_bottom_desktop": "mb-md-5",
+                                        "margin_bottom_mobile": "mb-4",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "buttons": {
+                                    "type": "buttons",
+                                    "settings": {
+                                        "label": "Button label",
+                                        "style_class": "btn-light"
+                                    }
+                                }
+                            },
+                            "block_order": ["heading", "text", "buttons"]
+                        }
+                    },
+                    "block_order": ["group"]
+                },
+                "slide_video": {
+                    "type": "_slide_video",
+                    "settings": {
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-center",
+                        "overlay_on_mobile": false
+                    },
+                    "blocks": {
+                        "group":{
+                            "type": "group",
+                            "settings": {
+                                "width": "col-lg-5",
+                                "width_md": "col-md-6",
+                                "width_sm": "col-12",
+                                "align_items": "align-items-md-start",
+                                "align_items_mb": "align-items-center",
+                                "justify_content": "justify-content-md-start",
+                                "justify_content_mb": "justify-content-center",
+                                "padding_left_desktop": "ps-md-3",
+                                "padding_left_mobile": "ps-3",
+                                "padding_right_desktop": "pe-md-3",
+                                "padding_right_mobile": "pe-3",
+                                "padding_top_desktop": "pt-md-0",
+                                "padding_top_mobile": "pt-6",
+                                "padding_bottom_desktop": "pb-md-0",
+                                "padding_bottom_mobile": "pb-6"
+                            },
+                            "blocks": {
+                                "heading": {
+                                    "type": "heading",
+                                    "settings": {
+                                        "text": "<h1>Image Banner</h1>",
+                                        "margin_bottom_desktop": "mb-md-3",
+                                        "margin_bottom_mobile": "mb-2",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "text": {
+                                    "type": "text",
+                                    "settings": {
+                                        "text": "<p>A lead text is an opening paragraph that gives the audience the most important information in a concise and clear manner.</p>",
+                                        "margin_bottom_desktop": "mb-md-5",
+                                        "margin_bottom_mobile": "mb-4",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "buttons": {
+                                    "type": "buttons",
+                                    "settings": {
+                                        "label": "Button label",
+                                        "style_class": "btn-light"
+                                    }
+                                }
+                            },
+                            "block_order": ["heading", "text", "buttons"]
+                        }
+                    },
+                    "block_order": ["group"]
+                }
+            },
+            "block_order": ["slide", "slide_video"]
+        }
+    ]
+}
+{% endschema %} 

@@ -1,0 +1,25 @@
+{{ 'mobile-navigation.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'component-swatch.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% unless template.name == 'list-collections' or template.name == 'collection' or template.name == 'index' or template == 'search' %}
+    <link data-href="{{ 'component-card.css' | asset_url }}" class="lazyload-asset" rel="stylesheet" />
+{% endunless %}
+
+{%- unless template == 'cart' -%}
+<link data-href="{{ 'component-cart-drawer.css' | asset_url }}" class="lazyload-asset" rel="stylesheet" />
+{%- endunless -%}
+
+<link data-href="{{ 'component-search.css' | asset_url }}" class="lazyload-asset" rel="stylesheet" />
+
+<link data-href="{{ 'component-modal.css' | asset_url }}" class="lazyload-asset" rel="stylesheet" />
+
+{%- if template.name == 'page' -%}
+    {{ 'template-page.css' | asset_url | stylesheet_tag: preload: true }} 
+{%- endif -%}
+
+
+{{ 'snotify-toast.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- if template.name == 'product' -%}
+    {{ 'global-video-with-text.css' | asset_url | stylesheet_tag: preload: true }}
+{%- endif -%}

@@ -1,0 +1,496 @@
+{{ 'footer.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%- liquid 
+    assign bottom_footer_linklist = section.settings.bottom_footer_linklist
+-%}
+
+<footer class="site-footer" data-section-id="{{ section.id }}">
+
+  <div data-footer-top class="footer-top border-bottom border-secondary-800" style="background: {{ section.settings.footer_top_bg_color }}; color: {{ section.settings.footer_top_txt_color }};">
+    <div class="{% if section.settings.fluid_footer %}container-fluid{% else %}container{% endif %}">
+        <div class="row footer-top-row">
+
+            {% for block in section.blocks %}
+                
+                    {% if block.type == 'logo' %}
+                        <div class="logo-col pt-lg-13 pt-7 d-flex flex-column">
+                            <a href="{{ routes.root_url }}" title="{{ shop.name | escape }}" aria-label="{{ shop.name | escape }}" tabindex="0">
+                              {%- if block.settings.footer_logo != blank -%}
+                                <img srcset="{{ block.settings.footer_logo | image_url: width: 400 }}"
+                                  src="{{ block.settings.footer_logo | image_url: width: 50 }}"
+                                  loading="lazy" class="img-fluid mb-4"
+                                  width="{{ block.settings.footer_logo.width }}"
+                                  height="{{ block.settings.footer_logo.height }}"
+                                  alt="{{ block.settings.footer_logo.alt | default: shop.name | escape }}"
+                                  style="max-width: {{ block.settings.logo_max_width }}px" >
+                              {%- else -%}
+                                <span class="h5 text-primary">{{ shop.name }}</span>
+                              {%- endif -%}
+                            </a>
+                        </div>
+                    {% endif %}
+                    {% if block.type == 'socialMedia' %}
+                        <div class="socialMedia-col pb-md-8 pb-lg-13 pb-4 pt-4 d-flex flex-column mb-xl-0 mb-3">
+                            {% if block.settings.text != blank %}
+                                <div class="footer-navigation font-family-heading fw-light">{{ block.settings.text }}</div>
+                              {% endif %}
+                            <div class="mt-auto pt-3">
+                                {% render 'social-media-links', section: block %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if block.type == 'menu' %}
+                        <div class="menu-col pt-md-6 pt-lg-13 pt-3 pb-md-5 pb-lg-12 pb-3 border-secondary-800">
+                            <div class="row ps-xl-6 ps-lg-3 pe-xl-0 menu-col-wrapper">
+                                {% for i in (1..4) %}
+                                    {%liquid 
+                                        assign enable = 'enable_nav_' | append: forloop.index
+                                        assign heading = 'heading_' | append: forloop.index
+                                        assign linklist_id = 'linklist_' | append: forloop.index
+                                        assign linklist = block.settings[linklist_id]
+                                    %}
+                                    
+                                    {% if block.settings[enable] %}
+                                        <div class="col-12">
+                                            <div class="collapsible_panel tab_container footer-nav-tab {% if forloop.first == true %}first__nav-tab{% endif %}" is="collapsiblePanel">
+                                                {% if block.settings[heading] != blank %}
+                                                    <button id="footer-menu-btn{{ forloop.index }}" class="h6 panel_toggle mb-md-3 mb-0 d-flex align-items-center w-100 bg-transparent"
+                                                        data-toggle="panel" aria-expanded="false" aria-controls="footer-menu-{{ forloop.index }}"
+                                                        aria-label="Toggle {{ block.settings[heading] }}" style="color: {{ section.settings.footer_top_txt_color }};">
+                                                        {{ block.settings[heading] }}
+                                                        <span class="icon-collapsible ms-auto d-md-none d-block"></span>
+                                                    </button>
+                                                {% endif %} 
+                                                {% if linklist.links.size > 0 %}
+                                                    <div id="footer-menu-{{ forloop.index }}" class="panel_content toggle-content"
+                                                        data-type="content" data-panelcontent tabindex="-1"
+                                                        aria-hidden="true" aria-labelledby="footer-menu-btn{{ forloop.index }}">
+                                                        <div class="toggle-content-wrap">
+                                                            <ul class="list-unstyled footer-navigation fs-md mb-0 d-flex flex-column row-gap-2" role="navigation">
+                                                                {% for link in linklists[linklist].links %}
+                                                                <li>
+                                                                    <a href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                                                    <span>{{ link.title }}</span>
+                                                                    </a>
+                                                                </li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if block.type == 'newsletter' %}
+                        <div class="newsletter-col pt-lg-13 pt-4 pb-lg-12 pb-5">
+                            {% if block.settings.heading != blank %}
+                                <h2 class="mb-0 h4 text-white">{{ block.settings.heading }}</h2>
+                            {% endif %}
+            
+                            {% if block.settings.text != blank %}
+                                <div class="mt-2 newsletter-col-text text-white">{{ block.settings.text }}</div>
+                            {% endif %}
+
+                            {% if block.settings.show_newsletter %}
+                                <div class="klaviyo-form-UnTZwY"></div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+            {% endfor %}      
+        </div>
+    </div>
+  </div>
+
+  <div data-footer-bottom class="footer-bottom py-lg-6 pt-3 pb-4" style="background: {{ section.settings.footer_bottom_bg_color }}; color: {{ section.settings.footer_bottom_txt_color }};">
+      <div class="{% if section.settings.fluid_footer %}container-fluid{% else %}container{% endif %}">
+          <div class="row d-flex">
+              <div class="col-xl-8 col-lg-7 mb-lg-0 mb-3">
+                    <div class="d-xl-flex align-items-center fs-sm gap-3">
+                        <span class="fs-sm" style="color: {{ section.settings.footer_bottom_txt_color }};">{{ 'sections.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}. {{ 'sections.footer.copyright_2' | t }}</span>
+                        {% if linklists[bottom_footer_linklist].links.size > 0 %}
+                            <ul class="list-unstyled bottom_footer_link d-flex gap-3 mb-0 footer-navigation">
+                                {% for link in linklists[section.settings.bottom_footer_linklist].links %}
+                                    <li class="">
+                                        <a href="{{ link.url }}" class="fs-sm font-family-base fw-medium" style="color: {{ section.settings.footer_bottom_txt_color }};" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                            <span>{{ link.title }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                    <div class="fs-sm footer-navigation pt-md-1 footer-bottom-text">{{ 'sections.footer.copyright_3' | t }} <a class="fs-sm fw-medium font-family-base" href="https://praella.com" target="_blank">Praella</a></div>
+              </div>
+              <div class="col-xl-4 col-lg-5 text-lg-end text-center">
+                {% if linklists[section.settings.bottom_footer_linklist_2].links.size > 0 %}
+                    <ul class="list-unstyled bottom_footer_link d-flex gap-5 lh-11 mb-0 justify-content-lg-end footer-navigation">
+                        {% for link in linklists[section.settings.bottom_footer_linklist_2].links %}
+                            <li class="">
+                                <a href="{{ link.url }}" class="fs-sm font-family-base fw-medium" style="color: {{ section.settings.footer_bottom_txt_color }};" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                    <span>{{ link.title }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<style>
+    .footer-navigation a
+    {
+        color: {{ section.settings.footer_top_link_color }};
+    } 
+</style>
+<script>
+    (function() {
+        const drawer = document.getElementById('component-cart-drawer');
+        const cartBtn = document.querySelector('.header__icon--cart');
+
+        if (!drawer || !cartBtn) return;
+
+        document.addEventListener('focusin', (e) => {
+            const target = e.target;
+
+            // If focus is inside the cart drawer
+            if (drawer.contains(target)) {
+            try {
+                if (target.matches(':focus-visible')) {
+                // If drawer is not already open
+                if (!drawer.classList.contains('open')) {
+                    cartBtn.click();
+                }
+                }
+            } catch (err) {
+                // fallback for older browsers (ignore)
+            }
+            }
+        });
+    })();
+</script>
+{% schema %}
+    {
+        "name": "Footer",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "checkbox",
+                "id": "fluid_footer",
+                "label": "Full Width Footer?",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Styling"
+            },
+            {
+                "type": "color_background",
+                "id": "footer_top_bg_color",
+                "label": "Footer Top Background Color",
+                "default": "#f3f3f3"
+            },
+            {
+                "type": "color",
+                "id": "footer_top_txt_color",
+                "label": "Footer Top Text Color",
+                "default": "#5b5b5b"
+            },
+            {
+                "type": "color",
+                "id": "footer_top_link_color",
+                "label": "Footer Top Links Color",
+                "default": "#f3f3f3"
+            },
+            {
+                "type": "color_background",
+                "id": "footer_bottom_bg_color",
+                "label": "Footer Bottom Background Color",
+                "default": "#C4E0E7"
+            },
+            {
+                "type": "color",
+                "id": "footer_bottom_txt_color",
+                "label": "Footer Bottom Text Color",
+                "default": "#5b5b5b"
+            },
+            {
+                "type": "header",
+                "content": "Bottom Footer"
+            },
+            {
+                "type": "link_list",
+                "id": "bottom_footer_linklist",
+                "label": "Select Menu"
+            },
+            {
+                "type": "link_list",
+                "id": "bottom_footer_linklist_2",
+                "label": "Select Menu"
+            },
+            {
+                "type": "paragraph",
+                "content": "Payment Icons"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_payment_icons",
+                "label": "Show Payment Icons?",
+                "default": true
+            },
+            {
+                "type": "paragraph",
+                "content": "Select Payment Methods"
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_icon_visa",
+                "label": "Visa",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_icon_mastercard",
+                "label": "Mastercard",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_icon_ae",
+                "label": "American Express",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_icon_diners",
+                "label": "Diners",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_icon_paypal",
+                "label": "Paypal",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_icon_applepay",
+                "label": "Apple Pay",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "payment_icon_amazonpay",
+                "label": "Amazon Pay",
+                "default": true
+            }           
+        ],
+        "blocks": [
+            {
+                "type": "logo",
+                "name": "Footer Logo",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "footer_logo",
+                        "label": "Select Image"
+                    },
+                    {
+                        "type": "range",
+                        "id": "logo_max_width",
+                        "min": 5,
+                        "max": 500,
+                        "step": 5,
+                        "unit": "px",
+                        "label": "Logo width",
+                        "default": 180
+                    }
+                ]
+            },
+            {
+                "type": "menu",
+                "name": "Site Navigations",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "First Menu"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "enable_nav_1",
+                        "label": "Enable",
+                        "default": false
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "heading_1",
+                        "label": "Heading",
+                        "default": "Footer menu"
+                    },
+                    {
+                        "type": "link_list",
+                        "id": "linklist_1",
+                        "label": "Select Menu"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Second Menu"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "enable_nav_2",
+                        "label": "Enable",
+                        "default": false
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "heading_2",
+                        "label": "Heading",
+                        "default": "Footer menu"
+                    },
+                    {
+                        "type": "link_list",
+                        "id": "linklist_2",
+                        "label": "Select Menu"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Third Menu"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "enable_nav_3",
+                        "label": "Enable",
+                        "default": false
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "heading_3",
+                        "label": "Heading",
+                        "default": "Footer menu"
+                    },
+                    {
+                        "type": "link_list",
+                        "id": "linklist_3",
+                        "label": "Select Menu"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Fourth Menu"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "enable_nav_4",
+                        "label": "Enable",
+                        "default": false
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "heading_4",
+                        "label": "Heading",
+                        "default": "Footer menu"
+                    },
+                    {
+                        "type": "link_list",
+                        "id": "linklist_4",
+                        "label": "Select Menu"
+                    }
+                ]
+            },
+            {
+                "type": "newsletter",
+                "name": "Newsletter",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Form"
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Stay in Touch"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text",
+                        "default": "<p>Get monthly updates and free resources.</p>"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "show_newsletter",
+                        "label": "Show Newsletter Form?",
+                        "default": true
+                    }
+                ]
+            },
+            {
+                "type": "socialMedia",
+                "name": "Social Media",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Information"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Social Media"
+                    },
+                    {
+                        "type": "paragraph",
+                        "content": "Select Networks"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "social_icon_facebook",
+                        "label": "Facebook",
+                        "default": true
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "social_icon_twitter",
+                        "label": "Twitter",
+                        "default": true
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "social_icon_youtube",
+                        "label": "Youtube",
+                        "default": true
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "social_icon_pinterest",
+                        "label": "Pinterest",
+                        "default": true
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "social_icon_instagram",
+                        "label": "Instagram",
+                        "default": true
+                    } 
+                ]
+            }
+        ]
+    }
+
+{% endschema %}

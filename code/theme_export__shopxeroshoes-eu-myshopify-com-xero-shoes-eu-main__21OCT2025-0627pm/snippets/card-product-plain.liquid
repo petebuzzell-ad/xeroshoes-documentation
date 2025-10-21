@@ -1,0 +1,65 @@
+{% stylesheet %}
+
+    .card-product-style-2.card-img > a {
+        padding-top: 100%;
+        display: block;
+        position: relative;
+    }
+
+    .card-product-style-2 .card-img > a img,
+    .card-product-style-2 .card-img > a .placeholder-svg { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+{% endstylesheet %}
+
+{% comment %}
+  Plain product grid layout
+  Accepts:
+  - product: {Object} product object
+
+  Usage:
+  {% render 'card-product-plain', product: product %}
+{% endcomment %}
+{%- liquid 
+    assign card_title = selected_variant.title | default: product.title
+    assign card_image = selected_variant.featured_image | default: product.featured_image
+    assign selected_variant = product.selected_or_first_available_variant
+    assign img_alt = card_image.alt | default: card_title | escape
+-%}
+
+<div class="card card-product card-product-style-2 text-start rounded-0 border-0" data-product-card>
+    <div class="card-img text-center {% if product.featured_image.size == 0 %}bg-gray-300{% endif %}" >
+        {%- if card_image != blank -%}
+            <a href="{{ product.url }}" data-product-link class="d-block product-link position-relative" >
+                {%- capture sizes -%}
+                    (min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw
+                {%- endcapture -%}
+                {%- render 'image',
+                    image: card_image,
+                    sizes: sizes,
+                    alt: img_alt
+                -%}
+            </a>
+        {%- else -%}
+            {% render 'placeholder-image' %}
+        {%- endif -%}
+    </div>
+
+    <div class="card-body px-0 pb-0">
+        <div class="row no-gutter">
+            <div class="col-12">
+                <h2 class="card-title h6 mb-1 font-family-base">
+                    <a class="product-link lh-base" role="button" href="{{ product.url }}" data-product-link>{{ product.title }}</a>
+                </h2>
+            </div>
+            <div class="col-12 text-start">
+                {%- render 'product-price', product: product -%}
+            </div>
+        </div>
+    </div>
+</div>

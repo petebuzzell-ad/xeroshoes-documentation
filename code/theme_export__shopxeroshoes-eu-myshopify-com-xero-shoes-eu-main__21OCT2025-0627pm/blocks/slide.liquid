@@ -1,0 +1,678 @@
+{% capture class_list %}
+    {{ block.settings.padding_top_desktop }} {{ block.settings.padding_bottom_desktop }} {{ block.settings.padding_left_desktop }} {{ block.settings.padding_right_desktop }} {{ block.settings.padding_top_mobile }} {{ block.settings.padding_bottom_mobile }} {{ block.settings.padding_left_mobile }} {{ block.settings.padding_right_mobile }}
+{% endcapture %}
+
+<swiper-slide>
+    <div class="{{ class_list }} {{ block.settings.border }} {{ block.settings.display }} {% if block.settings.display == 'd-flex'%}{{ block.settings.direction }} {{ block.settings.direction_mobile }} {{ block.settings.wrap }} {{ block.settings.align_items }} {{ block.settings.justify_content }} {{ block.settings.align_items_mb }} {{ block.settings.justify_content_mb }} {{ block.settings.gap_column }} {{ block.settings.gap_row }} {{ block.settings.gap_column_mobile }} {{ block.settings.gap_row_mobile }} {% endif %} {% if block.settings.border_radius > 0 %} overflow-hidden {% endif %}"  style="background:{{ block.settings.bg_color }}; border-color: {{ block.settings.border_color }} !important; border-radius:{{ block.settings.border_radius }}px;">
+        {% content_for 'blocks' %}
+    </div>
+</swiper-slide>
+
+{% schema %}
+    {
+        "name": "Slides",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "settings": [
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "select",
+                "id": "display",
+                "label": "t:settings.display",
+                "options": [
+                    {
+                        "value": "d-flex",
+                        "label": "Flex"
+                    },
+                    {
+                        "value": "d-block",
+                        "label": "Block"
+                    },
+                    {
+                        "value": "d-inline-block",
+                        "label": "Inline Block"
+                    }
+                ],
+                "default": "d-flex"
+            },
+ 
+            {
+                "type": "select",
+                "id": "direction",
+                "label": "t:settings.direction",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "flex-md-row",
+                        "label": "t:options.horizontal"
+                    },
+                    {
+                        "value": "flex-md-column",
+                        "label": "t:options.vertical"
+                    }
+                ],
+                "default": "flex-md-column"
+            },
+            {
+                "type": "select",
+                "id": "direction_mobile",
+                "label": "t:settings.direction_mobile",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "flex-row",
+                        "label": "t:options.horizontal"
+                    },
+                    {
+                        "value": "flex-column",
+                        "label": "t:options.vertical"
+                    }
+                ],
+                "default": "flex-column"
+            },
+            {
+                "type": "select",
+                "id": "wrap",
+                "label": "t:settings.wrap",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "flex-wrap",
+                        "label": "Yes"
+                    },
+                    {
+                        "value": "flex-nowrap",
+                        "label": "No"
+                    }
+                ],
+                "default": "flex-nowrap"
+            },
+            {
+                "type": "select",
+                "id": "align_items",
+                "label": "t:settings.align_items_desktop",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "align-items-md-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "align-items-md-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "align-items-md-end",
+                        "label": "End"
+                    },
+                    {
+                        "value": "align-items-md-stretch",
+                        "label": "Fill"
+                    }
+                ],
+                "default": "align-items-md-start"
+            },
+            {
+                "type": "select",
+                "id": "align_items_mb",
+                "label": "t:settings.align_items_mobile",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "align-items-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "align-items-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "align-items-end",
+                        "label": "End"
+                    },
+                    {
+                        "value": "align-items-stretch",
+                        "label": "Fill"
+                    }
+                ],
+                "default": "align-items-start"
+            },
+            {
+                "type": "select",
+                "id": "justify_content",
+                "label": "t:settings.justify_content_desktop",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "justify-content-md-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "justify-content-md-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "justify-content-md-end",
+                        "label": "End"
+                    },
+                    {
+                        "value": "justify-content-md-between",
+                        "label": "Between"
+                    }
+                ],
+                "default": "justify-content-md-start"
+            },
+            {
+                "type": "select",
+                "id": "justify_content_mb",
+                "label": "t:settings.justify_content_mobile",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "justify-content-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "justify-content-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "justify-content-end",
+                        "label": "End"
+                    },
+                    {
+                        "value": "justify-content-between",
+                        "label": "Between"
+                    }
+                ],
+                "default": "justify-content-start"
+            },
+            {
+                "type":"header",
+                "content":"Padding: Desktop"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_desktop",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_desktop",
+                "label": "Padding Bottom",
+                "options": [ 
+                    {
+                        "value": "pb-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_desktop",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-md-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_desktop",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-md-0"
+            },
+            {
+                "type":"header",
+                "content":"Padding: Mobile"
+            },
+            {
+                "type": "select",
+                "id": "padding_top_mobile",
+                "label": "Padding Top",
+                "options": [
+                    {
+                        "value": "pt-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pt-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pt-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pt-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pt-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pt-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pt-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pt-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pt-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pt-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pt-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pt-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_bottom_mobile",
+                "label": "Padding Bottom",
+                "options": [
+                    {
+                        "value": "pb-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pb-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pb-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pb-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pb-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pb-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pb-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pb-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pb-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pb-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pb-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pb-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_left_mobile",
+                "label": "Padding Left",
+                "options": [
+                    {
+                        "value": "ps-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "ps-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "ps-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "ps-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "ps-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "ps-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "ps-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "ps-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "ps-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "ps-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "ps-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "ps-0"
+            },
+            {
+                "type": "select",
+                "id": "padding_right_mobile",
+                "label": "Padding Right",
+                "options": [
+                    {
+                        "value": "pe-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "pe-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "pe-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "pe-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "pe-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "pe-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "pe-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "pe-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "pe-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "pe-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "pe-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "pe-0"
+            },
+            {
+                "type":"header",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color_background",
+                "id": "bg_color",
+                "label": "t:settings.background_color",
+                "default": "transparent"
+            },
+            {
+                "type": "select",
+                "id": "border",
+                "label": "Border",
+                "options": [
+                    {
+                        "value": "border",
+                        "label": "Border"
+                    },
+                    {
+                        "value": "border-top",
+                        "label": "Border Top"
+                    },
+                    {
+                        "value": "border-end",
+                        "label": "Border Right"
+                    },
+                    {
+                        "value": "border-bottom",
+                        "label": "Border Bottom"
+                    },
+                    {
+                        "value": "border-start",
+                        "label": "Border Left"
+                    },
+                    {
+                        "value": "border-0",
+                        "label": "Border 0"
+                    }
+                ],
+                "default": "border-0"
+            },
+            {
+                "type": "color",
+                "id": "border_color",
+                "label": "t:settings.border_color",
+                "default": "#666666",
+                "visible_if": "{{ block.settings.border != 'border-0' }}"
+            },
+            {
+                "type": "range",
+                "id": "border_radius",
+                "label": "t:settings.border_radius",
+                "min": 0,
+                "max": 40,
+                "step": 1,
+                "unit": "px",
+                "default": 0
+            }
+        ]
+    }
+{% endschema %}   

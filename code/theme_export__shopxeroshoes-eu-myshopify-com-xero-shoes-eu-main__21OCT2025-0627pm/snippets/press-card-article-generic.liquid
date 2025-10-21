@@ -1,0 +1,63 @@
+{% comment %}
+  Renders grid item for article listing.
+  Accepts:
+  - article: {Object} article object
+  - placeholder_image: {String} placeholder image title
+
+  Usage:
+  {% render 'card-article-generic', article: article, placeholder_image: placeholder_image %}
+{% endcomment %}
+
+{%- liquid 
+    assign article_category = ''
+    assign categoty_start = 'cat_'
+    assign count = 0
+    for tag in article.tags
+        if tag contains 'cat' and tag != 'cat_Tying' and tag != 'cat_Contest' and tag != 'cat_Born to Run' and tag != 'cat_Barefoot Sandal Tying'
+            assign tagr = tag | replace: 'cat_','' 
+            if count == 0
+                assign article_category = tagr 
+            else
+                assign article_category = tagr | append: ',' | append: article_category
+            endif
+            assign count = count | plus: 1
+        endif
+    endfor
+
+    assign tagsplit = article_category | split: ','
+    assign count = tagsplit.size
+
+    if count == 1
+        assign article_category = article_category | replace: ',', '' 
+    endif
+-%}
+
+<div class="card bg-white article-card press-article-card border-0">
+    <div class="row no-gutter">
+        <div class="col-4">
+            {%- if article.image != blank -%}
+                <a href="{{ article.url }}" class="card-img d-block h-100">
+                    {%- capture sizes -%}
+                        (min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 3 }}px, (min-width: 992px) calc(100vw / 3), (min-width: 768px) calc(100vw - 130px), calc(100vw + 100px)
+                    {%- endcapture -%}
+                    {%- render 'image',
+                        image: article.image.src,
+                        sizes: sizes,
+                        class: 'w-100'
+                    -%}
+                </a>
+            {%- else -%}
+                <a href="{{ article.url }}" class="card-img d-block">
+                    {% render 'placeholder-image' %}
+                </a>
+            {%- endif -%}
+        </div>
+        <div class="col ps-3"> 
+            <div class="card-body p-0 text-start d-flex flex-column">
+                <span class="article-date font-family-heading fs-md lh-11 ls-xxl text-gray-700 text-uppercase mb-2">{{ article.published_at | date: "%B %d, %Y" }}</span>
+                <h4 class="h5 mb-2 article-title"><a href="{{ article.url }}" class="text-secondary text-transform-none">{{ article.title }}</a></h4>
+                <p class="article-excerpt fs-14 ls-base mb-0 text-secondary-900">{{ article.content | strip_html }}</p>
+            </div>
+        </div>
+    </div>
+</div>

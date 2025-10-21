@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-addresses",
+      "settings": {
+        "section_top_spacing": "spacing-top-sm",
+        "section_bottom_spacing": "spacing-bottom-sm"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,54 @@
+{%- liquid
+    assign sizes = '3000,2560,2100,1700,1500,1200,992,768' | split: ','
+    assign mobile_sizes = '300,350,550,650,767' | split: ','
+    assign img_alt = alt | default: image.alt | default: shop.name | escape
+    if mobile_image == blank
+        assign mobile_image = image
+    endif
+    
+    assign lozad = true
+    if preload == true or request.design_mode
+        assign lozad = false
+    endif
+-%}
+
+<picture {% if lozad -%}class="lozad"{% endif %} data-iesrc="{{ image | image_url: width: 1500, height: 1500 }}" >
+    {% comment %} Build source for mobile viewport {% endcomment %}
+    {%- for size in mobile_sizes -%}
+        {%- liquid 
+            assign mobile_size = size | plus: 0
+            assign mobile_size_width = size | times: 1.25 | plus: 0 
+        -%}
+        {%- if mobile_image.width >= mobile_size -%}  
+            <source media="(max-width: {{ mobile_size }}px)" srcset="{{ mobile_image | image_url: width: mobile_size_width }}">
+        {%- else -%}
+            <source media="(max-width: {{ mobile_size }}px)" srcset="{{ mobile_image | image_url: width: mobile_image.width }}">
+        {%- endif -%}
+    {%- endfor -%}
+
+    {% comment %} Build source for desktop viewport {% endcomment %}
+    {%- for size in sizes -%}
+        {%- liquid 
+            assign desktop_size = size | plus: 0
+            assign desktop_size_width = size | times: 1.25 | plus: 0 
+            if desktop_image_size_width != blank
+                assign desktop_size_width = size | times: desktop_image_size_width | plus: 0 
+            endif
+        -%}  
+        {%- if image.width >= desktop_size -%}
+            <source media="(min-width: {{ desktop_size }}px)" srcset="{{ image | image_url: width: desktop_size_width }}">
+        {%- else -%}
+            <source media="(min-width: {{ desktop_size }}px)" srcset="{{ image | image_url: width: image.width }}">
+        {%- endif -%}
+    {%- endfor -%}
+    
+    {%- if lozad == false -%}
+        {{ image | image_url: width: 50, height: 50 | image_tag: alt: img_alt, fetchpriority: 'high', loading: 'eager', class: class }}
+    {%- else -%}
+        <img src="data:image/jpeg;base64,/some_lqip_in_base_64==" width="50" height="50" alt="{{ img_alt }}" loading="lazy" class="{{ class }}">
+    {%- endif -%}
+
+    <noscript>
+        {{ image | image_url: width: 2000, height: 2000 | image_tag: alt: img_alt }}
+    </noscript>
+</picture>

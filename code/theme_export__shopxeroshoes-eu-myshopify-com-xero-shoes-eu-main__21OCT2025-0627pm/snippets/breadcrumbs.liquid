@@ -1,0 +1,86 @@
+{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+  {{ 'breadcrumbs.css' | asset_url | stylesheet_tag: preload: true }}
+  {%- assign t = template | split: '.' | first -%}
+
+  <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+    <ul class="breadcrumb list-unstyled mb-0 fw-normal">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      {%- case t -%}
+        {%- when 'page' -%}
+          <li class="breadcrumb-item">
+            <span aria-current="page">{{ page.title }}</span>
+          </li>
+        {%- when 'product' -%}
+          {%- comment -%} Check if product belongs to specific collections {%- endcomment -%}
+          {%- assign target_collections = settings.breadcrumbs_target_collections | default: 'Shoes,Boots,Sandals,Accessories' | split: ',' -%}
+          {%- assign found_collection = null -%}
+          
+          {%- for target_collection in target_collections -%}
+            {%- for product_collection in product.collections -%}
+              {%- if product_collection.title == target_collection -%}
+                {%- assign found_collection = product_collection -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- if found_collection -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+          
+          {%- if found_collection -%}
+            <li class="breadcrumb-item">
+              {{ found_collection.title | link_to: found_collection.url }}
+            </li>
+          {%- elsif collection.url -%}
+            <li class="breadcrumb-item">
+              {{ collection.title | link_to: collection.url }}
+            </li>
+          {%- endif -%}
+          <li class="breadcrumb-item">
+            <span aria-current="page">{{ product.title }}</span>
+          </li>
+        {%- when 'collection' and collection.handle -%}
+          {%- if current_tags -%}
+            <li class="breadcrumb-item">
+              {{ collection.title | link_to: collection.url }}
+            </li>
+            <li class="breadcrumb-item">
+              {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+" }}{%- endcapture -%}
+              <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumb-item">
+              <span aria-current="page">{{ collection.title }}</span>
+            </li>
+          {%- endif -%}
+        {%- when 'blog' -%}
+          {%- if current_tags -%}
+            <li class="breadcrumb-item">
+              {{ blog.title | link_to: blog.url }}
+            </li>
+            <li class="breadcrumb-item">
+              {%- capture tag_url -%}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+              <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumb-item">
+              <span aria-current="page">{{ blog.title }}</span>
+            </li>
+          {%- endif -%}
+        {%- when 'article' -%}
+          <li class="breadcrumb-item">
+            {{ blog.title | link_to: blog.url }}
+          </li>
+          <li class="breadcrumb-item">
+            <span aria-current="page">{{ article.title }}</span>
+          </li>
+        {%- else -%}
+          <li class="breadcrumb-item">
+            <a href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+          </li>
+      {%- endcase -%}
+        </ul>
+  </nav>
+{%- endunless -%}

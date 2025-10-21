@@ -1,0 +1,84 @@
+<div class="collapsible_panel tab_container border-bottom pt-0 w-100 {% if block.settings.open_by_default %}open{% endif %}" is="collapsiblePanel" {{ block.shopify_attributes }}>
+    <button id="product-cp-{{ block.id }}" class="panel_toggle text-transform-none lh-125 pt-0 h5 d-flex text-start align-items-start mb-0 pb-3"
+      data-toggle="panel" aria-expanded="false" aria-controls="product-{{ block.id }}" 
+      aria-label="Toggle {{ block.settings.heading | default: block.settings.page.title }}" >
+      <span class="col-lg-10 pe-lg-0 pe-1">{{ block.settings.heading | default: block.settings.page.title }}</span>
+      <span class="icon-collapsible"></span>
+    </button>
+    <div id="product-{{ block.id }}" class="panel_content toggle-content {% if block.settings.open_by_default %}open{% endif %}" role="region" 
+      data-type="content" data-panelcontent
+    {% if block.settings.open_by_default %} aria-hidden="false" {% else %} aria-hidden="true" {% endif %} aria-labelledby="product-cp-{{ block.id }}" >
+        <div class="toggle-content-wrap" style="color: {{ block.settings.text_color }};">
+            {{ block.settings.text }}
+            {{ block.settings.page.content }}
+            {% content_for 'blocks' %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collapsible Row",
+    "tag": null,
+    "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Heading"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_upload",
+            "label": "Custom icon"
+        },
+        {
+            "type": "range",
+            "id": "width",
+            "label": "Icon Width",
+            "min": 12,
+            "max": 24,
+            "step": 2,
+            "unit": "px",
+            "default": 12
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "page",
+            "id": "page",
+            "label": "Select page",
+            "info": "Select page to showcase info from page."
+        },
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "label": "Open by default",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#1D293D"
+        }
+    ],
+    "presets": [
+      { 
+        "name": "Collapsible Row",
+        "settings": {
+          "heading": "Collapsible row",
+          "text": "<p>Collapsible content</p>"
+        } 
+      }
+    ]
+  }
+  {% endschema %}
+  

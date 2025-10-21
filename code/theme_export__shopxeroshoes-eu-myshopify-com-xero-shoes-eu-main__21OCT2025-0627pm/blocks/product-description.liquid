@@ -1,0 +1,36 @@
+{% liquid
+  assign product = block.settings.product
+%}
+<div class="product-description text-{{ block.settings.alignment }}" {{ block.shopify_attributes }}>
+    {% comment %} <h3 class="mb-3">{{ 'products.product.description' | t }}</h3> {% endcomment %}
+    <div class="rte">
+        {{ product.description }}
+    </div>
+</div>
+  
+  {% schema %}
+  {
+    "name": "Product description",
+    "tag": null,
+    "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+        {
+            "type": "text_alignment",
+            "id": "alignment",
+            "label": "Text alignment",
+            "default": "left"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Product description",
+        "settings": { "product": "{{ closest.product }}" }
+      }
+    ]
+  }
+  {% endschema %}
+  

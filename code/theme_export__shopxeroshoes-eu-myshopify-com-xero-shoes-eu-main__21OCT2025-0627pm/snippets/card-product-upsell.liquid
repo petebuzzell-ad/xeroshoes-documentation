@@ -1,0 +1,144 @@
+{% stylesheet %}
+  .card-product-style-2.card-product {
+    padding: 0 !important;
+  }
+  .card-product-style-2.card-product:hover {
+    box-shadow: none !important ;
+    z-index: unset!important;
+  }
+  .card-product-style-2.card-product .card-img img {
+    object-fit: contain !important;
+    object-position: center !important;
+    mix-blend-mode: multiply !important;
+    aspect-ratio: 1 !important;
+  }
+  .card-product-style-2.card-product .card-img>a  {
+    padding-top: unset !important;
+    aspect-ratio: 1 !important;
+    background-color: #f9f8f5;
+  }
+
+{% endstylesheet %}
+
+{% comment %}theme-check-disable UnusedAssign{% endcomment %}
+{%- capture img_sizes -%}
+  (min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw
+{%- endcapture -%}
+{% comment %}theme-check-enable UnusedAssign{% endcomment %}
+ 
+<div class="card card-product card-product-style-2 text-start rounded-0 border-0 bg-transparent" data-product-card>
+    <div class="card-img mb-2 text-center {% if product.featured_image.size == 0 %}bg-gray-300{% endif %}" >
+        {%- if product.featured_image != blank -%}
+          {% assign prodimage = product.featured_image %}
+          {% if product.selected_or_first_available_variant.featured_image != blank %}
+              {% assign prodimage = product.selected_or_first_available_variant.featured_image %}
+          {% endif %}
+            <a href="{{ product.url }}" data-product-link class="d-block product-link position-relative product--media" >
+              {%- render 'image',
+                image: prodimage,
+                sizes: img_sizes,
+                alt: prodimage.alt | default: card_title | escape
+              -%}
+            </a>
+        {%- else -%}
+            {% render 'placeholder-image' %}
+        {%- endif -%}
+    </div>
+
+    <div class="card-body p-0">
+        <div class="d-flex flex-column h-100 no-gutter row">
+            <div class="col-12">
+                <h2 class="card-title fs-base fw-medium ls-2 mb-1">
+                    <a class="d-inline-block lh-11 product-link text-body" role="button" href="{{ product.url }}" data-product-link>{{ product.title }}</a>
+                </h2>
+                <span class="price m-0 p-0 money font-family-heading fs-md lh-1 lh-11 ls-2 m-0 money p-0 price {%- if product.compare_at_price > product.price -%}text-danger{%- endif -%}" data-currentPrice style="color:{{ block.settings.color }}">
+                  {%- if product.selected_variant != blank -%}
+                    {{ product.selected_variant.price | money }}
+                  {% comment %} {%- elsif product.price_varies -%}
+                    {%-  liquid
+                      assign minPrice = product.price_min | money
+                      assign maxPrice = product.price_max | money
+                    -%}
+                    {{- 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape -}}
+                    {%- if product.quantity_price_breaks_configured? -%}
+                      <div class="volume-pricing-note fs-xs">
+                        <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+                      </div>
+                    {%- endif -%} {% endcomment %}
+                  {%- else -%}
+                    {{- product.price | money -}}
+                  {%- endif -%}
+                </span>
+              
+                {% comment %} Compare at price display {% endcomment %}
+                {%- if product.selected_variant and product.selected_variant.compare_at_price > product.selected_variant.price -%}
+                  <del class="price small m-0 p-0 me-1 money d-inline-block fs-14-12 {{ block.settings.sale_price_font_weight }}" data-comparePrice  style="color:{{ block.settings.sale_color }}">{{ product.selected_variant.compare_at_price | money }}</del>
+                {%- elsif product.compare_at_price > product.price -%}
+                  <del class="price small m-0 p-0 me-1 money d-inline-block fs-14-12 {{ block.settings.sale_price_font_weight }}" data-comparePrice style="color:{{ block.settings.sale_color }}">{{ product.compare_at_price | money }}</del>
+                {%- endif -%}
+            </div>
+            <div class="col-12 pt-2 mt-auto">
+                <product-form class="product-form">
+                    {%- assign product_form_id = 'product-form-' | append: product.id -%}
+                    {% form 'product', product, data-productid: product.id, id: product_form_id, class: "mt-4", data-product-form: "", data-product-id: product.id, data-type: 'add-to-cart-form', data-format: 'grid' %}
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                      <input type="hidden" name="quantity" value="1" />
+
+                      {% comment %} <div class="quantity-wrapper mb-4" data-qty-container>
+                        <span class="fw-medium text-uppercase fs-sm mb-2 d-inline-block" title="Label {{ 'products.product.quantity.label' | t }}">{{ 'products.product.quantity.label' | t }}</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <a href="#" class="input-group-text btn min-h-100 disabled" rel="nofollow" aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}" title="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}" data-for="decrease" data-qty-btn>
+                              <span class="btn-decrease"></span>
+                              <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                            </a>
+                          </div>
+                          <input type="text" name="quantity" aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}" value="1" step="1" min="1" inputmode="numeric" data-qty-input class="quantity form-control text-center">
+                          <div class="input-group-append">
+                            <a href="#" class="input-group-text btn min-h-100" rel="nofollow" aria-label="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}" title="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}" data-for="increase" data-qty-btn>
+                              <span class="btn-increase btn-increase d-flex h-100 align-items-center"></span>
+                              <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div> {% endcomment %}
+
+                      <div class="row">
+                        <div class="col-12 d-flex flex-column">
+                          {%- liquid 
+                            unless product.has_only_default_variant
+                              assign option_name = product.options_with_values.first.name | downcase
+                              assign option_values_count = product.options_with_values.first.values.size
+                            endunless
+                          -%}
+                          {%- if option_name contains 'color' or option_name contains 'style' -%}
+                          <span class="d-inline-block fs-13 fw-medium lh-11 ls-base mb-3 text-secondary-800">{{ option_values_count }} color options</span>
+                          {%- endif -%}
+                            {% if block.settings.show_addtocart %}
+                            <button class="btn btn-primary btn-sm flex-grow-1 px-2"
+                                type="submit"
+                                name="add"
+                                aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
+                                {% unless product.available %}disabled{% endunless %}>
+                                <span class="add-text">{%- if product.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span>
+                                <span class="spinner-border"></span>
+                            </button> 
+                            {% endif %}
+                            {%- if block.settings.show_quickview -%}
+                            <quick-shop-button tabindex="0" role="button" class="btn {{ block.settings.quickview_btn_style }} {{ block.settings.quickview_size_class }} {% if block.settings.quickview_full %}flex-grow-1 {% endif %}quickshop--button" data-handle="{{ product.handle }}">
+                                {%- if block.settings.quickview_icon != 'none' -%}
+                                    <svg aria-hidden="true" focusable="false" style="width:22px;height:22px;margin:auto;" class="icon-block__icon"><use href="#{{ block.settings.quickview_icon }}"></use></svg> 
+                                {%- endif -%}
+                                {%- if block.settings.quickview_label != blank -%}
+                                    {{ block.settings.quickview_label }}
+                                {%- endif -%}
+                            </quick-shop-button>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {% endform %}
+                </product-form>
+            </div>
+        </div>
+    </div>
+</div>

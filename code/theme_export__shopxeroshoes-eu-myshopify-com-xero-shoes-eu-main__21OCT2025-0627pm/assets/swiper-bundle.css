@@ -1,0 +1,346 @@
+/**
+ * Swiper 11.2.1
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2025 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: January 10, 2025
+ */
+
+
+
+ :root {
+    --swiper-theme-color: var(--pe-color-primary);
+    --swiper-wrapper-transition-timing-function:initial;
+    --swiper-preloader-color:var(--swiper-theme-color);
+
+
+    --swiper-navigation-arrow-opacity:0.35;
+    --swiper-navigation-top-offset:50%;
+    --swiper-navigation-sides-offset:15px;
+
+
+    
+    --swiper-pagination-bottom:-40px;
+    --swiper-pagination-top:auto;
+    --swiper-pagination-left:auto;
+    --swiper-pagination-right:10px;
+    --swiper-pagination-bullet-size:6px;
+
+    --swiper-pagination-bullet-width:6px;
+    --swiper-pagination-bullet-height:6px;
+    --swiper-pagination-bullet-border-radius:50%;
+    --swiper-pagination-color:var(--pe-color-black);
+    --swiper-pagination-bullet-inactive-color:var(--pe-color-gray-300);
+    --swiper-pagination-bullet-active-color:var(--pe-body-color);
+    --swiper-pagination-bullet-inactive-opacity:0.6;
+    --swiper-pagination-bullet-opacity:1;
+
+    --swiper-pagination-bullet-vertical-gap:4px;
+    --swiper-pagination-bullet-horizontal-gap:10px;
+
+    --swiper-scrollbar-border-radius:0px;
+    --swiper-scrollbar-bg-color:var(--pe-color-gray-200);
+    --swiper-scrollbar-drag-bg-color:var(--pe-color-secondary);
+
+    --swiper-scrollbar-sides-offset:0;
+    --swiper-scrollbar-bottom:0px;
+    --swiper-scrollbar-top:auto;
+    --swiper-scrollbar-right:4px;
+    --swiper-scrollbar-left:auto;
+    --swiper-scrollbar-size:3px;
+}
+
+.swiper-scrollbar.light-scrollbar{
+    --swiper-scrollbar-bg-color:var(--pe-color-gray-700);
+    --swiper-scrollbar-drag-bg-color:var(--pe-color-white);
+}
+
+.light-arrow .swiper-button-prev,
+.light-arrow .swiper-button-next{
+    --swiper-navigation-arrow-color:var(--swiper-navigation-secondary-arrow-color);
+    --swiper-navigation-arrow-bg-color:var(--swiper-navigation-secondary-arrow-bg-color);
+    --swiper-navigation-arrow-border-color:var(--swiper-navigation-secondary-arrow-border-color);
+    --swiper-navigation-arrow-hover-bg-color:var(--swiper-navigation-secondary-arrow-hover-bg-color);
+    --swiper-navigation-arrow-hover-border-color:var(--swiper-navigation-secondary-arrow-hover-border-color);
+    --swiper-navigation-arrow-hover-color:var(--swiper-navigation-secondary-arrow-hover-color);
+}
+
+
+swiper-container.light-pagination{
+    --swiper-pagination-color:var(--pe-color-black);
+    --swiper-pagination-bullet-inactive-color:transparent;
+    --swiper-pagination-bullet-active-color:var(--pe-color-black);
+}
+
+:host {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition-property: transform;
+    display: flex;
+}
+
+/* ================================== Swiper Navigation ================================== */
+
+
+.custom-swiper-navigation .swiper-button-prev,
+.custom-swiper-navigation .swiper-button-next{
+    width: var(--swiper-navigation-size);
+    height: var(--swiper-navigation-size);
+    color: var(--swiper-navigation-arrow-color);
+    border:var(--swiper-navigation-border-size) solid var(--swiper-navigation-arrow-border-color);
+    background-color: var(--swiper-navigation-arrow-bg-color);
+    border-radius: var(--swiper-navigation-border-radius);
+    /* transition: ease-out 200ms; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: var(--swiper-navigation-svg-size); 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.arrow-small .swiper-button-prev,
+.arrow-small .swiper-button-next{
+    width: var(--swiper-navigation-small-size);
+    height: var(--swiper-navigation-small-size);
+    border-radius: var(--swiper-navigation-small-border-radius);
+    border-width:var(--swiper-navigation-small-border-size);
+}
+.custom-swiper-navigation .swiper-button-prev svg,
+.custom-swiper-navigation .swiper-button-next svg{
+    width: var(--swiper-navigation-svg-size);
+    height: var(--swiper-navigation-svg-size);
+    position: relative;
+    left: 0;
+    transition: left 0.2s ease-out;
+}
+.custom-swiper-navigation.arrow-small .swiper-button-prev svg,
+.custom-swiper-navigation.arrow-small .swiper-button-next svg{
+    width: var(--swiper-navigation-small-svg-size);
+    height: var(--swiper-navigation-small-svg-size);    
+}
+
+.custom-swiper-navigation .swiper-button-prev:hover,
+.custom-swiper-navigation .swiper-button-next:hover {
+    color: var(--swiper-navigation-arrow-hover-color);
+    border:var(--swiper-navigation-border-size) solid var(--swiper-navigation-arrow-hover-border-color);
+    background-color: var(--swiper-navigation-arrow-hover-bg-color);
+}
+
+.custom-swiper-navigation .swiper-button-prev:hover svg
+{
+    left: -2px;
+}
+.custom-swiper-navigation .swiper-button-next:hover svg
+{
+    left: 2px;
+}
+
+.swiper-wrapper__custom{
+    position: relative;
+    width: 100%;
+}
+
+.swiper-wrapper__custom .custom-swiper-navigation .swiper-button-prev, 
+.swiper-wrapper__custom .custom-swiper-navigation .swiper-button-next{
+    position: absolute;
+    top: 50%;
+    z-index: 11;
+    transform: translateY(-50%);
+}
+
+.swiper-wrapper__custom .custom-swiper-navigation.outside .swiper-button-prev,
+.swiper-wrapper__custom .custom-swiper-navigation .swiper-button-prev{
+    left: var(--swiper-navigation-sides-offset);
+}
+.swiper-wrapper__custom .custom-swiper-navigation.outside .swiper-button-next,
+.swiper-wrapper__custom .custom-swiper-navigation .swiper-button-next{
+    right: var(--swiper-navigation-sides-offset);
+}
+
+@media (min-width: 1480px) {
+    .swiper-wrapper__custom .custom-swiper-navigation.outside .swiper-button-prev{
+        left: -60px;
+    }
+    .swiper-wrapper__custom .custom-swiper-navigation.outside .swiper-button-next{
+        right: -60px;
+    }
+}
+
+.swiper-button-disabled{
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+
+
+
+/* ================================== Swiper Scrollbar ================================== */
+
+
+.swiper-scrollbar {
+    left: var(--swiper-scrollbar-sides-offset);
+    bottom: var(--swiper-scrollbar-bottom, 4px);
+    top: var(--swiper-scrollbar-top, auto);
+    z-index: 50;
+    border-radius: var(--swiper-scrollbar-border-radius);
+    height: var(--swiper-scrollbar-size);
+    width: calc(100% - 2* var(--swiper-scrollbar-sides-offset));
+    background-color: var(--swiper-scrollbar-bg-color);
+}
+
+
+.swiper-scrollbar-drag{
+    height: 100%;
+    border-radius: var(--swiper-scrollbar-border-radius);
+    background: var(--swiper-scrollbar-drag-bg-color); 
+}
+
+
+.swiper-scrollbar{
+    background-color: var(--swiper-scrollbar-bg-color);
+}
+
+
+.swiper-scrollbar-drag{
+    background: var(--swiper-scrollbar-drag-bg-color); 
+}
+
+
+
+/* ================================== Swiper pagination ================================== */
+
+.swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: var(--swiper-pagination-bullet-vertical-gap);
+    column-gap: var(--swiper-pagination-bullet-horizontal-gap);
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 11;
+}
+.swiper-pagination.pagination-light{
+    --swiper-pagination-bullet-inactive-color: transparent;
+    --swiper-pagination-bullet-active-color: #ffffff;
+}
+
+.swiper-pagination .swiper-pagination-bullet{
+    width: var(--swiper-pagination-bullet-width);
+    height: var(--swiper-pagination-bullet-height);
+    border-radius: var(--swiper-pagination-bullet-border-radius);
+    background-color: transparent;
+    border: 1px solid var(--swiper-pagination-bullet-active-color);
+    transition: 0.2s ease-out;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: var(--swiper-pagination-bullet-active-color);
+    scale: 1.666;
+}
+
+.custom-swiper-navigation:not(.both),
+.swiper-pagination:not(.both),
+.swiper-scrollbar:not(.both){
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .custom-swiper-navigation.show_only_desktop,
+    .swiper-pagination.show_only_desktop,
+    .swiper-scrollbar.show_only_desktop {
+        display: flex;
+    }
+}
+
+@media (max-width: 991px) {
+    .custom-swiper-navigation.show_only_mobile,
+    .swiper-pagination.show_only_mobile,
+    .swiper-scrollbar.show_only_mobile  {
+        display: flex;
+    }
+}
+
+.card-carousel_slider{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.card-carousel_slider .card{
+    min-height: 100%;
+}
+
+.right-outside-container swiper-container::part(container){
+    overflow: visible;
+}
+
+.left-outside-container swiper-container::part(container){
+    overflow: visible;
+}
+
+
+.right-outside-container .swiper-scrollbar,
+.right-outside-container .swiper-pagination{
+    max-width: calc(var(--pe-container-width) - (var(--pe-container-x-padding) * 2));
+    margin-inline: 0;
+}
+
+
+.left-outside-container .swiper-scrollbar,
+.left-outside-container .swiper-pagination{
+    max-width: calc(var(--pe-container-width) - (var(--pe-container-x-padding) * 2));
+    margin-inline: 0;
+}
+
+
+/*=============================================
+=         Same Height for All Slides          =
+=============================================*/
+
+swiper-slide{
+    height: auto !important;
+    display: flex;
+}
+
+swiper-slide > div:first-child:not(.slider-media){
+    min-height: 100%;
+    width: 100%;
+}
+
+/*=====  End of Section comment block  ======*/
+
+
+.swiper-button-lock, .swiper-pagination > span:only-child{
+    display: none;
+}
+.hover-arrows:not(:hover) .custom-swiper-navigation
+{
+    opacity: 0;
+}
+.hover-arrows:has(.custom-swiper-navigation > :focus-visible) .custom-swiper-navigation
+{
+    opacity: 1;
+}
+
+[effect="fade"] > swiper-slide:not(.swiper-slide-active)
+{
+    opacity: 0 !important;
+}

@@ -1,0 +1,57 @@
+<div class="cart-img me-3 me-lg-4 {% unless item.image %}bg-gray-100{% endunless %}">
+    {% if item.image %}
+        <img class="img-fluid item-img object-fit-contain"
+        src="{{ item.image | image_url: width: 300 }}"
+        alt="{{ item.image.alt | default: item.product_title | escape }}"
+        loading="lazy"
+        width="300"
+        height="{{ 300 | divided_by: item.image.aspect_ratio | ceil }}" >
+    {% else %}
+        {% comment %} {{ placeholder_image | placeholder_svg_tag: 'img-fluid' }} {% endcomment %}
+        {% render 'placeholder-image' %}
+    {% endif %}
+</div>
+<div class="cart-item-text flex-grow-1 {% if item.product.title contains 'gift' or item.product.title contains 'Gift' %}gift-contains-card{% endif %}">
+    {% comment %} <p class="caption-with-letter-spacing light mb-2">{{ item.product.vendor }}</p>  {% endcomment %}
+    <a href="{{ item.url }}" class="card-title d-inline-block font-family-heading fs-17-16 fw-medium lh-125 ls-2 mb-md-2 mb-1 text-body"> {{ item.product.title | escape }} </a>
+
+    {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+        {%- if item.product.has_only_default_variant == false -%}
+            <ul class="list-unstyled cart-item-options">
+            {%- for option in item.options_with_values -%}
+                <li class="column-gap-1 d-flex flex-wrap">
+                    <span class="fs-sm ls-base text-capitalize text-secondary-800">{{ option.name }}:</span>
+                    <span class="fs-sm ls-base text-capitalize text-secondary-800 option-value">{{ option.value }}</span>
+                </li>
+            {%- endfor -%}
+            </ul>
+        {%- endif -%}
+
+        {% if item.properties.size != 0 %}
+            <ul class="list-unstyled cart-item-properties">
+            {%- for property in item.properties -%}
+                {%- assign property_first_char = property.first | slice: 0 -%}
+                {% comment %} {{ property_first_char }} {% endcomment %}
+                {%- if property.last != blank and property_first_char != '_' -%}
+                    <li class="column-gap-1 d-flex flex-wrap">
+                        <span class="fs-sm ls-base text-capitalize text-secondary-800">{{ property.first }}:</span>
+                        <span class="fs-sm ls-base text-capitalize text-secondary-800 property-value">
+                            {%- if property.last contains '/uploads/' -%}
+                                <a href="{{ property.last }}" target="_blank">
+                                    {{ property.last | split: '/' | last }}
+                                </a>
+                            {%- else -%}
+                                {{ property.last }}
+                            {%- endif -%}
+                        </span>
+                    </li>
+                {%- endif -%}
+            {%- endfor -%}
+            </ul> 
+        {% endif %}
+
+        {% if item.selling_plan_allocation.selling_plan.name %}
+            <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+        {% endif %}
+    {%- endif -%}
+</div>

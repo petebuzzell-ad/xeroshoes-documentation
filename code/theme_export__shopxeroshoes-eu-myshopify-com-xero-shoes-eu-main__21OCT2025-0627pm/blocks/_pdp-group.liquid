@@ -1,0 +1,34 @@
+<div class="col-lg-4 product-info ps-xl-6" id="ProductInfo-{{ section.id }}">
+  <div class="mt-5 mt-lg-0 d-flex flex-column">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Details",
+    "tag": null,
+    "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+          "type": "range",
+          "id": "width",
+          "min": 20,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Width",
+          "default": 100
+      }
+    ],
+    "presets": [
+      {
+        "name": "Group"
+      }
+    ]
+  }
+{% endschema %}

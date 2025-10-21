@@ -1,0 +1,279 @@
+{% style %}
+    .custom-drawer-header .custom-drawer-close.btn-close {
+        right: 22px;
+    }
+
+    .link-block {
+        display: inline-flex;
+    }
+  
+    .link-block-icon-right {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+  
+    .link-block svg {
+        fill: rgb(var(--fill-link-icon-color));
+    }
+  
+    .link--with-icon {
+        gap: 5px;
+    }
+    @media (max-width: 767px) {
+        .link-block.full_width {
+            width: 100%;
+            justify-content: center; 
+        }
+    }
+{% endstyle %}
+{%- if block.settings.label != blank and block.settings.label != ' ' -%}
+    <button type="button" data-toggleDrawer="custom-drawer-{{ block.id }}" class="link-block {{ block.settings.text_style }} {{ block.settings.custom_class_button }} {% if block.settings.style_class == 'btn-link-dark' or block.settings.style_class == 'btn-link-light' %} btn-link {% else %}btn {% endif %} {{ block.settings.style_class }} {{ block.settings.size_class }} {% if block.settings.icon != "none" %} link--with-icon{% endif %} {% if block.settings.hide_mobile %} d-none d-md-inline-flex {% endif %} {% if block.settings.hide_desktop %} d-inline-flex d-md-none {% endif %} {% if block.settings.full_width %} full_width {% endif %}"
+        {{ block.shopify_attributes }} >
+            {%- if block.settings.icon != 'none' -%}
+                <svg aria-hidden="true" focusable="false" style="width:16px;height:16px;"><use href="#{{ block.settings.icon }}"></use></svg>
+            {%- endif -%}
+        {{ block.settings.label }}
+    </button>
+{%- endif -%}
+<custom-drawer id="custom-drawer-{{ block.id }}" class="custom-drawer {{ block.settings.custom_class }}" style="background: {{ block.settings.bg_color }}; border-color:{{ block.settings.border_color }};max-width: {{ block.settings.max_width }}px;" data-checkoutBtns> 
+    <div class="align-items-center custom-drawer-header d-flex py-lg-5 px-lg-5 py-4 px-4 border-bottom">
+        <h2 class="custom-drawer-title h5 mb-0 text-transform-none pe-5">{{ block.settings.title }}</h2>
+        <button class="custom-drawer-close btn-close bd-transparent border-0" aria-label="Close cart drawer" data-closedrawer>
+            <svg aria-hidden="true" focusable="false" style="width: 16px; height: 16px;"><use href="#icon-close"></use></svg>
+        </button>
+    </div> 
+    <div class="drawer-body d-flex flex-fill flex-column overflow-auto" tabindex="0" role="region" aria-label="{{ block.settings.title | default: 'Custom drawer content' | escape }}">
+        {% content_for 'blocks' %}
+    </div>
+</custom-drawer>
+
+
+
+{% schema %}
+    {
+        "name": "Custom Drawer",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "settings": [
+            {
+                "type":"header",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color_background",
+                "id": "bg_color",
+                "label": "Background Color",
+                "default": "#f3f3f3"
+            },
+            {
+                "type": "select",
+                "id": "border",
+                "label": "Border",
+                "options": [
+                    {
+                        "value": "border",
+                        "label": "Border"
+                    },
+                    {
+                        "value": "border-top",
+                        "label": "Border Top"
+                    },
+                    {
+                        "value": "border-end",
+                        "label": "Border Right"
+                    },
+                    {
+                        "value": "border-bottom",
+                        "label": "Border Bottom"
+                    },
+                    {
+                        "value": "border-start",
+                        "label": "Border Left"
+                    },
+                    {
+                        "value": "border-0",
+                        "label": "Border 0"
+                    }
+                ],
+                "default": "border-top"
+            },
+            {
+                "type": "color",
+                "id": "border_color",
+                "label": "t:settings.border_color",
+                "default": "#666666",
+                "visible_if": "{{ block.settings.border != 'border-0' }}"
+            },
+            {
+                "type": "range",
+                "id": "max_width",
+                "label": "Max Width",
+                "min": 300,
+                "max": 500,
+                "step": 2,
+                "default": 450,
+                "unit": "px"
+            },
+            {
+                "type": "header",
+                "content": "Title"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Custom Drawer"
+            },
+            {
+                "type": "text",
+                "id":"custom_class",
+                "label": "Custom Class"
+            },
+            {
+                "type": "header",
+                "content": "Drawer opener Button Settings"
+            },
+            {
+                "type": "select",
+                "id": "icon",
+                "label": "Icon",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "icon-arrow-left",
+                        "label": "Arrow left"
+                    },
+                    {
+                        "value": "icon-arrow-right",
+                        "label": "Arrow right"
+                    },
+                    {
+                        "value": "icon-arrow-next",
+                        "label": "Arrow Next"
+                    },
+                    {
+                        "value": "icon-arrow-prev",
+                        "label": "Arrow Previous"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "text",
+                "id": "label",
+                "label": "Label"
+            },
+            {
+                "type": "select",
+                "id": "style_class",
+                "label": "Style",
+                "options": [
+                    {
+                        "value": "btn-primary",
+                        "label": "Primary"
+                    },
+                    {
+                        "value": "btn-secondary",
+                        "label": "Secondary"
+                    },
+                    {
+                        "value": "btn-dark",
+                        "label": "Dark"
+                    },
+                    {
+                        "value": "btn-light",
+                        "label": "Light"
+                    },
+                    {
+                        "value": "btn-link-dark",
+                        "label": "Link Dark"
+                    },
+                    {
+                        "value": "btn-link-light",
+                        "label": "Link Light"
+                    }
+                ],
+                "default": "btn-primary"
+            },
+            {
+                "type": "select",
+                "id": "size_class",
+                "label": "Button Size",
+                "options": [
+                    {
+                        "value": "btn-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "btn-lg",
+                        "label": "Large"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select",
+                "id": "text_style",
+                "label": "Text Style",
+                "options": [
+                    {
+                        "value": "text-uppercase",
+                        "label": "Uppercase"
+                    },
+                    {
+                        "value": "text-capitalize",
+                        "label": "Capitalize"
+                    },
+                    {
+                        "value": "text-lowercase",
+                        "label": "Lowercase"
+                    },
+                    {
+                        "value": "text-math-auto",
+                        "label": "Auto"
+                    },
+                    {
+                        "value": "",
+                        "label": "Default"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "checkbox",
+                "id": "hide_desktop",
+                "label": "Hide In Desktop",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "hide_mobile",
+                "label": "Hide In Mobile",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "full_width",
+                "label": "Button Full Width In Mobile",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "custom_class_button",
+                "label": "Custom Class"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Custom Drawer"
+            }
+        ]
+    }
+{% endschema %}

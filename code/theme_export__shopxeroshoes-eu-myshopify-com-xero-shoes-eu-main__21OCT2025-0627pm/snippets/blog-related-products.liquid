@@ -1,0 +1,225 @@
+<style>
+    .section-resource-list {
+        row-gap: var(--gap);
+    }
+  
+    .resource-list--carousel-mobile {
+        display: block;
+        @media screen and (width >= 750px) {
+            display: none;
+        }
+    }
+  
+    .resource-list {
+        --resource-list-column-gap: min(var(--resource-list-column-gap-mobile));
+        --resource-list-row-gap: min(var(--resource-list-row-gap-mobile));
+        --resource-list-columns:var(--resource-list-columns-mobile);
+    }
+  
+      
+    @media (min-width: 768px) {
+        .resource-list {
+            --resource-list-column-gap: min(var(--resource-list-column-gap-ipad));
+        --resource-list-row-gap: min(var(--resource-list-row-gap-ipad));
+        --resource-list-columns:var(--resource-list-columns-ipad);
+        }
+    }
+    @media (min-width: 1200px) {
+        .resource-list {
+            --resource-list-columns:var(--resource-list-columns-desktop);
+            --resource-list-column-gap: var(--resource-list-column-gap-desktop);
+            --collection-list-row-gap: var(--resource-list-row-gap-desktop);
+        }
+    }
+
+    .resource-list--grid {
+        width: 100%;
+        display: grid;
+        column-gap: var(--resource-list-column-gap);
+        row-gap: var(--resource-list-row-gap);
+        grid-template-columns: var(--resource-list-columns);
+    }
+  
+    .resource-list__item {
+        height: 100%;
+        text-decoration: none;
+        display:grid;
+    }
+
+    .article-template swiper-container::part(container)
+    {
+        overflow: visible !important;
+    }
+    @media (max-width: 991px) {
+        .article-template
+        {
+            overflow: hidden !important;
+        }
+        .show_only_desktop
+        {
+            display: none !important;
+        }
+    }
+    @media (min-width: 992px)
+    {
+        .blog-related-products
+        {
+            padding:0 30px 30px;
+            margin: 0 -30px -30px;
+            overflow: hidden;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .blog-related-products swiper-container .swiper-slide
+        {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease-out 0.1s;
+        }
+        .blog-related-products swiper-container .swiper-slide.swiper-slide-active,
+        .blog-related-products swiper-container .swiper-slide.swiper-slide-active+.swiper-slide
+        {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    @media (min-width: 1200px) {
+        .blog-related-products swiper-container .swiper-slide
+        {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease-out 0.1s;
+        }
+        .blog-related-products swiper-container .swiper-slide.swiper-slide-active,
+        .blog-related-products swiper-container .swiper-slide.swiper-slide-active+.swiper-slide,
+        .blog-related-products swiper-container .swiper-slide.swiper-slide-active+.swiper-slide+.swiper-slide
+        {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+</style>
+
+
+{% liquid 
+    assign product_exclude_tag = settings.product_exclude_tag_text
+    assign featured_collection = block.settings.featured_collection
+    assign show_product = block.settings.max_products 
+%}
+
+{% capture spacing_class_list %}
+mb-5 blog-related-products
+{% endcapture %}
+
+<section data-section-id="{{ block.id }}" id="{{ block.id }}" class="{{ spacing_class_list }} {% if featured_collection == empty or featured_collection == blank or featured_collection.products_count == 0 %} empty--global-featured-collection-section{% endif %}" >
+    {% assign title_block = section.blocks | where: 'type', 'collection_products' | first %}
+    {% if title_block.settings.heading != blank %}
+    <div class="heading-block h2 font-family-heading mb-4 mb-lg-3">
+        <h2>{{ title_block.settings.heading }}</h2>
+    </div>
+    {% endif %}
+
+    <div class="">
+        {% if featured_collection == empty or featured_collection.products_count == 0 %}
+            {%- render 'onboarding-featured-products' -%}
+        {% else %}
+
+        
+            
+                <div class="d-flex flex-column w-100">
+                    <div class="swiper-wrapper__custom hover-arrows arrows-img-center">
+                        <div class="custom-swiper-navigation custom-swiper-navigation light-arrow inside both show_only_desktop">
+                            <button class="swiper-button-prev button-prev-{{ block.id }}"><svg aria-hidden="true" focusable="false"><use href="#icon-swiper-arrow-left"></use></svg></button>
+                            <button class="swiper-button-next button-next-{{ block.id }}"><svg aria-hidden="true" focusable="false"><use href="#icon-swiper-arrow-right"></use></svg></button>
+                        </div>
+                        <swiper-container class="d-block main-swiper-card position-relative"
+                            slides-per-view="{{ section.settings.slides_per_view_mobile }}" 
+                            space-between="{{ section.settings.slides_spacing_mobile }}" 
+                            speed="500" 
+                            loop="false"
+                            watch-slides-progress="true"
+                            watch-slides-visibility="true"
+                            threshold="20" 
+                            grabCursor="true"
+                            navigation='{
+                                        "nextEl": ".button-next-{{ block.id }}",
+                                        "prevEl": ".button-prev-{{ block.id }}"
+                                    }'
+                            breakpoints='{
+                                "200": {
+                                    "slidesPerView": 1.5,
+                                    "spaceBetween": 15
+                                },
+                                "768": {
+                                    "slidesPerView": 1.8,
+                                    "spaceBetween": 15
+                                },
+                                "992": {
+                                    "slidesPerView": 2,
+                                    "spaceBetween": 0
+                                },
+                                "1200": {
+                                    "slidesPerView": 3,
+                                    "spaceBetween": 0
+                                }
+                            }'
+                        >
+                            {% for product in featured_collection.products limit: show_product %}
+                                {% unless product.tags contains product_exclude_tag %}
+                                    <swiper-slide class="swiper-slide" lazy="true">
+                                        {% render 'product-generic-card', product: product %}
+                                    </swiper-slide>
+                                {% endunless %}
+                            {% endfor %}
+                        </swiper-container>
+                    </div>    
+                </div>    
+            
+        {% endif %}
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function positionArrowsAtHalfMediaHeight() {
+        const arrowsImgCenterContainers = document.querySelectorAll('.arrows-img-center');
+        
+        arrowsImgCenterContainers.forEach(container => {
+            const navigationButtons = container.querySelectorAll('.custom-swiper-navigation .swiper-button-prev, .custom-swiper-navigation .swiper-button-next');
+            const productMedia = container.querySelector('.product--media');
+            
+            if (navigationButtons.length > 0 && productMedia) {
+                // Get the actual height of the product--media element
+                const mediaHeight = productMedia.offsetHeight;
+                const halfMediaHeight = mediaHeight / 2;
+                
+                // Position buttons at half the media height, accounting for button height
+                navigationButtons.forEach(button => {
+                    const buttonHeight = button.offsetHeight;
+                    const buttonCenterOffset = buttonHeight / 2;
+                    const finalPosition = halfMediaHeight - buttonCenterOffset + 10;
+                    
+                    button.style.top = finalPosition + 'px';
+                    button.style.transform = 'translateY(0)'; // Remove any existing transform
+                });
+            }
+        });
+    }
+    
+    // Run on page load
+    positionArrowsAtHalfMediaHeight();
+    
+    // Run on window resize to handle responsive changes
+    window.addEventListener('resize', function() {
+        // Debounce the resize event
+        clearTimeout(window.resizeTimeout);
+        window.resizeTimeout = setTimeout(positionArrowsAtHalfMediaHeight, 250);
+    });
+    
+    // Run when images are loaded (in case they affect the media height)
+    window.addEventListener('load', positionArrowsAtHalfMediaHeight);
+    
+    // Run when swiper is initialized (if there's a delay in rendering)
+    setTimeout(positionArrowsAtHalfMediaHeight, 500);
+});
+</script>

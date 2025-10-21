@@ -1,0 +1,1125 @@
+{%- liquid
+  assign active_entries = collection.filters | map: 'active_values' | compact
+  assign product_exclude_tag = settings.product_exclude_tag_text
+  assign paginate_value = section.settings.products_per_page | default: 12
+  if cart.attributes.products_per_page != blank
+    assign paginate_value = cart.attributes.products_per_page | plus: 0
+  endif
+  assign block_index = section.settings.block_index | strip | plus: 0
+  assign block_index2 = section.settings.block_index2 | strip | plus: 0
+  assign block_index3 = section.settings.block_index3 | strip | plus: 0
+  assign block_index4 = section.settings.block_index4 | strip | plus: 0
+-%}
+
+{% liquid
+  capture styles
+    echo '--collection-list-column-gap-desktop: ' | append: section.settings.columns_gap | append: 'px;'
+    echo '--collection-list-row-gap-desktop: ' | append: section.settings.rows_gap | append: 'px;'
+    echo '--collection-list-column-gap-ipad: ' | append: section.settings.columns_gap_ipad | append: 'px;'
+    echo '--collection-list-row-gap-ipad: ' | append: section.settings.rows_gap_ipad | append: 'px;'
+    echo '--collection-list-column-gap-mobile: ' | append: section.settings.columns_gap_mobile | append: 'px;'
+    echo '--collection-list-row-gap-mobile: ' | append: section.settings.rows_gap_mobile | append: 'px;'
+    echo '--collection-list-columns-desktop: repeat(' | append: section.settings.columns | append: ', 1fr);'
+    echo '--collection-list-columns-ipad: repeat(' | append: section.settings.ipad_columns | append: ', 1fr);'
+    echo '--collection-list-columns-mobile: repeat(' | append: section.settings.mobile_columns | append: ', 1fr);'
+    echo '--column-count-mobile: ' | append: section.settings.mobile_columns | append: ';'
+  endcapture
+%}
+
+{% stylesheet %}
+  .product-list__grid {
+    --collection-list-column-gap: min(var(--collection-list-column-gap-mobile));
+    --collection-list-row-gap: min(var(--collection-list-row-gap-mobile));
+    --collection-list-columns: var(--collection-list-columns-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .product-list__grid {
+      --collection-list-columns: var(--collection-list-columns-ipad);
+      --collection-list-column-gap: var(--collection-list-column-gap-ipad);
+      --collection-list-row-gap: var(--collection-list-row-gap-ipad);
+    }
+  }
+  @media (min-width: 992px) {
+    .product-list__grid {
+      --collection-list-columns: var(--collection-list-columns-ipad);
+      --collection-list-column-gap: var(--collection-list-column-gap-desktop);
+      --collection-list-row-gap: var(--collection-list-row-gap-desktop);
+    }
+  }
+  @media (min-width: 1200px) {
+    .product-list__grid {
+      --collection-list-columns: var(--collection-list-columns-desktop);
+      --collection-list-column-gap: var(--collection-list-column-gap-desktop);
+      --collection-list-row-gap: var(--collection-list-row-gap-desktop);
+    }
+  }
+  .product-list__grid {
+    display: grid;
+    width: 100%;
+    column-gap: var(--collection-list-column-gap);
+    row-gap: var(--collection-list-row-gap);
+    grid-template-columns: var(--collection-list-columns);
+  }
+
+
+  /* Promo block visibility control */
+  .promo-block-desktop {
+    display: block;
+  }
+
+  .promo-block-mobile {
+    display: none;
+  }
+
+  /* Desktop promo block width control */
+  .promo-block-desktop .card-product-promo.grid-span-2 {
+    grid-column: span 2; /* 50% width - spans 2 columns */
+  }
+
+  /* Ensure grid-span-2 promo cards take 2 grid spaces on desktop */
+  .promo-block-desktop .card.card-product-promo.grid-span-2 {
+    grid-column: span 2 !important;
+  }
+
+  /* Target the promo block container that contains grid-span-2 cards */
+  .promo-block-desktop:has(.card-product-promo.grid-span-2) {
+    grid-column: span 2 !important;
+  }
+
+  /* Direct targeting of promo blocks with grid-span-2 class */
+  .promo-block-desktop.promo-grid-span-2 {
+    grid-column: span 2 !important;
+  }
+
+  /* Full width for promo bars on desktop */
+  .promo-block-desktop:has(.card-product-promo-bar),
+  .promo-block-desktop .card-product-promo-bar {
+    grid-column: 1 / -1; /* Full width - spans all columns */
+  }
+
+  /* Alternative approach for broader browser support */
+  .promo-block-desktop .card-product-promo-bar,
+  .promo-block-desktop .card.card-product-promo-bar {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Ensure promo blocks take proper width on desktop */
+  @media (min-width: 768px) {
+    .promo-block-desktop .card-product-promo.grid-span-2 {
+      grid-column: span 2;
+    }
+
+    .promo-block-desktop .card-product-promo-bar {
+      grid-column: 1 / -1;
+    }
+
+    /* Regular promo cards without grid-span-2 should take normal width */
+    .promo-block-desktop .card-product-promo:not(.grid-span-2):not(.card-product-promo-bar) {
+      grid-column: span 1;
+    }
+  }
+
+  /* Show mobile promo blocks and hide desktop ones on mobile devices */
+  @media (max-width: 767px) {
+    .promo-block-desktop {
+      display: none;
+    }
+
+    .promo-block-mobile {
+      display: block;
+      grid-column: 1 / -1; /* Make promo blocks span full width on mobile */
+    }
+
+    /* Ensure promo cards inside take full width */
+    .promo-block-mobile .card-product-promo {
+      width: 100%;
+    }
+
+    /* Ensure grid-span-2 promo cards take full width on mobile */
+    .promo-block-mobile .card.card-product-promo.grid-span-2 {
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+    }
+
+    /* Target the promo block container that contains grid-span-2 cards on mobile */
+    .promo-block-mobile:has(.card-product-promo.grid-span-2) {
+      grid-column: 1 / -1 !important;
+    }
+
+    /* Direct targeting of promo blocks with grid-span-2 class on mobile */
+    .promo-block-mobile.promo-grid-span-2 {
+      grid-column: 1 / -1 !important;
+    }
+
+    /* Ensure promo bars are full width on mobile */
+    .promo-block-mobile:has(.card-product-promo-bar),
+    .promo-block-mobile .card-product-promo-bar {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    /* Alternative approach for broader browser support */
+    .promo-block-mobile .card-product-promo-bar,
+    .promo-block-mobile .card.card-product-promo-bar {
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+    }
+  }
+
+{% endstylesheet %}
+
+{%- capture promo_block -%}
+    {% content_for "block", type: "promotional-card", id: "collection-promo-card" %}
+{%- endcapture -%}
+{%- capture promo_block2 -%}
+    {% content_for "block", type: "promotional-bar", id: "collection-promo-card2" %}
+{%- endcapture -%}
+{%- capture promo_block3 -%}
+    {% content_for "block", type: "promotional-card", id: "collection-promo-card3" %}
+{%- endcapture -%}
+{%- capture promo_block4 -%}
+    {% content_for "block", type: "promotional-card", id: "collection-promo-card4" %}
+{%- endcapture -%}
+
+{% comment %}START : Dynamic promos {% endcomment %}
+{% if collection.metafields.collection.promo_block_1 != blank %}
+  {%- capture promo_block1 -%}
+        {% assign promometa = collection.metafields.collection.promo_block_1.value %}
+        {% if promometa.promo_as_bar == true %}
+            <div class="card mb-lg-0 mb-1 card-product card-product-promo card-product-promo-bar border-0 px-xl-3 ">
+                <div class="d-flex flex-md-row flex-column bg-primary">
+                    <div class="col-md-3 col-12 ps-md-0 pe-lg-2 pt-md-0 pt-2 pe-md-0 px-3 main-promo-image">
+                         {% render 'image',
+                            image: promometa.desktop_image.value
+                        %}           
+                    </div>
+                    <div class="card-body col-md-6 col-12 p-md-3 px-4 pb-0 pt-4 d-flex justify-content-center align-items-center">
+                        <div class="row no-gutter">
+                            <div class="col-12">
+                                {% if promometa.heading != blank %}<h2 class="h3">{{ promometa.heading }}</h2>{% endif %}
+                                 {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer col-md-3 col-12 ps-xl-4 bg-transparent border-0 p-md-3 pt-3 p-4 d-flex justify-content-center align-items-center position-relative">
+                       {% if promometa.button_url != blank %}
+                            <a href="{{ promometa.button_url }}" class="ink-block btn  btn-secondary  full_width ">{{ promometa.button_text }} </a>{% endif %}
+                            <div class="image-block flex-shrink-1 col-lg-12 col-md-12 col-12     object-fit-cover position-relative pt-md-0 pb-md-0 ps-md-0 pe-md-0 pt-0 pb-0 ps-0 pe-0">
+                                <img data-srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" data-src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" loading="lazy" sizes="" alt="shopxeroshoes" width="330" height="175" class="lozad  " fetchpriority="low" srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" data-loaded="true">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+        <div class="card card-product card-product-promo mb-lg-0 mb-1 border-0 above-image {% if promometa.wide_promo == true %}grid-span-2{% endif %}">
+            <div class="card-img card-img position-relative">
+                {%- render 'picture-tag'
+                image: promometa.desktop_image.value
+                mobile_image: promometa.mobile_image.value
+                class: 'img-fluid h-100 flex-1 object-fit-cover w-100' -%}
+                    <div class="overlay" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 1.52%, rgba(0, 0, 0, 0) 100%)!important; opacity: 1!important; mix-blend-mode: none;"></div>
+            </div>
+            <div class="card-body px-0 pb-0">
+                <div class="row no-gutter">
+                    <div class="col-12" style="color:{{promometa.text_color}}">
+                        {% if promometa.heading != blank %}<h2>{{ promometa.heading }}</h2>{% endif %}
+                        {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            {% if promometa.button_url != blank %}
+                                <div class=" {% if promometa.wide_promo == true %}text-align:right;%{% endif %}">
+                            <a href="{{ promometa.button_url }}" class="link-block btn  btn-secondary btn-sm">{{ promometa.button_text }} </a></div>{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endcapture %}
+{% endif %}
+
+{% if collection.metafields.collection.promo_block_2 != blank %}
+  {%- capture promo_block2 -%}
+        {% assign promometa = collection.metafields.collection.promo_block_2.value %}
+        {% if promometa.promo_as_bar == true %}
+            <div class="card mb-lg-0 mb-1 card-product card-product-promo card-product-promo-bar border-0 px-xl-3 ">
+                <div class="d-flex flex-md-row flex-column bg-primary">
+                    <div class="col-md-3 col-12 ps-md-0 pe-lg-2 pt-md-0 pt-2 pe-md-0 px-3 main-promo-image">
+                         {% render 'image',
+                            image: promometa.desktop_image.value
+                        %}           
+                    </div>
+                    <div class="card-body col-md-6 col-12 p-md-3 px-4 pb-0 pt-4 d-flex justify-content-center align-items-center">
+                        <div class="row no-gutter">
+                            <div class="col-12">
+                                {% if promometa.heading != blank %}<h2 class="h3">{{ promometa.heading }}</h2>{% endif %}
+                                 {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer col-md-3 col-12 ps-xl-4 bg-transparent border-0 p-md-3 pt-3 p-4 d-flex justify-content-center align-items-center position-relative">
+                       {% if promometa.button_url != blank %}
+                            <a href="{{ promometa.button_url }}" class="ink-block btn  btn-secondary  full_width ">{{ promometa.button_text }} </a>{% endif %}
+                            <div class="image-block flex-shrink-1 col-lg-12 col-md-12 col-12     object-fit-cover position-relative pt-md-0 pb-md-0 ps-md-0 pe-md-0 pt-0 pb-0 ps-0 pe-0">
+                                <img data-srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" data-src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" loading="lazy" sizes="" alt="shopxeroshoes" width="330" height="175" class="lozad  " fetchpriority="low" srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" data-loaded="true">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        {% else %}
+        <div class="card card-product card-product-promo mb-lg-0 mb-1 border-0 above-image {% if promometa.wide_promo == true %}grid-span-2{% endif %}">
+            <div class="card-img card-img position-relative">
+                {%- render 'picture-tag'
+                image: promometa.desktop_image.value
+                mobile_image: promometa.mobile_image.value
+                class: 'img-fluid h-100 flex-1 object-fit-cover w-100' -%}
+                    <div class="overlay" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 1.52%, rgba(0, 0, 0, 0) 100%)!important; opacity: 1!important; mix-blend-mode: none;"></div>
+            </div>
+            <div class="card-body px-0 pb-0">
+                <div class="row no-gutter">
+                    <div class="col-12" style="color:{{promometa.text_color}}">
+                        {% if promometa.heading != blank %}<h2>{{ promometa.heading }}</h2>{% endif %}
+                        {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            {% if promometa.button_url != blank %}
+                                <div class=" {% if promometa.wide_promo == true %}text-align:right;%{% endif %}">
+                            <a href="{{ promometa.button_url }}" class="link-block btn  btn-secondary btn-sm">{{ promometa.button_text }} </a></div>{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endcapture %}
+{% endif %}
+
+{% if collection.metafields.collection.promo_block_3 != blank %}
+  {%- capture promo_block3 -%}
+        {% assign promometa = collection.metafields.collection.promo_block_3.value %}
+        {% if promometa.promo_as_bar == true %}
+            <div class="card mb-lg-0 mb-1 card-product card-product-promo card-product-promo-bar border-0 px-xl-3 ">
+                <div class="d-flex flex-md-row flex-column bg-primary">
+                    <div class="col-md-3 col-12 ps-md-0 pe-lg-2 pt-md-0 pt-2 pe-md-0 px-3 main-promo-image">
+                         {% render 'image',
+                            image: promometa.desktop_image.value
+                        %}           
+                    </div>
+                    <div class="card-body col-md-6 col-12 p-md-3 px-4 pb-0 pt-4 d-flex justify-content-center align-items-center">
+                        <div class="row no-gutter">
+                            <div class="col-12">
+                                {% if promometa.heading != blank %}<h2 class="h3">{{ promometa.heading }}</h2>{% endif %}
+                                 {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer col-md-3 col-12 ps-xl-4 bg-transparent border-0 p-md-3 pt-3 p-4 d-flex justify-content-center align-items-center position-relative">
+                       {% if promometa.button_url != blank %}
+                            <a href="{{ promometa.button_url }}" class="ink-block btn  btn-secondary  full_width ">{{ promometa.button_text }} </a>{% endif %}
+                            <div class="image-block flex-shrink-1 col-lg-12 col-md-12 col-12     object-fit-cover position-relative pt-md-0 pb-md-0 ps-md-0 pe-md-0 pt-0 pb-0 ps-0 pe-0">
+                                <img data-srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" data-src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" loading="lazy" sizes="" alt="shopxeroshoes" width="330" height="175" class="lozad  " fetchpriority="low" srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" data-loaded="true">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        {% else %}
+        <div class="card card-product card-product-promo mb-lg-0 mb-1 border-0 above-image {% if promometa.wide_promo == true %}grid-span-2{% endif %}">
+            <div class="card-img card-img position-relative">
+                {%- render 'picture-tag'
+                image: promometa.desktop_image.value
+                mobile_image: promometa.mobile_image.value
+                class: 'img-fluid h-100 flex-1 object-fit-cover w-100' -%}
+                    <div class="overlay" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 1.52%, rgba(0, 0, 0, 0) 100%)!important; opacity: 1!important; mix-blend-mode: none;"></div>
+            </div>
+            <div class="card-body px-0 pb-0">
+                <div class="row no-gutter">
+                    <div class="col-12" style="color:{{promometa.text_color}}">
+                        {% if promometa.heading != blank %}<h2>{{ promometa.heading }}</h2>{% endif %}
+                        {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            {% if promometa.button_url != blank %}
+                                <div class=" {% if promometa.wide_promo == true %}text-align:right;%{% endif %}">
+                            <a href="{{ promometa.button_url }}" class="link-block btn  btn-secondary btn-sm">{{ promometa.button_text }} </a></div>{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endcapture %}
+{% endif %}
+
+{% if collection.metafields.collection.promo_block_4 != blank %}
+  {%- capture promo_block4 -%}
+        {% assign promometa = collection.metafields.collection.promo_block_4.value %}
+        {% if promometa.promo_as_bar == true %}
+            <div class="card mb-lg-0 mb-1 card-product card-product-promo card-product-promo-bar border-0 px-xl-3 ">
+                <div class="d-flex flex-md-row flex-column bg-primary">
+                    <div class="col-md-3 col-12 ps-md-0 pe-lg-2 pt-md-0 pt-2 pe-md-0 px-3 main-promo-image">
+                         {% render 'image',
+                            image: promometa.desktop_image.value
+                        %}           
+                    </div>
+                    <div class="card-body col-md-6 col-12 p-md-3 px-4 pb-0 pt-4 d-flex justify-content-center align-items-center">
+                        <div class="row no-gutter">
+                            <div class="col-12">
+                                {% if promometa.heading != blank %}<h2 class="h3">{{ promometa.heading }}</h2>{% endif %}
+                                 {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer col-md-3 col-12 ps-xl-4 bg-transparent border-0 p-md-3 pt-3 p-4 d-flex justify-content-center align-items-center position-relative">
+                       {% if promometa.button_url != blank %}
+                            <a href="{{ promometa.button_url }}" class="ink-block btn  btn-secondary  full_width ">{{ promometa.button_text }} </a>{% endif %}
+                            <div class="image-block flex-shrink-1 col-lg-12 col-md-12 col-12     object-fit-cover position-relative pt-md-0 pb-md-0 ps-md-0 pe-md-0 pt-0 pb-0 ps-0 pe-0">
+                                <img data-srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" data-src="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312&amp;width=750" loading="lazy" sizes="" alt="shopxeroshoes" width="330" height="175" class="lozad  " fetchpriority="low" srcset="//shopxeroshoes.myshopify.com/cdn/shop/files/promo-button-background.png?v=1754554312 330w" data-loaded="true">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        {% else %}
+        <div class="card card-product card-product-promo mb-lg-0 mb-1 border-0 above-image {% if promometa.wide_promo == true %}grid-span-2{% endif %}">
+            <div class="card-img card-img position-relative">
+                {%- render 'picture-tag'
+                image: promometa.desktop_image.value
+                mobile_image: promometa.mobile_image.value
+                class: 'img-fluid h-100 flex-1 object-fit-cover w-100' -%}
+                    <div class="overlay" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 1.52%, rgba(0, 0, 0, 0) 100%)!important; opacity: 1!important; mix-blend-mode: none;"></div>
+            </div>
+            <div class="card-body px-0 pb-0">
+                <div class="row no-gutter">
+                    <div class="col-12" style="color:{{promometa.text_color}}">
+                        {% if promometa.heading != blank %}<h2>{{ promometa.heading }}</h2>{% endif %}
+                        {% if promometa.content != blank %}<div class="text-block  text-md-start  font-family-base text-start fs-xl fw-normal text-math-auto mt-md-0 mt-0 mb-md-5 mb-3">{{ promometa.content | metafield_tag }}</div>{% endif %}
+                            {% if promometa.button_url != blank %}
+                                <div class=" {% if promometa.wide_promo == true %}text-align:right;%{% endif %}">
+                            <a href="{{ promometa.button_url }}" class="link-block btn  btn-secondary btn-sm">{{ promometa.button_text }} </a></div>{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endcapture %}
+{% endif %}
+{% comment %}END : Dynamic promos {% endcomment %}
+
+{% capture spacing_class_list %}
+    {{ section.settings.section_top_spacing }} {{ section.settings.section_top_spacing_ipad }} {{ section.settings.section_top_spacing_mobile }} {{ section.settings.section_bottom_spacing }} {{ section.settings.section_bottom_spacing_ipad }} {{ section.settings.section_bottom_spacing_mobile }}
+{% endcapture %}
+
+
+<section id="{{ template.name }}-container" data-section="{{ section.id }}" class="{{ spacing_class_list }}">
+  <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+    {%- if collection.all_products_count > 0 -%}
+      {%- render 'topbar-filters', object: collection -%}
+    {%- endif -%}
+    <div class="row mx-lg-n3 mx-0">
+      <div class="col-lg-12 px-0">
+        {% if section.settings.filter_type == 'sidebar' and collection.all_products_count > 0 %}
+          {%- liquid
+            assign active_entries = collection.filters | map: 'active_values' | compact
+            assign price_filter = collection.filters | find: 'type', 'price_range'
+          -%}
+
+          <div class="row row-gap-3 align-items-center mb-md-4 mb-3 mt-lg-0 mt-md-4 mt-3">
+            {%- if section.settings.enable_filtering -%}
+              {%- render 'active-filters',
+                object: collection,
+                class_list: 'col-12 active-filters active-filters-desktop d-flex flex-wrap gap-2',
+                active_entries: active_entries,
+                price_filter: price_filter,
+                maxValue: price_filter.max_value.value,
+                minValue: price_filter.min_value.value
+              -%}
+            {%- endif -%}
+
+            {%- if section.settings.enable_product_result and collection.products_count or collection.results_count -%}
+              <div class="col-lg-3 col-xl-2 me-auto total-products" data-totalProducts>
+                <p class="m-0">
+                  {{ collection.results_count | default: collection.products_count }}
+                  {{ 'general.filters.results_found' | t }}
+                </p>
+              </div>
+            {%- endif -%}
+
+            {% comment %} {%- if section.settings.products_per_page_type == 'dropdown'
+              and section.settings.pagination_type == 'numbers'
+            -%}
+              <div class="col-lg-2 col-3 ms-auto d-none d-lg-flex align-items-center justify-content-end">
+                {%- render 'products-per-page' -%}
+              </div>
+            {%- endif -%} {% endcomment %}
+
+            {%- if section.settings.enable_sorting -%}
+              <div class="col-xl-4 col-lg-5 ms-auto d-none d-lg-flex align-items-center gap-3">
+                {%-
+                  render 'products-sorting',
+                  sort_options: collection.sort_options,
+                  sort_by: collection.sort_by | default: collection.default_sort_by
+                -%}
+              </div>
+            {%- endif -%}
+          </div>
+        {% endif %}
+
+        <div id="products-listing" class="mt-md-6 mt-5">
+          {%- paginate collection.products by paginate_value -%}
+            {%- if collection.products.size == 0 -%}
+              <div class="row mt-5">
+                <div class="col-12 text-center mt-5">
+                  <h5>{{ 'templates.collection.empty_collection' | t }}</h5>
+                  {% if section.settings.enable_filtering and active_entries.size > 0 %}
+                    <p>{{ 'general.filters.no_matches_within_filters' | t }}</p>
+                  {% endif %}
+                  {% if collection.all_products_count == 0 and section.settings.btn_text != blank %}
+                    <a href="{{ section.settings.btn_link }}" class="btn btn-light">{{ section.settings.btn_text }}</a>
+                  {% endif %}
+                </div>
+              </div>
+            {%- else -%}
+              <div class="product-list__grid" id="product-grids" style="{{ styles }}" data-products-grid>
+                {%- for product in collection.products -%}
+                  {% liquid
+                    if paginate.current_page == 1
+                      assign count = forloop.index
+                    else
+                      assign count = paginate.current_page | minus: 1 | times: paginate_value | plus: forloop.index | default: 0
+                    endif
+                  %}
+                  {%- unless product.tags contains product_exclude_tag -%}
+                    {% content_for 'block',
+                      type: 'product-card',
+                      id: 'collection-product-card',
+                      closest.product: product
+                    %}
+                  {%- endunless -%}
+
+                  {% comment %} Manage promo cards {% endcomment %}
+                   {%- liquid
+                    assign mobile_block_index = block_index
+                    assign mobile_block_index2 = block_index2
+                    assign mobile_block_index3 = block_index3
+                    assign mobile_block_index4 = block_index4
+
+                    comment
+                      On mobile devices, adjust promo block positions to be after even numbers
+                      If original position is odd, move to next even position
+                    endcomment
+                    if block_index != blank and block_index != 0
+                      assign mobile_block_index = block_index | plus: 1
+                      assign modulo_result = mobile_block_index | modulo: 2
+                      if modulo_result == 0
+                        assign mobile_block_index = mobile_block_index
+                      else
+                        assign mobile_block_index = mobile_block_index | plus: 1
+                      endif
+                    endif
+
+                    if block_index2 != blank and block_index2 != 0
+                      assign mobile_block_index2 = block_index2 | plus: 1
+                      assign modulo_result2 = mobile_block_index2 | modulo: 2
+                      if modulo_result2 == 0
+                        assign mobile_block_index2 = mobile_block_index2
+                      else
+                        assign mobile_block_index2 = mobile_block_index2 | plus: 1
+                      endif
+                    endif
+
+                    if block_index3 != blank and block_index3 != 0
+                      assign mobile_block_index3 = block_index3 | plus: 1
+                      assign modulo_result3 = mobile_block_index3 | modulo: 2
+                      if modulo_result3 == 0
+                        assign mobile_block_index3 = mobile_block_index3
+                      else
+                        assign mobile_block_index3 = mobile_block_index3 | plus: 1
+                      endif
+                    endif
+
+                    if block_index4 != blank and block_index4 != 0
+                      assign mobile_block_index4 = block_index4 | plus: 1
+                      assign modulo_result4 = mobile_block_index4 | modulo: 2
+                      if modulo_result4 == 0
+                        assign mobile_block_index4 = mobile_block_index4
+                      else
+                        assign mobile_block_index4 = mobile_block_index4 | plus: 1
+                      endif
+                    endif
+                  -%}
+                  {%- if section.settings.enable_promo and count == block_index -%}
+                    <div class="promo-block promo-block-desktop {% if promo_block contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block }}
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo2 and count == block_index2 -%}
+                    <div class="promo-block promo-block-desktop {% if promo_block2 contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block2 }}
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo3 and count == block_index3 -%}
+                   <div class="promo-block promo-block-desktop {% if promo_block3 contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block3 }}
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo4 and count == block_index4 -%}
+                    <div class="promo-block promo-block-desktop {% if promo_block4 contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block4 }}
+                    </div>
+                  {%- endif -%}
+
+
+                  {% comment %} START -- Added Below code -- Mobile DEsktop fixes {% endcomment %}
+                   {%- if section.settings.enable_promo and count == mobile_block_index and mobile_block_index != block_index -%}
+                    <div class="promo-block promo-block-mobile {% if promo_block contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block }}
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo2 and count == mobile_block_index2 and mobile_block_index2 != block_index2 -%}
+                    <div class="promo-block promo-block-mobile {% if promo_block2 contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block2 }}
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo3 and count == mobile_block_index3 and mobile_block_index3 != block_index3 -%}
+                    <div class="promo-block promo-block-mobile {% if promo_block3 contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block3 }}
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo4 and count == mobile_block_index4 and mobile_block_index4 != block_index4 -%}
+                    <div class="promo-block promo-block-mobile {% if promo_block4 contains 'grid-span-2' %}promo-grid-span-2{% endif %}">
+                      {{ promo_block4 }}
+                    </div>
+                  {%- endif -%}
+                  {% comment %} START -- Added Below code -- Mobile DEsktop fixes {% endcomment %}
+
+                  {% comment %} end of manage promo cards {% endcomment %}
+                {%- endfor -%}
+
+                {% comment %} Display promo banner if collection has less number of products considering block index provided {% endcomment %}
+
+                {% comment %}
+                  {%- if section.settings.enable_promo and block_index > collection.products_count -%}
+                      {{ promo_block }}
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo2 and block_index2 > collection.products_count -%}
+                      {{ promo_block2 }}
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo3 and block_index3 > collection.products_count -%}
+                      {{ promo_block3 }}
+                  {%- endif -%}
+                  {%- if section.settings.enable_promo4 and block_index4 > collection.products_count -%}
+                      {{ promo_block4 }}
+                  {%- endif -%}
+                {% endcomment %}
+              </div>
+
+              {%- if paginate.pages > 1 -%}
+                <div
+                  class="row"
+                  class="pagination-parent"
+                  data-pagination-parent
+                  data-type="loadmore"
+                >
+                  <div class="col-12 text-center mt-5 mt-md-7 mt-lg-8">
+                    {%- if paginate.next -%}
+                      <a href="{{ paginate.next.url }}" rel="nofollow" class="btn btn-dark" data-loadmore>
+                        {{ 'templates.collection.load-more' | t }}
+                      </a>
+                    {% endif %}
+                    {% comment %} {%- elsif section.settings.pagination_type == 'numbers' -%}
+                      {%- render 'pagination', paginate: paginate -%}
+                    {%- endif -%} {% endcomment %}
+                  </div>
+                </div>
+              {% endif %}
+            {%- endif -%}
+          {%- endpaginate -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% # theme-check-disable ValidSchema %}
+
+{% schema %}
+{
+  "name": "Collection page",
+  "class": "collection-grid-section",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:spacing.section_spacing"
+    },
+    {
+      "type": "select",
+      "id": "section_top_spacing",
+      "label": "t:spacing.desktop_top_spacing",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "spacing-top-xs",
+          "label": "t:spacing.tight"
+        },
+        {
+          "value": "spacing-top-sm",
+          "label": "t:spacing.standard"
+        },
+        {
+          "value": "spacing-top-md",
+          "label": "t:spacing.spacious"
+        },
+        {
+          "value": "spacing-top-lg",
+          "label": "t:spacing.extra_spacious"
+        }
+      ],
+      "default": "spacing-top-sm"
+    },
+    {
+      "type": "select",
+      "id": "section_top_spacing_ipad",
+      "label": "t:spacing.ipad_top_spacing",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "spacing-top-ipad-xs",
+          "label": "t:spacing.tight"
+        },
+        {
+          "value": "spacing-top-ipad-sm",
+          "label": "t:spacing.standard"
+        },
+        {
+          "value": "spacing-top-ipad-md",
+          "label": "t:spacing.spacious"
+        },
+        {
+          "value": "spacing-top-ipad-lg",
+          "label": "t:spacing.extra_spacious"
+        }
+      ],
+      "default": "spacing-top-ipad-sm"
+    },
+    {
+      "type": "select",
+      "id": "section_top_spacing_mobile",
+      "label": "t:spacing.mobile_top_spacing",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "spacing-top-mobile-xs",
+          "label": "t:spacing.tight"
+        },
+        {
+          "value": "spacing-top-mobile-sm",
+          "label": "t:spacing.standard"
+        },
+        {
+          "value": "spacing-top-mobile-md",
+          "label": "t:spacing.spacious"
+        },
+        {
+          "value": "spacing-top-mobile-lg",
+          "label": "t:spacing.extra_spacious"
+        }
+      ],
+      "default": "spacing-top-mobile-sm"
+    },
+    {
+      "type": "select",
+      "id": "section_bottom_spacing",
+      "label": "t:spacing.desktop_bottom_spacing",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "spacing-bottom-xs",
+          "label": "t:spacing.tight"
+        },
+        {
+          "value": "spacing-bottom-sm",
+          "label": "t:spacing.standard"
+        },
+        {
+          "value": "spacing-bottom-md",
+          "label": "t:spacing.spacious"
+        },
+        {
+          "value": "spacing-bottom-lg",
+          "label": "t:spacing.extra_spacious"
+        }
+      ],
+      "default": "spacing-bottom-sm"
+    },
+    {
+      "type": "select",
+      "id": "section_bottom_spacing_ipad",
+      "label": "t:spacing.ipad_bottom_spacing",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "spacing-bottom-ipad-xs",
+          "label": "t:spacing.tight"
+        },
+        {
+          "value": "spacing-bottom-ipad-sm",
+          "label": "t:spacing.standard"
+        },
+        {
+          "value": "spacing-bottom-ipad-md",
+          "label": "t:spacing.spacious"
+        },
+        {
+          "value": "spacing-bottom-ipad-lg",
+          "label": "t:spacing.extra_spacious"
+        }
+      ],
+      "default": "spacing-bottom-ipad-sm"
+    },
+    {
+      "type": "select",
+      "id": "section_bottom_spacing_mobile",
+      "label": "t:spacing.mobile_bottom_spacing",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "spacing-bottom-mobile-xs",
+          "label": "t:spacing.tight"
+        },
+        {
+          "value": "spacing-bottom-mobile-sm",
+          "label": "t:spacing.standard"
+        },
+        {
+          "value": "spacing-bottom-mobile-md",
+          "label": "t:spacing.spacious"
+        },
+        {
+          "value": "spacing-bottom-mobile-lg",
+          "label": "t:spacing.extra_spacious"
+        }
+      ],
+      "default": "spacing-bottom-mobile-sm"
+    },
+    {
+      "type": "header",
+      "content": "Product cards: Desktop"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.columns",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_gap",
+      "label": "t:settings.horizontal_gap",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "rows_gap",
+      "label": "t:settings.vertical_gap",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Product cards: Ipad"
+    },
+    {
+      "type": "range",
+      "id": "ipad_columns",
+      "label": "t:settings.Ipad_columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_gap_ipad",
+      "label": "t:settings.horizontal_gap_ipad",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "rows_gap_ipad",
+      "label": "t:settings.vertical_gap_ipad",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Product cards: Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "t:settings.mobile_columns",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "columns_gap_mobile",
+      "label": "t:settings.horizontal_gap_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "rows_gap_mobile",
+      "label": "t:settings.vertical_gap_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Product cards: Style"
+    },
+    {
+      "type": "select",
+      "id": "ratio",
+      "label": "Image ratio",
+      "options": [
+        {
+          "value": "square",
+          "label": "Square"
+        },
+        {
+          "value": "landscape",
+          "label": "Landscape"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style",
+      "label": "Button show on card hover",
+      "info": "This will work on only product card."
+    },
+    {
+      "type": "select",
+      "id": "button_position",
+      "label": "Hover button position",
+      "options": [
+        {
+          "value": "bottom_image",
+          "label": "Bottom Product Image"
+        },
+        {
+          "value": "card_bottom",
+          "label": "Bottom Product Card"
+        }
+      ],
+      "default": "card_bottom"
+    },
+    {
+      "type": "header",
+      "content": "Pagination"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 32,
+      "step": 1,
+      "default": 16,
+      "label": "Products per page"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_product_result",
+      "default": false,
+      "label": "Enable Product Total Count ?"
+    },
+    {
+      "type": "header",
+      "content": "Filtering & Sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sub_collections",
+      "default": true,
+      "label": "Enable Shop Collections"
+    },
+    {
+      "type": "collection_list",
+      "id": "sub_collections",
+      "label": "Collections"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "Enable sorting"
+    },
+    {
+      "type": "select",
+      "id": "sorting_type",
+      "label": "Sorting Placement(Mobile)",
+      "options": [
+        {
+          "value": "separate_drawer",
+          "label": "Separate Drawer"
+        },
+        {
+          "value": "same_as_filter_drawer",
+          "label": "Same as Filter Drawer"
+        }
+      ],
+      "default": "separate_drawer",
+      "visible_if": "{{ section.settings.enable_sorting }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "Enable filtering",
+      "info": "[Customize filters](/admin/menus)"
+    },
+    {
+      "type": "select",
+      "id": "filter_type",
+      "label": "Storefront Filters Type",
+      "options": [
+        {
+          "value": "sidebar",
+          "label": "Sidebar"
+        },
+        {
+          "value": "topbar",
+          "label": "Topbar"
+        }
+      ],
+      "default": "sidebar",
+      "visible_if": "{{ section.settings.enable_filtering }}"
+    },
+    {
+      "type": "header",
+      "content": "Promo cards"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_promo",
+      "default": true,
+      "label": "Enable primary promo"
+    },
+    {
+      "type": "text",
+      "id": "block_index",
+      "label": "Block Placement",
+      "info": "The block will be added after mentioned index(Must be in Number) in Product listing. Exclude Promo grid while calculating index.",
+      "visible_if": "{{ section.settings.enable_promo }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_promo2",
+      "default": false,
+      "label": "Enable secondary promo"
+    },
+    {
+      "type": "text",
+      "id": "block_index2",
+      "label": "Block Placement",
+      "info": "The block will be added after mentioned index(Must be in Number) in Product listing. Exclude Promo grid while calculating index.",
+      "visible_if": "{{ section.settings.enable_promo2 }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_promo3",
+      "default": false,
+      "label": "Enable tertiary promo"
+    },
+    {
+      "type": "text",
+      "id": "block_index3",
+      "label": "Block Placement",
+      "info": "The block will be added after mentioned index(Must be in Number) in Product listing. Exclude Promo grid while calculating index.",
+      "visible_if": "{{ section.settings.enable_promo3 }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_promo4",
+      "default": false,
+      "label": "Enable quaternary promo"
+    },
+    {
+      "type": "text",
+      "id": "block_index4",
+      "label": "Block Placement",
+      "info": "The block will be added after mentioned index(Must be in Number) in Product listing. Exclude Promo grid while calculating index.",
+      "visible_if": "{{ section.settings.enable_promo4 }}"
+    },
+    {
+      "type": "header",
+      "content": "Empty collection"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Shop All"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link",
+      "default": "/collections"
+    }
+  ]
+}
+{% endschema %}
+
+{% # theme-check-enable ValidSchema %}

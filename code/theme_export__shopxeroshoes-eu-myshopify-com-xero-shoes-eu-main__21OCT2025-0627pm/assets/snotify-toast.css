@@ -1,0 +1,152 @@
+
+.snotifyToast {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    z-index: 9999;
+    margin: 5px;
+    overflow: hidden;
+    pointer-events: auto;
+    box-shadow: 0 0.5rem 1rem rgb(26, 26, 26, 0.15);
+    /* transition: 0.5s ease 0.2s; */
+    background-color: #fff;
+}
+
+.snotifyToast.open{
+    display: block;
+    opacity: 1;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+    from {
+        transform: translateX(110%);
+    }
+    to {
+        transform: translateX(0);
+    }
+  }
+
+
+.snotify-error {
+    border-left: 4px solid var(--pe-color-danger);
+}
+.snotify-warning{
+    border-left: 4px solid var(--pe-color-warning);
+}
+.snotify-info{
+    border-left: 4px solid var(--pe-color-info);
+}
+.snotify-success{
+    border-left: 4px solid var(--pe-color-success);
+}
+
+.snotify-error .snotifyToast__progressBar__percentage{
+    background: var(--pe-color-danger);
+}
+.snotify-warning .snotifyToast__progressBar__percentage{
+    background: var(--pe-color-warning);
+}
+.snotify-info .snotifyToast__progressBar__percentage{
+    background: var(--pe-color-info);
+}
+.snotify-success .snotifyToast__progressBar__percentage{
+    background: var(--pe-color-success);
+}
+
+
+.snotify-error .snotify-icon-error{
+    display: block !important;
+}
+.snotify-warning .snotify-icon-warning{
+    display: block !important;
+}
+.snotify-info .snotify-icon-info{
+    display: block !important;
+}
+.snotify-success .snotify-icon-success{
+    display: block !important;
+}
+
+
+.snotifyToast__progressBar {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #C7C7C7;
+}
+
+.snotifyToast__progressBar__percentage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    max-width: 100%;
+    /* transition: width 3s ease; */
+}
+
+.snotifyToast__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    padding: 5px 65px 5px 15px;
+    min-height: 78px;
+    font-size: 16px;
+    color: #000;
+}
+
+.snotifyToast__title {
+    font-size: 1.2rem;
+    line-height: .8rem;
+    margin-bottom: 0.6rem;
+    color: #000;
+    font-weight: 600;
+}
+.snotifyToast__body {
+    max-width: 100%;
+    font-size: .9rem;
+    color: #252525;
+}
+.snotify-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    line-height: 0;
+    transform: translateY(-50%);
+    max-height: 38px;
+    max-width: 38px;
+    width: 100%;
+    height: 100%;
+    display: block !important;
+}
+.snotify-icon--error {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20version=%221.1%22%20x=%220px%22%20y=%220px%22%20viewBox=%220%200%20512%20512%22%20fill=%22%23f44336%22%3E%3Cg%3E%3Cpath%20d=%22M437,75A256,256,0,1,0,75,437,256,256,0,1,0,437,75ZM416.43,416.43a226.82,226.82,0,0,1-320.86,0C7.11,328,7.11,184,95.57,95.57a226.82,226.82,0,0,1,320.86,0C504.89,184,504.89,328,416.43,416.43Z%22/%3E%3Cpath%20d=%22M368.81,143.19a14.5,14.5,0,0,0-20.58,0L256,235.42l-92.23-92.23a14.55,14.55,0,0,0-20.58,20.58L235.42,256l-92.23,92.23a14.6,14.6,0,0,0,10.24,24.89,14.19,14.19,0,0,0,10.24-4.31l92.23-92.23,92.23,92.23a14.64,14.64,0,0,0,10.24,4.31,14,14,0,0,0,10.24-4.31,14.5,14.5,0,0,0,0-20.58l-92-92.23,92.23-92.23A14.5,14.5,0,0,0,368.81,143.19Z%22/%3E%3C/g%3E%3C/svg%3E");
+}
+.snotifyToast__buttons {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.snotifyToast__buttons button {
+    position: relative;
+    width: 100%;
+    border: 0;
+    background: 0 0;
+    padding: 8px;
+    text-transform: capitalize;
+    color: #000;
+    cursor: pointer;
+}

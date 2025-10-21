@@ -1,0 +1,2676 @@
+{
+  "sections": {
+    "global_page_header_banner_8rAmFa": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_8zaHDD": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "fluid_layout",
+            "image_enable": true,
+            "first_image": "shopify:\/\/shop_images\/Best-Minimalist-Shoes.jpg",
+            "first_image_mobile": "shopify:\/\/shop_images\/Best_Minimalist_Shoes_Mobile.jpg",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "page_banner_8zaHDD"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "medium",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    },
+    "custom_section_q8f9tN": {
+      "type": "custom-section",
+      "blocks": {
+        "group_CV9tAr": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-9",
+            "padding_bottom_desktop": "pb-md-9",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-5",
+            "padding_bottom_mobile": "pb-1",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_pEPJdJ": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h1>How to Find The Best Minimalist Shoes<\/h1>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h1-display",
+                "font_family": "font-family-heading",
+                "text_style": "text-math-auto",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "bottom_line": false,
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_LrGiHa": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Minimalist shoes are often thought of as a category of running shoes. But casual shoes can be minimalist, too.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_pEPJdJ",
+            "text_LrGiHa"
+          ]
+        }
+      },
+      "block_order": [
+        "group_CV9tAr"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "custom_section_yRfKNa": {
+      "type": "custom-section",
+      "blocks": {
+        "group_9dYT36": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-wrap",
+            "align_items": "align-items-md-stretch",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-4",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-6",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_9wtnA6": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-8",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-2",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "image_f7bXbB": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/shoes-are-lighter.jpg",
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "1.5084745763",
+                    "enable_link": false,
+                    "enable_preload": false,
+                    "url": "",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_f7bXbB"
+              ]
+            },
+            "group_HBYpHY": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-4",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-8",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": "shoes-are-lighter"
+              },
+              "blocks": {
+                "group_jCRPyY": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-5",
+                    "padding_left_desktop": "ps-md-3",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-5",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "text_MaLVDb": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>Modern minimalist shoes are lighter, have less cushioning, are more flexible, and have less heel lift (or “drop”) than a typical shoe. They’re actually like the shoes we wore prior to the invention of thick, stiff, padded, motion control shoes back in the early 70s.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-6",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-4",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_WA6kJa": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>A <strong>truly<\/strong> minimalist shoe has other important characteristics that support natural movement<\/p><ul><li>A wide toe box to let your toes spread <\/li><li>No unnecessary cushioning<\/li><li>An extremely flexible sole that gives you protection but is thin enough so you can safely FEEL the ground.<\/li><\/ul>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-5",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-4",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_8TEUNE": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>All Xero Shoes products — casual and performance sandals, boots, and shoes for men, women, and kids — are “true minimalist shoes.” <\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_arUhJx": {
+                      "type": "text",
+                      "name": "Text",
+                      "disabled": true,
+                      "settings": {
+                        "text": "<p>Modern minimalist shoes are lighter, have less cushioning, are more flexible, and have less heel lift (or “drop”) than a typical shoe. They’re actually like the shoes we wore prior to the invention of thick, stiff, padded, motion control shoes back in the early 70s.<br\/><br\/>A <strong>truly<\/strong> minimalist shoe has other important characteristics that support natural movement<\/p><ul><li>A wide toe box to let your toes spread <\/li><li>No unnecessary cushioning<\/li><li>An extremely flexible sole that gives you protection but is thin enough so you can safely FEEL the ground.<\/li><\/ul><p><br\/>All Xero Shoes products — casual and performance sandals, boots, and shoes for men, women, and kids — are “true minimalist shoes.” <\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_MaLVDb",
+                    "text_WA6kJa",
+                    "text_8TEUNE",
+                    "text_arUhJx"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_jCRPyY"
+              ]
+            }
+          },
+          "block_order": [
+            "group_9wtnA6",
+            "group_HBYpHY"
+          ]
+        }
+      },
+      "block_order": [
+        "group_9dYT36"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "global_product_tabs_qYbhkX": {
+      "type": "global-product-tabs",
+      "blocks": {
+        "static-section-header": {
+          "type": "_section-header",
+          "name": "t:names.section_header",
+          "static": true,
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "display": "d-block",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-6",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-4",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0
+          },
+          "blocks": {
+            "heading_mcYMQe": {
+              "type": "heading",
+              "settings": {
+                "text": "<h2>Featured Minimalist Shoes<\/h2>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h2",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#0f172b",
+                "bottom_line": false,
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_kzHUXq": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Here are some best-sellers that will help you Live Life Feet First.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_mcYMQe",
+            "text_kzHUXq"
+          ]
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-4",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0"
+          },
+          "blocks": {
+            "product_media_card_RihAXw": {
+              "type": "product-media-card",
+              "name": "Product media card",
+              "disabled": true,
+              "settings": {
+                "width": 100,
+                "template_type": "classic-horizontal",
+                "thumb_image": true,
+                "nav_arrows": false,
+                "nav_arrows_visible": "both",
+                "nav_arrows_color": "",
+                "nav_arrows_size": "",
+                "nav_arrows_outside": "inside",
+                "nav_dots": false,
+                "pagination_visible": "both",
+                "pagination_color": "",
+                "thumbs_nav_arrows": true,
+                "thumbs_nav_arrows_visible": "both",
+                "thumbs_nav_arrows_color": "",
+                "thumbs_nav_arrows_size": "",
+                "product": "{{ closest.product }}",
+                "ratio": "square",
+                "image_zoom": "no_zoom"
+              },
+              "blocks": {}
+            },
+            "product_image_97kn9g": {
+              "type": "product-image",
+              "name": "Product Image",
+              "settings": {
+                "width": 100,
+                "product": "{{ closest.product }}",
+                "show_secondary_media": false,
+                "custom_index": ""
+              },
+              "blocks": {}
+            },
+            "group_HnV88M": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-2",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "stamped_reviews_star_rating_badge_rMQxYi": {
+                  "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
+                  "disabled": true,
+                  "settings": {
+                    "use_metafields": false,
+                    "sku_tagtype": "sku",
+                    "is_featured_product": false,
+                    "featured_product_handle": ""
+                  }
+                },
+                "custom_liquid_i38dAM": {
+                  "type": "custom-liquid",
+                  "name": "Custom Liquid",
+                  "disabled": true,
+                  "settings": {
+                    "custom_liquid": "<svg style=\"margin-top: 0;\" width=\"93\" height=\"17\" viewBox=\"0 0 93 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M2.55722 13.5738C2.18956 13.8027 1.97508 13.6501 2.07466 13.2381L2.90191 9.7593L0.19802 7.44008C-0.12369 7.16544 -0.0470923 6.90605 0.381854 6.87554L3.92832 6.59326L5.29942 3.29753C5.45261 2.90082 5.7207 2.90082 5.88156 3.29753L7.26031 6.59326L10.7991 6.87554C11.2281 6.91368 11.3123 7.15781 10.983 7.44008L8.27906 9.7593L9.10632 13.2381C9.20589 13.6501 8.99908 13.8027 8.62375 13.5738L5.59049 11.72L2.55722 13.5738Z\" fill=\"#0F172B\"\/>\n<path d=\"M15.4303 13.7337C15.0626 13.9626 14.8481 13.81 14.9477 13.398L15.775 9.91921L13.0711 7.6C12.7494 7.32535 12.826 7.06596 13.2549 7.03545L16.8014 6.75318L18.1725 3.45744C18.3257 3.06073 18.5938 3.06073 18.7546 3.45744L20.1334 6.75318L23.6722 7.03545C24.1011 7.07359 24.1854 7.31772 23.856 7.6L21.1521 9.91921L21.9794 13.398C22.0789 13.81 21.8721 13.9626 21.4968 13.7337L18.4635 11.8799L15.4303 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M28.4352 13.7337C28.0675 13.9626 27.853 13.81 27.9526 13.398L28.7798 9.91921L26.0759 7.6C25.7542 7.32535 25.8308 7.06596 26.2598 7.03545L29.8063 6.75318L31.1773 3.45744C31.3305 3.06073 31.5986 3.06073 31.7595 3.45744L33.1382 6.75318L36.6771 7.03545C37.106 7.07359 37.1903 7.31772 36.8609 7.6L34.157 9.91921L34.9842 13.398C35.0838 13.81 34.877 13.9626 34.5017 13.7337L31.4684 11.8799L28.4352 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M41.4391 13.7337C41.0714 13.9626 40.8569 13.81 40.9565 13.398L41.7837 9.91921L39.0799 7.6C38.7581 7.32535 38.8347 7.06596 39.2637 7.03545L42.8102 6.75318L44.1813 3.45744C44.3344 3.06073 44.6025 3.06073 44.7634 3.45744L46.1422 6.75318L49.681 7.03545C50.1099 7.07359 50.1942 7.31772 49.8648 7.6L47.1609 9.91921L47.9882 13.398C48.0877 13.81 47.8809 13.9626 47.5056 13.7337L44.4723 11.8799L41.4391 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M54.3727 13.8934C54.005 14.1223 53.7905 13.9697 53.8901 13.5577L54.7173 10.0789L52.0134 7.75966C51.6917 7.48502 51.7683 7.22563 52.1973 7.19512L55.7438 6.91284L57.1148 3.61711C57.268 3.2204 57.5361 3.2204 57.697 3.61711L59.0757 6.91284L62.6146 7.19512C63.0435 7.23326 63.1278 7.47739 62.7984 7.75966L60.0945 10.0789L60.9217 13.5577C61.0213 13.9697 60.8145 14.1223 60.4392 13.8934L57.4059 12.0395L54.3727 13.8934Z\" fill=\"#0F172B\"\/>\n<path d=\"M75.28 13.014L68.574 13V11.642C68.588 8.198 73.656 8.912 73.768 6.812C73.838 5.832 73.32 5.202 71.99 5.202C70.618 5.202 70.156 5.972 70.156 7.134H68.658C68.658 5.314 69.498 3.942 71.948 3.942C74.454 3.942 75.378 5.202 75.294 6.896C75.126 10.004 70.058 9.36 70.058 11.572V11.74H75.28V13.014ZM80.6875 13V11.124H75.9555V9.724L80.1835 4.04H82.2275V9.892H83.7955V11.124H82.2275V13H80.6875ZM77.4255 9.892H80.6875V5.566L77.4255 9.892ZM88.4983 13.098C85.5443 13.098 84.7603 11.502 84.7603 8.506C84.7603 5.286 85.8803 3.942 88.4003 3.942C90.6123 3.942 91.7743 4.754 91.7743 6.812H90.2623C90.2623 5.706 89.7303 5.202 88.4003 5.202C86.4963 5.202 86.2023 6.63 86.2443 8.632C86.4123 8.002 87.1543 7.33 88.7503 7.33C90.3883 7.33 91.9703 8.044 91.9703 10.13C91.9703 11.74 90.9623 13.098 88.4983 13.098ZM86.3843 10.13C86.3843 11.04 87.0423 11.852 88.5123 11.852C89.7023 11.852 90.4583 11.194 90.4583 10.13C90.4583 9.234 89.9683 8.534 88.4003 8.534C87.0003 8.534 86.3843 9.262 86.3843 10.13Z\" fill=\"#646465\"\/>\n<\/svg>",
+                    "text_style": "",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                },
+                "product_star_rating_tx3hYj": {
+                  "type": "product-star-rating",
+                  "name": "Product star rating",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "stamped_reviews_star_rating_badge_rMQxYi",
+                "custom_liquid_i38dAM",
+                "product_star_rating_tx3hYj"
+              ]
+            },
+            "product_title_qhWPng": {
+              "type": "product-title",
+              "name": "t:names.product_information",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "title": "",
+                "font_size": "fs-xl",
+                "font_weight": "fw-medium",
+                "text_style": "text-math-auto",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "link_product_title": true,
+                "margin_top_desktop": "mt-md-1",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-1",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_price_mPiYmD": {
+              "type": "product-price",
+              "name": "t:names.product_price",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "price_font_size": "fs-16-14",
+                "price_font_weight": "fw-normal",
+                "color": "#0f172b",
+                "sale_price_font_size": "fs-md",
+                "sale_price_font_weight": "fw-normal",
+                "sale_color": "#646465",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_form_rgtaUx": {
+              "type": "product-form",
+              "name": "t:names.product_form",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "form_style": "product-card"
+              },
+              "blocks": {
+                "product_variant_picker_DcRikB": {
+                  "type": "_product-variant-picker",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "variant_picker_type": "swatches",
+                    "show_variant_label": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "title": "Size Guide"
+                  },
+                  "blocks": {}
+                },
+                "buy_buttons_WVqxNC": {
+                  "type": "_buy-buttons",
+                  "name": "Product Buy Buttons",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "show_addtocart": true,
+                    "addtocart_full": true,
+                    "label": "",
+                    "btn_style": "btn-primary",
+                    "size_class": "",
+                    "show_quickview": false,
+                    "quickview_full": false,
+                    "quickview_label": "Quick Shop",
+                    "quickview_icon": "none",
+                    "quickview_btn_style": "btn-primary",
+                    "quickview_size_class": "",
+                    "show_dynamic_checkout": false,
+                    "show_gift_recipient_form": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_variant_picker_DcRikB",
+                "buy_buttons_WVqxNC"
+              ]
+            }
+          },
+          "block_order": [
+            "product_media_card_RihAXw",
+            "product_image_97kn9g",
+            "group_HnV88M",
+            "product_title_qhWPng",
+            "product_price_mPiYmD",
+            "product_form_rgtaUx"
+          ]
+        }
+      },
+      "name": "t:names.products_tabs",
+      "settings": {
+        "fluid_layout": false,
+        "right_side_fullwidth": false,
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-md",
+        "section_top_spacing_mobile": "spacing-top-mobile-md",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "collection_list": [
+          "mens",
+          "womens",
+          "kids"
+        ],
+        "show_shop_all_links": false,
+        "max_products": 16,
+        "slides_per_view": 4,
+        "columns_gap": 0,
+        "slides_per_view_ipad": 2.5,
+        "columns_gap_ipad": 15,
+        "slides_per_view_mobile": 1.5,
+        "columns_gap_mobile": 15,
+        "section_bg_color": "",
+        "ratio": "square",
+        "button_style": false,
+        "button_position": "card_bottom",
+        "nav_arrows": true,
+        "nav_arrows_visible": "show_only_desktop",
+        "nav_arrows_color": "light-arrow",
+        "nav_arrows_size": "",
+        "nav_arrows_outside": "inside",
+        "nav_dots": false,
+        "pagination_visible": "both",
+        "pagination_color": "",
+        "nav_scrollbar": false,
+        "scrollbar_visible": "both",
+        "scrollbar_color": ""
+      }
+    },
+    "global_media_banner_7ipMBE": {
+      "type": "global-media-banner",
+      "blocks": {
+        "image_banner_7Kh9nk": {
+          "type": "_image_banner",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/want-to-join-us_1.jpg",
+            "first_image_mobile": "shopify:\/\/shop_images\/want-to-join-us-Mobile.jpg",
+            "stack_images_on_mobile": true,
+            "hide_second_image": false,
+            "enable_overlay": true,
+            "overlay_on_mobile": true,
+            "overlay_bg_color": "#00000040",
+            "overlay_opacity": 1,
+            "blend_mode": "none",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_VNGitf": {
+              "type": "group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-center",
+                "padding_top_desktop": "pt-md-9",
+                "padding_bottom_desktop": "pb-md-9",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-5",
+                "padding_bottom_mobile": "pb-5",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": "warranty-badge-wrapper"
+              },
+              "blocks": {
+                "group_tFwChM": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-7",
+                    "width_sm": "col-12",
+                    "max_width": 544,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-2",
+                    "padding_right_mobile": "pe-2",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_JYfi9z": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h2>We're creating a \"MOVEMENT Movement\"... want to join us?<\/h2>",
+                        "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                        "text_size": "h1",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#ffffff",
+                        "bottom_line": false,
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_mVHPgJ": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We have a mission: Our goal is to make natural movement the better, obvious, healthy choice… the way natural food is now. Remember the fun you had as a kid on a warm summer day… you would run outside, kick off your shoes and feel the grass, or the sand, or the water between your toes. We know that you can have that feeling NOW, regardless of your age. <\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-sm",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#ffffff",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-5",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_M4fLjz": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 540,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-5",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-5",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "text_z3K7M9": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>The way to start is getting out of stiff, thick, heavy, motion-controlled shoes. Get out of shoes that squeeze your toes. If you don’t want to go barefoot, put on some shoes that let you Feel the Freedom and Feel the Fun of minimalist shoes, boots, and sandals.<\/p>",
+                            "font_family": "font-family-base",
+                            "text_size": "fs-sm",
+                            "font_weight": "fw-normal",
+                            "text_letter_spacing": "",
+                            "text_style": "",
+                            "alignment": "text-md-start",
+                            "alignment_mobile": "text-start",
+                            "color": "#ffffff",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-0",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_z3K7M9"
+                      ]
+                    },
+                    "buttons_9Rjpxa": {
+                      "type": "buttons",
+                      "settings": {
+                        "link": "shopify:\/\/collections\/all",
+                        "custom_video_play_button": false,
+                        "icon": "none",
+                        "label": "Shop The Minimalist Collection",
+                        "style_class": "btn-secondary",
+                        "size_class": "",
+                        "text_style": "",
+                        "open_in_new_tab": false,
+                        "hide_desktop": false,
+                        "hide_mobile": false,
+                        "full_width": false,
+                        "download_link": false,
+                        "download_all_logos_in_the_section": false,
+                        "add_hidden_text_for_SEO": false,
+                        "hidden_text_for_seo": "Hidden Text",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_JYfi9z",
+                    "text_mVHPgJ",
+                    "group_M4fLjz",
+                    "buttons_9Rjpxa"
+                  ]
+                },
+                "custom_liquid_Jmm4BR": {
+                  "type": "custom-liquid",
+                  "name": "Custom Liquid",
+                  "settings": {
+                    "custom_liquid": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_1\" version=\"1.1\" viewBox=\"0 0 136 136\">\n  <path d=\"M77.4,14.7c-2.4-.5-3-2.1-2.6-3.9l1.5.3c-.3,1.1.1,2,1.5,2.3,1.2.3,1.9-.5,2.1-1.3.2-1-.2-1.8-1.8-2.2l-2.7-.6,1-4.2,5.9,1.3-.3,1.2-4.4-1-.4,1.8,1.7.4c1.5.3,3,1.4,2.5,3.6-.4,1.6-1.6,2.7-3.9,2.2ZM87.7,17.3c-.6-.3-.8-.6-.5-1.2.3-.7.8-.6,1.4-.4.7.3,1,.7.5,1.5l-1.3,2-.9-.4.8-1.6ZM97.6,22.8c-2.4-1.8-1.9-3.7-.3-5.9,1.6-2.2,3.3-3.3,5.7-1.5,2.4,1.8,1.9,3.7.3,5.9-1.6,2.1-3.3,3.3-5.7,1.5ZM98.5,17.8c-1.2,1.6-1.7,2.8-.2,3.9,1.5,1.1,2.5.3,3.7-1.3,1.2-1.6,1.7-2.9.2-4-1.5-1.1-2.5-.2-3.7,1.4ZM108.2,31.9c-1.9-2.3-.8-4.1,1.2-5.8,2.1-1.7,4-2.3,5.9,0,1.9,2.4.9,4.1-1.2,5.8-2.1,1.7-4,2.3-5.9,0ZM110.4,27.3c-1.6,1.3-2.4,2.3-1.2,3.8,1.2,1.4,2.4.9,3.9-.3,1.6-1.3,2.4-2.3,1.2-3.8-1.1-1.4-2.4-.9-3.9.4ZM116.1,43.4c-1.2-2.7.2-4.2,2.7-5.3,2.4-1.1,4.5-1.2,5.7,1.5,1.2,2.8-.2,4.2-2.7,5.3-2.4,1.1-4.5,1.2-5.7-1.6ZM119.4,39.6c-1.8.8-2.9,1.6-2.1,3.3.8,1.7,2.1,1.5,3.9.7,1.9-.8,2.9-1.7,2.1-3.4-.7-1.7-2.1-1.5-3.9-.6ZM121.9,61.9l9,.3v2.3c0,0-6.3,2.4-6.3,2.4-.4.1-.8.3-1.2.4,0,0,.8.3,1.1.5l6,2.8v2.3c0,0-9-.3-9-.3v-1.5c0,0,7.1.3,7.1.3l-7-3.3v-1.5c0,0,7.3-2.7,7.3-2.7l-7.1-.3v-1.5ZM121,79.8l8.6,2.5-.4,1.5-8.6-2.5.4-1.5ZM118.3,88.3l8,4.1-.7,1.4-6.8-3.5-1.6,3-1.1-.6,2.3-4.4ZM112.8,98.6l6.8,5.8-4,4.7-1-.8,3-3.6-1.9-1.6-2.8,3.3-.9-.8,2.8-3.3-2-1.7-3,3.6-1-.8,4-4.7ZM93.8,115.3c2.3-1.1,4-.7,5,1.3l-1.4.7c-.6-1.2-1.6-1.4-3.1-.7-1.2.6-1.7,1.3-1.3,2.1.4.8,1.2.6,2.8.3,2.4-.5,3.6-.6,4.3.8.7,1.5,0,2.8-2.1,3.8-2.2,1.1-3.8.7-4.8-1.2l1.4-.7c.6,1.1,1.5,1.4,2.9.7,1.2-.6,1.6-1.2,1.2-1.9-.4-.8-1.1-.6-2.9-.2-2.3.5-3.5.6-4.1-.8-.7-1.5,0-3,2.2-4.1ZM80.1,120.4c3.4-.6,4.6,1.4,5,3.8.4,2.4,0,4.6-3.4,5.2-3.4.6-4.6-1.3-5-3.8-.4-2.4,0-4.6,3.4-5.2ZM83.5,124.5c-.3-1.8-1-3.2-3.2-2.8-2.2.4-2.4,1.9-2.1,3.7.3,1.8,1,3.2,3.3,2.8,2.2-.4,2.4-1.9,2.1-3.7ZM68.8,122.3l-.6,8.9h-1.5c0-.1.6-7.8.6-7.8l-3.4-.2v-1.3c0,0,5,.4,5,.4ZM57.3,121.2l-2.7,8.6-5.9-1.8.4-1.2,4.5,1.4.7-2.4-4.1-1.3.4-1.2,4.1,1.3.8-2.6-4.5-1.4.4-1.2,5.9,1.8ZM35.8,111.5l-4.1,8.4-1.2-1.1,3.5-6.7-6.6,3.8-1.3-1.2,3.4-6.8-6.5,3.9-1.1-1.1,8.1-4.7,1.3,1.3-3.4,6.8,6.6-3.8,1.3,1.3ZM24.4,100.8l-9.5,1.4-1-1.8,6.1-7.3.8,1.4-1.2,1.4,2.2,3.8,1.8-.3.8,1.4ZM20.6,99.9l-1.8-3.2-3.5,4.1,5.3-.9ZM17.1,87.3l-8.7,2.2-.8-3.1c-.8-3.3.7-4,1.9-4.3,2.1-.6,3.1,1,3.5,2.7l2.3-4.5.5,2-2.5,4.4,3.4-.9.4,1.5ZM12.4,87l-.4-1.7c-.5-1.8-1.4-1.8-2-1.6-.7.2-1.5.7-1,2.4l.4,1.7,3.1-.8ZM13.8,73.7H4.9s0-3.2,0-3.2c0-3.4,1.7-3.7,2.9-3.7,2.2,0,2.7,1.8,2.7,3.5l3.4-3.8v2.1s-3.5,3.6-3.5,3.6h3.5s0,1.6,0,1.6ZM9.3,72.1v-1.8c0-1.8-.8-2.1-1.6-2.1-.7,0-1.6.3-1.6,2.1v1.7s3.2,0,3.2,0ZM13.9,60.6l-7.7-5.7.5-2,9.5-.9-.4,1.6h-1.8c0,.1-1.2,4.4-1.2,4.4l1.5,1.1-.4,1.6ZM11.8,57.3l1-3.5-5.4.4,4.4,3.1ZM18.2,45.9l-7.7-4.6,1-1.7,8.3-.4-5.9-3.6.8-1.3,7.7,4.6-1,1.6-8.4.4,6,3.6-.8,1.3ZM27.7,31.5l-5.4-5.5-1.9,1.8-.9-.9,4.8-4.6.9.9-1.9,1.8,5.4,5.5-1.1,1ZM37.6,23l-1.4-2.3-6.1-3.7,1.4-.8,4.8,3.1-.2-5.7,1.4-.8v7.2c0,0,1.4,2.3,1.4,2.3l-1.4.8ZM57.7,12.3c-1.8.2-2.3-.7-2.4-1.8-.1-1.1.1-2.2,1.9-2.4,1.8-.2,2.3.7,2.5,1.8.1,1.1-.1,2.2-1.9,2.4Z\" style=\"fill: #fff;\"\/>\n  <path d=\"M66.6,60.3c0,.2,0,.2.2.2.5.2,1,.5,1.6.7.5.2.5.4.1.8-.4.4-.8.8-1.2,1.3,0,0-.1.1-.2.2-.6.5-1.1,1.2-1.7,1.8-.3.3-.6.6-.9.9-.4.4-.8.8-1.2,1.3-.6.7-1.3,1.3-2,2-.5.6-1.2,1.1-1.7,1.8-.4.5-.9.8-1.3,1.3-.2.2-.4,0-.6,0-.4-.2-.9-.4-1.3-.6-.4-.2-.4-.3-.1-.6.8-1,1.7-1.8,2.6-2.7.3-.4.7-.7,1-1.1.6-.7,1.3-1.4,1.9-2,.5-.6,1.1-1.1,1.5-1.6.8-.9,1.7-1.8,2.5-2.6,0,0,.1-.1.2-.2,0,0,.1-.2.1-.3M36.2,62.8c.5.2.9.5,1.4.8.2.1.4.3.7.3,0,0,0,0,0,0,.4.5,1.1.7,1.6,1,.5.3,1.1.7,1.6.9.7.3,1.4.8,2.1,1.1.7.3,1.3.7,2,1,.5.2.9.5,1.4.7.8.4,1.6.8,2.4,1.1,1.2.5,2.4,1.2,3.6,1.7.5.2,1,.5,1.5.7.5.2.9.5,1.4.6.8.2,1.6.6,2.3.9.8.4,1.7.6,2.5,1,.5.3,1.1.4,1.6.6.5.2,1,.4,1.5.5.2,0,.3.2.3.3M52.5,75.8c.3-1.1-.2-1.7-1-2.2-.3-.2-.7-.4-1.1-.6-.9-.4-1.7-.8-2.6-1.2-.6-.2-1.2-.6-1.8-.8-.6-.2-1.2-.6-1.9-.8-.4-.1-.8-.4-1.3-.6-.6-.3-1.3-.7-1.8-1.1-1.1-.7-2.2-1.3-3.2-2-.4-.3-.9-.6-1.4-.9-.2-.2-.4-.4-.8-.5,0,0-.1-.1-.1-.2,0-.4.2-.8.3-1.2,0-.4.3-.7.3-1.1,0-.2.1-.3.3-.4M35.7,65.1c-.2.4-.2.4.2.6.3.2.5.4.8.6,1.1.8,2.3,1.5,3.4,2.2.6.4,1.2.8,1.9,1.1.5.2.9.5,1.3.7.3.2.7.2,1,.4.5.3,1.1.5,1.7.8.6.3,1.1.5,1.7.8.6.3,1.2.6,1.8.9.4.2.8.5,1.2.7.5.2.8.7,1,1.2,0,.3,0,.5,0,.8M107,71.7c0,.2.2.2.2.3,0,.2.1.4,0,.6,0,0,0,.1,0,.2,0,.4-.1.6-.4.9-.1.1,0,.4-.1.6-.3.6-.7.9-1.2,1.3-.3.3-.7.5-1.1.7-.8.5-1.6.9-2.5,1.2-.6.2-1.2.4-1.8.7-.4.2-.8.3-1.2.4-.6.2-1.1.3-1.7.4-.6.1-1.1.2-1.7.3-.3,0-.6.1-.9,0-.2,0-.3,0-.4.1-.4,0-.8,0-1.3.2-.2,0-.4.1-.5.2-.2.1-.2.3-.1.5,0,.2.2.3.5.2.3,0,.6,0,.9,0,.3,0,.6,0,.9-.1.3,0,.5-.1.8-.3.2-.1.4-.1.5,0,0,.1.2,0,.2,0,.4-.1.9,0,1.3-.2.3-.1.5-.3.7-.5.3-.2.6-.2.8-.1.4,0,.7,0,1.1-.2.6-.2,1.2-.6,1.8-1,.2,0,.4,0,.6,0,.4,0,.7-.2,1.1-.4.6-.3,1.2-.5,1.8-.9.4-.3.8-.7,1.1-1.1.3-.5.8-.9,1-1.5.1-.4.2-.7,0-1M94.7,66.5c.3,0,.6,0,.8,0,0,0,0,0,.1,0,.4-.1.7,0,1,0,.3,0,.6,0,.8,0,.6,0,1.3.2,1.9.2.6,0,1.3.1,1.9.2.5,0,.7.3.9.7,0,.2,0,.4-.1.5-.4.3-.9.6-1.5.8-.7.3-1.3.5-2,.7-.5.2-1,.4-1.5.6-.9.4-1.9.8-2.6,1.5-.3.3-.6.7-.7,1.1-.1.3-.3.6-.4.9-.2.6-.3,1.2-.5,1.7,0,.3-.3.6-.4.9M47.6,75.9c0-.6-.2-1.2-.7-1.5-.6-.3-1.2-.6-1.8-.9-1.1-.5-2.3-1-3.4-1.5-.8-.4-1.6-.8-2.3-1.2-.7-.5-1.5-.9-2.2-1.5-.4-.3-.9-.6-1.3-.9,0,0-.2,0-.3,0M64.3,55.8c-.6-.4-1.3-.7-2.1-.7-.4,0-.8,0-1.2.1-.6.2-1.1.6-1.6.9-.3.2-.4.5-.7.6-.1,0-.2.2-.4.2,0,0,0,0,0,0-.2.5-.6.7-1,1-.3.2-.5.5-.8.7-.8.6-1.6,1.3-2.5,1.9-.6.4-1.3.8-2,1.1-.4.2-.8.4-1.2.6-.6.3-1.3.5-1.9.7-.7.2-1.3.2-2,.1-.7,0-1.3-.3-2-.6-.4-.2-.7-.4-1-.7-.6-.4-1.1-.8-1.6-1.4-.4-.5-.9-.8-1.3-1.3-.5-.5-1.2-.8-1.8-1,0,0-.1,0-.2,0M102,67.5c.5,0,.8,0,1,.5,0,.2,0,.3,0,.5-.2.3-.4.5-.7.7-.5.4-1.1.7-1.6,1-.6.4-1.3.6-2,.9-.8.3-1.6.5-2.3.9-.6.4-1.2.8-1.5,1.6-.4,1-.8,2.1-1.3,3.1,0,0,0,.2,0,.3M46.3,76c.2,0,.4,0,.6-.1.1-.5-.2-1-.6-1.3-.9-.6-2-1-3-1.4-1.1-.5-2.3-1-3.4-1.6-.7-.4-1.3-.8-2-1.2-.6-.4-1.3-.8-1.9-1.3-.1,0-.3-.1-.4-.2M76.1,67.4c-.1,0-.1,0-.2.1-.6.6-1.2,1.2-1.8,1.7-.6.5-1.2,1.1-1.6,1.7-.2.2-.4.4-.6.5-.4.3-.8.7-1.2,1.1-.7.8-1.6,1.4-2.3,2.2-.4.4-.9.4-1.4.3-.4,0-.7-.2-1-.2-.4,0-.6-.2-.5-.7,0,0,0-.1,0-.2M69.3,62.7c-.4.4-.8.8-1.1,1.2-.4.5-.8.9-1.3,1.4-.6.7-1.1,1.3-1.7,1.9-.5.5-.9,1-1.4,1.5-.4.4-.8.8-1.1,1.2-.6.7-1.4,1.4-1.9,2.2,0,0-.1.1-.2.2M106.3,70.7c.1.2,0,.4,0,.6,0,.2-.1.4-.1.7,0,.3-.1.6-.2.9,0,.4-.4.7-.7.8-.5.2-1,.5-1.4.7-.5.3-1.1.5-1.6.7-.7.3-1.3.5-2,.7-.4.1-.8.3-1.2.3-.4,0-.7.2-1.1.3-.7.1-1.4.2-2.1.3-.6,0-1.2.2-1.7.2-.5,0-1,.1-1.5.1-.5,0-1,.2-1.5.2-.2,0-.4,0-.6,0-.9.1-1.9.2-2.9.2-.4,0-.8,0-1.3,0,0,0,0,0,0,0-.4-.2-.8,0-1.2-.1-.2,0-.4,0-.6.1M57.1,59.4c.3.3.8.5,1.2.8.1,0,.3.1.4.2.4.4,1,.5,1.6.6.8.2,1.4,0,2.1-.3.6-.2,1.1-.6,1.7-.7.2,0,.3,0,.5,0,.2,0,.3.1.4.3.2.5,0,.9-.4,1.3-.3.4-.6.7-1,1.1-.5.5-.9,1-1.5,1.4-.7.5-1.3,1.1-1.9,1.7-.8.9-1.8,1.7-2.7,2.6,0,0-.3.1-.4.2M56,57.8c-.4-.1-.5.2-.8.4-.5.4-1,.8-1.6,1.1-1,.6-2.1,1.2-3.3,1.6-.3.1-.7.2-1.1.4-.1,0-.4,0-.6,0-.4,0-.9,0-1.3,0,0,0-.1,0-.2,0M73.7,76.8c.2-.6.4-1.1.5-1.7.3-1.2.7-2.3,1-3.5.2-.7.4-1.3.6-2,0,0,0-.1,0-.2,0-.1,0-.3-.1-.3,0,0-.2,0-.3,0-.3.2-.6.5-.9.8-.7.6-1.3,1.3-2,2-.7.7-1.3,1.3-2,2-.7.7-1.3,1.4-2.1,2.1-.2.2-.4.3-.4.6M71.4,67.7c-.3.2-.6.5-.8.7-.7.7-1.5,1.3-2.3,2-.6.5-1.2,1-1.8,1.5-.3.3-.7.6-1.1.9-.5.4-1,.9-1.5,1.3-.2.2-.4.2-.6,0-.6-.3-1.1-.5-1.7-.8-.2-.1-.5-.2-.7-.3-.5-.2-.5-.2-.5-.7M57,68.9c-.4.3-.7.7-1.2,1-.4.3-.8.5-1.3.5-.5,0-.9,0-1.4-.1-.5-.2-1.1-.4-1.7-.5-.3,0-.6-.2-.9-.3-.3-.1-.6-.2-.9-.3-.4-.2-.8-.4-1.2-.5-.5-.2-.9-.4-1.4-.7-.8-.4-1.5-.8-2.3-1.2-.6-.3-1.1-.6-1.7-.8-.1,0-.2-.1-.3-.2-.5-.3-1-.5-1.5-.8-.6-.3-1.2-.6-1.8-.9-.2,0-.3-.1-.5-.2-.2,0-.4,0-.5.2M78.5,70.8c.2,0,.2-.2.1-.3,0-.4,0-.9,0-1.3,0-.5,0-1,.2-1.5,0-.2,0-.4,0-.6,0-.4.3-.8,0-1.2,0-.1-.2-.2-.2-.3-.4-.2-.7-.4-1.1-.5-.3,0-.6-.2-.9-.3-.3-.1-.5,0-.7.1-.1,0-.3.2-.4.3-.5.5-1.1.9-1.6,1.4-.4.4-.9.8-1.3,1.2-.5.4-.9.8-1.4,1.2-.2.2-.4.3-.6.5-.8.7-1.6,1.4-2.4,2.1-.4.4-.9.7-1.3,1.1-.3.3-.7.5-1,.8,0,0-.1,0-.2,0M37.5,61c.4-.2.7-.5,1.1-.7.9-.4,1.9,0,2.4.7.2.3.5.6.8.8.5.3.9.7,1.5,1,.6.3,1.2.6,1.9.8.3.1.7.3,1.1.3M92,80.3c-.3,0-.5,0-.7.2-.5.5-1.2.6-1.9.5,0,0-.1,0-.2,0-.1,0-.3,0-.3-.1,0,0,0,0-.1-.1-.3-.4-.7-.4-1,0-.1.2-.3.3-.5.3-.4,0-.9,0-1.3,0-.2,0-.4,0-.5-.2-.2-.4-.5-.3-.8-.3s-.7,0-.9.4c0,0,0,0-.2,0-.5,0-.9.1-1.4,0-.2,0-.3,0-.4-.2-.2-.4-.6-.4-.8,0-.3.4-.6.3-1,.3-.3,0-.7,0-1-.1-.2,0-.5,0-.6-.3,0-.1-.2-.1-.3-.2-.1,0-.3,0-.4,0-.1,0-.3,0-.3,0-.2.3-.5.3-.7.2-.4,0-.8,0-1.2,0-.2,0-.4,0-.5-.3,0-.2-.2-.3-.4-.3-.2,0-.2-.2-.2-.3M54.4,77.6s0,0-.1,0c-.5-.3-1-.3-1.5-.2-.3,0-.6,0-.9,0-.2,0-.3-.1-.4,0-.4,0-.9,0-1.3,0-.2,0-.4,0-.7,0-.6,0-1.2-.1-1.8,0-.4-.2-.7-.1-1.1-.1-.7,0-1.3,0-1.8.6-.3.3-.9.4-1.4-.1-.4-.4-.8-.5-1.3-.4-.2,0-.5.1-.7,0M38,79.7c.6,0,1.2.1,1.8.4.4.2,1,.2,1.4.2.6,0,1.1,0,1.7,0,.4,0,.8.2,1.3.1.3,0,.6,0,.8,0,0,0,.1,0,0,.1M63.6,56.4c-.4-.3-.8-.4-1.2-.5-.8-.2-1.4,0-2,.5-.2.2-.3.4-.5.5-.7.6-1.4,1.1-2,1.8-.6.7-1.5,1.2-2.3,1.7-.4.3-.8.5-1.2.8-.5.4-1.2.7-1.8,1-.5.3-1,.4-1.5.8-.1.1-.4.1-.5.2M84.2,67.2c0,.2-.1.1-.2.1-.5-.2-1.1-.1-1.7-.4-.1,0-.3,0-.5,0-.5,0-.9-.3-1.4-.2-.4,0-.6.3-.7.6-.2.6-.2,1.2-.3,1.8,0,.3,0,.6,0,.9-.2.8,0,1.5-.2,2.3,0,.6,0,1.3.2,1.9,0,0,0,.2,0,.3.1.7.4,1.4.7,2,.2.3.3.5.5.8,0,.1.1.2.2.2.3,0,.6.1.8.1.7,0,1.4,0,2.1,0,0,0,.2,0,.2,0M64.5,53.1c0-.1,0-.3,0-.4,0-.2,0-.4-.3-.6,0,0-.1,0-.2-.1-.4-.1-.7-.3-.9-.7-.2-.4-.7-.4-1-.6-.2-.1-.4-.2-.6-.3-.3-.2-.5,0-.6.2-.2.5-.5,1.1-.7,1.6-.3.7-.6,1.3-.9,2-.1.4-.3.7-.5,1.1-.1.3,0,.6.2.8,0,0,.2.2.3.3M101.2,76.6c0,.1-.1.1-.2.2-.6.2-1.2.5-1.9.6,0,0-.2,0-.3,0-.3.1-.5.3-.8.2-.1,0-.2,0-.3.2-.4.6-.9.7-1.5.3-.2-.1-.4-.2-.6-.1-.5.2-1,.1-1.5.2-.6,0-1.1.3-1.6.7-.3.2-.4.2-.6,0-.5-.5-1.1-.4-1.7-.2-.4,0-.8,0-1.3,0-.2,0-.5-.1-.6.2,0,.1-.1.2-.2.3-.3.4-.7.4-1.1.2-.2-.1-.4-.3-.6-.4,0,0-.1-.1-.2,0-.6.2-1.2,0-1.8,0M84,78.8c-.3,0-.6,0-.9,0-.6,0-1.2,0-1.7,0-.2,0-.4,0-.6,0-.6.2-1.2.3-1.8.5-.2,0-.5,0-.7,0-.2,0-.3.1-.5,0M74.6,64.5c-.2-.6-.7-.6-1.1-.8-.8-.4-1.6-.6-2.3-1-.3-.1-.6-.4-1-.4-.2,0-.5-.1-.6.2M38.1,57.7c-.7,0-1.2.3-1.7.8-.5.5-.6,1.1-.9,1.7,0,.2,0,.5,0,.7.1.4.6.6,1.1.4M61.4,79.5c0-.1-.2-.2-.4-.2-.3.1-.6,0-.9,0-.6-.1-1.3-.2-1.9-.4-.3,0-.5-.2-.7-.2-.2,0-.3,0-.5,0M76.2,70.8c0,.4-.2.8-.3,1.3,0,.3-.1.6-.2.9,0,.3,0,.5-.1.8-.1.3-.2.7-.2,1-.1.4.2.8.6,1,.3.1.6,0,.9,0M56.2,75.9c.6,0,1.3.1,1.9,0,.3,0,.6,0,.9.1.7,0,1.3,0,2,.1.7,0,1.4,0,2,.1.3,0,.5,0,.8,0M55.8,75.9c-.9,0-1.8,0-2.7,0-.9,0-1.8,0-2.7,0-.4,0-.9-.2-1.3.1,0,0-.1,0-.2,0-.2-.2-.4-.1-.6,0,0,0-.1,0-.2,0-.3,0-.6-.1-.9,0-.1,0-.2,0-.3,0M39.1,77.2c-.6-.2-1.2-.1-1.8-.4,0,0,0,0,0,0-.7,0-1.2-.4-1.8-.6-.1,0-.2,0-.4-.1M69.7,56.7c-.2-.1-.3,0-.4.2,0,.3-.3.6-.5.9,0,0,0,0-.1,0-.6.1-.7.7-1,1.1-.2.2,0,.5.2.5.6,0,1.1.4,1.6.8.6.4.7.2.9-.3.2-.4.4-.7.8-1,.1-.1.1-.4,0-.5-.2-.2-.5-.4-.8-.5-.2-.1-.3-.3-.2-.5M43.3,75.9c-.7.3-1.5,0-2.2.1-.5,0-1,0-1.6-.1-.5-.2-1.1-.2-1.6-.2-.2,0-.3-.2-.5-.2,0,0-.1,0-.2,0M39.9,78.2c.5,0,1,0,1.5.1.2,0,.4,0,.5,0,.5,0,.9.1,1.2.4.6.4,1.2.5,1.8.3.2,0,.3-.2.5-.2.3-.2.6-.2.9-.2,1,0,1.9,0,2.9.1,1.1,0,2.3,0,3.4.2.4,0,.8,0,1.2,0,.5,0,1,.2,1.5.2.3,0,.7,0,1,.2.4.2.9.2,1.2.6.2.2.5.3.6.5,0,0,.2,0,.3,0,.1,0,.2,0,.2,0M74.7,64.5c-.2.2-.3.5-.5.7-.5.5-1,.9-1.6,1.4-.4.4-.8.7-1.2,1.1M74.9,77c-.3-.1-.6,0-.9-.1-.8,0-1.6,0-2.4-.2-.2,0-.3,0-.5,0-.3,0-.5,0-.8,0-.2,0-.5,0-.8-.1,0,0-.2,0-.2,0M105.9,74.2c0,.2-.2.2-.3.3-1,.6-1.9,1.3-3,1.8-.2,0-.4.1-.6.2-.2,0-.3,0-.4.3M64.3,76.3c.3-.2.6,0,.8,0,.1,0,.3,0,.4,0,.7,0,1.3,0,2,.1.3,0,.6,0,.9,0M35.3,77.2c-.1.3,0,.6.2.8.4.7,1.1,1.2,1.9,1.5.1,0,.2,0,.3.2,0,0,.2,0,.2,0M47,61.3c-.5,0-.9,0-1.4-.1-.6,0-1-.4-1.5-.6-.4-.2-.8-.7-1.1-1-.2-.3-.5-.5-.8-.7-.3-.2-.6-.4-.9-.5-.4-.2-.9-.4-1.4-.5-.5-.1-1-.2-1.5,0,0,0-.1,0-.2,0M75.8,77.2c0,0,0,0,0,0,.1,0,.2,0,.3,0,.9.1,1.8.1,2.7.2.5,0,1,.1,1.5.1.1,0,.3,0,.4,0M64.4,52.1c.4-.1.7,0,1,.2.3.2.7.3,1,.5.1,0,.3.2.4.3,0,.1.2.3,0,.5-.6.6-1.2,1.3-1.7,1.9-.2.2-.3.3-.6.4-.3.2-.6.4-.9.6-.2.1-.2,1-.1,1.2,0,.1.5.2.7.1.3-.2.6-.3.9-.6.2-.2.3-.2.6,0,.5.3,1,.5,1.5.7.3.1.5.3.8.3M78.6,70.8c0,.6-.1,1.1,0,1.7,0,.5,0,.9,0,1.4,0,.4.1.7.1,1.1,0,.5-.3.8-.8.8-.2,0-.5,0-.7,0M45.1,80.3c.3,0,.5,0,.7.1.3.2.6,0,.9,0,.2,0,.5,0,.8-.1,0,0,.2,0,.2,0,.3.1.6,0,.8.2.4.2.8,0,1.2-.1.3,0,.5,0,.7,0,.4,0,.8.2,1.2.1.7-.2,1.4,0,2.1,0,.2,0,.4,0,.6-.1.3-.2.7,0,1,0,.7,0,1.4,0,1.9-.5,0,0,0,0,0,0M35.8,61.4c-.2.1-.2.3-.3.5-.3.8-.6,1.6-.7,2.5,0,.5-.1.9-.1,1.4,0,.2-.1.4,0,.7,0,0,0,.2-.2.2M84.7,64c0,.2-.2.5-.2.8,0,.2,0,.3-.2.5-.1,0-.2.2-.2.4,0,.3,0,.5-.4.6-.4.1-.7,0-.9-.3-.3-.3-.2-.6,0-.9.3-.6.1-1.2,0-1.7,0,0-.1-.1,0-.2.1-.6-.4-.9-.6-1.3-.1-.2-.4-.2-.6-.2M91.2,65.9c0-.3-.4-.3-.6-.3-.7-.2-1.4-.4-2-.6-.4,0-.6-.3-1-.3-.5,0-1.1-.2-1.6-.4-.3-.1-.7,0-1-.3-.1-.1-.3,0-.5,0M61.3,79.8c0,.1.2.2.3.4,0,.2.3.3.5.2.4-.1.9,0,1.3,0,.3,0,.5-.1.6-.3.2-.5.6-.4,1-.3.3,0,.6,0,.9,0,.1,0,.3,0,.5,0,0,0,.2,0,.3,0,.4-.2.8,0,1.2,0,.2,0,.4-.1.7,0M77.6,79.5c-.6,0-1.2.2-1.8.2-.6,0-1.2,0-1.7,0-.5,0-1,0-1.4.1-.2,0-.4,0-.6,0-.3,0-.6.2-.9,0,0,0-.1,0-.2,0-.4.1-.8,0-1.2,0-.2,0-.5,0-.7,0-.1,0-.3.1-.4,0M81.3,61.7c0,0,0,0,0,0-.1,0-.2.3-.4.2-.3,0-.6,0-.9-.2-.1-.2-.3-.3-.4-.5-.2-.4-.6-.5-.9-.7-.4-.2-.9-.4-1.3-.6-.3,0-.4-.4-.6-.6-.4-.4-.8-.6-1.3-.7-.2,0-.4,0-.5,0-.4.2-.4.2-.6-.2-.3-.5-.5-.9-.9-1.3-.3-.3-.6-.5-.8-.7,0,0-.2,0-.3,0-.3.1-.7,0-1,0,0,0-.2,0-.2-.2,0-.1,0-.3,0-.4-.2-.2-.5-.4-.8-.4,0,0-.3,0-.3,0-.1-.1-.2-.3-.2-.5,0-.4,0-.7-.1-1.1,0-.3-.3-.6-.5-.8-.2-.2-.5-.3-.8-.3-.2,0-.3,0-.4.2M64.1,79.8c-.3-.2-.7-.2-1-.2-.5,0-1-.1-1.5-.1,0,0-.1,0-.2,0,0,.3-.3.3-.6.3-.1,0-.2,0-.3.2-.2.4-.6.4-.9.3-.3,0-.7,0-1,.1M103,67.7c.2-.1.4,0,.4,0,.4.4.9.5,1.4.8.6.4,1,1,1.2,1.7,0,.1.1.2.2.3M76.1,63.6c.4.1.8.1,1.3.2.5.1.9.2,1.4.4.2.1.4.2.6.2M60.9,50.3c-.2-.2-.4-.5-.7-.7-.4-.2-.7-.1-1.1.1-.2.2-.3.4-.5.6-.3.4-.2.5.2.5M88.3,65c0,0,0,.2,0,.3.1.7-.1,1.1-.7,1.4-.5.2-1,.3-1.6.4-.6.1-1.2.2-1.8.1M80.9,62.1c0,.4-.3.8-.7,1-.2.1-.3.4-.4.6-.2.2-.2.5-.3.8-.1.2,0,.3.2.5M74.3,60.9c-.2.2-.3.5-.3.8,0,.3-.3.6-.6.6-.3,0-.6-.4-.6-.7,0-.5.2-.9.3-1.3,0-.4.2-.8,0-1.2,0-.2-.1-.3-.2-.4M35.6,65.6c-.2.2-.2.5-.2.7,0,.5,0,.9,0,1.4,0,.4,0,.8.1,1.1,0,.2,0,.4,0,.7,0,.5,0,1.1,0,1.6,0,.4,0,.8,0,1.2,0,.4,0,.9.2,1.3,0,.3.1.6,0,.9M50.6,63.2c-.4,0-.7.2-1.1.4-.3,0-.6.2-.9.2-.2,0-.3.1-.5.1-.6,0-1.1,0-1.7,0M80,63c-.3-.3-.7-.4-1.1-.6-.2,0-.3-.2-.5-.3-.2-.1-.5-.2-.7,0M34.7,66.7c0,.2.1.3,0,.5,0,0,0,0,0,0,.2.7,0,1.4,0,2,0,.7,0,1.3,0,2M36.6,61.7c-.2.2-.3.3,0,.4.3.1.6.4.8.6.3.3.7.5,1,.8.1,0,.2.1.2.3M46.1,75.9c-.4,0-.7.2-1.1,0-.2,0-.4,0-.6,0-.2,0-.5,0-.7,0M77.3,60.1c-.2.3,0,.7,0,1,.1.3.2.7.3,1,0,.2,0,.4-.2.6-.3.3-.5.6-.6,1M80.9,63.9c0-.4.4-.5.6-.8,0,0,.2-.1.2-.3,0-.4-.2-.7-.3-1.1-.2-.5-.5-.6-.9-.8-.4-.2-.8-.3-1.2,0M34.5,71.3c.2,0,.1.2.1.3,0,.6.2,1.2.3,1.8,0,.4.2.8-.1,1.2-.2.4,0,.7,0,1.1,0,.2.1.3,0,.5-.1.4.3,1,.6,1,.5,0,.8.4,1.3.5.7.2,1.5.4,2.2.4,0,0,0,0,0,0M82.6,62.5c.4-.4.4-.4.9-.2.2,0,.4,0,.6.2.3.2.4.4.5.8,0,.2,0,.4.2.6M74.9,59c.3.2.5.5.7.8,0,.1.1.2.1.4,0,.2,0,.4,0,.6,0,.1.1.3,0,.5,0,.2,0,.4.2.5.4.3.7.7,1,1.1M72.5,57.9c.3.2.3.5.3.8-.3.3-.7.5-.8.9M68,54.8c.1.2.1.3.1.5,0,.5,0,1.1-.1,1.6,0,.1,0,.3,0,.4M66.1,56.5c.2.2.4.3.6.4.4.2.7.4,1.1.5.3,0,.3.3.5.5M71.5,80c0,.3.2.6.5.6.4,0,.9,0,1.3,0,.2,0,.3,0,.4-.1.2-.2.4-.3.6-.4M58.4,50.9c0,0-.1,0-.2.1-.2.2-.7,1.3-.7,1.6.2.2.5,0,.7,0M56.7,78.4c-.1,0-.3,0-.3,0-.5-.3-1.1-.4-1.7-.6M73,60.1c-.3,0-.5-.2-.7-.3-.3-.1-.4,0-.7,0-.2.1-.4.3-.7.3-.2,0-.4,0-.5-.2M85.3,64.2c0,.1,0,.3,0,.4,0,.5-.2.7-.8.5M43.5,67.9c0,.2,0,.4,0,.6,0,.3.2.5.5.3,0,0,.1,0,.2-.2M40.9,77.3c-.5,0-1,0-1.5,0M72.3,56.6c0-.2-.4-.5-.6-.5-.2,0-.4,0-.6,0M75.4,59.6c-.2.1-.4.3-.6.4-.1.1-.2.3-.4.4-.2,0-.2.4,0,.5.5.2.9.6,1.5.5M66.9,53.4c.1,0,.3,0,.4,0,.4-.2.6,0,.8.3.2.2.1.5,0,.8,0,.2-.2.3-.3.4-.6.5-1.3,1-1.8,1.7,0,0-.1,0-.2,0-.2,0-.3.2-.4.4M74.3,59.1c-.1.1-.1.3-.1.4,0,.3,0,.7.2,1M76.2,67.2s0,0,.1,0c.4,0,.6.2.5.6-.1.5-.2,1.1-.3,1.6,0,.4-.2.8-.3,1.2M92.9,67c0-.4-.1-.8-.5-1-.4-.2-.8-.3-1.3,0-.2.1-.3.3-.2.5,0,.2.2.5,0,.8.1.1.3.1.4.1M63,52.6c-.2,0-.4,0-.6.2,0,0,0,.2,0,.2.1,0,.3,0,.5,0M93.4,68.4c-.2-.1-.4-.1-.6,0-.2,0-.3,0-.5,0-.1,0-.3-.1-.4,0-.4.2-.7,0-1.1,0M82.8,64.5c-.3-.1-.7-.2-1-.3-.4,0-.8-.3-1.3-.1,0,0-.1,0-.2,0-.2.2-.5.2-.8.2M72.3,57.9c-.2.1-.2.3-.3.5-.2.4-.4.5-.9.3M83.6,62.5c-.1.4,0,.7-.1,1.1,0,.3-.2.6-.5.8M57.6,53.5c0,0-.2,0-.3,0-.1,0-.2,0-.3,0-.2.3-.4.6-.2,1M56.3,56.9c-.4.6-.3,1.3-.3,2M97.1,67.7c-.4,0-.8,0-1.1.1M57.3,54.5c-.1,0-.3,0-.4,0-.2,0-.3,0-.4.3,0,.2,0,.5,0,.7-.1.4-.1.7-.3,1.1M92.1,67.3c-.4,0-.3-.4-.4-.6,0,0,0-.1-.1-.2M41.1,67.2c0,.2,0,.5.3.7.2,0,.3.1.5.1.5,0,.5,0,.6.4M93.1,71.6c-.3,0-.6-.1-1-.2M95.3,70.7c-.3,0-.6-.3-1-.3M57.9,56c-.2,0-.4,0-.6,0-.1,0-.2,0-.3,0M94.2,71.3c-.3,0-.6-.2-.9-.2M75.8,77.1c-.3,0-.5-.1-.8,0,0,0-.1,0-.1,0M69.8,55.7c-.3.2-.2.6-.2.9M71.1,56.7c0,.5.2.8.6,1.1M94,66.4c.1,0,.3,0,.4,0,.1,0,.3,0,.3.2,0,.3.2.3.2.5-.1.3,0,.6.2.9M96,67.9c-.2,0-.4,0-.6,0-.2,0-.3,0-.3.3M92.6,66.1c.4,0,.8,0,1.2.2.2,0,.2.1,0,.3-.1.3,0,.5.1.8,0,.2.2.2.4.2M43.1,68c0,.3.1.5,0,.8M57.5,52.6c-.2.2-.3.5-.3.8M69.2,57.2c.2,0,.3.1.4.2.1,0,.3,0,.4,0M97.5,69.3c-.3,0-.5-.1-.8-.1M88.3,73.4c-.3,0-.5,0-.8,0M98.1,68.4v-.2c0-.4-.2-.5-.6-.5M94.2,68.9c0,.4-.1.4-.6.5M93.2,69.8c0,0,0-.2-.1-.2-.2,0-.3-.1-.5,0M82.6,62.8c.3,0,.5.3.7.4M42.2,66.7c-.2-.1-.4-.1-.6-.3-.2-.1-.4-.2-.7,0M40.7,67.2c0,.3,0,.5.4.4M81.7,63.2c.2.3.1.6,0,.9M35,74.3c.3.1.5.3.7.5.3.2.7.4,1,.5M53.7,64.9c.1,0,.3,0,.4,0,.1,0,.2.1.2.3M97.5,68.8c-.2,0-.4,0-.6-.1M44.4,68.1c-.3-.4-.3-.4-.8-.3-.2,0-.3,0-.5.1-.2,0-.4,0-.4-.4M86,69.5c-.2,0-.5,0-.7,0M56.9,64.7c-.1,0-.2,0-.4,0-.1,0-.3,0-.4,0M63.6,53.5c.2.1.3.3.4.4.2,0,.1-.3.1-.4M40.2,66.9c0,.1,0,.3.1.3.2,0,.4,0,.6-.2M98.7,67.9h.5M97.8,68.8c.3-.1.6,0,.8,0M98.8,68.8c.2-.1.4.1.6,0M34.8,67.6c.2,0,.3.2.5.1M94.8,69.9c.2-.1.4,0,.6.1.2,0,.3,0,.4-.1M68,55.5c-.2,0-.3,0-.5,0-.1,0-.1-.2-.2-.3M98.6,68.4c-.3,0-.5,0-.8,0M92.4,70.1c0,.1,0,.2,0,.3,0,0,0,0-.1.1M97.1,69.8c-.3-.2-.6,0-.8,0,0,0,0,0,0,0M44.1,69.1c-.2,0-.5,0-.7,0M47.5,80.3c0-.2-.2-.2-.3-.2M99.2,69.3c-.2,0-.5,0-.7,0,0,0,0,0,0,.1M41.7,67.4c0,.1,0,.2.2.2.2,0,.3.1.3.3M89.9,71.8c.3,0,.5,0,.8,0M42.4,66.9c0,.3-.2.5-.3.7,0,0,0,0,0,.1M86,80.8c-.1,0-.3,0-.4,0M44.4,68.2c.1.1.1.2.1.4M42.4,67c.1,0,.3,0,.4,0M56.7,56.6c0,.1,0,.2,0,.3-.4,0-.4,0-.4-.3M64.5,52.8h-.3M39.1,78.2c.3,0,.6,0,.7.1M41.7,66.5c0,.2-.3,0-.4.2M62.8,52.1c0,0-.1.2,0,.3M68.3,68.8c.2,0,.3,0,.5,0\" style=\"fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;\"\/>\n<\/svg>",
+                    "text_style": "",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "group_tFwChM",
+                "custom_liquid_Jmm4BR"
+              ]
+            }
+          },
+          "block_order": [
+            "group_VNGitf"
+          ]
+        }
+      },
+      "block_order": [
+        "image_banner_7Kh9nk"
+      ],
+      "name": "t:names.image_banner_with_text",
+      "settings": {
+        "fluid_layout": true,
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "height": "content_height",
+        "ratio_height": false,
+        "caption_style": false,
+        "section_bg_color": "#0F172B"
+      }
+    },
+    "custom_section_Q4d6TG": {
+      "type": "custom-section",
+      "blocks": {
+        "group_w3HYrR": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-wrap",
+            "align_items": "align-items-md-stretch",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-4",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-7",
+            "padding_right_desktop": "pe-md-7",
+            "padding_top_mobile": "pt-4",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-5",
+            "padding_right_mobile": "pe-5",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_JxgVQj": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-6",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-10",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "image_qEQrNM": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/Natural_Movement.jpg",
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "0.8231292517",
+                    "enable_link": false,
+                    "enable_preload": false,
+                    "url": "",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_qEQrNM"
+              ]
+            },
+            "group_EYCt9p": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-6",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-9",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-3",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-7",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": "natural-movement-collapsible"
+              },
+              "blocks": {
+                "group_QMVwgf": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "collapsible_row_pQg6Pk": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Why \"Natural Movement\" minimalist footwear is catching on like crazy...",
+                        "text": "<p>In almost every activity — running, walking, hiking, dancing, yoga, weight lifting, CrossFit, slacklining, rafting — people are RE-discovering the comfort and benefits of getting out of traditional shoes.<br\/><br\/>What’s wrong with regular shoes? Let me ask you this:<br\/><br\/>Do your feet feel better at the end of the day than they did at the beginning, before you put on your shoes?<br\/><br\/>If not, it’s because your shoes aren’t letting your feet do what’s NATURAL — bend, flex, move, and FEEL the world.<br\/><br\/>True comfort — and performance — come from letting your feet do what’s natural. No man-made material has ever improved over what nature has given you.<\/p>",
+                        "page": "",
+                        "open_by_default": true,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {
+                        "group_8e9fKb": {
+                          "type": "group",
+                          "name": "Group",
+                          "settings": {
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "max_width": 0,
+                            "display": "d-flex",
+                            "direction": "flex-md-column",
+                            "direction_mobile": "flex-column",
+                            "wrap": "flex-nowrap",
+                            "align_items": "align-items-md-start",
+                            "align_items_mb": "align-items-start",
+                            "justify_content": "justify-content-md-start",
+                            "justify_content_mb": "justify-content-start",
+                            "padding_top_desktop": "pt-md-2",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-2",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "gap_column": "column-gap-md-0",
+                            "gap_row": "row-gap-md-0",
+                            "gap_column_mobile": "column-gap-0",
+                            "gap_row_mobile": "row-gap-0",
+                            "bg_color": "transparent",
+                            "border": "border-0",
+                            "border_width": 0,
+                            "border_color": "#666666",
+                            "border_radius": 0,
+                            "custom_class": ""
+                          },
+                          "blocks": {
+                            "buttons_pfjdNR": {
+                              "type": "buttons",
+                              "name": "Button",
+                              "settings": {
+                                "link": "shopify:\/\/collections\/all",
+                                "custom_video_play_button": false,
+                                "icon": "none",
+                                "label": "See our Minimalist Shoe Collection",
+                                "style_class": "btn-primary",
+                                "size_class": "btn-sm",
+                                "text_style": "text-math-auto",
+                                "open_in_new_tab": false,
+                                "hide_desktop": false,
+                                "hide_mobile": false,
+                                "full_width": false,
+                                "download_link": false,
+                                "download_all_logos_in_the_section": false,
+                                "add_hidden_text_for_SEO": false,
+                                "hidden_text_for_seo": "Hidden Text",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            }
+                          },
+                          "block_order": [
+                            "buttons_pfjdNR"
+                          ]
+                        }
+                      },
+                      "block_order": [
+                        "group_8e9fKb"
+                      ]
+                    },
+                    "collapsible_row_Gb6wJq": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Don't I need arch support, and motion control?",
+                        "text": "<p>In short, No.<\/p><p>Let’s start with support.  You know that if you “support” a joint — imagine a cast on your elbow — it gets weaker over time.<\/p><p>Well, the same thing happens when you wear shoes that aren’t flexible enough to let you <strong>use<\/strong> your arches naturally.<\/p><p>When it comes to motion control, the research is pretty clear — pronation does NOT cause problems and injuries.<\/p><p>In fact, it’s a natural part of the spring-mechanism built into your feet and legs.<\/p><p>It may take a BIT of time to get used to doing what’s natural, but research shows that simly WALKING in a minimalist shoe builds foot strength as well and doing an actual foot exercise program!<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {
+                        "buttons_xDc94H": {
+                          "type": "buttons",
+                          "name": "Button",
+                          "settings": {
+                            "link": "shopify:\/\/collections\/all",
+                            "custom_video_play_button": false,
+                            "icon": "none",
+                            "label": "Check out our Barefoot-inspired Footwear",
+                            "style_class": "btn-primary",
+                            "size_class": "btn-sm",
+                            "text_style": "",
+                            "open_in_new_tab": false,
+                            "hide_desktop": false,
+                            "hide_mobile": false,
+                            "full_width": false,
+                            "download_link": false,
+                            "download_all_logos_in_the_section": false,
+                            "add_hidden_text_for_SEO": false,
+                            "hidden_text_for_seo": "Hidden Text",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "buttons_xDc94H"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "collapsible_row_pQg6Pk",
+                    "collapsible_row_Gb6wJq"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_QMVwgf"
+              ]
+            }
+          },
+          "block_order": [
+            "group_JxgVQj",
+            "group_EYCt9p"
+          ]
+        }
+      },
+      "block_order": [
+        "group_w3HYrR"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "global_collections_list_akAkgn": {
+      "type": "global-collections-list",
+      "blocks": {
+        "static-section-header": {
+          "type": "_section-header",
+          "name": "t:names.section_header",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-6",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-5",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0
+          },
+          "blocks": {}
+        },
+        "static-collection-card-list": {
+          "type": "collection-card-list",
+          "name": "t:names.collections_list",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "collection_card_Bpkez7": {
+              "type": "collection-card",
+              "name": "t:names.collections_card",
+              "settings": {
+                "collection": "",
+                "collection_img": "shopify:\/\/shop_images\/Women_s-Minimalist.jpg",
+                "custom_url": "",
+                "image_ratio": "portrait-lg",
+                "card_bg_color": "#ffffff",
+                "enable_overlay": true,
+                "enable_overlay_default": false,
+                "overlay_bg_color_default": "transparent",
+                "overlay_bg_color": "#00000026",
+                "overlay_opacity": 1,
+                "blend_mode": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_KcWqFW": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-6",
+                    "padding_bottom_desktop": "pb-md-6",
+                    "padding_left_desktop": "ps-md-5",
+                    "padding_right_desktop": "pe-md-5",
+                    "padding_top_mobile": "pt-5",
+                    "padding_bottom_mobile": "pb-5",
+                    "padding_left_mobile": "ps-4",
+                    "padding_right_mobile": "pe-4",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "collections_title_RRgdEH": {
+                      "type": "collections-title",
+                      "settings": {
+                        "collection": "{{ closest.collection }}",
+                        "collection_title": "<h2>Women’s Minimalist<\/h2>",
+                        "font_size": "h3",
+                        "font_family": "font-family-heading",
+                        "font_weight": "fw-normal",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#ffffff",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_pfDGiQ": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-row",
+                        "direction_mobile": "flex-row",
+                        "wrap": "flex-wrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-5",
+                        "gap_row": "row-gap-md-3",
+                        "gap_column_mobile": "column-gap-5",
+                        "gap_row_mobile": "row-gap-3",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "buttons_EgUJBq": {
+                          "type": "buttons",
+                          "settings": {
+                            "link": "shopify:\/\/collections\/womens",
+                            "custom_video_play_button": false,
+                            "icon": "none",
+                            "label": "Shop Now",
+                            "style_class": "btn-secondary",
+                            "size_class": "btn-sm",
+                            "text_style": "",
+                            "open_in_new_tab": false,
+                            "hide_desktop": false,
+                            "hide_mobile": false,
+                            "full_width": false,
+                            "download_link": false,
+                            "download_all_logos_in_the_section": false,
+                            "add_hidden_text_for_SEO": false,
+                            "hidden_text_for_seo": "Hidden Text",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "buttons_EgUJBq"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "collections_title_RRgdEH",
+                    "group_pfDGiQ"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_KcWqFW"
+              ]
+            },
+            "collection_card_DdK4M3": {
+              "type": "collection-card",
+              "name": "t:names.collections_card",
+              "settings": {
+                "collection": "",
+                "collection_img": "shopify:\/\/shop_images\/Men_s-Minimalist.jpg",
+                "custom_url": "",
+                "image_ratio": "portrait-lg",
+                "card_bg_color": "#ffffff",
+                "enable_overlay": true,
+                "enable_overlay_default": false,
+                "overlay_bg_color_default": "transparent",
+                "overlay_bg_color": "#00000026",
+                "overlay_opacity": 1,
+                "blend_mode": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_iRgTRF": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-6",
+                    "padding_bottom_desktop": "pb-md-6",
+                    "padding_left_desktop": "ps-md-5",
+                    "padding_right_desktop": "pe-md-5",
+                    "padding_top_mobile": "pt-5",
+                    "padding_bottom_mobile": "pb-5",
+                    "padding_left_mobile": "ps-4",
+                    "padding_right_mobile": "pe-4",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "collections_title_YwCy6C": {
+                      "type": "collections-title",
+                      "settings": {
+                        "collection": "{{ closest.collection }}",
+                        "collection_title": "<h2>Men’s Minimalist<\/h2>",
+                        "font_size": "h3",
+                        "font_family": "font-family-heading",
+                        "font_weight": "fw-normal",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#ffffff",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_z7XPKW": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-row",
+                        "direction_mobile": "flex-row",
+                        "wrap": "flex-wrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-5",
+                        "gap_row": "row-gap-md-3",
+                        "gap_column_mobile": "column-gap-5",
+                        "gap_row_mobile": "row-gap-3",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "buttons_3Eq8Rk": {
+                          "type": "buttons",
+                          "settings": {
+                            "link": "shopify:\/\/collections\/mens",
+                            "custom_video_play_button": false,
+                            "icon": "none",
+                            "label": "Shop Now",
+                            "style_class": "btn-secondary",
+                            "size_class": "btn-sm",
+                            "text_style": "",
+                            "open_in_new_tab": false,
+                            "hide_desktop": false,
+                            "hide_mobile": false,
+                            "full_width": false,
+                            "download_link": false,
+                            "download_all_logos_in_the_section": false,
+                            "add_hidden_text_for_SEO": false,
+                            "hidden_text_for_seo": "Hidden Text",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "buttons_3Eq8Rk"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "collections_title_YwCy6C",
+                    "group_z7XPKW"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_iRgTRF"
+              ]
+            },
+            "collection_card_NW8FeC": {
+              "type": "collection-card",
+              "name": "t:names.collections_card",
+              "settings": {
+                "collection": "",
+                "collection_img": "shopify:\/\/shop_images\/Kid_s_Minimalist.jpg",
+                "custom_url": "",
+                "image_ratio": "portrait-lg",
+                "card_bg_color": "#ffffff",
+                "enable_overlay": true,
+                "enable_overlay_default": false,
+                "overlay_bg_color_default": "transparent",
+                "overlay_bg_color": "#00000026",
+                "overlay_opacity": 1,
+                "blend_mode": "none",
+                "border": "none",
+                "border_width": 1,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_YWCeRR": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-6",
+                    "padding_bottom_desktop": "pb-md-6",
+                    "padding_left_desktop": "ps-md-5",
+                    "padding_right_desktop": "pe-md-5",
+                    "padding_top_mobile": "pt-5",
+                    "padding_bottom_mobile": "pb-5",
+                    "padding_left_mobile": "ps-4",
+                    "padding_right_mobile": "pe-4",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "collections_title_PLJ86x": {
+                      "type": "collections-title",
+                      "settings": {
+                        "collection": "{{ closest.collection }}",
+                        "collection_title": "<h2>Kid’s Minimalist<\/h2>",
+                        "font_size": "h3",
+                        "font_family": "font-family-heading",
+                        "font_weight": "fw-normal",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#ffffff",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_bAVxr6": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-row",
+                        "direction_mobile": "flex-row",
+                        "wrap": "flex-wrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-5",
+                        "gap_row": "row-gap-md-3",
+                        "gap_column_mobile": "column-gap-5",
+                        "gap_row_mobile": "row-gap-3",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "buttons_kkAimi": {
+                          "type": "buttons",
+                          "settings": {
+                            "link": "shopify:\/\/collections\/kids",
+                            "custom_video_play_button": false,
+                            "icon": "none",
+                            "label": "Shop Now",
+                            "style_class": "btn-secondary",
+                            "size_class": "btn-sm",
+                            "text_style": "",
+                            "open_in_new_tab": false,
+                            "hide_desktop": false,
+                            "hide_mobile": false,
+                            "full_width": false,
+                            "download_link": false,
+                            "download_all_logos_in_the_section": false,
+                            "add_hidden_text_for_SEO": false,
+                            "hidden_text_for_seo": "Hidden Text",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "buttons_kkAimi"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "collections_title_PLJ86x",
+                    "group_bAVxr6"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_YWCeRR"
+              ]
+            }
+          },
+          "block_order": [
+            "collection_card_Bpkez7",
+            "collection_card_DdK4M3",
+            "collection_card_NW8FeC"
+          ]
+        }
+      },
+      "name": "t:names.collections_on_image",
+      "settings": {
+        "fluid_layout": true,
+        "right_side_fullwidth": false,
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "layout_type": "carousel",
+        "columns": 3,
+        "ipad_columns": 3,
+        "mobile_columns": 1,
+        "slides_per_view": 3,
+        "slides_per_view_ipad": 2.4,
+        "slides_per_view_mobile": 1.2,
+        "columns_gap": 3,
+        "columns_gap_ipad": 3,
+        "columns_gap_mobile": 3,
+        "rows_gap": 30,
+        "rows_gap_ipad": 20,
+        "rows_gap_mobile": 15,
+        "placement": "on_image",
+        "hover_effect": "both",
+        "content_position_area": "bottom",
+        "nav_arrows": true,
+        "nav_arrows_visible": "show_only_desktop",
+        "nav_arrows_color": "light-arrow",
+        "nav_arrows_size": "",
+        "nav_arrows_outside": "inside",
+        "nav_dots": false,
+        "pagination_visible": "both",
+        "pagination_color": "",
+        "nav_scrollbar": false,
+        "scrollbar_visible": "both",
+        "scrollbar_color": "",
+        "section_bg_color": "#ffffff",
+        "display": "d-block",
+        "direction": "flex-row",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-start",
+        "justify_content": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "id_section_header": ""
+      }
+    },
+    "custom_section_GPFTM8": {
+      "type": "custom-section",
+      "blocks": {
+        "group_64cqLK": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-wrap",
+            "align_items": "align-items-md-stretch",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": "minimalist-faqs"
+          },
+          "blocks": {
+            "group_cKnMHN": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-3",
+                "width_md": "col-md-4",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_6aLPqb": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h2>faqs<\/h2>",
+                    "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                    "text_size": "h6",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "bottom_line": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-1",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-1",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "heading_nnfw6E": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>Your Questions, Answered.<\/p>",
+                    "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                    "text_size": "h2",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "bottom_line": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_6aLPqb",
+                "heading_nnfw6E"
+              ]
+            },
+            "group_89i9TC": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-9",
+                "width_md": "col-md-8",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-3",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "faq_dynamic_ADGYca": {
+                  "type": "faq-dynamic",
+                  "name": "Dynamic FAQ",
+                  "settings": {
+                    "faqs": "{{ closest.page.metafields.page.faqs.value }}",
+                    "first_faq_open_by_default": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "faq_dynamic_ADGYca"
+              ]
+            },
+            "group_9XH9ka": {
+              "type": "group",
+              "name": "Group",
+              "disabled": true,
+              "settings": {
+                "width": "col-lg-9",
+                "width_md": "col-md-8",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-2",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": "natural-movement-collapsible faqs-block"
+              },
+              "blocks": {
+                "group_g9RdbA": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "collapsible_row_whcRam": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Are minimalist shoes okay if I have flat feet?",
+                        "text": "<p>Arch height is predominantly genetic and there’s no evidence that flat feet are better\/worse than high arched feet or “normal” feet.<\/p><p>What we think is more important is arch <strong>STRENGTH<\/strong>. And strength in your feet, like every other part of your body, comes from USING your feet naturally — letting them bend, flex, move, and FEEL your world.<\/p><p>It’s possible that by strengthening your foot muscles, you could develop or improve your arch.<\/p><p><a href=\"https:\/\/journals.sagepub.com\/doi\/abs\/10.1177\/2473011418S00406\" target=\"_blank\">Research from Dr. Sarah Ridge<\/a> shows that merely walking in a truly minimalist shoe improves foot muscle strength as much as doing a concentrated exercise program for your feet (and it’s easier to work that into your daily life).<\/p>",
+                        "page": "",
+                        "open_by_default": true,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_8U6bPb": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Can you run in minimalist shoes?",
+                        "text": "<p>Run. Walk. Hike. Do yoga. Do CrossFit. Dance. Climb. Hang out with your friends.<\/p><p>People do pretty much everything in minimalist shoes like Xero Shoes.<\/p><p>Check out the reviews for each product and you’ll hear some amazing stories.<\/p><p>As your feet get used to doing what’s natural — bend, flex, move, balance, and FEEL — you’ll find that you can use minimalist shoes and sandals for almost everything you do.<\/p><p>Sure, there are some times where you might want a bit more protection, and we recommend doing what’s SMART, not being attached to any specific idea about what’s right.<\/p><p>If you need to wear a pair of high heels for a few hours, that’s fine… just get back to what’s natural as soon as you’re able.<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_nieUNc": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Do minimalist running shoes help reduce injury?",
+                        "text": "<p>The premise of minimalist shoes (and barefoot running) is that a more natural movement style, one that should be easier in a minimalist shoe, will reduce injuries.<\/p><p>Anecdotal evidence (like the tens of thousands of reviews for Xero Shoes) and some simple, critical thinking (e.g. your muscles, ligaments, and tendons can outperform foam cushioning that starts to break down the moment you start using it), paints a positive picture.<\/p><p>Unfortunately, the companies that make truly minimalist shoes, including Xero Shoes, simply don’t have the resources to fund the long term study that could definitively answer this question.<\/p><p>To find out more about why researchers think that traditional padded, motion controlled, arch support running shoes may be the CAUSE of running injuries, and why truly minimalist shoes could be better, check out these resources (opens in a new tab):<\/p><p><a href=\"https:\/\/www.sciencedirect.com\/science\/article\/pii\/S2095254617300492\">https:\/\/www.sciencedirect.com\/science\/article\/pii\/S2095254617300492<\/a><\/p><p><a href=\"http:\/\/freakonomics.com\/podcast\/shoes\/\" target=\"_blank\">http:\/\/freakonomics.com\/podcast\/shoes\/<\/a><\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_N4Gr7m": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Do minimalist shoes help with plantar fasciitis?",
+                        "text": "<p>I’m hoping you mean “treat” it, and not cause it 😉<\/p><p>Again, we’re not doctors, and Xero Shoes are not medical devices, and we would never give advice without more information about your situation.<\/p><p>Also, it’s possible that you THINK you have plantar fasciitis, but actually have something else going on (more about that in a moment).<\/p><p>There are a number of medical practitioners and researchers who treat “PF” with natural movement.<\/p><p>In short, USING your feet naturally and building up foot muscle strength can be a more effective intervention than immobilizing your feet with, say, an orthotic or arch support.<\/p><p>After all, when you immobilize any joint (imagine your arm in a cast), it gets weaker by not using it. Research shows the same is true with your foot.<\/p><p>We have a few resources and articles about PF on our site that you may find useful:<\/p><p><a href=\"https:\/\/xeroshoes.com\/barefoot-walking\/plantar-fasciitis-and-walking-barefoot\/\" target=\"_blank\">https:\/\/xeroshoes.com\/barefoot-walking\/plantar-fasciitis-and-walking-barefoot\/<\/a><br\/><a href=\"https:\/\/xeroshoes.com\/running\/tips-cure-plantar-fasciitis-barefoot\/\">https:\/\/xeroshoes.com\/running\/tips-cure-plantar-fasciitis-barefoot\/<\/a><br\/><a href=\"https:\/\/xeroshoes.com\/barefoot-running-tips\/can-cure-plantar-fasciitis-barefoot-running\/\" target=\"_blank\">https:\/\/xeroshoes.com\/barefoot-running-tips\/can-cure-plantar-fasciitis-barefoot-running\/<\/a><\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_jmbarb": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "How do I transition to minimalist shoes?",
+                        "text": "<p>Simple: Take your time<\/p><p>When switching from a traditional shoe to a minimalist shoe, it’s likely that you’ll be using muscles you haven’t used in a while.<\/p><p>It’s also likely that you’ll OVER-use muscles that you don’t need to use that much when you’re walking more naturally.<\/p><p>So try wearing the new shoe for an hour or two and then see how you feel the next day. A little muscle soreness? Then wait until that passes and try again, focusing on RELAXING as you walk.<\/p><p>Once you can comfortably and enjoyably walk for a couple hours, then add some more time — say 30-60 minutes. When that feels good, simply keep slowly adding more time until you’re comfortable all day, every day in your minimalist shoes.<\/p><p>If you want to use minimalist running shoes, the basic idea is the same as above, but start with a TINY run — like 20-30 seconds.<\/p><p>If something hurts, change your gait until you’re having fun 😉<\/p><p>We have more tips in the “Learn More” section of our site.<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_UKyjxX": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "What do doctors and other experts think about minimalist running shoes?",
+                        "text": "<p>Check out this article from the Wall Street Journal, <a href=\"https:\/\/www.wsj.com\/articles\/how-can-you-make-running-less-painful-1523280896\" target=\"_blank\"><em>How Can You Make Running Less Painful?<\/em><\/a>. It actually RECOMMENDS Xero Shoes!<\/p><p>Or see <a href=\"https:\/\/xeroshoes.com\/shoes\/pickarunningshoe\/\" target=\"_blank\">this post<\/a> about what doctors from the American College of Sports Medicine recommend.<\/p><p>Here’s the short version:<\/p><p>\"The American College of Sports Medicine… recommends shoes with a heel-to-toe height differential, or drop, of no more than 6 millimeters, or about a quarter of an inch… buying shoes that are neutral, meaning without extra arch support or rigid motion-control components. The shoes should have enough forefoot room that runners can wiggle their toes easily and shouldn’t have excessive cushioning.\"<\/p><p>If you think that describes Xero Shoes, you’re correct.<\/p><p>You may also want to check out the Freakonomics podcast about minimalist and barefoot running, <a href=\"http:\/\/freakonomics.com\/podcast\/shoes\/\" target=\"_blank\">These Shoes are Killing Me<\/a>, as well as Harvard’s Dr. Irene Davis’s <a href=\"https:\/\/jointhemovementmovement.com\/episode\/dr-irene-davis-change-of-heart-from-orthotics-to-natural-foot-movement\/\" target=\"_blank\">“Join The MOVEMENT Movement” podcast interview<\/a> or her interview, <a href=\"https:\/\/www.youtube.com\/watch?v=S8cW3HABncY&ab_channel=RunnersConnect\" target=\"_blank\">“Has our Footwear Outgrown Our Feet?”<\/a> (check out what she says starting at 41:50!)<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_Lgqn8V": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "What makes a shoe “minimalist”?",
+                        "text": "<p>Many shoes are sold with the term “minimalist” or “barefoot,” but most of those don’t actually meet the criteria for a truly minimalist product.<\/p><p>And research from Harvard’s Dr. Irene Davis shows that these “partial” minimalist shoes could be the worst thing you could wear.<\/p><p>A <strong>TRULY minimalist <\/strong>shoe — like Xero Shoes — will typically have these features:<\/p><ul><li>NO heel lift, also known as zero-drop<\/li><li>VERY flexible sole (you can roll it up into a ball)<\/li><li>A low-to-the-ground design (a 4-12mm “stack height”)<\/li><li>A foot-shaped design rather than a pointy toe<\/li><li>NO unnecessary arch support<\/li><li>A sole that’s thin enough to let you FEEL the ground (while still providing protection)<\/li><\/ul><p>This also results in a lightweight shoe (though there are lightweight shoes that are far from minimalist).<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_q9qX37": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "What’s the difference between minimalist shoes and barefoot shoes?",
+                        "text": "<p>Sometimes they’re one and the same (in the case of <strong>most<\/strong> Xero Shoes, for example… I’ll explain why I said “most” in a moment).<\/p><p>Both terms are often used incorrectly to promote products that don’t deliver.<\/p><p>Here’s an example — we regularly have people come to our office wearing a shoe they’ve been told is “minimalist” or “barefoot.”<\/p><p>We’ll have them put on <strong>ONE<\/strong> Xero Shoe and take a walk, so they can feel the difference between their two feet.<\/p><p>Within two steps they’ll turn around, eyes wide open, and say something like, “Oh! That’s a WHOLE different feeling!”<\/p><p>What’s the difference? One is the freedom in the wide Xero Shoes toe box. Then the flexibility of the sole. And then, the amount of sensation they safely feel from the ground.<\/p><p>For most major brands, their minimalist shoe is simply a lighter version of their regular shoe, with a bit less cushioning and less heel lift… but often still the same narrow, pointy toe box, and too much padding between you and the ground.<\/p><p>At the top of this, I said “MOST” Xero Shoes are “barefoot.” We design our products to let your feet do what’s natural — bend, flex, move, and FEEL the world.<\/p><p>For some products, though, we get a bit less barefoot and a bit more minimal. For example, our hiking boots and trail running shoes have a BIT more cushioning\/protection and, therefore, have a <strong>bit<\/strong> less ground feel than our road running and racing shoes.<\/p><p>But we always maintain true minimalist characteristics:<\/p><ul><li>Wide toe boxes to let your toes splay and spread<\/li><li>Low-to-the-ground designs for balance and agility<\/li><li>Flexible soles for natural movement<\/li><li>No heel lift for proper posture<\/li><li>Lightweight enough that you might forget you’re wearing them<\/li><\/ul><p>And all our shoes, boots, and sandals are backed with our 5,000 mile sole warranty.<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_NKRnKr": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Where can I buy minimalist shoes?",
+                        "text": "<p>If you want Xero Shoes, then you can get them here at XeroShoes.com.<\/p><p>We also have dealers all around the world. Check out our <a href=\"https:\/\/xeroshoes.com\/stores\/\" target=\"_blank\">Store Locator<\/a> for a current list… and check back often since we have more dealers coming on board every week.<\/p><p>For other brands, check their websites.<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_cyKXhB": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Why would I want minimalist running shoes?",
+                        "text": "<p>In short, because they could be better for you than typical padded, motion control, stiff, thick running shoes by letting your feet work in a way that’s more natural, closer to barefoot.<\/p><p>That is, compared to regular running shoes (and this is true also for sport sandals, hiking boots, and even casual shoes), they let your feet bend, flex, move, and feel the ground better. They’re also lighter weight and have less motion controlling design elements.<\/p><p>This should let your muscles, ligaments, and tendons work as the natural springs and shock absorbers they’re meant to be. And it should help you run with a better stride — not reaching out too far with your foot and landing heel-first (which sends a spike of force up through your joints).<\/p><p>Here are some comments from Harvard’s Dr. Irene Davis when she was on the <a href=\"http:\/\/freakonomics.com\/podcast\/shoes\/\" target=\"_blank\">Freakonomics podcast:<\/a><\/p><p><em>\"There was a recent study by a group in Brazil… and they actually randomized these women who had knee osteoarthritis into one of two groups.<\/em><\/p><p><em>One group stayed in a pair of cushioned shoes and the other group were given this five-dollar — in U.S. dollars — pair of shoes that were highly flexible.  And what they found is, number one, their mechanics were more normal in the minimal shoe.<\/em><\/p><p><em>But more importantly to these patients, they had significant reduction in their pain medication, and significant improvement in their functional outcomes. That’s just with a pair of minimal shoes.<\/em><\/p><p><em>It’s interesting. In the beginning, I really didn’t think footwear mattered. As time went on and my thinking evolved, I started to understand how much footwear impacts our mechanics.<\/em><\/p><p><em>If you take someone who has run barefoot all their life, and you put them in a pair of shoes, they’re very likely, when they’re running without shoes, to land on the ball of their foot because it hurts to land on your heel. But if you put them in a pair of cushioned shoes, they will very likely transition to landing on their heel. That actually creates a cascade of events that happen up the lower extremity and up to the hip.<\/em><\/p><p><em>I’m going to suggest that when we put a pair of shoes on that has cushioning like that it actually creates a mismatch between the way we were adapted to run, which is on the ball of our foot, and the way that we run today. That mismatch results in mechanics that we have shown to be related to injury.<\/em><\/p><p><em>Then we’ve got shoe companies who are very much invested in the cushioning, the support, and all of the technology that they put into shoes.\"<\/em><\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    },
+                    "collapsible_row_e3AR6R": {
+                      "type": "collapsible-row",
+                      "name": "Collapsible Row",
+                      "settings": {
+                        "width": 12,
+                        "heading": "Will minimalist shoes help knee pain?",
+                        "text": "<p>We’re not doctors and can’t comment on a specific situation.<\/p><p>That said, a <a href=\"https:\/\/www.academia.edu\/25808423\/Joint_loading_decreased_by_inexpensive_and_minimalist_footwear_in_elderly_women_with_knee_osteoarthritis_during_stair_descent\" target=\"_blank\">study by Dr. Isabel Sacco<\/a> put elderly women with knee osteoarthritis in a minimalist shoe and found that simply walking in a minimalist shoe reduced knee loading forces.<\/p><p>Why is that important?<\/p><p>From Dr. Sacco’s paper, “Reduction in knee loading is considered one of the most important therapeutic objectives in treating OA (osteoarthritis), as overload increases the risk of incidence and progression of the disease.”<\/p>",
+                        "page": "",
+                        "open_by_default": false,
+                        "text_color": "#1d293d"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "collapsible_row_whcRam",
+                    "collapsible_row_8U6bPb",
+                    "collapsible_row_nieUNc",
+                    "collapsible_row_N4Gr7m",
+                    "collapsible_row_jmbarb",
+                    "collapsible_row_UKyjxX",
+                    "collapsible_row_Lgqn8V",
+                    "collapsible_row_q9qX37",
+                    "collapsible_row_NKRnKr",
+                    "collapsible_row_cyKXhB",
+                    "collapsible_row_e3AR6R"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_g9RdbA"
+              ]
+            }
+          },
+          "block_order": [
+            "group_cKnMHN",
+            "group_89i9TC",
+            "group_9XH9ka"
+          ]
+        }
+      },
+      "block_order": [
+        "group_64cqLK"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "custom_section_HDUfxe": {
+      "type": "custom-section",
+      "blocks": {
+        "group_A4pwYm": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_LKTeNY": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-center",
+                "justify_content_mb": "justify-content-center",
+                "padding_top_desktop": "pt-md-6",
+                "padding_bottom_desktop": "pb-md-6",
+                "padding_left_desktop": "ps-md-9",
+                "padding_right_desktop": "pe-md-9",
+                "padding_top_mobile": "pt-4",
+                "padding_bottom_mobile": "pb-4",
+                "padding_left_mobile": "ps-5",
+                "padding_right_mobile": "pe-5",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "#F3F0EA",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_iyeAXN": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h2>Still Have Questions About Minimalist Shoes?<\/h2>",
+                    "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                    "text_size": "h4",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-center",
+                    "alignment_mobile": "text-center",
+                    "color": "#0f172b",
+                    "bottom_line": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-3",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-3",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_f4RBjf": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>If you have questions what you can do in minimalist running shoes or sandals, check the Frequently Asked Questions, FAQs, below. If you still want additional help, reach out to our Customer Happiness Team. You can email them at support@xeroshoes.eu.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-center",
+                    "alignment_mobile": "text-center",
+                    "color": "#1d293d",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_iyeAXN",
+                "text_f4RBjf"
+              ]
+            }
+          },
+          "block_order": [
+            "group_LKTeNY"
+          ]
+        }
+      },
+      "block_order": [
+        "group_A4pwYm"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-xs",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-xs",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-xs",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_8rAmFa",
+    "main",
+    "custom_section_q8f9tN",
+    "custom_section_yRfKNa",
+    "global_product_tabs_qYbhkX",
+    "global_media_banner_7ipMBE",
+    "custom_section_Q4d6TG",
+    "global_collections_list_akAkgn",
+    "custom_section_GPFTM8",
+    "custom_section_HDUfxe"
+  ]
+}

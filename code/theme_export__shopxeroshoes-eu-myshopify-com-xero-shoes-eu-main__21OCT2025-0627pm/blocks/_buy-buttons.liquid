@@ -1,0 +1,516 @@
+{% liquid
+  assign product = block.settings.product
+  assign product_form_id = 'productform' | append: product.id | append: '-' | append: section.id
+  assign url =  product.url
+%}
+
+<div class="product_buy_buttons d-flex flex-column" {{ block.shopify_attributes }} {% if product.options.size == 1 %}{% unless product.tags contains 'donate' %}data-only-one-option="true"{% endunless %}{% endif %}>
+  {%- if product != blank -%}
+    {%- form 'product',
+      product,
+      id: product_form_id,
+      class: 'form d-flex flex-row gap-2',
+      novalidate: 'novalidate',
+      data-type: 'add-to-cart-form',
+      data-url: url
+    -%}
+      <input
+        type="hidden"
+        name="id"
+        value="{{ product.selected_or_first_available_variant.id }}" >
+        
+        {%- if product.gift_card? and block.settings.show_gift_recipient_form -%}
+          <div class="row">
+          {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
+          </div>
+        {%- endif -%}
+        {%  if product.tags contains 'donate' %}  
+        <p class="mb-0 h5 fs-17-16">Limited Quantities Available.</p>
+
+        <div class="form-floating mb-3 donate-input-container">
+            <input data-donate-price type="text" id="donateInput" name="properties[_donate_price]" class="form-control" placeholder="Name Your Price ( $ )">
+            <label for="floatingInput">Name Your Price ( $ )</label>
+            <div id="dollarError" class="error-message hidden"></div>
+        </div>
+       
+        {% endif %}
+        {%- if block.settings.show_addtocart -%}
+        <button {% if product.tags contains 'donate' %}disabled{% endif %} class="{% if template == 'product' %}disabled{% endif %} {% if product.tags contains 'donate' %} donate-product-add-cart{% endif %} btn {% if template.name == 'product' %}product-add-cart{% endif %} {{ block.settings.btn_style }} {{ block.settings.size_class }} {% if block.settings.addtocart_full %}flex-grow-1{% endif %}"
+                type="submit"
+                name="add"
+                form="{{ product_form_id }}"
+                aria-label="{{ 'products.product.add_to_cart' | t | escape }}" 
+                {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+                <span class="add-text">
+                    {%- if block.settings.label != blank -%}
+                        {{ block.settings.label }}
+                    {%- else -%}
+                        {%- if product.selected_or_first_available_variant.available -%}
+                        {{ 'products.product.add_to_cart' | t }}
+                        {%- else-%}
+                        {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
+                    {%- endif -%}
+                </span>
+                <span class="px-1 d-lg-none"> - </span>
+                <span data-currentprice class="d-lg-none">{{ product.selected_or_first_available_variant.price | money }}</span>
+                <span class="spinner-border"></span>
+            </button>
+            {% if template.name == 'product' %}
+                 {% unless product.tags contains 'donate' %} 
+                <div data-stickyBtn class="d-none sticky-add-to-cart d-flex flex-column gap-2" >
+                <div class="sticky-add-to-cart-item d-flex align-items-center">
+                    <div class="sticky-add-to-cart-item-image d-md-flex d-none">
+                        {% assign sticky_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+                        {% if sticky_image != blank %}
+                        <img src="{{ sticky_image | image_url: width: 134 }}" alt="{{ sticky_image.alt }}" width="67" height="67" class="w-100 h-100 object-fit-contain" data-feauredImage>
+                        {% else %}
+                            {% render 'placeholder-image' %}
+                        {% endif %}
+                    </div>
+                    <div class="flex-column sticky-add-to-cart-item-content gap-2 px-4 w-100 d-md-flex d-none">
+                        <div class="font-family-heading fs-lg fw-medium lh-12 ls-2 sticky-add-to-cart-item-title">{{ product.title }}</div>
+                        <div class="sticky-add-to-cart-item-price font-family-heading fs-16 fw-normal lh-12 ls-2" data-currentPrice data-sticky-add-to-cart-price>{{ product.selected_or_first_available_variant.price | money }}</div>
+                    </div>
+                    <button class="{% if template == 'product' %}disabled{% endif %} btn btn-sm {{ block.settings.btn_style }} {{ block.settings.size_class }} {% if block.settings.addtocart_full %}flex-grow-1{% endif %}"
+                        type="submit"
+                        name="add"
+                        form="{{ product_form_id }}"
+                        aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
+                        {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+                        <span class="add-text">
+                            {%- if block.settings.label != blank -%}
+                                {{ block.settings.label }}
+                            {%- else -%}
+                                {%- if product.selected_or_first_available_variant.available -%}
+                                {{ 'products.product.add_to_cart' | t }}
+                                {%- else-%}
+                                {{ 'products.product.sold_out' | t }}
+                                {%- endif -%}
+                            {%- endif -%}
+                        </span>
+                        <span class="px-1 d-lg-none"> - </span>
+                        <span data-currentprice class="d-lg-none">{{ product.selected_or_first_available_variant.price | money }}</span>
+                        <span class="spinner-border"></span>
+                    </button>
+                    </div>
+                </div>
+                {% endunless %}
+            {% endif %}
+        {%- endif -%}
+
+      {% comment %} Dynamic Checkout Button {% endcomment %}
+      {%- if block.settings.show_dynamic_checkout -%}
+        {{ form | payment_button }}
+      {%- endif -%}
+
+        {%- if block.settings.show_quickview -%}
+            <quick-shop-button class="btn {{ block.settings.quickview_btn_style }} {{ block.settings.quickview_size_class }} {% if block.settings.quickview_full %}flex-grow-1 {% endif %}quickshop--button" data-handle="{{ product.handle }}">
+                {%- if block.settings.quickview_icon != 'none' -%}
+                    <svg aria-hidden="true" focusable="false" style="width:22px;height:22px;margin:auto;" class="icon-block__icon"><use href="#{{ block.settings.quickview_icon }}"></use></svg> 
+                {%- endif -%}
+                {%- if block.settings.quickview_label != blank -%}
+                    {{ block.settings.quickview_label }}
+                {%- endif -%}
+            </quick-shop-button>
+        {%- endif -%}
+    {%- endform -%}
+  {%- endif -%}
+</div>
+
+{% if product.tags contains 'donate' %}
+ <script>
+    function validateDollarInput(input) {
+        const errorElement = document.getElementById('dollarError');
+        const submitButton = document.querySelector('.donate-product-add-cart');
+        
+        // Get current value and cursor position
+        let value = input.value;
+        let inputMinValue = 1;
+        if (input.min && parseFloat(input.min) > 0) {
+            inputMinValue = parseFloat(input.min) ?? 1;
+        }
+        const cursorPosition = input.selectionStart;
+        
+        // Remove any non-numeric characters except decimal point
+        let cleanedValue = value.replace(/[^0-9.]/g, '');
+        
+        // Ensure only one decimal point
+        const decimalCount = (cleanedValue.match(/\./g) || []).length;
+        if (decimalCount > 1) {
+            cleanedValue = cleanedValue.replace(/\.+$/, '');
+            const parts = cleanedValue.split('.');
+            cleanedValue = parts[0] + '.' + parts.slice(1).join('');
+        }
+        
+        // Limit decimal places to 2
+        if (cleanedValue.includes('.')) {
+            const parts = cleanedValue.split('.');
+            if (parts[1].length > 2) {
+                parts[1] = parts[1].substring(0, 2);
+                cleanedValue = parts.join('.');
+            }
+        }
+        
+        // Update the input value (only numbers and decimal, no $)
+        if (value !== cleanedValue) {
+            input.value = cleanedValue;
+            // Adjust cursor position
+            const adjustedPosition = cursorPosition - (value.length - cleanedValue.length);
+            input.setSelectionRange(adjustedPosition, adjustedPosition);
+        }
+        
+        // Validate the final numeric value
+        const numericValue = parseFloat(cleanedValue);
+        const isValid = /^\d*\.?\d*$/.test(cleanedValue) && 
+                        cleanedValue !== '' && 
+                        cleanedValue !== '.' && 
+                        !isNaN(numericValue) && 
+                        numericValue >= inputMinValue;
+        
+        
+        // Update submit button state
+        submitButton.disabled = !isValid;
+        
+        // Update styling and messages
+        if (cleanedValue === '' || cleanedValue === '.') {
+            input.classList.remove('input-error', 'input-success');
+            errorElement.classList.add('hidden');
+        } else if (isValid) {
+            input.classList.remove('input-error');
+            input.classList.add('input-success');
+            errorElement.classList.add('hidden');
+        } else {
+            input.classList.remove('input-success');
+            input.classList.add('input-error');
+            
+            if (numericValue === 0) {
+                errorElement.textContent = 'Zero values are not accepted';
+            } else if (numericValue < inputMinValue) {
+                errorElement.textContent = `Please enter minimum value $${inputMinValue}`;
+            } else if (value.includes('-')) {
+                errorElement.textContent = 'Negative values are not allowed';
+            } else {
+                errorElement.textContent = 'Please enter a valid positive dollar amount';
+            }
+            errorElement.classList.remove('hidden');
+        }
+        
+        return isValid;
+    }
+    
+    function handleSubmit() {
+        const dollarInput = document.getElementById('donateInput');
+        const numericValue = parseFloat(dollarInput.value);
+        
+        if (!isNaN(numericValue) && numericValue > 0) {
+           /* resultMessage.textContent = `Successfully submitted: $${numericValue.toFixed(2)}`;
+            resultElement.classList.remove('hidden');
+            resultElement.classList.remove('bg-yellow-50');
+            resultElement.classList.add('bg-green-50');
+            resultMessage.classList.remove('text-yellow-700');
+            resultMessage.classList.add('text-green-700'); */
+            
+            // Optional: Clear the input after successful submission
+            setTimeout(() => {
+                dollarInput.value = '';
+                dollarInput.classList.remove('input-error', 'input-success');
+                document.getElementById('dollarError').classList.add('hidden');
+                document.querySelector('.donate-product-add-cart').disabled = true;
+                // resultElement.classList.add('hidden');
+            }, 3000);
+        }
+    }
+    
+    // Add event listeners
+    document.addEventListener('DOMContentLoaded', function() {
+        const dollarInput = document.getElementById('donateInput');
+        const submitButton = document.querySelector('.donate-product-add-cart');
+        
+        // Initialize with empty value (dollar sign is shown as prefix)
+        dollarInput.value = '';
+        dollarInput.placeholder = '0.00';
+        
+        // Add input event listener
+        dollarInput.addEventListener('input', function() {
+            validateDollarInput(this);
+        });
+        
+        // Add submit button click listener
+        submitButton.addEventListener('click', handleSubmit);
+        
+        dollarInput.addEventListener('blur', function() {
+            let value = this.value;
+            const numericValue = parseFloat(value);
+            
+            if (value === '' || value === '.' || isNaN(numericValue) || numericValue === 0) {
+                this.value = '';
+                this.classList.remove('input-error', 'input-success');
+                document.getElementById('dollarError').classList.add('hidden');
+                document.querySelector('.donate-product-add-cart').disabled = true;
+            }
+        });
+        
+        dollarInput.addEventListener('focus', function() {
+            // Ensure cursor is at the end when focusing
+            this.setSelectionRange(this.value.length, this.value.length);
+        });
+        
+        dollarInput.addEventListener('keydown', function(e) {
+            // Allow Enter key to submit when button is enabled
+            if (e.keyCode === 13 && !submitButton.disabled) {
+                e.preventDefault();
+                handleSubmit();
+                return;
+            }
+            
+            // Allow navigation keys
+            if ([8, 9, 13, 27, 37, 38, 39, 40, 46].includes(e.keyCode)) {
+                return;
+            }
+            
+            // Allow Ctrl/Command + A, C, V, X
+            if ((e.ctrlKey || e.metaKey) && [65, 67, 86, 88].includes(e.keyCode)) {
+                return;
+            }
+            
+            // Check if the key is a number, decimal, or allowed keys
+            if (!((e.keyCode >= 48 && e.keyCode <= 57) || // numbers
+                    (e.keyCode >= 96 && e.keyCode <= 105) || // numpad numbers
+                    e.keyCode === 190 || e.keyCode === 110 || // decimal point
+                    e.keyCode === 8 || e.keyCode === 46)) { // backspace, delete
+                e.preventDefault();
+            }
+        });
+        
+        // Handle paste event
+        dollarInput.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+            let cleanedText = pastedText.replace(/[^0-9.]/g, '');
+            
+            // Get current cursor position
+            const cursorPos = this.selectionStart;
+            const currentValue = this.value;
+            
+            // Insert the cleaned text at cursor position
+            const newValue = currentValue.substring(0, cursorPos) + 
+                            cleanedText + 
+                            currentValue.substring(cursorPos);
+            
+            // Update input and trigger validation
+            this.value = newValue;
+            this.setSelectionRange(cursorPos + cleanedText.length, cursorPos + cleanedText.length);
+            
+            // Manually trigger input event
+            const event = new Event('input', {
+                bubbles: true,
+                cancelable: true,
+            });
+            this.dispatchEvent(event);
+        });
+    });
+ </script>
+{% endif %}
+
+{% schema %}
+    {
+        "name": "Product Buy Buttons",
+        "tag": null,
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
+                "type":"header",
+                "content":"Add To Cart Button"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_addtocart",
+                "label": "Show add to cart button",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "addtocart_full",
+                "label": "Button full width",
+                "default": true,
+                "visible_if": "{{ block.settings.show_addtocart == true }}"
+            },
+            {
+                "type": "text",
+                "id": "label",
+                "label": "Label",
+                "visible_if": "{{ block.settings.show_addtocart == true }}"
+            },
+            {
+                "type": "select",
+                "id": "btn_style",
+                "label": "Style",
+                "visible_if": "{{ block.settings.show_addtocart == true }}",
+                "options": [
+                    {
+                        "value": "btn-primary",
+                        "label": "Primary"
+                    },
+                    {
+                        "value": "btn-secondary",
+                        "label": "Secondary"
+                    },
+                    {
+                        "value": "btn-dark",
+                        "label": "Dark"
+                    },
+                    {
+                        "value": "btn-light",
+                        "label": "Light"
+                    },
+                    {
+                        "value": "btn-link",
+                        "label": "Link"
+                    }
+                ],
+                "default": "btn-primary"
+            },
+            {
+                "type": "select",
+                "id": "size_class",
+                "label": "Button Size",
+                "visible_if": "{{ block.settings.show_addtocart == true }}",
+                "options": [
+                    {
+                        "value": "btn-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "btn-lg",
+                        "label": "Large"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type":"header",
+                "content":"Quick View Button"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_quickview",
+                "label": "Show quickview button",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "quickview_full",
+                "label": "Button full width",
+                "default": false,
+                "visible_if": "{{ block.settings.show_quickview == true }}"
+            },
+            {
+                "type": "text",
+                "id": "quickview_label",
+                "label": "Label",
+                "default": "Quick Shop",
+                "visible_if": "{{ block.settings.show_quickview == true }}"
+            },
+            {
+                "type": "select",
+                "id": "quickview_icon",
+                "label": "Icon",
+                "visible_if": "{{ block.settings.show_quickview == true }}",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "icon-eye",
+                        "label": "Quick View"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "select",
+                "id": "quickview_btn_style",
+                "label": "Style",
+                "visible_if": "{{ block.settings.show_quickview == true }}",
+                "options": [
+                    {
+                        "value": "btn-primary",
+                        "label": "Primary"
+                    },
+                    {
+                        "value": "btn-secondary",
+                        "label": "Secondary"
+                    },
+                    {
+                        "value": "btn-dark",
+                        "label": "Dark"
+                    },
+                    {
+                        "value": "btn-light",
+                        "label": "Light"
+                    },
+                    {
+                        "value": "btn-link",
+                        "label": "Link"
+                    }
+                ],
+                "default": "btn-primary"
+            },
+            {
+                "type": "select",
+                "id": "quickview_size_class",
+                "label": "Button Size",
+                "visible_if": "{{ block.settings.show_quickview == true }}",
+                "options": [
+                    {
+                        "value": "btn-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "btn-lg",
+                        "label": "Large"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type":"header",
+                "content":"Accelerated checkout"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_dynamic_checkout",
+                "label": "Show dynamic checkout buttons",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "show_gift_recipient_form",
+                "label": "Show gift recipient form",
+                "default": false
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Buy Buttons",
+                "settings": {
+                    "product": "{{ closest.product }}"
+                }
+            }
+        ]
+    }
+{% endschema %}
