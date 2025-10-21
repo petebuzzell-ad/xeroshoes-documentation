@@ -81,6 +81,40 @@
                         <h3>Platform Overview</h3>
                         <p>The XeroShoes eCommerce platform operates on a dual-instance Shopify Plus architecture, serving the US market through XeroShoes.com and the EU market through XeroShoes.eu. This separation is required due to legal and regulatory compliance requirements, ensuring proper business entity structure and data sovereignty.</p>
                         
+                        <h4>Business Context & Strategic Value</h4>
+                        <p>XeroShoes operates in the specialized barefoot/minimalist footwear market, requiring unique technical capabilities:</p>
+                        <ul>
+                            <li><strong>Educational Content Integration:</strong> Platform must seamlessly blend product sales with educational content about foot health and movement</li>
+                            <li><strong>Activity-Specific Filtering:</strong> Customers need to filter products by specific activities (running, hiking, yoga, etc.)</li>
+                            <li><strong>Comfort & Sizing Guidance:</strong> Complex sizing and comfort information requires dynamic display logic</li>
+                            <li><strong>Seasonal Product Management:</strong> Ability to hide/show products without losing data (draft variant system)</li>
+                            <li><strong>Multi-Region Compliance:</strong> Separate instances required due to legal entity structure, not Shopify Markets</li>
+                        </ul>
+                        
+                        <h4>System Architecture Overview</h4>
+                        <p>The platform consists of two independent Shopify Plus instances with synchronized content and shared technical architecture:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>XeroShoes Platform Architecture
+├── US Instance (xeroshoes.com)
+│   ├── Shopify Plus Backend
+│   ├── Fluid Framework Theme (Customized)
+│   ├── 36 Integrated Apps
+│   ├── Custom Metafield System
+│   └── USD Pricing & US Shipping
+├── EU Instance (xeroshoes.eu)
+│   ├── Shopify Plus Backend
+│   ├── Fluid Framework Theme (Customized)
+│   ├── 36 Integrated Apps
+│   ├── Custom Metafield System
+│   └── EUR Pricing & EU Shipping
+└── Shared Components
+    ├── Custom Liquid Templates
+    ├── JavaScript Modules
+    ├── CSS Framework
+    └── Metafield Architecture</code></pre>
+                        </div>
+                        
                         <div class="alert info">
                             <strong>Platform Status:</strong> Both instances are fully operational with 99.9% uptime, serving customers across North America and Europe with localized experiences and compliance requirements.
                         </div>

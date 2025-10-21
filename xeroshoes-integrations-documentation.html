@@ -643,6 +643,108 @@
                     </ol>
                 </section>
                 
+                <section id="api-specifications">
+                    <h2>API Specifications & Data Flows</h2>
+                    <p>Technical specifications for key integrations and their data flows.</p>
+                    
+                    <h3>Klaviyo API Integration</h3>
+                    <div class="code-block">
+                        <pre><code>// Klaviyo API Configuration
+const KLAVIYO_CONFIG = {
+  apiKey: 'pk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+  baseUrl: 'https://a.klaviyo.com/api',
+  endpoints: {
+    profiles: '/profiles/',
+    events: '/events/',
+    lists: '/lists/',
+    campaigns: '/campaigns/'
+  }
+};
+
+// Customer Data Sync
+const syncCustomerData = async (customer) => {
+  const profileData = {
+    type: 'profile',
+    attributes: {
+      email: customer.email,
+      first_name: customer.first_name,
+      last_name: customer.last_name,
+      properties: {
+        total_orders: customer.orders_count,
+        total_spent: customer.total_spent,
+        last_order_date: customer.last_order_created_at,
+        activity_preferences: customer.metafields.custom.activity,
+        shoe_size: customer.metafields.custom.shoe_size
+      }
+    }
+  };
+  
+  return await fetch(`${KLAVIYO_CONFIG.baseUrl}${KLAVIYO_CONFIG.endpoints.profiles}`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Klaviyo-API-Key ${KLAVIYO_CONFIG.apiKey}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ data: profileData })
+  });
+};</code></pre>
+                    </div>
+                    
+                    <h3>Searchanise Search API</h3>
+                    <div class="code-block">
+                        <pre><code>// Searchanise Search Configuration
+const SEARCHANISE_CONFIG = {
+  apiKey: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+  baseUrl: 'https://api.searchanise.com',
+  endpoints: {
+    search: '/search',
+    suggest: '/suggest',
+    autocomplete: '/autocomplete'
+  }
+};
+
+// Custom Search Implementation
+const performSearch = async (query, filters = {}) => {
+  const searchParams = {
+    api_key: SEARCHANISE_CONFIG.apiKey,
+    q: query,
+    start_index: 0,
+    max_results: 20,
+    sort: 'relevance',
+    filters: {
+      'custom.activity': filters.activity || '',
+      'custom.color': filters.color || '',
+      'price_min': filters.priceMin || 0,
+      'price_max': filters.priceMax || 9999
+    }
+  };
+  
+  return await fetch(`${SEARCHANISE_CONFIG.baseUrl}${SEARCHANISE_CONFIG.endpoints.search}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(searchParams)
+  });
+};</code></pre>
+                    </div>
+                    
+                    <h3>Data Flow Architecture</h3>
+                    <div class="code-block">
+                        <pre><code>Customer Journey Data Flow
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Customer      │    │   Shopify        │    │   Klaviyo       │
+│   Visits Site   │───▶│   Tracks         │───▶│   Profile       │
+│                 │    │   Behavior       │    │   Creation      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Product       │    │   Searchanise    │    │   Email         │
+│   Search        │───▶│   Processes      │───▶│   Automation    │
+│   / Filter      │    │   Query          │    │   Triggers      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘</code></pre>
+                    </div>
+                </section>
+                
                 <section id="troubleshooting">
                     <h2>Troubleshooting</h2>
                     <p>Common integration issues and resolution procedures.</p>

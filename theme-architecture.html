@@ -91,6 +91,9 @@
                             <li>Custom styling with XeroShoes brand colors (#53CAEC, #F3F0EA)</li>
                         </ul>
                         
+                        <h4>Technical Implementation</h4>
+                        <p><strong>File Location:</strong> <code>sections/xero-custom-landing.liquid</code></p>
+                        
                         <div class="code-block">
 <pre><code>{% comment %} Xero Shoes Complete Section - Barefoot Shoes Landing {% endcomment %}
 &lt;section class="xero-complete-section" data-section-id="{{ section.id }}"&gt;
@@ -99,6 +102,75 @@
     &lt;p class="hero-subtitle"&gt;Revolutionize the way your feet – and body! – move and feel.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre>
+                        </div>
+                        
+                        <h4>Schema Configuration</h4>
+                        <div class="code-block">
+<pre><code>{% schema %}
+{
+  "name": "Xero Custom Landing",
+  "tag": "section",
+  "class": "xero-landing-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "The Best Barefoot Shoes for Walking or Running"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_subtitle",
+      "label": "Hero Subtitle",
+      "default": "Revolutionize the way your feet – and body! – move and feel."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F3F0EA"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Xero Custom Landing"
+    }
+  ]
+}
+{% endschema %}</code></pre>
+                        </div>
+                        
+                        <h4>CSS Implementation</h4>
+                        <div class="code-block">
+<pre><code>/* Xero Custom Landing Styles */
+.xero-complete-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrapper {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #F3F0EA 0%, #E8E3D3 100%);
+}
+
+.hero-title {
+  font-family: 'Paralucent', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #0F172B;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  color: #4A5568;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}</code></pre>
                         </div>
                     </section>
                     
@@ -227,6 +299,74 @@
                         <li><strong>Bundle Optimization:</strong> Custom bundling for product variants</li>
                         <li><strong>Speed Scripts:</strong> Performance optimization scripts</li>
                         <li><strong>Image Optimization:</strong> Responsive images and WebP support</li>
+                    </ul>
+                </section>
+                
+                <section id="file-structure">
+                    <h2>Theme File Structure</h2>
+                    <p>Complete file structure showing the organization of XeroShoes customizations:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>theme/
+├── assets/
+│   ├── component-variant-options.js    # Custom variant picker logic
+│   ├── product-comfort.js             # Dynamic comfort information
+│   ├── cart-drawer.js                 # Enhanced cart functionality
+│   ├── search-enhancement.js          # Custom search behavior
+│   ├── global.css                     # Global styles
+│   ├── product-specific.css           # Product page styles
+│   └── xero-landing.css               # Custom landing page styles
+├── blocks/
+│   ├── _product-variant-picker.liquid # Variant selection with draft support
+│   ├── _product-comfort-dynamic.liquid # Dynamic comfort display
+│   ├── _xero-custom-landing.liquid    # Custom landing section
+│   └── _product-media-banner.liquid   # Enhanced product imagery
+├── sections/
+│   ├── xero-custom-landing.liquid     # Main landing page section
+│   ├── product-comfort-dynamic.liquid # Product comfort information
+│   ├── product-variant-attributes.liquid # Custom variant display
+│   └── global-header-slider.liquid   # Hero banner with products
+├── snippets/
+│   ├── product-generic-card.liquid    # Product card with draft variant support
+│   ├── variant-picker_card.liquid     # Swatch-based variant selection
+│   ├── product-comfort-info.liquid    # Comfort information display
+│   └── xero-landing-hero.liquid       # Landing page hero component
+├── templates/
+│   ├── product.liquid                 # Main product page
+│   ├── collection.liquid              # Collection listing
+│   ├── page.barefoot-2.liquid         # Educational content pages
+│   ├── page.shoe-finder.liquid        # Shoe finder tool
+│   └── page.activity-*.liquid         # Activity-specific pages
+└── config/
+    ├── settings_schema.json           # Theme configuration options
+    └── settings_data.json             # Current theme settings</code></pre>
+                    </div>
+                    
+                    <h3>Key File Relationships</h3>
+                    <ul>
+                        <li><strong>Variant Picker:</strong> <code>blocks/_product-variant-picker.liquid</code> + <code>assets/component-variant-options.js</code></li>
+                        <li><strong>Product Cards:</strong> <code>snippets/product-generic-card.liquid</code> + <code>snippets/variant-picker_card.liquid</code></li>
+                        <li><strong>Landing Pages:</strong> <code>sections/xero-custom-landing.liquid</code> + <code>snippets/xero-landing-hero.liquid</code></li>
+                        <li><strong>Comfort Display:</strong> <code>blocks/_product-comfort-dynamic.liquid</code> + <code>assets/product-comfort.js</code></li>
+                    </ul>
+                </section>
+                
+                <section id="cross-references">
+                    <h2>Cross-References to Other Documentation</h2>
+                    <p>This theme architecture connects to other documentation sections:</p>
+                    
+                    <h3>Platform Documentation References</h3>
+                    <ul>
+                        <li><strong>Custom Metafields:</strong> See <a href="xeroshoes-platform-documentation.html#metafields">Platform Documentation → Metafields & Custom Data</a> for the complete metafield system</li>
+                        <li><strong>Variant Visibility:</strong> See <a href="xeroshoes-platform-documentation.html#variant-visibility-management">Platform Documentation → Variant Visibility Management</a> for the custom.draft_variant implementation</li>
+                        <li><strong>Product Management:</strong> See <a href="xeroshoes-platform-documentation.html#product-management">Platform Documentation → Product Management</a> for data standards and workflows</li>
+                    </ul>
+                    
+                    <h3>Integrations Documentation References</h3>
+                    <ul>
+                        <li><strong>App Integration:</strong> See <a href="xeroshoes-integrations-documentation.html">Integrations Documentation</a> for how theme components interact with the 36 installed apps</li>
+                        <li><strong>Search Integration:</strong> See <a href="xeroshoes-integrations-documentation.html#searchanise">Searchanise Integration</a> for custom search functionality</li>
+                        <li><strong>Review Integration:</strong> See <a href="xeroshoes-integrations-documentation.html#stamped-reviews">Stamped Reviews Integration</a> for review display logic</li>
                     </ul>
                 </section>
             </main>
