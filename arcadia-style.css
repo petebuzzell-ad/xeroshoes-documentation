@@ -146,6 +146,22 @@ pre code {
     overflow-x: auto;
     margin: 1rem 0;
     border-left: 4px solid var(--sage-green);
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .code-block code {
@@ -153,10 +169,13 @@ pre code {
     color: inherit;
     padding: 0;
     font-family: 'Courier New', monospace;
-    font-size: 0.9em;
-    line-height: 1.6;
-    white-space: pre;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     display: block;
+    max-width: 100%;
 }
 
 /* Lists */
@@ -1469,6 +1488,38 @@ button:hover, .cta:hover, .download-btn:hover, .video-btn:hover {
 .capability-item h4 a:hover {
     color: var(--sage-green);
     text-decoration: underline;
+}
+
+/* Content overflow prevention */
+main {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+main * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Code block responsive improvements */
+@media (max-width: 768px) {
+    .code-block {
+        padding: 1rem;
+        font-size: 0.8em;
+    }
+    
+    .code-block pre {
+        font-size: 0.75em;
+        line-height: 1.4;
+    }
+}
+
+/* Ensure long lines wrap properly */
+pre, code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .capability-item p {
