@@ -150,6 +150,29 @@ pre code {
     display: block;
 }
 
+/* Lists */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+    margin: 0.25rem 0;
+}
+
 /* Tables */
 table {
     width: 100%;
@@ -1399,4 +1422,37 @@ button:hover, .cta:hover, .download-btn:hover, .video-btn:hover {
         position: relative;
         top: 0;
     }
+}
+
+/* Capabilities grid */
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.capability-item {
+    padding: 1.5rem;
+    background: var(--newsprint-white);
+    border-radius: 8px;
+    border: 1px solid var(--digital-gray-1);
+    transition: all 0.3s ease;
+}
+
+.capability-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.capability-item h4 {
+    color: var(--forest-green);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.capability-item p {
+    color: var(--digital-gray-2);
+    line-height: 1.5;
+    margin: 0;
 }
