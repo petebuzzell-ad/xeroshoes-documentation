@@ -42,15 +42,15 @@
                     <p>XeroShoes.com integrates with 36 specialized apps and services, with evidence of active implementation found in theme code, configuration files, and custom styling. This documentation is based on actual codebase analysis of the US instance only.</p>
                     
                     <div class="alert info">
-                        <strong>Data Source:</strong> Documentation based on theme export analysis, settings configuration, and code evidence. EU instance not analyzed - requires separate documentation.
+                        <strong>Data Source:</strong> Documentation based on theme export analysis, settings configuration, and code evidence. US instance (October 20, 2025) and EU instance (October 21, 2025) analyzed separately.
                     </div>
                     
-                    <h3>Verified Active Integrations</h3>
+                    <h3>US Instance - Verified Active Integrations (10 Apps)</h3>
                     <p>Based on codebase analysis, these integrations show evidence of active implementation:</p>
                     <ul>
                         <li><strong>Klaviyo Email Marketing:</strong> Custom CSS styling, form integration, and theme-specific configurations</li>
                         <li><strong>Stamped Reviews:</strong> Custom CSS, JavaScript integration, and product page implementation</li>
-                        <li><strong>Searchanise Search:</strong> App blocks configured in theme settings</li>
+                        <li><strong>Searchanise Search:</strong> App blocks configured in theme settings (currently disabled)</li>
                         <li><strong>Elevar Conversion Tracking:</strong> Data layer implementation in theme</li>
                         <li><strong>Microsoft Clarity:</strong> Analytics tracking integration</li>
                         <li><strong>Consentmo GDPR:</strong> Cookie consent management</li>
@@ -59,6 +59,19 @@
                         <li><strong>Orbe Geolocation:</strong> Geographic targeting and redirection</li>
                         <li><strong>Klarna On-Site Messaging:</strong> Custom styling and placement integration</li>
                     </ul>
+                    
+                    <h3>EU Instance - Verified Active Integrations (4 Apps)</h3>
+                    <p>Analysis of EU theme export (October 21, 2025) reveals limited app integration:</p>
+                    <ul>
+                        <li><strong>Klaviyo Email Marketing:</strong> Same app block ID as US, custom CSS styling for forms</li>
+                        <li><strong>Stamped Reviews:</strong> Extensive custom CSS and JavaScript integration, product page implementation</li>
+                        <li><strong>Redirect Hero:</strong> Both app and live redirect blocks configured (same as US)</li>
+                        <li><strong>Microsoft Clarity:</strong> Analytics tracking integration (same as US)</li>
+                    </ul>
+                    
+                    <div class="alert warning">
+                        <strong>EU Instance Limitations:</strong> Missing 6 app integrations compared to US instance: Searchanise, Elevar, Consentmo GDPR, Simple Bundles, Orbe Geolocation, and Klarna On-Site Messaging.
+                    </div>
                 </section>
                 
                 <section id="app-inventory">
@@ -148,6 +161,51 @@
                         <li>GOVX ID Exclusive Discounts, Avalara Tax Compliance</li>
                         <li>Stockist Store Locator, Richpanel: AI Customer Service</li>
                         <li>Bundles, Flow</li>
+                    </ul>
+                    
+                    <h3>EU Instance - Apps with Code Evidence (4 Apps)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>App Name</th>
+                            <th>Evidence Type</th>
+                            <th>Implementation Details</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Klaviyo Email Marketing & SMS</td>
+                            <td>App Block + Custom CSS</td>
+                            <td>Same app block ID as US, custom CSS for forms and footer integration</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Stamped Reviews</td>
+                            <td>Custom CSS + JavaScript</td>
+                            <td>Extensive custom styling, JavaScript integration, product page implementation</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Redirect Hero</td>
+                            <td>App Block Configuration</td>
+                            <td>Both app and live redirect blocks configured (same as US)</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Clarity</td>
+                            <td>Analytics Integration</td>
+                            <td>Clarity JS block configured in theme (same as US)</td>
+                            <td>Active</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>EU Instance - Missing Integrations</h3>
+                    <p>These apps are configured in the US instance but not found in the EU theme:</p>
+                    <ul>
+                        <li><strong>Searchanise Search & Filter:</strong> Not configured in EU theme</li>
+                        <li><strong>Elevar Conversion Tracking:</strong> Not configured in EU theme</li>
+                        <li><strong>Consentmo GDPR:</strong> Not configured in EU theme</li>
+                        <li><strong>Simple Bundles & Kits:</strong> Not configured in EU theme</li>
+                        <li><strong>Orbe Geolocation:</strong> Not configured in EU theme</li>
+                        <li><strong>Klarna On-Site Messaging:</strong> Not configured in EU theme</li>
                     </ul>
                 </section>
                 
