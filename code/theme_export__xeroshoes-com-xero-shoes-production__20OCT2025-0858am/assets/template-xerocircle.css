@@ -1,0 +1,79 @@
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input,
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input::placeholder {
+    background-color: transparent !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1.1 !important;
+    font-family: var(--pe-font-family-heading) !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    outline: none !important;
+    color: #0F172B !important;
+    border-color: #0F172B !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    border-radius: 0 !important;
+}
+
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input
+{
+    padding-left: 10px !important;
+}
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input:hover,body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input:focus
+{
+    border-color: #53CAEC !important;
+}
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input:-webkit-autofill,
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input:-webkit-autofill:hover,
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick input:-webkit-autofill:focus {
+    -webkit-background-clip: text;
+    transition: background-color 999999999s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px var(--pe-input-bg-color) inset !important;
+    -webkit-text-fill-color: #0F172B !important;
+}
+
+body[data-suffix="xero-circle"] .xerocircle-klaviyo>.needsclick>.needsclick >.needsclick{
+    padding-inline: 0 !important;
+}
+fbody[data-suffix="xero-circle"] .xerocircle-klaviyo>.needsclick>.needsclick >.needsclick h1 span {
+    font-family: var(--pe-body-font-family) !important;
+    text-transform: capitalize !important;
+    line-height: 1.5;
+    color: var(--pe-color-success);
+    font-size: 18px !important;
+    padding: 5px 0 2px !important;
+    font-weight: 600 !important;
+}
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick h1,body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick p {
+    text-align: left !important;
+}
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick p span{
+    text-transform: capitalize !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: var(--pe-body-color) !important;
+    font-weight: 400 !important;
+    font-family: var(--pe-body-font-family) !important;
+    margin-top: 5px;
+    display: inline-block !important;
+}
+
+body[data-suffix="xero-circle"] .xerocircle-klaviyo  .klaviyo-form form button, body[data-suffix="xero-circle"] .xerocircle-klaviyo  .klaviyo-form form [type=button]
+{
+    font-size: 16px !important;
+    padding-block: 10.5px !important;
+}
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick a{
+    color: #1D293D;
+}
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick a:hover,body[data-suffix="xero-circle"] .xerocircle-klaviyo .needsclick a:active{
+    color: #007595;
+}
+
+body[data-suffix="xero-circle"] .xerocircle-klaviyo .klaviyo-form.klaviyo-form.klaviyo-form{
+    padding: 0 !important;
+}
+body[data-suffix="xero-circle"] .xerocircle-klaviyo [data-testid="form-row"], body[data-suffix="xero-circle"] .xerocircle-klaviyo [data-testid="form-row"] div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

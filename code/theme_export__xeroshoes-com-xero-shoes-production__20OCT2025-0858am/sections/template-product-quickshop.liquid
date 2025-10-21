@@ -1,0 +1,87 @@
+
+  <div class="" data-product-container>
+    {% content_for "block", type: "product-media", id: "quickview-product-media", closest.product: product %}
+
+    {% content_for "block", type: "_pdp-group", id: "quickview-product-info", closest.product: product %}
+
+    {% content_for "blocks" %}
+  </div>
+  
+  {% style %}
+    /* .quickshop--button{
+        display: none;
+    } */
+
+    .close-quickshop{
+        /* outline: none; */
+        font-size: 20px;
+        line-height:1;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: 0;
+        z-index: 2;
+        padding:8px;
+    }
+
+    .close-quickshop span{
+      display: inline-block;
+      vertical-align: top;
+    }
+    .quick-view-des{
+        max-height: 300px;
+        overflow: auto;
+    }
+    .quickview-slider .swiper-slide{
+      height:auto;
+      background-color:#fff;
+    }
+    .custom-video-container.video--playing .content-section{
+      display:none;
+    }
+    .custom-video-container .video-section video{
+      width:100%;
+    }
+    #quickshop-drawer [data-variant-picker-quick-add-label] {
+      display: none !important;
+    }
+    .quickshop-drawer .sticky-add-to-cart, .quickshop-drawer .size-chart-popup-wrapper {
+      display: none !important;
+    }
+  {% endstyle %}
+  
+{% comment %} </modal-dialog> {% endcomment %}
+
+{% schema %}
+{
+  "name": "Quickshop layout",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "class": "product-section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Features"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show Vendor?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_share",
+      "label": "Show Social Share?",
+      "default": true
+    }
+  ],
+  "presets": [{
+        "name": "Quickshop layout",
+        "settings": {
+        }
+  }],
+}
+{% endschema %}

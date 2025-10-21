@@ -1,0 +1,434 @@
+{{ 'global-media-banner.css' | asset_url | stylesheet_tag }}
+{% capture spacing_class_list %}
+    {{ section.settings.section_top_spacing }} {{ section.settings.section_top_spacing_ipad }} {{ section.settings.section_top_spacing_mobile }} {{ section.settings.section_bottom_spacing }} {{ section.settings.section_bottom_spacing_ipad }} {{ section.settings.section_bottom_spacing_mobile }}
+{% endcapture %}
+
+<section class="{{ spacing_class_list }}">
+
+    {% if section.settings.fluid_layout == false %}
+        <div class="container">
+    {% endif %}        
+    <div class="media_banner_with_text d-flex flex-wrap position-relative media-banner--{{ section.settings.height }} {% if section.settings.ratio_height %}ratio_height{% endif %} {% if section.settings.caption_style %} caption_below_image {% endif %}" style="background: {{ section.settings.section_bg_color }};">
+        {% content_for 'blocks' %}
+    </div>
+    {% if section.settings.fluid_layout == false %}
+        </div>
+    {% endif %}        
+</section>
+
+{% schema %}
+{
+    "name": "Media Banner With Text",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "blocks": [{ "type": "_image_banner" }, { "type": "_video_banner" }],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Container"
+        },
+        {
+            "type": "checkbox",
+            "id": "fluid_layout",
+            "label": "Full Width Layout",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "header",
+            "content": "t:spacing.section_spacing"
+        },
+        {
+            "type": "select",
+            "id": "section_top_spacing",
+            "label": "t:spacing.desktop_top_spacing",
+            "options": [
+                {
+                    "value": "",
+                    "label": "None"
+                },
+                {
+                    "value": "spacing-top-xs",
+                    "label": "t:spacing.tight"
+                },
+                {
+                    "value": "spacing-top-sm",
+                    "label": "t:spacing.standard"
+                },
+                {
+                    "value": "spacing-top-md",
+                    "label": "t:spacing.spacious"
+                },
+                {
+                    "value": "spacing-top-lg",
+                    "label": "t:spacing.extra_spacious"
+                }
+            ],
+            "default": "spacing-top-sm"
+        },
+        {
+            "type": "select",
+            "id": "section_top_spacing_ipad",
+            "label": "t:spacing.ipad_top_spacing",
+            "options": [
+                {
+                    "value": "",
+                    "label": "None"
+                },
+                {
+                    "value": "spacing-top-ipad-xs",
+                    "label": "t:spacing.tight"
+                },
+                {
+                    "value": "spacing-top-ipad-sm",
+                    "label": "t:spacing.standard"
+                },
+                {
+                    "value": "spacing-top-ipad-md",
+                    "label": "t:spacing.spacious"
+                },
+                {
+                    "value": "spacing-top-ipad-lg",
+                    "label": "t:spacing.extra_spacious"
+                }
+            ],
+            "default": "spacing-top-ipad-sm"
+        },
+        {
+            "type": "select",
+            "id": "section_top_spacing_mobile",
+            "label": "t:spacing.mobile_top_spacing",
+            "options": [
+                {
+                    "value": "",
+                    "label": "None"
+                },
+                {
+                    "value": "spacing-top-mobile-xs",
+                    "label": "t:spacing.tight"
+                },
+                {
+                    "value": "spacing-top-mobile-sm",
+                    "label": "t:spacing.standard"
+                },
+                {
+                    "value": "spacing-top-mobile-md",
+                    "label": "t:spacing.spacious"
+                },
+                {
+                    "value": "spacing-top-mobile-lg",
+                    "label": "t:spacing.extra_spacious"
+                }
+            ],
+            "default": "spacing-top-mobile-sm"
+        },
+        {
+            "type": "select",
+            "id": "section_bottom_spacing",
+            "label": "t:spacing.desktop_bottom_spacing",
+            "options": [
+                {
+                    "value": "",
+                    "label": "None"
+                },
+                {
+                    "value": "spacing-bottom-xs",
+                    "label": "t:spacing.tight"
+                },
+                {
+                    "value": "spacing-bottom-sm",
+                    "label": "t:spacing.standard"
+                },
+                {
+                    "value": "spacing-bottom-md",
+                    "label": "t:spacing.spacious"
+                },
+                {
+                    "value": "spacing-bottom-lg",
+                    "label": "t:spacing.extra_spacious"
+                }
+            ],
+            "default": "spacing-bottom-sm"
+        },
+        {
+            "type": "select",
+            "id": "section_bottom_spacing_ipad",
+            "label": "t:spacing.ipad_bottom_spacing",
+            "options": [
+                {
+                    "value": "",
+                    "label": "None"
+                },
+                {
+                    "value": "spacing-bottom-ipad-xs",
+                    "label": "t:spacing.tight"
+                },
+                {
+                    "value": "spacing-bottom-ipad-sm",
+                    "label": "t:spacing.standard"
+                },
+                {
+                    "value": "spacing-bottom-ipad-md",
+                    "label": "t:spacing.spacious"
+                },
+                {
+                    "value": "spacing-bottom-ipad-lg",
+                    "label": "t:spacing.extra_spacious"
+                }
+            ],
+            "default": "spacing-bottom-ipad-sm"
+        },
+        {
+            "type": "select",
+            "id": "section_bottom_spacing_mobile",
+            "label": "t:spacing.mobile_bottom_spacing",
+            "options": [
+                {
+                    "value": "",
+                    "label": "None"
+                },
+                {
+                    "value": "spacing-bottom-mobile-xs",
+                    "label": "t:spacing.tight"
+                },
+                {
+                    "value": "spacing-bottom-mobile-sm",
+                    "label": "t:spacing.standard"
+                },
+                {
+                    "value": "spacing-bottom-mobile-md",
+                    "label": "t:spacing.spacious"
+                },
+                {
+                    "value": "spacing-bottom-mobile-lg",
+                    "label": "t:spacing.extra_spacious"
+                }
+            ],
+            "default": "spacing-bottom-mobile-sm"
+        },
+        {
+                "type":"header",
+                "content":"t:names.styles"
+        },
+        {
+            "type": "select",
+            "id": "height",
+            "label": "t:settings.height",
+            "options": [
+                {
+                    "value": "adapt",
+                    "label": "t:options.auto"
+                },
+                {
+                    "value": "extrasmall",
+                    "label": "t:options.extra_small"
+                },
+                {
+                    "value": "small",
+                    "label": "t:options.small"
+                },
+                {
+                    "value": "medium",
+                    "label": "t:options.medium"
+                },
+                {
+                    "value": "large",
+                    "label": "t:options.large"
+                },
+                {
+                    "value": "full",
+                    "label": "t:options.full_screen"
+                },
+                {
+                    "value": "content_height",
+                    "label": "Change based on content height"
+                }
+            ],
+            "default": "large"
+        },
+        {
+            "type": "checkbox",
+            "id": "ratio_height",
+            "label": "Height adjusts to screen width.",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "caption_style",
+            "label": "Caption Below Media in Mobile",
+            "default": false
+        },
+        {
+            "type": "color_background",
+            "id": "section_bg_color",
+            "label": "Section BG color",
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:names.image_banner_with_text",
+            "category": "t:categories.content",
+            "settings": {
+                "section_top_spacing": "",
+                "section_top_spacing_ipad": "",
+                "section_top_spacing_mobile": "",
+                "section_bottom_spacing": "",
+                "section_bottom_spacing_ipad": "",
+                "section_bottom_spacing_mobile": "",
+                "caption_style": true,
+                "section_bg_color": "#0F172B"
+            },
+            "blocks": {
+                "image_banner": {
+                    "type": "_image_banner",
+                    "settings": {
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-center",
+                        "overlay_on_mobile": false
+                    },
+                    "blocks": {
+                        "group":{
+                            "type": "group",
+                            "settings": {
+                                "width": "col-lg-5",
+                                "width_md": "col-md-6",
+                                "width_sm": "col-12",
+                                "align_items": "align-items-md-start",
+                                "align_items_mb": "align-items-center",
+                                "justify_content": "justify-content-md-start",
+                                "justify_content_mb": "justify-content-center",
+                                "padding_left_desktop": "ps-md-3",
+                                "padding_left_mobile": "ps-3",
+                                "padding_right_desktop": "pe-md-3",
+                                "padding_right_mobile": "pe-3",
+                                "padding_top_desktop": "pt-md-0",
+                                "padding_top_mobile": "pt-6",
+                                "padding_bottom_desktop": "pb-md-0",
+                                "padding_bottom_mobile": "pb-6"
+                            },
+                            "blocks": {
+                                "heading": {
+                                    "type": "heading",
+                                    "settings": {
+                                        "text": "<h1>Image Banner</h1>",
+                                        "margin_bottom_desktop": "mb-md-3",
+                                        "margin_bottom_mobile": "mb-2",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "text": {
+                                    "type": "text",
+                                    "settings": {
+                                        "text": "<p>A lead text is an opening paragraph that gives the audience the most important information in a concise and clear manner.</p>",
+                                        "margin_bottom_desktop": "mb-md-5",
+                                        "margin_bottom_mobile": "mb-4",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "buttons": {
+                                    "type": "buttons",
+                                    "settings": {
+                                        "label": "Button label",
+                                        "style_class": "btn-light"
+                                    }
+                                }
+                            },
+                            "block_order": ["heading", "text", "buttons"]
+                        }
+                    },
+                    "block_order": ["group"]
+                }
+            },
+            "block_order": ["image_banner"]
+        },
+        {
+            "name": "t:names.video_banner_with_text",
+            "category": "t:categories.content",
+            "settings": {
+                "section_top_spacing": "",
+                "section_bottom_spacing": "",
+                "caption_style": true,
+                "section_bg_color": "#0F172B"
+            },
+            "blocks": {
+                "video_banner": {
+                    "type": "_video_banner",
+                    "settings": {
+                        "align_items": "align-items-md-end",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-center",
+                        "overlay_on_mobile": false
+                    },
+                    "blocks": {
+                        "group":{
+                            "type": "group",
+                            "settings": {
+                                "width": "col-lg-5",
+                                "width_md": "col-md-6",
+                                "width_sm": "col-12",
+                                "align_items": "align-items-md-start",
+                                "align_items_mb": "align-items-center",
+                                "justify_content": "justify-content-md-start",
+                                "justify_content_mb": "justify-content-center",
+                                "padding_left_desktop": "ps-md-3",
+                                "padding_left_mobile": "ps-3",
+                                "padding_right_desktop": "pe-md-3",
+                                "padding_right_mobile": "pe-3",
+                                "padding_top_desktop": "pt-md-0",
+                                "padding_top_mobile": "pt-6",
+                                "padding_bottom_desktop": "pb-md-8",
+                                "padding_bottom_mobile": "pb-6"
+                            },
+                            "blocks": {
+                                "heading": {
+                                    "type": "heading",
+                                    "settings": {
+                                        "text": "<h1>Video Banner</h1>",
+                                        "margin_bottom_desktop": "mb-md-3",
+                                        "margin_bottom_mobile": "mb-2",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "text": {
+                                    "type": "text",
+                                    "settings": {
+                                        "text": "<p>A lead text is an opening paragraph that gives the audience the most important information in a concise and clear manner.</p>",
+                                        "margin_bottom_desktop": "mb-md-5",
+                                        "margin_bottom_mobile": "mb-4",
+                                        "color": "#ffffff",
+                                        "alignment": "text-md-start",
+                                        "alignment_mobile": "text-center"
+                                    }
+                                },
+                                "buttons": {
+                                    "type": "buttons",
+                                    "settings": {
+                                        "label": "Button label",
+                                        "style_class": "btn-light"
+                                    }
+                                }
+                            },
+                            "block_order": ["heading", "text", "buttons"]
+                        }
+                    },
+                    "block_order": ["group"]
+                }
+            },
+            "block_order": ["video_banner"]
+        }
+    ]
+}
+{% endschema %}

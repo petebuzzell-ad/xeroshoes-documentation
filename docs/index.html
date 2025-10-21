@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XeroShoes eCommerce Documentation</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/webp" href="assets/favicon.webp">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <div class="brand-logos">
+            <a href="https://xeroshoes.com" target="_blank"><img src="assets/XEROSHOES_Logo.svg" alt="XeroShoes" class="logo"></a>
+            <a href="https://xeroshoes.eu" target="_blank"><img src="assets/XEROSHOES_Logo.svg" alt="XeroShoes EU" class="logo"></a>
+        </div>
+        
+        <h1>XeroShoes eCommerce Platform Documentation</h1>
+        
+        <h2>Internal Documentation</h2>
+        <ul class="toc-list">
+            <li class="doc-item">
+                <a href="main-platform.html" class="doc-link">Main Platform Documentation</a>
+                <div class="doc-description">Comprehensive guide covering Shopify Plus architecture, theme customization, content management, product management, and operational procedures for both XeroShoes.com and XeroShoes.eu.</div>
+            </li>
+            
+            <li class="doc-item">
+                <a href="theme-architecture.html" class="doc-link">Theme Architecture & Customization</a>
+                <div class="doc-description">Detailed documentation of the Dawn theme customizations, Liquid templates, JavaScript modules, and CSS modifications specific to XeroShoes branding and functionality.</div>
+            </li>
+            
+            <li class="doc-item">
+                <a href="integrations.html" class="doc-link">Third-Party Integrations</a>
+                <div class="doc-description">Documentation of all integrations including payment processors, shipping providers, analytics tools, and marketing platforms used across both sites.</div>
+            </li>
+            
+            <li class="doc-item">
+                <a href="operational-procedures.html" class="doc-link">Operational Procedures & Runbooks</a>
+                <div class="doc-description">Step-by-step procedures for content management, product updates, site maintenance, troubleshooting, and emergency response protocols.</div>
+            </li>
+        </ul>
+
+        <h2>Client-Facing Resources</h2>
+        <ul class="toc-list">
+            <li class="doc-item">
+                <a href="platform-overview.html" class="doc-link">Platform Overview & Capabilities</a>
+                <div class="doc-description">High-level overview of the XeroShoes eCommerce platform capabilities, features, and business value for stakeholders and business users.</div>
+            </li>
+            
+            <li class="doc-item">
+                <a href="content-management-guide.html" class="doc-link">Content Management Guide</a>
+                <div class="doc-description">User-friendly guide for managing products, collections, pages, and site content across both XeroShoes.com and XeroShoes.eu.</div>
+            </li>
+            
+            <li class="doc-item">
+                <a href="analytics-reporting.html" class="doc-link">Analytics & Reporting</a>
+                <div class="doc-description">Guide to accessing and interpreting analytics data, performance metrics, and business intelligence reports for both sites.</div>
+            </li>
+        </ul>
+
+        <h2>External Resources</h2>
+        <ul class="toc-list">
+            <li class="doc-item">
+                <a target="_blank" href="https://shopify.dev/docs" class="doc-link">Shopify Developer Documentation</a>
+                <div class="doc-description">Official Shopify documentation for developers working with Shopify Plus, Liquid templating, and API integrations.</div>
+            </li>
+            
+            <li class="doc-item">
+                <a target="_blank" href="https://shopify.dev/themes" class="doc-link">Shopify Theme Development</a>
+                <div class="doc-description">Shopify's official theme development documentation, including Dawn theme specifics and customization best practices.</div>
+            </li>
+            
+            <li class="doc-item">
+                <a target="_blank" href="https://help.shopify.com/en/manual" class="doc-link">Shopify Admin Help Center</a>
+                <div class="doc-description">Shopify's comprehensive help documentation for managing stores, products, orders, and customer data.</div>
+            </li>
+        </ul>
+        
+        <div class="contact-section">
+            <p>
+                Need help or have feedback about this documentation?
+            </p>
+            <p>
+                Contact: <a href="mailto:support@arcadiadigital.com" class="contact-link">support@arcadiadigital.com</a>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load header and footer -->
+    <script>
+        // Load header
+        fetch('../templates/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize header menu functionality
+                const menuToggle = document.getElementById('menu-toggle');
+                const headerMenu = document.getElementById('header-menu');
+                
+                if (menuToggle && headerMenu) {
+                    menuToggle.addEventListener('click', function() {
+                        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                        
+                        menuToggle.setAttribute('aria-expanded', !isExpanded);
+                        menuToggle.classList.toggle('active');
+                        headerMenu.classList.toggle('show');
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('active');
+                            headerMenu.classList.remove('show');
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('../templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+</body>
+</html>

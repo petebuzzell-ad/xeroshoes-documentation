@@ -1,0 +1,95 @@
+.account_nav{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.account-tabs .tablink{
+    padding: 9px 15px;
+    background: transparent;
+    border: 0;
+}
+
+.account-tabs .tablink.active{
+    background: var(--pe-color-primary-500);
+    color: var(--pe-color-white);
+} 
+
+.account-banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile .profile-name{
+    font-size: 22px;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+}
+
+.account-login .reset-label{
+    display: none;
+}
+.account-login.reset .login-label{
+    display: none;
+}
+.account-login.reset .reset-label{
+    display: block;
+}
+
+.account-table thead th:first-child{
+    padding-left: 0px;
+}
+.account-table thead th:last-child{
+    padding-right: 0px;
+}
+.account-table th,
+.account-table td {
+    padding: 10px 5px;
+}
+.account-table td:first-child{
+    padding-left: 0px;
+}
+.account-table td:last-child{
+    padding-right: 0px;
+}
+.account-table tr:last-child td{
+    border-bottom: 0;
+}
+@media (min-width: 768px){
+    .account-table th {
+        padding: 0px 15px 15px;
+    }
+    .account-table td {
+        padding: 18px 15px;
+    }
+    .account-table thead th:first-child{
+        padding-left: 0px;
+    }
+    .account-table thead th:last-child{
+        padding-right: 0px;
+    }
+}
+
+.order_link{
+    transition: 0.15s ease-in-out;
+    border-bottom: 1px solid var(--pe-color-black);
+}
+
+.order_link:hover{
+    transition: 0.15s ease-in-out;
+    color: var(--pe-color-primary);
+    border-bottom: 1px solid var(--pe-color-primary);
+}
+
+.account-table th{
+    font-size: 13px;
+    line-height: 24px;
+}
+@media (min-width: 768px){
+    .account-table th{
+        font-size: 15px;
+    }   
+}

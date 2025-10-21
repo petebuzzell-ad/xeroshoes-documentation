@@ -1,0 +1,31 @@
+<div class="card mb-lg-0 mb-1 card-product card-product-promo card-product-promo-bar border-0 px-xl-3 {{ block.settings.content_position }}">
+    <div class="d-flex flex-md-row flex-column bg-primary">
+        <div class="col-md-3 col-12 ps-md-0 pe-lg-2 pt-md-0 pt-2 pe-md-0 px-3 main-promo-image">
+            {% content_for "block", type: "image", id: "promo-card-image" %}
+        </div>
+        <div class="card-body col-md-6 col-12 p-md-3 px-4 pb-0 pt-4 d-flex justify-content-center align-items-center">
+            <div class="row no-gutter">
+                <div class="col-12">
+                    {% content_for "block", type: "heading", id: "promo-card-heading" %}
+                </div>
+            </div>
+        </div>
+        <div class="card-footer col-md-3 col-12 ps-xl-4 bg-transparent border-0 p-md-3 pt-3 p-4 d-flex justify-content-center align-items-center position-relative">
+            {% content_for "block", type: "buttons", id: "button-bar" %}
+            {% content_for "block", type: "image", id: "promo-button-background" %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    { 
+        "name": "Promotional Bar",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "presets": [
+            {
+                "name": "Promotional Bar"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,35 @@
+{%- comment -%}Desktop Search Modal{%- endcomment -%}
+<custom-drawer id="header-search-layer" class="custom-drawer header__search">
+  <div class="searchform" aria-label="{{ 'general.search.placeholder' | t }}">
+      <div class="search-modal__content px-4" tabindex="-1">
+        {%- if settings.search_type == 'predictive' -%}
+            <predictive-search class="search-modal__form">
+        {%- endif -%}
+            <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                {%- capture search_type -%}{%- if settings.enable_search_product -%}product,{%- endif -%}{%- if settings.enable_search_article -%}article,{%- endif -%}{%- if settings.enable_search_page -%}page{%- endif -%}{%- endcapture -%}
+                <input type="hidden" name="type" value="{{ search_type }}">
+                <div class="col-xl-12 position-relative search-group">
+                    <input class="form-control" id="Search-In-Modal" type="search" name="q" value="{{ search.terms | escape }}" aria-label="{{ 'general.search.placeholder' | t }}" title="{{ 'general.search.placeholder' | t }}" placeholder="{{ 'general.search.placeholder' | t }}">
+                    <button type="button" class="clear-btn p-0 d-flex border-0 bg-transparent position-absolute" aria-label="Clear search">
+                      <svg aria-hidden="true" focusable="false" style="width: 15px;height: 15px;"><use href="#icon-close"></use></svg>
+                    </button>
+                    <span class="search-group-btn">
+                        <svg aria-hidden="true" focusable="false" style="width: 18px;height: 18px;"><use href="#icon-search"></use></svg>
+                    </span>
+                </div>
+            </form>
+        {%- if settings.search_type == 'predictive' -%}
+            <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                <div class="predictive-search__loading-state">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="ps-spinner-border" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- if settings.search_type == 'predictive' -%}
+            </predictive-search>
+        {%- endif -%}
+      </div>
+  </div>
+</custom-drawer>

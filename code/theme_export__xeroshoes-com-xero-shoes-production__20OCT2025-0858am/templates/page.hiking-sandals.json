@@ -1,0 +1,2057 @@
+{
+  "sections": {
+    "global_page_header_banner_8rAmFa": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_8zaHDD": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_UFeBWn": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_REywbQ": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-1",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_xqFQ9D": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>Top Hiking Sandals for Men & Women 2023<\/h1>",
+                        "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_xqFQ9D"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_REywbQ"
+              ]
+            }
+          },
+          "block_order": [
+            "group_UFeBWn"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_8zaHDD"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "custom_section_rhiXRV": {
+      "type": "custom-section",
+      "blocks": {
+        "group_ntMdmF": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_with_id_DG8Kxn": {
+              "type": "text-with-id",
+              "name": "Text with ID",
+              "settings": {
+                "text": "<p>Hiking sandals give you a number of benefits over hiking boots:<\/p><ul><li>Freedom — Feeling the air on your feet, and not squishing your toes<\/li><li>Temperature — No more hot feet<\/li><li>Water friendly — Great for crossing a stream, in a raft or kayak, or on a standup paddle board<\/li><li>Cost — Up to 75% less<\/li><li>Odor — Do I need to explain this one? 😉<\/li><\/ul><p>Not all hiking sandals are the same. Most are actually <span style=\"text-decoration:underline\"><strong>not<\/strong><\/span> good for your feet. Why? Well start with this:<\/p><p>Your feet are meant to bend, and flex and move, and FEEL the world.<\/p><p>You want a hiking sandal that lets your feet do that — do what’s natural — and <strong>don’t weigh a ton<\/strong>.<\/p><p>Check out the Z-Trail, Xero Shoes most popular sandal for hikers and campers. They let your feet do what’s natural and THREE pairs of these weigh less than one pair of traditional sport sandals.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": "",
+                "custom_id": ""
+              },
+              "blocks": {}
+            },
+            "group_L4JgYk": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-stretch",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "custom_liquid_wBAjHR": {
+                  "type": "custom-liquid",
+                  "name": "Custom Liquid",
+                  "settings": {
+                    "custom_liquid": "<iframe id=\"608614656\" src=\"https:\/\/www.youtube.com\/embed\/9gHmzvq4-dk?rel=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fxeroshoes.com\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\" data-gtm-yt-inspected-1594335_110=\"true\" data-gtm-yt-inspected-25=\"true\" title=\"Xero Shoes Umara Z-Trail versus Other Sport Sandals\"><\/iframe>",
+                    "text_style": "",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "custom_liquid_wBAjHR"
+              ]
+            },
+            "text_with_id_bVCyNn": {
+              "type": "text-with-id",
+              "name": "Text with ID",
+              "settings": {
+                "text": "<p>We’ve had many customers wear our sandals — all the different styles — to thru-hike major trails, including the AT, PCT, and Camino.<\/p><p>Even if you don’t wear sandals for hiking, they make a great camp shoe or recovery shoe.<\/p><p>To pick the right hiking sandal, you have 2 decisions to make:<\/p><ul><li>Sport sandal style vs. thong style (e.g. our Z-Trail and Z-Trek vs. Genesis and Cloud)<\/li><li>More barefoot feeling vs. more protection (Z-Trek, Genesis, Cloud vs. Z-Trail)<\/li><\/ul><p>NOTE: don’t confuse the thong style sandals with flip flops. I’ll explain why in the FAQ section further down the page.<\/p><p><strong>Check out our best-selling hiking sandals for men, women and kids. We can’t wait to hear what happens when you get a pair, take them out on your favorite trail and Live Life Feet First!<\/strong><\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": "",
+                "custom_id": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_with_id_DG8Kxn",
+            "group_L4JgYk",
+            "text_with_id_bVCyNn"
+          ]
+        }
+      },
+      "block_order": [
+        "group_ntMdmF"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "global_featured_products_LQUkh8": {
+      "type": "global-featured-products",
+      "blocks": {
+        "static-section-header": {
+          "type": "_section-header",
+          "name": "t:names.section_header",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-end",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-between",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-6",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-5",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0
+          },
+          "blocks": {
+            "group_V7emtG": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "width": "col-lg-9",
+                "width_md": "col-md-9",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-block",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_TpjpfX": {
+                  "type": "heading",
+                  "name": "t:names.collection_title",
+                  "settings": {
+                    "text": "<h3>Here are some of the shoes Alberto is talking about:<\/h3>",
+                    "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                    "text_size": "h4",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-3",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_TpjpfX"
+              ]
+            }
+          },
+          "block_order": [
+            "group_V7emtG"
+          ]
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-4",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0"
+          },
+          "blocks": {
+            "product_image_8TzjW7": {
+              "type": "product-image",
+              "name": "Product Image",
+              "settings": {
+                "width": 100,
+                "product": "{{ closest.product }}",
+                "show_secondary_media": false
+              },
+              "blocks": {}
+            },
+            "group_fNQPdN": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-2",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "stamped_reviews_star_rating_badge_miMPLN": {
+                  "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
+                  "disabled": true,
+                  "settings": {
+                    "use_metafields": false,
+                    "sku_tagtype": "sku",
+                    "is_featured_product": false,
+                    "featured_product_handle": ""
+                  }
+                },
+                "custom_liquid_8U7DXC": {
+                  "type": "custom-liquid",
+                  "name": "Custom Liquid",
+                  "disabled": true,
+                  "settings": {
+                    "custom_liquid": "<svg style=\"margin-top: 0;\" width=\"93\" height=\"17\" viewBox=\"0 0 93 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M2.55722 13.5738C2.18956 13.8027 1.97508 13.6501 2.07466 13.2381L2.90191 9.7593L0.19802 7.44008C-0.12369 7.16544 -0.0470923 6.90605 0.381854 6.87554L3.92832 6.59326L5.29942 3.29753C5.45261 2.90082 5.7207 2.90082 5.88156 3.29753L7.26031 6.59326L10.7991 6.87554C11.2281 6.91368 11.3123 7.15781 10.983 7.44008L8.27906 9.7593L9.10632 13.2381C9.20589 13.6501 8.99908 13.8027 8.62375 13.5738L5.59049 11.72L2.55722 13.5738Z\" fill=\"#0F172B\"\/>\n<path d=\"M15.4303 13.7337C15.0626 13.9626 14.8481 13.81 14.9477 13.398L15.775 9.91921L13.0711 7.6C12.7494 7.32535 12.826 7.06596 13.2549 7.03545L16.8014 6.75318L18.1725 3.45744C18.3257 3.06073 18.5938 3.06073 18.7546 3.45744L20.1334 6.75318L23.6722 7.03545C24.1011 7.07359 24.1854 7.31772 23.856 7.6L21.1521 9.91921L21.9794 13.398C22.0789 13.81 21.8721 13.9626 21.4968 13.7337L18.4635 11.8799L15.4303 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M28.4352 13.7337C28.0675 13.9626 27.853 13.81 27.9526 13.398L28.7798 9.91921L26.0759 7.6C25.7542 7.32535 25.8308 7.06596 26.2598 7.03545L29.8063 6.75318L31.1773 3.45744C31.3305 3.06073 31.5986 3.06073 31.7595 3.45744L33.1382 6.75318L36.6771 7.03545C37.106 7.07359 37.1903 7.31772 36.8609 7.6L34.157 9.91921L34.9842 13.398C35.0838 13.81 34.877 13.9626 34.5017 13.7337L31.4684 11.8799L28.4352 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M41.4391 13.7337C41.0714 13.9626 40.8569 13.81 40.9565 13.398L41.7837 9.91921L39.0799 7.6C38.7581 7.32535 38.8347 7.06596 39.2637 7.03545L42.8102 6.75318L44.1813 3.45744C44.3344 3.06073 44.6025 3.06073 44.7634 3.45744L46.1422 6.75318L49.681 7.03545C50.1099 7.07359 50.1942 7.31772 49.8648 7.6L47.1609 9.91921L47.9882 13.398C48.0877 13.81 47.8809 13.9626 47.5056 13.7337L44.4723 11.8799L41.4391 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M54.3727 13.8934C54.005 14.1223 53.7905 13.9697 53.8901 13.5577L54.7173 10.0789L52.0134 7.75966C51.6917 7.48502 51.7683 7.22563 52.1973 7.19512L55.7438 6.91284L57.1148 3.61711C57.268 3.2204 57.5361 3.2204 57.697 3.61711L59.0757 6.91284L62.6146 7.19512C63.0435 7.23326 63.1278 7.47739 62.7984 7.75966L60.0945 10.0789L60.9217 13.5577C61.0213 13.9697 60.8145 14.1223 60.4392 13.8934L57.4059 12.0395L54.3727 13.8934Z\" fill=\"#0F172B\"\/>\n<path d=\"M75.28 13.014L68.574 13V11.642C68.588 8.198 73.656 8.912 73.768 6.812C73.838 5.832 73.32 5.202 71.99 5.202C70.618 5.202 70.156 5.972 70.156 7.134H68.658C68.658 5.314 69.498 3.942 71.948 3.942C74.454 3.942 75.378 5.202 75.294 6.896C75.126 10.004 70.058 9.36 70.058 11.572V11.74H75.28V13.014ZM80.6875 13V11.124H75.9555V9.724L80.1835 4.04H82.2275V9.892H83.7955V11.124H82.2275V13H80.6875ZM77.4255 9.892H80.6875V5.566L77.4255 9.892ZM88.4983 13.098C85.5443 13.098 84.7603 11.502 84.7603 8.506C84.7603 5.286 85.8803 3.942 88.4003 3.942C90.6123 3.942 91.7743 4.754 91.7743 6.812H90.2623C90.2623 5.706 89.7303 5.202 88.4003 5.202C86.4963 5.202 86.2023 6.63 86.2443 8.632C86.4123 8.002 87.1543 7.33 88.7503 7.33C90.3883 7.33 91.9703 8.044 91.9703 10.13C91.9703 11.74 90.9623 13.098 88.4983 13.098ZM86.3843 10.13C86.3843 11.04 87.0423 11.852 88.5123 11.852C89.7023 11.852 90.4583 11.194 90.4583 10.13C90.4583 9.234 89.9683 8.534 88.4003 8.534C87.0003 8.534 86.3843 9.262 86.3843 10.13Z\" fill=\"#646465\"\/>\n<\/svg>",
+                    "text_style": "",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                },
+                "product_star_rating_PUyejK": {
+                  "type": "product-star-rating",
+                  "name": "Product star rating",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "stamped_reviews_star_rating_badge_miMPLN",
+                "custom_liquid_8U7DXC",
+                "product_star_rating_PUyejK"
+              ]
+            },
+            "product_title_pJAQHc": {
+              "type": "product-title",
+              "name": "t:names.product_information",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "title": "",
+                "font_size": "fs-xl",
+                "font_weight": "fw-medium",
+                "text_style": "text-math-auto",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "link_product_title": true,
+                "margin_top_desktop": "mt-md-1",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-1",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_price_R76rQz": {
+              "type": "product-price",
+              "name": "t:names.product_price",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "price_font_size": "fs-16-14",
+                "price_font_weight": "fw-normal",
+                "color": "#0f172b",
+                "sale_price_font_size": "fs-md",
+                "sale_price_font_weight": "fw-normal",
+                "sale_color": "#646465",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_form_QJx6Ma": {
+              "type": "product-form",
+              "name": "t:names.product_form",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "form_style": "product-card"
+              },
+              "blocks": {
+                "product_variant_picker_DDEHnQ": {
+                  "type": "_product-variant-picker",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "variant_picker_type": "swatches",
+                    "show_variant_label": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "title": "Size Guide"
+                  },
+                  "blocks": {}
+                },
+                "buy_buttons_d8wUm7": {
+                  "type": "_buy-buttons",
+                  "name": "Product Buy Buttons",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "show_addtocart": true,
+                    "addtocart_full": true,
+                    "label": "",
+                    "btn_style": "btn-primary",
+                    "size_class": "",
+                    "show_quickview": false,
+                    "quickview_full": false,
+                    "quickview_label": "Quick Shop",
+                    "quickview_icon": "none",
+                    "quickview_btn_style": "btn-primary",
+                    "quickview_size_class": "",
+                    "show_dynamic_checkout": false,
+                    "show_gift_recipient_form": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_variant_picker_DDEHnQ",
+                "buy_buttons_d8wUm7"
+              ]
+            }
+          },
+          "block_order": [
+            "product_image_8TzjW7",
+            "group_fNQPdN",
+            "product_title_pJAQHc",
+            "product_price_R76rQz",
+            "product_form_QJx6Ma"
+          ]
+        }
+      },
+      "name": "t:names.products_list",
+      "settings": {
+        "fluid_layout": true,
+        "container_width": "container-small",
+        "right_side_fullwidth": false,
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "featured_products": [
+          "genesis-sandal-men-clearance",
+          "ztrek-men",
+          "ztrail-women",
+          "ztrail-men",
+          "ztrail-kids",
+          "ztrek-women",
+          "genesis-men",
+          "genesis-women"
+        ],
+        "layout_type": "grid",
+        "max_products": 9,
+        "columns": 3,
+        "ipad_columns": 2,
+        "mobile_columns": 1,
+        "slides_per_view": 4,
+        "slides_per_view_ipad": 3.2,
+        "slides_per_view_mobile": 2,
+        "columns_gap": 0,
+        "columns_gap_ipad": 20,
+        "columns_gap_mobile": 20,
+        "rows_gap": 0,
+        "rows_gap_ipad": 20,
+        "rows_gap_mobile": 40,
+        "section_bg_color": "",
+        "ratio": "square",
+        "button_style": false,
+        "button_position": "card_bottom",
+        "nav_arrows": true,
+        "nav_arrows_visible": "both",
+        "nav_arrows_color": "",
+        "nav_arrows_size": "",
+        "nav_arrows_outside": "inside",
+        "nav_dots": false,
+        "pagination_visible": "both",
+        "pagination_color": "",
+        "nav_scrollbar": true,
+        "scrollbar_visible": "both",
+        "scrollbar_color": ""
+      }
+    },
+    "custom_section_MLeGiH": {
+      "type": "custom-section",
+      "blocks": {
+        "group_H9bmAe": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "image_wVBPEy": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/sample-banner.webp",
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "custom_image_width": false,
+                "custom_image_width_value": 160,
+                "object_fit": "cover",
+                "aspect_ratio": "",
+                "enable_link": false,
+                "enable_preload": false,
+                "url": "",
+                "enable_overlay": false,
+                "overlay_bg_color": "#000000",
+                "overlay_opacity": 0.5,
+                "blend_mode": "none",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_Fk7Q76": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>We take our sandals seriously. But we don’t take ourselves that way. So enjoy some barefoot humor in these videos. Then check out <a href=\"https:\/\/www.youtube.com\/xeroshoes\/\">our YouTube channel<\/a> or more.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-4",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-4",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_wVBPEy",
+            "text_Fk7Q76"
+          ]
+        },
+        "group_cfzCWP": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-stretch",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-6",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-6",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-10",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_k9C9JA": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-6",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-3",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_PBEtm7": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "custom_html_dVQntp": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<iframe class=\"elementor-video\" frameborder=\"0\" allowfullscreen=\"\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" title=\"The World's Fastest Shortest Triathlon - the ultimate sprint triathlon\" width=\"640\" height=\"360\" src=\"https:\/\/www.youtube.com\/embed\/LUu3b3Rqr5A?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fxeroshoes.com&amp;widgetid=18&amp;forigin=https%3A%2F%2Fxeroshoes.com%2Fsandals%2Fhiking%2F&amp;aoriginsup=1&amp;vf=1\" id=\"widget19\" data-gtm-yt-inspected-1594335_110=\"true\" data-gtm-yt-inspected-25=\"true\"><\/iframe>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_html_dVQntp"
+                  ]
+                },
+                "group_fEfPTh": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-stretch",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-4",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": "flex-1"
+                  },
+                  "blocks": {
+                    "heading_FMHFEC": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h2>Can you really hike in a sandal?<\/h2>",
+                        "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                        "text_size": "h4",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_with_id_hr8TTn": {
+                      "type": "text-with-id",
+                      "name": "Text with ID",
+                      "settings": {
+                        "text": "<p>Sandals are mankind’s oldest and favorite footwear.<\/p><p>People have been hiking, walking, running — LIVING — in sandals for thousands of years.<\/p><p>There’s no reason you can’t do the same and enjoy the freedom, comfort, and versatility of a hiking sandal.<\/p><p>We’ve had customers hike every major trail — the Appalachian Trail, the Pacific Crest Trail, the Camino de Santiago, and many others.<\/p><p>Some wear their sandals for the whole trail, including our super-thin Genesis. Some use their sandals at the end of the day, as recovery sandals.<br\/><br\/>We even have cyclists who keep their sandals in their jersey, and slip ’em on once they get out of their cleats.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": "flex-1",
+                        "custom_id": ""
+                      },
+                      "blocks": {}
+                    },
+                    "buttons_gE9kPy": {
+                      "type": "buttons",
+                      "name": "Button",
+                      "settings": {
+                        "link": "shopify:\/\/collections\/diysandals",
+                        "custom_video_play_button": false,
+                        "icon": "none",
+                        "label": "See our DIY Sandal Making Kits",
+                        "style_class": "btn-primary",
+                        "size_class": "",
+                        "text_style": "",
+                        "open_in_new_tab": false,
+                        "hide_desktop": false,
+                        "hide_mobile": false,
+                        "full_width": false,
+                        "download_link": false,
+                        "download_all_logos_in_the_section": false,
+                        "add_hidden_text_for_seo": false,
+                        "hidden_text_for_seo": "Hidden Text",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_FMHFEC",
+                    "text_with_id_hr8TTn",
+                    "buttons_gE9kPy"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_PBEtm7",
+                "group_fEfPTh"
+              ]
+            },
+            "group_MHbt6C": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-6",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-3",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_QyCqha": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "custom_html_LCdHfW": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<iframe class=\"elementor-video\" frameborder=\"0\" allowfullscreen=\"\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" title=\"Dobbycizing. Natural Exercise for Office Workers\" width=\"640\" height=\"360\" src=\"https:\/\/www.youtube.com\/embed\/ZneoVp-uq5s?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fxeroshoes.com&amp;widgetid=20&amp;forigin=https%3A%2F%2Fxeroshoes.com%2Fsandals%2Fhiking%2F&amp;aoriginsup=1&amp;vf=1\" id=\"widget21\" data-gtm-yt-inspected-1594335_110=\"true\" data-gtm-yt-inspected-25=\"true\"><\/iframe>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_html_LCdHfW"
+                  ]
+                },
+                "group_pNBbTd": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-stretch",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-4",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": "flex-1"
+                  },
+                  "blocks": {
+                    "heading_9NCLfV": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h2>The ankle support MYTH...<\/h2>",
+                        "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                        "text_size": "h4",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_with_id_aneRyY": {
+                      "type": "text-with-id",
+                      "name": "Text with ID",
+                      "settings": {
+                        "text": "<p>Imagine a typical hiking boot or sandal with a thick, stiff sole.<br\/><br\/>Now imagine that you step on a pointy rock on the inside edge of your shoe.<br\/><br\/>That point will become a fulcrum, and with a rigid sole your foot can’t move and your ankle will twist.<br\/><br\/>Frankly, there’s no amount of ankle support that can stop that. In fact, if it did, the torque would simply move up to your knee, which could be worse!<br\/><br\/>Now imagine stepping on that same rock with a sole that’s flexible enough to let your foot bend around the obstacle.<br\/><br\/>No ankle twisting!<br\/><br\/>Your body gives you all the support you need 🙂<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": "flex-1",
+                        "custom_id": ""
+                      },
+                      "blocks": {}
+                    },
+                    "buttons_cj3bb9": {
+                      "type": "buttons",
+                      "name": "Button",
+                      "settings": {
+                        "link": "\/collections\/all",
+                        "custom_video_play_button": false,
+                        "icon": "none",
+                        "label": "See our Best-Selling Hiking Boots Here",
+                        "style_class": "btn-primary",
+                        "size_class": "",
+                        "text_style": "",
+                        "open_in_new_tab": false,
+                        "hide_desktop": false,
+                        "hide_mobile": false,
+                        "full_width": false,
+                        "download_link": false,
+                        "download_all_logos_in_the_section": false,
+                        "add_hidden_text_for_seo": false,
+                        "hidden_text_for_seo": "Hidden Text",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_9NCLfV",
+                    "text_with_id_aneRyY",
+                    "buttons_cj3bb9"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_QyCqha",
+                "group_pNBbTd"
+              ]
+            }
+          },
+          "block_order": [
+            "group_k9C9JA",
+            "group_MHbt6C"
+          ]
+        },
+        "group_bn8L6E": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-6",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-6",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_hxKidG": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>You can join our worldwide \"MOVEMENT Movement\"<\/h2>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h4",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_with_id_PgDHFM": {
+              "type": "text-with-id",
+              "name": "Text with ID",
+              "settings": {
+                "text": "<p>The Xero Shoes mission is <strong>helping people re-discover that natural movement the better, obvious, healthy choice… the way natural food is now. <\/strong><\/p><p>That’s why we say we’re creating a MOVEMENT movement.<\/p><p>We’d love to have you join the movement.<\/p><p>All you have to do is slip on a pair of Xero Shoes  so you can Live Life Feet First.<\/p><p>Have you forgotten the feeling of going outside on a warm summer day, kicking off your shoes and feeling the grass, or the sand, or the water between your toes.<\/p><p>Remember that fun. free feeling?<\/p><p>You can have that feeling NOW, regardless of your age.<\/p><p>If you don’t want to go barefoot, put on some shoes that let you Feel the Freedom and Feel the Fun of minimalist shoes, boots, and sandals.<\/p><p>Xero Shoes.<\/p><p>Check out more of our barefoot-inspired products for men, women and kids, below.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-3",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-3",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": "",
+                "custom_id": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_hxKidG",
+            "text_with_id_PgDHFM"
+          ]
+        }
+      },
+      "block_order": [
+        "group_H9bmAe",
+        "group_cfzCWP",
+        "group_bn8L6E"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-xs",
+        "section_top_spacing_ipad": "spacing-top-ipad-xs",
+        "section_top_spacing_mobile": "spacing-top-mobile-xs",
+        "section_bottom_spacing": "spacing-bottom-xs",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-xs",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-xs",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "global_product_tabs_4g69Q8": {
+      "type": "global-product-tabs",
+      "blocks": {
+        "static-section-header": {
+          "type": "_section-header",
+          "name": "t:names.section_header",
+          "static": true,
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "display": "d-block",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-6",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-4",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0
+          },
+          "blocks": {
+            "heading_N9mDjV": {
+              "type": "heading",
+              "settings": {
+                "text": "<h2>Best Selling Minimalist Shoes<\/h2>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h2",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#0f172b",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_rhYE4T": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Here are the best-selling Shoes that will help you Live Life Feet First:<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_N9mDjV",
+            "text_rhYE4T"
+          ]
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-4",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0"
+          },
+          "blocks": {
+            "product_media_card_mGjdPp": {
+              "type": "product-media-card",
+              "name": "Product media card",
+              "disabled": true,
+              "settings": {
+                "width": 100,
+                "template_type": "classic-horizontal",
+                "thumb_image": true,
+                "nav_arrows": false,
+                "nav_arrows_visible": "both",
+                "nav_arrows_color": "",
+                "nav_arrows_size": "",
+                "nav_arrows_outside": "inside",
+                "nav_dots": false,
+                "pagination_visible": "both",
+                "pagination_color": "",
+                "thumbs_nav_arrows": true,
+                "thumbs_nav_arrows_visible": "both",
+                "thumbs_nav_arrows_color": "",
+                "thumbs_nav_arrows_size": "",
+                "product": "{{ closest.product }}",
+                "ratio": "square",
+                "image_zoom": "no_zoom"
+              },
+              "blocks": {}
+            },
+            "product_image_AcGWW8": {
+              "type": "product-image",
+              "name": "Product Image",
+              "settings": {
+                "width": 100,
+                "product": "{{ closest.product }}",
+                "show_secondary_media": false
+              },
+              "blocks": {}
+            },
+            "group_4L9VK9": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-2",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "stamped_reviews_star_rating_badge_9ehnHc": {
+                  "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
+                  "disabled": true,
+                  "settings": {
+                    "use_metafields": false,
+                    "sku_tagtype": "sku",
+                    "is_featured_product": false,
+                    "featured_product_handle": ""
+                  }
+                },
+                "custom_liquid_jc8YzU": {
+                  "type": "custom-liquid",
+                  "name": "Custom Liquid",
+                  "disabled": true,
+                  "settings": {
+                    "custom_liquid": "<svg style=\"margin-top: 0;\" width=\"93\" height=\"17\" viewBox=\"0 0 93 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M2.55722 13.5738C2.18956 13.8027 1.97508 13.6501 2.07466 13.2381L2.90191 9.7593L0.19802 7.44008C-0.12369 7.16544 -0.0470923 6.90605 0.381854 6.87554L3.92832 6.59326L5.29942 3.29753C5.45261 2.90082 5.7207 2.90082 5.88156 3.29753L7.26031 6.59326L10.7991 6.87554C11.2281 6.91368 11.3123 7.15781 10.983 7.44008L8.27906 9.7593L9.10632 13.2381C9.20589 13.6501 8.99908 13.8027 8.62375 13.5738L5.59049 11.72L2.55722 13.5738Z\" fill=\"#0F172B\"\/>\n<path d=\"M15.4303 13.7337C15.0626 13.9626 14.8481 13.81 14.9477 13.398L15.775 9.91921L13.0711 7.6C12.7494 7.32535 12.826 7.06596 13.2549 7.03545L16.8014 6.75318L18.1725 3.45744C18.3257 3.06073 18.5938 3.06073 18.7546 3.45744L20.1334 6.75318L23.6722 7.03545C24.1011 7.07359 24.1854 7.31772 23.856 7.6L21.1521 9.91921L21.9794 13.398C22.0789 13.81 21.8721 13.9626 21.4968 13.7337L18.4635 11.8799L15.4303 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M28.4352 13.7337C28.0675 13.9626 27.853 13.81 27.9526 13.398L28.7798 9.91921L26.0759 7.6C25.7542 7.32535 25.8308 7.06596 26.2598 7.03545L29.8063 6.75318L31.1773 3.45744C31.3305 3.06073 31.5986 3.06073 31.7595 3.45744L33.1382 6.75318L36.6771 7.03545C37.106 7.07359 37.1903 7.31772 36.8609 7.6L34.157 9.91921L34.9842 13.398C35.0838 13.81 34.877 13.9626 34.5017 13.7337L31.4684 11.8799L28.4352 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M41.4391 13.7337C41.0714 13.9626 40.8569 13.81 40.9565 13.398L41.7837 9.91921L39.0799 7.6C38.7581 7.32535 38.8347 7.06596 39.2637 7.03545L42.8102 6.75318L44.1813 3.45744C44.3344 3.06073 44.6025 3.06073 44.7634 3.45744L46.1422 6.75318L49.681 7.03545C50.1099 7.07359 50.1942 7.31772 49.8648 7.6L47.1609 9.91921L47.9882 13.398C48.0877 13.81 47.8809 13.9626 47.5056 13.7337L44.4723 11.8799L41.4391 13.7337Z\" fill=\"#0F172B\"\/>\n<path d=\"M54.3727 13.8934C54.005 14.1223 53.7905 13.9697 53.8901 13.5577L54.7173 10.0789L52.0134 7.75966C51.6917 7.48502 51.7683 7.22563 52.1973 7.19512L55.7438 6.91284L57.1148 3.61711C57.268 3.2204 57.5361 3.2204 57.697 3.61711L59.0757 6.91284L62.6146 7.19512C63.0435 7.23326 63.1278 7.47739 62.7984 7.75966L60.0945 10.0789L60.9217 13.5577C61.0213 13.9697 60.8145 14.1223 60.4392 13.8934L57.4059 12.0395L54.3727 13.8934Z\" fill=\"#0F172B\"\/>\n<path d=\"M75.28 13.014L68.574 13V11.642C68.588 8.198 73.656 8.912 73.768 6.812C73.838 5.832 73.32 5.202 71.99 5.202C70.618 5.202 70.156 5.972 70.156 7.134H68.658C68.658 5.314 69.498 3.942 71.948 3.942C74.454 3.942 75.378 5.202 75.294 6.896C75.126 10.004 70.058 9.36 70.058 11.572V11.74H75.28V13.014ZM80.6875 13V11.124H75.9555V9.724L80.1835 4.04H82.2275V9.892H83.7955V11.124H82.2275V13H80.6875ZM77.4255 9.892H80.6875V5.566L77.4255 9.892ZM88.4983 13.098C85.5443 13.098 84.7603 11.502 84.7603 8.506C84.7603 5.286 85.8803 3.942 88.4003 3.942C90.6123 3.942 91.7743 4.754 91.7743 6.812H90.2623C90.2623 5.706 89.7303 5.202 88.4003 5.202C86.4963 5.202 86.2023 6.63 86.2443 8.632C86.4123 8.002 87.1543 7.33 88.7503 7.33C90.3883 7.33 91.9703 8.044 91.9703 10.13C91.9703 11.74 90.9623 13.098 88.4983 13.098ZM86.3843 10.13C86.3843 11.04 87.0423 11.852 88.5123 11.852C89.7023 11.852 90.4583 11.194 90.4583 10.13C90.4583 9.234 89.9683 8.534 88.4003 8.534C87.0003 8.534 86.3843 9.262 86.3843 10.13Z\" fill=\"#646465\"\/>\n<\/svg>",
+                    "text_style": "",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                },
+                "product_star_rating_xtpPAE": {
+                  "type": "product-star-rating",
+                  "name": "Product star rating",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "stamped_reviews_star_rating_badge_9ehnHc",
+                "custom_liquid_jc8YzU",
+                "product_star_rating_xtpPAE"
+              ]
+            },
+            "product_title_4tC863": {
+              "type": "product-title",
+              "name": "t:names.product_information",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "title": "",
+                "font_size": "fs-xl",
+                "font_weight": "fw-medium",
+                "text_style": "text-math-auto",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "link_product_title": true,
+                "margin_top_desktop": "mt-md-1",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-1",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_price_wqitqC": {
+              "type": "product-price",
+              "name": "t:names.product_price",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "price_font_size": "fs-16-14",
+                "price_font_weight": "fw-normal",
+                "color": "#0f172b",
+                "sale_price_font_size": "fs-md",
+                "sale_price_font_weight": "fw-normal",
+                "sale_color": "#646465",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-2",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_form_RfUpEk": {
+              "type": "product-form",
+              "name": "t:names.product_form",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "form_style": "product-card"
+              },
+              "blocks": {
+                "product_variant_picker_8D4txG": {
+                  "type": "_product-variant-picker",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "variant_picker_type": "swatches",
+                    "show_variant_label": false,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "title": "Size Guide"
+                  },
+                  "blocks": {}
+                },
+                "buy_buttons_rJXH4h": {
+                  "type": "_buy-buttons",
+                  "name": "Product Buy Buttons",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "show_addtocart": true,
+                    "addtocart_full": true,
+                    "label": "",
+                    "btn_style": "btn-primary",
+                    "size_class": "",
+                    "show_quickview": false,
+                    "quickview_full": false,
+                    "quickview_label": "Quick Shop",
+                    "quickview_icon": "none",
+                    "quickview_btn_style": "btn-primary",
+                    "quickview_size_class": "",
+                    "show_dynamic_checkout": false,
+                    "show_gift_recipient_form": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_variant_picker_8D4txG",
+                "buy_buttons_rJXH4h"
+              ]
+            }
+          },
+          "block_order": [
+            "product_media_card_mGjdPp",
+            "product_image_AcGWW8",
+            "group_4L9VK9",
+            "product_title_4tC863",
+            "product_price_wqitqC",
+            "product_form_RfUpEk"
+          ]
+        }
+      },
+      "name": "t:names.products_tabs",
+      "settings": {
+        "fluid_layout": false,
+        "right_side_fullwidth": false,
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "collection_list": [
+          "bestsellers-mens",
+          "bestsellers-womens"
+        ],
+        "show_shop_all_links": true,
+        "max_products": 16,
+        "slides_per_view": 4,
+        "columns_gap": 0,
+        "slides_per_view_ipad": 2.5,
+        "columns_gap_ipad": 15,
+        "slides_per_view_mobile": 1.5,
+        "columns_gap_mobile": 15,
+        "section_bg_color": "",
+        "ratio": "square",
+        "button_style": false,
+        "button_position": "card_bottom",
+        "nav_arrows": true,
+        "nav_arrows_visible": "show_only_desktop",
+        "nav_arrows_color": "light-arrow",
+        "nav_arrows_size": "",
+        "nav_arrows_outside": "inside",
+        "nav_dots": false,
+        "pagination_visible": "both",
+        "pagination_color": "",
+        "nav_scrollbar": false,
+        "scrollbar_visible": "both",
+        "scrollbar_color": ""
+      }
+    },
+    "custom_section_HNVtMt": {
+      "type": "custom-section",
+      "blocks": {
+        "group_UNrrp9": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_xM34Lc": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h3>More info about Huarache Style Sandals<\/h3>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h4",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_with_id_qxbpeA": {
+              "type": "text-with-id",
+              "name": "Text with ID",
+              "settings": {
+                "text": "<p>[display-posts image_size=”medium” wrapper=”div” wrapper_class=”display-posts-listing grid” meta_key=”_thumbnail_id” include_excerpt=”true” excerpt_length=”30″ id=”1006, 512424, 1030″ excerpt_more=”Read More” excerpt_more_link=”true”]<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-2",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-2",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": "",
+                "custom_id": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_xM34Lc",
+            "text_with_id_qxbpeA"
+          ]
+        },
+        "group_P7LcaT": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_z3RkaN": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h3>Still Have Questions About Hiking Sandals?<\/h3>",
+                "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                "text_size": "h4",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_with_id_3HJMdK": {
+              "type": "text-with-id",
+              "name": "Text with ID",
+              "settings": {
+                "text": "<p>If the FAQs below don’t answer your questions, contact our Customer Happiness Team atsupport@xeroshoes.comor 303.447.3100 between 9-5, Mountain Time, Mon-Fri (calling is faster).<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-2",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-2",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": "",
+                "custom_id": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_z3RkaN",
+            "text_with_id_3HJMdK"
+          ]
+        }
+      },
+      "block_order": [
+        "group_UNrrp9",
+        "group_P7LcaT"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-xs",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-xs",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-xs",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "template_faq_FKJN69": {
+      "type": "template-faq",
+      "blocks": {
+        "faq_item_iNMaDY": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Are Hiking Boots good for Flat Feet?",
+            "answer": "<p>What’s good for flat feet is making them strong by USING them.<br\/><br\/>If your boot doesn’t let your foot flex naturally, then, no.<br\/><br\/>If it does, then yes.<br\/><br\/>We make Xero Shoes boots so that your feet can do what’s natural and support you for life.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_jqrmr9": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Are hiking boots waterproof?",
+            "answer": "<p>Not all hiking boots are waterproof… even the ones that say “waterproof” on the label!<\/p><p>There are 3 types of construction that have different levels of water resistance.<\/p><ol><li>Some boot uppers use a material that’s naturally water resistant, or treated with water resistant materials<\/li><li>Some walking boots and hiking boots have a water resistant membrane that keeps some water out<\/li><li>Some have a fully seam-sealed lining (a bootie).<\/li><\/ol><p>The last is the only fully waterproof option.<\/p><p>And some boots have more than one of those options built in.<\/p><p>For example, the <a href=\"\/collections\/xcursion\" title=\"\/collections\/xcursion\">Xero Shoes Xcursion<\/a> has a fully seam sealed inner bootie, a water repelling membrane, and an upper material designed to resist water.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_dae36w": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can Hiking Boots be used as Work Boots?",
+            "answer": "<p>It depends on your needs and the requirements of your job.<\/p><p>If you need the protection of a steel toe, then most hiking boots will not suffice.<\/p><p>If your job requires your boots to have protective certification, then no.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_NfQBq9": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can Hiking Boots be used for Walking?",
+            "answer": "<p>The problem is that <strong>most<\/strong> boots are too stiff for walking.<\/p><p>In fact, if you’re not comfortable walking in hiking boots, you won’t be comfortable hiking in them.<\/p><p>So, ideally, you want a boot that’s flexible enough to let your feet move naturally, and wide enough for your toes to spread and splay.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_KQdRG3": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can I Wear Hiking Boots Without Socks?",
+            "answer": "<p>It depends on how sweaty your feet get and what the lining of your boot is made of.<\/p><p>If you have a fully seam-sealed waterproof boot, and you wear it barefoot, be prepared to deal with moisture.<\/p><p>A boot with less waterproofing will breathe more and be better for bare feet<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_aiAKwq": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can you Resole Hiking Boots?",
+            "answer": "<p>That depends on the boot.<\/p><p>Contact the manufacturer for details.<\/p><p>Typically, to resole a boot, you need to be able to remove the outsole (the rubber part that hits the ground) without damaging the padding. Or you need to be able to remove the midsole padding as well, while still having a way to reattach the sole.<\/p><p>Xero Shoes boots are not made to be resoled since we don’t use (or need) a midsole that wears out. Plus, our shoes and boots have a 5,000 mile sole warranty.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_XGYYgN": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How are Snow Boots Different than Hiking Boots?",
+            "answer": "<p>Typically, there are 3 differences between a boot for hikes vs. one for snow:<\/p><ul><li>Snow boots are often taller, coming up higher on the calf or even to the knee<\/li><li>Snow boots have different treads to handle ice and snow rather than dirt, gravel, skree, etc.<\/li><li>Snow boots will have more insulation and, often, heat reflecting insoles<\/li><\/ul><p>Snow boots are also often waterproof, or at least water resistant.<\/p><p>Stay tuned… in addition to our collection of <a href=\"\/collections\/boots\" title=\"\/collections\/boots\">hiking, walking and casual boots<\/a>, Xero Shoes has a snow boot coming out in the 2nd half of 2020!<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_KiEarF": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What makes a good hiking boot?",
+            "answer": "<p>Whether you’re a man or woman, hiking boots should be, first and foremost, COMFORTABLE.<\/p><p>That doesn’t mean they’re cushy, and soft, and full of padding.<\/p><p>It means that at the end of a walk or hike you’re not in a rush to rip off your boots so your feet can feel better.<\/p><p>If you <strong>are<\/strong> feeling like that, it’s often because your boots are too stiff and pointy and don’t let your feet move naturally — bending, and flexing, and getting FEEDBACK from the ground.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_YgFxiJ": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What’s the different between a Man’s Hiking Boot and Woman’s Boot?",
+            "answer": "<p>Statistically speaking, a hiking boot for men will have a slightly wider toe box and heel compared to a boot for women.<\/p><p>So if you’re a man with a narrow foot, you might consider a “woman’s” boot. And if you’re a woman with a wide foot, consider a “men’s” boot for hiking.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_bpKPgi": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Where Can I Find Walking Boots or Hiking Boots for Wide Feet?",
+            "answer": "<p>Well, no shoe or boot is going to fit EVERYONE and all foot shapes.<\/p><p>But we make <a href=\"\/collections\/all\" title=\"\/collections\/all\">Xero Shoes<\/a> with a wider toe box to let feet spread and splay naturally.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_cBLTLC": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Who makes Vegan Hiking Boots?",
+            "answer": "<p>Since many hiking boots are synthetic, many are vegan-friendly, using no animal products.<\/p><p>Xero Shoes hiking boots are 100% vegan friendly.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_zFiPRU": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Why Would I want Lightweight, Minimalist Hiking Boots?",
+            "answer": "<p>Simple.<\/p><p>Your feet are meant to bend and move and flex and FEEL the world.<\/p><p>If you don’t let them do their job, the function of balance and agility <strong>tries <\/strong>(unsuccessfully) to move “upstream” into your ankle, your knee, your hip, and your back.<\/p><p>A lightweight, minimalist boot that lets your foot do what’s natural can take the stress off those upstream joints.<\/p><p>In other words, they let your feet do their job so the rest of your body can do its job.<\/p><p>Don’t neglect the FEELING part — you have more nerve endings in your soles than anywhere but your fingertips and lips. Your brain <strong>needs <\/strong>that feedback from your feet for proper, efficient, and enjoyable hiking and walking.<\/p><p><a href=\"\/collections\/boots\" title=\"\/collections\/boots\">Xero Shoes’ boots<\/a> are made to let your feet do what’s natural so you can Live Life Feet First!<\/p>",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_iNMaDY",
+        "faq_item_jqrmr9",
+        "faq_item_dae36w",
+        "faq_item_NfQBq9",
+        "faq_item_KQdRG3",
+        "faq_item_aiAKwq",
+        "faq_item_XGYYgN",
+        "faq_item_KiEarF",
+        "faq_item_YgFxiJ",
+        "faq_item_bpKPgi",
+        "faq_item_cBLTLC",
+        "faq_item_zFiPRU"
+      ],
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#0f172b",
+        "text_alignment": "text-left",
+        "heading": "FAQs",
+        "txt": "",
+        "border_hide": false,
+        "width_auto": false
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_8rAmFa",
+    "custom_section_rhiXRV",
+    "global_featured_products_LQUkh8",
+    "custom_section_MLeGiH",
+    "global_product_tabs_4g69Q8",
+    "custom_section_HNVtMt",
+    "template_faq_FKJN69"
+  ]
+}

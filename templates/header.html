@@ -1,0 +1,78 @@
+<!-- Arcadia Digital Header Component - XeroShoes -->
+<header class="arcadia-header">
+    <div class="header-content">
+        <div class="header-brand">
+            <a href="https://www.xeroshoes.com" target="_blank" rel="noopener noreferrer" class="header-logo logo-link">
+                <img src="assets/XEROSHOES_Logo.svg" alt="XeroShoes" class="header-logo-img logo">
+            </a>
+            <div class="header-title">
+                <h1 class="header-main-title">eCommerce Platform Documentation</h1>
+                <p class="header-subtitle">XeroShoes Multi-Region Shopify Plus Platform</p>
+            </div>
+        </div>
+        
+        <nav class="header-nav">
+            <a href="index.html" class="header-home-btn" title="Home">
+                <img src="assets/home-icon-svgrepo-com.svg" alt="Home" class="header-icon">
+            </a>
+            
+            <button class="header-menu-btn" id="menu-toggle" title="Menu" aria-expanded="false" aria-controls="header-menu" aria-label="Toggle navigation menu">
+                <img src="assets/burger-menu-svgrepo-com.svg" alt="Menu" class="header-icon">
+            </button>
+            
+            <div class="header-menu" id="header-menu" role="menu" aria-labelledby="menu-toggle">
+                <a href="main-platform.html" class="header-menu-link" role="menuitem">
+                    <svg class="header-menu-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                    </svg>
+                    Platform Documentation
+                </a>
+                <a href="theme-architecture.html" class="header-menu-link" role="menuitem">
+                    <svg class="header-menu-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                    </svg>
+                    Theme Architecture
+                </a>
+                <a href="integrations.html" class="header-menu-link" role="menuitem">
+                    <svg class="header-menu-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+                    </svg>
+                    Integrations
+                </a>
+                <a href="operational-procedures.html" class="header-menu-link" role="menuitem">
+                    <svg class="header-menu-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"/>
+                    </svg>
+                    Procedures
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+// Header menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const headerMenu = document.getElementById('header-menu');
+    
+    if (menuToggle && headerMenu) {
+        menuToggle.addEventListener('click', function() {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            menuToggle.classList.toggle('active');
+            headerMenu.classList.toggle('show');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                headerMenu.classList.remove('show');
+            }
+        });
+    }
+});
+</script>

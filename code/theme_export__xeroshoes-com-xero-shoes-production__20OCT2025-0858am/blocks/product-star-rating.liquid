@@ -1,0 +1,81 @@
+{% liquid
+    assign product = block.settings.product
+%}
+<!-- Stamped - Begin Star Rating Badge -->
+<span 
+class="stamped-product-reviews-badge stamped-badge-clickable" 
+data-id="{{ product.id }}"
+data-product-sku="{{ product.handle }}" 
+data-product-type="{{ product.type }}" 
+data-product-title="{{ product.title }}" 
+class="stamped-product-reviews-badge-{{ block.id }} {{ block.settings.custom_class }}"
+style="display:block; cursor: pointer;" 
+aria-hidden="true"
+onclick="scrollToReviews()">
+</span>
+<!-- Stamped - End Star Rating Badge -->
+
+<script>
+function scrollToReviews() {
+  // Only work on product pages
+  if (!window.location.pathname.includes('/products/')) {
+    return;
+  }
+  
+  // Only work if the badge is within the main product container (not in related products)
+  const mainProductContainer = document.querySelector('[data-product-container]');
+  if (!mainProductContainer) {
+    return;
+  }
+  
+  // Check if the clicked badge is within the main product container
+  const clickedBadge = event.target.closest('.stamped-product-reviews-badge');
+  if (!clickedBadge || !mainProductContainer.contains(clickedBadge)) {
+    return;
+  }
+  
+  // Try to find the main review widget by class first
+  const reviewSection = document.querySelector('.pdp-stamped-reviews');
+  
+  if (reviewSection) {
+    reviewSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  } else {
+    // Fallback to ID selector
+    const mainWidget = document.querySelector('#stamped-main-widget');
+    if (mainWidget) {
+      mainWidget.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+}
+</script>
+
+  {% schema %}
+  {
+    "name": "Product stars rating",
+    "tag": null,
+    "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+        {
+            "type": "text",
+            "id": "custom_class",
+            "label": "Custom Class"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Product star rating",
+        "settings": { "product": "{{ closest.product }}" }
+      }
+    ]
+  }
+  {% endschema %}

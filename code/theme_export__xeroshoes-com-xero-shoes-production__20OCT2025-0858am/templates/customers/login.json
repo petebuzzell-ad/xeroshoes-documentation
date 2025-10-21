@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-login",
+      "settings": {
+        "fluid_layout": false,
+        "section_top_spacing": "spacing-top-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "heading": "Welcome!",
+        "image": "shopify:\/\/shop_images\/mlouye-sera-tall-tote-mini-black-6.jpg"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

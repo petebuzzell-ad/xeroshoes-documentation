@@ -1,0 +1,9 @@
+.card-product .product--media>a {
+    padding-top: 100%;
+}
+
+@media (max-width:991px) {
+    .card-product .product--media>a {
+    padding-top: 70%;
+}
+}

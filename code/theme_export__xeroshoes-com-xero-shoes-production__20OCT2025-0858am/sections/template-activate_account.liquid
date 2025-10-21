@@ -1,0 +1,53 @@
+<section data-template="account" class="spacing-top-sm spacing-bottom-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-lg-5 mx-auto">
+        <div id="customerLoginForm">
+          {% form 'activate_customer_password' %}
+            <h3 class="mb-3 text-center">{{ 'customer.activate_account.title' | t }}</h3>
+
+            {% if form.errors %}
+                {{ form.errors | default_errors }}
+            {% endif %}
+
+            <div class="form-group">
+              <input
+                type="password"
+                value=""
+                name="customer[password]"
+                aria-label="password"
+                id="CustomerPassword"
+                class="form-control"
+                placeholder="{{ 'customer.activate_account.password' | t }}"
+              >
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                value=""
+                name="customer[password_confirmation]"
+                aria-label="password confirmation"
+                id="CustomerPasswordConfirmation"
+                class="form-control"
+                placeholder="{{ 'customer.activate_account.password_confirm' | t }}"
+              >
+            </div>
+
+            <input
+              type="submit"
+              class="btn btn-primary w-100 text-uppercase"
+              value="{{ 'customer.activate_account.submit' | t }}"
+            >
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Account activation",
+  "class": "section-account-activation"
+}
+{% endschema %}

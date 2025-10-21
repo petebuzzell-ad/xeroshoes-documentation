@@ -1,0 +1,456 @@
+{% capture spacing_class_list %}
+    {{ section.settings.section_top_spacing }} {{ section.settings.section_top_spacing_ipad }} {{ section.settings.section_top_spacing_mobile }} {{ section.settings.section_bottom_spacing }} {{ section.settings.section_bottom_spacing_ipad }} {{ section.settings.section_bottom_spacing_mobile }}
+{% endcapture %}
+
+<div id="{{ section.id }}" class="custom-section {{ spacing_class_list }}" style="background: {{ section.settings.section_bg_color }};" >
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %}">    
+        <div class="row no-gutter">
+            <div class="col-lg-6">
+                <div class="swiper-wrapper__custom swiper-slide-no-swiping h-100">
+                    <swiper-container class="product-image-thumb-pwi h-100" effect="fade" slides-per-view="1" no-swiping="true" no-swiping-class="swiper-slide-no-swiping"
+                    {%- if section.settings.autoplay -%}
+                        speed="{{ section.settings.autoplay_speed }}"
+                    {%- endif -%}>
+                        {% for block in section.blocks %}
+                            {% if block.settings.image %}
+                                <swiper-slide lazy="true">
+                                    <div class="product-thumb-image-pwi">
+                                        <div class="thumb-item h-100">
+                                            {%- render 'picture-tag'
+                                                image: block.settings.image
+                                                mobile_image: block.settings.image_mobile | default: block.settings.image
+                                                class: 'img-fluid h-100 flex-1'
+                                            -%}
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                            {% endif %}
+                        {% endfor %}
+                    </swiper-container>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-column h-100 swiper-wrapper__custom swiper-wrapper__custom--main">
+                    <div class="flex-1 swiper-wrapper__custom">
+                        <div class="swiper-pagination order-2 mt-6 swiper-pagination-main-pwi both position-absolute mb-lg-4"></div>
+                        <swiper-container class="h-100" slides-per-view="1" thumbs-swiper=".product-image-thumb-pwi" effect="fade" 
+                        {%- if section.settings.autoplay -%}
+                            autoplay-delay="{{ section.settings.autoplay_delay }}"
+                            speed="{{ section.settings.autoplay_speed }}"
+                        {%- endif -%}
+                        pagination='{
+                            "el": ".swiper-pagination-main-pwi",
+                            "clickable": true,
+                            "type": "bullets"
+                        }'  
+                            >    
+                            {% for block in section.blocks %}
+                                <swiper-slide lazy="true">
+                                    <div class="product-content-pwi-wrapper mx-auto d-flex flex-column justify-content-lg-center text-center">
+                                        <div class="product-image-pwi position-relative mx-auto">
+                                            <div class="product-image-pwi-icon-right"></div>
+                                            <div class="product-image-pwi-icon-left"></div>
+                                            
+
+                                            {%- render 'image',
+                                                image: block.settings.product_image,
+                                                class: 'img-fluid'
+                                            -%}
+                                        </div>
+                                        <div class="product-image-pwi-content pt-md-7 pt-5 d-flex flex-column justify-content-center text-center">
+                                            {% if block.settings.title != blank %}
+                                                <h2 class="product-image-pwi-title mb-md-3 mb-2">{{ block.settings.title }}</h2>
+                                            {% endif %}
+                                            {% if block.settings.description != blank %}
+                                                <h3 class="product-image-pwi-description h6 mb-0">{{ block.settings.description }}</h3>
+                                            {% endif %}
+                                            {% if block.settings.button_text_1 != blank or block.settings.button_text_2 != blank %}
+                                            <div class="product-image-pwi-buttons gap-2 mt-md-5 mt-4 align-items-center justify-content-center d-flex flex-wrap">
+                                                {% if block.settings.button_link_1 != blank %}
+                                                    <a href="{{ block.settings.button_link_1 }}" class="btn btn-sm btn-primary">{{ block.settings.button_text_1 }}</a>
+                                                {% endif %}
+                                                {% if block.settings.button_link_2 != blank %}
+                                                    <a href="{{ block.settings.button_link_2 }}" class="btn btn-sm btn-primary">{{ block.settings.button_text_2 }}</a>
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                            {% endfor %}
+                        </swiper-container>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div> 
+</div>
+<style>
+    .product-image-pwi-icon-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        clip-path: polygon( 19.81% 3.05%,19.81% 3.05%,20.423% 3.448%,22.12% 4.551%,24.685% 6.219%,27.902% 8.314%,31.557% 10.698%,35.432% 13.233%,39.314% 15.78%,42.986% 18.2%,46.234% 20.355%,48.84% 22.108%,48.84% 22.108%,50.861% 23.479%,52.538% 24.61%,53.932% 25.539%,55.106% 26.304%,56.121% 26.944%,57.039% 27.496%,57.921% 28.001%,58.831% 28.495%,59.828% 29.018%,60.976% 29.608%,60.976% 29.608%,63.057% 30.778%,66.559% 32.861%,71.1% 35.621%,76.3% 38.823%,81.777% 42.234%,87.151% 45.618%,92.041% 48.741%,96.067% 51.368%,98.847% 53.264%,100% 54.196%,100% 54.196%,100.165% 54.69%,100.246% 55.393%,100.258% 56.252%,100.215% 57.214%,100.132% 58.225%,100.022% 59.231%,99.902% 60.18%,99.786% 61.018%,99.687% 61.692%,99.621% 62.148%,99.621% 62.148%,99.515% 62.876%,99.388% 63.648%,99.244% 64.451%,99.086% 65.272%,98.916% 66.099%,98.739% 66.918%,98.557% 67.715%,98.372% 68.477%,98.189% 69.193%,98.009% 69.847%,98.009% 69.847%,97.961% 69.9%,97.83% 70.051%,97.633% 70.283%,97.391% 70.581%,97.121% 70.93%,96.843% 71.314%,96.575% 71.719%,96.337% 72.129%,96.146% 72.528%,96.022% 72.902%,96.022% 72.902%,95.838% 73.364%,95.486% 74%,95.008% 74.759%,94.45% 75.587%,93.856% 76.433%,93.27% 77.243%,92.738% 77.964%,92.302% 78.545%,92.008% 78.932%,91.9% 79.073%,91.9% 79.073%,91.881% 79.141%,91.831% 79.332%,91.761% 79.628%,91.68% 80.01%,91.599% 80.458%,91.528% 80.954%,91.479% 81.479%,91.46% 82.015%,91.484% 82.542%,91.559% 83.042%,91.559% 83.042%,91.665% 83.563%,91.769% 84.161%,91.861% 84.827%,91.933% 85.553%,91.974% 86.329%,91.978% 87.149%,91.933% 88.002%,91.831% 88.881%,91.664% 89.777%,91.422% 90.682%,91.422% 90.682%,91.1% 91.791%,90.807% 92.927%,90.533% 94.063%,90.266% 95.177%,89.996% 96.242%,89.712% 97.236%,89.402% 98.133%,89.057% 98.909%,88.665% 99.54%,88.216% 100%,88.216% 100%,87.931% 100.154%,87.614% 100.212%,87.268% 100.188%,86.897% 100.092%,86.505% 99.936%,86.095% 99.731%,85.67% 99.489%,85.233% 99.222%,84.789% 98.941%,84.34% 98.658%,84.34% 98.658%,76.151% 93.491%,69.065% 88.915%,62.99% 84.888%,57.833% 81.369%,53.5% 78.316%,49.9% 75.687%,46.939% 73.441%,44.524% 71.537%,42.563% 69.933%,40.962% 68.587%,40.962% 68.587%,39.762% 68.071%,38.561% 67.516%,37.355% 66.925%,36.138% 66.297%,34.906% 65.634%,33.654% 64.937%,32.377% 64.207%,31.072% 63.445%,29.731% 62.653%,28.352% 61.831%,28.352% 61.831%,25.693% 60.256%,22.786% 58.55%,19.754% 56.764%,16.72% 54.953%,13.808% 53.168%,11.141% 51.463%,8.841% 49.891%,7.032% 48.505%,5.838% 47.357%,5.381% 46.501%,5.381% 46.501%,5.312% 45.36%,5.248% 44.03%,5.193% 42.578%,5.152% 41.072%,5.129% 39.581%,5.129% 38.171%,5.157% 36.912%,5.216% 35.87%,5.312% 35.113%,5.449% 34.709%,5.449% 34.709%,5.608% 34.314%,5.768% 33.597%,5.924% 32.644%,6.073% 31.539%,6.21% 30.37%,6.331% 29.221%,6.432% 28.178%,6.51% 27.327%,6.559% 26.753%,6.576% 26.543%,10.534% 21.75%,10.534% 21.75%,10.524% 21.569%,10.501% 21.072%,10.479% 20.327%,10.469% 19.404%,10.484% 18.372%,10.537% 17.299%,10.64% 16.255%,10.805% 15.308%,11.046% 14.528%,11.374% 13.983%,11.374% 13.983%,11.572% 13.716%,11.863% 13.255%,12.221% 12.653%,12.618% 11.962%,13.028% 11.233%,13.424% 10.52%,13.778% 9.874%,14.065% 9.348%,14.256% 8.994%,14.326% 8.864%,14.326% 8.864%,14.373% 8.671%,14.504% 8.147%,14.705% 7.372%,14.963% 6.428%,15.263% 5.396%,15.592% 4.357%,15.937% 3.393%,16.282% 2.584%,16.616% 2.013%,16.923% 1.759%,16.923% 1.759%,17.239% 1.741%,17.594% 1.807%,17.973% 1.939%,18.357% 2.116%,18.729% 2.32%,19.072% 2.531%,19.369% 2.729%,19.602% 2.894%,19.755% 3.008%,19.81% 3.05% );
+    }
+    .product-image-pwi-icon-left {  
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon( 4.862% 29.626%,4.862% 29.626%,5.479% 29.441%,7.186% 28.931%,9.766% 28.164%,13.004% 27.204%,16.685% 26.12%,20.591% 24.977%,24.508% 23.843%,28.218% 22.783%,31.507% 21.865%,34.158% 21.156%,34.158% 21.156%,36.22% 20.623%,37.927% 20.171%,39.341% 19.781%,40.523% 19.432%,41.534% 19.103%,42.435% 18.773%,43.288% 18.421%,44.154% 18.028%,45.094% 17.572%,46.171% 17.032%,46.171% 17.032%,48.173% 16.18%,51.598% 14.889%,56.07% 13.288%,61.211% 11.507%,66.645% 9.678%,71.996% 7.93%,76.887% 6.394%,80.942% 5.2%,83.783% 4.479%,85.034% 4.36%,85.034% 4.36%,85.395% 4.794%,85.803% 5.583%,86.242% 6.644%,86.695% 7.894%,87.145% 9.25%,87.576% 10.63%,87.97% 11.95%,88.311% 13.128%,88.582% 14.08%,88.766% 14.723%,88.766% 14.723%,89.059% 15.751%,89.36% 16.858%,89.665% 18.022%,89.969% 19.225%,90.269% 20.447%,90.559% 21.667%,90.835% 22.867%,91.092% 24.026%,91.326% 25.124%,91.532% 26.141%,91.532% 26.141%,91.526% 26.262%,91.512% 26.596%,91.495% 27.104%,91.48% 27.747%,91.472% 28.483%,91.475% 29.273%,91.496% 30.077%,91.54% 30.855%,91.611% 31.567%,91.714% 32.172%,91.714% 32.172%,91.82% 32.953%,91.9% 34.141%,91.955% 35.621%,91.992% 37.278%,92.012% 38.996%,92.02% 40.66%,92.02% 42.155%,92.015% 43.365%,92.01% 44.176%,92.007% 44.472%,92.007% 44.472%,92.028% 44.578%,92.09% 44.873%,92.191% 45.321%,92.327% 45.888%,92.497% 46.539%,92.698% 47.237%,92.928% 47.949%,93.184% 48.639%,93.464% 49.272%,93.766% 49.813%,93.766% 49.813%,94.1% 50.347%,94.47% 50.979%,94.867% 51.709%,95.28% 52.537%,95.698% 53.461%,96.111% 54.482%,96.508% 55.599%,96.88% 56.811%,97.216% 58.117%,97.505% 59.518%,97.505% 59.518%,97.843% 61.263%,98.213% 63.008%,98.597% 64.734%,98.974% 66.423%,99.325% 68.056%,99.631% 69.614%,99.87% 71.08%,100.025% 72.434%,100.075% 73.658%,100% 74.734%,100% 74.734%,99.883% 75.243%,99.697% 75.669%,99.45% 76.023%,99.15% 76.315%,98.805% 76.556%,98.423% 76.757%,98.013% 76.928%,97.582% 77.079%,97.139% 77.222%,96.692% 77.367%,96.692% 77.367%,88.533% 80.018%,81.42% 82.18%,75.27% 83.904%,69.999% 85.241%,65.522% 86.243%,61.756% 86.962%,58.616% 87.448%,56.019% 87.754%,53.881% 87.93%,52.117% 88.029%,52.117% 88.029%,51.043% 88.719%,49.948% 89.361%,48.831% 89.964%,47.689% 90.532%,46.519% 91.074%,45.318% 91.595%,44.084% 92.103%,42.814% 92.603%,41.506% 93.103%,40.156% 93.61%,40.156% 93.61%,37.559% 94.599%,34.726% 95.7%,31.769% 96.841%,28.798% 97.951%,25.923% 98.959%,23.254% 99.795%,20.902% 100.388%,18.977% 100.667%,17.59% 100.561%,16.85% 100%,16.85% 100%,16.23% 98.65%,15.519% 97.058%,14.754% 95.304%,13.971% 93.467%,13.207% 91.628%,12.5% 89.865%,11.887% 88.26%,11.405% 86.891%,11.09% 85.838%,10.98% 85.182%,10.98% 85.182%,10.891% 84.511%,10.64% 83.437%,10.268% 82.071%,9.815% 80.525%,9.321% 78.91%,8.827% 77.339%,8.373% 75.922%,7.999% 74.772%,7.744% 74%,7.651% 73.718%,7.937% 63.323%,7.937% 63.323%,7.839% 63.108%,7.574% 62.512%,7.185% 61.606%,6.716% 60.463%,6.208% 59.155%,5.706% 57.756%,5.252% 56.336%,4.89% 54.968%,4.662% 53.725%,4.612% 52.678%,4.612% 52.678%,4.612% 52.125%,4.579% 51.225%,4.52% 50.074%,4.443% 48.767%,4.357% 47.4%,4.268% 46.068%,4.185% 44.867%,4.116% 43.89%,4.069% 43.234%,4.051% 42.995%,4.051% 42.995%,3.986% 42.702%,3.812% 41.9%,3.56% 40.708%,3.261% 39.241%,2.948% 37.616%,2.651% 35.951%,2.401% 34.362%,2.231% 32.967%,2.171% 31.882%,2.252% 31.224%,2.252% 31.224%,2.458% 30.849%,2.733% 30.536%,3.056% 30.28%,3.406% 30.074%,3.761% 29.915%,4.1% 29.797%,4.401% 29.714%,4.643% 29.661%,4.804% 29.634%,4.862% 29.626% );"
+    }
+    .product-image-pwi-icon-right, .product-image-pwi-icon-left {
+        background-color: #fffefc;
+        opacity: 0.8;
+        width: 43.31%;
+        top: -11.5%;
+        right: -16.2%;
+        aspect-ratio: 1.4166666667;
+    }
+    .product-image-pwi-icon-left
+    {
+        top: -8%;
+        right: auto;
+        width: 28.2%;
+        left: -17%;
+        aspect-ratio: 1.4590163934;
+    }
+    .product-image-pwi
+    {
+        border: 8px solid #fff;
+        min-height: auto !important;
+        max-width: clamp(191px, 24vw, 100vw)
+    }
+    .product-image-pwi img
+    {
+        aspect-ratio: 315/383;
+    }
+    .product-image-pwi img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product-content-pwi-wrapper
+    {
+        padding: 40px 40px 61px;
+    }
+    .product-thumb-image-pwi img
+    {
+        aspect-ratio: 390/300;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @media (min-width:992px)
+    {
+        .product-thumb-image-pwi img
+        {
+            aspect-ratio: 720/755;
+        }
+        .product-image-pwi
+        {
+            border: clamp(15px, 1vw, 50vw) solid #fff;
+            max-width: clamp(345px, 24vw, 100vw)
+        }
+        .product-content-pwi-wrapper
+        {
+            padding: 60px 40px 71px;
+        }
+    }
+</style>
+{% schema %}
+    {
+        "name": "Product with Image", 
+        "settings": [
+            {
+                "type": "header",
+                "content": "Container"
+            },
+            {
+                "type": "checkbox",
+                "id": "fluid_layout",
+                "label": "Full Width Layout",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "t:spacing.section_spacing"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing",
+                "label": "t:spacing.desktop_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_ipad",
+                "label": "t:spacing.ipad_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_mobile",
+                "label": "t:spacing.mobile_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-mobile-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing",
+                "label": "t:spacing.desktop_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_ipad",
+                "label": "t:spacing.ipad_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_mobile",
+                "label": "t:spacing.mobile_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-mobile-sm"
+            },
+            {
+                "type": "checkbox", 
+                "id": "autoplay",
+                "label": "t:slider.autoplay",
+                "default": false
+            },
+            {
+                "type": "range",
+                "id": "autoplay_delay",
+                "label": "t:slider.autoplay_delay",
+                "min": 500,
+                "max": 7000,
+                "step": 100,
+                "default": 4000,
+                "visible_if": "{{ section.settings.autoplay == true  }}"
+            },
+            {
+                "type": "range",
+                "id": "autoplay_speed",
+                "label": "t:slider.autoplay_speed",
+                "min": 500,
+                "max": 5000,
+                "step": 100,
+                "default": 3000,
+                "visible_if": "{{ section.settings.autoplay == true  }}"
+            },
+            {
+                "type":"header",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color_background",
+                "id": "section_bg_color",
+                "label": "t:settings.background_color",
+                "default": "#f3f3f3"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "product_with_image",
+                "name": "Product with Image",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Lifestyle Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Desktop Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_mobile",
+                        "label": "Mobile Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "product_image",
+                        "label": "Product Image"
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Dillon"
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "Classic Casual Sneaker"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Buttons"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text_1",
+                        "label": "Button Text 1",
+                        "default": "Shop Women"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_link_1",
+                        "label": "Button Link 1"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text_2",
+                        "label": "Button Text 2",
+                        "default": "Shop Men"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_link_2",
+                        "label": "Button Link 2"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product with Image"
+            }
+        ]
+    }
+{% endschema %}
+  

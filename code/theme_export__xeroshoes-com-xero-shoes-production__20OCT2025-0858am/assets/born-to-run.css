@@ -1,0 +1,54 @@
+#become-a-born-to-run-vip .custom-liquid-block svg
+{
+    margin-inline: calc(var(--pe-container-x-padding) * -1);
+    fill: #fff;
+}
+#become-a-born-to-run-vip .custom-liquid-block~.custom-liquid-block svg
+{
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+#become-a-born-to-run-vip [data-testid="form-row"] > div,
+#MainContent .klaviyo-form [data-testid="form-row"] > div
+{
+    padding-inline: 0 !important;
+}
+#become-a-born-to-run-vip .text-block ul
+{
+    list-style-type: none;
+    padding: 24px 0;
+    margin: 0;
+}
+#become-a-born-to-run-vip .text-block ul li
+{
+    position: relative;
+    padding-left: 30px;
+}
+#become-a-born-to-run-vip .text-block ul li+li
+{
+    margin-top: 11px;
+}
+#become-a-born-to-run-vip .text-block ul li::before
+{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='8.5' r='7.5' fill='%23A2F4FD'/%3E%3Cpath d='M3 7.66667L6.984 12L15 1' stroke='%230F172B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.book-that-started .image-block
+{
+    background-color: #ffa91e;
+    right: -5px;
+}
+.book-that-started .image-block > a
+{
+    position: relative;
+    left: -10px;
+    top: -10px;
+}

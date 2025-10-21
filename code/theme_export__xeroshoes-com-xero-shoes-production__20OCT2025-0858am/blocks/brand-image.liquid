@@ -1,0 +1,53 @@
+<swiper-slide>
+    <div class="image-block" {{ block.shopify_attributes }}>
+        {%- if block.settings.logo_url -%} 
+            <a href="{{ block.settings.logo_url }}" class="logo-list-img w-100" style="background-color: {{ block.settings.img_bg_olor }}"> 
+        {%- else -%}
+            <div class="logo-list-img w-100"  style="background-color: {{ block.settings.img_bg_olor }}"> 
+        {%- endif -%}
+            {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | image_url }}"
+                    loading="lazy" 
+                    class="w-100"
+                    alt="{{ block.settings.image.alt | default: 'shop by brands' | escape }}"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}" />
+            {% else %}
+                {% render 'placeholder-image' %}
+            {% endif %} 
+        {%- if block.settings.logo_url -%} 
+            </a>
+        {%- else -%}
+            </div>
+        {%- endif -%}
+    </div>
+</swiper-slide>
+  
+{% schema %}
+    {
+        "name": "Brand Image",
+        "tag": null,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "url",
+                "id": "logo_url",
+                "label": "url"
+            },
+            {
+                "type": "color_background",
+                "id": "img_bg_olor",
+                "label": "Image Background Color",
+                "default": "#ffffff"
+            }
+        ],
+        "presets": [
+            { "name": "Brand Image" }
+        ]
+    }
+{% endschema %}
+  

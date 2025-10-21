@@ -1,0 +1,448 @@
+{%- liquid
+    assign product = block.settings.product
+    assign product_form_id = 'productform' | append: product.id | append: '-' | append: section.id
+    assign picker_type = block.settings.variant_picker_type
+    assign countvariants = product.variants_count
+    assign count = 0
+    for variant in product.variants
+        if variant.metafields.custom.draft_variant == true
+            assign count = count | plus: 1
+        endif
+    endfor
+-%}
+{%- if countvariants != count -%}
+{%- unless product.has_only_default_variant -%}
+    {% liquid
+        assign draftoption1 = ''
+        assign oldindex = 0
+        assign activenextcolor = ''
+
+        for color in product.options_with_values[0].values
+            assign hide_color = true
+
+            if oldindex == 1
+            assign oldindex = forloop.index
+            assign activenextcolor = color
+            endif
+
+            assign found_variants = product.variants | where: 'option1', color
+
+            for v in found_variants
+            if v.metafields.custom.draft_variant != true
+                assign hide_color = false
+            endif
+            endfor
+
+            if hide_color
+                assign oldindex = forloop.index
+                if draftoption1 != ''
+                    assign draftoption1 = draftoption1 | append: ',' | append: color
+                else
+                    assign draftoption1 = color
+                endif
+            endif
+        endfor
+        %}
+    <div class="flex-1 d-flex flex-column {{ block.settings.margin_top_desktop }} {{ block.settings.margin_bottom_desktop }} {{ block.settings.margin_top_mobile }} {{ block.settings.margin_bottom_mobile }}" {{ block.shopify_attributes }}>
+        <variant-selects 
+            id="variant-selects-{{ section.id }}"
+            class="no-js-hidden flex-1 d-flex flex-column" 
+            data-url="{{ product.url | within: collection }}" 
+            data-section="{{ section.id }}"
+            {{ block.shopify_attributes }}
+        >
+        <div data-main-variants-selects style="opacity: 0;">
+            {%- for option in product.options_with_values -%}
+                {%- liquid
+                assign option_name = option.name | downcase
+                -%}
+                {%- if picker_type == 'swatches' or picker_type == 'pills' -%}
+                    <fieldset class="js product-form__input {% if option_name contains 'style' or option_name contains 'Style' or option_name contains 'color' or option_name contains 'Color' or product.options.size == 1 %} color-swatch{% else %} other-swatch mt-auto {% endif %}{% if picker_type == 'pills' %} pills-style{% endif %}" 
+                        data-optionindex="{{ forloop.index }}" form="{{ product_form_id }}"
+                        name="product-{{ product.id }}-{{ option_name | handle }}">
+                        {% if block.settings.show_variant_label %}<legend class="form__label fw-medium w-100 px-0">
+                        {%- if option_name contains 'style' or option_name contains 'Style' -%}
+                           <span class="selected-option">{{ option.selected_value }}</span>
+                        {% else %}
+                            <div class="d-flex justify-content-between">
+                        <div>{% if option_name contains 'size' %}Size{% else %}{{ option.name }}{% endif %} <span class="selected-option">{{ option.selected_value }}</span></div>
+                                {% if option_name contains 'size' %}
+                                {% if block.settings.title != blank and product.metafields.custom.sizing_chart != blank %}
+                                    <div class="size-chart-popup-wrapper">
+                                        <button class="link-block btn-link btn-link-dark ContentPopup-link underline-on-text" data-toggledrawer="ContentPopup-{{ product.id }}" aria-expanded="false">{{ block.settings.title }}</button>
+                                    </div>
+                                {% endif %} {% endif %}
+                            </div>
+                            <div class="text-transform-none fs-sm fw-normal text-gray-700 mt-3 product_highlights">
+                            {{ product.metafields.custom.product_highlights | metafield_tag }}</div>
+                            {%- endif -%}
+                        </legend>{% endif %}
+                        {% if option_name contains 'size' %}
+                            <span class="ls-2 font-family-heading ls-2 lh-11 fs-13 mb-2 d-flex pt-2" data-variant-picker-quick-add-label>Quick Add</span>
+                        {% else %}
+                            <span class="ls-2 font-family-heading ls-2 lh-11 fs-13 mb-2 d-flex pt-2 text-capitalize {% if option_name contains 'style' or option_name contains 'Style' %} d-none{% endif %}" data-variant-picker-quick-add-label>{{ option_name }}</span>
+                        {% endif %}
+                        <ul class="list-unstyled d-flex my-0 py-0 row-gap-1 column-gap-1 {% if option_name contains 'style' or option_name contains 'Style' or option_name contains 'color' or option_name contains 'Color' %}color-swatch-list overflow-auto{% else %}flex-wrap{% endif %}" data-swatch-container>
+                            {%- for value in option.values -%}
+                            {%- liquid
+                                assign variant_image = null
+                                if option_name contains 'style' or option_name contains 'Style'
+                                    assign variant_image = value.variant.featured_image
+                                endif
+                            -%}
+                            {%- capture swatch_id -%}
+                                {{ section.id }}-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 -}}-{{ block.id }}
+                            {%- endcapture -%}
+                            {%- capture swatch_dataset -%}
+                                data-product-url="{{ value.product_url }}"
+                                data-option-value-id="{{ value.id }}"
+                            {%- endcapture -%}
+                            <li class="">
+                                <div class="swatch {% if variant_image == blank %}no-color-img {% endif %}{% if option_name contains 'style' or option_name contains 'Style' %} color-swatch{% endif %}">
+                                    <input tabindex="0" type="radio" class="form-control" id="{{ swatch_id }}" name="{{ option.name }}" value="{{ value | escape }}" {% if option_name contains 'style' or product.options.size == 1 %} {% if value.selected %}checked{% endif %}{% else %}{% if value.selected %}data-checked="true"{% endif %}{% endif %} {% if activenextcolor == value %}checked{% endif %}
+                                        data-handle="{{ value | handle }}"
+                                        form="{{ product_form_id }}"
+                                        data-option-value-id="{{ value.id }}" 
+                                        data-option="{{ option.name | handle }}" 
+                                        {% if product.options.size == 1 %}data-only-one-option="true"
+                                        {% endif %} 
+                                        {% unless value.available %}data-disabled="true"{% endunless %} 
+                                        {{ swatch_dataset }} > 
+                                    <label class="form-label swatch-label {%if option_name contains 'style' or option_name contains 'Style' %}{% if variant_image == blank %}no-bg-img-label bg-transparent{% endif %}{% endif %}" for="{{ swatch_id }}" title="{{ value | escape }}"> 
+                                        {%- if option_name contains 'style' or option_name contains 'Style' -%}
+                                            {%- if variant_image != blank -%}
+                                            <img class="lozad" loading="lazy" data-src="{% if template == 'product' %}{{ variant_image | image_url: width: 110 }}{% else %}{{ variant_image | image_url: width: 80 }}{% endif %}" src="{{ 'animated-placeholder.svg' | asset_url }}" alt="{{ value | escape }}" width="50" height="50" loading="lazy">
+                                            {%- else -%}
+                                                {{ value }}
+                                            {%- endif -%}
+                                        {%- else -%}
+                                            {{ value }}
+                                        {%- endif -%}
+                                    </label>
+                                </div>
+                            </li>
+                            {%- endfor -%}
+                            {%- if option_name contains 'style' or option_name contains 'Style' or option_name contains 'color' or option_name contains 'Color' -%}
+                                {%- unless template == 'product' -%}
+                                    <li class="swatch-overflow-indicator d-none" data-overflow-indicator style="display: none !important;">
+                                        <div class="swatch overflow-swatch">
+                                            <a href="{{ product.url }}" class="swatch-label overflow-label d-flex align-items-center justify-content-center" title="View all {{ option.values.size }} {{ option_name }}s">
+                                                <span class="">+<span data-remaining-count>0</span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                {%- endunless -%}
+                            {%- endif -%}
+                        </ul>
+                    </fieldset>
+                {%- else -%}
+                    <div class="product-form__input product-form__input--dropdown mb-4" data-optionindex="{{ forloop.index }}">
+                        {% if block.settings.show_variant_label %}
+                            <label class="fw-medium text-uppercase fs-sm mb-2" for="Option-{{ section.id }}-{{ forloop.index0 }}" title="{{ option.selected_value }}">
+                                {{ option.name }}: <span class="selected-option">{{ option.selected_value }}</span>
+                            </label>
+                        {% endif %}
+                        <div class="select">
+                            <select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="form-select variant_selector" 
+                                name="options[{{ option.name | escape }}]" 
+                                form="{{ product_form_id }}" >
+                                {%- for value in option.values -%}
+                                {%- capture option_id -%}
+                                    {{ section.id }}-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 -}}
+                                {%- endcapture -%}
+                                {%- capture option_dataset -%}
+                                    data-product-url="{{ value.product_url }}"
+                                    data-option-value-id="{{ value.id }}"
+                                {%- endcapture -%}
+                                <option id="{{ option_id }}" {{ option_dataset }} value="{{ value | escape }}" 
+                                    data-option-value-id="{{ value.id }}"
+                                    {% if value.selected %}selected{% endif %}
+                                    {% comment %} {% unless value.available %}disabled{% endunless %} {% endcomment %}>
+                                    {{ value }}
+                                </option>
+                                {%- endfor -%}
+                            </select>
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+            <script class="variantsJSON-{{ product.id }}" data-variantJSON type="application/json">
+                {{ product.variants | json }}
+            </script>
+            <script class="variantsJSONDraft-{{ product.id }}" data-variantJSONDraft type="application/json">{%- for variant in product.variants -%}{%- if variant.metafields.custom.draft_variant == true -%}{{- variant.id | json -}},{%- endif -%}{%- endfor -%} </script>
+            </div>
+        </variant-selects>
+    </div>
+{%- endunless -%}
+{%- endif -%}
+{% schema %}
+    {
+        "name": "Product Variant Picker",
+        "tag": null,
+        "blocks": [{ "type": "popup" }],
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
+                "type": "select",
+                "id": "variant_picker_type",
+                "label": "Product Options display",
+                "info": "The display variation is for Product detail page only. To implement same on product grid and other places contact theme developer.",
+                "options": [
+                    {
+                        "value": "dropdown",
+                        "label": "Dropdown"
+                    },
+                    {
+                        "value": "swatches",
+                        "label": "Swatches"
+                    },
+                    {
+                        "value": "pills",
+                        "label": "Pills"
+                    }
+                ],
+                "default": "swatches"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_variant_label",
+                "label": "Show Variant Label",
+                "default": true
+            },
+            {
+                "type":"header",
+                "content":"Margin: Desktop"
+            },
+            {
+                "type": "select",
+                "id": "margin_top_desktop",
+                "label": "Margin Top",
+                "options": [
+                    {
+                        "value": "mt-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mt-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mt-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mt-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mt-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mt-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mt-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mt-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mt-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mt-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mt-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mt-md-0"
+            },
+            {
+                "type": "select",
+                "id": "margin_bottom_desktop",
+                "label": "Margin Bottom",
+                "options": [ 
+                    {
+                        "value": "mb-md-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mb-md-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mb-md-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mb-md-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mb-md-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mb-md-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mb-md-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mb-md-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mb-md-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mb-md-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mb-md-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mb-md-0"
+            },
+            {
+                "type":"header",
+                "content":"Margin: Mobile"
+            },
+            {
+                "type": "select",
+                "id": "margin_top_mobile",
+                "label": "Margin Top",
+                "options": [
+                    {
+                        "value": "mt-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mt-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mt-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mt-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mt-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mt-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mt-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mt-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mt-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mt-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mt-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mt-0"
+            },
+            {
+                "type": "select",
+                "id": "margin_bottom_mobile",
+                "label": "Margin Bottom",
+                "options": [
+                    {
+                        "value": "mb-0",
+                        "label": "0"
+                    },
+                    {
+                        "value": "mb-1",
+                        "label": "5"
+                    },
+                    {
+                        "value": "mb-2",
+                        "label": "10"
+                    },
+                    {
+                        "value": "mb-3",
+                        "label": "15"
+                    },
+                    {
+                        "value": "mb-4",
+                        "label": "20"
+                    },
+                    {
+                        "value": "mb-5",
+                        "label": "25"
+                    },
+                    {
+                        "value": "mb-6",
+                        "label": "30"
+                    },
+                    {
+                        "value": "mb-7",
+                        "label": "35"
+                    },
+                    {
+                        "value": "mb-8",
+                        "label": "40"
+                    },
+                    {
+                        "value": "mb-9",
+                        "label": "45"
+                    },
+                    {
+                        "value": "mb-10",
+                        "label": "50"
+                    }
+                ],
+                "default": "mb-0"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "default": "Size Guide",
+                "label": "Pop-up Label"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Variant Picker",
+                "settings": {
+                    "product": "{{ closest.product }}"
+                }
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,44 @@
+.star-reviews-group swiper-slide .image-block
+{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--pe-color-primary);
+}
+.media_banner_with_text:has(.step-into-the-xero-circle) .media-banner__wrapper img
+{
+    object-fit: contain;
+}
+.step-into-the-xero-circle-img .image-block
+{
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.step-into-the-xero-circle ul
+{
+    list-style-type: none;
+    padding: 24px 0;
+    margin: 0;
+}
+.step-into-the-xero-circle ul li
+{
+    position: relative;
+    padding-left: 30px;
+}
+.step-into-the-xero-circle ul li+li
+{
+    margin-top: 11px;
+}
+.step-into-the-xero-circle ul li::before
+{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7.5' cy='8.5' r='7.5' fill='%23A2F4FD'/%3E%3Cpath d='M3 7.66667L6.984 12L15 1' stroke='%230F172B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}

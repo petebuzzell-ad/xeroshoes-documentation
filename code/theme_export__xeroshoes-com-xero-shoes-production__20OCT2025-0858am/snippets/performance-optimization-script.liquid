@@ -1,0 +1,105 @@
+{% comment %}
+  Renders performance script based on injection type.
+  Accepts:
+  - injectionType: {String} two options available are "head" OR "body".
+
+  Usage:
+  {% render 'performance-optimization-script', injectionType: 'head' %}
+  OR
+  {% render 'performance-optimization-script', injectionType: 'body' %}
+{% endcomment %}
+
+{% if injectionType == 'head' %}
+    <script type="text/javascript">
+        const LCPobserver = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
+            
+        });
+        LCPobserver.observe({ type: "largest-contentful-paint", buffered: true });
+        
+        {% comment %} let totalBlockingTime = 0;
+        const TaskObserver = new PerformanceObserver((list) => {
+            list.getEntries().forEach((entry) => {
+                console.log('Task entry===>', entry);
+                totalBlockingTime += entry.duration - 50;
+            });
+            console.log("TBT:", totalBlockingTime);
+        });
+        TaskObserver.observe({ type: "longtask", buffered: true }); {% endcomment %}
+        
+        {% comment %} 
+        const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+            // Count layout shifts without recent user input only
+            if (!entry.hadRecentInput) {
+                console.log("LayoutShift value:", entry.value);
+                if (entry.sources) {
+                for (const { node, currentRect, previousRect } of entry.sources)
+                    console.log("LayoutShift source:", node, {
+                    currentRect,
+                    previousRect,
+                    });
+                }
+            }
+            }
+        });
+        observer.observe({ type: "layout-shift", buffered: true }); {% endcomment %}
+        
+        window.observerSpeed = new MutationObserver((elements) => {
+            elements.forEach(({ addedNodes: nodes }) => {
+                nodes.forEach((e) => {
+                    if(e.nodeType == 1 && e.tagName == 'SCRIPT'){
+                        let sourceAttr = e.getAttribute('data-source-attribution');
+                        if(e.src.includes("cdn.shopify.com/extensions")){
+                            console.log(e.src)
+                            e.setAttribute("data-src", e.src);
+                            e.removeAttribute("src");
+                        }else if(e.src.includes("storefront/bars/preview_bar_injector") || e.innerText.includes("new Shopify.PreviewBarInjector")){
+                            e.parentNode.removeChild(e);
+                        }
+                    };
+                });
+            });
+        });
+        observerSpeed.observe(document.head, { childList: !0, subtree: !0 });
+    </script>    
+{% elsif injectionType == 'body' %}
+    <script type="text/javascript"                                 >
+        var script_loaded = false;
+        function loadJSscripts() {
+            if(script_loaded || (void 0 !== observerSpeed)) {
+                observerSpeed.disconnect();
+                script_loaded = true;
+            }
+            document.querySelectorAll("script[data-src]").forEach((e) => {
+                let datasrc = e.dataset.src;
+                if(datasrc != null) e.src = datasrc;
+            });
+            document.querySelectorAll("link[data-href]").forEach((e) => {
+                let datahref = e.dataset.href;
+                if(datahref != null) e.href = datahref;
+            });
+            document.querySelectorAll("script[type='text/lazyload']").forEach((e) => {
+                var t = document.createElement("script");
+                for (a = 0; a < e.attributes.length; a++) {
+                    var r = e.attributes[a];
+                    t.setAttribute(r.name, r.value);
+                }
+                (t.type = "text/javascript"), (t.innerHTML = e.innerHTML), e.parentNode.insertBefore(t, e), e.parentNode.removeChild(e);
+            });
+            // document.dispatchEvent(new CustomEvent("asyncLazyLoad")));
+        }
+        var activityEvents = ["mousedown", "mousemove", "keydown", "scroll", "touchstart", "click", "keypress", "touchmove"];
+        activityEvents.forEach((e)=> {
+            window.addEventListener(e, loadJSscripts, { once: true });
+        });
+
+        window.onload = ()=>{
+          setTimeout(()=>{
+            window.dispatchEvent(new Event('click'));
+          }, 1000);
+        };
+    </script>   
+{% endif %}
+

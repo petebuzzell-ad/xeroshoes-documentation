@@ -1,0 +1,102 @@
+{%- liquid 
+    assign currentdate = 'now' | date: "%s" 
+    assign settingsdate = block.settings.countdown_text | date: "%s" 
+-%}
+<custom-countdown class="mb-4" data-section_timer="{{ block.settings.countdown_text }}">
+    {% if settingsdate > currentdate %}
+        {% if block.settings.countdown_pretext != blank %}
+            <p class="text-uppercase fw-bold fs-md mb-3" style="color: {{ block.settings.caption_txt_color }};">{{ block.settings.countdown_pretext }}</p>
+        {% endif %}
+        <div class="d-inline-flex">
+            <div class="time-box-wrapper d-flex align-items-center flex-wrap">
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-day_1 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-day_2 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="fw-normal fs-lg font-family-base text-uppercase text-center my-2 w-100" style="color: {{ block.settings.caption_txt_color }};">days</div>
+            </div>
+            <div>
+                <p class="px-2 mb-0 d-flex align-items-center time-box-sep" style="color: {{ block.settings.caption_txt_color }};">:</p>
+            </div>
+            <div class="time-box-wrapper d-flex align-items-center flex-wrap">
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-hour_1 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-hour_2 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="fw-normal fs-lg font-family-base text-uppercase text-center my-2 w-100" style="color: {{ block.settings.caption_txt_color }};">Hours</div>
+            </div>
+            <div>
+                <p class="px-2 mb-0 d-flex align-items-center time-box-sep" style="color: {{ block.settings.caption_txt_color }};">:</p>
+            </div>
+            <div class="time-box-wrapper d-flex align-items-center flex-wrap">
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-min_1 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-min_2 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="fw-normal fs-lg font-family-base text-uppercase text-center my-2 w-100" style="color: {{ block.settings.caption_txt_color }};">Mins</div>
+            </div>
+            <div>
+                <p class="px-2 mb-0 d-flex align-items-center time-box-sep" style="color: {{ block.settings.caption_txt_color }};">:</p>
+            </div>
+            <div class="time-box-wrapper d-flex align-items-center flex-wrap">
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-sec_1 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="time-box" {% if block.settings.countdown_bg_color != blank %}style="background: {{block.settings.countdown_bg_color}}"{% endif %}>
+                    <p class="fw-normal mb-0" data-sec_2 {% if block.settings.countdown_text_color != blank %}style="color: {{block.settings.countdown_text_color}}"{% endif %}>0</p>
+                </div>
+                <div class="fw-normal fs-lg font-family-base text-uppercase text-center my-2 w-100" style="color: {{ block.settings.caption_txt_color }};">sec</div>
+            </div>
+        </div>
+        <script src="{{ 'component-countdown.js' | asset_url }}" defer></script>
+    {% endif %}
+</custom-countdown>
+
+{% schema %}
+{
+  "name": "Countdown",
+  "tag": null,
+  "settings": [
+    {
+        "type": "text",
+        "id": "countdown_pretext",
+        "label": "Heading",
+        "default": "Time Running Out"
+    },
+    {
+        "type": "text",
+        "id": "countdown_text",
+        "label": "End Date",
+        "info":"Oct 20, 2023 23:59",
+        "default": "Oct 20, 2023 23:59"
+    },
+    {
+        "type": "paragraph",
+        "content": "Style"
+    },
+    {
+        "type": "color",
+        "id": "countdown_bg_color",
+        "label": "t:settings.background_color",
+        "default": "#222b45"
+    },
+    {
+        "type": "color",
+        "id": "countdown_text_color",
+        "label": "t:settings.text_color",
+        "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown"
+    }
+  ]
+}
+{% endschema %}

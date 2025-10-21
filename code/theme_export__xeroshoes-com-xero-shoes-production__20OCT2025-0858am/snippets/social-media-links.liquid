@@ -1,0 +1,41 @@
+<ul class="list-unstyled social-sharing mb-0 d-flex align-items-center gap-1 flex-wrap">
+    {% if section.settings.social_icon_instagram %}
+    <li class="d-inline-block">
+        <a href="{{ settings.social_instagram_link }}" target="_blank" title="Instagram" rel="nofollow" aria-label="Instagram" class="social-icon-link d-inline-flex align-items-center justify-content-center">
+            <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-instagram"></use></svg>
+        </a>
+    </li>
+    {% endif %}
+
+    {% if section.settings.social_icon_facebook %}
+    <li class="d-inline-block">
+        <a href="{{ settings.social_facebook_link }}" target="_blank" title="Facebook" rel="nofollow" aria-label="Facebook" class="social-icon-link d-inline-flex align-items-center justify-content-center">
+            <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-facebook"></use></svg>
+        </a>
+    </li>
+    {% endif %}
+
+    {% if section.settings.social_icon_youtube %}
+    <li class="d-inline-block">
+        <a href="{{ settings.social_youtube_link }}" target="_blank" title="YouTube" rel="nofollow" aria-label="YouTube" class="social-icon-link d-inline-flex align-items-center justify-content-center">
+            <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-youtube"></use></svg>
+        </a>
+    </li>
+    {% endif %}
+
+    {% if section.settings.social_icon_twitter %}
+        <li class="d-inline-block">
+            <a href="{{ settings.social_twitter_link }}" target="_blank" title="Twitter" rel="nofollow" aria-label="Twitter" class="social-icon-link d-inline-flex align-items-center justify-content-center">
+                <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-twitter"></use></svg>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if section.settings.social_icon_pinterest %}
+    <li class="d-inline-block">
+        <a href="{{ settings.social_pinterest_link }}" target="_blank" title="Pinterest" rel="nofollow" aria-label="Pinterest" class="social-icon-link d-inline-flex align-items-center justify-content-center">
+            <svg aria-hidden="true" focusable="false" style="width:18px;height:18px;"><use href="#icon-pinterest"></use></svg>
+        </a>
+    </li>
+    {% endif %}
+</ul>

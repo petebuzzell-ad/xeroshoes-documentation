@@ -1,0 +1,20 @@
+.returns-section-wrapper .group-block img{
+    max-height: 200px;
+    transition-duration: 0.5s;
+    will-change: transform;
+}
+.returns-section-wrapper .group-block:first-of-type {
+    height: 100%;
+}
+.returns-section-wrapper .group-block:first-of-type{
+    outline: 2px solid #d5d5d5 !important;
+    outline-offset: -2px !important;
+    transition-duration: 0.3s;
+}
+
+.returns-section-wrapper .group-block:first-of-type:hover{
+    outline-color: black !important                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+}
+.returns-section-wrapper .group-block:hover img{
+    transform: scale(1.1);
+}

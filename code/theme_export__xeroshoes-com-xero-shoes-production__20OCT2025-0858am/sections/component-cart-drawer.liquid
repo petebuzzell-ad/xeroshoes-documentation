@@ -1,0 +1,1035 @@
+{{ 'global-collection-list.css' | asset_url | stylesheet_tag }}
+
+<custom-drawer id="component-cart-drawer" class="custom-drawer cart-drawer" role="dialog" 
+    aria-labelledby="cart-drawer-title" aria-modal="true" aria-hidden="true" {{ section.attributes }}>
+    <cart-form updating="false" role="document" data-section-id="{{ section.id }}">
+        <div class="cart-form-container{% if cart.item_count <= 0 %} empty_cart{% endif %}" id="cart-form-container-{{ section.id }}" aria-live="polite">
+            <header class="page-title cart-title mb-0 px-md-5 px-3 pt-md-4 pt-3 pb-md-3 pb-2" role="region" aria-label="Cart Drawer Header">
+                <div class="d-flex align-items-center pb-1">
+                    <div class="d-flex align-items-baseline">
+                        <h2 id="cart-drawer-title" class="drawer-header h4 mb-0 lh-11" > {{ section.settings.heading | default: t: 'templates.cart.title' }}</h2>
+                        {% if section.settings.show_count %}
+                            <div class="cart-items-count fs-14 lh-15 ls-0 mb-0 ms-1 text-secondary-900" id="cart-item-count-{{ section.id }}">({{ cart.item_count }})</div>
+                        {% endif %}
+                    </div>
+                    <button class="btn btn-close close-ajax--cart p-0 border-0 ms-auto" aria-label="Close cart drawer" data-closedrawer>
+                        <svg aria-hidden="true" focusable="false" style="width: 16px; height: 16px;"><use href="#icon-close"></use></svg>
+                    </button>
+                </div>
+                <div id="cart-sales-motivator-{{ section.id }}">
+                    {% if cart.item_count > 0 %}
+                        <div class="mt-3 sales-motivator-wrapper">
+                            {% content_for 'block', type: 'sales-motivator', id: 'sales-motivator' %}
+                        </div>
+                    {% endif %}
+                </div>
+            </header>
+            <div class="drawer-body">
+                <div class="d-flex flex-column w-100">
+                    <form data-cart-form action="{{ routes.cart_url }}" id="cart-form-{{ section.id }}" class="w-100" method="post">
+                        {% if cart.item_count > 0 %}
+                            <div class="cart-body px-md-5 px-3">
+                                {%- for item in cart.items -%}
+
+                                    {%- liquid
+                                        assign selected_variant = item.product.variants | find: 'id', item.id
+                                        assign var_status = 'standard'
+                                        if selected_variant.inventory_management == 'shopify' and selected_variant.inventory_policy == 'deny' and selected_variant.inventory_quantity <= 0 
+                                            assign var_status = 'sold_out'
+                                        elsif selected_variant.inventory_management == 'shopify' and selected_variant.inventory_policy == 'deny' and item.quantity > selected_variant.inventory_quantity
+                                            assign var_status = 'modify'
+                                        elsif selected_variant.inventory_management == 'shopify' and selected_variant.inventory_policy == 'deny' and item.quantity == selected_variant.inventory_quantity 
+                                            assign var_status = 'locked'
+                                        endif
+                                    -%}
+                                    
+                                    <div data-variantstatus="{{ var_status }}" class="{% unless forloop.last %}border-bottom border-gray-200{% endunless %} cart-items pb-md-5 pb-4 pt-md-5 pt-4 {% if item.product.title contains 'gift' or item.product.title contains 'Gift' %}gift-contains-card{% endif %}"  data-cart-item data-variant-id="{{ item.id }}">
+                                        <div class="cart-drawer-item cart-item d-flex">
+                                            <div class=" cart-drawer-item-image">
+                                                <div class="cart-img {% unless item.image %}bg-gray-300{% endunless %}">
+                                                {% if item.image %}
+                                                    <img class="img-fluid item-img"
+                                                        src="{{ item.image | image_url: width: 300 }}"
+                                                        alt="{{ item.image.alt | default: item.product_title | escape }}"
+                                                        width="300"
+                                                        height="{{ 300 | divided_by: item.image.aspect_ratio | ceil }}" >
+                                                    {% else %}
+                                                        {% render "placeholder-image" %}
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+
+                                            <div class="cart-drawer-item-content d-flex flex-column ps-md-5 ps-2">
+                                                <div class="cart-item-text d-flex justify-content-between">
+                                                    <div class="cart-item-text pe-md-3 pe-2">
+                                                        {%- if section.settings.show_vendor -%}
+                                                            <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+                                                        {%- endif -%}
+                                                        <a href="{{ item.url }}" class="card-title d-inline-block font-family-heading fs-17-16 fw-medium lh-125 ls-2 mb-md-2 mb-1 text-body"> {{ item.product.title | escape }} </a>
+                                                        {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+                                                            {%- if item.product.has_only_default_variant == false -%}
+                                                                <ul class="list-unstyled cart-item-options">
+                                                                {%- for option in item.options_with_values -%}
+                                                                    <li class="d-flex flex-wrap column-gap-1">
+                                                                        <span class="fs-sm ls-base text-capitalize text-secondary-800">{{ option.name }}:</span>
+                                                                        <span class="fs-sm ls-base text-capitalize text-secondary-800 option-value">{{ option.value }}</span>
+                                                                    </li>
+                                                                {%- endfor -%}
+                                                                </ul>
+                                                            {%- endif -%}
+
+                                                            {% if item.properties.size != 0 %}
+                                                                <ul class="list-unstyled cart-item-properties">
+                                                                {%- for property in item.properties -%}
+                                                                    {%- assign property_first_char = property.first | slice: 0 -%}
+                                                                    {%- if property.last != blank and property_first_char != '_' -%}
+                                                                        <li class="d-flex flex-wrap column-gap-1">
+                                                                            <span class="fs-sm ls-base text-capitalize text-secondary-800">{{ property.first }}:</span>
+                                                                            <span class="fs-sm ls-base text-capitalize text-secondary-800 property-value">
+                                                                                {%- if property.last contains '/uploads/' -%}
+                                                                                    <a href="{{ property.last }}" target="_blank">
+                                                                                        {{ property.last | split: '/' | last }}
+                                                                                    </a>
+                                                                                {%- else -%}
+                                                                                    {{ property.last }}
+                                                                                {%- endif -%}
+                                                                            </span>
+                                                                        </li>
+                                                                    {%- endif -%}
+                                                                {%- endfor -%}
+                                                                </ul> 
+                                                            {% endif %}
+                                                            {% if item.selling_plan_allocation.selling_plan.name %}
+                                                                <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                                                            {% endif %}
+                                                        {%- endif -%}
+                                                    </div>
+                                                    <div class="cart-item-price d-flex text-end flex-column font-family-heading ls-2 pt-1">
+                                                       {% if selected_variant.price == 0 %}
+                                                            <s class="text-gray-700 m-0 p-0">{{ 'templates.cart.free' | t }}</s>
+                                                        {% elsif item.product.gift_card? or item.product.tags contains 'donate' %}
+                                                            <span class="m-0 p-0 text-body ls-2 lh-11"> {{ item.final_price | money }} </span>
+                                                        {% else %}
+                                                            {% if selected_variant.compare_at_price %}
+                                                                {% if selected_variant.compare_at_price > selected_variant.price %}
+                                                                    <span class="m-0 p-0 text-danger lh-11 ls-2"> {{ selected_variant.price | money }} </span>
+                                                                    <s class="fs-14 fw-light ls-2 m-0 p-0 text-gray-700 lh-11 mt-1">{{ selected_variant.compare_at_price | money }}</s>
+                                                                {% else %}
+                                                                    <span class="m-0 p-0 text-body ls-2 lh-11"> {{ selected_variant.price | money }} </span>
+                                                                {% endif %}
+                                                            {% else %}
+                                                                <span class="m-0 p-0 text-body ls-2 lh-11"> {{ selected_variant.price | money }} </span>
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                                <div class="cart-item-quantity mt-auto">
+                                                    <div class="quantity-box">
+                                                        <div class="d-flex align-items-center">
+                                                            {% if item.properties['promo_product'] or item.original_price == 0 %}
+                                                                <input type="hidden" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" step="1" min="1" pattern="[0-9]*" inputmode="numeric" data-qty-input class="quantity form-control text-center">
+                                                            {% else %}
+                                                                {%- render 'cart-item-qty', item: item, index: forloop.index -%}
+                                                                <a data-remove="{{ item.variant.metafields.custom.draft_variant }}" class="ms-auto my-0 text-body a-icon-trash" href="#" title="{{ 'templates.cart.remove' | t }}" aria-label="{{ 'templates.cart.remove' | t }}" data-toggle="tooltip" data-item-remove data-index="{{ forloop.index }}" data-placement="left">
+                                                                    <svg class="ms-3" aria-hidden="true" focusable="false" style="width: 15px; height: 15px;"><use href="#icon-trash"></use></svg>
+                                                                </a>
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {%- liquid
+                                assign cart_msg = 'templates.cart.empty' | t
+                            -%}
+                            <div class="cart__warnings d-flex flex-column w-100">
+                                <div class="d-flex empty-cart-content flex-column flex-fill justify-content-center px-md-5 px-3 py-md-5 py-3">
+                                    {% if section.settings.empty_cart_icon == true %}
+                                        <svg aria-hidden="true" focusable="false" style="width:100px;height:100px;" class="text-gray-500 mb-5">
+                                            <use href="#icon-cart"></use>
+                                        </svg>
+                                    {% endif %}
+                                
+                                    <div class="h3 cart__empty-text text-transform-none mb-2">
+                                        {{ section.settings.empty_cart_title | default: cart_msg }}
+                                    </div>
+                                    <div class="cart__empty-msg mb-5 text-secondary-900">
+                                        {{ section.settings.empty_cart_msg | default: cart_msg }}
+                                    </div>
+                                    {%- if section.settings.continue_shopping_btn and section.settings.continue_shopping_url -%}
+                                        <a href="{{ section.settings.continue_shopping_url }}" class="btn-link">
+                                            {{ section.settings.continue_shopping_btn }}
+                                        </a>
+                                    {%- endif -%}
+                                </div>
+                                {% if section.settings.empty_cart_collection_show %}
+                                    <div class="empty-cart-collection mt-auto">
+                                        {% content_for "block", type: "collection-card-list", id: "cart-empty-collection-card-list" %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </form>
+                </div>
+                {% content_for 'blocks' %}
+            </div>
+           
+            {% content_for "block", type: "_cart-drawer-footer", id: "static-cart-drawer-footer" %}
+        </div>
+
+        <script type="application/json" data-cartScriptJSON>
+            {{ cart | json }}
+        </script>
+    </cart-form>
+</custom-drawer>
+
+<script data-src="{{ 'component-cart-form.js' | asset_url }}" class="lazyload-asset" defer></script>
+
+{% comment %} {%- if upsell_layout == 'side-by-side' -%}
+<script type="text/javascript">
+    let upsellContainer = document.querySelector('[data-cartupsell] .cart-related_items');
+    if(upsellContainer){
+        manageUpsellScroll();
+    }
+
+    function manageUpsellScroll(){
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+    
+        upsellContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - upsellContainer.offsetLeft;
+            scrollLeft = upsellContainer.scrollLeft;
+        });
+        upsellContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        upsellContainer.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        upsellContainer.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - upsellContainer.offsetLeft;
+            const walk = (x - startX) * 3;
+            upsellContainer.scrollLeft = scrollLeft - walk;
+        });
+    }    
+</script>
+{%- endif -%} {% endcomment %}
+
+{% schema %}
+{
+  "name": "Slide Cart",
+  "tag": "section",
+  "class": "cart-drawer-section",
+  "settings": [
+        {
+            "type": "header",
+            "content": "Content"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "heading",
+            "default": "Cart"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_count",
+            "label": "Show Cart Items Count",
+            "default": false,
+            "info": "Enabling this will show cart items count beside heading."
+        },
+        {
+            "type": "header",
+            "content": "Empty cart"
+        },
+        {
+            "type": "checkbox",
+            "id": "empty_cart_icon",
+            "label": "Show Empty Cart Icon",
+            "default": false
+        },
+        {
+            "type": "textarea",
+            "id": "empty_cart_title",
+            "label": "Title", 
+            "default": "Your cart is empty"
+        }, 
+        {
+            "type": "textarea",
+            "id": "empty_cart_msg",
+            "label": "Message",
+            "default": "Your cart is empty."
+        },
+        {
+            "type": "text",
+            "id": "continue_shopping_btn",
+            "label": "Button label",
+            "default": "Continue Shopping"
+        },
+        {
+            "type": "url",
+            "id": "continue_shopping_url",
+            "label": "Button link"
+        },
+        {
+            "type": "header",
+            "content": "Empty cart collection"
+        },
+        {
+            "type": "checkbox",
+            "id": "empty_cart_collection_show",
+            "label": "Show Empty Cart Collection",
+            "default": false
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "layout_type",
+            "label": "t:settings.layout_type",
+            "options": [
+                {
+                    "value": "grid",
+                    "label": "t:options.grid"
+                },
+                {
+                    "value": "carousel",
+                    "label": "t:options.carousel"
+                },
+                {
+                    "value": "bento",
+                    "label": "t:options.bento"
+                }
+            ],
+            "default": "grid"
+        },
+        {
+            "type": "range",
+            "id": "columns",
+            "label": "t:settings.columns",
+            "min": 1,
+            "max": 8,
+            "step": 1,
+            "default": 4,
+            "visible_if": "{{ section.settings.layout_type == 'grid' }}"
+        },
+        {
+            "type": "range",
+            "id": "ipad_columns",
+            "label": "t:settings.Ipad_columns",
+            "min": 1,
+            "max": 4,
+            "step": 1,
+            "default": 3,
+            "visible_if": "{{ section.settings.layout_type == 'grid' }}"
+        },
+        {
+            "type": "range",
+            "id": "mobile_columns",
+            "label": "t:settings.mobile_columns",
+            "min": 1,
+            "max": 3,
+            "step": 1,
+            "default": 2,
+            "visible_if": "{{ section.settings.layout_type == 'grid' }}"
+        },
+        {
+            "type": "range",
+            "id": "slides_per_view",
+            "label": "t:slider.slides_view_desktop",
+            "min": 1,
+            "max": 8,
+            "step": 0.1,
+            "default": 4,
+            "visible_if": "{{ section.settings.layout_type == 'carousel' }}"
+        },
+        {
+            "type": "range",
+            "id": "slides_per_view_ipad",
+            "label": "t:slider.slides_view_ipad",
+            "min": 1,
+            "max": 8,
+            "step": 0.1,
+            "default": 3.2,
+            "visible_if": "{{ section.settings.layout_type == 'carousel' }}"
+        },
+        {
+            "type": "range",
+            "id": "slides_per_view_mobile",
+            "label": "t:slider.slides_view_mobile",
+            "min": 1,
+            "max": 8,
+            "step": 0.1,
+            "default": 2,
+            "visible_if": "{{ section.settings.layout_type == 'carousel' }}" 
+        },
+        {
+            "type": "range",
+            "id": "columns_gap",
+            "label": "t:settings.horizontal_gap",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 30,
+            "visible_if": "{{ section.settings.layout_type == 'grid' or section.settings.layout_type == 'carousel' or section.settings.layout_type == 'bento' }}"
+        },
+        {
+            "type": "range",
+            "id": "columns_gap_ipad",
+            "label": "t:settings.horizontal_gap_ipad",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "default": 20,
+            "visible_if": "{{ section.settings.layout_type == 'grid' or section.settings.layout_type == 'carousel' or section.settings.layout_type == 'bento' }}"
+        },
+        {
+            "type": "range",
+            "id": "columns_gap_mobile",
+            "label": "t:settings.horizontal_gap_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 15,
+            "visible_if": "{{ section.settings.layout_type == 'grid' or section.settings.layout_type == 'carousel' or section.settings.layout_type == 'bento' }}"
+        },
+        {
+            "type": "range",
+            "id": "rows_gap",
+            "label": "t:settings.vertical_gap",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 30,
+            "visible_if": "{{ section.settings.layout_type == 'grid' or section.settings.layout_type == 'bento'}}"
+        },
+        {
+            "type": "range",
+            "id": "rows_gap_ipad",
+            "label": "t:settings.vertical_gap_ipad",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "default": 20,
+            "visible_if": "{{ section.settings.layout_type == 'grid' or section.settings.layout_type == 'bento'}}"
+        },
+        {
+            "type": "range",
+            "id": "rows_gap_mobile",
+            "label": "t:settings.vertical_gap_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 15,
+            "visible_if": "{{ section.settings.layout_type == 'grid' or section.settings.layout_type == 'bento'}}"
+        },
+        {
+            "type": "header",
+            "content": "Card Style"
+        },
+        {
+            "type": "select",
+            "id": "placement",
+            "label": "t:settings.placement",
+            "options": [
+                {
+                    "value": "on_image",
+                    "label": "t:options.on_image"
+                },
+                {
+                    "value": "below_image",
+                    "label": "t:options.below_image"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "hover_effect",
+            "label": "Select Card Hover Effect",
+            "options": [
+                {
+                    "value": "scale_image",
+                    "label": "Zoom Image"
+                },
+                {
+                    "value": "show_icon",
+                    "label": "Show Icon"
+                },
+                {
+                    "value": "both",
+                    "label": "Both"
+                }
+            ],
+            "default": "scale_image"
+        },
+        {
+            "type": "select",
+            "id": "content_position_area",
+            "label": "Details Position",
+            "options": [
+                {
+                    "value": "top",
+                    "label": "Top"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "bottom",
+                    "label": "Bottom"
+                }
+            ],
+            "default": "bottom",
+            "info": "This Option apply only when select Over Image"
+        },
+        {
+            "type": "header",
+            "content": "Carousel Slider Options",
+            "visible_if": "{{ section.settings.layout_type == 'carousel' }}"
+        },
+        {
+            "type": "checkbox", 
+            "id": "nav_arrows",
+            "label": "t:slider.navigation_arrows",
+            "default": true,
+            "visible_if": "{{ section.settings.layout_type == 'carousel' }}"
+        },
+        {
+            "type": "select", 
+            "id": "nav_arrows_visible",
+            "label": "t:slider.navigation_arrows_visible",
+            "visible_if": "{{ section.settings.nav_arrows == true and section.settings.layout_type == 'carousel' }}",
+            "options": [
+                {
+                    "value": "show_only_desktop",
+                    "label": "t:slider.hide_desktop"
+                },
+                {
+                    "value": "show_only_mobile",
+                    "label": "t:slider.hide_mobile"
+                },
+                {
+                    "value": "both",
+                    "label": "t:slider.both"
+                }
+            ],
+            "default": "both"
+        },
+        {
+            "type": "select",
+            "id": "nav_arrows_color",
+            "label": "t:slider.navigation_arrows_color",
+            "visible_if": "{{ section.settings.nav_arrows == true and section.settings.layout_type == 'carousel' }}",
+            "options": [
+                {
+                    "value": "light-arrow",
+                    "label": "t:slider.light"
+                },
+                {
+                    "value": "",
+                    "label": "t:slider.dark"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "type": "select",
+            "id": "nav_arrows_size",
+            "label": "t:slider.navigation_arrows_size",
+            "visible_if": "{{ section.settings.nav_arrows == true and section.settings.layout_type == 'carousel' }}",
+            "options": [
+                {
+                    "value": "arrow-small",
+                    "label": "t:slider.size_small"
+                },
+                {
+                    "value": "",
+                    "label": "t:slider.size_default"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "type": "select", 
+            "id": "nav_arrows_outside",
+            "label": "t:slider.navigation_arrows_position",
+            "visible_if": "{{ section.settings.nav_arrows == true and section.settings.layout_type == 'carousel' }}",
+            "options": [
+                {
+                    "value": "inside",
+                    "label": "t:slider.navigation_arrows_inside"
+                },
+                {
+                    "value": "outside",
+                    "label": "t:slider.navigation_arrows_outside"
+                }
+            ],
+            "default": "inside"
+        },
+        {
+            "type": "checkbox",
+            "id": "nav_dots",
+            "label": "t:slider.pagination",
+            "default": false,
+            "visible_if": "{{ section.settings.layout_type == 'carousel' }}"
+        },
+        {
+            "type": "select", 
+            "id": "pagination_visible",
+            "label": "t:slider.pagination_visible",
+            "visible_if": "{{ section.settings.nav_dots == true and section.settings.layout_type == 'carousel' }}",
+            "options": [
+                {
+                    "value": "show_only_desktop",
+                    "label": "t:slider.hide_desktop"
+                },
+                {
+                    "value": "show_only_mobile",
+                    "label": "t:slider.hide_mobile"
+                },
+                {
+                    "value": "both",
+                    "label": "t:slider.both"
+                }
+            ],
+            "default": "both"
+        },
+        {
+            "type": "select",
+            "id": "pagination_color",
+            "label": "t:slider.pagination_color",
+            "visible_if": "{{ section.settings.nav_dots == true and section.settings.layout_type == 'carousel' }}",
+            "options": [
+                {
+                    "value": "pagination-light",
+                    "label": "t:slider.light"
+                },
+                {
+                    "value": "",
+                    "label": "t:slider.dark"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "type": "checkbox",
+            "id": "nav_scrollbar",
+            "label": "t:slider.scrollbar",
+            "default": true,
+            "visible_if": "{{ section.settings.layout_type == 'carousel' }}"
+        },
+        {
+            "type": "select", 
+            "id": "scrollbar_visible",
+            "label": "t:slider.scrollbar_visible",
+            "visible_if": "{{ section.settings.nav_scrollbar == true and section.settings.layout_type == 'carousel'}}",
+            "options": [
+                {
+                    "value": "show_only_desktop",
+                    "label": "t:slider.hide_desktop"
+                },
+                {
+                    "value": "show_only_mobile",
+                    "label": "t:slider.hide_mobile"
+                },
+                {
+                    "value": "both",
+                    "label": "t:slider.both"
+                }
+            ],
+            "default": "both"
+        },
+        {
+            "type": "select",
+            "id": "scrollbar_color",
+            "label": "t:slider.scrollbar_color",
+            "visible_if": "{{ section.settings.nav_scrollbar == true and section.settings.layout_type == 'carousel'}}",
+            "options": [
+                {
+                    "value": "light-scrollbar",
+                    "label": "t:slider.scrollbar_light"
+                },
+                {
+                    "value": "",
+                    "label": "t:slider.scrollbar_dark"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "type": "header",
+            "content": "Style"
+        },
+        {
+            "type": "color_background",
+            "id": "section_bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "display",
+            "label": "t:settings.display",
+            "options": [
+                {
+                    "value": "d-flex",
+                    "label": "Flex"
+                },
+                {
+                    "value": "d-block",
+                    "label": "Block"
+                },
+                {
+                    "value": "d-inline-block",
+                    "label": "Inline Block"
+                }
+            ],
+            "default": "d-block"
+        },
+        {
+            "type": "select",
+            "id": "direction",
+            "label": "t:settings.direction",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "flex-row",
+                    "label": "t:options.horizontal"
+                },
+                {
+                    "value": "flex-column",
+                    "label": "t:options.vertical"
+                }
+            ],
+            "default": "flex-row"
+        },
+        {
+            "type": "select",
+            "id": "direction_mobile",
+            "label": "t:settings.direction_mobile",
+            "visible_if": "{{ block.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "flex-row",
+                    "label": "t:options.horizontal"
+                },
+                {
+                    "value": "flex-column",
+                    "label": "t:options.vertical"
+                }
+            ],
+            "default": "flex-column"
+        },
+        {
+            "type": "select",
+            "id": "wrap",
+            "label": "t:settings.wrap",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "flex-wrap",
+                    "label": "Yes"
+                },
+                {
+                    "value": "flex-nowrap",
+                    "label": "No"
+                }
+            ],
+            "default": "flex-nowrap"
+        },
+        {
+            "type": "select",
+            "id": "align_items",
+            "label": "t:settings.align_items_desktop",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "align-items-start",
+                    "label": "Start"
+                },
+                {
+                    "value": "align-items-center",
+                    "label": "Center"
+                },
+                {
+                    "value": "align-items-end",
+                    "label": "End"
+                }
+            ],
+            "default": "align-items-start"
+        },
+        {
+            "type": "select",
+            "id": "justify_content",
+            "label": "t:settings.justify_content_desktop",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "justify-content-start",
+                    "label": "Start"
+                },
+                {
+                    "value": "justify-content-center",
+                    "label": "Center"
+                },
+                {
+                    "value": "justify-content-end",
+                    "label": "End"
+                },
+                {
+                    "value": "justify-content-between",
+                    "label": "Between"
+                }
+            ],
+            "default": "justify-content-start"
+        },
+        {
+            "type":"header",
+            "content":"Content Spacing",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}"
+        },
+        {
+            "type": "select",
+            "id": "gap_column",
+            "label": "Gap Horizontal",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "column-gap-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "column-gap-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "column-gap-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "column-gap-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "column-gap-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "column-gap-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "column-gap-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "column-gap-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "column-gap-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "column-gap-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "column-gap-md-10",
+                    "label": "40"
+                }
+            ],
+            "default": "column-gap-md-0"
+        },
+        {
+            "type": "select",
+            "id": "gap_row",
+            "label": "Gap Vertical",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "row-gap-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "row-gap-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "row-gap-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "row-gap-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "row-gap-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "row-gap-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "row-gap-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "row-gap-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "row-gap-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "row-gap-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "row-gap-md-10",
+                    "label": "50"
+                }
+            ],
+            "default": "row-gap-md-0"
+        },
+        {
+            "type": "select",
+            "id": "gap_column_mobile",
+            "label": "Gap Horizontal For Mobile",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "column-gap-0",
+                    "label": "0"
+                },
+                {
+                    "value": "column-gap-1",
+                    "label": "5"
+                },
+                {
+                    "value": "column-gap-2",
+                    "label": "10"
+                },
+                {
+                    "value": "column-gap-3",
+                    "label": "15"
+                },
+                {
+                    "value": "column-gap-4",
+                    "label": "20"
+                },
+                {
+                    "value": "column-gap-5",
+                    "label": "25"
+                },
+                {
+                    "value": "column-gap-6",
+                    "label": "30"
+                },
+                {
+                    "value": "column-gap-7",
+                    "label": "35"
+                },
+                {
+                    "value": "column-gap-8",
+                    "label": "40"
+                },
+                {
+                    "value": "column-gap-9",
+                    "label": "45"
+                },
+                {
+                    "value": "column-gap-10",
+                    "label": "50"
+                }
+            ],
+            "default": "column-gap-0"
+        },
+        {
+            "type": "select",
+            "id": "gap_row_mobile",
+            "label": "Gap Vertical For Mobile",
+            "visible_if": "{{ section.settings.display == 'd-flex' }}",
+            "options": [
+                {
+                    "value": "row-gap-0",
+                    "label": "0"
+                },
+                {
+                    "value": "row-gap-1",
+                    "label": "5"
+                },
+                {
+                    "value": "row-gap-2",
+                    "label": "10"
+                },
+                {
+                    "value": "row-gap-3",
+                    "label": "15"
+                },
+                {
+                    "value": "row-gap-4",
+                    "label": "20"
+                },
+                {
+                    "value": "row-gap-5",
+                    "label": "25"
+                },
+                {
+                    "value": "row-gap-6",
+                    "label": "30"
+                },
+                {
+                    "value": "row-gap-7",
+                    "label": "35"
+                },
+                {
+                    "value": "row-gap-8",
+                    "label": "40"
+                },
+                {
+                    "value": "row-gap-9",
+                    "label": "45"
+                },
+                {
+                    "value": "row-gap-10",
+                    "label": "50"
+                }
+            ],
+            "default": "row-gap-0"
+        }
+    ],
+    "blocks": [{ "type": "@theme" }, { "type": "@app" }, { "type": "_cart-note" }, { "type": "_cart-upsell" }, { "type": "_cart-drawer-footer"} ],
+    "presets": [
+        {
+            "name": "Cart Drawer",
+            "blocks": [
+                { "type": "_cart-note" }, { "type": "_cart-upsell" }, { "type": "_cart-drawer-footer"}
+            ]
+        }
+    ]
+}
+{% endschema %}

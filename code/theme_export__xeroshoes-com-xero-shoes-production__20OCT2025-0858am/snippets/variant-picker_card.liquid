@@ -1,0 +1,293 @@
+{%- for option in product.options_with_values -%}
+    {%- liquid
+    assign option_name = option.name | downcase
+    -%}
+
+    {%- if picker_type == 'swatches' or picker_type == 'pills' -%}
+        {% if option_name contains 'style' or option_name contains 'Style' or option_name contains 'color' or option_name contains 'Color' or product.options.size == 1 %}
+            <fieldset class="js product-form__input color-swatch {% if picker_type == 'pills' %} pills-style{% endif %}" 
+            data-optionindex="{{ forloop.index }}" form="{{ product_form_id }}"
+            name="product-{{ product.id }}-{{ option_name | handle }}">
+            {% if block.settings.show_variant_label %}<legend class="form__label fw-medium w-100 px-0">
+    
+           
+                <span class="selected-option">{{ option.selected_value }}</span>
+            
+            </legend>{% endif %}
+            
+                <span class="ls-2 font-family-heading ls-2 lh-11 fs-13 mb-2 d-flex pt-2 text-capitalize {% if option_name contains 'style' or option_name contains 'Style' %} d-none{% endif %}" data-variant-picker-quick-add-label>{{ option_name }}</span>
+           
+            <ul class="list-unstyled d-flex my-0 py-0 row-gap-1 column-gap-1 color-swatch-list overflow-auto">
+                {%- for value in option.values -%}
+                {%- liquid
+                    assign variant_image = null
+                    assign swatch_value = null
+                    
+                    if option_name contains 'style' or option_name contains 'Style'
+                        for variant in product.variants
+                            if variant.option1 == value or variant.option2 == value or variant.option3 == value
+                                if variant.image
+                                    assign variant_image = variant.image
+                                    break
+                                endif
+                            endif
+                        endfor
+                    endif
+
+                    assign variantdraft = false
+                    unless option.name contains 'Color' and option.name contains 'color' and option_name contains 'style' and option_name contains 'Style'
+                        assign variant_unavailable = false
+                        
+                        for variant in product.variants
+                            if variant.option1 == value or variant.option2 == value or variant.option3 == value
+                                if variant.metafields.custom.draft_variant == true
+                                    assign variantdraft = true
+                                endif
+                                unless variant.available
+                                    assign variant_unavailable = true
+                                endunless
+                                break
+                            endif
+                        endfor
+                    endunless
+                    
+                    if value.swatch.image
+                        assign image_url = value.swatch.image | image_url: width: 160
+                        assign swatch_value = 'url(' | append: image_url | append: ')'
+                    elsif value.swatch.color
+                        assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+                    elsif value.swatch.style
+                        assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+                    elsif variant_image
+                        assign image_url = variant_image | image_url: width: 160
+                        assign swatch_value = 'url(' | append: image_url | append: ')'
+                    endif
+                -%}
+            
+                {%- capture swatch_id -%}
+                    {{ section.id }}-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 -}}-{{ block.id }}
+                {%- endcapture -%}
+                {%- capture swatch_dataset -%}
+                    data-product-url="{{ value.product_url }}"
+                    data-option-value-id="{{ value.id }}"
+                {%- endcapture -%}
+                {% comment %} {% assign hidevariants = draftoption1 | split: ',' %}
+                {% assign hidethis = false %}
+                {% for hidev in hidevariants %}
+                    {% if hidev == value %}
+                        {% assign hidethis = true %}
+                    {% endif %}
+                {% endfor %} {% endcomment %}
+                <li class="">
+                    <div class="swatch {% if variant_image == blank %}no-color-img {% endif %} color-swatch">
+                        <input tabindex="0" type="radio" class="form-control" id="{{ swatch_id }}"
+                            name="{{ option.name }}" value="{{ value | escape }}" 
+                            
+                            {% if value.selected %}checked{% endif %}
+                            
+                            {% if activenextcolor == value %}checked{% endif %}
+                            data-handle="{{ value | handle }}"
+                            form="{{ product_form_id }}"
+                            data-option-value-id="{{ value.id }}" 
+                            data-option="{{ option.name | handle }}" 
+                            {% if product.options.size == 1 %} data-only-one-option="true"{% endif %} 
+                            {% unless value.available %}data-disabled="true"{% endunless %} 
+                            {{ swatch_dataset }} > 
+                        <label class="form-label swatch-label {% if variant_image == blank %}no-bg-img-label bg-transparent{% endif %}" for="{{ swatch_id }}" title="{{ value | escape }}"> 
+                            
+                                {% if variant_image != blank %}
+                                <img src="{{ variant_image | image_url: width: 160 }}" alt="{{ value | escape }}" width="50" height="50" loading="lazy">
+                                {% else %}
+                                    {{ value }}
+                                {% endif %}
+                            
+                        </label>
+                    </div>
+                </li>
+                
+                {%- endfor -%}
+                {%- comment -%} Add "+X more" indicator for overflow swatches (only on product cards, not main product page) {%- endcomment -%}
+                {%- if option_name contains 'style' or option_name contains 'Style' or option_name contains 'color' or option_name contains 'Color' -%}
+                    {%- unless template == 'product' -%}
+                        <li class="swatch-overflow-indicator d-none" data-overflow-indicator style="display: none !important;">
+                            <div class="swatch overflow-swatch">
+                                <a href="{{ product.url }}" class="swatch-label overflow-label d-flex align-items-center justify-content-center" title="View all {{ option.values.size }} {{ option_name }}s">
+                                    <span class="">+<span data-remaining-count>0</span></span>
+                                </a>
+                            </div>
+                        </li>
+                    {%- endunless -%}
+                {%- endif -%}
+                
+                
+            </ul>
+        </fieldset>
+        {% endif %}
+    {%- else -%}
+        <div class="product-form__input product-form__input--dropdown mb-4" data-optionindex="{{ forloop.index }}">
+            {% if block.settings.show_variant_label %}
+                <label class="fw-medium text-uppercase fs-sm mb-2" for="Option-{{ section.id }}-{{ forloop.index0 }}" title="{{ option.selected_value }}">
+                    {{ option.name }}: <span class="selected-option">{{ option.selected_value }}</span>
+                </label>
+            {% endif %}
+            <div class="select">
+                <select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="form-select variant_selector" 
+                    name="options[{{ option.name | escape }}]" 
+                    form="{{ product_form_id }}" >
+                    {%- for value in option.values -%}
+                    {%- capture option_id -%}
+                        {{ section.id }}-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 -}}
+                    {%- endcapture -%}
+                    {%- capture option_dataset -%}
+                        data-product-url="{{ value.product_url }}"
+                        data-option-value-id="{{ value.id }}"
+                    {%- endcapture -%}
+                    <option id="{{ option_id }}" {{ option_dataset }} value="{{ value | escape }}" 
+                        data-option-value-id="{{ value.id }}"
+                        {% if value.selected %}selected{% endif %}
+                        {% comment %} {% unless value.available %}disabled{% endunless %} {% endcomment %}>
+                        {{ value }}
+                    </option>
+                    {%- endfor -%}
+                </select>
+            </div>
+        </div>
+    {%- endif -%}
+{% endfor %}
+
+
+<div class="other-options">
+    {%- for option in product.options_with_values -%}
+        {%- liquid
+        assign option_name = option.name | downcase
+        -%}
+        {%- if picker_type == 'swatches' or picker_type == 'pills' -%}
+            {% unless option_name contains 'style' or option_name contains 'Style' or option_name contains 'color' or option_name contains 'Color' or product.options.size == 1 %}
+                <fieldset class="js product-form__input  mt-auto {% if picker_type == 'pills' %} pills-style{% endif %}" 
+                data-optionindex="{{ forloop.index }}" form="{{ product_form_id }}"
+                name="product-{{ product.id }}-{{ option_name | handle }}">
+                {% if block.settings.show_variant_label %}
+                    <legend class="form__label fw-medium w-100 px-0">
+        
+                    
+                        <div class="d-flex justify-content-between">
+                        <div>{% if option_name contains 'size' %}Size{% else %}{{ option.name }}{% endif %} <span class="selected-option">{{ option.selected_value }}</span></div>
+                            {% comment %} <div>{% content_for "blocks", closest.product: product %} </div> {% endcomment %}
+                                {% if option_name contains 'size' %}
+                                {% if block.settings.title != blank and product.metafields.custom.sizing_chart != blank %}
+                                <div class="size-chart-popup-wrapper">
+                                    <button class="link-block btn-link btn-link-dark ContentPopup-link underline-on-text" data-toggledrawer="ContentPopup-{{ product.id }}" aria-expanded="false">{{ block.settings.title }}</button>
+                                </div>
+                                {% endif %} 
+                                {% endif %}
+                        </div>
+                        <div class="text-transform-none fs-sm fw-normal text-gray-700 mt-3 product_highlights">
+                        {{ product.metafields.custom.product_highlights | metafield_tag }}</div>
+                        
+                        </legend>
+                    {% endif %}
+                {% if option_name contains 'size' %}
+                    <span class="ls-2 font-family-heading ls-2 lh-11 fs-13 mb-2 d-flex pt-2" data-variant-picker-quick-add-label>Quick Add</span>
+                {% else %}
+                    <span class="ls-2 font-family-heading ls-2 lh-11 fs-13 mb-2 d-flex pt-2 text-capitalize " data-variant-picker-quick-add-label>{{ option_name }}</span>
+                {% endif %}
+                <ul class="list-unstyled d-flex my-0 py-0 row-gap-1 column-gap-1 flex-wrap">
+                    {%- for value in option.values -%}
+                    {%- liquid
+                        assign variant_image = null
+                        assign swatch_value = null
+                        
+                        
+
+                        assign variantdraft = false
+                        unless option.name contains 'Color' and option.name contains 'color' and option_name contains 'style' and option_name contains 'Style'
+                            assign variant_unavailable = false
+                            
+                            for variant in product.variants
+                                if variant.option1 == value or variant.option2 == value or variant.option3 == value
+                                    if variant.metafields.custom.draft_variant == true
+                                        assign variantdraft = true
+                                    endif
+                                    unless variant.available
+                                        assign variant_unavailable = true
+                                    endunless
+                                    break
+                                endif
+                            endfor
+                        endunless
+                        
+                        
+                    -%}
+                
+                    {%- capture swatch_id -%}
+                        {{ section.id }}-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 -}}-{{ block.id }}
+                    {%- endcapture -%}
+                    {%- capture swatch_dataset -%}
+                        data-product-url="{{ value.product_url }}"
+                        data-option-value-id="{{ value.id }}"
+                    {%- endcapture -%}
+                    {% comment %} {% assign hidevariants = draftoption1 | split: ',' %}
+                    {% assign hidethis = false %}
+                    {% for hidev in hidevariants %}
+                        {% if hidev == value %}
+                            {% assign hidethis = true %}
+                        {% endif %}
+                    {% endfor %} {% endcomment %}
+                    <li class="">
+                        <div class="swatch {% if variant_image == blank %}no-color-img {% endif %}">
+                            <input tabindex="0" type="radio" class="form-control" id="{{ swatch_id }}"
+                                name="{{ option.name }}" value="{{ value | escape }}" 
+                                
+                                data-handle="{{ value | handle }}"
+                                form="{{ product_form_id }}"
+                                data-option-value-id="{{ value.id }}" 
+                                data-option="{{ option.name | handle }}" 
+                                
+                                {% unless value.available %}data-disabled="true"{% endunless %} 
+                                {{ swatch_dataset }} > 
+                            <label class="form-label swatch-label " for="{{ swatch_id }}" title="{{ value | escape }}"> 
+                                
+                                
+                                
+                                    {{ value }}
+                                
+                            </label>
+                        </div>
+                    </li>
+                    {%- endfor -%}
+                </ul>
+            </fieldset>
+            {% endunless %}
+        {%- else -%}
+        <div class="product-form__input product-form__input--dropdown mb-4" data-optionindex="{{ forloop.index }}">
+            {% if block.settings.show_variant_label %}
+                <label class="fw-medium text-uppercase fs-sm mb-2" for="Option-{{ section.id }}-{{ forloop.index0 }}" title="{{ option.selected_value }}">
+                    {{ option.name }}: <span class="selected-option">{{ option.selected_value }}</span>
+                </label>
+            {% endif %}
+            <div class="select">
+                <select id="Option-{{ section.id }}-{{ forloop.index0 }}" class="form-select variant_selector" 
+                    name="options[{{ option.name | escape }}]" 
+                    form="{{ product_form_id }}" >
+                    {%- for value in option.values -%}
+                    {%- capture option_id -%}
+                        {{ section.id }}-{{ product.id }}-{{ option.name | handle }}-{{ forloop.index0 -}}
+                    {%- endcapture -%}
+                    {%- capture option_dataset -%}
+                        data-product-url="{{ value.product_url }}"
+                        data-option-value-id="{{ value.id }}"
+                    {%- endcapture -%}
+                    <option id="{{ option_id }}" {{ option_dataset }} value="{{ value | escape }}" 
+                        data-option-value-id="{{ value.id }}"
+                        {% if value.selected %}selected{% endif %}
+                        {% comment %} {% unless value.available %}disabled{% endunless %} {% endcomment %}>
+                        {{ value }}
+                    </option>
+                    {%- endfor -%}
+                </select>
+            </div>
+        </div>
+        {%- endif -%}
+    {%- endfor -%}
+</div>
+

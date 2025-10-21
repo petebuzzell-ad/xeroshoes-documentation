@@ -1,0 +1,439 @@
+{% liquid
+    assign desktop_rows_count = block.settings.desktop_rows_count
+    assign mobile_rows_count = block.settings.mobile_rows_count
+
+    assign desktop_height = settings.type_body_line_height | times: settings.type_body_font_size | times: desktop_rows_count
+    assign mobile_height = settings.type_body_line_height | times: settings.type_body_font_size_mb | times: mobile_rows_count
+%}
+
+{% style %}
+.readmore-block .content-wrap {
+    max-height: {{ desktop_height }}px;
+    overflow: hidden;
+    transition: max-height 0.7s;
+}
+@media (max-width: 768px) {
+    .readmore-block .content-wrap {
+        max-height: {{ mobile_height }}px;
+    }
+}
+.readmore-block.open .content-wrap {
+    max-height: 2000px;
+    transition: max-height 0.7s;
+}
+{% endstyle %}
+
+<read-more>
+    <div class="readmore-block text-block {{ block.settings.alignment }} {{ block.settings.alignment_mobile }} {{ block.settings.text_size }} {{ block.settings.text_style }} {{ block.settings.margin_top_desktop }} {{ block.settings.margin_top_mobile }} {{ block.settings.margin_bottom_desktop }} {{ block.settings.margin_bottom_mobile }}" 
+        {% if block.settings.color != blank %}style="color:{{ block.settings.color }}"{% endif %} 
+        {{ block.shopify_attributes }}
+        data-read-more-wrapper
+    >
+        <div class="content-wrap" data-words-count="{{ block.settings.words_count }}" 
+            data-read-more-content>
+            <div class="toggle-content-wrap">
+                {{ block.settings.text }}
+            </div>
+        </div>
+    </div>
+
+    <button class="d-none link-block {% if block.settings.style_class == 'btn-link-primary' or block.settings.style_class == 'btn-link-secondary' %} btn-link {% else %}btn {% endif %} {{ block.settings.style_class }}" data-toggle-text id="toggle-button-{{ block.id }}" aria-expanded="false">{{ 'general.labels.read_more' | t }}</button>
+</read-more>
+  
+  {% schema %}
+      {
+          "name": "Text",
+          "tag": null,
+          "settings": [
+              {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Text",
+                  "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+              },
+              {
+                  "type": "select",
+                  "id": "text_size",
+                  "label": "Font Size",
+                  "options": [
+                      {
+                          "value": "fs-xs",
+                          "label": "Extra Small"
+                      },
+                      {
+                          "value": "fs-sm",
+                          "label": "Small"
+                      },
+                      {
+                          "value": "fs-md",
+                          "label": "Medium"
+                      },
+                      {
+                          "value": "fs-base",
+                          "label": "Default"
+                      },
+                      {
+                          "value": "fs-lg",
+                          "label": "Large"
+                      },
+                      {
+                          "value": "fs-xl",
+                          "label": "Extra Large"
+                      }
+                  ],
+                  "default": "fs-base"
+              },
+              {
+                  "type": "select",
+                  "id": "text_style",
+                  "label": "Text Style",
+                  "options": [
+                      {
+                          "value": "text-uppercase",
+                          "label": "Uppercase"
+                      },
+                      {
+                          "value": "text-capitalize",
+                          "label": "Capitalize"
+                      },
+                      {
+                          "value": "text-lowercase",
+                          "label": "Lowercase"
+                      },
+                      {
+                          "value": "text-math-auto",
+                          "label": "Auto"
+                      },
+                      {
+                          "value": "",
+                          "label": "Default"
+                      }
+                  ],
+                  "default": ""
+              },
+              {
+                  "type": "select",
+                  "id": "alignment",
+                  "label": "Text Alignment Desktop",
+                  "options": [
+                      {
+                          "value": "text-md-start",
+                          "label": "Left"
+                      },
+                      {
+                          "value": "text-md-center",
+                          "label": "Center"
+                      },
+                      {
+                          "value": "text-md-end",
+                          "label": "Right"
+                      }
+                  ],
+                  "default": "text-md-start"
+              },
+              {
+                  "type": "select",
+                  "id": "alignment_mobile",
+                  "label": "Text Alignment Mobile",
+                  "options": [
+                      {
+                          "value": "text-start",
+                          "label": "Left"
+                      },
+                      {
+                          "value": "text-center",
+                          "label": "Center"
+                      },
+                      {
+                          "value": "text-end",
+                          "label": "Right"
+                      }
+                  ],
+                  "default": "text-start"
+              },
+              {
+                  "type": "color",
+                  "id": "color",
+                  "label": "Color"
+              },
+              {
+                  "type":"header",
+                  "content":"Margin: Desktop"
+              },
+              {
+                  "type": "select",
+                  "id": "margin_top_desktop",
+                  "label": "Margin Top",
+                  "options": [
+                      {
+                          "value": "mt-md-0",
+                          "label": "0"
+                      },
+                      {
+                          "value": "mt-md-1",
+                          "label": "5"
+                      },
+                      {
+                          "value": "mt-md-2",
+                          "label": "10"
+                      },
+                      {
+                          "value": "mt-md-3",
+                          "label": "15"
+                      },
+                      {
+                          "value": "mt-md-4",
+                          "label": "20"
+                      },
+                      {
+                          "value": "mt-md-5",
+                          "label": "25"
+                      },
+                      {
+                          "value": "mt-md-6",
+                          "label": "30"
+                      },
+                      {
+                          "value": "mt-md-7",
+                          "label": "35"
+                      },
+                      {
+                          "value": "mt-md-8",
+                          "label": "40"
+                      },
+                      {
+                          "value": "mt-md-9",
+                          "label": "45"
+                      },
+                      {
+                          "value": "mt-md-10",
+                          "label": "50"
+                      }
+                  ],
+                  "default": "mt-md-0"
+              },
+              {
+                  "type": "select",
+                  "id": "margin_bottom_desktop",
+                  "label": "Margin Bottom",
+                  "options": [ 
+                      {
+                          "value": "mb-md-0",
+                          "label": "0"
+                      },
+                      {
+                          "value": "mb-md-1",
+                          "label": "5"
+                      },
+                      {
+                          "value": "mb-md-2",
+                          "label": "10"
+                      },
+                      {
+                          "value": "mb-md-3",
+                          "label": "15"
+                      },
+                      {
+                          "value": "mb-md-4",
+                          "label": "20"
+                      },
+                      {
+                          "value": "mb-md-5",
+                          "label": "25"
+                      },
+                      {
+                          "value": "mb-md-6",
+                          "label": "30"
+                      },
+                      {
+                          "value": "mb-md-7",
+                          "label": "35"
+                      },
+                      {
+                          "value": "mb-md-8",
+                          "label": "40"
+                      },
+                      {
+                          "value": "mb-md-9",
+                          "label": "45"
+                      },
+                      {
+                          "value": "mb-md-10",
+                          "label": "50"
+                      }
+                  ],
+                  "default": "mb-md-0"
+              },
+              {
+                  "type":"header",
+                  "content":"Margin: Mobile"
+              },
+              {
+                  "type": "select",
+                  "id": "margin_top_mobile",
+                  "label": "Margin Top",
+                  "options": [
+                      {
+                          "value": "mt-0",
+                          "label": "0"
+                      },
+                      {
+                          "value": "mt-1",
+                          "label": "5"
+                      },
+                      {
+                          "value": "mt-2",
+                          "label": "10"
+                      },
+                      {
+                          "value": "mt-3",
+                          "label": "15"
+                      },
+                      {
+                          "value": "mt-4",
+                          "label": "20"
+                      },
+                      {
+                          "value": "mt-5",
+                          "label": "25"
+                      },
+                      {
+                          "value": "mt-6",
+                          "label": "30"
+                      },
+                      {
+                          "value": "mt-7",
+                          "label": "35"
+                      },
+                      {
+                          "value": "mt-8",
+                          "label": "40"
+                      },
+                      {
+                          "value": "mt-9",
+                          "label": "45"
+                      },
+                      {
+                          "value": "mt-10",
+                          "label": "50"
+                      }
+                  ],
+                  "default": "mt-0"
+              },
+              {
+                  "type": "select",
+                  "id": "margin_bottom_mobile",
+                  "label": "Margin Bottom",
+                  "options": [
+                      {
+                          "value": "mb-0",
+                          "label": "0"
+                      },
+                      {
+                          "value": "mb-1",
+                          "label": "5"
+                      },
+                      {
+                          "value": "mb-2",
+                          "label": "10"
+                      },
+                      {
+                          "value": "mb-3",
+                          "label": "15"
+                      },
+                      {
+                          "value": "mb-4",
+                          "label": "20"
+                      },
+                      {
+                          "value": "mb-5",
+                          "label": "25"
+                      },
+                      {
+                          "value": "mb-6",
+                          "label": "30"
+                      },
+                      {
+                          "value": "mb-7",
+                          "label": "35"
+                      },
+                      {
+                          "value": "mb-8",
+                          "label": "40"
+                      },
+                      {
+                          "value": "mb-9",
+                          "label": "45"
+                      },
+                      {
+                          "value": "mb-10",
+                          "label": "50"
+                      }
+                  ],
+                  "default": "mb-0"
+              },
+              {
+                "type":"header",
+                "content":"Display rows count"
+            },
+            {
+                "type": "range",
+                "id": "desktop_rows_count",
+                "label": "Desktop rows",
+                "default": 6,
+                "min": 4,
+                "max": 100,
+                "step": 2
+            },
+            {
+                "type": "range",
+                "id": "mobile_rows_count",
+                "label": "Mobile rows",
+                "default": 4,
+                "min": 4,
+                "max": 100,
+                "step": 2
+            },
+            {
+                "type": "select",
+                "id": "style_class",
+                "label": "Style",
+                "options": [
+                    {
+                        "value": "btn-primary",
+                        "label": "Primary"
+                    },
+                    {
+                        "value": "btn-secondary",
+                        "label": "Secondary"
+                    },
+                    {
+                        "value": "btn-dark",
+                        "label": "Dark"
+                    },
+                    {
+                        "value": "btn-light",
+                        "label": "Light"
+                    },
+                    {
+                        "value": "btn-link-primary",
+                        "label": "Link Primary"
+                    },
+                    {
+                        "value": "btn-link-secondary",
+                        "label": "Link Secondary"
+                    }
+                ],
+                "default": "btn-link-primary"
+            }
+          ],
+          "presets": [
+              { "name": "Read more text",
+                  "settings": {
+                      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at elit tristique diam ultrices fermentum at a odio. Nunc sed eros et sapien congue porta. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus in ullamcorper risus, sed condimentum ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu vestibulum mauris. Cras vitae massa fringilla, rhoncus nisl in, ultrices augue. Phasellus vitae tincidunt risus. Maecenas quam lorem, rhoncus vel lectus ac, finibus vehicula felis.</p>"
+                  } 
+              }
+          ]
+      }
+  {% endschema %} 
+  

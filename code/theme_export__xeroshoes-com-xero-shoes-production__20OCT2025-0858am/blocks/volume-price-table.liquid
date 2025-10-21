@@ -1,0 +1,51 @@
+{% liquid
+  assign product = block.settings.product 
+  assign selected_variant = product.selected_or_first_available_variant 
+%}
+
+{%- if selected_variant.quantity_price_breaks.size > 0 -%}
+  <div id="Volume-discount-{{ product.id }}" {{ block.shopify_attributes }} 
+    data-volume-price-list-wrapper >
+    <p class="mb-2">{{ 'products.product.volume_pricing.title' | t }}</p>
+    <div class="volume-price-wrappper">
+      <ul class="list-unstyled p-0 volume-price-list" data-volume-price-list>
+        {%- for price_break in selected_variant.quantity_price_breaks -%}
+          <li class="d-flex justify-content-between p-2">
+            <span>{{ 'products.product.volume_pricing.minimum' | t: quantity: price_break.minimum_quantity }}</span>
+            <span>{{ price_break.price | money }}</span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Volume Pricing(For B2B)",
+    "tag": null,
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "Setup [volume pricing](https://help.shopify.com/en/manual/b2b/catalogs/quantity-pricing#scripts-limitations) through shopify [B2B catalogs](https://help.shopify.com/en/manual/b2b/catalogs) setup."
+        },
+        {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Heading",
+            "default": "Volume Pricing"
+        },
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+    ],
+    "presets": [
+        {
+            "name": "Volume Pricing(For B2B)",
+            "settings": { "product": "{{ closest.product }}" }
+        }
+    ]
+  }
+{% endschema %}

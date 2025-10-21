@@ -1,0 +1,87 @@
+{% liquid
+  assign product = block.settings.product
+%}
+
+<div 
+    {% if block.settings.make_collapsible_row %}class="collapsible_panel tab_container border-bottom border-top d-none" is="collapsiblePanel"{% else %}class="complementry-products"{% endif %} 
+    data-complementaryItems {{ block.shopify_attributes }}>
+
+    {%- if block.settings.make_collapsible_row -%}
+        <button id="complementary-product-btn{{ product.id }}" 
+            class="panel_toggle d-flex align-items-center fs-lg text-uppercase fw-normal mb-0 pt-3 pb-3"
+            data-toggle="panel" aria-expanded="false" 
+            aria-label="{{ block.settings.heading }}"
+            aria-controls="complementary-products-{{ product.id }}" >
+            {{ block.settings.heading }}
+            <span class="icon-collapsible"></span>
+        </button>
+    {%- else %}
+        <h5 class="d-flex align-items-center mb-0 pt-3 pb-3">
+            {{ block.settings.heading }}
+        </h5>
+    {%- endif -%}
+
+    <div id="complementary-products-{{ product.id }}" {% if block.settings.make_collapsible_row %}class="panel_content toggle-content"{% endif %}
+      {% if block.settings.make_collapsible_row %}
+      data-type="content" data-panelcontent
+      aria-hidden="true" role="region" aria-labelledby="complementary-product-btn{{ product.id }}"
+      {% endif %}>
+      <product-recommendations data-count="{{ recommendations.products_count }}" class="complementary-items d-block toggle-content-wrap"
+         data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
+        {%- if recommendations.performed and recommendations.products_count > 0 -%}
+          <div class="row mx-n2">
+            {%- for product in recommendations.products -%}
+              <div class="col-4 px-2">
+                {% render 'card-product-plain', product: product %}
+              </div>
+            {%- endfor -%}
+          </div>
+        {% endif %}
+      </product-recommendations>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Complementary products",
+  "tag": null,
+  "settings": [
+    {
+        "type": "paragraph",
+        "content": "To select complementary products, add the Search & Discovery app. [Learn more](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)"
+    },
+    {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "default": "Pairs well with",
+        "label": "Heading"
+    },
+    {
+        "type": "checkbox",
+        "id": "make_collapsible_row",
+        "default": false,
+        "label": "Show as collapsible row"
+    },
+    {
+        "type": "range",
+        "id": "product_list_limit",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "default": 10,
+        "label": "Maximum products to show"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Complementary products",
+      "settings": { "product": "{{ closest.product }}" }
+    }
+  ]
+}
+{% endschema %}

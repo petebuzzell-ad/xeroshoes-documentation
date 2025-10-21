@@ -1,0 +1,22 @@
+{%- liquid
+    assign active_entries = object.filters | map: 'active_values' | compact
+    assign price_filter = object.filters | where: 'type', 'price_range' | first
+-%}
+
+{%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+    <div class="{% if section.settings.enable_filtering %}col-lg-3 {% endif %}d-block" id="storefront-filters-parent" data-layout="sidebar">
+        {%- if section.settings.enable_filtering -%}
+            <div class="d-lg-flex d-none">
+                <p class="mb-3 fw-medium h5">{{ 'general.filters.filter_label' | t }}</p>
+            </div>
+        {%- endif -%}
+
+        {%- render 'storefront-filters', 
+            object: object,
+            filters: object.filters,
+            activeEntries: active_entries, 
+            priceFilter: price_filter, 
+            maxValue: price_filter.max_value.value, minValue: price_filter.min_value.value 
+        -%}
+    </div>
+{%- endif -%}

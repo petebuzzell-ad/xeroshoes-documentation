@@ -1,0 +1,399 @@
+{
+  "sections": {
+    "custom_section_KQGNtw": {
+      "type": "custom-section",
+      "blocks": {
+        "group_8FhkTN": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-block",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_jBt9WG": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h1>Eric Orton, Born to Run Coach and Author, reviews the new Speed Force II<\/h1>",
+                "text_size": "",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-6",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-5",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "custom_liquid_gcJ4Ub": {
+              "type": "custom-liquid",
+              "name": "Custom Liquid",
+              "settings": {
+                "custom_liquid": "<iframe class=\"w-100\" frameborder=\"0\" allowfullscreen=\"\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" title=\"Xero Shoes Speed Force 2 | Train for Speed\" width=\"640\" height=\"360\" src=\"https:\/\/www.youtube.com\/embed\/aZvhZ5ZvHzg?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fxeroshoes.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fxeroshoes.com%2Fborn-to-run-coach-reviews-speed-force-ii%2F&amp;aoriginsup=1&amp;gporigin=https%3A%2F%2Fwww.google.com%2F&amp;vf=6\" id=\"widget2\" data-gtm-yt-inspected-1594335_110=\"true\" data-gtm-yt-inspected-37=\"true\"><\/iframe>",
+                "text_style": "",
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
+            "text_NbGTbK": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Eric Orton, a Xero Shoes partner, tested the Speed Force II while trail running, track running, weight lifting, agility work, and more. Watch to see what he thinks of the upgraded shoe.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#1D293D",
+                "margin_top_desktop": "mt-md-3",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-2",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_jBt9WG",
+            "custom_liquid_gcJ4Ub",
+            "text_NbGTbK"
+          ]
+        },
+        "heading_3HfKtD": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "text": "<h2>GET THE SPEED FORCE II<\/h2>",
+            "text_size": "",
+            "font_family": "font-family-heading",
+            "text_style": "",
+            "font_weight": "",
+            "alignment": "text-md-center",
+            "alignment_mobile": "text-center",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": ""
+          },
+          "blocks": {}
+        },
+        "group_MtBTKa": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-wrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-6",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_nHBztq": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-6",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-center",
+                "justify_content_mb": "justify-content-center",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-3",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-5",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "image_PpGG7R": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/STW-ONBU_Speed-Force-II_Orion-Blue_Pair2_00015_WEB-1536x997.jpg",
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "1.49770642",
+                    "enable_link": true,
+                    "enable_preload": false,
+                    "url": "shopify:\/\/products\/speed-force-women",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "buttons_V9JajD": {
+                  "type": "buttons",
+                  "name": "Button",
+                  "settings": {
+                    "link": "shopify:\/\/products\/speed-force-women",
+                    "custom_video_play_button": false,
+                    "icon": "none",
+                    "label": "SHOP WOMENS",
+                    "style_class": "btn-primary",
+                    "size_class": "",
+                    "text_style": "",
+                    "open_in_new_tab": false,
+                    "hide_desktop": false,
+                    "hide_mobile": false,
+                    "full_width": false,
+                    "download_link": false,
+                    "download_all_logos_in_the_section": false,
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_PpGG7R",
+                "buttons_V9JajD"
+              ]
+            },
+            "group_f3dpJm": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-6",
+                "width_md": "col-md-6",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-center",
+                "justify_content_mb": "justify-content-center",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-3",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-5",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "image_CUn37k": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/STM-BLK_Speed-Force-II_Black_Pair2_1440_WEB-1536x997.jpg",
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "1.49770642",
+                    "enable_link": true,
+                    "enable_preload": false,
+                    "url": "shopify:\/\/products\/speed-force-men",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "buttons_BTmgiF": {
+                  "type": "buttons",
+                  "name": "Button",
+                  "settings": {
+                    "link": "shopify:\/\/products\/speed-force-men",
+                    "custom_video_play_button": false,
+                    "icon": "none",
+                    "label": "SHOP MENS",
+                    "style_class": "btn-primary",
+                    "size_class": "",
+                    "text_style": "",
+                    "open_in_new_tab": false,
+                    "hide_desktop": false,
+                    "hide_mobile": false,
+                    "full_width": false,
+                    "download_link": false,
+                    "download_all_logos_in_the_section": false,
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_CUn37k",
+                "buttons_BTmgiF"
+              ]
+            }
+          },
+          "block_order": [
+            "group_nHBztq",
+            "group_f3dpJm"
+          ]
+        }
+      },
+      "block_order": [
+        "group_8FhkTN",
+        "heading_3HfKtD",
+        "group_MtBTKa"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-10",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-8",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    }
+  },
+  "order": [
+    "custom_section_KQGNtw",
+    "main"
+  ]
+}

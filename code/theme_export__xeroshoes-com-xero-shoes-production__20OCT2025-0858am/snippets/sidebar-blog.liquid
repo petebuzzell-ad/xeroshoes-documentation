@@ -1,0 +1,234 @@
+{{ 'klaviyo-form.css' | asset_url | stylesheet_tag: preload: true }}
+
+{%  style  %}
+    .sidebar-blog .social-sharing li a {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        background-color: #F3F0EA;
+        color: #0F172B;
+        text-decoration: none;
+        transition: all 200ms ease-out;
+    }
+    .sidebar-blog .social-sharing li a:hover {
+        background-color: #DFD7C9;
+    }
+    .sidebar-blog .card-recent-articles .recent-article {
+        width: 110px;
+        aspect-ratio: 1.1458333333;
+    }
+    .sidebar-blog .card-recent-articles .recent-article-content a:hover,
+    .sidebar-blog .card-categories a:hover{
+        text-decoration: underline !important;
+        text-underline-offset: 3px;
+    }
+    .sidebar-blog .card-block-wrapper .card-block-item .card-block-image {
+        aspect-ratio: 1.2539184953;
+    }
+    .sidebar-blog .card-block-wrapper .card-body {
+        gap: 3px !important;
+    }
+    .sidebar-blog .card-block-wrapper .card-block-gift-item .card-block-image {
+        aspect-ratio: 0.9615384615;
+        min-width: 150px;
+        max-width: 150px;
+    }
+    .sidebar-blog .card-search input {
+        padding-left: 38px;
+        padding-block: 14px 10px;
+    }
+    @media (min-width: 992px) {
+        .sidebar-blog.sticky-top{
+            top: 80px;
+            background-color: #fff;
+            z-index: 1;
+        }
+    }
+
+{%  endstyle %}
+
+<div class="sidebar-blog {% if section.settings.sidebar_is_sticky %}sticky-top{% endif %}">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'search' -%}
+                <div class="card card-search mb-6 mb-md-7 mb-lg-9 border-0" {{ block.shopify_attributes }}>
+                    <form action="{{ routes.search_url }}" method="get" role="search">
+                        <input type="hidden" name="type" value="article">
+                        <div class="input-group mb-0 gap-1">
+                          <input type="search" name="q" id="Search" aria-label="search" value="{{ search.terms | escape }}" placeholder="Search Our Blog" class="form-control fs-md">
+                            <button type="submit" class="align-items-center bg-transparent border-0 d-flex min-h-100 position-absolute px-2 py-1 z-6">
+                                <svg aria-hidden="true" focusable="false" style="width:19px;height:19px;"><use href="#icon-search"></use></svg>
+                                <span class="visually-hidden-skip">{{ 'general.search.submit' | t }}</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            {%- when 'recent-articles' -%}
+                <div class="card card-recent-articles mb-6 mb-md-7 mb-lg-9 border-0">
+                    {% if block.settings.recent_articles_title != blank %}
+                        <div class="border-0 card-header font-family-heading fs-xl lh-11 ls-sm mb-3 p-0">{{ block.settings.recent_articles_title }}</div>
+                    {% endif %}
+                    <ul class="list-unstyled m-0">
+                        {% assign limit_articles = block.settings.total_recent_articles %}
+                        {% assign recent_articles = blog.articles | reverse %}
+                        {% for article in recent_articles limit: limit_articles %}
+                            <li class="list-group-item{% unless forloop.last == true %} mb-3{% endunless %}">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <a href="{{ article.url }}" class="d-block recent-article" title="{{ article.title }}" aria-label="{{ article.title }}">
+                                            {% if article.image != blank %}
+                                                <img src="{{ article.image | image_url: width: 120, height: 120, crop: 'center' }}" class="img-fluid" alt="{{ article.title }}" loading="lazy"
+                                                width="{{ article.image.width }}"
+                                                height="{{ article.image.width | divided_by: article.image.aspect_ratio | round }}">
+                                            {% else %}
+                                                {% render 'placeholder-image' %}
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3 recent-article-content">
+                                        <p class="mt-0 mb-0 font-family-heading"><a href="{{ article.url }}" class="text-decoration-none fw-normal fs-17-16 ls-sm text-body">{{ article.title }}</a></p>
+                                        {% comment %} <p class="mb-0">{{ article.content | strip_html | truncatewords: 8 }}</p> {% endcomment %}
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {%- when 'tags' -%} 
+                <div class="card card-tags mb-6 mb-md-7 mb-lg-9 border-0">
+                    {% if block.settings.heading != blank %}
+                        <div class="border-0 card-header font-family-heading fs-xl lh-11 ls-sm mb-3 p-0">{{ block.settings.heading }}</div>
+                    {% endif %}
+                    <div class="card-body p-0 d-flex gap-1 flex-wrap">
+                        {% for tag in blog.all_tags %}
+                            {%- unless tag contains 'cat_' or tag contains 'Cat_' or tag contains 'CAT_' or tag contains 'wp-' or tag contains 'Wp-' or tag contains 'WP-' or tag contains 'author-admin' or tag contains 'migrated' or tag contains 'author' -%}
+                            {% if current_tags contains tag %}
+                                <span class="badge badge-tags bg-secondary-100 border-secondary-600 border badge-tags-active text-capitalize">
+                                    <a href="{{ blog.url }}/tagged/{{ tag | handleize }}" class="lh-base ls-base text-body text-decoration-none">{{ tag | replace: 'tag_', '' | replace: 'author-', '' | replace: '-', ' ' }}</a>
+                                </span>
+                            {% else %}
+                                <span class="badge badge-tags bg-transparent border-secondary-400 border text-capitalize">
+                                    <a href="{{ blog.url }}/tagged/{{ tag | handleize }}" class="lh-base ls-base text-body text-decoration-none">{{ tag | replace: 'tag_', '' | replace: 'author-', '' | replace: '-', ' ' }}</a>
+                                </span>
+                            {% endif %}
+                            {%- endunless -%}
+                        {% endfor %}
+                    </div>
+                </div>
+            {%- when 'socials' -%}  
+                <div class="card card-socials mb-6 mb-md-7 mb-lg-9 border-0" {{ block.shopify_attributes }}>
+                    {% if block.settings.socials_title != blank %}
+                        <div class="border-0 card-header font-family-heading fs-xl lh-11 ls-sm mb-3 p-0">{{ block.settings.socials_title }}</div>
+                    {% endif %}
+                    <div class="card-body p-0">
+                        {% render 'social-media-links', section: block %}
+                    </div>
+                </div>
+            {%- when 'categories' -%}
+                <div class="card card-categories mb-5 mb-md-7 mb-lg-8 mb-xl-9 border-0">
+                    {% if block.settings.categories_title != blank %}
+                        <div class="border-0 card-header font-family-heading fs-xl lh-11 ls-sm mb-3 p-0">{{ block.settings.categories_title }}</div>
+                    {% endif %}
+                    <div class="card-body p-0">
+                        {% for block in section.blocks %}
+                            {% if block.type == 'categories' %}
+                                <ul class="list-unstyled m-0 d-flex flex-column gap-2">
+                                {% for i in (1..10) %}
+                                    {% assign blog_handle = 'blog_' | append: forloop.index %}
+                                    {% assign blog_obj = block.settings[blog_handle] %}
+                                    {% if blog_obj != blank %}
+                                        <li>
+                                            <a href="{{ blog_obj.url }}">{{ blog_obj.title }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                                {% for tag in blog.all_tags %}
+                                    {% if tag contains 'cat_' and tag != 'cat_Tying' and tag != 'cat_Contest' and tag != 'cat_Born to Run' and tag != 'cat_Barefoot Sandal Tying' %}
+                                        <li>
+                                            <a href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag | replace: 'cat_', '' }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}                                
+                                </ul>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+            {%- when 'newsletter' -%}
+                <div class="border-0 card card-newsletter mb-5 mb-lg-8 mb-md-7 mb-xl-9 p-4 p-xl-5 position-relative" style="background-color: {{ block.settings.newsletter_background_color }};">
+                    <div class="card-body p-0 position-relative">
+                        {% if block.settings.newsletter_title != blank %}
+                            <div class="border-0 card-header h4 lh-11 mb-2 p-0" style="color: {{ block.settings.newsletter_title_color }};">{{ block.settings.newsletter_title }}</div>
+                        {% endif %}
+                        {% if block.settings.newsletter_description != blank %}
+                            <div class="mb-0" style="color: {{ block.settings.newsletter_description_color }};">{{ block.settings.newsletter_description }}</div>
+                        {% endif %}
+                        <div class="klaviyo-form-YjGpTJ"></div>
+                    </div>
+                </div>
+
+            {%- when 'card-block' -%}
+                <div class="card card-block-wrapper mb-5 mb-md-7 mb-lg-8 mb-xl-9 border-0">
+                    {% if block.settings.card_block_title != blank %}
+                        <div class="border-0 card-header font-family-heading fs-xl lh-11 ls-sm mb-3 p-0">{{ block.settings.card_block_title }}</div>
+                    {% endif %}
+                    <div class="card-body d-flex flex-column p-0">
+                        {%- for i in (1..2) -%}
+                            {%- liquid
+                                assign image = 'card_image_' | append: forloop.index
+                                assign title = 'card_title_' | append: forloop.index
+                                assign button_text = 'card_button_text_' | append: forloop.index
+                                assign button_link = 'card_button_link_' | append: forloop.index
+                            -%}
+                            {%- if block.settings[image] != blank and block.settings[title] != blank -%}
+                                <div class="card-block-item position-relative">
+                                    <div class="d-block card-block-image">
+                                        {%-  assign desktop_image_size_width = 0.5 -%}
+                                        {% if block.settings[image] != blank %}
+                                            {% render 'picture-tag', image: block.settings[image], alt: block.settings[title], class: 'img-fluid w-100 h-100 object-fit-cover', desktop_image_size_width: desktop_image_size_width %}
+                                        {% else %}
+                                            {% render 'placeholder-image', class: 'w-100 h-100 object-fit-cover' %}
+                                        {% endif %}
+                                        {% if block.settings.enable_overlay %}
+                                            <div class="overlay" style="background: {{ block.settings.overlay_bg_color }}; opacity: {{ block.settings.overlay_opacity }}; mix-blend-mode: {{ block.settings.blend_mode}};"></div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="top-0 card-block-item-content p-xl-5 p-4 pt-xl-6 position-absolute start-0 z-2">
+                                        {% if block.settings[title] != blank %}
+                                            <h3 class="card-block-item-title h3 mb-md-5 mb-3 text-transform-none text-white">{{ block.settings[title] }}</h3>
+                                        {% endif %}
+                                        {% if block.settings[button_text] != blank %}
+                                            <a href="{{ block.settings[button_link] }}" class="btn btn-secondary btn-sm">
+                                                <span class="btn-text text-transform-none">{{ block.settings[button_text] }}</span>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                        {%- endfor -%}
+                        <div class="card-block-item d-flex align-items-center card-block-gift-item position-relative" style="background-color: {{ block.settings.gift_card_background_color }};">
+                            <div class="card-block-image position-relative">
+                                <img src="{{ block.settings.gift_card_image | image_url: width: 600 }}" class="img-fluid w-100 h-100 object-fit-contain" alt="Gift Card" loading="lazy"
+                                width="600"
+                                height="600">
+                            </div>
+                            <div class="card-block-item-content flex-grow-1 ps-3 py-3 pe-3 pe-xl-5">
+                                {% if block.settings.gift_card_title != blank %}
+                                    <h3 class="card-block-item-title h5 mb-3 text-body text-transform-none">{{ block.settings.gift_card_title }}</h3>
+                                {% endif %}
+                                {% if block.settings.gift_card_button_text != blank %}
+                                    <a href="{{ block.settings.gift_card_button_link }}" class="btn btn-secondary btn-sm w-100">
+                                        <span class="btn-text text-transform-none">{{ block.settings.gift_card_button_text }}</span>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        {%- endcase -%}    
+    {% endfor %}
+</div>

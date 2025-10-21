@@ -1,0 +1,411 @@
+{% capture spacing_class_list %}
+    {{ section.settings.section_top_spacing }} {{ section.settings.section_top_spacing_ipad }} {{ section.settings.section_top_spacing_mobile }} {{ section.settings.section_bottom_spacing }} {{ section.settings.section_bottom_spacing_ipad }} {{ section.settings.section_bottom_spacing_mobile }}
+{% endcapture %}
+
+
+{% style %}
+.menu-links-block{
+    position: sticky;
+    top: 56px;
+    z-index: 11;
+}
+
+@media (min-width: 992px) {
+    .menu-links-block{
+        top: 67px;
+    }
+}
+
+.menu-link-item .menu-link-anchor:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    transition: all 0.3s ease-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-link-item:hover .menu-link-anchor:after, 
+.menu-link-item .menu-link-active:after {
+    background-color: var(--pe-border-color) !important;
+}
+.menu-link-item {
+    white-space: nowrap;
+}
+.menu-links-list {
+    /* Hide scrollbar for IE, Edge */
+    -ms-overflow-style: none;  
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;  
+    padding-inline: var(--pe-container-x-padding) !important;
+    flex-wrap: nowrap;
+}
+.menu-links-block__inner {
+    margin: 0 -15px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.menu-links-list::-webkit-scrollbar {
+    display: none;
+}
+
+{% endstyle %}
+
+
+<div id="{{ section.id }}" class="{{ spacing_class_list }}" {{ section.shopify_attributes }} style="background: {{ section.settings.section_bg_color }};" >
+    <div class="{% if section.settings.container_width == 'small_container_layout' %}container-small{% endif %}{% if section.settings.container_width == 'container' %}container{% endif %}{% if section.settings.container_width == 'fluid_layout' %}container-fluid{% endif %}">    
+        <div class="menu-links-block__inner">  
+            <ul class="align-items-center column-gap-5 column-gap-md-9 column-gap-sm-6 d-flex m-0 mb-0 menu-links-list justify-content-md-center overflow-auto">
+                {% for block in section.blocks %}
+                    <li class="d-flex align-items-stretch menu-link-item">
+                        <a href="{{ block.settings.link }}" 
+                        class="py-md-4 py-3 font-family-heading fs-15-14 lh-11 ls-xxl d-inline-block menu-link-item text-body text-uppercase menu-link-anchor position-relative whites" 
+                        data-target="{{ block.settings.link | replace: '#', '' }}"
+                        onclick="handleMenuLinkClick(event, this)">
+                            {{ block.settings.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div> 
+</div>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{setMenuLinks();setActiveLink()});
+
+function setMenuLinks(){
+  const links=document.querySelectorAll(".menu-link-anchor");
+  links.forEach(l=>l.addEventListener("click",e=>handleMenuLinkClick(e,l)));
+  if(!location.hash&&links.length)links[0].classList.add("menu-link-active");
+}
+
+function handleMenuLinkClick(e,l){
+  e.preventDefault();
+  document.querySelectorAll(".menu-link-anchor").forEach(a=>a.classList.remove("menu-link-active"));
+  l.classList.add("menu-link-active");
+
+  const href=l.getAttribute("href");
+  let target=null;
+
+  if(href.startsWith("#")){
+    const id=href.slice(1);
+    target=document.getElementById(id) || document.querySelector(`[data-id="${id}"]`);
+  }else if(href.includes("#")){
+    const id=href.split("#")[1];
+    target=document.getElementById(id) || document.querySelector(`[data-id="${id}"]`);
+  }
+
+  if(target){
+    target.scrollIntoView({behavior:"smooth",block:"start"});
+    history.pushState?history.pushState(null,null,href):location.hash=href;
+  }else if(href.startsWith("http")||href.startsWith("//")) location.href=href;
+  else history.pushState&&history.pushState(null,null,href);
+}
+
+window.addEventListener("popstate",()=>{
+  const hash=location.hash,links=document.querySelectorAll(".menu-link-anchor");
+  if(hash){
+    const id=hash.replace("#","");
+    const t=document.getElementById(id) || document.querySelector(`[data-id="${id}"]`);
+    if(t){
+      t.scrollIntoView({behavior:"smooth",block:"start"});
+      links.forEach(a=>{
+        a.classList.remove("menu-link-active");
+        a.getAttribute("href")===hash&&a.classList.add("menu-link-active");
+      });
+    }
+  }else if(links.length){
+    links.forEach(a=>a.classList.remove("menu-link-active"));
+    links[0].classList.add("menu-link-active");
+  }
+});
+
+function setActiveLink(){
+  const hash=location.hash,links=document.querySelectorAll(".menu-link-anchor");
+  if(hash){
+    const active=document.querySelector(`.menu-link-anchor[href="${hash}"]`);
+    active&&active.classList.add("menu-link-active");
+  }else links.length&&links[0].classList.add("menu-link-active");
+}
+
+function getSectionInMiddle() {
+  const sections = document.querySelectorAll("[data-id]");
+  const viewportMiddle = window.innerHeight / 2; // middle Y position of viewport
+
+  let activeSection = null;
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const sectionTop = rect.top;
+    const sectionBottom = rect.bottom;
+
+    // Check if middle of viewport is within this section
+    if (sectionTop <= viewportMiddle && sectionBottom >= viewportMiddle) {
+      activeSection = section;
+    }
+  });
+
+  if (activeSection) {
+    const dataId = activeSection.getAttribute("data-id");
+    const hash = `#${dataId}`;
+    const links = document.querySelectorAll(".menu-link-anchor");
+    const active = document.querySelector(`.menu-link-anchor[href="${hash}"]`);
+    if (active) {
+        links.forEach(l => l?.classList.remove("menu-link-active"));
+        active.classList.add("menu-link-active");
+
+        const parentScrollAbleWrapper = active.closest(".menu-links-list");
+        if (!parentScrollAbleWrapper) return;
+        // Scroll the tab to align this anchor to the left
+        const scrollLeft = (active.offsetLeft - parentScrollAbleWrapper.offsetLeft) - 15;
+        parentScrollAbleWrapper.scrollTo({
+            left: scrollLeft,
+            behavior: 'smooth'
+        });
+    }
+  }
+}
+
+window.addEventListener("scroll", getSectionInMiddle);
+</script>
+
+{% schema %}
+    {
+        "name": "Menu Links Block", 
+        "class": "menu-links-block",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Container"
+            },
+            {
+                "type": "select",
+                "id": "container_width",
+                "label": "Container Width",
+                "options": [
+                    {
+                        "value": "container",
+                        "label": "Container"
+                    },
+                    {
+                        "value": "small_container_layout",
+                        "label": "Small Container"
+                    },
+                    {
+                        "value": "fluid_layout",
+                        "label": "Full Width Layout"
+                    }
+                ],
+                "default": "container"
+            },
+            {
+                "type": "header",
+                "content": "t:spacing.section_spacing"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing",
+                "label": "t:spacing.desktop_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_ipad",
+                "label": "t:spacing.ipad_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_mobile",
+                "label": "t:spacing.mobile_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-mobile-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing",
+                "label": "t:spacing.desktop_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_ipad",
+                "label": "t:spacing.ipad_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_mobile",
+                "label": "t:spacing.mobile_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-mobile-sm"
+            },
+            {
+                "type":"header",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color_background",
+                "id": "section_bg_color",
+                "label": "t:settings.background_color",
+                "default": "#f3f3f3"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "menu_link",
+                "name": "Menu Link",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link",
+                        "label": "Link"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Menu Links Block"
+            }
+        ]
+    }
+{% endschema %}
+  

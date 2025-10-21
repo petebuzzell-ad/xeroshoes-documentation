@@ -1,0 +1,54 @@
+{% comment %}
+  Renders pagination for available object.
+  Accepts:
+  - paginate: {Object} paginate object
+
+  Usage:
+  {% render 'paginatation', paginate: paginate%}
+{% endcomment %}
+
+{{ 'pagination.css' | asset_url | stylesheet_tag: preload: true }}
+
+<nav>
+  <ul class="pagination mb-0">
+
+    {%- if paginate.previous -%}
+      <li class="page-item pagination-button previous-button">
+        <a class="page-link " data-pagelinks href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}" aria-label="{{ paginate.previous.title }}">
+          <svg aria-hidden="true" focusable="false" style="width:8px;height:14px;"><use href="#icon-arrow-left"></use></svg> 
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- for part in paginate.parts -%}
+      <li class="page-item">
+        {%- if part.is_link -%}
+          <a class="page-link " data-pagelinks href="{{ part.url }}" title="{{ part.title }}" aria-label="{{ part.title }}">
+            <span>{{ part.title }}</span>
+          </a>
+        {%- else -%}
+          {%- if part.title == paginate.current_page -%}
+            <a class="page-link active ">
+              <span class="active">{{ part.title }}</span>
+            </a>
+          {%- else -%}
+            <span class="dots d-inline-flex align-items-end justify-content-center">
+              <span>{{ part.title }}</span>
+            </span>
+          {%- endif -%}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+
+    {%- if paginate.next -%}
+      <li class="page-item pagination-button next-button">
+        <a class="page-link " data-pagelinks href="{{ paginate.next.url }}" title="{{ paginate.next.title }}" aria-label="{{ paginate.next.title }}">
+          <svg aria-hidden="true" focusable="false" style="width:8px;height:14px;"><use href="#icon-arrow-right"></use></svg> 
+          <span class="visually-hidden">{{ 'general.pagination.next' | t }}</span>
+        </a>
+        <link rel="prerender" href="{{ paginate.next.url }}">
+      </li>
+    {%- endif -%}
+
+  </ul>
+</nav>

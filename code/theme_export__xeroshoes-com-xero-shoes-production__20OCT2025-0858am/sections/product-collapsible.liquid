@@ -1,0 +1,319 @@
+
+<style>
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .video-wrapper {
+    position: relative;
+    width: 280px;
+    height: 499px;
+  }
+  .preview-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .video-js {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+{% liquid
+  assign checkforcare = false
+  assign textstrip = section.settings.text | strip_html
+  if textstrip == '' and section.settings.is_description == false
+    assign checkforcare = true
+  endif
+%}
+<div data-check="{{ checkforcare }}"
+  class="{% if checkforcare == true %}d-none{% endif %} collapsible_panel tab_container border-bottom collapsible_panel_{{ section.settings.heading | handleize }}"
+  is="collapsiblePanel" {{ block.shopify_attributes }} >
+  <button
+    id="product-cp-{{ section.id }}"
+    class="panel_toggle d-flex align-items-center h5 mb-0 pb-5 pt-0"
+    data-toggle="panel"
+    aria-expanded="false"
+    aria-controls="product-{{ section.id }}"
+    aria-label="Toggle {{ section.settings.heading | default: section.settings.page.title }}"
+  >
+    {{ section.settings.heading | default: section.settings.page.title }}
+    <span class="icon-collapsible"></span>
+  </button>
+  <div
+    id="product-{{ section.id }}"
+    class="panel_content toggle-content"
+    role="region"
+    data-type="content"
+    data-panelcontent
+    aria-hidden="true"
+    aria-labelledby="product-cp-{{ section.id }}"
+  >
+  {%  comment  %} is_description: If this is true, all description will be rendered from metafield which reference to metaobject {% endcomment %}
+    <div class="toggle-content-wrap">
+      {% if section.settings.is_description == true %}
+        {% comment %} START -- Media with text {% endcomment %}
+        {%- assign product_desc = product.metafields.custom.product_description.value -%}
+        {%- for mwt in product_desc.media_with_text.value -%}
+          <div class="mwt-{{ forloop.index }} row mwt-row {% if mwt.image_video.value == blank and mwt.youtube_video_id == blank and mwt.multiple_images == blank %}mwt-row-no-media{% endif %}" style="background: {% if mwt.background_color != blank %}{{ mwt.background_color }}{% else %}{% if mwt.image_video.value != blank or mwt.multiple_images != blank %}#F8F6F4{% endif %}{% endif %}">
+            <div class="mwt-content-wrapper col-12 col-lg-6 pe-xl-4">
+              {%- if mwt.title != blank -%}
+              <div class="metafield-rich_text_field">{% if forloop.index == 1%}<h3>{% else %}<h4>{% endif %}{{ mwt.title | metafield_tag | strip_html  }}{% if forloop.index == 1%}</h3>{% else %}</h4>{% endif %}</div>
+              {%- endif -%}
+              {%- if mwt.subtitle != blank -%}
+                <div class="metafield-rich_text_field"><h4>{{ mwt.subtitle | metafield_tag | strip_html }}</h4></div>
+              {%- endif -%}
+              {%- if mwt.content != blank -%}
+                {{ mwt.content | metafield_tag }}
+              {%- endif -%}
+            </div>
+            {%- if mwt.image_video != blank or mwt.youtube_video_id != blank -%}
+              {% assign checkvideo = false %}
+               {% assign checkinside = false %}
+              {% if mwt.image_video.value contains 'mp4'
+                or mwt.image_video.value contains 'mov'
+                or mwt.youtube_video_id != blank
+              %}
+              {% assign checkvideo = true %}
+              {% endif %}
+              {% if checkvideo == true %} 
+                <div class="video-wrapper-pdp-mwt mt-6 mt-lg-0 col-12 col-lg-6">
+                  {%- liquid
+                    assign video_url = mwt.youtube_video_id
+                    assign preview_video_img = mwt.image_video.value.preview_image
+                    assign videotype = 'youtube'
+                    if mwt.image_video.value contains 'mp4' or mwt.image_video.value contains 'mov'
+                      assign videotype = 'local'
+                      assign video_obj = mwt.image_video.value.sources | where: 'format', 'mp4'
+                      assign video_url = video_obj[0].url
+                      assign preview_video_img = mwt.image_video.value.preview_image
+                    else
+                      assign video_id = mwt.youtube_video_id.value | split: 'v=' | last | split: '&' | first
+                      assign preview_video_img = 'https://img.youtube.com/vi/' | append: video_id | append: '/hqdefault.jpg'
+                    endif
+                  -%}
+                  <div class="custom-video-container flex-shrink-1 h-100">
+                    <custom-video
+                      class="video-with--text w-100 d-block position-relative placement--grid poster--none media-height-auto"
+                      data-loop="false"
+                      data-autoplay="false"
+                      data-controls="true"
+                      data-muted="false"
+                      data-video-type="{{ videotype }}"
+                      data-placement="grid"
+                      data-video-id="{{ video_url }}"
+                    >
+                      <img
+                        class="yt-thumb"
+                        data-video-id="{{ video_id }}"
+                        src="{{ preview_video_img }}"
+                        alt="{{ mwt.title }}" 
+                        width="" 
+                        height="" 
+                        onload="this.setAttribute('width', this.width); this.setAttribute('height', this.height);"
+                      >
+                      <div class="cta-btn">
+                        <button
+                          class="play__button btn btn-light"
+                          data-trigger-video
+                          aria-label="{{ 'sections.video-with-text.play_video' | t }}"
+                        >
+                          <svg aria-hidden="true" focusable="false" style="width:24px;height:24px;">
+                            <use href="#icon-play-2"></use>
+                          </svg>
+                          <svg class="d-none" aria-hidden="true" focusable="false" style="width:24px;height:24px;">
+                            <use href="#icon-pause"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="video-section w-100" aria-hidden="true"></div>
+                    </custom-video>
+                  </div>
+                  </div>
+              {% else %}
+                <div class="image-wrapper-pdp-mwt mt-2 mt-lg-0 col-12 col-lg-6 px-lg-3 px-0">
+                  <img
+                    data-src="{{ mwt.image_video.value | image_url }}"
+                    loading="lazy"
+                    class="w-100 lozad" 
+                    alt="{{ mwt.image_video.value.alt | default: 'product description' | escape }}"
+                    width="{{ mwt.image_video.value.width }}"
+                    height="{{ mwt.image_video.value.height }}"
+                  >
+                  {%- if mwt.multiple_images != blank -%}
+                     {% assign checkinside = true %}
+                    {%- for image in mwt.multiple_images.value -%}
+                      <img
+                          data-src="{{ image | image_url }}"
+                          loading="lazy"
+                          class="w-100 lozad"
+                          alt="{{ image.alt | default: 'product description' | escape }}"
+                          width="{{ image.width }}"
+                          height="{{ image.height }}"
+                        >
+                    {%- endfor -%}
+                  {%- endif -%}
+                  </div>
+                
+              {% endif %}
+            {%- endif -%}
+
+
+            {% if checkinside == false %}
+            {%- if mwt.multiple_images != blank -%}
+              <div class="image-wrapper-pdp-mwt mt-2 mt-lg-0 col-12 col-lg-6 px-lg-3 px-0">
+              {%- for image in mwt.multiple_images.value -%}
+              <img
+                  data-src="{{ image | image_url }}"
+                  loading="lazy"
+                  class="w-100 lozad"
+                  alt="{{ image.alt | default: 'product description' | escape }}"
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                >
+              {%- endfor -%}
+              </div>
+          {%- endif -%}
+          {%- endif -%}
+            
+          </div>
+
+          {% comment %} START -- In between Testimonial (After first media with text block) {% endcomment %}
+          {%- if forloop.first and product_desc.testimonial.value.testimonial != blank -%}
+            {% if product_desc.testimonial.value != blank or product_desc.ugc_video.value != blank %}
+            <div
+              class="inbetween-testimonial my-lg-9 my-5 py-lg-6 py-5 px-lg-6 px-3 text-center"
+              style=" background: {% if product_desc.testimonial.value.background_color != blank %}{{ product_desc.testimonial.value.background_color }}{% else %}#F3F0EA{% endif %} ;"
+            >
+              <div class="metafield-rich_text_field"><h4>“{{ product_desc.testimonial.value.testimonial | metafield_tag | strip_html }}”</h4></div>
+            {% if product_desc.testimonial.value.author != blank %} – {{ product_desc.testimonial.value.author | metafield_tag }}{% endif %}
+            </div>
+            {% endif %}
+          {%- endif -%}
+          {% comment %} END -- In between Testimonial (After first media with text block) {% endcomment %}
+        {%- endfor -%}
+        {% comment %} END -- Media with text {% endcomment %}
+
+        {% comment %} START --- Featured Card {% endcomment %}
+        {% if product_desc.feature_cards.value != blank %}
+          <div class="featured-cards mt-lg-9 mt-5">
+            {% if product_desc.feature_cards_title != blank %}
+              <h4 class="lh-12 text-transform-none">{{ product_desc.feature_cards_title }}</h4>
+            {% endif %}
+            <div class="featured-cards-wrapper-mwt row row-gap-lg-10 row-gap-5">
+            {% for cards in product_desc.feature_cards.value %}
+              <div class="featured-card-mwt d-flex flex-column col-12 col-sm-6 col-lg-4">
+              {% if cards.image != blank %}<div class="cards-image-mwt"><img data-src="{{ cards.image |  image_url: width: 645 }}" class="w-100 lozad" alt="{{ cards.image.alt }}" width="430" height="341"></div>{% endif %}
+              {% if cards.title != blank %}<h5 class="mt-md-4 mt-3 mb-2 text-transform-none">{{ cards.title }}</h5>{% endif %}
+                  {% if cards.content != blank or cards.icon_image != blank %}
+                    <div class="cards-content-mwt">
+                      {% if cards.content != blank %}{{ cards.content | metafield_tag }}{% endif %}
+                      {% if cards.icon_image != blank %}
+                      <img data-src="{{ cards.icon_image |  image_url: width: 30 }}" class="w-auto lozad" alt="{{ cards.icon_image.alt }}" width="30" height="30">
+                      {% endif %}
+                    </div>
+                  {% endif %}
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+        {% comment %} END --- Featured Card {% endcomment %}
+
+        {% if product_desc.ugc_video != blank %}
+        <div class="ugc-video-wrapper-mwt mt-lg-9 mt-5">
+            {% if product_desc.ugc_title != blank %}<h4 class="mb-lg-5 mb-4">{{ product_desc.ugc_title }}</h4>{% endif %}
+            {% assign customer_domain = "customer-tg6o95znl9sb2ucb" %}
+            <div class="video-grid gap-0 row-gap-5 d-flex row flex-nowrap overflow-auto" id="videoGrid">
+              {% for video in product_desc.ugc_video.value %}
+                <div class="ugc-video-item-mwt col-6 col-lg-3">
+                  <div class="video-wrapper w-100 position-relative d-flex flex-column d-flex justify-content-center align-items-center" data-index="{{ forloop.index }}">
+                    <video data-preview-video autoplay="true" muted="true" loop="true" playsinline="true" webkit-playsinline="true" data-src="https://{{ customer_domain }}.cloudflarestream.com/{{ video.youtube_video_link }}/thumbnails/thumbnail.mp4?time=1s&height=500&duration=4s" class="preview-gif z-2 w-100 h-100" id="preview-gif-{{ forloop.index }}" data-target="video{{ forloop.index }}" width="280" height="499" alt="{{ video.title | metafield_text | escape }}"></video>
+                    <button class="position-absolute z-2 play-icon play__button btn-secondary d-flex align-items-center justify-content-center" id="play-icon-{{ forloop.index }}" data-target="video{{ forloop.index }}" style="display: block;">
+                        <svg class="video-play-icon" aria-hidden="true" focusable="false" style="width:24px;height:24px;"><use href="#icon-play"></use></svg>
+                        <svg class="video-pause-icon" aria-hidden="true" focusable="false" style="width:24px;height:24px;"><use href="#icon-pause"></use></svg>
+                    </button>
+                    <video id="video{{ forloop.index }}" class="video-js position-absolute w-100 h-100" controls preload="none" playsinline="true" webkit-playsinline="true" data-fullSizeVideo>
+                      <source data-src="https://{{ customer_domain }}.cloudflarestream.com/{{ video.youtube_video_link }}/manifest/video.m3u8" type="application/x-mpegURL" />
+                    </video>
+                  </div>
+                  <div class="mt-3 mb-0 text-center lh-12 text-uppercase">{{ video.title | metafield_tag }}</div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>    
+        {% endif %}
+        {%- else -%}
+        {% comment %} START -- If not Description this will be displayed {% endcomment %}
+        {{ section.settings.text }}
+        {% comment %} END ---  If not Description this will be displayed {% endcomment %}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% if product_desc.ugc_video != blank %}
+<link data-href="{{ 'video-js.min.css' | asset_url }}" rel="stylesheet"/>
+<script data-src="{{ 'videojs.min.js' | asset_url }}" defer></script>
+{% endif %}
+{% schema %}
+{
+  "name": "Collapsible Row",
+  "class": "container collapsible-panel-section",
+  "templates": ["product"],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_upload",
+      "label": "Custom icon"
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Icon Width",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "is_description",
+      "label": "Enable Description",
+      "info": "Description all contents can be managed from metaobjects"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "visible_if": "{{ section.settings.is_description != true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collapsible Row",
+      "settings": {
+        "heading": "Collapsible row",
+        "text": "<p>Collapsible content</p>"
+      }
+    }
+  ]
+}
+{% endschema %}

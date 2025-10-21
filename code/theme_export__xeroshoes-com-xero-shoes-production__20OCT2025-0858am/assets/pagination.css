@@ -1,0 +1,121 @@
+
+/*=============================================
+=                 Pagination                  =
+=============================================*/
+
+.pagination {
+    --pe-pagination-padding-x: 12px;
+    --pe-pagination-padding-y: 6px;
+
+    --pe-pagination-size:40px;
+
+    --pe-pagination-font-size: 16px;
+    --pe-pagination-line-height: 28px;
+
+    --pe-pagination-color: var(--pe-body-color);
+    --pe-pagination-bg: transparent;
+
+    --pe-pagination-border-width: 1px;
+    --pe-pagination-border-color: transparent;
+    --pe-pagination-border-radius: 3px;
+
+    --pe-pagination-hover-color: var(--pe-color-secondary);
+    --pe-pagination-hover-bg: transparent;
+    --pe-pagination-hover-border-color: var(--pe-color-secondary);
+
+    --pe-pagination-focus-color: var(--pe-color-secondary);
+    --pe-pagination-focus-bg: transparent;
+
+    --pe-pagination-active-color: var(--pe-color-secondary);
+    --pe-pagination-active-bg: transparent;
+    --pe-pagination-active-border-color: var(--pe-color-secondary);
+
+
+    --pe-pagination-disabled-color: var(--pe-secondary-color);
+    --pe-pagination-disabled-bg: var(--pe-secondary-bg);
+    --pe-pagination-disabled-border-color: var(--pe-border-color);
+
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+.page-link {
+    position: relative;
+    display: flex;
+    width: var(--pe-pagination-size);
+    height: var(--pe-pagination-size);
+    padding: var(--pe-pagination-padding-y) var(--pe-pagination-padding-x);
+    font-size: var(--pe-pagination-font-size);
+    line-height: var(--pe-pagination-line-height);
+    color: var(--pe-pagination-color) !important;
+    text-decoration: none;
+    background-color: var(--pe-pagination-bg);
+    border: var(--pe-pagination-border-width) solid var(--pe-pagination-border-color);
+    border-radius: var(--pe-pagination-border-radius);
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    letter-spacing: 0.05em;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-link {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+
+.page-item:not(.pagination-button) .page-link:hover {
+    z-index: 2;
+    color: var(--pe-pagination-hover-color);
+    background-color: var(--pe-pagination-hover-bg);
+    border-color: var(--pe-pagination-hover-border-color);
+}
+
+.page-item:not(.pagination-button) .page-link:focus {
+    z-index: 3;
+    color: var(--pe-pagination-focus-color);
+    background-color: var(--pe-pagination-focus-bg);
+    outline: 0;
+}
+
+.page-item:not(.pagination-button) .page-link.active,
+.page-item:not(.pagination-button) .active > .page-link {
+    z-index: 3;
+    color: var(--pe-pagination-active-color);
+    background-color: var(--pe-pagination-active-bg);
+    border-color: var(--pe-pagination-active-border-color);
+}
+
+.page-item:not(.pagination-button) .page-link.disabled,    
+.page-item:not(.pagination-button) .disabled > .page-link {
+    color: var(--pe-pagination-disabled-color);
+    pointer-events: none;
+    background-color: var(--pe-pagination-disabled-bg);
+    border-color: var(--pe-pagination-disabled-border-color);
+}
+.page-item{
+    margin: 0 5px;
+}
+
+.page-item.pagination-button.next-button svg,
+.page-item.pagination-button.previous-button svg{
+    transition: 200ms ease-out;
+}
+
+li.page-item.pagination-button.next-button:hover svg {
+    transform: translateX(2px);
+}
+li.page-item.pagination-button.previous-button:hover svg {
+    transform: translateX(-2px);
+}

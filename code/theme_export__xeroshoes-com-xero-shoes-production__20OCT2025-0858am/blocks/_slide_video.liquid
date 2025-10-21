@@ -1,0 +1,324 @@
+{%- liquid
+    assign blockindex = 0
+    for sectionBlock in section.blocks
+      assign blockindex = blockindex | plus: 1
+      if block.id == sectionBlock.id
+        break
+      endif
+    endfor
+  -%}
+  
+  <swiper-slide class="swiper-slide d-flex slide-{{ block.id }}" {{ block.shopify_attributes }} data-block-id="{{ block.id }}" data-index="{{ blockindex }}" data-slide-type="image"  style="background:{{ block.settings.slide_bg_color }};" style="background:{{ block.settings.slide_bg_color }};">
+      
+    <div class="slider-media">
+        {% content_for "block", type: "custom-video", id: "slide-video" %}
+    </div>
+
+    <div class="slider-content container w-100 {{ block.settings.display }} {{ block.settings.align_items }} {{ block.settings.justify_content }} {{ block.settings.align_items_mb }} {{ block.settings.justify_content_mb }}">
+        {% content_for 'blocks' %}
+    </div>
+
+    {% if block.settings.enable_overlay %}
+        <div class="overlay  {% if block.settings.overlay_on_mobile %} d-none d-md-block {% endif %}" style="background: {{ block.settings.overlay_bg_color }}!important; opacity: {{ block.settings.overlay_opacity }}!important; mix-blend-mode: {{ block.settings.blend_mode}};"></div>
+    {% endif %}
+
+</swiper-slide>
+  
+{% schema %}
+    {
+        "name": "Video slide",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "settings": [
+            {
+                "type": "header",
+                "content": "Playback controls"
+            },
+            {
+                "type": "checkbox",
+                "id": "muted",
+                "label": "Video Muted",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "controls",
+                "label": "Video Controls",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "loop",
+                "label": "Loop Video",
+                "default": true
+            },
+            {
+                "type": "color_background",
+                "id": "slide_bg_color",
+                "label": "t:settings.background_color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "header",
+                "content": "Overlay"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_overlay",
+                "label": "t:settings.overlay",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "overlay_on_mobile",
+                "default": true,
+                "label": "Mobile media overlay",
+                "visible_if": "{{ block.settings.enable_overlay == true }}"
+            },
+            {
+                "type": "color_background",
+                "id": "overlay_bg_color",
+                "label": "t:settings.overlay_color",
+                "default": "#000000",
+                "visible_if": "{{ block.settings.enable_overlay == true }}"
+            },
+            {
+                "type": "range",
+                "id": "overlay_opacity",
+                "label": "t:settings.overlay_opacity",
+                "min": 0.1,
+                "max": 1,
+                "step": 0.1,
+                "default": 0.5,
+                "visible_if": "{{ block.settings.enable_overlay == true }}"
+            },
+            {
+                "type": "select",
+                "id": "blend_mode",
+                "label": "Mix Blend Mode",
+                "visible_if": "{{ block.settings.enable_overlay == true }}",
+                "options": [
+                    {
+                        "value": "multiply",
+                        "label": "Multiply"
+                    },
+                    {
+                        "value": "darken",
+                        "label": "Darken"
+                    },
+                    {
+                        "value": "lighten",
+                        "label": "Lighten"
+                    },
+                    {
+                        "value": "soft-light",
+                        "label": "Soft Light"
+                    },
+                    {
+                        "value": "none",
+                        "label": "None"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "select",
+                "id": "display",
+                "label": "t:settings.display",
+                "options": [
+                    {
+                        "value": "d-flex",
+                        "label": "Flex"
+                    },
+                    {
+                        "value": "d-block",
+                        "label": "Block"
+                    },
+                    {
+                        "value": "d-inline-block",
+                        "label": "Inline Block"
+                    }
+                ],
+                "default": "d-flex"
+            },
+            {
+                "type": "select",
+                "id": "direction",
+                "label": "t:settings.direction",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "flex-md-row",
+                        "label": "t:options.horizontal"
+                    },
+                    {
+                        "value": "flex-md-column",
+                        "label": "t:options.vertical"
+                    }
+                ],
+                "default": "flex-md-column"
+            },
+            {
+                "type": "select",
+                "id": "direction_mobile",
+                "label": "t:settings.direction_mobile",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "flex-row",
+                        "label": "t:options.horizontal"
+                    },
+                    {
+                        "value": "flex-column",
+                        "label": "t:options.vertical"
+                    }
+                ],
+                "default": "flex-column"
+            },
+            {
+                "type": "select",
+                "id": "wrap",
+                "label": "t:settings.wrap",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "flex-wrap",
+                        "label": "Yes"
+                    },
+                    {
+                        "value": "flex-nowrap",
+                        "label": "No"
+                    }
+                ],
+                "default": "flex-nowrap"
+            },
+            {
+                "type": "select",
+                "id": "align_items",
+                "label": "t:settings.align_items_desktop",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "align-items-md-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "align-items-md-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "align-items-md-end",
+                        "label": "End"
+                    }
+                ],
+                "default": "align-items-md-center"
+            },
+            {
+                "type": "select",
+                "id": "align_items_mb",
+                "label": "t:settings.align_items_mobile",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "align-items-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "align-items-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "align-items-end",
+                        "label": "End"
+                    }
+                ],
+                "default": "align-items-center"
+            },
+            {
+                "type": "select",
+                "id": "justify_content",
+                "label": "t:settings.justify_content_desktop",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "justify-content-md-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "justify-content-md-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "justify-content-md-end",
+                        "label": "End"
+                    },
+                    {
+                        "value": "justify-content-md-between",
+                        "label": "Between"
+                    }
+                ],
+                "default": "justify-content-md-center"
+            },
+            {
+                "type": "select",
+                "id": "justify_content_mb",
+                "label": "t:settings.justify_content_mobile",
+                "visible_if": "{{ block.settings.display == 'd-flex' }}",
+                "options": [
+                    {
+                        "value": "justify-content-start",
+                        "label": "Start"
+                    },
+                    {
+                        "value": "justify-content-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "justify-content-end",
+                        "label": "End"
+                    },
+                    {
+                        "value": "justify-content-between",
+                        "label": "Between"
+                    }
+                ],
+                "default": "justify-content-center"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Video slide",
+                "blocks": [
+                    {
+                        "type": "group",
+                        "blocks": [
+                            {
+                                "type": "heading",
+                                "settings": {
+                                    "text": "<h1>Video slide</h1>"
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "settings": {
+                                    "text": "<p>Tell your brand's story through images</p>"
+                                }
+                            },
+                            {
+                                "type": "buttons",
+                                "settings": {
+                                    "label": "Button label"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
+  

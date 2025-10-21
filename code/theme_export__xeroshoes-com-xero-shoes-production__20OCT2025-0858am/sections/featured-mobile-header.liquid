@@ -1,0 +1,36 @@
+{% if linklists[section.settings.menu_featured].links.size > 0 %}
+  <div class="border-gray-100 border-top border-bottom d-lg-none flex-1 order-4 d-flex justify-content-center mx-n3 menu_featured_mobile" tabindex="-1">
+    <div class="overflow-auto d-flex px-3" style="width: 100vw;">
+      <div class="w-auto mx-auto" style="padding-block: 6px 9px;">
+        <ul class="navbar-nav align-items-center mx-auto flex-row" role="menu">
+            {% for link in linklists[section.settings.menu_featured].links %}
+                <li class="nav-item {% if link.active %} active{% endif %}" role="menuitem">
+                    <a tabindex="-1" class="nav-link text-capitalize {{ link.handle }}" href="{{ link.url }}" tabindex="0" title="{{ link.title }}" aria-label="{{ link.title }}">
+                        <span>{{ link.title }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Featured Menu Mobile",
+  "class": "featured-mobile-header overflow-hidden",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Menu Selection"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_featured",
+      "label": "Featured Menu Mobile Only"
+    }
+  ]
+}
+{% endschema %}

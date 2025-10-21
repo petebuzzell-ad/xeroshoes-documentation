@@ -1,0 +1,740 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div#faq-page",
+  "sections": {
+    "main": {
+      "type": "template-faq",
+      "blocks": {
+        "faq_item_6PeUp6": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Our Mission and Purpose",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_efqYMH": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Our Mission and Purpose",
+            "title": "We believe in “Environmentally Intelligent” design",
+            "answer": "<p>One of our goals is being respectful stewards of our environment and the planet.</p><p>With footwear, especially, performance footwear, there are some limitations to what we can do while still providing the durability, usability, and function our customers want, at a price they can afford.</p><p>We’re careful not to jump into “sustainable” or “environmentally beneficial” products or methods without looking at the bigger picture. For example, creating fleece from recycled plastic bottles <strong>sounds</strong> like a great thing… until it was discovered that fleece sheds synthetic microfibers — tiny bits of plastic that marine scientists say could be jeopardizing our oceans.</p><p>We think of our measured, long-term vision approach as being “Environmentally Intelligent.”</p><p>Some of the ways we do this include:</p><ul><li>Our minimalist designs use fewer materials than traditional shoes (especially the performance products)</li><li>Our simpler designs, without midsole layers, require less energy to manufacture</li><li>Our soles last longer — where most performance shoe companies recommend replacing their products every 3-500 miles, our soles have a <a href=\"/pages/warranty\" title=\"Xero Shoes Warranty\">5,000 mile sole warranty</a>.</li><li>Whenever possible, we use renewable materials, like hemp</li></ul><p>We look forward to more and better ways we can “tread lightly” as we help you Live Life Feet First!</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_YjRwFC": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Our Mission and Purpose",
+            "title": "Why We Exist",
+            "answer": "<p>Our co-founder, Lena Phoenix, likes to say, “There is NO reason to start another shoe company… unless your products change people’s lives.”</p><p>And if you read the reviews of our shoes and sandals, you’ll hear a lot of people saying just that, even if what was life-changing for them is as simple as finding shoes that are COMFORTABLE.</p><p>Frankly, it’s the emails, phone calls, reviews, and letters (yes, actual letters delivered by a mail person) where people share how much Xero Shoes has impacted their lives that keep us going.</p><p>We’re creating a MOVEMENT movement: Helping people experience the comfort, fun, and benefits of Natural Movement. And making natural movement the obvious, healthy, choice… the way natural food is currently.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_dLQaYY": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Minimalist & Barefoot shoe info",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_mnKE8T": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Minimalist & Barefoot shoe info",
+            "title": "Why should I wear Natural Movement (a.k.a. minimalist shoes or barefoot shoes)?",
+            "answer": "<p>Let me ask you a question: Do your feet feel better at the end of the day than they did at the beginning?</p><p>If not, it’s because your shoes aren’t letting your feet do what’s NATURAL.</p><p>One quarter of the bones and joints in your entire body are in your feet. You have more nerve endings in your soles than anywhere but your fingertips and lips.</p><p>This means your feet are meant to bend, to move, to flex, and feel the world.</p><p>Comfort and performance come from letting your feet do what they’re meant to do, naturally.</p><p>Xero Shoes let them do that with what we call “3 Pillars of Natural”:</p><ul><li>Natural FIT — wide toe boxes let your toes spread and relax. A non-elevated (zero-drop) heel for proper posture.</li><li>Natural MOTION — super flexible to let your feet bend and move naturally. Low-to-the-ground for balance and agility.</li><li>Natural FEEL — the patented FeelTrue® soles give you just-right protection while still giving the ground feedback your brain needs for efficient, natural movement.</li></ul><p>Plus they’re affordable, and so durable that they have a 5,000 mile sole warranty.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_cAxEfP": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Barefoot Running, Walking, and Living",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_MUFJAz": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Barefoot Running, Walking, and Living",
+            "title": "How do I run naturally, or barefoot?",
+            "answer": "<p>In addition to our <a href=\"/blogs/blog\" title=\"Blog\">Blog</a>, where we talk about this often, here are a few resources:</p><ol><li><a href=\"/blogs/blog/tagged/cat_barefoot-running-tips\" title=\"Barefoot Running Tips\">Running, the Natural Way</a></li><li>Free Video series: <a href=\"/pages/barefoot-myths-lies-and-truth-free-video-series\" title=\"Barefoot Myths, Lies… and TRUTH. Free Video Series\">Barefoot Myths… and TRUTH</a></li></ol>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_CwwCED": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Barefoot Running, Walking, and Living",
+            "title": "How do I start wearing barefoot/minimalist shoes?",
+            "answer": "<p>The short answer is: Start slowly. Give yourself time get used to using your muscles naturally, to relaxing, and to your gait changing.</p><p>For running, you might start with a VERY short run… like 30 seconds! If that’s not fun, there are a number of hints on our site that will help you. When a short run feels easy and fun, add 10 more seconds to your next run. Then “lather, rinse, repeat.”</p><p>Listen to your body. Use fun as your guide.</p><p><a href=\"/blogs/blog/tips-how-to-run-barefoot\" title=\"How To Run Barefoot\">This blog post</a> may be helpful.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_Wwmym9": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Barefoot Running, Walking, and Living",
+            "title": "How do I walk naturally (or barefoot)?",
+            "answer": "<p>Check out this article about <a href=\"/blogs/blog/tips-how-to-walk-barefoot\" title=\"How To Walk Barefoot: Techniques & Health Benefits\">proper walking form, whether you’re in bare feet or shoes</a>.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_Yxr9iE": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Product Questions - Before you buy",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_GyLkJP": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Are Xero Shoes good for plantar fasciitis?",
+            "answer": "<p>We would love to give you personal advice, but we are not doctors and can’t give a specific answer or medical advice.</p><p>However, we’ve written a few blog posts about plantar fasciitis that you might find helpful:</p><p><a href=\"/blogs/blog/tips-cure-plantar-fasciitis-barefoot\" title=\"Are Barefoot Shoes Good for Plantar Fasciitis?\">https://xeroshoes.com/blogs/blog/tips-cure-plantar-fasciitis-barefoot</a></p><p><a href=\"/blogs/blog/will-barefoot-running-heal-my-injuries\" title=\"Will Barefoot Running Heal My Injuries?\">https://xeroshoes.com/blogs/blog/will-barefoot-running-heal-my-injuries</a>,</p><p><a href=\"/blogs/blog/can-cure-plantar-fasciitis-barefoot-running\" title=\"Can You Cure Plantar Fasciitis with Barefoot Running?\">https://xeroshoes.com/blogs/blog/can-cure-plantar-fasciitis-barefoot-running</a></p><p>As you’ll see in the blog posts above, research shows that strengthening your foot can help with plantar fasciitis.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_JeFfRV": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Are your shoes vegan-friendly?",
+            "answer": "<p>Xero Shoes is about promoting the benefits (and comfort and FUN) of natural movement, first and foremost. Whenever we can, though, we make vegan-friendly products.</p><p>Sometimes we aren’t able to due to the materials needed to construct a shoe that meets the requirements  of jobs that require, say, a leather shoe.</p><p>At this time, the only shoes not vegan-friendly are the All Day Prio (leather), Tari (leather), Denver Leather (leather), the original Mika (wool collar), the leather Hana, the non-knit Phoenix (leather), the Prio Suede (suede), the Kelso (leather), Glenn (leather), and the Ridgeway (suede).</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_YTBtnV": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Are your shoes “zero drop” (non-elevated heel)?",
+            "answer": "<p>Yes, all of our shoes and sandals are zero-drop.</p><p>That means the heel isn’t higher than the ball of the foot, for proper posture.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_graH8y": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Can I use orthotics with your shoes?",
+            "answer": "<p>Since our soles are flat, with no built-in arch support, they’re probably the best shoe to use if you decide to add an insole.</p><p>So you know, though, our shoes are intentionally designed to let your feet bend, flex, and move naturally. Research shows that “supporting” your arch or immobilizing your foot with an orthotic can make your foot weaker in as little as a few weeks, while even just walking in a minimalist shoe can improve foot muscle strength.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_kEK6Lp": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Can I wear CorrectToes with your shoes?",
+            "answer": "<p>We’ve heard from a number of customers who wear CorrectToes with their Xero Shoes.</p><p>Most of them are wearing the product with our sandals, but we know of some who wear CorrectToes with our closed-toe shoes also. It will depend, in part, about your foot’s width.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_JGHRH8": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Can your shoes be used for grounding/earthing?",
+            "answer": "<p>While our shoes are low to the ground for balance and agility, and flexible enough to let your feet bend and move naturally, our shoes are not electrically conductive.</p><p>We have heard from some customers who made their Xero Shoes conductive by putting a rivet or grommet through the soles but we do not have any personal experience with this.</p><p>Please keep in mind that any alterations to the shoes would not be covered under warranty.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_C9HFFF": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Do your shoes have arch support?",
+            "answer": "<p>Xero Shoes are designed to let your feet do what’s natural — bend, flex, move and feel the world.</p><p>Research shows that “supporting” your arch can make your foot weaker in as little as a few weeks, while even just walking in a minimalist shoe can improve foot muscle strength.</p><p>We want to let your feet be feet… and support you for life.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_xHzaRQ": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "My kids would love brighter colors! Will you make these?",
+            "answer": "<p>The more demand we have for particular shoes or colors, the more we’re able to offer.</p><p>Email <a href=\"mailto:feedback@xeroshoes.com\">feedback@xeroshoes.com</a> with your suggestions if you’d like to see a certain color or style.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_C7RE7L": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "What size should I order?",
+            "answer": "<p>Every product’s page gives a recommendation for selecting the correct size.</p><p>Also, see our size guidelines at <a href=\"/pages/sizing\" title=\"Sizing\">Fit Info for Xero Shoes</a>.</p><p>We understand that ordering shoes online can be hard, especially when the sizing between shoes vary (trust us–we’re working on it!). If you’re still unsure, please email our Customer Happiness team at <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com</a>.</p><p>Also, keep in mind that we offer free domestic exchanges in case you get a size that doesn’t feel right.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_cEAKpy": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "What’s the temperature rating for your shoes?",
+            "answer": "<p>We find that temperature ratings aren’t very accurate. They vary greatly depending on environmental factors, like humidity and typical weather (a Tennessee snowstorm is quite different from one in Colorado!)</p><p>Below is an overview that might help:</p><p><span style=\"text-decoration:underline\"><strong>Sandals</strong></span><strong><br/></strong>We hope you don’t have to ask, but in case you do…our sandals will <strong>not</strong> keep your feet warm.  Add a pair of socks, like ToeSox and you can make it through colder weather. Find some waterproof, insulated socks and you can be one of those people who wears socks all year ’round. Check out what our CEO, Steven Sashen, <a href=\"/pages/cold\" title=\"Sandals and Cold Weather\">has done in a Colorado winter</a></p><p><span style=\"text-decoration:underline\"><strong>Closed Toe Shoes<br/></strong></span>Most of our closed-toe shoes are not designed to keep your feet warm. They’ll be just as warm as a traditional closed toe shoe.</p><p><span style=\"text-decoration:underline\"><strong>Water Resistant Boots and Shoes<br/></strong></span></p><p>The following boots are water resistant, not waterproof. They’ll repel water to a certain degree and keep your feet warm, but they aren’t “trudge through a slushy puddle in the middle of winter” level weatherproof.</p><p>If you love the style of one of our water resistant shoes, you can enhance their ability to repel water by adding a waterproof coating, like a Scotch Guard spray or beeswax.</p><p><a href=\"/collections/hana\" title=\"Hana\">Hana</a><br/><a href=\"/collections/mika\" title=\"Mika\">Mika</a><br/><a href=\"/collections/denver\" title=\"Denver\">Denver</a></p><p><span style=\"text-decoration:underline\"><strong>Waterproof Boots</strong></span></p><p>Currently, the <a href=\"/collections/xcursion-fusion\" title=\"Xcursion Fusion\">Xcursion Fusion</a> hiking boots and <a href=\"/collections/alpine\" title=\"Alpine\">Alpine</a> snow boots are our only fully-waterproof options. These shoes are fully waterproof and will keep your feet dry in wet-weather conditions. Bring it on, monsoon!</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_LNqM3K": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Where are your shoes made?",
+            "answer": "<p>We design all of our shoes here in Colorado. Xero Shoes are responsibly, ethically, and fairly manufactured in China.</p><p>While we would love to manufacture in America, it is literally not possible at this time, in the same way it’s not possible to domestically manufacture the device you’re using to read this answer.</p><p>Performance footwear manufacturing moved to Asia in the 70s and shows no likelihood of moving back. Note that some companies that claim “made in America” are still sourcing their materials from overseas (or the US companies from which they buy their materials are doing so).</p><p>We visit and work with our factories multiple times per year.  We also have an on-the-ground manufacturing agent who oversees the factories when we’re not there to ensure that conditions are good, workers are treated fairly, and the shoes are made in compliance with all local laws and regulations. The factories we use treat and pay their workers exceptionally well.</p><p>Companies much larger than ours use these same factories and have spent millions of dollars on audits to assure themselves and their wholesale partners about the quality and conditions.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_pKpmqt": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Which Xero Shoes is best for what I do?",
+            "answer": "<p>Every time we release a shoe for some specific purpose, like the Speed Force for running, we find that people will do just about anything in it – from hiking to slacklining to weightlifting or using as a day to day shoe.</p><p>Trust me, we don’t want to stop you. We think it’s super cool when someone sends us a photo of them at the top of a mountain and the shoe that took them there was our casual Hana 😉</p><p>That said, if you’re looking for a specific recommendation, check out our <a href=\"/pages/shoe-finder\" title=\"Shoe Finder\">shoe finder</a>, or contact us directly!<br/>Otherwise, below are some of our most commonly worn shoes for specific activities:</p><p><span style=\"text-decoration:underline\"><strong>Road Running</strong></span><span style=\"text-decoration:underline\"><br/></span><a href=\"/collections/speedforce\" title=\"Speed Force\">Speed Force</a><br/><a href=\"/collections/hfs\" title=\"HFS\">HFS</a><br/><a href=\"/collections/prio\" title=\"Prio\">Prio</a><br/><a href=\"/collections/ztrek\" title=\"Z-Trek\">Z-Trek</a><br/><a href=\"/collections/ztrail\" title=\"Z-Trail\">EV Z-Trail</a><br/><a href=\"/collections/cloud\" title=\"Cloud\">Cloud</a><br/><a href=\"/collections/genesis\" title=\"Genesis\">Genesis</a></p><p><span style=\"text-decoration:underline\"><strong>Trail Running<br/></strong></span><a href=\"/collections/terraflex\" title=\"TerraFlex\">TerraFlex</a><br/><a href=\"/collections/mesa-trail\" title=\"Mesa Trail\">Mesa Trail</a><br/><a href=\"/collections/aqua-x-sport\" title=\"Aqua X Sport\">Aqua X Sport</a><br/><a href=\"/collections/ztrail\" title=\"Z-Trail\">EV Z-Trail</a></p><p><span style=\"text-decoration:underline\"><strong>Warm Weather Hiking<br/></strong></span><a href=\"/collections/dlh-fusion\" title=\"DLH Fusion\">DayLite Hiker Fusion</a><br/><a href=\"/collections/terraflex\" title=\"TerraFlex\">TerraFlex</a><br/><a href=\"/collections/mesa-trail\" title=\"Mesa Trail\">Mesa Trail</a><br/><a href=\"/collections/aqua-x-sport\" title=\"Aqua X Sport\">Aqua X Sport</a><br/><a href=\"/collections/xcursion\" title=\"Xcursion\">Xcursion Fusion</a><br/><a href=\"/collections/ztrek\" title=\"Z-Trek\">Z-Trek</a><br/><a href=\"/collections/ztrail\" title=\"Z-Trail\">EV Z-Trail</a><br/><a href=\"/collections/cloud\" title=\"Cloud\">Cloud</a><br/><a href=\"/collections/naboso\" title=\"naboso\">Naboso Trail</a></p><p><span style=\"text-decoration:underline\"><strong>Warm Weather/Beach<br/></strong></span><a href=\"/collections/aptos\" title=\"Aptos\">Aptos</a><br/><a href=\"/collections/speedforce\" title=\"Speed Force\">Speed Force</a><br/><a href=\"/collections/hfs\" title=\"HFS\">HFS</a><br/><a href=\"/collections/prio\" title=\"Prio\">Prio</a><br/><a href=\"/collections/360\" title=\"360\"><span style=\"text-decoration:underline\">360°</span></a><br/><a href=\"/collections/aqua-x-sport\" title=\"Aqua X Sport\">Aqua X Sport</a><br/><a href=\"/collections/ztrek\" title=\"Z-Trek\">Z-Trek</a><br/><a href=\"/collections/ztrail\" title=\"Z-Trail\">Z-Trail</a><br/><a href=\"/collections/genesis\" title=\"Genesis\">Genesis</a><br/><a href=\"/collections/jessie\" title=\"Jessie\">Jessie</a><br/><a href=\"/collections/cloud\" title=\"Cloud\">Cloud</a><br/><a href=\"/collections/naboso\" title=\"naboso\">Naboso Trail</a><br/><a href=\"/collections/cassie\" title=\"Cassie\">Cassie</a></p><p><span style=\"text-decoration:underline\"><strong>Cold Weather Hiking<br/></strong></span><a href=\"/collections/alpine\" title=\"Alpine\">Alpine</a><br/><a href=\"/collections/xcursion\" title=\"Xcursion\">Xcursion Fusion</a><br/><a href=\"/collections/dlh-fusion\" title=\"DLH Fusion\">DayLite Hiker Fusion</a> (with warm socks)<br/><a href=\"/collections/terraflex\" title=\"TerraFlex\">TerraFlex</a> (ditto about the socks)</p><p><span style=\"text-decoration:underline\"><strong>Weightlifting/CrossFit/Fitness<br/></strong></span><a href=\"/collections/speedforce\" title=\"Speed Force\">Speed Force</a><br/><a href=\"/collections/hfs\" title=\"HFS\">HFS</a><br/><a href=\"/collections/prio\" title=\"Prio\">Prio</a><br/><a href=\"/collections/360\" title=\"360\"><span style=\"text-decoration:underline\">360°</span></a><br/><a href=\"/collections/ztrek\" title=\"Z-Trek\">Z-Trek</a><br/><a href=\"/collections/genesis\" title=\"Genesis\">Genesis</a></p><p><span style=\"text-decoration:underline\"><strong>Cold weather<br/></strong></span><a href=\"/products/mika-women-clearance\" title=\"Mika - Women (Clearance)\">Mika</a><br/><a href=\"/collections/denver\" title=\"Denver\">Denver</a> &lt;!–<a href=\"https://xeroshoes.com/shop/boots/ashland/\">Ashland</a>—&gt;<br/><a href=\"/collections/xcursion\" title=\"Xcursion\">Xcursion Fusion</a><br/><a href=\"/collections/alpine\" title=\"Alpine\">Alpine</a></p><p><span style=\"text-decoration:underline\"><strong>Office wear<br/></strong></span><a href=\"/products/cassie\" title=\"Cassie - Hemp\">Cassie</a><br/><a href=\"/collections/phoenix\" title=\"Phoenix\">Phoenix</a><br/><a href=\"/products/tari\" title=\"Tari - Women\">Tari</a><br/><a href=\"/collections/denver\" title=\"Denver\">Denver</a><br/><a href=\"/collections/prio-all-day\" title=\"Prio All-Day\">Prio All-Day</a><br/><a href=\"/collections/hana\" title=\"Hana\">Hana</a></p><p><span style=\"text-decoration:underline\"><strong>Travel<br/></strong></span>All of our shoes are travel friendly because they’re so lightweight and versatile. But we’ve heard many people say they used just one of these for a whole vacation (depending on where they went)<br/><a href=\"/collections/aptos\" title=\"Aptos\">Aptos</a><br/><a href=\"/collections/speedforce\" title=\"Speed Force\">Speed Force</a><br/><a href=\"/collections/hfs\" title=\"HFS\">HFS</a><br/><a href=\"/collections/prio\" title=\"Prio\">Prio</a><br/><a href=\"/collections/hana\" title=\"Hana\">Hana</a><br/><a href=\"/collections/ztrail\" title=\"Z-Trail\">Z-Trail</a><br/><a href=\"/collections/ztrek\" title=\"Z-Trek\">Z-Trek</a><br/><a href=\"/collections/terraflex\" title=\"TerraFlex\">TerraFlex</a><br/><a href=\"/collections/denver\" title=\"Denver\">Denver</a><br/><a href=\"/products/mika-women-clearance\" title=\"Mika - Women (Clearance)\">Mika</a></p><p><span style=\"text-decoration:underline\"><strong>Casual wear<br/></strong></span><a href=\"/collections/aptos\" title=\"Aptos\">Aptos</a><br/><a href=\"/collections/hana\" title=\"Hana\">Hana</a><br/><a href=\"/collections/prio-all-day\" title=\"Prio All-Day\">Prio All-Day</a><br/><a href=\"/collections/jessie\" title=\"Jessie\">Jessie</a><br/><a href=\"/products/cassie\" title=\"Cassie - Hemp\">Cassie</a><br/><a href=\"/collections/alston\" title=\"Alston\">Alston</a><br/><a href=\"/collections/phoenix\" title=\"Phoenix\">Phoenix</a><br/><a href=\"/products/tari\" title=\"Tari - Women\">Tari</a> <br/><a href=\"/collections/ashland\" title=\"Ashland\">Ashland</a><br/><a href=\"/collections/denver\" title=\"Denver\">Denver</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_iMyan6": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Will you ever make more sizes or certain shoes? What about a women’s version of a men’s shoe, or a men’s version of a women’s shoe?",
+            "answer": "<p>Email <a href=\"mailto:feedback@xeroshoes.com\">feedback@xeroshoes.com</a> if you have a suggestion or request for a specific shoe, color, or size. The more demand we have, the greater our ability to make more shoes (this includes making men’s versions of our women’s shoes and visa versa).</p><p>The women’s styles will fit more narrow than the men’s. If you are a man with a narrow foot, then you may be prefer the “women’s” sizes. If you are a woman with a wider foot, then you may want to try the “men’s” styles.</p><p>The difference in length between men’s and women’s closed toe shoes is 1.5 sizes.</p><p>Below is a size conversion chart:<br/><br/><strong>Men’s Size</strong></p><ul><li>6.5</li><li>7</li><li>7.5</li><li>8</li><li>8.5</li><li>9</li><li>9.5</li></ul><p><strong>Women’sSize</strong></p><ul><li>8</li><li>8.5</li><li>9</li><li>9.5</li><li>10</li><li>10.5</li><li>11<br/></li></ul><p>Our sandals, since they come in “whole sizes” only have only a 1 size difference between styles. A men’s 8, for example, would be comparable in length to a women’s 9.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_9BN7ed": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Product Questions - Before you buy",
+            "title": "Will you make more kid’s sizes and styles?",
+            "answer": "<p>Currently, our kids sizes range from 12 to youth 4 (Y4).</p><p>From there, a women’s 6 will be a half size larger than the Y4.</p><p>That means that if your kid wears a youth 5 or up, they can fit into our women’s sizes.</p><p>And if you want to recommend a new/different size or style, email <a href=\"mailto:feedback@xeroshoes.com\">feedback@xeroshoes.com</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_raJz4P": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Questions about Placing an Order",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_yeBNAK": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Questions about Placing an Order",
+            "title": "Do you have any coupon codes?",
+            "answer": "<p>We don’t. So if you see anyone on the internet offering a “Xero Shoes coupon code” they are scamming you.</p><p>We do have occasional specials and sales that you’ll hear about if you subscribe to our <a href=\"/pages/newsletter\" title=\"Xero Shoes Newsletter\">newsletter</a> or follow us on <a href=\"https://facebook.com/xeroshoes/\">Facebook</a>, <a href=\"https://instagram.com/xeroshoes/\">Instagram</a>, <a href=\"https://youtube.com/xeroshoes/\">YouTube</a>, or <a href=\"https://twitter.com/xeroshoes/\">Twitter</a>.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_JRHM4D": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Questions about Placing an Order",
+            "title": "Do you offer military discounts?",
+            "answer": "<p>We do offer active military personnel a 15% discount on orders placed through xeroshoes.com!<br/>Here in the US, we use GovX ID, a free third-party service, to verify your affiliation. You can find more information through the following link: <a href=\"/pages/military-discount\" title=\"Military/First Responders & Healthcare Discounts\">https://xeroshoes.com/pages/military-discount</a></p><p>For those of you outside of the United States, since GovX ID wouldn’t be used internationally, we would just ask for a proof of service.<br/>Email <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com</a> from a government email account or send a copy of your Military ID. Once that has been received, we will email you directions about how get your military discount.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_wkYarP": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Questions about Placing an Order",
+            "title": "What forms of payment can I use?",
+            "answer": "<p>We accept credit cards, PayPal, check and money order.</p><p>You can also order with 4 monthly, no-interest payments using <a href=\"/pages/klarna\" title=\"Our payment options are flexible, too.\">Klarna</a>. You’ll see that option on the Product Description Pages and when you get to the Checkout page.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_QDiPzy": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Questions about Placing an Order",
+            "title": "Where can I buy Xero Shoes?",
+            "answer": "<p>Here on our website, for one.</p><p>You can also check <a href=\"/pages/stores\" title=\"Xero Shoes Stores\">www.xeroshoes.com/stores</a> to find a retailer near you.</p><p>We have new retailers coming on board every week all around the world, so check back often.</p><p>And if you know of a store that should be carrying Xero Shoes, let us know about them. Email <a href=\"mailto:sales@xeroshoes.com\">sales@xeroshoes.com</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_RQCiWU": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Shipping & Handling",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_ywKhm7": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Shipping & Handling",
+            "title": "Do you deliver to my country?",
+            "answer": "<p>We’ve sent Xero Shoes to 97 countries around the world.</p><p>Sadly, though, we have had to discontinue shipping packages to certain countries due to unreliable delivery, notably Mexico, Indonesia, and Brazil.</p><p>To find out if we ship to your location, you can either add items to your cart and go through the checkout process — if you don’t see your country, then we may not deliver there.</p><p>You can also ask Customer Happiness Team — email <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com</a> or call 303.447.3100 (that’s always the fastest way)</p><p>If you live in a country that we can’t ship to, you may want to look into the following courier services that may be able to forward packages to your location:</p><p><a href=\"https://www.shipito.com/\">https://www.shipito.com/</a></p><p><a href=\"https://www.bonvu.com/\">https://www.bonvu.com/</a></p><p>Another option — see if we have a store near you that can ship to you — <a href=\"/pages/stores\" title=\"Xero Shoes Stores\">https://xeroshoes.com/pages/stores/</a></p><p>Also we have a few styles available on Amazon.</p><p>We’ve heard that many international customers ship their shoes to friends or family in the US, UK, or Australia who will be visiting soon.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_VwybbE": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Shipping & Handling",
+            "title": "Do you ship internationally?",
+            "answer": "<p>We do! We’ve sold Xero Shoes to people in <strong>more than 97 countries</strong> around the world.</p><p>We use the US Postal service or DHL to send our shipments. The cost to ship will depend on the weight of the package and the delivery speed you select; several options will be provided at checkout.</p><p>Limited tracking is available for some Standard and First Class International shipments depending on the country. Full tracking is available with all Priority Express and Express International shipments.</p><p>Though almost all of our international orders arrive without incident, we strongly advise you to select Priority Express International or Express International if you live in a country with a less reliable postal service. We cannot guarantee delivery of packages shipped using First Class International.</p><p>At this time, we’ve stopped shipping to Brazil, Mexico or Indonesia due to poor delivery. See the FAQ “Do You Deliver to my Country” for more details and options if you’re in those countries.</p><p>International delivery can take anywhere from 3 days to 8 weeks depending on how long your order spends in customs at the border.</p><p>Please note that some countries do require the payment of import duties for international shipments above a certain value. We advise you to know the import regulations of your country and understand that you will be responsible for payment of any duties and fees imposed by your government at the border.</p><p>All packages will be marked as merchandise; as a commercial shipper, we are not able to mark a package as a gift (if you’re giving Xero Shoes as a gift, that’s not the same as us sending a gift).</p><p>Also, check our store locator at <a href=\"/pages/stores\" title=\"Xero Shoes Stores\">www.xeroshoes.com/pages/stores/</a>. There may be a Xero Shoes dealer closer to you.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_xMh88r": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Shipping & Handling",
+            "title": "How long does it take to get my order?",
+            "answer": "<p><strong>Note: Due to the current COVID-19 pandemic, some shipping services may be delayed, and due to heavy order volume during the holidays, it may take longer for your order to be shipped. We thank you for your patience as it may take two weeks or longer for your package to arrive.</strong></p><p>Shipping time depends on what you order, where your package is going, and how fast you want it delivered.</p><p>When you get to the Checkout page, you’ll see different options and prices before you’re asked for payment information.</p><p>Typical shipping domestic shipping times are:</p><ul><li>Our Flat Rate shipping takes 5-10 business days on average.</li><li>First Class  – estimated 4-9 business days – can be slower during high volume mail times</li><li>Priority Mail – 2 or 3 business days</li><li>Priority Express Mail – 1 or 2 business days</li></ul><p>Please note that USPS does not guarantee delivery times for First Class and Priority Mail.</p><p>For International deliveries, here are some typical times:</p><ul><li>DHL Packet Plus – 2-3 weeks average, may take longer depending on receiving country*</li><li>First Class – 1-3 weeks average, may take up to 8 depending on receiving country*</li><li>Priority Mail – 6-10 business days*</li><li>Priority Mail Express – 3-5 business days*</li></ul><p>* International delivery times may be increased by additional customs processing times at the border.</p><p>Full tracking is available for items shipped with DHL International shipping and USPS Priority Express International shipments.</p><p>You may also want to check for a retailer  near you at <a href=\"/pages/stores\" title=\"Xero Shoes Stores\">www.xeroshoes.com/pages/stores/</a>.</p><p>You can find more information about shipping here: <a href=\"/pages/shipping\" title=\"Shipping\">www.xeroshoes.com/pages/shipping</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_Vkcnic": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "About your order",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_9QxLtR": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "About your order",
+            "title": "How do I track my order",
+            "answer": "<p>Orders typically ship within 1-2 business days. You’ll receive an email with the tracking number once it has shipped.</p><p>If you don’t see that email, please check your spam or promotions filter. And if you don’t see it there, reach out to us directly — 303.447.3100</p><p>NOTE: During a sale, holiday, or if we’re blanketed with snow (we’re in Colorado) it may take longer than the 1-2 business days that we usually strive for.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_UD4G9i": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "About the shoes you received",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_7V7hwa": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "About the shoes you received",
+            "title": "How do I adjust my sandals to fit?",
+            "answer": "<p>Lena likes to say there’s a “sweet spot” for sandal strap tension and position. Some people find it right away and others take a bit of time.</p><p>Go to <a href=\"/blogs/blog/adjust-for-the-perfect-fit\" title=\"How to Adjust the Xero Shoes Sandals for a Perfect Fit\">https://xeroshoes.com/blogs/blog/adjust-for-the-perfect-fit</a> for more info and suggestions.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_nNn6Dh": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "About the shoes you received",
+            "title": "How do I know if these are the right size?",
+            "answer": "<p>The simplest answer is: Do they feel right?</p><p>Sizing is largely about personal preference. You could take 3 people with identical feet, put them in the same shoe, and they’d have 3 different opinions about how the shoe fits.</p><p>Some people think you need a lot of room in front of your toes. This is true for shoes with thick midsoles, but not with Xero Shoes (when thicker shoes bend, the “inside” shortens faster than the outside… like what happens when you bend a phone book).</p><p>Some people like their toes to lightly touch the front of the shoe because it gives them additional feedback.</p><p>We recommend wearing the shoes indoors for a bit to see how they feel (remember, if you need to return or exchange, the product must be in “new and unworn” condition).</p><p>If you’re a woman with a wider foot, you may be more comfortable in a “men’s” style. And if you’re a man with a narrower foot, you may like a “women’s” style better.</p><p>If you have other questions about fit, give us a call — 303.447.3100 or 1-800.499.8880</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_9QMeMn": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "About the shoes you received",
+            "title": "How do I make, or tie, my DIY sandals?",
+            "answer": "<p>Hmmm… there <span style=\"text-decoration:underline\">should</span> have been an instruction card that came with your kit which pointed you to these resources:</p><p>1) How to make your DIY kit with FeelTrue soles — <a href=\"/pages/make\" title=\"How to make Xero Shoes FeelTrue Kits for barefoot running\">https://xeroshoes.com/pages/make/</a></p><p>2) How to make your Classic DIY kit — <a href=\"/blogs/blog/how-to-make\" title=\"How to Make Huaraches\">https://xeroshoes.com/blogs/blog/how-to-make</a></p><p>3) How to tie your DIY sandals — <a href=\"/pages/tying\" title=\"How to tie Xero Shoes\">https://xeroshoes.com/pages/tying</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_aaKeFz": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "About the shoes you received",
+            "title": "My shoe broke. What do I do?",
+            "answer": "<p>While we stand behind the quality of our products, we also know reality: nothing is perfect and nothing goes 100% according to plan. That’s why we have a 2 Year Manufacturer’s Warranty.</p><p>There are more details about our warranty <a href=\"/pages/warranty\" title=\"Xero Shoes Warranty\">here</a>.</p><p>Please email <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com</a> or call us at 1-800-499-8880 or 303.447.3100 so we can evaluate your situation and give you the correct remedy options.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_FcMtdX": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "About the shoes you received",
+            "title": "The laces on my Cloud or Genesis are too long. What to do?",
+            "answer": "<p>There’s a simple way to shorten the straps on the Cloud or Genesis at <a href=\"/blogs/blog/adjust-for-the-perfect-fit\" title=\"How to Adjust the Xero Shoes Sandals for a Perfect Fit\">https://xeroshoes.com/blogs/blog/adjust-for-the-perfect-fit</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_VMhwhq": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Exchanges and Returns",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_BqeYth": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Exchanges and Returns",
+            "title": "How do I exchange my Xero Shoes? (Domestic)",
+            "answer": "<p>We are pleased to offer free domestic exchanges if you need to change the size or color. Exchanges will be sent using our flat-rate shipping option. </p><p>1. Visit our <a href=\"https://returns.xeroshoes.com/\"><strong>Returns and Exchange Center</strong></a>. To start a return, choose “Returns” at the top of that page and follow the steps provided.</p><p>2. Enter your order number, email address, or shipping zip code used to place the order.</p><p>3. Select the items you want to exchange and follow the instructions.</p><p>4. Once your request is approved, you will get a confirmation email with shipping instructions.</p><p>5. Once your return tracking is confirmed, the replacement item will be shipped to your original shipping address.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_7GCHXf": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Exchanges and Returns",
+            "title": "How do I exchange or return my Xero Shoes? (International)",
+            "answer": "<p><em>I am not in the United States, can I return or exchange?</em></p><p><strong>Yes!</strong> You can process a return or exchange through the <a href=\"https://returns.xeroshoes.com/\"><strong>Returns and Exchange Center</strong></a>. You will need to return your items through a local courier. Follow the instructions given in the Returns and Exchange Center. Please note that for international returns, the original shipping costs are not refundable.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_ectX7k": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Exchanges and Returns",
+            "title": "How do I return my Xero Shoes? (Domestic)",
+            "answer": "<p>1. Visit our <a href=\"https://returns.xeroshoes.com/\"><strong>Returns and Exchange Center</strong></a>. To start a return, choose “Returns” at the top of that page and follow the steps provided.2. Enter your order number, email address, or shipping zip code used to place the order.</p><p>3. Select the items you want to return and follow the instructions.</p><p>4. Once your request is approved, you will get a confirmation email with shipping instructions.</p><p>5. Once your item is received, your order, tax, and original shipping will be fully refunded to your payment of choice.<br/>(If the package was shipped to Colorado, this excludes the Colorado Retail Delivery Fee)</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_BJFYDp": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Exchanges and Returns",
+            "title": "More Return and Exchange Information",
+            "answer": "<p>Looking for more information regarding a return or exchange? Please visit: <a href=\"/pages/returns\" title=\"Returns & Exchanges\">https://xeroshoes.com/pages/returns</a>.</p>",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_6PeUp6",
+        "faq_subitem_efqYMH",
+        "faq_subitem_YjRwFC",
+        "faq_item_dLQaYY",
+        "faq_subitem_mnKE8T",
+        "faq_item_cAxEfP",
+        "faq_subitem_MUFJAz",
+        "faq_subitem_CwwCED",
+        "faq_subitem_Wwmym9",
+        "faq_item_Yxr9iE",
+        "faq_subitem_GyLkJP",
+        "faq_subitem_JeFfRV",
+        "faq_subitem_YTBtnV",
+        "faq_subitem_graH8y",
+        "faq_subitem_kEK6Lp",
+        "faq_subitem_JGHRH8",
+        "faq_subitem_C9HFFF",
+        "faq_subitem_xHzaRQ",
+        "faq_subitem_C7RE7L",
+        "faq_subitem_cEAKpy",
+        "faq_subitem_LNqM3K",
+        "faq_subitem_pKpmqt",
+        "faq_subitem_iMyan6",
+        "faq_subitem_9BN7ed",
+        "faq_item_raJz4P",
+        "faq_subitem_yeBNAK",
+        "faq_subitem_JRHM4D",
+        "faq_subitem_wkYarP",
+        "faq_subitem_QDiPzy",
+        "faq_item_RQCiWU",
+        "faq_subitem_ywKhm7",
+        "faq_subitem_VwybbE",
+        "faq_subitem_xMh88r",
+        "faq_item_Vkcnic",
+        "faq_subitem_9QxLtR",
+        "faq_item_UD4G9i",
+        "faq_subitem_7V7hwa",
+        "faq_subitem_nNn6Dh",
+        "faq_subitem_9QMeMn",
+        "faq_subitem_aaKeFz",
+        "faq_subitem_FcMtdX",
+        "faq_item_VMhwhq",
+        "faq_subitem_BqeYth",
+        "faq_subitem_7GCHXf",
+        "faq_subitem_ectX7k",
+        "faq_subitem_BJFYDp"
+      ],
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#0f172b",
+        "text_alignment": "text-left",
+        "heading": "Frequently Asked Questions",
+        "txt": "<p>Here are some of the most Frequently Asked Questions we get about Xero Shoes. <br/>If you have any others, <a href=\"/pages/contact\" title=\"Contact\">give a call or drop us a line</a> or ask our <a href=\"https://facebook.com/xeroshoes\" target=\"_blank\">Facebook Fans</a> or <a href=\"https://twitter.com/xeroshoes\" target=\"_blank\">Twitter Followers</a>.</p>",
+        "border_hide": false,
+        "width_auto": false
+      }
+    },
+    "template_faq_gBJeFN": {
+      "type": "template-faq",
+      "blocks": {
+        "faq_item_RG3bkF": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "heading": "How can I spread the word about Xero Shoes?",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_Up6hiq": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "How can I spread the word about Xero Shoes?",
+            "title": "Can I become a Xero Shoes Ambassador?",
+            "answer": "<p>We call our “ambassadors” Xero Heroes.</p><p>The Xero Hero program is for social media influencers and content creators who love Xero Shoes.</p><p>Xero Heroes are the first to hear about cross-promotional opportunities, contest opportunities, and ways to get involved with our brand.</p><p>You can apply to become our next Xero Hero at <a href=\"https://xeroshoes.com/xerohero/\">www.xeroshoes.com/xerohero</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_WGkEEm": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "How can I spread the word about Xero Shoes?",
+            "title": "Do you have a Pro Deal for industry employees?",
+            "answer": "<p>We do have a Pro Deal program for people who work in the health and/or outdoor industry.</p><p>You can <a href=\"/pages/pro-deal\" title=\"Apply for our Pro Deal discount program\">apply for the Pro Deal program</a>.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_M76wat": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "How can I spread the word about Xero Shoes?",
+            "title": "Do you have an affiliate program?",
+            "answer": "<p>We do.</p><p>Affiliates can earn commissions on sales made by people they refer to Xero Shoes.</p><p>Learn more at <a href=\"/pages/affiliate-info\" title=\"Become a Xero Shoes Affiliate\">xeroshoes.com/affiliate-info/</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_tdjL3R": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "How can I spread the word about Xero Shoes?",
+            "title": "How do I spread the word about Xero Shoes?",
+            "answer": "<p>First, thanks for your support!</p><p>Word of mouth has been the #1 driver in our business since we started.</p><p>So, not surprisingly, the simplest thing to do is tell people about XeroShoes.com.</p><p>Another thing you can do that would be really helpful is to talk to the manager of any store that you think should carry Xero Shoes and tell her/him about us. We know some people who’ve walked into a local store (in their Xero Shoes, of course) and done an impromptu sales pitch 😉</p><p>Here’s one more: If you know of any medical, fitness, or health & wellness practitioners (doctors, podiatrists, chiropractors, trainers, chiropractors, yoga teachers, etc.), tell them about us as well. We have special programs for healthcare practitioners who want to promote Xero Shoes.</p><p>If you want to earn commissions on sales you refer, check out <a href=\"/pages/affiliate-info\" title=\"Become a Xero Shoes Affiliate\">https://xeroshoes.com/affiliate-info/</a></p><p>And, if you want to directly sell Xero Shoes through your own facility, email <a href=\"mailto:sales@xeroshoes.com\">sales@xeroshoes.com</a> for more info.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_GcnbRN": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Got an idea to share with us?",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_KbX9WL": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Got an idea to share with us?",
+            "title": "I have some shoe ideas or requests for you. Where do I send them?",
+            "answer": "<p>We’d love to hear your thoughts!</p><p>Much of our product development comes from hearing what you want next.</p><p>Send an email with your requests or suggestions to: <a href=\"mailto:feedback@xeroshoes.com\">feedback@xeroshoes.com</a>.</p><p>By the way, it can take up to 2 years to develop a new shoe. So we may already be working on what you want 😉</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_yMjaRn": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Got an idea to share with us?",
+            "title": "Will you ever create the shoe of my dreams? Like the Jessie with a TerraFlex sole? Or a fashionable waterproof boot? Or…",
+            "answer": "<p>Suffice it to say, the footwear industry is <strong>very</strong> competitive and we can’t reveal ALL our plans for future products.</p><p>The best way to find out about new releases is to sign up for our newsletter at <a href=\"/pages/newsletter\" title=\"Newsletter\">https://xeroshoes.com/newsletter/</a> and to follow us on <a href=\"https://instagram.com/xeroshoes/\">Instagram</a>, <a href=\"https://facebook.com/xeroshoes/\">Facebook</a>, or <a href=\"https://twitter.com/xeroshoes/\">Twitter</a>.</p><p>If you have a great suggestion for a new shoe or a request about an existing one, send us an email — <a href=\"mailto:feedback@xeroshoes.com\">feedback@xeroshoes.com</a>.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_LXQj74": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Need some other help?",
+            "answer": "",
+            "answer_html": ""
+          }
+        },
+        "faq_subitem_RVYMKn": {
+          "type": "faq_subitem",
+          "settings": {
+            "parent_title": "Need some other help?",
+            "title": "How to get more help (and faster)",
+            "answer": "<p>We’re happy to help.</p><p>Our Customer Happiness Team is available Monday-Friday, 9-5 Mountain Time, except holidays.</p><p>The fastest way to reach us is by calling 303.447.3100 or 1-800.499.8880</p><p>You can also email us at <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com</a></p><p>We may also be available via Live Chat — click the “Contact us…” button that should be at the lower right of your screen.</p><p>If you’ve DM’d on Social Media and haven’t heard back, please try one of the choices above. The tools available to track Social Media messaging don’t always work properly, so it’s best to reach out to us directly.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_rxVRTH": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How does the affiliate program work?",
+            "answer": "<p>When you sign up, you’ll get a special link (“affiliate link”) to use to promote Xero Shoes. You can share this link on your social media, in emails, any website you have, or even in person. </p><p>You’ll also get access to ready-made banners, images, and other creative assets you can use in your promotions. </p><p>You’ll earn commissions on sales made by people who are first referred to Xero Shoes by you, through your affiliate link or the promotional assets we give you. </p><p>In addition to the commission you’ll earn from your referral’s first purchase, Xero Shoes offers “Lifetime Commissions.” This means that you’ll earn commissions on all the future purchases your referred customer makes, regardless of how or when they come back to XeroShoes.com or XeroShoes.eu.</p><p><strong>Still have questions? Email affiliates@xeroshoes.com.</strong></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_FxURpV": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do I find my affiliate link?",
+            "answer": "",
+            "answer_html": "<p><span style=\"font-weight: 400;\">Log in at </span><span style=\"font-weight: 400;\"><a href=\"https://xeroshoes.postaffiliatepro.com/affiliates/login.php\">https://xeroshoes.postaffiliatepro.com/affiliates/login.php</a></span><span style=\"font-weight: 400;\"> and you will find your affiliate link near the top of the page. </span></p><p><a href=\"https://cdn.shopify.com/s/files/1/0714/9492/6514/files/image_1.jpg?v=1757060897\"><img decoding=\"async\" class=\"alignnone size-medium wp-image-6244295\" src=\"https://cdn.shopify.com/s/files/1/0714/9492/6514/files/image_1.jpg?v=1757060897\" alt=\"\" width=\"300\" height=\"96\"></a></p><p><span style=\"font-weight: 400;\">You will find banners, images, and other promotional assets when you click on Promotions (in the left-hand navigation menu), then Banners and Links.</span></p><p><a href=\"https://cdn.shopify.com/s/files/1/0714/9492/6514/files/image-1.jpg?v=1757061026\"><img decoding=\"async\" class=\"alignnone size-medium wp-image-6244310\" src=\"https://cdn.shopify.com/s/files/1/0714/9492/6514/files/image-1.jpg?v=1757061026\" alt=\"\" width=\"300\" height=\"149\"></a></p><p><span style=\"font-weight: 400;\">More about these in a moment.</span></p>"
+          }
+        },
+        "faq_item_TbV7hD": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "I want to promote a particular product or point to a specific page. How do I do that?",
+            "answer": "",
+            "answer_html": "<p><span style=\"font-weight: 400;\">There are 2 ways to do that, one if you </span><b>don’t have</b><span style=\"font-weight: 400;\"> your own website (or are promoting somewhere other than your site, like Facebook), and the other if you </span><b>do have</b><span style=\"font-weight: 400;\"> your own website.</span></p><p><span style=\"font-weight: 400;\">Here are the instructions for each of those options:</span><b></b></p><ul><li aria-level=\"1\"><b>If you don’t have a website or are promoting somewhere other than your site:</b></li></ul><p><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">To link to a specific page, either with a ready-made banner or a regular text link, go to your affiliate dashboard, then click on “Promotions” then “Banners and Links.” From there, you can search for a particular asset, like “Prio” to find direct links to the Prio page or “Shoe Finder” to get a link to our </span><a href=\"/pages/shoe-finder\"><span style=\"font-weight: 400;\">Shoe Finder Quiz</span></a><span style=\"font-weight: 400;\">.</span></p><p><a href=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-2.jpeg\"><img decoding=\"async\" class=\"alignnone size-medium wp-image-6244326\" src=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-2-300x137.jpeg\" alt=\"\" width=\"300\" height=\"137\" srcset=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-2-300x137.jpeg 300w, https://xeroshoes.com/wp-content/uploads/2022/09/image-2-385x175.jpeg 385w, https://xeroshoes.com/wp-content/uploads/2022/09/image-2-150x68.jpeg 150w, https://xeroshoes.com/wp-content/uploads/2022/09/image-2.jpeg 512w\" sizes=\"(max-width: 300px) 100vw, 300px\"></a></p><p><span style=\"font-weight: 400;\">If the page you want to promote isn’t listed here, you can create a “Dynamic Link” to that page. Watch </span><a href=\"https://drive.google.com/file/d/1hQnO6YtWBfqh0atltZVNQbOgRJ19BZLs/view\"><span style=\"font-weight: 400;\">this video</span></a><span style=\"font-weight: 400;\"> to learn how.</span></p><ol><li style=\"font-weight: 400;\" aria-level=\"1\"><b>If you have your own website and want to promote a specific product/page:</b></li></ol><p><span style=\"font-weight: 400;\">If you have your own site, you can use “Direct Linking” to promote any page/product on our website… and you don’t need to use your affiliate link. Also, you can use either the banners/images we provide, or your own images. </span></p><p><span style=\"font-weight: 400;\">To set up Direct Linking, go to your affiliate dashboard, then click on Promotions, then click on Direct Link URLs.</span></p><p><span style=\"font-weight: 400;\">Fill in your domain’s name in the “Pattern” section using the syntax *sitename.com*. </span></p><p><span style=\"font-weight: 400;\">If you want to see if you’ve entered the Pattern correctly, enter the URL for some page on your site in the Real URL section and then click Check.</span></p><p><a href=\"https://xeroshoes.com/wp-content/uploads/2022/09/image.png\"><img loading=\"lazy\" decoding=\"async\" class=\"alignnone size-medium wp-image-6244339\" src=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-300x130.png\" alt=\"\" width=\"300\" height=\"130\" srcset=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-300x130.png 300w, https://xeroshoes.com/wp-content/uploads/2022/09/image-385x167.png 385w, https://xeroshoes.com/wp-content/uploads/2022/09/image-150x65.png 150w, https://xeroshoes.com/wp-content/uploads/2022/09/image.png 512w\" sizes=\"(max-width: 300px) 100vw, 300px\"></a></p><p><span style=\"font-weight: 400;\">When the testing passes, then click Add URL.</span></p><p><a href=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-1.png\"><img loading=\"lazy\" decoding=\"async\" class=\"alignnone size-medium wp-image-6244343\" src=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-1-300x217.png\" alt=\"\" width=\"300\" height=\"217\" srcset=\"https://xeroshoes.com/wp-content/uploads/2022/09/image-1-300x217.png 300w, https://xeroshoes.com/wp-content/uploads/2022/09/image-1-385x279.png 385w, https://xeroshoes.com/wp-content/uploads/2022/09/image-1-150x109.png 150w, https://xeroshoes.com/wp-content/uploads/2022/09/image-1.png 512w\" sizes=\"(max-width: 300px) 100vw, 300px\"></a></p><p><span style=\"font-weight: 400;\">We will then review your Direct Link to make sure it’s valid. If it is, we will approve it for use.</span></p><p><span style=\"font-weight: 400;\">Once your Direct Link is approved, you can then link to any page on XeroShoes.com or XeroShoes.eu with a “normal” link (e.g. &lt;a href=”https://xeroshoes.com/somepage/”&gt;Click Here&lt;/a&gt;), and our software will recognize that you sent that visitor and will link them to your affiliate account (if they first came to our site through your referral).</span></p>"
+          }
+        },
+        "faq_item_9Kqi3P": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can I promote XeroShoes.com and XeroShoes.eu?",
+            "answer": "<p>Yes. Even though you’re setting up your account at XeroShoes.com, you can use your affiliate link to promote either or both sites.</p><p>If you want to promote XeroShoes.com, use xeroshoes.com/go/<em>username. </em>To direct people to XeroShoes.eu, just substitute “.eu” for “.com” like this: xeroshoes.eu/go/<em>username</em>.</p><p>Under Banners and Links you’ll find ready-made banners, links, and other creative assets specifically made for .com and .eu.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_4pyExp": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can I send people a discount instead of getting a commission?",
+            "answer": "<p>We don’t offer discount codes to incentivise new customers. Instead keep our prices as low as possible (and lower than our competitors).</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_pMM9ai": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Where can I see my commissions?",
+            "answer": "",
+            "answer_html": "<p><span style=\"font-weight: 400;\">Log in at </span><span style=\"font-weight: 400;\"><a href=\"https://xeroshoes.postaffiliatepro.com/affiliates/login.php\">https://xeroshoes.postaffiliatepro.com/affiliates/login.php</a></span><span style=\"font-weight: 400;\"> and click on to Reports to see a traffic overview, including clicks, commissions, and more.</span></p><p><a href=\"https://cdn.shopify.com/s/files/1/0714/9492/6514/files/image-2.png?v=1757060648\"><img loading=\"lazy\" decoding=\"async\" class=\"alignnone size-medium wp-image-6244355\" src=\"https://cdn.shopify.com/s/files/1/0714/9492/6514/files/image-2.png?v=1757060648\" alt=\"\" width=\"300\" height=\"171\"></a></p>"
+          }
+        },
+        "faq_item_8QtQgA": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do I know I’ll be paid for a referral?",
+            "answer": "<p>The program is powered by Post Affiliate Pro, the leading affiliate tracking software. Post Affiliate Pro is used by thousands of Internet merchants and affiliates world-wide and it uses a combination of methods to track referrals for highest possible reliability. </p><p>Xero Shoes has been using Post Affiliate Pro for over a decade and has paid commissions every month during that time.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_EXbqGL": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "I don’t see a referral that I made. Why not?",
+            "answer": "<p>First, it takes about 15-30 minutes until the affiliate software updates and shows the clicks and/or commissions from people you referred.</p><p>Secondly, a prospect or customer is assigned to the first affiliate who referred that person to Xero Shoes. So, if your referral came to XeroShoes.com or XeroShoes.eu before clicking on your affiliate link, they’re not linked to you.</p><p>Next, sometimes people *think* they clicked on your affiliate link, but may not have.</p><p>If you aren’t seeing a referral or commission that you believe you should, contact affiliates@xeroshoes.com and we’ll investigate. If there is an actual problem, we can correct it, however, Post Affiliate Pro’s tracking system is very rarely wrong.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_gTARhf": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Why do I see a “declined” transaction?",
+            "answer": "<p>Transactions are most often declined when someone’s credit card is declined, usually from a typo. More often than not, you’ll see a second transaction immediately after that did go through, marked “pending”.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_xpbgxQ": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Where’s my commission?",
+            "answer": "<p>We pay commissions monthly based on the following formula:</p><p>When a referred customer makes a purchase, any commission is marked as “Pending.” To allow a grace period for returns or other adjustments, we wait for 30 days before the commission status is changed to “Approved.” Commissions are then paid on the 5th of the following month, with a minimum payout of $20.</p><p>For example, if someone you refer to our site makes a purchase on January 20th, the commission is marked as “Approved” on February 20th, and paid on March 5th, assuming your total commissions due is over $20. </p><p>If you haven’t reached the $20 threshold, the commissions will “roll over” to subsequent months until you have, and then you will receive your commission payment.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_8LyG7e": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can I earn commissions on shoes I buy for myself?",
+            "answer": "<p>The affiliate program is designed to reward people for spreading the word about Xero Shoes. It’s not a discount program. Affiliates do not earn commissions on their own orders.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_pFJgTh": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can I promote you through pay-per-click search engines?",
+            "answer": "<p>Certainly.</p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_4Fw3gR": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Where can I find the full terms and conditions?",
+            "answer": "<p>Our Terms & Conditions are available at <a href=\"/pages/terms\" title=\"Terms of Use\">https://xeroshoes.com/pages/terms/</a></p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_9fYedN": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Do you have any training program for affiliates?",
+            "answer": "<p>Yes, the basics of affiliate marketing and most useful tips are described in your affiliate panel. You can also find some tips and techniques in our affiliate newsletter, which you’ll get when you become an affiliate.</p><p>If you are serious with earning your income as an affiliate, we recommend Rosalind Gardner’s excellent <a href=\"https://cdn.shopify.com/s/files/1/0714/9492/6514/files/the-super-affiliate-handbook.pdf?v=1757060406\" title=\"SuperAffiliate Handbook\">SuperAffiliate Handbook</a>.</p>",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_RG3bkF",
+        "faq_subitem_Up6hiq",
+        "faq_subitem_WGkEEm",
+        "faq_subitem_M76wat",
+        "faq_subitem_tdjL3R",
+        "faq_item_GcnbRN",
+        "faq_subitem_KbX9WL",
+        "faq_subitem_yMjaRn",
+        "faq_item_LXQj74",
+        "faq_subitem_RVYMKn",
+        "faq_item_rxVRTH",
+        "faq_item_FxURpV",
+        "faq_item_TbV7hD",
+        "faq_item_9Kqi3P",
+        "faq_item_4pyExp",
+        "faq_item_pMM9ai",
+        "faq_item_8QtQgA",
+        "faq_item_EXbqGL",
+        "faq_item_gTARhf",
+        "faq_item_xpbgxQ",
+        "faq_item_8LyG7e",
+        "faq_item_pFJgTh",
+        "faq_item_4Fw3gR",
+        "faq_item_9fYedN"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#0f172b",
+        "text_alignment": "text-left",
+        "heading": "",
+        "txt": "",
+        "border_hide": false,
+        "width_auto": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "template_faq_gBJeFN"
+  ]
+}

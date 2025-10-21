@@ -1,0 +1,481 @@
+{% liquid
+    assign product = block.settings.product
+%}
+
+
+
+    {% assign pdptitle = product.title %}
+    {% if product.metafields.custom.display_title != blank %}
+         {% assign pdptitle = product.metafields.custom.display_title %}
+    {% endif %}
+    {% if block.settings.custom_tag != blank %}<{{ block.settings.custom_tag }} class="font-family-heading text-body product-title-link {{ block.settings.font_size }} {{ block.settings.alignment }} {{ block.settings.alignment_mobile }} {{ block.settings.font_weight }} {{ block.settings.font_family }} {{ block.settings.text_style }} {{ block.settings.margin_top_desktop }} {{ block.settings.margin_bottom_desktop }} {{ block.settings.margin_top_mobile }} {{ block.settings.margin_bottom_mobile }}" {{ block.shopify_attributes }} style="color: {{ block.settings.color }}">{% endif %}{{ pdptitle }}{% if block.settings.custom_tag != blank %}</{{ block.settings.custom_tag }}>{% endif %}
+    
+
+
+
+  
+  {% schema %}
+  {
+    "name": "PDP Product Title",
+    "tag": null,
+    "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        },
+        {
+            "type": "select",
+            "id": "custom_tag",
+            "label": "Custom Tag",
+            "options": [
+                {
+                    "value": "h1",
+                    "label": "H1"
+                },
+                {
+                    "value": "h2",
+                    "label": "H2"
+                },
+                {
+                    "value": "h3",
+                    "label": "H3"
+                },
+                {
+                    "value": "h4",
+                    "label": "H4"
+                },
+                {
+                    "value": "h5",
+                    "label": "H5"
+                },
+                {
+                    "value": "h6",
+                    "label": "H6"
+                },
+                {
+                    "value": "p",
+                    "label": "P"
+                },
+                {
+                    "value": "div",
+                    "label": "Div"
+                }
+            ],
+            "default": "h2"
+        },
+        {
+            "type": "select",
+            "id": "font_size",
+            "label": "Font Size",
+            "options": [
+                {
+                    "value": "h1",
+                    "label": "H1"
+                },
+                {
+                    "value": "h2",
+                    "label": "H2"
+                },
+                {
+                    "value": "h3",
+                    "label": "H3"
+                },
+                {
+                    "value": "h4",
+                    "label": "H4"
+                },
+                {
+                    "value": "h5",
+                    "label": "H5"
+                },
+                {
+                    "value": "h6",
+                    "label": "H6"
+                },
+                {
+                    "value": "fs-xs",
+                    "label": "Extra Small"
+                },
+                {
+                    "value": "fs-sm",
+                    "label": "Small"
+                },
+                {
+                    "value": "fs-md",
+                    "label": "Medium"
+                },
+                {
+                    "value": "fs-base",
+                    "label": "Default"
+                },
+                {
+                    "value": "fs-lg",
+                    "label": "Large"
+                },
+                {
+                    "value": "fs-xl",
+                    "label": "Extra Large"
+                }
+            ],
+            "default": "fs-lg"
+        },
+        {
+            "type": "select",
+            "id": "font_family",
+            "label": "Font Family",
+            "options": [
+                {
+                    "value": "font-family-base",
+                    "label": "Body Font family"
+                },
+                {
+                    "value": "font-family-heading",
+                    "label": "Heading Font family"
+                }
+            ],
+            "default": "font-family-heading"
+        },
+        {
+            "type": "select",
+            "id": "font_weight",
+            "label": "Font Weight",
+            "options": [
+                {
+                    "value": " ",
+                    "label": "Default"
+                },
+                {
+                    "value": "fw-light",
+                    "label": "300"
+                },
+                {
+                    "value": "fw-normal",
+                    "label": "400"
+                },
+                {
+                    "value": "fw-medium",
+                    "label": "500"
+                },
+                {
+                    "value": "fw-semibold",
+                    "label": "600"
+                },
+                {
+                    "value": "fw-bold",
+                    "label": "700"
+                },
+                {
+                    "value": "fw-bolder",
+                    "label": "800"
+                }
+            ],
+            "default": "fw-bold"
+        },
+        {
+            "type": "select",
+            "id": "text_style",
+            "label": "Text Style",
+            "options": [
+                {
+                    "value": "text-uppercase",
+                    "label": "Uppercase"
+                },
+                {
+                    "value": "text-capitalize",
+                    "label": "Capitalize"
+                },
+                {
+                    "value": "text-lowercase",
+                    "label": "Lowercase"
+                },
+                {
+                    "value": "text-math-auto",
+                    "label": "Auto"
+                },
+                {
+                    "value": "",
+                    "label": "Default"
+                }
+            ],
+            "default": "text-math-auto"
+        },
+        {
+            "type": "select",
+            "id": "alignment",
+            "label": "Text Alignment Desktop",
+            "options": [
+                {
+                    "value": "text-md-start",
+                    "label": "Left"
+                },
+                {
+                    "value": "text-md-center",
+                    "label": "Center"
+                },
+                {
+                    "value": "text-md-end",
+                    "label": "Right"
+                }
+            ],
+            "default": "text-md-start"
+        },
+        {
+            "type": "select",
+            "id": "alignment_mobile",
+            "label": "Text Alignment Mobile",
+            "options": [
+                {
+                    "value": "text-start",
+                    "label": "Left"
+                },
+                {
+                    "value": "text-center",
+                    "label": "Center"
+                },
+                {
+                    "value": "text-end",
+                    "label": "Right"
+                }
+            ],
+            "default": "text-start"
+        },
+        {
+            "type": "color",
+            "id": "color",
+            "label": "Title Color"
+        },
+       
+        {
+            "type":"header",
+            "content":"Margin: Desktop"
+        },
+        {
+            "type": "select",
+            "id": "margin_top_desktop",
+            "label": "Margin Top",
+            "options": [
+                {
+                    "value": "mt-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "mt-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "mt-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "mt-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "mt-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "mt-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "mt-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "mt-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "mt-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "mt-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "mt-md-10",
+                    "label": "50"
+                }
+            ],
+            "default": "mt-md-0"
+        },
+        {
+            "type": "select",
+            "id": "margin_bottom_desktop",
+            "label": "Margin Bottom",
+            "options": [ 
+                {
+                    "value": "mb-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "mb-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "mb-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "mb-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "mb-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "mb-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "mb-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "mb-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "mb-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "mb-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "mb-md-10",
+                    "label": "50"
+                }
+            ],
+            "default": "mb-md-0"
+        },
+        {
+            "type":"header",
+            "content":"Margin: Mobile"
+        },
+        {
+            "type": "select",
+            "id": "margin_top_mobile",
+            "label": "Margin Top",
+            "options": [
+                {
+                    "value": "mt-0",
+                    "label": "0"
+                },
+                {
+                    "value": "mt-1",
+                    "label": "5"
+                },
+                {
+                    "value": "mt-2",
+                    "label": "10"
+                },
+                {
+                    "value": "mt-3",
+                    "label": "15"
+                },
+                {
+                    "value": "mt-4",
+                    "label": "20"
+                },
+                {
+                    "value": "mt-5",
+                    "label": "25"
+                },
+                {
+                    "value": "mt-6",
+                    "label": "30"
+                },
+                {
+                    "value": "mt-7",
+                    "label": "35"
+                },
+                {
+                    "value": "mt-8",
+                    "label": "40"
+                },
+                {
+                    "value": "mt-9",
+                    "label": "45"
+                },
+                {
+                    "value": "mt-10",
+                    "label": "50"
+                }
+            ],
+            "default": "mt-0"
+        },
+        {
+            "type": "select",
+            "id": "margin_bottom_mobile",
+            "label": "Margin Bottom",
+            "options": [
+                {
+                    "value": "mb-0",
+                    "label": "0"
+                },
+                {
+                    "value": "mb-1",
+                    "label": "5"
+                },
+                {
+                    "value": "mb-2",
+                    "label": "10"
+                },
+                {
+                    "value": "mb-3",
+                    "label": "15"
+                },
+                {
+                    "value": "mb-4",
+                    "label": "20"
+                },
+                {
+                    "value": "mb-5",
+                    "label": "25"
+                },
+                {
+                    "value": "mb-6",
+                    "label": "30"
+                },
+                {
+                    "value": "mb-7",
+                    "label": "35"
+                },
+                {
+                    "value": "mb-8",
+                    "label": "40"
+                },
+                {
+                    "value": "mb-9",
+                    "label": "45"
+                },
+                {
+                    "value": "mb-10",
+                    "label": "50"
+                }
+            ],
+            "default": "mb-0"
+        },
+        {
+            "type": "text",
+            "id": "custom_class",
+            "label": "Custom Class"
+        }
+         
+
+    ],
+    "presets": [
+      {
+        "name": "PDP Product Title",
+        "settings": { "product": "{{ closest.product }}" }
+      }
+    ]
+  }
+  {% endschema %}
+  

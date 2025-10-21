@@ -1,0 +1,67 @@
+.cart-product-img .cart-img{
+    width: 100px;
+    height: 100px;
+    flex: 0 0 auto;
+    background-color: #f9f8f5;
+}
+@media (min-width: 768px){
+    .cart-product-img .cart-img{
+        width: 120px;
+        height: 120px;
+    }
+}
+.cart-product-img .cart-img img,
+.cart-product-img .cart-img svg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: multiply;
+}
+
+.cart-form-container.empty_cart .drawer-footer{
+    display: none;
+}
+
+/* Cart Page Sticky Payment buttons for mobile view */
+@media (max-width:991px){
+    .checkoutbtn-sticky{
+        transition: all ease-in-out 0.1s;
+    }
+    .checkoutbtn-sticky.active{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 9999;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        right: 0;
+        padding: 15px;
+    }
+}
+
+.quantity-wrapper{
+    max-width: 145px;
+}
+
+.section-min-height{
+    min-height: 600px;
+}
+
+.cart-subtotal:empty, .cart-discount:empty{
+    display: none;
+}
+
+
+.cart-item-properties li .property-value,
+.cart-item-options li .option-value{
+    word-break: break-all;
+}
+
+.cart-item-text > *:last-child {
+    margin-bottom: 0;
+}
+.gift-contains-card .cart-item-properties .text-capitalize.property-value
+{
+    text-transform: none !important;
+}

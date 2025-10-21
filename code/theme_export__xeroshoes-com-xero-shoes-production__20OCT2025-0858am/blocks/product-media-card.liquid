@@ -1,0 +1,492 @@
+{% liquid
+  assign product = block.settings.product
+  assign media = product.media.first
+  assign class_list = ''
+  if block.settings.image_zoom == 'in_image_block'
+    assign class_list = 'image-magnify-hover'
+  endif
+%}
+{%- capture img_sizes -%}
+    (min-width: {{ settings.container_width }}) calc({{ settings.container_width }} / 2), 100vw
+{%- endcapture -%}
+
+  
+    
+{% if product.media == blank %}
+<div class="product--media w-100 {{ block.settings.ratio }} product-media-card" data-media-id="{{ product.featured_image.id }}">
+    {% comment %} {{ 'detailed-apparel-1' | placeholder_svg_tag: 'w-100' }} {% endcomment %}
+    {% render 'placeholder-image' %}
+</div>
+{% elsif product.media.size > 1 %}
+    <div class="w-100 swiper-wrapper__custom swiper-wrapper__custom--main {{ block.settings.template_type }} d-flex flex-column">
+        {%- if block.settings.nav_dots -%}
+            <div class="swiper-pagination order-2 mt-6 swiper-pagination-main {{ block.settings.pagination_visible }} {{ block.settings.pagination_color }}"></div>
+        {%- endif -%}
+        <div class="swiper-wrapper__custom">
+            {%- if block.settings.nav_arrows -%}
+                <div class="custom-swiper-navigation {{ block.settings.nav_arrows_color }} {{ block.settings.nav_arrows_outside }} {{ block.settings.nav_arrows_visible }} {{ block.settings.nav_arrows_size }}">
+                    <button class="swiper-button-prev button-prev-main"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-left"></use></svg></button>
+                    <button class="swiper-button-next button-next-main"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></button>
+                </div>
+            {%- endif -%}
+            <swiper-container class="no-swiping" data-productSlider thumbs-swiper=".product-image-thumbs" 
+                scrollbar="true" 
+                {%- if block.settings.nav_arrows -%}
+                    navigation='{
+                        "nextEl": ".button-next-main",
+                        "prevEl": ".button-prev-main"
+                    }'
+                {%- endif -%}
+                no-swiping="true" 
+                no-swiping-class="no-swiping"
+                {%- if block.settings.nav_dots -%}
+                    pagination='{
+                        "el": ".swiper-pagination-main",
+                        "clickable": true,
+                        "type": "bullets"
+                    }'
+                {%- endif -%}
+                role="tree">    
+                {% for media in product.media %}
+                    <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ media.id }}" role="treeitem">
+                        <div class="product-media-card">
+                            {% if media.media_type == 'image' %}
+                                {%- capture attributes_list -%}
+                                    data-variant-title="{{ media.alt | escape }}"
+                                {%- endcapture -%}
+                                {%- render 'image',
+                                    image: media,
+                                    sizes: img_sizes,
+                                    class: class_list,
+                                    preload: forloop.first,
+                                    attributes: attributes_list
+                                -%}
+                            {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                                {%- render 'media', media: media -%}
+                            {% endif %}
+                        </div>
+                    </swiper-slide>
+                {% endfor %}
+            </swiper-container>
+        </div>
+    </div>
+
+    {% if block.settings.thumb_image %}
+        <div class="w-100 swiper-wrapper__custom swiper-wrapper__custom--thumbs {{ block.settings.template_type }}">
+            {%- if block.settings.thumbs_nav_arrows -%}
+                <div class="custom-swiper-navigation {{ block.settings.thumbs_nav_arrows_color }} {{ block.settings.thumbs_nav_arrows_visible }} {{ block.settings.thumbs_nav_arrows_size }}">
+                    <button class="swiper-button-prev button-prev-thumbs-{{ product.id }}"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-left"></use></svg></button>
+                    <button class="swiper-button-next button-next-thumbs-{{ product.id }}"><svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"></use></svg></button>
+                </div>
+            {%- endif -%}
+            <swiper-container class="product-image-thumbs" 
+                slides-per-view="7" 
+                loop="false" 
+                space-between="5" 
+                direction="horizontal"
+                {%- if block.settings.thumbs_nav_arrows -%}
+                    navigation='{
+                        "nextEl": ".button-next-thumbs-{{ product.id }}",
+                        "prevEl": ".button-prev-thumbs-{{ product.id }}"
+                    }'
+                {%- endif -%}
+                breakpoints='{
+                    "992": {
+                        {% if block.settings.template_type == 'classic-vertical' %}
+                            "direction":"vertical"
+                        {% endif %}   
+                    }
+                }
+                '>
+                {% for media in product.media %}
+                    {%- liquid
+                        assign preload = false
+                        if forloop.index <= 6
+                        assign preload = true
+                        endif
+                    -%}
+                    {% if media.media_type == 'image' %}
+                        <swiper-slide lazy="true">
+                            <div class="product-thumb--image" data-index="{{ forloop.index }}" data-mediaID="{{ media.id }}" role="treeitem">
+                                <div class="thumb-item rounded overflow-hidden">
+                                    {%- render 'image',
+                                        image: media,
+                                        sizes: '250px',
+                                        preload: preload,
+                                        class: 'img-fluid'
+                                    -%}
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                        <swiper-slide>
+                            <div class="product-thumb--image media--video" data-index="{{ forloop.index }}" data-mediaID="{{ media.id }}" role="treeitem">
+                                <div class="thumb-item rounded overflow-hidden">
+                                    {%- render 'image',
+                                        image: media.preview_image,
+                                        sizes: '250px',
+                                        preload: preload,
+                                        class: 'img-fluid'
+                                    -%}
+                                    <span class="icon-play position-absolute"></span>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    {% endif %}
+                {% endfor %}
+            </swiper-container>
+        </div>    
+    {% endif %}
+    {%- else -%}
+    {% liquid
+        assign product = block.settings.product
+        assign main_image = product.selected_variant.featured_image | default: product.featured_image
+        assign secondary_image = product.images[1]
+        assign card_title = product.selected_variant.title | default: product.title
+        assign preload_image = false
+        assign loading = 'lazy'
+        if template == 'collection' and collection.products[0].id == product.id or collection.products[1].id == product.id
+            assign preload_image = true
+            assign loading = 'eager'
+        endif
+    %}
+
+    
+    {%- capture attribute_list -%}
+        data-feauredImage
+    {%- endcapture -%}
+
+    {%- capture img_sizes -%}
+        {% comment %} (min-width: {{ settings.container_width }}) calc({{ settings.container_width }} / 2), 100vw {% endcomment %}
+        (min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 90 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"
+    {%- endcapture -%}
+
+        <div class="product-images-wrapper product-media-card w-100">
+            {%- if main_image == blank -%}
+                <div class="product--media" data-media-id="{{ product.featured_image.id }}">
+                    <a href="{{ product.url }}" class="d-block product-link position-relative w-100" data-product-link>
+                        {% comment %} {{ 'detailed-apparel-1' | placeholder_svg_tag: 'w-100' }} {% endcomment %}
+                        {% render 'placeholder-image' %}
+                    </a>
+                </div>
+            {%- else -%}
+                <div class="product--media" data-mediaID="{{ main_image.id }}">
+                    <a href="{{ product.url }}" class="d-block product-link position-relative w-100" data-product-link>
+                        {%- render 'image', 
+                            image: main_image,
+                            sizes: img_sizes,
+                            loading: loading,
+                            alt: card_title,
+                            preload: preload_image,
+                            attributes: attribute_list
+                        -%}
+                        {%- if block.settings.show_secondary_media and secondary_image -%}
+                            {% render 'image', 
+                                image: secondary_image,
+                                sizes: "(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw",
+                                alt: card_title,
+                                loading: 'lazy'
+                            %}
+                        {%- endif -%}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+{% endif %}
+
+{% schema %}
+    {
+        "name": "Product media card",
+        "tag": null,
+        "settings": [
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "range",
+                "id": "width",
+                "min": 20,
+                "max": 100,
+                "step": 5,
+                "unit": "%",
+                "label": "Width",
+                "default": 100
+            },
+            {
+                "type": "select",
+                "id": "template_type",
+                "label": "Template Type",
+                "options": [
+                    {
+                        "value": "classic-horizontal",
+                        "label": "Classic: Horizontal Thumbs"
+                    },
+                    {
+                        "value": "classic-vertical",
+                        "label": "Classic: Vertical Thumbs"
+                    }
+                ],
+                "default": "classic-horizontal"
+            },
+            {
+                "type": "checkbox",
+                "id": "thumb_image",
+                "label": "Display thumb image",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Main Image Slider Option"
+            },
+            {
+                "type": "checkbox", 
+                "id": "nav_arrows",
+                "label": "t:slider.navigation_arrows",
+                "default": true
+            },
+            {
+                "type": "select", 
+                "id": "nav_arrows_visible",
+                "label": "t:slider.navigation_arrows_visible",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "show_only_desktop",
+                        "label": "t:slider.hide_desktop"
+                    },
+                    {
+                        "value": "show_only_mobile",
+                        "label": "t:slider.hide_mobile"
+                    },
+                    {
+                        "value": "both",
+                        "label": "t:slider.both"
+                    }
+                ],
+                "default": "both"
+            },
+            {
+                "type": "select",
+                "id": "nav_arrows_color",
+                "label": "t:slider.navigation_arrows_color",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "light-arrow",
+                        "label": "t:slider.light"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.dark"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select",
+                "id": "nav_arrows_size",
+                "label": "t:slider.navigation_arrows_size",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "arrow-small",
+                        "label": "t:slider.size_small"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.size_default"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select", 
+                "id": "nav_arrows_outside",
+                "label": "t:slider.navigation_arrows_position",
+                "visible_if": "{{ block.settings.nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "inside",
+                        "label": "t:slider.navigation_arrows_inside"
+                    },
+                    {
+                        "value": "outside",
+                        "label": "t:slider.navigation_arrows_outside"
+                    }
+                ],
+                "default": "inside"
+            },
+            {
+                "type": "checkbox",
+                "id": "nav_dots",
+                "label": "t:slider.pagination",
+                "default": false
+            },
+            {
+                "type": "select", 
+                "id": "pagination_visible",
+                "label": "t:slider.pagination_visible",
+                "visible_if": "{{ block.settings.nav_dots == true  }}",
+                "options": [
+                    {
+                        "value": "show_only_desktop",
+                        "label": "t:slider.hide_desktop"
+                    },
+                    {
+                        "value": "show_only_mobile",
+                        "label": "t:slider.hide_mobile"
+                    },
+                    {
+                        "value": "both",
+                        "label": "t:slider.both"
+                    }
+                ],
+                "default": "both"
+            },
+            {
+                "type": "select",
+                "id": "pagination_color",
+                "label": "t:slider.pagination_color",
+                "visible_if": "{{ block.settings.nav_dots == true  }}",
+                "options": [
+                    {
+                        "value": "pagination-light",
+                        "label": "t:slider.light"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.dark"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "header",
+                "content": "Thumbs Image Slider Options"
+            },
+            {
+                "type": "checkbox", 
+                "id": "thumbs_nav_arrows",
+                "label": "t:slider.navigation_arrows",
+                "default": true
+            },
+            {
+                "type": "select", 
+                "id": "thumbs_nav_arrows_visible",
+                "label": "t:slider.navigation_arrows_visible",
+                "visible_if": "{{ block.settings.thumbs_nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "show_only_desktop",
+                        "label": "t:slider.hide_desktop"
+                    },
+                    {
+                        "value": "show_only_mobile",
+                        "label": "t:slider.hide_mobile"
+                    },
+                    {
+                        "value": "both",
+                        "label": "t:slider.both"
+                    }
+                ],
+                "default": "both"
+            },
+            {
+                "type": "select",
+                "id": "thumbs_nav_arrows_color",
+                "label": "t:slider.navigation_arrows_color",
+                "visible_if": "{{ block.settings.thumbs_nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "light-arrow",
+                        "label": "t:slider.light"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.dark"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "select",
+                "id": "thumbs_nav_arrows_size",
+                "label": "t:slider.navigation_arrows_size",
+                "visible_if": "{{ block.settings.thumbs_nav_arrows == true }}",
+                "options": [
+                    {
+                        "value": "arrow-small",
+                        "label": "t:slider.size_small"
+                    },
+                    {
+                        "value": "",
+                        "label": "t:slider.size_default"
+                    }
+                ],
+                "default": ""
+            },
+            {
+                "type": "paragraph",
+                "content": "Classic Horizontal Thumbs: Product Thumbnails below."
+            },
+            {
+                "type": "paragraph",
+                "content": "Classic Vertical Thumbs: Product Thumbnails on Left."
+            },
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
+                "type": "select",
+                "id": "ratio",
+                "label": "Image ratio",
+                "options": [
+                    {
+                        "value": "square",
+                        "label": "Square"
+                    },
+                    {
+                        "value": "landscape",
+                        "label": "Landscape"
+                    },
+                    {
+                        "value": "portrait",
+                        "label": "Portrait"
+                    }
+                ],
+                "default": "square"
+            },
+            {
+                "type": "select",
+                "id": "image_zoom",
+                "label": "Image Zoom",
+                "options": [
+                    {
+                        "value": "no_zoom",
+                        "label": "No zoom Effect"
+                    },
+                    {
+                        "value": "in_image_block",
+                        "label": "Click & hover"
+                    }
+                ],
+                "default": "no_zoom"
+            }
+        ],
+        "presets": [
+            {
+            "name": "Product media card",
+                "settings": {
+                    "product": "{{ closest.product }}"
+                }
+            }
+        ]
+    }
+{% endschema %}

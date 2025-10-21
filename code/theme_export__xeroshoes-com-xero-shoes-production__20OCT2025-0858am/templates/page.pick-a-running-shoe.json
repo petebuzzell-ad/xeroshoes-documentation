@@ -1,0 +1,764 @@
+{
+  "sections": {
+    "global_page_header_banner_8rAmFa": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_8zaHDD": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_UFeBWn": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_REywbQ": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-1",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_xqFQ9D": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>{{ closest.page.title }}<\/h1>",
+                        "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_xqFQ9D"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_REywbQ"
+              ]
+            }
+          },
+          "block_order": [
+            "group_UFeBWn"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_8zaHDD"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": ""
+      }
+    },
+    "global_featured_products_zWdqVB": {
+      "type": "global-featured-products",
+      "blocks": {
+        "static-section-header": {
+          "type": "_section-header",
+          "name": "t:names.section_header",
+          "static": true,
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-end",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-between",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-6",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-5",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0
+          },
+          "blocks": {
+            "group_e4BaDE": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "width": "col-lg-9",
+                "width_md": "col-md-9",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-block",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_Va6YGy": {
+                  "type": "heading",
+                  "name": "t:names.collection_title",
+                  "settings": {
+                    "text": "<h2>Our Best Sellers<\/h2>",
+                    "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                    "text_size": "",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-3",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_9HHULp": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Indulge in a lifestyle of luxury and elegance with pieces that speak to yoursuccess and elevate your presence.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_Va6YGy",
+                "text_9HHULp"
+              ]
+            },
+            "buttons_L6YCm3": {
+              "type": "buttons",
+              "settings": {
+                "link": "\/collections\/bestsellers",
+                "custom_video_play_button": false,
+                "icon": "none",
+                "label": "Shop All",
+                "style_class": "btn-primary",
+                "size_class": "",
+                "text_style": "",
+                "open_in_new_tab": false,
+                "hide_desktop": false,
+                "hide_mobile": false,
+                "full_width": false,
+                "download_link": false,
+                "download_all_logos_in_the_section": false,
+                "add_hidden_text_for_seo": false,
+                "hidden_text_for_seo": "Hidden Text",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_e4BaDE",
+            "buttons_L6YCm3"
+          ]
+        },
+        "static-product-card": {
+          "type": "product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product": "{{ closest.product }}",
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0"
+          },
+          "blocks": {
+            "product_image_mG9wcg": {
+              "type": "product-image",
+              "name": "t:names.product_image",
+              "settings": {
+                "width": 100,
+                "product": "{{ closest.product }}",
+                "show_secondary_media": false
+              },
+              "blocks": {}
+            },
+            "product_title_YJmB36": {
+              "type": "product-title",
+              "name": "t:names.product_information",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "title": "",
+                "font_size": "fs-lg",
+                "font_weight": "fw-normal",
+                "text_style": "text-math-auto",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "link_product_title": true,
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_sku_knRcJL": {
+              "type": "product-sku",
+              "name": "t:names.product_sku",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "font_size": "fs-lg",
+                "text_style": "text-uppercase",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#666666",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-1",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-1"
+              },
+              "blocks": {}
+            },
+            "product_price_qJxTQ4": {
+              "type": "product-price",
+              "name": "t:names.product_price",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "price_font_size": "fs-lg",
+                "price_font_weight": "fw-normal",
+                "color": "#0f172b",
+                "sale_price_font_size": "fs-md",
+                "sale_price_font_weight": "fw-normal",
+                "sale_color": "#777777",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3"
+              },
+              "blocks": {}
+            },
+            "product_form_PKXVzr": {
+              "type": "product-form",
+              "name": "t:names.product_form",
+              "settings": {
+                "product": "{{ closest.product }}",
+                "form_style": "product-card"
+              },
+              "blocks": {
+                "product_variant_picker_bdLecq": {
+                  "type": "_product-variant-picker",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "variant_picker_type": "swatches",
+                    "show_variant_label": true,
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-3",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-3",
+                    "title": "Size Guide"
+                  },
+                  "blocks": {}
+                },
+                "buy_buttons_ycDr4Y": {
+                  "type": "_buy-buttons",
+                  "name": "t:names.product_buy_buttons",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "show_addtocart": true,
+                    "addtocart_full": true,
+                    "label": "",
+                    "btn_style": "btn-primary",
+                    "size_class": "",
+                    "show_quickview": false,
+                    "quickview_full": false,
+                    "quickview_label": "Quick Shop",
+                    "quickview_icon": "none",
+                    "quickview_btn_style": "btn-primary",
+                    "quickview_size_class": "",
+                    "show_dynamic_checkout": false,
+                    "show_gift_recipient_form": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_variant_picker_bdLecq",
+                "buy_buttons_ycDr4Y"
+              ]
+            }
+          },
+          "block_order": [
+            "product_image_mG9wcg",
+            "product_title_YJmB36",
+            "product_sku_knRcJL",
+            "product_price_qJxTQ4",
+            "product_form_PKXVzr"
+          ]
+        }
+      },
+      "name": "t:names.products_list",
+      "settings": {
+        "fluid_layout": false,
+        "container_width": "container-fluid",
+        "right_side_fullwidth": false,
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-md",
+        "section_top_spacing_mobile": "spacing-top-mobile-md",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "featured_products": [
+          "360-men",
+          "prio-men",
+          "hfs-men",
+          "prio-neo-women",
+          "nexus-knit-women",
+          "hfs-ii-women-clearance",
+          "prio-women",
+          "nexus-knit-men",
+          "prio-neo-men",
+          "kelso-women",
+          "kelso-men",
+          "speed-force-men"
+        ],
+        "layout_type": "grid",
+        "max_products": 12,
+        "columns": 4,
+        "ipad_columns": 3,
+        "mobile_columns": 2,
+        "slides_per_view": 4,
+        "slides_per_view_ipad": 3.2,
+        "slides_per_view_mobile": 2,
+        "columns_gap": 30,
+        "columns_gap_ipad": 20,
+        "columns_gap_mobile": 15,
+        "rows_gap": 30,
+        "rows_gap_ipad": 20,
+        "rows_gap_mobile": 15,
+        "section_bg_color": "",
+        "ratio": "square",
+        "button_style": false,
+        "button_position": "card_bottom",
+        "nav_arrows": true,
+        "nav_arrows_visible": "both",
+        "nav_arrows_color": "",
+        "nav_arrows_size": "",
+        "nav_arrows_outside": "inside",
+        "nav_dots": false,
+        "pagination_visible": "both",
+        "pagination_color": "",
+        "nav_scrollbar": true,
+        "scrollbar_visible": "both",
+        "scrollbar_color": ""
+      }
+    },
+    "custom_section_zqVUBi": {
+      "type": "custom-section",
+      "blocks": {
+        "heading_94bEDG": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "text": "<h2>Picking a Running Shoe Video Transcript (<a href=\"https:\/\/xeroshoes.com\/wp-content\/uploads\/2017\/12\/HowToPickAGoodRunningShoe.pdf\">PDF here<\/a>)<\/h2>",
+            "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+            "text_size": "",
+            "font_family": "font-family-heading",
+            "text_style": "",
+            "font_weight": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "p"
+          },
+          "blocks": {}
+        },
+        "text_with_id_7VtbV3": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<ol><li><a href=\"#1\"><strong>INTRO – THE #1 RULE FOR RUNNING SHOES [00:00:00]<\/strong><\/a><\/li><li><a href=\"#2\"><strong>CHARACTERISTICS OF A GOOD, SAFE RUNNING SHOE [00:05:00]<\/strong><\/a><\/li><li><a href=\"#3\"><strong>HOW TO BUY A RUNNING SHOE [00:14:40]<\/strong><\/a><\/li><li><a href=\"#4\"><strong>SHOE QUALITIES TO AVOID [00:23:16]<\/strong><\/a><\/li><li><a href=\"#5\"><strong>TRANSITIONING FROM AN OLD SHOE TO A NEW SHOE [00:25:14]<\/strong><\/a><\/li><li><a href=\"#6\"><strong>WHEN SHOULD YOU BUY NEW RUNNING SHOES?[00:28:21]<\/strong><\/a><\/li><li><a href=\"#7\"><strong>IN CLOSING, RECOMMENDED SHOES [00:31:50]<\/strong><\/a><\/li><\/ol>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-ol rte",
+            "custom_id": ""
+          },
+          "blocks": {}
+        },
+        "text_with_id_MkLGDT": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<h4><strong>I.  INTRO<\/strong><\/h4><p>Hi, Steven Sashen here, and in this video you’re going to learn how to pick a good running shoe.<\/p><p>The information comes from, in large part, this paper from the American College of Sports Medicine. It’s also coming from experience that I have, so I’ll be adding my editorial, but most of this is coming from the ACSM and their recommendations. So let’s just jump right in.<\/p><p>The ACSM says “Running shoes should be selected after careful consideration. With so many brands and styles of shoes on the marketing today, it is important to find the best fit for your feet and needs. There is no ‘right shoe’ that fits all runners. However, research and injury patterns have shown there are some general characteristics of a good, safe running shoe.”<\/p><p>Now, before we get started, I want to warn you that what you’re about to learn flies completely in the face of what you will hear from most people trying to sell you running shoes. You go to your average running shoe store, they will tell you the exact opposite of what you’re about to hear. Remember, this is research coming from the American College of Sports Medicine, not someone who has been paid to say certain things from a running shoe company.<\/p><p>Some may argue, “But you own a shoe company…” Trust me, you’ll hear the difference between what I’m saying and what someone who’s being paid to say things that are the opposite of what the American College of Sports Medicine is saying. Here we go.<\/p><p><strong>Protect the Foot [00:01:14]<\/strong><\/p><p>Let’s just start with this first paragraph because this really, if you get nothing out of this other than what’s in this first paragraph, this could change your life.<\/p><p>“A running shoe should protect the feet against injury but should not do the work of the foot by providing excessive cushioning and lots of extra support in the arch. A shoe should complement a strong foot.”<\/p><p>Let’s just parse that. Let’s break that down.<\/p><p>A running shoe should protect the feet against injury. That’s the fundamental function. If you look at running shoes prior to 1972, most of them were just thin leather soles and some leather on the top.<\/p><p>All they were doing was protecting the foot against injury. They weren’t providing any of the bells and whistles that you see in modern running shoes.<\/p><p>So, something to keep in mind that this whole new running shoe thing really kicked off in the early seventies and has changed dramatically, and what the ACSM is suggesting right here, first thing – protect the foot against injury. Primary function.<\/p><p><strong>Don’t Do the Foot’s Work [00:02:09]<\/strong><\/p><p>So next, “But shouldn’t do the work of the foot by providing excessive cushioning.”<\/p><p>Now what that means is that the work of the foot—and actually the entire lower body—its job is to be a natural spring and shock absorber.<\/p><p>So you don’t want the shoe to try and take over that role. And we’ll talk about why in a little bit, but suffice it to say, you want to let the foot and the rest of your lower body do its job.<\/p><p>Now, the reason you don’t want excessive cushioning is—Harvard’s Daniel Lieberman showed this—your foot has more nerve endings in the sole than anywhere but your fingertips and your lips, and one of the things that that sensory feedback mechanism gives you, it tells your brain how to use your whole body. It tells your brain what you’re stepping on or in.<\/p><p>And so if you have a bunch of cushioning, your brain basically tells your foot to land harder because it’s not getting information otherwise.<\/p><p>So it’s a paradoxical thing—paradoxical until you think about it, really—that you don’t want excessive cushioning because that actually has been shown to increase loading forces in the body.<\/p><p>Another reason that it increases loading forces is with a lot of cushioning you’ll often land with your leg fully outstretched straight leg, which means you’re sending force right up through the joints rather than using the muscles, ligaments and tendons as the natural spring and shock absorbers they’re built to be.<\/p><p>So you don’t want excessive cushioning and you don’t want lots of extra support in the arch – I’m going to argue you don’t need any, but let’s just start with you don’t need extra support in the arch.<\/p><p>Now, some people will go, “But I need support because I’m wearing my orthotics and…” etc.<\/p><p>Look at some research done about orthotics and support: There was a great article in the New York Times written by one of my favorite science writers—because she’s: A) brilliant, and; B) I love her name, which is Gina Kolata. It was looking at arch support and basically it showed that it’s primarily not necessary. Very few people are helped a little bit, for a little bit of time, but if you wear support over time it can actually be detrimental.<\/p><p>Think of it this way: You break your arm, you put your arm in a cast, it’s being supported, and when it comes out of the cast it is weaker.<\/p><p>Same thing happens with your foot. If you don’t let your foot move naturally by supporting it, it over time gets weaker, and that’s a vicious cycle. So you don’t need extra support.<\/p><p>“A shoe should complement a strong foot.” Now, you might say, “Do I have a strong foot?” Well, the answer is, if you’ve been wearing big thick shoes with a lot of cushioning, doing way more than just protecting your foot against injury with a lot of support, you may not.<\/p><p>So how do you get stronger? Same way you would if you’d come out of the cast. You start using that arm, it gets stronger. You use your foot, it gets stronger. You can use your foot when you have a shoe that does what it’s suggesting here – just protecting yourself against injury, not doing the work of your foot by providing excessive cushioning, not giving you a lot of extra arch support.<\/p><p>If you’ve been in highly supportive shoes, it can take you a little while to get those things working again, but anyone can get stronger at any age. So, just FYI. Okay, let’s go down a little further.<\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-block",
+            "custom_id": ""
+          },
+          "blocks": {}
+        },
+        "text_with_id_UXAMig": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<h4><strong>II. CHARACTERISTICS OF A GOOD, SAFE RUNNING SHOE<\/strong><\/h4><p><strong>No Drop [00:05:00]<\/strong><\/p><p>“Characteristics of a good, safe running shoe include minimal heel-to-toe drop. The drop is the difference in thickness of the heel cushion to the thickness in the forefoot cushion area.”<\/p><p>Or, another way of saying that, it’s just the difference in height between your heel and your forefoot when you’re standing on the ground in the shoe.<\/p><p>Let me show you an example of something. Yup, there we go. So here’s a shoe where I’ve drawn these two lines. Here’s basically a straight line parallel to the ground. Here’s the line you can see from the heel to the ball of the foot, and actually it goes a little further, but same idea. And this distance here is the drop.<\/p><p>In this case, this looks like about a half an inch, which is significant. This is practically—well, it’s not practically wearing high heels. That’s a bit of an exaggeration. But it’s a high-heeled product. I mean, that is a significant amount to elevate your heel.<\/p><p>Let’s back up. “Shoes with no drop or a small drop, 6 millimeters or less, are the best choice for allowing the foot to normally support loading during each gait cycle.”<\/p><p>So the gist of it is, the way your foot works, your foot has an arch and an arch works when both ends are kind of touching the ground properly. When you jack one end up, an arch falls down.<\/p><p>Same thing in your foot. When you unnaturally move your heel up, it just changes the whole biomechanics of your foot and makes it so you don’t load your foot properly. It also can offset your knees, your hip and your back, and cause your butt to stick out and cause other problems as well.<\/p><p>But, so first things first, you want to go with a shoe with no drop or a small drop. I’m going to use as an example for no drop a shoe that I just pulled off my foot. This is one of mine, I will confess. Xero Shoes have a zero drop, so the height of the ball of the foot is the same as the height of the heel because it’s a flat sole.<\/p><p>Let’s look at something else though before we jump off on that. Let’s look at a shoe like this one. So this is a Hoka shoe, and this is kind of deceptive because your heel sits in this cushion here. So this is actually—and I’m going to draw this line. If I do it correctly from the ball of the foot—well, that’s supposed to be a straight line. Yeah, it is.<\/p><p>There we go. It’s a straight line.<\/p><p>So, technically, this is a zero-drop shoe, but look at all of that cushioning and that is like an inch and a half of cushioning. And let’s go back to this first line right here, “should not do the work of the foot by providing excessive cushioning.” I’m just saying, that seems like excessive cushioning.<\/p><p>In fact, if you take a look at research from Irene Davis from Harvard, she investigated shoes like that and found that they do not in fact reduce the force going through your body with all that extra padding; in fact, often as I described because your brain wants to get feedback, can sometimes and often increase forces.<\/p><p><strong>On Toe Spring [00:07:42]<\/strong><\/p><p>So there’s something that’s actually not described in here about shoe shape that I want to bring up, and that’s a thing called toe spring.<\/p><p>That’s this angle here. Toe spring is designed because these soles are stiff, and with a stiff sole as you’re moving your foot, if it was a stiff flat sole, you would just be slapping the ground and your foot wouldn’t be able to move naturally.<\/p><p>So this toe spring was built in to kind of let your foot rock forward as you come off the ground, but the problem is your toes are like this all the time and that’s not natural.<\/p><p>So you can see that it looks like there’s some toe spring in the Xero shoe, but that’s actually, A) just the shape that the shoe has taken over time because I’ve used it, and; B) it naturally flattens out when you just put any pressure in it. Tiny bit of pressure, totally flattens out. So that’s the difference. And toe spring, again, that’s something that’s not mentioned in this article.<\/p><p><strong>Neutral [00:08:30]<\/strong><\/p><p>Okay, next characteristic of a good shoe:<\/p><p>“Neutral – means the shoe doesn’t contain motion control or stability components. These extra components interfere with normal foot motion during weight bearing.”<\/p><p>I want to tell you how this whole thing of motion control and stability came to be. So in early 1970s, when Nike started making higher-heeled shoes, when you have a higher-heeled shoe, when you put padding under the heel, you tend to use that padding. It’s just one of these things your brain does even though it’s not great for you. You use that padding, and so you’re landing on your heel.<\/p><p>Now, your heel—oh, I don’t have it. I normally have a foot skeleton around me. But your heel bone is essentially a ball. Have you ever tried to sit on one of those stability balls?<\/p><p>It’s not stable. Neither is your heel when you’re landing on your heel. So, suddenly you’re able to land on your heel but now you’re unstable, so now we have to build in motion control because you’re unstable. Holy smokes.<\/p><p>I don’t know if it talks about the arch thing later but there’s another thing that the reason that they started building in arch support is when you land on your heel, your foot gets fully extended by the time it comes down, so that arch you have in your foot gets primarily flattened out and that puts extra strain.<\/p><p>I mean, look at it like this is kind of strong but relaxed – that’s strained. So that strain is in the plantar fascia, the part underneath your foot. So when you land on your heel, you’re unstable, and you land and your plantar fascia are fully extended, they’re in a weak position when they’re trying to contract.<\/p><p>Think of it like your bicep. Your bicep is weaker here, stronger here. Same thing with your foot: It’s weaker here, stronger here.<br\/>So land on your heel, it adds all that extra force, it makes you unstable, and it puts your plantar fascia in a bad position. Otherwise, it’s awesome (joking).<\/p><p><strong>On Pronation Control [00:10:12]<\/strong><\/p><p>Now, some of you might say, “But wait, but wait – I need pronation control.” Okay, hold that thought. Here we go.<\/p><p>Let me just look at this part right here: “Be aware that all runners pronate or drop the foot inward. Pronation is a normal foot motion during walking and running. Pronation alone should not be a reason to select a running shoe. Runners may be told while shopping that because pronation is occurring, a shoe with arch support is best.”<\/p><p>And not just arch support, they post this part of the shoe to try to keep you from pronating. In fact, the opposite may be true. Pronation should occur. It’s a natural shock absorber.<\/p><p>Stopping pronation with materials in the shoes may actually cause foot or knee problems to develop. Excessive pronation can occur, and I’ll say something about that, but in most cases it can be corrected with therapy and exercises to strengthen the foot, leg and hip, rather than buy a shoe.<\/p><p>Benno Nigg did a great bit of research on this showing how your foot wants to just move naturally and if you add pronation control it actually can cause your muscles to overwork in ways that they’re not designed to, and I know other people have researched this as well.<\/p><p>But this idea that you need pronation control, look, if you pronate or someone told you you pronate, I’m betting the person who told you was either a doctor who was about to prescribe an orthotic for you or a shoe salesman who was about to prescribe a more expensive shoe with a bunch of pronation control.<\/p><p>Again, all the research is pretty clear – pronation is not a problem. It’s a made-up condition like, oh, just think of all the drugs that were made up to cure problems that didn’t exist until they had a drug to cure it. It’s the same kind of thing here. Something to keep in mind.<\/p><p><strong>The Irony with Pronation [00:11:43]<\/strong><\/p><p>And let me show you another thing. Wait, what’s this about pronation control? “Excessive pronation can occur, but in most cases can be corrected.” Let me talk about one thing that can cause excessive pronation. Let’s take a look at this.<\/p><p>So look at how flared this sole is. Look at how far out—here, I’m going to draw this again. So here’s the flare of the sole, here’s the flare on the heel of the sole, and your heel is actually going to rest right about here.<\/p><p>So what this means is that when you’re wearing this shoe and you’re typically going to land sort of slightly on the outside edge of your foot normally, you’re going to hit way further out than the actual outside edge of your foot, and because these soles are typically stiff along this curve—this is going to flatten out my curve drawing in a second. Oh, it didn’t. Good.<\/p><p>What that means is you’re going to hit this edge and it’s going to make your foot slam to the ground faster. It’s going to pronate faster. So that’s hyperpronation, which can send a vibration all the way up your leg and that can be problematic.<\/p><p>So ironically, the shoe with stability control can often be causing the problem. In fact, if you put this extra density stuff right here, that’s designed to control the pronation that’s being caused by this edge of the shoe over here. So it slams you down, but then this foam is trying to keep it from moving. And all of that is because if you land on your heel, you’re on an unstable surface.<\/p><p>But again, this is in the forefoot, this line over here. This heel flare is in the forefoot and midfoot. Let me find another image, like this one.<\/p><p>Here you can see the amount of flared out space of the heel—why’d it do that? Oh, do it this way. You can see that how far out the sole goes compared to where your foot goes, so that edge is hitting first, which causes your foot to hyperpronate, to pronate too quickly. That can be problematic.<\/p><p><strong>On Knowledgeable Staff [00:11:43]<\/strong><\/p><p>Okay, let’s just take a look at a few things. Oh, I love this.<\/p><p>“Where can you look for running shoes? Check in with a local running club and ask the leadership there where their members commonly purchase shoes or where merchants have a knowledgeable staff who have expertise with running shoes.”<\/p><p>Good luck, because most of the people who are going to be trying to sell you shoes have learned all of these things from shoe companies about why for example—so let’s go back here—why for example you need all this padding, why for example you need all this heel lift, why you need this toe spring, why you need this flare, why you need all of this motion control and support.<\/p><p>Most of the people that you’re going to be meeting at a running shoe store—most stores—will be telling you, again, the exact opposite of everything that’s in here in the ACSM report. So finding a knowledgeable staff is going to be really challenging.<\/p><p>You bring this paper to them and they will argue with you about how you’re wrong. They don’t have research to back it up. They just learned it from shoe company guys who are selling them their padding, their motion control, their stability, their support.<\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-block",
+            "custom_id": "2"
+          },
+          "blocks": {}
+        },
+        "text_with_id_pqaDMB": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<h4><strong>III. HOW TO BUY A RUNNING SHOE<\/strong><\/h4><p><strong>Foot Sizes [00:14:40]<\/strong><\/p><p>Okay, so here’s something. “How to buy a running shoe: Every time you shop, have your feet sized at the store.”<\/p><p>It’s amazing. Your left and right foot may be a different size, of course. Your feet will change shape over time. If you start using your feet, if you start engaging that arch, you can find that your foot gets shorter because your foot is being naturally pulled up by the stronger muscles, ligaments and tendons that are now being used.<\/p><p>So you definitely want to measure repeatedly. Don’t be married to a size. Shoe sizes are different between different brands. Sometimes, even within a brand, one product might fit one way and another product might fit a different way. So just find what fits. Don’t worry about the size thing.<\/p><p><strong>Foot Shape and Arch Height [00:15:15]<\/strong><\/p><p>“Foot shape or arch height are not good indicators of what kind of running shoe to buy.”<\/p><p>In other words, just because you think you have a flat foot or a high arch, that doesn’t tell you what to buy. There’s no correlation between having a flat foot or a high arch and a specific shoe. Keep that in mind.<\/p><p><strong>In-Store Advice [00:15:31]<\/strong><\/p><p>“Avoid buying shoes based on advice given after someone in a store has watched you walk. Your gait and foot motion are very different when you walk and run.”<\/p><p>Very, very true. But equally true, if someone put you on a treadmill, just because they’re watching how you move at 60 frames a second doesn’t mean that that’s giving you information about what’s appropriate for a shoe.<\/p><p>Let’s just go back: “Shoe shouldn’t do the work of the foot by providing excessive cushioning and lots of extra support in the arch.”<\/p><p>Looking at someone running on a treadmill can be very useful. Looking at 60 frames a second or even fewer frames a second is not necessarily giving you the information that you need.<\/p><p>I mean, as an example, I had some testing done by the former head of biomechanics and engineering for the US Olympic Committee and he filmed me at 500 frames a second and in the last two frames, as my right foot was coming to the ground, it was rotating outward slightly before it touched down.<\/p><p>There was some tightness in my hamstring that was making that happen, but you would never see that at 60 frames a second, or at 16 frames a second, which is most video, or 24 or 48. Or even 200 frames a second, you wouldn’t have seen that.<\/p><p>But more importantly, someone’s going to look at you on video – how do you know they know what to look for, they’re good at looking, and they’re going to take whatever they see and turn that into an appropriate recommendation? Most of the people who are looking at you on a treadmill have learned how to evaluate that information from a shoe company telling them, “Here’s what you look for, and then here’s what shoe you put them in.”<\/p><p>Mostly it’s going to be shoes that violate all these things, coming right back to the top. So, be careful about that. In fact, all runners pronate. Yes, that’s true.<\/p><p><strong>Buy Shoes at the End of the Day [00:17:12]<\/strong><\/p><p>Okay, so let’s go on.<\/p><p>“Buy running shoes at the end of the day when your feet have swollen as much as they will and the shoes won’t feel as tight.”<\/p><p>Great idea. Your feet definitely do change size and shape based on temperature, based on use, based on whether you’ve just done a big run or not. So, keep that in mind.<\/p><p><strong>Wide Toe Box [00:17:27]<\/strong><\/p><p>“Be sure the shoe has a wide toe box.”<\/p><p>Now, did I mention before? I don’t even remember. My favorite thing about this article is that all the recommendations are not these shoes. The shoes at the top of this article, none of them are what the ACSM is recommending in this article. Even though these look really wide, that’s only because those soles flare out kind of like—let’s go back and see—kind of like this one.<\/p><p>So if you look at this from the bottom it can look pretty wide, but from the top it’s relatively narrow. And so keep in mind, so none of these shoes actually are what they’re about to recommend with a wide toe box.<\/p><p>“Be sure the shoe has a wide toe box. The toe box is the area where your forefoot and toes are. You should be able to wiggle your toes easily. Narrow toe boxes don’t permit the normal splay, or spread, of the foot bones during running. This will prevent your feet from being able to safely distribute forces during the loading phase of the gait.”<\/p><p>Let’s go back and take a look at some of these. Not only is this narrow—let’s draw my line—not only is that narrow, but is this the shape of your foot? No. Your feet are not pointy like that. Your big toe does not come in at that angle. Your little toes, they may do a lot of things.<\/p><p>There are different foot shapes.<\/p><p>I’m going to delete that. Let’s see if I can delete that and delete this one.<\/p><p>There are different foot shapes. Some people, their toes go almost straight across. Some people, their toes kind of curve like this. Some people have a higher second toe, a longer second toe than their first toe, although technically it’s that their first toe is shorter than it should be, not that their second toe is longer. That’s the condition I have. It’s called Morton’s toe.<\/p><p>Some people, the curve or the angle between their big toe and their little toe, I’ve seen things that look like this. Lots of different foot shapes, but I’ve never seen anyone whose foot was shaped like this unless they spent a whole lot of time in shoes shaped like this.<\/p><p>So what’s a variation? Take a look. Here we are again.<\/p><p>So just notice, A, nice and wide, shaped more like a human foot, and it’s not flared out. What you’re seeing on the top is the same as what you’re seeing on the bottom. So this is designed to let your feet splay, let your toes splay and spread out.<\/p><p>Now, will this fit—like a Xero shoe—will this fit every human being? No. There are different foot widths as well. If you’re like a 4EEEE, this shoe is not going to be wide enough. And the reason that people don’t make shoes for people with really, really out-there feet is because there’s just not that many people like that and it’s expensive to make these. We would love to make shoes that fit all human beings – we’re not a big enough company yet to do that.<\/p><p><strong>Half An Inch of Room… [00:19:59]<\/strong><\/p><p>So, on we go. Now, this is one that’s interesting. Let’s go to this.<\/p><p>“There should be at least a half an inch of room between the toes and the front of the shoe, about enough space to place your thumb between your big toe and the front of the shoe.”<\/p><p>I disagree. And here’s why they make this recommendation, though—it’s a great recommendation if you’re buying one of these regular shoes—and the reason why is because of all this foam between the outsole and your foot.<\/p><p>Think about taking a phone book and bending it. When you bend it, the outside doesn’t bend a whole lot, the inside is bent a whole lot. The inside effectively gets shorter than the outside.<\/p><p>It’s the same thing in a running shoe with a lot of foam on the inside, or a lot of foam here. When it bends, the inside becomes effectively shorter than the outside, and so you need that extra space because as you’re moving through the gait, that shoe will effectively get shorter and your toes can jam up in the front, then you can knock off your toenails and do all sorts of crazy things.<\/p><p>With a shoe like this one from Xero Shoes, there’s no midsole. There’s no giant chunk of foam. So when it bends, it doesn’t have that same phonebook effect.<\/p><p>So we know people who are sometimes wearing a smaller size in Xero Shoes than they do in other shoes because they’re not having to get that extra space to protect themselves from what happens with all that extra foam. So, keep that in mind. With regular shoes, totally need the space. With something like Xero Shoes without all that foam, you might not.<\/p><p><strong>Test for Narrowness [00:21:27]<\/strong><\/p><p>Let’s see. What else? Here we are.<\/p><p>“Test the shoe to determine if it’s too narrow. Take out the insert of the shoes and step on them on the ground. Does your foot hang over the side of the insert? If so, the shoe is too narrow.”<\/p><p>Again, totally true for a shoe like this, but not necessarily true for one of ours just because the way this is made, it’s so low to the ground that if your foot extends out further it’s not causing a problem. You’re going to be standing on the material that’s designed to actually handle a wider foot.<\/p><p>So we’ve seen people who they seem to extend over the—let’s see if I can show it that way—they can extend over the sole, but the shoe is designed to handle that so it’s not actually a problem. So again, for normal shoes, I totally recommend with this; not necessarily true for something like ours.<\/p><p><strong>Heel Slippage [00:22:18]<\/strong><\/p><p>This is a really interesting one: “When you test-run the running shoe, be sure that the heel doesn’t slip.”<\/p><p>Okay, so I was at an American Trail Running Association conference where people were asking, “How, do I prevent heel-slipping?” What makes the heel slip—let’s go back here, it’s a similar thing—is the stiffness of this sole. So as your foot is trying to bend, if the sole doesn’t bend as much as your foot, your heel can slip out, and people do a whole lot of crazy things to try to hold your heel in place when the shoe doesn’t match.<\/p><p>But if you take something like Xero Shoes, these can bend as much as your foot, in fact even more than your foot. So heel-slipping isn’t really a problem with these, but we also have this huarache-sandal-inspired lacing system that does hold your heel in place more than shoes that don’t have anything like that. This is functional. It’s not just decorative. You can actually tighten this up so, A, this’ll bend so your heel stays in, and you can also lock in your heel a little more with that heel strap.<\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-block",
+            "custom_id": "3"
+          },
+          "blocks": {}
+        },
+        "text_with_id_TCCcPA": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<h4><strong>IV.    SHOE QUALITIES TO AVOID<\/strong><\/h4><p>Okay, some shoe qualities to avoid:<\/p><p><strong>High, Thick Cushioning [00:23:16]<\/strong><\/p><p>High, thick cushioning – we talked about this before. Soft cushioning may actually encourage runners to adopt worse biomechanics and land with greater impact than shoes with less cushioning. I would just take out the word “may.” It seems to.<\/p><p><strong>High Heel Cushion, Low Forefoot Cushion [00:23:33]<\/strong><\/p><p>Shoes that have a high heel cushion and a low forefoot cushion – again, that high heel-toe drop, that’s really problematic. But again, this one has no drop but tons and tons of cushioning, so keep that in mind.<\/p><p><strong>Extra Arch Support Inserts or Store-Based Orthotics [00:23:45]<\/strong><\/p><p>“Extra arch support inserts or store-based orthotics – they’re often not necessary. They should be considered a temporary fix until foot strength is increased. A therapist can help you with exercises that strengthen your foot so you don’t need arch support on a daily basis.”<\/p><p>Think about that one. Again, if you’ve been keeping something weak, if you’ve been keeping it in the cast, then all you need to do is get it stronger. You don’t need to keep supporting it.<\/p><p>I saw a company that makes an insole and they had an ad. I won’t mention their name. They had an ad that was a drawing of a foot in profile and then a drawing of a bare foot with their sole underneath it, and it said “37% less stress, instantly.”<\/p><p>And I asked them, I said, “Were you measuring stress by measuring muscle activation by using an EMG, an electromyograph?”<\/p><p>And they said, “Yeah, we were.”<\/p><p>And I said, “So what you’re saying is, when I step on your insole, my muscles are working 37% less. So I’ve just become almost 40% weaker just by standing on your insole. Wouldn’t it make more sense if I was trying to get rid of stress by putting my foot in a cast so I would have 100% less stress?”<\/p><p>And they didn’t know how to respond to that.<\/p><p>So you don’t want to just keep your foot supported, immobile, because over time it just gets weaker, weaker, weaker. You can strengthen your foot at any time just by starting to use them naturally, and that’s of course what I recommend and it’s what the American College of Sports Medicine recommends as well.<\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-block",
+            "custom_id": "4"
+          },
+          "blocks": {}
+        },
+        "text_with_id_GmUFeK": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<h4><strong>V. TRANSITIONING FROM AN OLD SHOE TO A NEW SHOE<\/strong><\/h4><p><strong>Transition Period [00:25:14]<\/strong><\/p><p>Okay, we’re coming into the closing stretch here.<\/p><p>“Be aware when you change from one shoe to another there should be a transition period where you need to wear the new shoes for part of a run. Over a couple of weeks, the time wearing the new shoe can increase till the entire run is performed with the new shoe.”<\/p><p>There’s an idea that if you’re going to go to something that’s really flat, a zero-drop shoe, that you’re supposed to use transition shoes just to go lower, lower, lower, lower, till you get to something like that. That was made up by companies that sell transition shoes or sell things that are 10-mil, 6-mil drop shoes, and don’t sell something that’s a zero-drop shoe.<\/p><p>So that’s propaganda, and what you want to do instead is what they’re suggesting here: Just start with a little bit of time, build up the amount of time. It’s like going to the gym after your arm comes out of the cast.<\/p><p>You don’t go to the gym immediately and just do six hours of bicep curls. You do a little bit with a little bit of weight and over time you add weight, you add reps, you add more intensity. Same thing when you’re switching to a shoe like what the ACSM is describing, or any shoe really, but especially with what they’re describing.<\/p><p><strong>Exercises [00:26:14]<\/strong><\/p><p>“Exercises to increase foot and hip strength should be done before and as you transition to the new shoe. When initially exercising in shoes with a minimal drop, the lower extremities will need to adapt by activating the muscles in the hip and gluteal (buttock) area. There may be some initial soreness in these areas for the first couple of weeks.”<\/p><p>Listen to what that’s saying. This one’s an amazing thing because what it’s saying is when you use a shoe like this, you are potentially using the muscles in your hips and glutes that you weren’t using when you were in a shoe with a big heavy drop and a whole bunch of cushioning.<\/p><p>So just something to think about that you’re actually using the muscles called “the prime movers” in your body when you let your feet and butt and legs move naturally. It’s kind of obvious. If you let your body do what it’s designed to do, it’ll do what it’s designed to do, and the way your hip and butt are designed to work is with a natural gait, with a natural style, not with a big, elevated, padded thing.<\/p><p><strong>Transition Shoe When Switching to a Lower Heel-to-Toe Drop? [00:27:06]<\/strong><\/p><p>“If you’re switching from a shoe with a high heel-to-toe drop to a shoe with a low drop, consider using a transition shoe with a moderate heel drop for the first part and then switch.”<\/p><p>I have not seen that that’s useful. Again, one of the places I’ll disagree. We’ve had thousands of people just switch into these and be totally fine.<\/p><p>Now, back to the soreness thing, sometimes people will say if you switch to a shoe that has no drop you’ll get Achilles tendonitis, your Achilles will get sore, your calves will get sore – totally optional. There are some videos that I have at xeroshoes.com that talk about that.<\/p><p>Basically, if you’re getting calf soreness, it’s because you’re doing one of two things. You’re either landing on your toes and decelerating, which puts strain on your calf, or you’re pushing off too much with your calf, which puts strain on your calf. Neither of those is necessary.<\/p><p>If you land with your foot under your body, you can land with sort of a midfoot landing or a flatfooted landing so you’re not trying to decelerate too much with your calves. And rather than pushing off, you want to think about lifting off – imagine lifting your knees by flexing your hip rather than pushing your knees off the ground by pushing with your toes. So that will reduce soreness also.<\/p><p>Again, starting slow, just like it said before, just build up the amount of time you’re doing this over time and you won’t have that problem.<\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-block",
+            "custom_id": "5"
+          },
+          "blocks": {}
+        },
+        "text_with_id_XUaHcM": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<h4><strong>VI. WHEN SHOULD YOU BUY NEW RUNNING SHOES?<\/strong><\/h4><p>Here’s another one that’s really interesting – when should you buy new running shoes?<\/p><p><strong>Ideal Time Frames [00:28:21]<\/strong><\/p><p>“General rule of thumb: Purchase new shoes for every 350 miles. But, limited science has not identified the ideal timeframe for all running shoes. Different shoes will vary in wear based on what materials they’re made from, whether the shoes are used for more than running.<\/p><p>Faster wear may occur if the shoes are used for other activities.”<\/p><p>So let’s back up and talk about why there’s that recommendation of 300 to 500 miles. So first, all of this foam, this foam compresses over time. Now Phil Maffetone, who’s a brilliant running coach especially long-distance running, he used to recommend just getting the simplest shoe you could, or what he loves to say is, “If you get a shoe with foam in it, usually it only gets good once the foam has fully compressed when they’re telling you to replace it. Once the foam has compressed and it becomes more like a zero-drop thing without a big elevated heel, without all that excessive cushioning.”<\/p><p>So A) They’re recommending that because the foam that they’re trying to sell you as being valuable has decomposed or has compressed out by that time, and; B) look at how thin the rubber is here. So it just so happens that by the time that foam compresses this rubber is probably wearing out.<\/p><p>What a shock. I’m getting punchy at this point.<\/p><p>Just as a comparison, this is about 5-1\/2 millimeters of solid rubber. We call it FeelTrue® rubber. We developed it specifically to give you protection, but also give you ground feedback so your brain can feel what’s happening with those things at the end of your legs and tell your whole body how to move correctly. Our soles have a 5000-mile warranty.<\/p><p>When we designed these soles with a rubber manufacturer—we designed the rubber with a rubber manufacturer—he said, “But that’s not what running shoe companies do,” and we said, “Yeah, we know!”<\/p><p>So keep in mind that that advice about 350 miles, plus or minus, is based on the construction of that shoe, and that’s, I would argue, it may be planned obsolescence. I don’t have any proof of that. Seems potentially likely. But some of it’s just, again, the materials.<\/p><p>Regardless of how much planning you do, there’s no foam that’s going to just stand up forever. It compresses, compresses, compresses over time.<\/p><p><strong>Wear Patterns [00:29:31]<\/strong><\/p><p>“If there are any wear patterns on the shoes that reveal the sole layers underneath, discard the shoes. Uneven wear can cause changes in running mechanics that lead to injury.”<\/p><p>Now, the wear pattern is going to be interesting because it’s going to tell you what you’re doing. And so the reality is what you’re seeing in the wear pattern is going to talk to you about frankly how the shoe is probably altering your gait so that you’re applying more force than is necessary in those places that are wearing heavily, maybe because you’re scraping your foot on the ground or landing, again, by basically applying braking forces, or you’re landing with that flared heel. That can put abrasion on the outside of your heel.<\/p><p>And if you’re pronating—I mean, all those things can be telling you more about the shoe than about you. And if you go back to what the ACSM is recommending, something that’s just giving you protection without excessive padding, without excessive support, you’re going to find that in that case the wear patterns may actually be more informative about what’s happening with your form in a way that you might want to pay attention to to reduce that.<\/p><p>So when with say that the soles have a 5000-mile sole warranty, it doesn’t mean they’re absolutely guaranteed to last that long. It means that we’ll replace them if they don’t, or pending what we have at <a href=\"\/pages\/warranty\" title=\"Xero Shoes Warranty\">https:\/\/xeroshoes.com\/pages\/warranty\/<\/a>.<\/p><p>But if they don’t last very long, that’s going to be pointing to some form issues that you may want to address, you may want to correct. And you’ll be getting that feedback. It’s not a Rorschach test. You’ll be getting a map of what your body is doing that you can use to become a better runner.<\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-block",
+            "custom_id": "6"
+          },
+          "blocks": {}
+        },
+        "text_with_id_z4dcrJ": {
+          "type": "text-with-id",
+          "name": "Text with ID",
+          "settings": {
+            "text": "<h4><strong>VII. IN CLOSING [00:31:50]<\/strong><\/h4><p>Holy smokes. That is way, way more than I had any intention of saying. I don’t know how long this video has gone but certainly longer than I expected.<\/p><p>But more importantly, I hope this helps you understand the reality behind running shoes compared to the mythology of running shoes, which is what most people are telling you when they’re trying to sell you shoes.<\/p><p>Again, it’s unabashed that I’m hoping that you try out a pair of—this is our <a href=\"\/collections\/performance\" title=\"\/collections\/performance\">Xero Shoes Prio<\/a>—I’m hoping you try our stuff out because it does almost everything that the ACSM is suggesting. The only thing it didn’t—what didn’t it say? Oh, half an inch of room. That’s not about the shoes. That’s just about fit.<\/p><p>Pretty much every—yeah, not too narrow. Oh, whether the insole is wider than your foot or not. But almost everything they recommend—no, not almost. Everything they recommend is what this shoe does.<\/p><p>So of course, I hope you get it, but not because I’m trying to convince you of anything, because I’m hoping that you see that what the American College of Sports Medicine says and what we’re doing are completely consistent, and that makes you interested in trying something like the Xero Shoes Prio or any of our other shoes or sandals.<\/p><p>I hope this was useful. I can’t wait to hear what you think. I hope you stuck with me this long. More importantly, the most important thing about finding a good running shoe is so you can go out and have fun, you can enjoy yourself, and I hope you do that regardless of what shoe you buy.<\/p><p>As we say at Xero Shoes though, just Feel the Freedom, Feel the Fun, Feel the World… and Live Life Feet First.<\/p>",
+            "font_family": "font-family-base",
+            "text_size": "fs-base",
+            "font_weight": "fw-normal",
+            "text_letter_spacing": "",
+            "text_style": "",
+            "alignment": "text-md-start",
+            "alignment_mobile": "text-start",
+            "color": "",
+            "margin_top_desktop": "mt-md-0",
+            "margin_bottom_desktop": "mb-md-0",
+            "margin_top_mobile": "mt-0",
+            "margin_bottom_mobile": "mb-0",
+            "custom_class": "anchor-block",
+            "custom_id": "7"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_94bEDG",
+        "text_with_id_7VtbV3",
+        "text_with_id_MkLGDT",
+        "text_with_id_UXAMig",
+        "text_with_id_pqaDMB",
+        "text_with_id_TCCcPA",
+        "text_with_id_GmUFeK",
+        "text_with_id_XUaHcM",
+        "text_with_id_z4dcrJ"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_8rAmFa",
+    "main",
+    "global_featured_products_zWdqVB",
+    "custom_section_zqVUBi"
+  ]
+}

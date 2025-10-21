@@ -1,0 +1,2050 @@
+{
+  "sections": {
+    "global_page_header_banner_pp4Ktg": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_PdcEB8": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "fluid_layout",
+            "image_enable": true,
+            "first_image": "shopify:\/\/shop_images\/GRC-BLK-Gracie-Hawaii-05-scaled.jpg",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.2,
+            "blend_mode": "none",
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_i9Rbhf": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-auto",
+                "width_md": "col-md-auto",
+                "width_sm": "col-auto",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-center",
+                "justify_content_mb": "justify-content-center",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_6MTckr": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-center",
+                    "align_items_mb": "align-items-center",
+                    "justify_content": "justify-content-md-center",
+                    "justify_content_mb": "justify-content-center",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-4",
+                    "padding_left_desktop": "ps-md-10",
+                    "padding_right_desktop": "pe-md-10",
+                    "padding_top_mobile": "pt-2",
+                    "padding_bottom_mobile": "pb-2",
+                    "padding_left_mobile": "ps-6",
+                    "padding_right_mobile": "pe-6",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "#ffffff",
+                    "border": "border",
+                    "border_width": 3,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_76XGgq": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>Our Promise to sustainability<\/h1>",
+                        "text_size": "h4",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "fw-medium",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_76XGgq"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_6MTckr"
+              ]
+            }
+          },
+          "block_order": [
+            "group_i9Rbhf"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_PdcEB8"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "small",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    },
+    "custom_section_Gmeghy": {
+      "type": "custom-section",
+      "blocks": {
+        "group_cCGCCL": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-2",
+            "padding_right_desktop": "pe-md-2",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-2",
+            "padding_right_mobile": "pe-2",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-3",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_9WiKAK": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Our company’s official name is Feel the World, Inc. not just because of how you experience connecting to the world in our shoes, but because <strong>we’re sensitive to the ecological impact of footwear manufacturing<\/strong>. It’s important to us that we be honest about our environmental impact and tell our green story only when it’s genuine, so we don’t engage in the misleading practice of greenwashing.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-xl",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_gwQ6ze": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>We’ve built our sustainability initiative on three guiding principles: <strong>Build it to Last<\/strong>, <strong>Use Less<\/strong>, and <strong>Source Better<\/strong>. We aim for these pillars — but <strong>we know we’re not perfect, and always strive to do better.<\/strong> Below you can learn where we are in our green story, and where we’re going from here.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-xl",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_9WiKAK",
+            "text_gwQ6ze"
+          ]
+        }
+      },
+      "block_order": [
+        "group_cCGCCL"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    },
+    "custom_section_kCPn9B": {
+      "type": "custom-section",
+      "blocks": {
+        "group_Ya4xCM": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-2",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#0f172b",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_hVpDH6": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-bottom",
+                "border_width": 1,
+                "border_color": "#0f172b",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_enyRhJ": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h2>Where We Are<\/h2>",
+                    "text_size": "h2",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-center",
+                    "alignment_mobile": "text-center",
+                    "color": "#0f172b",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-5",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-5",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_enyRhJ"
+              ]
+            }
+          },
+          "block_order": [
+            "group_hVpDH6"
+          ]
+        },
+        "group_fCJpxE": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-5",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-5",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-2",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_xhHPMT": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Our company’s official name is Feel the World, Inc. not just because of how you experience connecting to the world in our shoes, but because <strong>we’re sensitive to the ecological impact of footwear manufacturing<\/strong>. It’s important to us that we be honest about our environmental impact and tell our green story only when it’s genuine, so we don’t engage in the misleading practice of greenwashing.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-xl",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_xhHPMT"
+          ]
+        },
+        "group_4PmMYU": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-5",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-5",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "slide_items_RQagfq": {
+              "type": "slide-items",
+              "name": "Slider List",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "slides_per_view": 3,
+                "columns_gap": 30,
+                "slides_per_view_ipad": 2,
+                "columns_gap_ipad": 15,
+                "slides_per_view_mobile": 1.2,
+                "columns_gap_mobile": 15,
+                "loop": false,
+                "center_slide": false,
+                "auto_height": false,
+                "multirow": false,
+                "row_desktop": "2",
+                "row_ipad": "1",
+                "row_mobile": "1",
+                "autoplay": false,
+                "autoplay_delay": 2000,
+                "autoplay_speed": 1000,
+                "nav_arrows": false,
+                "nav_arrows_visible": "both",
+                "nav_arrows_color": "",
+                "nav_arrows_size": "",
+                "nav_arrows_outside": "inside",
+                "nav_dots": false,
+                "pagination_visible": "both",
+                "pagination_color": "",
+                "nav_scrollbar": false,
+                "scrollbar_visible": "both",
+                "scrollbar_color": "",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "bg_color": "transparent"
+              },
+              "blocks": {
+                "slide_kykLKG": {
+                  "type": "slide",
+                  "settings": {
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_color": "#666666",
+                    "border_radius": 0
+                  },
+                  "blocks": {
+                    "group_XjnhFe": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-3",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-3",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "image_QgUFeB": {
+                          "type": "image",
+                          "name": "Image",
+                          "settings": {
+                            "image": "shopify:\/\/shop_images\/TFM-BLK-Terra-Flex-II-Hawaii-06-1024x683.jpg",
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "custom_image_width": false,
+                            "custom_image_width_value": 160,
+                            "object_fit": "cover",
+                            "aspect_ratio": "",
+                            "enable_link": false,
+                            "enable_preload": false,
+                            "url": "",
+                            "enable_overlay": false,
+                            "overlay_bg_color": "#000000",
+                            "overlay_opacity": 0.5,
+                            "blend_mode": "none",
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        },
+                        "group_U8jMRG": {
+                          "type": "group",
+                          "name": "Group",
+                          "settings": {
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "max_width": 0,
+                            "display": "d-flex",
+                            "direction": "flex-md-column",
+                            "direction_mobile": "flex-column",
+                            "wrap": "flex-nowrap",
+                            "align_items": "align-items-md-start",
+                            "align_items_mb": "align-items-start",
+                            "justify_content": "justify-content-md-start",
+                            "justify_content_mb": "justify-content-start",
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "gap_column": "column-gap-md-0",
+                            "gap_row": "row-gap-md-3",
+                            "gap_column_mobile": "column-gap-0",
+                            "gap_row_mobile": "row-gap-3",
+                            "bg_color": "transparent",
+                            "border": "border-0",
+                            "border_width": 0,
+                            "border_color": "#666666",
+                            "border_radius": 0,
+                            "custom_class": ""
+                          },
+                          "blocks": {
+                            "heading_ET34Wy": {
+                              "type": "heading",
+                              "name": "Heading",
+                              "settings": {
+                                "text": "<h3>Build it to Last<\/h3>",
+                                "text_size": "h4",
+                                "font_family": "font-family-heading",
+                                "text_style": "",
+                                "font_weight": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-0",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            },
+                            "text_khbCXV": {
+                              "type": "text",
+                              "name": "Text",
+                              "settings": {
+                                "text": "<p>Xero Shoes are built to stay on your feet, not in a landfill. While most running shoe brands tell you to replace your shoes every 300–500 miles, our FeelTrue® rubber allows us to back our shoes with our 5,000 mile sole warranty.<\/p>",
+                                "font_family": "font-family-base",
+                                "text_size": "fs-base",
+                                "font_weight": "fw-normal",
+                                "text_letter_spacing": "",
+                                "text_style": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "#1d293d",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-0",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            }
+                          },
+                          "block_order": [
+                            "heading_ET34Wy",
+                            "text_khbCXV"
+                          ]
+                        }
+                      },
+                      "block_order": [
+                        "image_QgUFeB",
+                        "group_U8jMRG"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "group_XjnhFe"
+                  ]
+                },
+                "slide_yiz7j6": {
+                  "type": "slide",
+                  "settings": {
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_color": "#666666",
+                    "border_radius": 0
+                  },
+                  "blocks": {
+                    "group_LWA4Pp": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-3",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-3",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "image_ANYRtY": {
+                          "type": "image",
+                          "name": "Image",
+                          "settings": {
+                            "image": "shopify:\/\/shop_images\/ACW-BGL-Aqua-Cloud-Hawaii-05-1024x683.jpg",
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "custom_image_width": false,
+                            "custom_image_width_value": 160,
+                            "object_fit": "cover",
+                            "aspect_ratio": "",
+                            "enable_link": false,
+                            "enable_preload": false,
+                            "url": "",
+                            "enable_overlay": false,
+                            "overlay_bg_color": "#000000",
+                            "overlay_opacity": 0.5,
+                            "blend_mode": "none",
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        },
+                        "group_D4f6W9": {
+                          "type": "group",
+                          "name": "Group",
+                          "settings": {
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "max_width": 0,
+                            "display": "d-flex",
+                            "direction": "flex-md-column",
+                            "direction_mobile": "flex-column",
+                            "wrap": "flex-nowrap",
+                            "align_items": "align-items-md-start",
+                            "align_items_mb": "align-items-start",
+                            "justify_content": "justify-content-md-start",
+                            "justify_content_mb": "justify-content-start",
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "gap_column": "column-gap-md-0",
+                            "gap_row": "row-gap-md-3",
+                            "gap_column_mobile": "column-gap-0",
+                            "gap_row_mobile": "row-gap-3",
+                            "bg_color": "transparent",
+                            "border": "border-0",
+                            "border_width": 0,
+                            "border_color": "#666666",
+                            "border_radius": 0,
+                            "custom_class": ""
+                          },
+                          "blocks": {
+                            "heading_pT6UXq": {
+                              "type": "heading",
+                              "name": "Heading",
+                              "settings": {
+                                "text": "<h3>Use Less<\/h3>",
+                                "text_size": "h4",
+                                "font_family": "font-family-heading",
+                                "text_style": "",
+                                "font_weight": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-0",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            },
+                            "text_qLDNiE": {
+                              "type": "text",
+                              "name": "Text",
+                              "settings": {
+                                "text": "<p>With fewer components (such as no foam midsole), Xero Shoes put less strain on the environment and take less energy to produce.<\/p>",
+                                "font_family": "font-family-base",
+                                "text_size": "fs-base",
+                                "font_weight": "fw-normal",
+                                "text_letter_spacing": "",
+                                "text_style": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "#1d293d",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-0",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            }
+                          },
+                          "block_order": [
+                            "heading_pT6UXq",
+                            "text_qLDNiE"
+                          ]
+                        }
+                      },
+                      "block_order": [
+                        "image_ANYRtY",
+                        "group_D4f6W9"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "group_LWA4Pp"
+                  ]
+                },
+                "slide_7wknRb": {
+                  "type": "slide",
+                  "settings": {
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_color": "#666666",
+                    "border_radius": 0
+                  },
+                  "blocks": {
+                    "group_xM4a7X": {
+                      "type": "group",
+                      "name": "Group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-3",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-3",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "image_zBzVH6": {
+                          "type": "image",
+                          "name": "Image",
+                          "settings": {
+                            "image": "shopify:\/\/shop_images\/TTW-DSR_Z-Trail-EV-Dusty-Rose_LS-EKP_0375-1024x683.jpg",
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "custom_image_width": false,
+                            "custom_image_width_value": 160,
+                            "object_fit": "cover",
+                            "aspect_ratio": "",
+                            "enable_link": false,
+                            "enable_preload": false,
+                            "url": "",
+                            "enable_overlay": false,
+                            "overlay_bg_color": "#000000",
+                            "overlay_opacity": 0.5,
+                            "blend_mode": "none",
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        },
+                        "group_43jrEk": {
+                          "type": "group",
+                          "name": "Group",
+                          "settings": {
+                            "width": "col-lg-12",
+                            "width_md": "col-md-12",
+                            "width_sm": "col-12",
+                            "max_width": 0,
+                            "display": "d-flex",
+                            "direction": "flex-md-column",
+                            "direction_mobile": "flex-column",
+                            "wrap": "flex-nowrap",
+                            "align_items": "align-items-md-start",
+                            "align_items_mb": "align-items-start",
+                            "justify_content": "justify-content-md-start",
+                            "justify_content_mb": "justify-content-start",
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "gap_column": "column-gap-md-0",
+                            "gap_row": "row-gap-md-3",
+                            "gap_column_mobile": "column-gap-0",
+                            "gap_row_mobile": "row-gap-3",
+                            "bg_color": "transparent",
+                            "border": "border-0",
+                            "border_width": 0,
+                            "border_color": "#666666",
+                            "border_radius": 0,
+                            "custom_class": ""
+                          },
+                          "blocks": {
+                            "heading_JT6mTa": {
+                              "type": "heading",
+                              "name": "Heading",
+                              "settings": {
+                                "text": "<h3>Source Better<\/h3>",
+                                "text_size": "h4",
+                                "font_family": "font-family-heading",
+                                "text_style": "",
+                                "font_weight": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-0",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            },
+                            "text_akGGAW": {
+                              "type": "text",
+                              "name": "Text",
+                              "settings": {
+                                "text": "<p>We’re committed to using materials that produce authentic environmental benefits. For this reason, many shoes throughout our product line use Hemp, Coffee Carbon Fiber, or rPET.<\/p>",
+                                "font_family": "font-family-base",
+                                "text_size": "fs-base",
+                                "font_weight": "fw-normal",
+                                "text_letter_spacing": "",
+                                "text_style": "",
+                                "alignment": "text-md-start",
+                                "alignment_mobile": "text-start",
+                                "color": "#1d293d",
+                                "margin_top_desktop": "mt-md-0",
+                                "margin_bottom_desktop": "mb-md-0",
+                                "margin_top_mobile": "mt-0",
+                                "margin_bottom_mobile": "mb-0",
+                                "custom_class": ""
+                              },
+                              "blocks": {}
+                            }
+                          },
+                          "block_order": [
+                            "heading_JT6mTa",
+                            "text_akGGAW"
+                          ]
+                        }
+                      },
+                      "block_order": [
+                        "image_zBzVH6",
+                        "group_43jrEk"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "group_xM4a7X"
+                  ]
+                }
+              },
+              "block_order": [
+                "slide_kykLKG",
+                "slide_yiz7j6",
+                "slide_7wknRb"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_items_RQagfq"
+          ]
+        },
+        "group_3RdqAi": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-6",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-5",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-2",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_MUHgQc": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>In addition to using sustainable materials, we’re committed to ensuring all our materials are safe, and that they are sourced ethically. We believe in being as transparent about these matters as the rest of our sustainability efforts, so we have our <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Xero-Shoes-RSL-September-2021-1-2.pdf?v=1755152059\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Xero-Shoes-RSL-September-2021-1-2.pdf?v=1755152059\">Restricted Substances Test Protocol<\/a> and our <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Manufacturer-Code-of-Conduct.pdf?v=1755152059\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Manufacturer-Code-of-Conduct.pdf?v=1755152059\">Manufacturer Code of Conduct<\/a> available here.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-xl",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_MUHgQc"
+          ]
+        }
+      },
+      "block_order": [
+        "group_Ya4xCM",
+        "group_fCJpxE",
+        "group_4PmMYU",
+        "group_3RdqAi"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    },
+    "custom_section_xcphCz": {
+      "type": "custom-section",
+      "blocks": {
+        "group_U7BYB3": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-2",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#0f172b",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_bCRtQ6": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-center",
+                "align_items_mb": "align-items-center",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-bottom",
+                "border_width": 1,
+                "border_color": "#0f172b",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_7Pr79G": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h2>Where We're Going<\/h2>",
+                    "text_size": "h2",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-center",
+                    "alignment_mobile": "text-center",
+                    "color": "#0f172b",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-5",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-5",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_7Pr79G"
+              ]
+            }
+          },
+          "block_order": [
+            "group_bCRtQ6"
+          ]
+        },
+        "group_tQHbht": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-5",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-5",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-3",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-2",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_bfaWWx": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>As we move forward in our sustainability initiative, we’ll continue to use these pillars to focus our ecological efforts.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-xl",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-5",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-5",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_bfaWWx"
+          ]
+        }
+      },
+      "block_order": [
+        "group_U7BYB3",
+        "group_tQHbht"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    },
+    "media_with_text_NVmhLN": {
+      "type": "media-with-text",
+      "blocks": {
+        "group_XzJFxx": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_3qBgwM": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-stretch",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-4",
+                "bg_color": "#F8F6F4",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "image_xXgkB7": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/ZLM-DGR-Kelso-Hawaii-10-scaled.jpg",
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "",
+                    "enable_link": false,
+                    "enable_preload": false,
+                    "url": "",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "group_q7VEaP": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-8",
+                    "padding_bottom_desktop": "pb-md-8",
+                    "padding_left_desktop": "ps-md-8",
+                    "padding_right_desktop": "pe-md-8",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-5",
+                    "padding_left_mobile": "ps-3",
+                    "padding_right_mobile": "pe-3",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_EhrQdW": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h3>More Eco Friendly Shoes<\/h3>",
+                        "text_size": "h3",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_jT6iWn": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Xero Shoes is committed to expanding our use of sustainable materials into new and existing styles. As we grow, and as new opportunities become available, our goal is to grow our list of sustainable products.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_6VgT93": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Our Zelen, released in Spring of 2022, represents our latest efforts and future goals in sustainability.  We included <strong>recycled materials<\/strong> in the upper so this shoe would be sustainable from production to the end of its use.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "buttons_pN4pQK": {
+                      "type": "buttons",
+                      "name": "Button",
+                      "settings": {
+                        "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Zelen_Sustainability-1-scaled.jpg?v=1755152379",
+                        "custom_video_play_button": false,
+                        "icon": "none",
+                        "label": "Download Fact Sheet",
+                        "style_class": "btn-dark",
+                        "size_class": "",
+                        "text_style": "",
+                        "open_in_new_tab": true,
+                        "hide_desktop": false,
+                        "hide_mobile": false,
+                        "full_width": false,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_EhrQdW",
+                    "text_jT6iWn",
+                    "text_6VgT93",
+                    "buttons_pN4pQK"
+                  ]
+                }
+              },
+              "block_order": [
+                "image_xXgkB7",
+                "group_q7VEaP"
+              ]
+            }
+          },
+          "block_order": [
+            "group_3qBgwM"
+          ]
+        }
+      },
+      "block_order": [
+        "group_XzJFxx"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "container_width": "small_container_layout",
+        "right_side_fullwidth": false,
+        "no_gutters": false,
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "display": "d-flex",
+        "direction": "flex-md-row",
+        "direction_mb": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-center",
+        "justify_content": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    },
+    "media_with_text_GUnEwj": {
+      "type": "media-with-text",
+      "blocks": {
+        "group_bmFTpJ": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-3",
+            "gap_row_mobile": "row-gap-3",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "group_ntpyKP": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-stretch",
+                "align_items_mb": "align-items-stretch",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-5",
+                "bg_color": "#F8F6F4",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_fVPL3A": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-8",
+                    "padding_bottom_desktop": "pb-md-8",
+                    "padding_left_desktop": "ps-md-8",
+                    "padding_right_desktop": "pe-md-8",
+                    "padding_top_mobile": "pt-5",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-3",
+                    "padding_right_mobile": "pe-3",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_LxWiVe": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h3>Measuring Our IMpact<\/h3>",
+                        "text_size": "h3",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_ctmiWD": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>In addition to improving the eco-friendliness of our shoes, we have begun to gather data to measure the impact of our operations, manufacturing, and our product throughout its lifetime.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "heading_FKUN7K": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h4>IMPACT OF OUR BUSINESS OPERATIONS<\/h4>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_6eamy6": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>In 2021 we partnered with <a href=\"http:\/\/www.lotussustainability.com\/\" target=\"_blank\">Lotus Engineering and Sustainability<\/a> to do an inventory of our greenhouse gas emissions for our US and EU operations. This measured things like energy use for our offices, warehouse, and employee transportation. This fresh data has allowed us to establish a baseline for our operations and will allow us to set future goals, which you can keep an eye out for on this page.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_BBYqbF": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Lotus found that <strong>our total carbon emissions for the year were 294 Metric Tons. <\/strong>According to the EPA, that’s the equivalent of <a href=\"https:\/\/www.epa.gov\/energy\/greenhouse-gas-equivalencies-calculator\" target=\"_blank\">37 american homes<\/a> per year, or the amount of energy that can be compensated for by <a href=\"https:\/\/www.epa.gov\/energy\/greenhouse-gas-equivalencies-calculator\" target=\"_blank\">a single wind turbine running for less than a year<\/a>.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_akXybH": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Our largest emissions output was from our US and EU offices and our warehouse “stationary energy”. These are for things like lighting, heating, things you might see on your house’s energy bill, but on a larger scale (plus a few forklifts). This made up 74% of our carbon emissions.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_z3wGJy": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Following that was transportation at 22%, which includes commuting, our delivery van, and business travel.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_fcFAQX": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>4% is made up of waste (trash\/landfill). And 0.2% is made up of refrigerants (A\/C).<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_qDByVM": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We’ll be using this newly acquired data to help guide our sustainability efforts in the future.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-3",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "buttons_UVNkA7": {
+                      "type": "buttons",
+                      "name": "Button",
+                      "settings": {
+                        "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/All-Emissions-by-Sector.png?v=1755152378",
+                        "custom_video_play_button": false,
+                        "icon": "none",
+                        "label": "View Report",
+                        "style_class": "btn-dark",
+                        "size_class": "",
+                        "text_style": "",
+                        "open_in_new_tab": true,
+                        "hide_desktop": false,
+                        "hide_mobile": false,
+                        "full_width": false,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_LxWiVe",
+                    "text_ctmiWD",
+                    "heading_FKUN7K",
+                    "text_6eamy6",
+                    "text_BBYqbF",
+                    "text_akXybH",
+                    "text_z3wGJy",
+                    "text_fcFAQX",
+                    "text_qDByVM",
+                    "buttons_UVNkA7"
+                  ]
+                },
+                "image_GQFkVi": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/KOW-BLK-Kelso-Hawaii-14-scaled.jpg",
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "",
+                    "enable_link": false,
+                    "enable_preload": false,
+                    "url": "",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "group_fVPL3A",
+                "image_GQFkVi"
+              ]
+            }
+          },
+          "block_order": [
+            "group_ntpyKP"
+          ]
+        }
+      },
+      "block_order": [
+        "group_bmFTpJ"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "container_width": "small_container_layout",
+        "right_side_fullwidth": false,
+        "no_gutters": false,
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "display": "d-flex",
+        "direction": "flex-md-row",
+        "direction_mb": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-center",
+        "justify_content": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_pp4Ktg",
+    "main",
+    "custom_section_Gmeghy",
+    "custom_section_kCPn9B",
+    "custom_section_xcphCz",
+    "media_with_text_NVmhLN",
+    "media_with_text_GUnEwj"
+  ]
+}

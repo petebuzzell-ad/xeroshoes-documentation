@@ -1,0 +1,2427 @@
+{
+  "sections": {
+    "global_page_header_banner_8rAmFa": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_8zaHDD": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_UFeBWn": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_REywbQ": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-1",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_xqFQ9D": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>Sizing Info for Xero Shoes<\/h1>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_xqFQ9D"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_REywbQ"
+              ]
+            }
+          },
+          "block_order": [
+            "group_UFeBWn"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_8zaHDD"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "custom_section_XLEnYY": {
+      "type": "custom-section",
+      "blocks": {
+        "group_pfNtpP": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_JGDmXg": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Shoe sizing, especially online, is not a perfect process. That’s why we offer <strong>free exchanges<\/strong> for all US orders. You can read our full return\/exchange policy <a href=\"\/pages\/returns\" target=\"_blank\" title=\"Returns & Exchanges\">here<\/a>.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "#1d293d",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_fQi7xm": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Ordering outside of the US? We have sites for the <a href=\"https:\/\/www.xeroshoes.eu\/\" target=\"_blank\">EU<\/a> and <a href=\"https:\/\/www.xeroshoes.co.uk\/\" target=\"_blank\">UK<\/a>, as well as a number of online retailers in many countries like the Canada, Australia and Israel. Be sure to check out our store locator <a href=\"\/pages\/stores\" title=\"Xero Shoes Stores\">here<\/a>.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_JGDmXg",
+            "text_fQi7xm"
+          ]
+        },
+        "group_aRCGTV": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-4",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-4",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_6jXfWM": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Steven's Sizing Advice<\/h2>",
+                "text_size": "h4",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "custom_html_WMfrnX": {
+              "type": "custom-html",
+              "name": "HTML",
+              "settings": {
+                "custom_html": "<iframe width=\"100%\" height=\"500\" src=\"https:\/\/www.youtube.com\/embed\/0HEqK7ygHMA\" title=\"How to Find the Right Size For Your Xero Shoes\" frameborder=\"0\" allow=\" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"\"><\/iframe>",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_6jXfWM",
+            "custom_html_WMfrnX"
+          ]
+        },
+        "group_WB9Atm": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-6",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-6",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_49qprN": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Additional Sizing Information<\/h2>",
+                "text_size": "h5",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_ABnL3E": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Here are additional sizing recommendations — and size conversion charts — for our <a href=\"#shoes\" title=\"#shoes\">shoes<\/a> and <a href=\"#sandals\" title=\"#sandals\">sandals<\/a>.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_49qprN",
+            "text_ABnL3E"
+          ]
+        }
+      },
+      "block_order": [
+        "group_pfNtpP",
+        "group_aRCGTV",
+        "group_WB9Atm"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "template_faq_j4rK7Q": {
+      "type": "template-faq",
+      "blocks": {
+        "faq_item_pDca8n": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "View Product Specific Recommendations",
+            "answer": "<p><strong>Dillon Canvas – <\/strong>The Dillon Canvas fits true to size.*<\/p><p><strong>Dillon Knit – Big Kids – <\/strong>The Dillon Knit fits true to size.*<\/p><p><strong>Scrambler Low EV – <\/strong>The Scrambler Low EV fits true to size.*<\/p><p><strong>Scrambler Trail Low WP – <\/strong>The Scrambler Trail Low WP fits true to size.*<\/p><p><strong>Scrambler Trail Mid – <\/strong>The Scrambler Trail Mid fits true to size.*<\/p><p><strong>Scrambler Trail Mid WP – <\/strong>The Scrambler Trail Mid WP fits true to size.*<\/p><p><strong>Wynn – <\/strong>The Wynn fits true to size.*<\/p><p><strong>Breckenridge – <\/strong>The Breckenridge fits true to size.*<\/p><p><strong>Ridgeway Chelsea – Men –<\/strong> The Men’s Ridgeway Chelsea runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Ridgeway Chelsea – Women –<\/strong> The Women’s Ridgeway Chelsea fits true to size.*<\/p><p><strong>Dillon Leather – <\/strong>The Dillon Leather fits true to size.*<\/p><p><strong>Dillon Canvas Slip-On Youth – <\/strong>The Dillon Canvas Slip-On Youth fits true to size.*<\/p><p><strong>Dillon Canvas Slip-On – <\/strong>The Dillon Canvas Slip-On fits true to size.*<\/p><p><strong>H-Trail – <\/strong>The H-Trail fits true to size.*<\/p><p><strong>Kona – <\/strong>The Kona fits true to size.*<\/p><p><strong>Ridgeway Mesh Low – <\/strong>The Ridgeway Mesh Low fits true to size.*<\/p><p><strong>Scrambler Mid II – <\/strong>The Scrambler Mid II fits true to size.*<\/p><p><strong>Scrambler Mid II WP – <\/strong>The Scrambler Mid II WP fits true to size.*<\/p><p><strong>Nexus Knit – <\/strong>The Nexus Knit fits true to size.*<\/p><p><strong>Speed Force II – <\/strong>The Speed Force II fits true to size.*<\/p><p><strong>Scrambler Low – <\/strong>The Scrambler Low fits true to size.*<\/p><p><strong>Ridgeway – <\/strong>The Ridgeway fits true to size.*<\/p><p><strong>Pagosa – <\/strong>The Pagosa fits true to size.*<\/p><p><strong>Mesa Trail WP – <\/strong>The Mesa Trail WP fits true to size.*<\/p><p><strong>HFS II – <\/strong>The HFS II fits true to size.*<\/p><p><strong>Dillon – <\/strong>The Dillon fits true to size.*<\/p><p><strong>Glenn – <\/strong>The Glenn fits true to size.*<\/p><p><strong>Prio Neo<\/strong> – The Prio Neo fits true to size.*<\/p><p><strong>Sunrise <\/strong>– The Sunrise fits true to size.*<\/p><p><strong>Scrambler Mid <\/strong>– The Scrambler Mid fits true to size.*<\/p><p><strong>Forza Runner <\/strong>– The Forza Runner runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Forza Trainer <\/strong>– The Forza Trainer fits true to size.*<\/p><p><strong>Mesa Trail II <\/strong>– The Mesa Trail II fits true to size.*<\/p><p><strong>Prio Suede <\/strong>– The Prio Suede fits true to size.*<\/p><p><strong>Denver Leather <\/strong>– The Denver Leather fits true to size.*<\/p><p><strong>Ashland <\/strong>– The Ashland fits true to size.*<\/p><p><strong>Gracie <\/strong>– The Gracie fits true to size.*<\/p><p><strong>Aqua Cloud <\/strong>– The Aqua Cloud fits true to size. Be sure to confirm your size with the printable templates below.*<\/p><p><strong>Prio All-Day SR – Women <\/strong>– The Women’s Prio All-Day SR fits true to size.*<\/p><p><strong>Prio All-Day SR – Men <\/strong>– The Men’s Prio All-Day SR runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Kelso <\/strong>– The Kelso fits true to size.*<\/p><p><strong>Zelen <\/strong>– The Zelen fits true to size.*<\/p><p><strong>TerraFlex II <\/strong>– The TerraFlex II fits true to size.*<\/p><p><strong>All-Day Prio <\/strong>– The All-Day Prio fits true to size.*<\/p><p><strong>360 <\/strong>– The 360 fits true to size.*<\/p><p><strong>Tari <\/strong>– The Tari fits true to size.*<\/p><p><strong>Aqua X Sport <\/strong>– The Aqua X Sport fits true to size.*<\/p><p><strong>DayLite Hiker Fusion – Men <\/strong>– The Men’s DayLite Hiker Fusion fits true to size.*<\/p><p><strong>DayLite Hiker Fusion – Women <\/strong>– The Women’s DayLite Hiker Fusion runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Xcursion Fusion <\/strong>– The Xcursion Fusion runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Hemp Cassie <\/strong>– The Hemp Cassie fits true to size.*<\/p><p><strong>Hemp Hana <\/strong>– The Hemp Hana fits true to size.*<\/p><p><strong>HFS<\/strong> – The HFS runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Mesa Trail <\/strong>– The Mesa Trail runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Speed Force<\/strong> – The Speed Force runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Aptos<\/strong> – The Aptos fits true to size.*<\/p><p><strong>Alpine<\/strong> – The Alpine fits true to size.*<\/p><p><strong>Phoenix<\/strong> – The Phoenix fits true to size.*<\/p><p><strong>Prio – Men<\/strong> – On August 9th, 2019 we updated the sizing for the Men’s Prio, it now fits true to size.*<\/p><p><strong>Prio – Women<\/strong> – On July 31st, 2019 we updated the sizing for the Women’s Prio, it now fits true to size.*<\/p><p><strong>Denver<\/strong> – The Denver fits true to size.*<\/p><p><strong>Mika<\/strong> – The Mika runs small. We recommend choosing 1\/2 size larger than your usual size.*<\/p><p><strong>Z-Trail EV<\/strong> – The Z-Trail EV sport sandal fits true to size. You can confirm your size with the printable templates below.*<\/p><p><strong>Z-Trek<\/strong> -The Z-Trek sport sandal runs about 1\/2 size large, but only comes in whole sizes. You can confirm your size with the printable templates below.*<\/p><p><strong>Naboso Trail<\/strong> -The Naboso Trail sport sandal fits true to size. You can confirm your size with the printable templates below. Use the Z-Trail as a guide.*<\/p><p><strong>Genesis & Cloud<\/strong> – The Genesis and Cloud huarache sandals fit true to size. Be sure to confirm your size with the printable templates below.*<\/p><p><strong>Jessie<\/strong> – The Jessie Sandal fits true to size. Be sure to confirm your size with the printable templates below.*<\/p><p><strong>Previous Styles:<\/strong><\/p><p><strong>Colorado <\/strong>– The Colorado fits true to size.*<\/p><p><strong>Toronto – <\/strong>The Toronto fits true to size.*<\/p><p><strong>Oswego<\/strong> – The Oswego fits true to size.*<\/p><p><strong>TerraFlex – Men<\/strong> – On July 30th, 2019 we updated the sizing for the Men’s Terraflex, it now fits true to size.*<\/p><p><strong>TerraFlex – Women<\/strong> – On August 6th, 2019 we updated the sizing for the Women’s Terraflex, it now fits true to size.*<\/p><p><strong>Alston<\/strong> – The Alston fits true to size.*<\/p><p><strong>Veracruz<\/strong> -The Veracruz sport sandal fits true to size. You can confirm your size with the printable templates below. Use the Z-Trail as a guide.*<\/p><p><strong>Z-Trail<\/strong> – The Z-Trail sport sandal fits true to size. You can confirm your size with the printable templates below.*<\/p><p><strong>Melbourne<\/strong> – The Melbourne ran a bit large. We recommended choosing 1\/2 size smaller than your usual size.*<\/p><p><strong>Daylite Hiker EV – Women<\/strong> – On September 19th, 2019 we updated the sizing for the Women’s Daylite Hiker. We originally recommended a full size larger than your usual size prior to that date. We then recommended choosing 1\/2 size larger after that date.*<\/p><p><strong>Daylite Hiker EV – Men<\/strong> – On September 20th, 2019 we updated the sizing for the Men’s Daylite Hiker. We originally recommended a full size larger than your usual size prior to that date. We then recommended choosing 1\/2 size larger after that date.*<\/p><p><strong>Xcursion – Men & Women<\/strong> – The Xcursion fit true to size.*<\/p><p><strong>Coalton<\/strong> – The Coalton fit true to size.*<\/p><p><strong>Hana<\/strong> – On August 13th, 2019 we updated the sizing for the Hana, it then ran true to size. We originally recommended a full size larger than your usual size prior to that date. Note: The natural cotton canvas may require a brief break in period.*<\/p><p><strong>Lena<\/strong> – The Lena fits true to size, however if you are between sizes, we recommend choosing the larger size. The natural cotton canvas can start out snug, and may require a brief break in period.*<\/p><p><strong>Cassie<\/strong> – On August 18th, 2019 we updated the sizing for the Cassie. We then recommended choosing 1\/2 size larger than your usual size. We originally recommended a full size larger than your usual size prior to that date.*<\/p><p><strong>Pacifica<\/strong> – On October 18th, 2019 we updated the sizing for the Pacifica. We then recommended choosing 1\/2 size larger than your usual size. We originally recommended a full size larger than your usual size prior to that date.*<\/p><p><strong>Boaty<\/strong> – On October 8th, 2019 we updated the sizing for the Boaty. We then recommended choosing 1\/2 size larger than your usual size. We originally recommended a full size larger than your usual size prior to that date.*<\/p><p><strong>Vienna<\/strong> – On August 9th, 2019 we updated the sizing for the Vienna. We then recommended choosing 1\/2 size larger than your usual size. We originally recommended a full size larger than your usual size prior to that date.*<\/p><p>*Please note our sizing recommendations are based on customer feedback and do not ensure a proper fit.<\/p>",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_pDca8n"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#0f172b",
+        "text_alignment": "text-left",
+        "heading": "",
+        "txt": "",
+        "border_hide": true,
+        "width_auto": true
+      }
+    },
+    "custom_section_yKUWmt": {
+      "type": "custom-section",
+      "blocks": {
+        "group_yLt4XX": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-2",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-2",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_XaYxQe": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Shoes<\/h2>",
+                "text_size": "h4",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "group_UGK7HF": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-4",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_t7z4mx": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-5",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-3",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_njmXin": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Men's Shoes<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_ETqP4h": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"xs-sizes__table sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">US Sizes<\/th>\n<th scope=\"col\">EU Sizes<\/th>\n<th scope=\"col\">UK Sizes<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>6.5<\/td>\n<td>39.5<\/td>\n<td>5.5<\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td>40<\/td>\n<td>6<\/td>\n<\/tr>\n<tr>\n<td>7.5<\/td>\n<td>40.5<\/td>\n<td>6.5<\/td>\n\n<\/tr>\n<tr>\n<td>8<\/td>\n<td>41<\/td>\n<td>7<\/td>\n\n<\/tr>\n<tr>\n<td>8.5<\/td>\n<td>41.5<\/td>\n<td>7.5<\/td>\n<\/tr>\n<tr>\n<td>9<\/td>\n<td>42<\/td>\n<td>8<\/td>\n<\/tr>\n<tr>\n<td>9.5<\/td>\n<td>42.5<\/td>\n<td>8.5<\/td>\n<\/tr>\n<tr>\n<td>10<\/td>\n<td>43<\/td>\n<td>9<\/td>\n<\/tr>\n<tr>\n<td>10.5<\/td>\n<td>43.5<\/td>\n<td>9.5<\/td>\n<\/tr>\n<tr>\n<td>11<\/td>\n<td>44<\/td>\n<td>10<\/td>\n<\/tr>\n<tr>\n<td>11.5<\/td>\n<td>44.5<\/td>\n<td>10.5<\/td>\n<\/tr>\n<tr>\n<td>12<\/td>\n<td>45<\/td>\n<td>11<\/td>\n<\/tr>\n<tr>\n<td>12.5<\/td>\n<td>45.5<\/td>\n<td>11.5<\/td>\n\n<\/tr>\n<tr>\n<td>13<\/td>\n<td>46<\/td>\n<td>12<\/td>\n<\/tr>\n<tr>\n<td>14<\/td>\n<td>47<\/td>\n<td>13<\/td>\n<\/tr>\n<tr>\n<td>15<\/td>\n<td>48<\/td>\n<td>14<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_njmXin",
+                    "custom_html_ETqP4h"
+                  ]
+                },
+                "group_6EdzKp": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-7",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-3",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_rmLJeJ": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Men’s Shoe Sizing Info<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_NL7CVP": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<ul><li>All of our men’s shoes are wider than conventional men’s shoes. If you normally wear a larger size to get a wider fit in conventional shoes, you may not have to do that with Xero Shoes.<\/li><li>Natural materials (like leather or canvas) may stretch during initial wear.<\/li><li>If you think of your foot as particularly narrow, you can consider ordering a women’s style. Many of our male customers find a great fit in our women’s styles. Just be sure to adjust the size by 1.5 (for example a men’s 7 is the same as a women’s 8.5).<\/li><li>People like different types of fit — some like their toes near the end, others like 1\/4″-1\/2″ of extra space.<\/li><\/ul>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_rmLJeJ",
+                    "text_NL7CVP"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_t7z4mx",
+                "group_6EdzKp"
+              ]
+            },
+            "group_cRDeF7": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-6",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-4",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_aExrbp": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-5",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-3",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_RKBh4J": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Women's Shoes<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_iAH78N": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"xs-sizes__table sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">US Sizes<\/th>\n<th scope=\"col\">EU Sizes<\/th>\n<th scope=\"col\">UK Sizes<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>5<\/td>\n<td>35.5<\/td>\n<td>3.5<\/td>\n<\/tr>\n<tr>\n<td>5.5<\/td>\n<td>36<\/td>\n<td>4<\/td>\n<\/tr>\n<tr>\n<td>6<\/td>\n<td>36.5<\/td>\n<td>4.5<\/td>\n<\/tr>\n<tr>\n<td>6.5<\/td>\n<td>37<\/td>\n<td>37.5<\/td>\n\n<\/tr>\n<tr>\n<td>7<\/td>\n<td>37.5<\/td>\n<td>5.5<\/td>\n<\/tr>\n<tr>\n<td>7.5<\/td>\n<td>38<\/td>\n<td>6<\/td>\n<\/tr>\n<tr>\n<td>8<\/td>\n<td>38.5<\/td>\n<td>6.5<\/td>\n<\/tr>\n<tr>\n<td>8.5<\/td>\n<td>39<\/td>\n<td>7<\/td>\n<\/tr>\n<tr>\n<td>9<\/td>\n<td>39.5<\/td>\n<td>7.5<\/td>\n<\/tr>\n<tr>\n<td>9.5<\/td>\n<td>40<\/td>\n<td>8<\/td>\n<\/tr>\n<tr>\n<td>10<\/td>\n<td>40.5<\/td>\n<td>8.5<\/td>\n<\/tr>\n<tr>\n<td>10.5<\/td>\n<td>41<\/td>\n<td>9<\/td>\n<\/tr>\n<tr>\n<td>11<\/td>\n<td>41.5<\/td>\n<td>9.5<\/td>\n\n<\/tr>\n<tr>\n<td>11.5<\/td>\n<td>42<\/td>\n<td>9.5<\/td>\n<\/tr>\n<tr>\n<td>12<\/td>\n<td>42.5<\/td>\n<td>10.5<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_RKBh4J",
+                    "custom_html_iAH78N"
+                  ]
+                },
+                "group_zLEDAb": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-7",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-3",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_Gb47ap": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Women's Shoe Sizing Info<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_Q69nNN": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<ul><li>All of our women’s shoes are wider than conventional women’s shoes. If you normally wear a larger size to get a wider fit in conventional shoes, you may not have to do that with Xero Shoes.<\/li><li>Natural materials (like leather or canvas) may stretch during initial wear.<\/li><li>If you think of your foot as particularly wide, you can consider ordering a men’s style. Many of our female customers find a great fit in our men’s styles. Just be sure to adjust the size by 1.5 (for example a men’s 7 is the same as a women’s 8.5).<\/li><li>People like different types of fit — some like their toes near the end, others like 1\/4″-1\/2″ of extra space.<\/li><\/ul>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_Gb47ap",
+                    "text_Q69nNN"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_aExrbp",
+                "group_zLEDAb"
+              ]
+            },
+            "group_4df3jr": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-6",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-4",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_iJrdxi": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-3",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_fRhtPY": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Kid's Shoes<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_fxmgfq": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"xs-sizes__table sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">US Sizes<\/th>\n<th scope=\"col\">EU Sizes<\/th>\n<th scope=\"col\">UK Sizes<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>12<\/td>\n<td>30<\/td>\n<td>11<\/td>\n<\/tr>\n<tr>\n<td>13<\/td>\n<td>31<\/td>\n<td>12<\/td>\n<\/tr>\n<tr>\n<td>1<\/td>\n<td>32<\/td>\n<td>13<\/td>\n<\/tr>\n<tr>\n<td>2<\/td>\n<td>33<\/td>\n<td>1<\/td>\n\n<\/tr>\n<tr>\n<td>3<\/td>\n<td>34<\/td>\n<td>2<\/td>\n<\/tr>\n<tr>\n<td>4<\/td>\n<td>36<\/td>\n<td>3<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_fRhtPY",
+                    "custom_html_fxmgfq"
+                  ]
+                },
+                "group_cLJnGi": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-3",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_kMpdhj": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Kid's Shoe Sizing Info<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_V9Jj8x": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<ul><li>All of our women’s shoes are wider than conventional women’s shoes. If you normally wear a larger size to get a wider fit in conventional shoes, you may not have to do that with Xero Shoes.<\/li><li>Natural materials (like leather or canvas) may stretch during initial wear.<\/li><li>If you think of your foot as particularly wide, you can consider ordering a men’s style. Many of our female customers find a great fit in our men’s styles. Just be sure to adjust the size by 1.5 (for example a men’s 7 is the same as a women’s 8.5).<\/li><li>People like different types of fit — some like their toes near the end, others like 1\/4″-1\/2″ of extra space.<\/li><\/ul>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_kMpdhj",
+                    "text_V9Jj8x"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_iJrdxi",
+                "group_cLJnGi"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_XaYxQe",
+            "group_UGK7HF",
+            "group_cRDeF7",
+            "group_4df3jr"
+          ]
+        }
+      },
+      "block_order": [
+        "group_yLt4XX"
+      ],
+      "name": "Shoes",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": "shoes"
+      }
+    },
+    "custom_section_ejrqAN": {
+      "type": "custom-section",
+      "blocks": {
+        "group_VJiAEE": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-6",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-8",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_46rJtf": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Sandals<\/h2>",
+                "text_size": "h4",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "font_weight": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-4",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-4",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "group_fKyxk7": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_NQg4K8": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h3>2 Simple Steps to the Correct Fit<\/h3>",
+                    "text_size": "h5",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-2",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_7N3UBk": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<ul><li>Find your usual shoe size on the charts below. <em><strong>For the Z-Trek in particular, try 1 size smaller than your usual size.<\/strong><\/em><\/li><li>Verify the fit by printing the appropriate size template and comparing it to your foot. This step is very important for getting a great fit the first time.<\/li><\/ul>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_NQg4K8",
+                "text_7N3UBk"
+              ]
+            },
+            "group_p4kTaK": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-4",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-4",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_pMLzBg": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h4>Fit Information for Xero Sandals<\/h4>",
+                    "text_size": "h5",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-2",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_yjUTUi": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<ul><li>The Genesis and the original Cloud are unisex styles. For example a men’s 7 is the same exact shoe as a women’s 8.<\/li><li>The Aqua Cloud, Z-Trek and Z-Trail come in wider widths for men’s sizes and narrower widths for women’s sizes. However, many men with narrow feet find a great fit in the women’s sizes, and many women with wider feet find a great fit in the men’s sizes.<\/li><li>The Z-Trek is our only sandal that fits larger than expected for many customers. For example, many customers who are a size 9 in the Genesis, Cloud and Z-Trail are a size 8 in the Z-Trek.<\/li><li>The soles of the Genesis, original Cloud and Z-Trek are very thin and flexible. We recommend a snug fit for these styles.<\/li><li>The sole of the Z-Trail is thicker than our other sandals, so customers can get a roomier fit on this style, if preferred.<\/li><li>Click <a href=\"\/pages\/shoe-finder\" title=\"Shoe Finder\">here<\/a> to use our Shoe Finder to find the best sandals for you!<\/li><\/ul>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_pMLzBg",
+                "text_yjUTUi"
+              ]
+            },
+            "group_rTHEUh": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-4",
+                "padding_bottom_desktop": "pb-md-4",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-4",
+                "padding_bottom_mobile": "pb-4",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "heading_cbFRyt": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h4>Size Charts and Templates<\/h4>",
+                    "text_size": "h5",
+                    "font_family": "font-family-heading",
+                    "text_style": "",
+                    "font_weight": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-2",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_gdGQ6T": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>Watch the video below to see how to use the template. For the Venture and original Cloud, the toe post position is very important. For the Z-Trek and Z-Trail, the overall fit is what matters most.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "custom_html_U4A3qE": {
+                  "type": "custom-html",
+                  "name": "HTML",
+                  "settings": {
+                    "custom_html": "<iframe width=\"100%\" height=\"618\" src=\"https:\/\/www.youtube.com\/embed\/gsV5rxfbs-Q\" title=\"How to get the perfect fit for Xero Shoes Barefoot and Minimalist Sandals\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"\"><\/iframe>",
+                    "margin_top_desktop": "mt-md-3",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-3",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_cbFRyt",
+                "text_gdGQ6T",
+                "custom_html_U4A3qE"
+              ]
+            },
+            "group_tWNKx4": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-3",
+                "padding_left_desktop": "ps-md-3",
+                "padding_right_desktop": "pe-md-3",
+                "padding_top_mobile": "pt-3",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-3",
+                "padding_right_mobile": "pe-3",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "#F3F0EA",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "text_DWKqLc": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p><strong>Note: Be sure to print the templates at Actual Size (100% Scale) and verify with a ruler after printing.<\/strong><\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_DWKqLc"
+              ]
+            },
+            "group_NdGKb4": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-6",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-6",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_gYXi3q": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-3",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_q3NDqX": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Men's Z-Trek, Z-Trail and Naboso Trail:<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_Vqb6TH": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">Men's Sizes  (US)<\/th>\n<th scope=\"col\">Print Template<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n\n<tr>\n<td>6<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 6\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_6.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 7\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_7.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n\n<\/tr>\n<tr>\n<td>8<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 8\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_8.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n<\/tr>\n<tr>\n<td>9<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 9\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_9.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n<\/tr>\n<tr>\n<td>10<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 10\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_10.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n<\/tr>\n<tr>\n<td>11<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 11\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_11.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n<\/tr>\n<tr>\n<td>12<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 12\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_12.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n<\/tr>\n<tr>\n<td>13<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 13\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_13.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n<\/tr>\n<tr>\n<td>14<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 14\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Z-Trek_Size_Template_-_Mens_14.pdf?v=1755843303\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n\n<\/tr>\n<tr>\n<td>15<\/td>\n<td><a title=\"Z-Trek Size Template - Mens 15\" href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_q3NDqX",
+                    "custom_html_Vqb6TH"
+                  ]
+                },
+                "group_J7KFLA": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-3",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_wDDcHc": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Women's Z-Trek, Z-Trail and Naboso Trail:<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_eyUkm8": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">Women's Sizes  (US)<\/th>\n<th scope=\"col\">Print Template<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n\n<tr>\n<td>5<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 5\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Trail-Sandals-w5.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>6<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 6\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Trail-Sandals-w6.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 7\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Trail-Sandals-w7.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>8<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 8\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Trail-Sandals-w8.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>9<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 9\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Trail-Sandals-w9.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>10<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 10\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Trail-Sandals-w10.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>11<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 11\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Trail-Sandals-w11.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>12<\/td>\n<td><a title=\"Z-Trek Size Template - Womens 12\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/ZT-w12-1.pdf?v=1755844920\" target=\"_blank\" rel=\"noopener noreferrer\"><img style=\"display:inline;padding-right:10px;\" decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_wDDcHc",
+                    "custom_html_eyUkm8"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_gYXi3q",
+                "group_J7KFLA"
+              ]
+            },
+            "group_UFN7pM": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-6",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-6",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_irGpRk": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-3",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_i3cBpi": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Men's Aqua Cloud<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_ttnGe3": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">Men's Sizes  (US)<\/th>\n<th scope=\"col\">Print Template<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n\n<tr>\n<td>5<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 5\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_5.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n\n<tr>\n<td>6<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 6\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_6.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 7\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_7.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>8<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 8\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_8.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>9<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 9\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_9.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>10<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 10\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_10.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>11<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 11\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_11.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>12<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 12\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_12.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>13<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 13\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_13.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>14<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 14\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_14.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>15<\/td>\n<td><a title=\"Aqua Cloud Size Template - Mens 15\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Mens_15.pdf?v=1755846502\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_i3cBpi",
+                    "custom_html_ttnGe3"
+                  ]
+                },
+                "group_J6iV4A": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-6",
+                    "width_md": "col-md-6",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-3",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_4QitJ3": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Women's Aqua Cloud<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_4Tirba": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">Women's Sizes  (US)<\/th>\n<th scope=\"col\">Print Template<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n\n<tr>\n<td>5<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 5\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_5.pdf?v=1755847095\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>6<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 6\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_6.pdf?v=1755847095\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 7\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_7.pdf?v=1755856874\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>8<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 8\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_8.pdf?v=1755847095\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>9<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 9\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_9.pdf?v=1755847095\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>10<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 10\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_10.pdf?v=1755847095\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>11<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 11\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_11.pdf?v=1755847095\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>12<\/td>\n<td><a title=\"Aqua Cloud Size Template - Womens 12\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Aqua_Cloud_Size_Template_-_Womens_12.pdf?v=1755847095\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_4MKEJb": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>*Please note: The Aqua Cloud is a gendered sandal with different widths between Men’s and Women’s. The original Clouds are unisex and use the Genesis template instead.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-3",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-3",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_4QitJ3",
+                    "custom_html_4Tirba",
+                    "text_4MKEJb"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_irGpRk",
+                "group_J6iV4A"
+              ]
+            },
+            "group_d3m8jR": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-6",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-6",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_yVzwMV": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-7",
+                    "width_md": "col-md-7",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-3",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_4C6FFB": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>Genesis and Original Cloud (Unisex)<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_MNRUYV": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">Men's Sizes  (US)<\/th>\n<th scope=\"col\">Women's Sizes  (US)<\/th>\n<th scope=\"col\">Print Template<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n\n<tr>\n<td>5<\/td>\n<td>6<\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 5 Women 6\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_5_Women_6.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n\n<tr>\n<td>6<\/td>\n<td>7<\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 6 Womens 7\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_6_Womens_7.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td>8<\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 7 Womens 8\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_7_Womens_8.pdf?v=1755847606\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>8<\/td>\n<td>9<\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 8 Womens 9\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_8_Womens_9.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>9<\/td>\n<td>10<\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 9 Womens 10\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_9_Womens_10.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>10<\/td>\n<td>11<\/td>\n<td><a title=\"Genesis Cloud Size Template - Mens 10 Womens 11\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_Cloud_Size_-_Mens_10_Womens_11.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>11<\/td>\n<td>12<\/td>\n<td><a title=\"Genesis Cloud Size Template - Mens 11 Womens 12\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_Cloud_Size_-_Mens_11_Womens_12.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>12<\/td>\n<td><\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 12\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_12.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>13<\/td>\n<td><\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 13\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_13.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>14<\/td>\n<td><\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 14\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_14.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>15<\/td>\n<td><\/td>\n<td><a title=\"Genesis \/ Cloud Size Template - Mens 15\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Genesis_-_Cloud_Size_-_Mens_15.pdf?v=1755847607\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_4C6FFB",
+                    "custom_html_MNRUYV"
+                  ]
+                },
+                "group_QmAHqt": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-5",
+                    "width_md": "col-md-5",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-3",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_RFJawU": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>The Jessie Sandal<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_DTDaJ4": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">Women's Sizes  (US)<\/th>\n<th scope=\"col\">Print Template<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n\n<tr>\n<td>5<\/td>\n<td><a title=\"Jessie Sandal Size Template - Womens 5\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Jessie_Sandal_Size_-_Womens_5.pdf?v=1755849194\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>6<\/td>\n<td><a title=\"Jessie Sandal Size Template - Womens 6\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Jessie_Sandal_Size_-_Womens_6.pdf?v=1755849194\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td><a title=\"Jessie Sandal Size Template - Womens 7\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Jessie_Sandal_Size_-_Womens_7.pdf?v=1755857754\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>8<\/td>\n<td><a title=\"Jessie Sandal Size Template - Womens 8\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Jessie_Sandal_Size_-_Womens_8.pdf?v=1755849194\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>9<\/td>\n<td><a title=\"Jessie Sandal Size Template - Womens 9\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Jessie_Sandal_Size_-_Womens_9.pdf?v=1755849194\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>10<\/td>\n<td><a title=\"Jessie Sandal Size Template - Womens 10\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Jessie_Sandal_Size_-_Womens_10.pdf?v=1755849194\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>11<\/td>\n<td><a title=\"Jessie Sandal Size Template - Womens 11\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Jessie_Sandal_Size_-_Womens_11.pdf?v=1755849194\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_RFJawU",
+                    "custom_html_DTDaJ4"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_yVzwMV",
+                "group_QmAHqt"
+              ]
+            },
+            "group_99q7Ci": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-wrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-6",
+                "padding_bottom_desktop": "pb-md-6",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-6",
+                "padding_bottom_mobile": "pb-6",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_QFz8gr": {
+                  "type": "group",
+                  "name": "Group",
+                  "settings": {
+                    "width": "col-lg-7",
+                    "width_md": "col-md-7",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-3",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#666666",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_WkHqnU": {
+                      "type": "heading",
+                      "name": "Heading",
+                      "settings": {
+                        "text": "<h3>The Kid's Z-Trail Sandal<\/h3>",
+                        "text_size": "h5",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-3",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "custom_html_tWNXDX": {
+                      "type": "custom-html",
+                      "name": "Custom HTML",
+                      "settings": {
+                        "custom_html": "<div class=\"sizing-table\">\n<table class=\"text-center w-100\">\n<thead>\n<tr>\n<th scope=\"col\">Kid's Sizes<\/th>\n<th scope=\"col\">Print Template<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n\n<tr>\n<td>Kids 12<\/td>\n<td><a title=\"Kids Z-Trail Sandal Size Template - Kids 12\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Kids_Z-Trail_Sandal_Size_-_Kids_12.pdf?v=1755849796\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>Kids 13<\/td>\n<td><a title=\"Kids Z-Trail Sandal Size Template - Kids 13\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Kids_Z-Trail_Sandal_Size_-_Kids_13.pdf?v=1755849796\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>Youth 1<\/td>\n<td><a title=\"Kids Z-Trail Sandal Size Template - Youth 1\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Kids_Z-Trail_Sandal_-_Youth_1.pdf?v=1755849796\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>Youth 2<\/td>\n<td><a title=\"Kids Z-Trail Sandal Size Template - Youth 2\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Kids_Z-Trail_Sandal_Size_-_Youth_2.pdf?v=1755849796\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>Youth 3<\/td>\n<td><a title=\"Kids Z-Trail Sandal Size Template - Youth 3\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Kids_Z-Trail_Sandal_Size_-_Youth_3.pdf?v=1755849796\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<tr>\n<td>Youth 4<\/td>\n<td><a title=\"Kids Z-Trail Sandal Size Template - Youth 4\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/Kids_Z-Trail_Sandal_Size_-_Youth_4.pdf?v=1755849796\" target=\"_blank\" rel=\"noopener noreferrer\"><img decoding=\"async\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/printer.svg?v=1755844074\" alt=\"Barefoot Sandal Template\">Click to print Template<\/a><\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_WkHqnU",
+                    "custom_html_tWNXDX"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_QFz8gr"
+              ]
+            },
+            "group_f6ibzt": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-3",
+                "padding_left_desktop": "ps-md-3",
+                "padding_right_desktop": "pe-md-3",
+                "padding_top_mobile": "pt-3",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-3",
+                "padding_right_mobile": "pe-3",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "#F3F0EA",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "text_w44VQX": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p><strong>Note: Be sure to print the templates at Actual Size (100% Scale) and verify with a ruler after printing.<\/strong><\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_w44VQX"
+              ]
+            },
+            "group_U7PkDq": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-block",
+                "direction": "flex-md-column",
+                "direction_mobile": "flex-column",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-3",
+                "padding_bottom_desktop": "pb-md-3",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-3",
+                "padding_bottom_mobile": "pb-3",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "text_anHwKG": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>We want to make sure you get the correct size and enjoy your Xero Shoes. If you have any questions, call us at 303.447.3100 or <a href=\"\/pages\/contact\" title=\"\/pages\/contact\">contact us<\/a>.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-3",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-3",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_anHwKG"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_46rJtf",
+            "group_fKyxk7",
+            "group_p4kTaK",
+            "group_rTHEUh",
+            "group_tWNKx4",
+            "group_NdGKb4",
+            "group_UFN7pM",
+            "group_d3m8jR",
+            "group_99q7Ci",
+            "group_f6ibzt",
+            "group_U7PkDq"
+          ]
+        }
+      },
+      "block_order": [
+        "group_VJiAEE"
+      ],
+      "name": "Sandals",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": "sandals"
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_8rAmFa",
+    "custom_section_XLEnYY",
+    "template_faq_j4rK7Q",
+    "custom_section_yKUWmt",
+    "custom_section_ejrqAN"
+  ]
+}

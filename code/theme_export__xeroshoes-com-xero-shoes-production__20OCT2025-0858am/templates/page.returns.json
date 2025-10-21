@@ -1,0 +1,1320 @@
+{
+  "sections": {
+    "global_page_header_banner_XkYp6i": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_kY994D": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_N3JiEV": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_hPnArw": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-center",
+                    "align_items_mb": "align-items-center",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-1",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_XWcBp6": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>{{ closest.page.title }}<\/h1>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_XWcBp6"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_hPnArw"
+              ]
+            }
+          },
+          "block_order": [
+            "group_N3JiEV"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_kY994D"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    },
+    "custom_section_VAdbBp": {
+      "type": "custom-section",
+      "blocks": {
+        "group_n9FMHV": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_qVVTfY": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>If you are not completely satisfied with your order, you can make an online return or exchange within <strong>45 days<\/strong> of the original delivery date. Make sure your product is in<strong> the original packaging<\/strong> in <strong>brand new<\/strong>, <strong>unworn, and unaltered<\/strong> condition.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_qVVTfY"
+          ]
+        }
+      },
+      "block_order": [
+        "group_n9FMHV"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-center",
+        "align_items_mb": "align-items-center",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "global_features_grid_ztdEpc": {
+      "type": "global-features-grid",
+      "blocks": {
+        "static-featured-grid-list": {
+          "type": "featured-grid-list",
+          "name": "Icons with text list",
+          "static": true,
+          "settings": {
+            "display": "d-flex",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-row",
+            "wrap": "flex-wrap",
+            "align_items": "align-items-md-stretch",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-6",
+            "section_bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "",
+            "border_radius": 0
+          },
+          "blocks": {
+            "featured_card_with_link_mpcq48": {
+              "type": "_featured-card-with-link",
+              "name": "Feature card with Link",
+              "settings": {
+                "grid_size": "4",
+                "grid_size_md": "4",
+                "grid_size_sm": "12",
+                "link": "https:\/\/returns.xeroshoes.com\/?_gl=1*5w3b3y*_gcl_au*MTAwNDI0MzguMTc1NDA0ODQ0OA..",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_color": "",
+                "border_radius": 0
+              },
+              "blocks": {
+                "group_dQK6fn": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-center",
+                    "align_items_mb": "align-items-center",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-4",
+                    "padding_left_desktop": "ps-md-4",
+                    "padding_right_desktop": "pe-md-4",
+                    "padding_top_mobile": "pt-4",
+                    "padding_bottom_mobile": "pb-4",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border",
+                    "border_width": 0,
+                    "border_color": "#d5d5d5",
+                    "border_radius": 8,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_dTY7mU": {
+                      "type": "heading",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h6>Exchanges<\/h6>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_9iTb3M": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-center",
+                        "justify_content_mb": "justify-content-center",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-5",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-4",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "icon_3eL7hK": {
+                          "type": "icon",
+                          "name": "t:names.icon",
+                          "settings": {
+                            "icon": "founded",
+                            "icon_color": "#1d293d",
+                            "icon_color_bg": "",
+                            "border_width": 0,
+                            "border_color": "",
+                            "border_corner": 0,
+                            "image_upload": "shopify:\/\/shop_images\/returnexchange.png",
+                            "width": 150,
+                            "height": 150,
+                            "width_mobile": 150,
+                            "height_mobile": 150,
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "icon_3eL7hK"
+                      ]
+                    },
+                    "group_QDnF6g": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-block",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "text_hxMXTc": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>I want to exchange my item for something else.<\/p>",
+                            "font_family": "font-family-base",
+                            "text_size": "fs-base",
+                            "font_weight": "fw-normal",
+                            "text_letter_spacing": "",
+                            "text_style": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-0",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_hxMXTc"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "heading_dTY7mU",
+                    "group_9iTb3M",
+                    "group_QDnF6g"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_dQK6fn"
+              ]
+            },
+            "featured_card_with_link_DWQMTx": {
+              "type": "_featured-card-with-link",
+              "name": "Feature card with Link",
+              "settings": {
+                "grid_size": "4",
+                "grid_size_md": "4",
+                "grid_size_sm": "12",
+                "link": "https:\/\/returns.xeroshoes.com\/?_gl=1*5w3b3y*_gcl_au*MTAwNDI0MzguMTc1NDA0ODQ0OA..",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_color": "",
+                "border_radius": 0
+              },
+              "blocks": {
+                "group_RGBfUT": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-center",
+                    "align_items_mb": "align-items-center",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-4",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-4",
+                    "padding_bottom_mobile": "pb-4",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "",
+                    "border": "border",
+                    "border_width": 0,
+                    "border_color": "#d5d5d5",
+                    "border_radius": 8,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_nVUQeM": {
+                      "type": "heading",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h6>Returns<\/h6>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_Dp9mTJ": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-center",
+                        "justify_content_mb": "justify-content-center",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-5",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-4",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "icon_b8gpRk": {
+                          "type": "icon",
+                          "name": "t:names.icon",
+                          "settings": {
+                            "icon": "founded",
+                            "icon_color": "#1d293d",
+                            "icon_color_bg": "",
+                            "border_width": 0,
+                            "border_color": "",
+                            "border_corner": 0,
+                            "image_upload": "shopify:\/\/shop_images\/returns.png",
+                            "width": 150,
+                            "height": 150,
+                            "width_mobile": 150,
+                            "height_mobile": 150,
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "icon_b8gpRk"
+                      ]
+                    },
+                    "group_KVGtMJ": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-block",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "text_dCfBYe": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>I want to return my item.<\/p>",
+                            "font_family": "font-family-base",
+                            "text_size": "fs-base",
+                            "font_weight": "fw-normal",
+                            "text_letter_spacing": "",
+                            "text_style": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-0",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_dCfBYe"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "heading_nVUQeM",
+                    "group_Dp9mTJ",
+                    "group_KVGtMJ"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_RGBfUT"
+              ]
+            },
+            "featured_card_with_link_jVcUY7": {
+              "type": "_featured-card-with-link",
+              "name": "Feature card with Link",
+              "settings": {
+                "grid_size": "4",
+                "grid_size_md": "4",
+                "grid_size_sm": "12",
+                "link": "shopify:\/\/pages\/warranty",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_color": "",
+                "border_radius": 0
+              },
+              "blocks": {
+                "group_fNtbjc": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-center",
+                    "align_items_mb": "align-items-center",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-4",
+                    "padding_bottom_desktop": "pb-md-4",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-4",
+                    "padding_bottom_mobile": "pb-4",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-0",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-0",
+                    "bg_color": "transparent",
+                    "border": "border",
+                    "border_width": 0,
+                    "border_color": "#d5d5d5",
+                    "border_radius": 8,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_rE7G4p": {
+                      "type": "heading",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h6>Warranty<\/h6>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "font_weight": "",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#1d293d",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-4",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_NB6pgQ": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-flex",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-center",
+                        "align_items_mb": "align-items-center",
+                        "justify_content": "justify-content-md-center",
+                        "justify_content_mb": "justify-content-center",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-5",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-4",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "icon_PMrFzj": {
+                          "type": "icon",
+                          "name": "t:names.icon",
+                          "settings": {
+                            "icon": "founded",
+                            "icon_color": "#1d293d",
+                            "icon_color_bg": "",
+                            "border_width": 0,
+                            "border_color": "",
+                            "border_corner": 0,
+                            "image_upload": "shopify:\/\/shop_images\/warranty.webp",
+                            "width": 200,
+                            "height": 150,
+                            "width_mobile": 180,
+                            "height_mobile": 150,
+                            "padding_top_desktop": "pt-md-0",
+                            "padding_bottom_desktop": "pb-md-0",
+                            "padding_left_desktop": "ps-md-0",
+                            "padding_right_desktop": "pe-md-0",
+                            "padding_top_mobile": "pt-0",
+                            "padding_bottom_mobile": "pb-0",
+                            "padding_left_mobile": "ps-0",
+                            "padding_right_mobile": "pe-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "icon_PMrFzj"
+                      ]
+                    },
+                    "group_MMLdGa": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "max_width": 0,
+                        "display": "d-block",
+                        "direction": "flex-md-column",
+                        "direction_mobile": "flex-column",
+                        "wrap": "flex-nowrap",
+                        "align_items": "align-items-md-start",
+                        "align_items_mb": "align-items-start",
+                        "justify_content": "justify-content-md-start",
+                        "justify_content_mb": "justify-content-start",
+                        "padding_top_desktop": "pt-md-0",
+                        "padding_bottom_desktop": "pb-md-0",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-0",
+                        "padding_bottom_mobile": "pb-0",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "gap_column": "column-gap-md-0",
+                        "gap_row": "row-gap-md-0",
+                        "gap_column_mobile": "column-gap-0",
+                        "gap_row_mobile": "row-gap-0",
+                        "bg_color": "transparent",
+                        "border": "border-0",
+                        "border_width": 0,
+                        "border_color": "#666666",
+                        "border_radius": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {
+                        "text_rVKwtY": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>My product arrived defective or<br\/>the sole is worn.<\/p>",
+                            "font_family": "font-family-base",
+                            "text_size": "fs-base",
+                            "font_weight": "fw-normal",
+                            "text_letter_spacing": "",
+                            "text_style": "",
+                            "alignment": "text-md-center",
+                            "alignment_mobile": "text-center",
+                            "color": "",
+                            "margin_top_desktop": "mt-md-0",
+                            "margin_bottom_desktop": "mb-md-0",
+                            "margin_top_mobile": "mt-0",
+                            "margin_bottom_mobile": "mb-0",
+                            "custom_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_rVKwtY"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "heading_rE7G4p",
+                    "group_NB6pgQ",
+                    "group_MMLdGa"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_fNtbjc"
+              ]
+            }
+          },
+          "block_order": [
+            "featured_card_with_link_mpcq48",
+            "featured_card_with_link_DWQMTx",
+            "featured_card_with_link_jVcUY7"
+          ]
+        }
+      },
+      "name": "t:names.icons_with_text",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-md",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "section_bg_color": "",
+        "custom_class": "returns-section-wrapper"
+      }
+    },
+    "custom_section_HtzkBN": {
+      "type": "custom-section",
+      "blocks": {
+        "group_8iLGdr": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-9",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "text_GE3qrV": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>Returns and exchanges need to be processed separately, but you are welcome to send them back together in one box with the exchange’s return label.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_QJW9mw": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>If you aren’t sure about the fit of your shoes or sandals, or if you are experiencing other issues, contact our <a href=\"#rp-customer-widget-home\" title=\"Customer Happiness Team\">Customer Happiness Team<\/a> so we can help!<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "",
+                "margin_top_desktop": "mt-md-6",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-6",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_GE3qrV",
+            "text_QJW9mw"
+          ]
+        }
+      },
+      "block_order": [
+        "group_8iLGdr"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-center",
+        "align_items_mb": "align-items-center",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    },
+    "template_faq_3jeBRc": {
+      "type": "template-faq",
+      "blocks": {
+        "faq_item_WTDzt8": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Free Returns & Exchanges (Contiguous U.S.)",
+            "answer": "<p>Customers in the <strong>contiguous U.S.<\/strong>can enjoy <strong>no return fees and free exchanges <\/strong>when using <strong>Happy Returns <\/strong>— no printing, just an easy drop-off at thousands of Return Bar locations.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_TRXDfU": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Outside the Contiguous U.S.?",
+            "answer": "<p><strong>If you’re in Alaska, Hawaii, or a U.S. Territory, good news — you’ll get free exchanges and no return fees.<\/strong>Original shipping charges aren’t refundable, but we’ve got the rest covered.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_RPV6C4": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Prefer a Different Return Method?",
+            "answer": "<p>No problem—you’re welcome to opt out of Happy Returns and use our prepaid UPS return label.<strong> A $9.99 fee <\/strong>will be<strong> deducted from your refund.<\/strong><\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_wNbh9r": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What if the shoes don’t fit?",
+            "answer": "<p>We know that it can be tricky to get the right size – that is why we offer:<\/p><ul><li><strong>FREE Exchanges and FREE Returns on all DOMESTIC ORDERS<\/strong><\/li><li>If you aren’t sure about the fit of your shoes or sandals or experience other issues, contact our <a href=\"#rp-customer-widget-home\" title=\"Customer Happiness Team\">Customer Happiness Team<\/a> so we can help! <\/li><\/ul>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_rht3wF": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do I return an item?",
+            "answer": "<ol><li>Visit our<a href=\"https:\/\/returns.xeroshoes.com\/\"> Returns and Exchange Center<\/a>. To start a return, choose “Returns” at the top of this page and follow the steps provided.<\/li><li>Enter your order number, email address, or shipping zip code used to place the order.<\/li><li>Select the items you want to return and follow the instructions.<\/li><li>Once your request is approved, you will get a confirmation email with shipping instructions.<\/li><\/ol>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_3LDwdJ": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What items are returnable?",
+            "answer": "<ul><li>Purchased from <strong>XeroShoes.com<\/strong> or our <strong>Denver Storefront<\/strong><\/li><li>Brand new, undamaged, and unaltered<\/li><li>Within <strong>45 days<\/strong> of purchase<\/li><li>In original packaging (shoebox or sandal bag)<\/li><\/ul>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_mR9Bq3": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What items are non-refundable?",
+            "answer": "<ul><li>Store Credit or Gift Certificates<\/li><li>Visibly worn shoes, boots, sandals, and accessories<\/li><li>Altered shoes, boots, sandals, and accessories<\/li><li>For our Denver Storefront customers: Scratch and Dent shoes, boots, sandals, and accessories<\/li><li>Retail Delivery Fees (If the package was shipped to Colorado)<\/li><li>Final Sale Items<\/li><\/ul>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_DNEwFw": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What is a Retail Delivery Fee?",
+            "answer": "<p>A Retail Delivery Fee is a charge added to your order if it is shipped within the state of Colorado. This fee is enacted by the State Government and is required on all orders that require deliveries per motor vehicle and are tangible items subject to state Sales or Use Tax. <\/p><ul><li>The Retail Delivery Fee is non-refundable<\/li><li>You can find more state-specific information here:<\/li><\/ul>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_8dMd83": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do I exchange an item?",
+            "answer": "<p>We are pleased to offer free domestic exchanges for a style\/item if you need to change the size or color. Please note that exchanges will be sent using our flat-rate shipping option. <\/p><ol><li>Visit our<a href=\"https:\/\/returns.xeroshoes.com\/\"> Returns and Exchange Center<\/a>. To start a return, choose “Returns” at the top of this page and follow the steps provided.<\/li><li>Enter your order number, email address, or shipping zip code used to place the order.<\/li><li>Select the items you want to exchange and follow the instructions.<\/li><li>Once your request is approved, you will get a confirmation email with shipping instructions.<\/li><li>Once your return tracking is confirmed, the replacement item will be shipped to your original shipping address.<\/li><\/ol>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_L6xH7z": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Can items be exchanged?",
+            "answer": "<p><strong>Yes! <\/strong>Use the <a href=\"https:\/\/returns.xeroshoes.com\/\">Return and Exchange Center<\/a> to request an exchange for the same style. Once approved and return tracking is received, your new pair will ship to your original address.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_mgmAGM": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do I exchange my order when I have a new shipping address?",
+            "answer": "<p>If you need an exchange and have a <strong>new shipping address<\/strong>, use our <strong>Gift Exchange procedure <\/strong>to ensure your exchange order is shipped to the correct address. Once you submit the exchange request, it will be reviewed by our Customer Service Team.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_igTRGE": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What if I want to cancel or change my order?",
+            "answer": "<p>We ship orders very quickly and have a limited window of time to edit or cancel an order before it’s shipped. If you notice a problem with your order, please email the <a href=\"\/pages\/contact\" title=\"Contact\">Customer Happiness Team<\/a> immediately with the subject line <strong>“Urgent Order Update”<\/strong>, and we’ll do our best to take care of the issue.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_WJyUKD": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Processing Returns and Exchanges together?",
+            "answer": "<ul><li><strong>For Happy Returns,<\/strong> please print out each QR code separately, and the Happy Returns representative will be able to process each exchange\/return for you. <\/li><li><strong>Opting out of Happy Returns? Returns and exchanges must be processed separately,<\/strong> but you’re welcome to ship them together in one box. Just be sure to the <strong>return label from the exchange<\/strong> on the outside of the package so it’s routed correctly.<\/li><\/ul>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_bDcUzc": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What if my product is damaged?",
+            "answer": "<ul><li>All shoes purchased directly from <strong>XeroShoes.com<\/strong> are backed by our <strong>24-month manufacturer’s warranty<\/strong> from the original purchase date. This covers any qualifying issues related to manufacturing defects.<\/li><\/ul><p><em>For full details on what’s covered, visit our <\/em><a href=\"\/pages\/warranty\" title=\"Xero Shoes Warranty\"><em>Warranty Page<\/em><\/a><em>.<\/em><\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_jFiVtb": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Order mistake?",
+            "answer": "<p>We sincerely apologize if you received the wrong item with your order! You can request the correct item from our <a href=\"https:\/\/returns.xeroshoes.com\/\">Return and Exchange Center<\/a>, simply select the missing item as the exchange item and choose “Incorrect item” as the reason. Once we receive the return tracking, we’ll prioritize shipping the correct item to you.<\/p><p>If you need further assistance, please email the <a href=\"\/pages\/contact\" title=\"Contact\">Customer Service Team<\/a> at <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com<\/a> or call: (303) 447-3100 (Mon–Fri, 8am–4pm MT).<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_iR76fg": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do I return a gift?",
+            "answer": "<p>If you received a Xero Shoes product as a gift and need to return or exchange it:<\/p><ol><li>Visit our <a href=\"https:\/\/returns.xeroshoes.com\/\">Returns and Exchange Center<\/a>.<\/li><li>Enter the order number and email address or shipping zip code used to place the order.<\/li><li>Select the items you want to return and follow the instructions.<\/li><li>Once your request is approved, you will get a confirmation email with shipping instructions.<\/li><li>Gift returns can be exchanged for the same style or a different style or returned for nonrefundable store credit.<\/li><\/ol>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_pCJir7": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What are the refund options?",
+            "answer": "<ul><li>Refund to the original payment method.<\/li><li>Refund to nonrefundable store credit.<\/li><\/ul>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_VqAaHb": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "What is the refund amount for a return to the original payment method?",
+            "answer": "<ul><li><strong>Contiguous U.S. Customers<\/strong><\/li><li><strong>Want a different return method?<\/strong><\/li><li><strong>AK, HI, or U.S. Territories<\/strong><\/li><\/ul><p><em>Tip: Happy Returns is the easiest and most cost-friendly option if you’re eligible!<\/em><\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_QE6tGm": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do I ship back the items?",
+            "answer": "<p>For instructions on shipping the returned products, please look at the email received after placing the return request. Check your “Spam” or “Promotions” folder if you do not see the email in your regular inbox.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_LhdMkz": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How will I be notified about my return, exchange, or refund?",
+            "answer": "<p>You will be notified via email at all steps of the process:<\/p><ol><li>Return package is received at our Fulfillment Center.<\/li><li>Return Request is Approved or Rejected.<\/li><li>If approved, information about your issued Refund or Exchange order being shipped.<\/li><\/ol><p>Get real-time delivery updates with the free <a href=\"https:\/\/www.aftership.com\/mobile-app\">AfterShip mobile app<\/a>.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_YbFGrn": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Once approved for a refund, how soon will I get my refund?",
+            "answer": "<p>The time it takes to receive a credit to your account can vary widely. Typically, refunds can take up to 7 business days to appear on your account.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_HpnGfW": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Once approved for an exchange, how soon will I get my new item?",
+            "answer": "<p>Your new exchange order will arrive within 12 business days. Occasionally, especially during and after sales, we might need additional days to process your exchange.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_BbJ8mJ": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "I am not in the United States, can I return or exchange?",
+            "answer": "<p><strong>Yes! <\/strong>You can process a return or exchange through the <a href=\"https:\/\/returns.xeroshoes.com\/\">Returns and Exchange Center<\/a>. You will need to return your items through a local courier. Follow the instructions given in the Returns and Exchange Center. Please note that for international returns, the original shipping costs are not refundable. <\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_W6CJFz": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How do Amazon returns work?",
+            "answer": "<p>For orders placed on Amazon, please contact <a href=\"https:\/\/www.amazon.com\/hz\/contact-us\/foresight\/hubgateway\">Amazon Customer Service<\/a>.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_nMng9b": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "My question was not addressed...",
+            "answer": "<ul><li>The fastest way to get answers is through our <a href=\"https:\/\/xeroshoesus.customerdesk.io\/#rp-customer-widget-home\">Self-Service Help Center<\/a>, available 24\/7, to help you with common questions and solutions.<\/li><li>Still need help? You’re always welcome to reach out – Email: <a href=\"mailto:support@xeroshoes.com\">support@xeroshoes.com<\/a><\/li><\/ul>",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_WTDzt8",
+        "faq_item_TRXDfU",
+        "faq_item_RPV6C4",
+        "faq_item_wNbh9r",
+        "faq_item_rht3wF",
+        "faq_item_3LDwdJ",
+        "faq_item_mR9Bq3",
+        "faq_item_DNEwFw",
+        "faq_item_8dMd83",
+        "faq_item_L6xH7z",
+        "faq_item_mgmAGM",
+        "faq_item_igTRGE",
+        "faq_item_WJyUKD",
+        "faq_item_bDcUzc",
+        "faq_item_jFiVtb",
+        "faq_item_iR76fg",
+        "faq_item_pCJir7",
+        "faq_item_VqAaHb",
+        "faq_item_QE6tGm",
+        "faq_item_LhdMkz",
+        "faq_item_YbFGrn",
+        "faq_item_HpnGfW",
+        "faq_item_BbJ8mJ",
+        "faq_item_W6CJFz",
+        "faq_item_nMng9b"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#0f172b",
+        "text_alignment": "text-center",
+        "heading": "Frequently Asked Questions",
+        "txt": "",
+        "border_hide": false,
+        "width_auto": false
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_XkYp6i",
+    "main",
+    "custom_section_VAdbBp",
+    "global_features_grid_ztdEpc",
+    "custom_section_HtzkBN",
+    "template_faq_3jeBRc"
+  ]
+}

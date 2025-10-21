@@ -1,0 +1,144 @@
+<div {{ block.shopify_attributes }}>
+  <button class="link-block {% if block.settings.style_class == 'btn-link-dark' or block.settings.style_class == 'btn-link-light' %} btn-link {% else %}btn {% endif %} {{ block.settings.style_class }} {{ block.settings.size_class }} {% if block.settings.icon != "none" %} link--with-icon{% endif %} {% if block.settings.hide_mobile %} d-none d-md-inline-flex {% endif %} {% if block.settings.hide_desktop %} d-inline-flex d-md-none {% endif %} {% if block.settings.full_width %} full_width {% endif %}" data-modal-opener="ContentPopup-{{ block.id }}">
+    {%- if block.settings.icon != 'none' -%}
+      <svg aria-hidden="true" focusable="false" style="width:16px;height:16px;"><use href="#{{ block.settings.icon }}"></use></svg>
+    {%- endif -%}
+    {{ block.settings.title | default: block.settings.page.title }}
+  </button>
+
+  <modal-dialog id="ContentPopup-{{ block.id }}" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-head d-flex justify-content-end pt-2 px-2">
+            <button type="button" class="p-2 text-black d-flex align-items-center bg-transparent border-0" id="ModalClose-ContentPopup-{{ block.id }}" aria-label="{{ 'general.modal.close' | t }}">
+              <span class="visually-hidden">{{ 'general.modal.close' | t }}</span>
+              <svg aria-hidden="true" focusable="false" style="width: 22px; height: 22px;"><use href="#icon-close"></use></svg>
+            </button>
+          </div>
+          <div class="modal-body text-dark pt-3">
+            {% content_for "blocks" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </modal-dialog>
+</div>
+{% schema %}
+{
+  "name": "Popup with label",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Pop-up link text",
+      "label": "Link label"
+    },
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "Icon",
+      "options": [
+          {
+              "value": "none",
+              "label": "None"
+          },
+          {
+              "value": "icon-arrow-left",
+              "label": "Arrow left"
+          },
+          {
+              "value": "icon-arrow-right",
+              "label": "Arrow right"
+          },
+          {
+              "value": "icon-arrow-next",
+              "label": "Arrow Next"
+          },
+          {
+              "value": "icon-arrow-prev",
+              "label": "Arrow Previous"
+          }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "style_class",
+      "label": "Style",
+      "options": [
+          {
+              "value": "btn-primary",
+              "label": "Primary"
+          },
+          {
+              "value": "btn-secondary",
+              "label": "Secondary"
+          },
+          {
+              "value": "btn-dark",
+              "label": "Dark"
+          },
+          {
+              "value": "btn-light",
+              "label": "Light"
+          },
+          {
+              "value": "btn-link-dark",
+              "label": "Link Dark"
+          },
+          {
+              "value": "btn-link-light",
+              "label": "Link Light"
+          }
+      ],
+      "default": "btn-primary"
+    },
+    {
+      "type": "select",
+      "id": "size_class",
+      "label": "Button Size",
+      "options": [
+          {
+              "value": "btn-sm",
+              "label": "Small"
+          },
+          {
+              "value": "",
+              "label": "Default"
+          },
+          {
+              "value": "btn-lg",
+              "label": "Large"
+          }
+      ],
+      "default": "" 
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_desktop",
+      "label": "Hide In Desktop",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_mobile",
+      "label": "Hide In Mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Button Full Width In Mobile",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Popup with label"
+    }
+  ]
+}
+{% endschema %}

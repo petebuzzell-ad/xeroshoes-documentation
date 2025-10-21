@@ -1,0 +1,75 @@
+{%- if block.settings.maps_link != blank -%}
+    <div class="maps-block-wrapper {{ block.settings.section_top_spacing }} {{ block.settings.section_bottom_spacing }} w-100">
+        <iframe 
+            width="100%" height="450"
+            style="border: 0px; width: 100%;" 
+            allowfullscreen=""
+            loading="lazy"
+            src="{{ block.settings.maps_link }}"
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+    </div>
+{% endif %}
+
+{% schema %}
+    {
+        "name": "Maps",
+        "class": "maps-block w-100",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "maps_link",
+                "label": "Maps Link"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing",
+                "label": "Top Spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "spacing-top-md",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "spacing-top-lg",
+                        "label": "Large"
+                    }
+                ],
+                "default": "spacing-top-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing",
+                "label": "Bottom Spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "spacing-bottom-md",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "spacing-bottom-lg",
+                        "label": "Large"
+                    }
+                ],
+                "default": "spacing-bottom-sm"
+            }
+        ],
+        "presets": [{ "name": "Maps" }]
+    }
+{% endschema %}

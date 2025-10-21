@@ -1,0 +1,569 @@
+{% style %}
+    /* https://drops.praella.app/i/JtLsbz */
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: normal;
+        font-weight: 300;
+        src: url('{{ "paralucent-light-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-light-webfont.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: italic;
+        font-weight: 300;
+        src: url('{{ "paralucent-lightitalic-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-lightitalic-webfont.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ "paralucent-medium-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-medium-webfont.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: italic;
+        font-weight: 400;
+        src: url('{{ "paralucent-mediumitalic-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-mediumitalic-webfont.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: normal;
+        font-weight: 500;
+        src: url('{{ "paralucent-demibold-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-demibold-webfont.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: italic;
+        font-weight: 500;
+        src: url('{{ "paralucent-demibolditalic-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-demibolditalic-webfont.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: normal;
+        font-weight: 600;
+        src: url('{{ "paralucent-bold-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-bold-webfont.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'paralucent';
+        font-style: italic;
+        font-weight: 600;
+        src: url('{{ "paralucent-bolditalic-webfont.woff2" | asset_url }}') format('woff2'),
+            url('{{ "paralucent-bolditalic-webfont.woff" | asset_url }}') format('woff');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        src: url('{{ "inter-v19-latin-300.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-300.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 300;
+        src: url('{{ "inter-v19-latin-300italic.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-300italic.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ "inter-v19-latin-regular.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-regular.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 400;
+        src: url('{{ "inter-v19-latin-italic.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-italic.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        src: url('{{ "inter-v19-latin-500.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-500.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 500;
+        src: url('{{ "inter-v19-latin-500italic.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-500italic.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        src: url('{{ "inter-v19-latin-600.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-600.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 600;
+        src: url('{{ "inter-v19-latin-600italic.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-600italic.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        src: url('{{ "inter-v19-latin-700.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-700.woff" | asset_url }}') format('woff');
+    }
+    @font-face {
+        font-display: swap;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 700;
+        src: url('{{ "inter-v19-latin-700italic.woff2" | asset_url }}') format('woff2'),
+            url('{{ "inter-v19-latin-700italic.woff" | asset_url }}') format('woff');
+    }
+
+
+    :root {
+        --pe-body-font-family: {{ settings.type_body_font }};
+        --pe-font-family-heading: {{ settings.type_header_font }};
+        --pe-body-font-size: {{ settings.type_body_font_size_mb }}px;
+        --pe-body-font-style: {{ settings.style_body_font }};
+        --pe-body-font-weight: {{ settings.type_body_font_weight }};
+        --pe-body-line-height: {{ settings.type_body_line_height }};
+        --pe-body-letter-spacing: {{ settings.type_body_letter_spacing }};
+
+
+        --pe-heading-font-style: {{ settings.style_header_font }};
+        --pe-headings-font-weight: {{ settings.type_header_font_weight }};
+        --pe-heading-line-height: {{ settings.type_heading_line_height }};
+        --pe-heading-letter-spacing: {{ settings.heading_letter_spacing }};
+        --pe-text-transform-heading: {{ settings.heading_text_transform }};
+
+        --pe-font-size-xs:{{ settings.xs_font_size }}px;
+        --pe-font-size-sm:{{ settings.sm_font_size_mb }}px;
+        --pe-font-size-md:{{ settings.md_font_size }}px;
+        --pe-font-size-lg:{{ settings.lg_font_size }}px;
+        --pe-font-size-xl:{{ settings.xl_font_size_mb }}px;
+
+        
+        
+        --pe-h1-display-font-size:{{ settings.h1_display_font_size }}px;
+        --pe-h1-font-size:{{ settings.h1_font_size }}px;
+        --pe-h2-font-size:{{ settings.h2_font_size }}px;
+        --pe-h3-font-size:{{ settings.h3_font_size }}px;
+        --pe-h4-font-size:{{ settings.h4_font_size }}px;
+        --pe-h5-font-size:{{ settings.h5_font_size }}px;
+        --pe-h6-font-size:{{ settings.h6_font_size }}px;
+
+        --pe-h1-display-font-size-md:{{ settings.h1_display_font_size_md }}px;
+        --pe-h1-font-size-md:{{ settings.h1_font_size_md }}px;
+        --pe-h2-font-size-md:{{ settings.h2_font_size_md }}px;
+        --pe-h3-font-size-md:{{ settings.h3_font_size_md }}px;
+        --pe-h4-font-size-md:{{ settings.h4_font_size_md }}px;
+        --pe-h5-font-size-md:{{ settings.h5_font_size_md }}px;
+        --pe-h6-font-size-md:{{ settings.h6_font_size_md }}px;
+
+        --pe-h1-display-font-size-sm:{{ settings.h1_display_font_size_sm }}px;
+        --pe-h1-font-size-sm:{{ settings.h1_font_size_sm }}px;
+        --pe-h2-font-size-sm:{{ settings.h2_font_size_sm }}px;
+        --pe-h3-font-size-sm:{{ settings.h3_font_size_sm }}px;
+        --pe-h4-font-size-sm:{{ settings.h4_font_size_sm }}px;
+        --pe-h5-font-size-sm:{{ settings.h5_font_size_sm }}px;
+        --pe-h6-font-size-sm:{{ settings.h6_font_size_sm }}px;
+
+        --spacing: {{ settings.spacing }}px;
+
+
+        /*=============================================
+        =               Colors Root Var               =
+        =============================================*/
+
+
+        --pe-body-bg: {{ settings.body_bg_color }};
+        --pe-body-color: {{ settings.body_color }};
+        --pe-link-color: {{ settings.link_color }};
+        --pe-link-hover-color: {{ settings.link_hover_color }};
+        --pe-border-color: {{ settings.color_border }};
+
+
+        --pe-color-primary: {{ settings.color_primary }};
+        --pe-color-secondary: {{ settings.color_secondary }};
+        --pe-color-sand: {{ settings.color_sand }};
+        --pe-color-green: {{ settings.color_green }};
+        --pe-color-yellow: {{ settings.color_yellow }};
+        --pe-color-dark-red: {{ settings.color_dark_red }};
+               
+        --pe-color-primary-100: {{ settings.color_primary_100 }};
+        --pe-color-primary-200: {{ settings.color_primary_200 }};
+        --pe-color-primary-300: {{ settings.color_primary_300 }};
+        --pe-color-primary-400: {{ settings.color_primary_400 }};
+        --pe-color-primary-500: {{ settings.color_primary_500 }};
+        --pe-color-primary-600: {{ settings.color_primary_600 }};
+        --pe-color-primary-700: {{ settings.color_primary_700 }};
+        --pe-color-primary-800: {{ settings.color_primary_800 }};
+        --pe-color-primary-900: {{ settings.color_primary_900 }};
+        --pe-color-primary-110: {{ settings.color_primary_110 }};
+
+        --pe-color-secondary-100: {{ settings.color_secondary_100 }};
+        --pe-color-secondary-200: {{ settings.color_secondary_200 }};
+        --pe-color-secondary-300: {{ settings.color_secondary_300 }};
+        --pe-color-secondary-400: {{ settings.color_secondary_400 }};
+        --pe-color-secondary-500: {{ settings.color_secondary_500 }};        
+        --pe-color-secondary-600: {{ settings.color_secondary_600 }};
+        --pe-color-secondary-700: {{ settings.color_secondary_700 }};
+        --pe-color-secondary-800: {{ settings.color_secondary_800 }};
+        --pe-color-secondary-900: {{ settings.color_secondary_900 }};
+        --pe-color-secondary-110: {{ settings.color_secondary_110 }};
+
+        --pe-color-sand-100: {{ settings.color_sand_100 }};
+        --pe-color-sand-200: {{ settings.color_sand_200 }};
+        --pe-color-sand-300: {{ settings.color_sand_300 }};
+        --pe-color-sand-400: {{ settings.color_sand_400 }};
+        --pe-color-sand-500: {{ settings.color_sand_500 }};
+        --pe-color-sand-600: {{ settings.color_sand_600 }};
+        --pe-color-sand-700: {{ settings.color_sand_700 }};
+        --pe-color-sand-800: {{ settings.color_sand_800 }};
+        --pe-color-sand-900: {{ settings.color_sand_900 }};
+        --pe-color-sand-110: {{ settings.color_sand_110 }};
+
+        --pe-color-white: {{ settings.color_white }};
+        --pe-color-gray-100: {{ settings.color_gray_100 }};
+        --pe-color-gray-200: {{ settings.color_gray_200 }};
+        --pe-color-gray-300: {{ settings.color_gray_300 }};
+        --pe-color-gray-400: {{ settings.color_gray_400 }};
+        --pe-color-gray-500: {{ settings.color_gray_500 }};
+        --pe-color-gray-600: {{ settings.color_gray_600 }};
+        --pe-color-gray-700: {{ settings.color_gray_700 }};
+        --pe-color-gray-800: {{ settings.color_gray_800 }};
+        --pe-color-gray-900: {{ settings.color_gray_900 }};
+        --pe-color-black: {{ settings.color_black }};
+
+
+        --pe-color-success: {{ settings.color_success }};
+        --pe-color-warning: {{ settings.color_warning }};
+        --pe-color-danger: {{ settings.color_danger }};
+        --pe-color-info: {{ settings.color_info }};
+
+
+        /*=============================================
+        =               Button Root Var               =
+        =============================================*/
+
+
+        --pe-btn-padding-x: {{ settings.button_x_padding_mb }}px;
+        --pe-btn-padding-y: {{ settings.button_y_padding_mb }}px;
+        --pe-btn-font-family: {{ settings.type_button_font }};
+        --pe-btn-font-size: {{ settings.button_font_size_mb }}px;
+        --pe-btn-font-weight: {{ settings.type_button_font_weight }};
+        --pe-btn-line-height: {{ settings.button_line_height }}px;
+        --pe-btn-line-height-sm: {{ settings.button_line_height }}px;
+        --pe-btn-letter-spacing: {{ settings.button_letter_spacing }};
+        --pe-btn-text-transform: {{ settings.button-text-transform }};
+
+        --pe-btn-color: transparent;
+        --pe-btn-bg: transparent;
+        --pe-btn-border-width: {{ settings.button_border_width }}px;
+        --pe-btn-border-color: transparent;
+        --pe-btn-border-radius: {{ settings.button_border_radius_mb }}px;
+        --pe-btn-hover-border-color: transparent;
+
+        
+        --pe-x-padding-btn-sm: {{ settings.button_x_padding_sm_mb }}px;
+        --pe-y-padding-btn-sm: {{ settings.button_y_padding_sm_mb }}px;
+        --pe-font-size-btn-sm: {{ settings.button_font_size_sm_mb }}px;
+        --pe-border-radius-btn-sm: {{ settings.button_border_radius_sm_mb }}px;
+
+        --pe-x-padding-btn-lg: {{ settings.button_x_padding_lg_mb }}px;
+        --pe-y-padding-btn-lg: {{ settings.button_y_padding_lg_mb }}px;
+        --pe-font-size-btn-lg: {{ settings.button_font_size_lg_mb }}px;
+        --pe-border-radius-btn-lg: {{ settings.button_border_radius_lg_mb }}px;
+
+
+        --pe-primary-btn-color: {{ settings.primary_btn_color }};
+        --pe-primary-btn-bg: {{ settings.primary_btn_bg }};
+        --pe-primary-btn-border-color:{{ settings.primary_btn_border_color }};
+        --pe-primary-btn-hover-color: {{ settings.primary_btn_hover_color }};
+        --pe-primary-btn-hover-bg: {{ settings.primary_btn_hover_bg }};
+        --pe-primary-btn-hover-border-color: {{ settings.primary_btn_hover_border_color }};
+        --pe-primary-btn-active-color: {{ settings.primary_btn_active_color }};
+        --pe-primary-btn-active-bg: {{ settings.primary_btn_active_bg }};
+        --pe-primary-btn-active-border-color: {{ settings.primary_btn_active_border_color }};
+
+
+        --pe-secondary-btn-color: {{ settings.secondary_btn_color }};
+        --pe-secondary-btn-bg: {{ settings.secondary_btn_bg }};
+        --pe-secondary-btn-border-color:{{ settings.secondary_btn_border_color }};
+        --pe-secondary-btn-hover-color: {{ settings.secondary_btn_hover_color }};
+        --pe-secondary-btn-hover-bg: {{ settings.secondary_btn_hover_bg }};
+        --pe-secondary-btn-hover-border-color: {{ settings.secondary_btn_hover_border_color }};
+        --pe-secondary-btn-active-color: {{ settings.secondary_btn_active_color }};
+        --pe-secondary-btn-active-bg: {{ settings.secondary_btn_active_bg }};
+        --pe-secondary-btn-active-border-color: {{ settings.secondary_btn_active_border_color }};
+
+
+        --pe-light-btn-color: {{ settings.light_btn_color }};
+        --pe-light-btn-bg: {{ settings.light_btn_bg }};
+        --pe-light-btn-border-color:{{ settings.light_btn_border_color }};
+        --pe-light-btn-hover-color: {{ settings.light_btn_hover_color }};
+        --pe-light-btn-hover-bg: {{ settings.light_btn_hover_bg }};
+        --pe-light-btn-hover-border-color: {{ settings.light_btn_hover_border_color }};
+        --pe-light-btn-active-color: {{ settings.light_btn_active_color }};
+        --pe-light-btn-active-bg: {{ settings.light_btn_active_bg }};
+        --pe-light-btn-active-border-color: {{ settings.light_btn_active_border_color }};
+
+
+        --pe-dark-btn-color: {{ settings.dark_btn_color }};
+        --pe-dark-btn-bg: {{ settings.dark_btn_bg }};
+        --pe-dark-btn-border-color:{{ settings.dark_btn_border_color }};
+        --pe-dark-btn-hover-color: {{ settings.dark_btn_hover_color }};
+        --pe-dark-btn-hover-bg: {{ settings.dark_btn_hover_bg }};
+        --pe-dark-btn-hover-border-color: {{ settings.dark_btn_hover_border_color }};
+        --pe-dark-btn-active-color: {{ settings.dark_btn_active_color }};
+        --pe-dark-btn-active-bg: {{ settings.dark_btn_active_bg }};
+        --pe-dark-btn-active-border-color: {{ settings.dark_btn_active_border_color }};
+
+
+
+        /*=============================================
+        =               Link Root Var                 =
+        =============================================*/
+
+        --pe-link-padding-y: {{ settings.link_b_padding }}px;
+        --pe-link-font-family: {{ settings.type_link_font }};
+        --pe-link-font-size: {{ settings.link_font_size_mb }}px;
+        --pe-link-font-weight: {{ settings.type_link_font_weight }};
+        --pe-link-line-height: {{ settings.link_line_height }}px;
+        --pe-link-letter-spacing: {{ settings.link_letter_spacing }};
+        --pe-link-text-transform: {{ settings.link-text-transform }};
+        --pe-link-border-width: {{ settings.link_border_width }}px;
+
+        --pe-link-primary-text-color: {{ settings.link_primary_text_color }};
+        --pe-link-primary-border-color: {{ settings.link_primary_border_color }};
+        --pe-link-hover-primary-text-color: {{ settings.link_primary_hover_text_color }};
+        --pe-link-hover-primary-border-color: {{ settings.link_primary_hover_border_color }};
+        --pe-link-active-primary-text-color: {{ settings.link_primary_active_text_color }};
+        --pe-link-active-primary-border-color: {{ settings.link_primary_active_border_color }};
+
+        --pe-link-secondary-text-color: {{ settings.link_secondary_text_color }};
+        --pe-link-secondary-border-color: {{ settings.link_secondary_border_color }};
+        --pe-link-hover-secondary-text-color: {{ settings.link_secondary_hover_text_color }};
+        --pe-link-hover-secondary-border-color: {{ settings.link_secondary_hover_border_color }};
+        --pe-link-active-secondary-text-color: {{ settings.link_secondary_active_text_color }};
+        --pe-link-active-secondary-border-color: {{ settings.link_secondary_active_border_color }};
+
+        /*=============================================
+        =               Badge Root Var                 =
+        =============================================*/
+
+        --pe-badge-padding-x: {{ settings.badge_x_padding_mb }}px;
+        --pe-badge-padding-y: {{ settings.badge_y_padding_mb }}px;
+        --pe-badge-font-size: {{ settings.badge_font_size_mb }}px;
+        --pe-badge-font-weight: {{ settings.badge_font_weight }};
+        --pe-badge-text-transform: {{ settings.badge_text_transform }};
+        --pe-badge-line-height: {{ settings.badge_line_height }}px;
+        --pe-badge-letter-spacing: {{ settings.badge_letter_spacing }};
+        --pe-badge-border-radius: {{ settings.badge_border_radius }}px;
+
+        --pe-new-badge-text-color: {{ settings.new_text_color }};
+        --pe-new-badge-bg-color: {{ settings.new_bg_color }};
+
+        --pe-sale-badge-text-color: {{ settings.sale_text_color }};
+        --pe-sale-badge-bg-color: {{ settings.sale_bg_color }};
+
+        --pe-sold-badge-text-color: {{ settings.sold_text_color }};
+        --pe-sold-badge-bg-color: {{ settings.sold_bg_color }};
+
+        --pe-best-seller-badge-text-color: {{ settings.best_seller_text_color }};
+        --pe-best-seller-badge-bg-color: {{ settings.best_seller_bg_color }};
+
+
+
+        /*=============================================
+        =               Form Root Var                 =
+        =============================================*/
+
+        --pe-input-font-family: {{ settings.type_input_font }};
+        --pe-input-font-weight: {{ settings.type_input_font_weight }};
+        --pe-input-font-size: {{ settings.input_font_size }}px;
+        --pe-input-line-height: {{ settings.input_line_height }}px;
+        --pe-input-x-padding: {{ settings.input_x_padding }}px;
+        --pe-input-y-padding: {{ settings.input_y_padding }}px;
+        --pe-input-text-color: {{ settings.input_text_color }};
+        
+        --pe-input-border-color: {{ settings.input_border_color }};
+        --pe-input-border-width: {{ settings.input_border_width }}px;
+        --pe-input-border-radius: {{ settings.input_border_radius }}px;
+
+        --pe-input-ph-text-color: {{ settings.input_ph_text_color }};
+        
+        --pe-input-bg-color: {{ settings.input_bg_color }}; 
+        --pe-input-focus-bg-color: {{ settings.input_focus_bg_color }};
+        --pe-input-focus-border-color: {{ settings.input_focus_border_color }};
+
+        --pe-floating-label-font-size: {{ settings.floating_input_font_size }}px;
+        --pe-input-floating-label-color:{{ settings.floating_input_label_color }};
+        --pe-input-focus-floating-label-color:{{ settings.floating_input_focus_label_color }};
+        --pe-floating-label-focus-font-size: {{ settings.floating_input_focus_font_size }}px;
+        --pe-floating-input-padding-top: {{ settings.floating_input_top_padding }}px;
+        --pe-floating-input-padding-bottom: {{ settings.floating_input_bottom_padding }}px;
+
+        --pe-floating-label-top-position: {{ settings.floating_label_top_position }}px;
+
+        
+        --pe-form-check-bg: {{ settings.form_check_bg_color }};
+        --pe-form-check-hover-bg: {{ settings.form_check_hover_bg_color }};
+        --pe-form-check-active-bg: {{ settings.form_check_active_bg_color }};
+        --pe-form-check-border-color: {{ settings.form_check_border_color }};
+        --pe-form-check-hover-border-color: {{ settings.form_check_hover_border_color }};
+
+        --pe-form-check-width:{{ settings.form_check_size }}px;
+        --pe-form-check-height:{{ settings.form_check_size }}px;
+        --pe-form-check-border-radius:{{ settings.form_check_border_radius }}px;
+
+        --pe-form-check-disabled-opacity:{{ settings.form_check_disabled_opacity }};
+
+
+        --pe-section-spacing-mobile-xs: {{ settings.section_spacing_xs_mob }}px;
+        --pe-section-spacing-mobile-sm: {{ settings.section_spacing_sm_mob }}px;
+        --pe-section-spacing-mobile-md: {{ settings.section_spacing_md_mob }}px;
+        --pe-section-spacing-mobile-lg: {{ settings.section_spacing_lg_mob }}px;
+
+        --pe-section-spacing-ipad-xs: {{ settings.section_spacing_xs_small }}px;
+        --pe-section-spacing-ipad-sm: {{ settings.section_spacing_sm_small }}px;
+        --pe-section-spacing-ipad-md: {{ settings.section_spacing_md_small }}px;
+        --pe-section-spacing-ipad-lg: {{ settings.section_spacing_lg_small }}px;
+
+        --pe-section-spacing-desktop-xs: {{ settings.section_spacing_xs }}px;
+        --pe-section-spacing-desktop-sm: {{ settings.section_spacing_sm }}px;
+        --pe-section-spacing-desktop-md: {{ settings.section_spacing_md }}px;
+        --pe-section-spacing-desktop-lg: {{ settings.section_spacing_lg }}px;
+
+        
+        --swiper-navigation-size: {{ settings.navigation_size }}px;
+        --swiper-navigation-border-size: {{ settings.navigation_border_size }}px;
+        --swiper-navigation-border-radius:{{ settings.navigation_radius }}px;
+        --swiper-navigation-svg-size: {{ settings.navigation_arrow_size }}px; 
+        
+        
+        --swiper-navigation-small-size: {{ settings.navigation_size_small }}px;
+        --swiper-navigation-small-border-size: {{ settings.navigation_border_size_small }}px;
+        --swiper-navigation-small-border-radius:{{ settings.navigation_radius_small }}px;
+        --swiper-navigation-small-svg-size: {{ settings.navigation_arrow_size_small }}px; 
+
+        --swiper-navigation-arrow-bg-color: {{ settings.navigation_bg }};
+        --swiper-navigation-arrow-color:{{ settings.navigation_icon_color }};
+        --swiper-navigation-arrow-border-color:{{ settings.navigation_border_color }};
+
+        --swiper-navigation-arrow-hover-bg-color:{{ settings.navigation_hover_bg }};
+        --swiper-navigation-arrow-hover-color:{{ settings.navigation_hover_icon_color }};
+        --swiper-navigation-arrow-hover-border-color: {{ settings.navigation_hover_border_color }};
+
+
+        --swiper-navigation-secondary-arrow-bg-color: {{ settings.secondary_navigation_bg }};
+        --swiper-navigation-secondary-arrow-color: {{ settings.secondary_navigation_icon_color }};
+        --swiper-navigation-secondary-arrow-border-color: {{ settings.secondary_navigation_border_color }};
+        --swiper-navigation-secondary-arrow-hover-bg-color: {{ settings.secondary_navigation_hover_bg }};
+        --swiper-navigation-secondary-arrow-hover-color: {{ settings.secondary_navigation_hover_icon_color }};
+        --swiper-navigation-secondary-arrow-hover-border-color: {{ settings.secondary_navigation_hover_border_color }};
+    }
+    
+    :root{
+        --pe-container-x-padding: {{ settings.container_padding }}px;
+        --pe-container-width: {{ settings.container_width }}px;
+    }
+
+    {% if settings.container_full_width %}
+        @media (min-width: 1440px) {
+            :root {
+                --pe-container-x-padding: {{ settings.container_spacing_medium }}px;
+                --pe-container-width: 100%;
+            }
+        }
+    {% endif %}
+    
+
+    @media only screen and (min-width: 992px) {
+        :root {
+            --pe-body-font-size: {{ settings.type_body_font_size }}px;
+            --pe-font-size-sm:{{ settings.sm_font_size }}px;
+            --pe-font-size-xl:{{ settings.xl_font_size }}px;
+
+
+            --pe-btn-padding-x: {{ settings.button_x_padding }}px;
+            --pe-btn-padding-y: {{ settings.button_y_padding }}px;
+            --pe-btn-font-size: {{ settings.button_font_size }}px;
+            --pe-btn-border-radius: {{ settings.button_border_radius }}px;
+
+            --pe-x-padding-btn-sm: {{ settings.button_x_padding_sm }}px;
+            --pe-y-padding-btn-sm: {{ settings.button_y_padding_sm }}px;
+            --pe-font-size-btn-sm: {{ settings.button_font_size_sm }}px;
+            --pe-border-radius-btn-sm: {{ settings.button_border_radius_sm }}px;
+
+            --pe-x-padding-btn-lg: {{ settings.button_x_padding_lg }}px;
+            --pe-y-padding-btn-lg: {{ settings.button_y_padding_lg }}px;
+            --pe-font-size-btn-lg: {{ settings.button_font_size_lg }}px;
+            --pe-border-radius-btn-lg: {{ settings.button_border_radius_lg }}px;
+
+            --pe-link-font-size: {{ settings.link_font_size }}px;    
+
+            --pe-badge-padding-x: {{ settings.badge_x_padding }}px;
+            --pe-badge-padding-y: {{ settings.badge_y_padding }}px;
+            --pe-badge-font-size: {{ settings.badge_font_size }}px;
+
+            --pe-btn-line-height-sm: {{ settings.button_line_height |  minus: 1 }}px;
+        }
+    }
+
+    *,
+    *::before,
+    *::after {
+        /* outline: none; */
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    
+    @media (prefers-reduced-motion: no-preference) {
+        :root {
+            scroll-behavior: smooth;
+        }
+    }
+
+    body {
+        margin: 0;
+        font-family: var(--pe-body-font-family);
+        font-size: var(--pe-body-font-size);
+        font-weight: var(--pe-body-font-weight);
+        font-style: var(--pe-body-font-style);
+        line-height: var(--pe-body-line-height);
+        letter-spacing:var(--pe-body-letter-spacing);
+        color: var(--pe-body-color);
+        background-color: var(--pe-body-bg);
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+{% endstyle %}

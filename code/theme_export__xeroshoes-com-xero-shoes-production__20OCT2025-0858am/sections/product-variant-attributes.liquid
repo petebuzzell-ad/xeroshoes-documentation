@@ -1,0 +1,150 @@
+<div class="swiper-wrapper__custom">
+    
+
+    {% assign countvariants = product.variants_count %}
+    {% assign count = 0 %}
+    {% for variant in product.variants %}
+        {% if variant.metafields.custom.draft_variant == true %}
+            {% assign count = count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+
+    {% comment %} CREATE ARRAY OF COLOR VALUES FROM STYLE OPTION {% endcomment %}
+    {% assign colorvalues = '' %}
+    {% for value in product.options_by_name['style'].values %}
+        {% assign val = value | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-' %}
+        {% assign colorvalues = colorvalues | append: val | append: "," %}
+    {% endfor %}
+    
+    {% assign attrcolors = '' %}
+    {%- for gallery in product.metafields.custom.attribute_galleries.value -%}
+        {%- assign colordowncase = gallery.style_color | downcase -%}
+        {% assign attrcolors = attrcolors | append: colordowncase | append: "," %}
+    {% endfor %}
+
+    {%- assign arr_colorvalues = colorvalues | split: "," -%}
+    {%- assign arr_attrcolors = attrcolors | split: "," -%}
+
+    {%- assign find_not_attr_gal = '' -%}
+    {% for item in arr_colorvalues %}
+    {% if item != "" and arr_attrcolors contains item %}
+    {% elsif item != "" %}
+    {% assign find_not_attr_gal = find_not_attr_gal | append: item | append: "," %}
+    {% endif %}
+    {% endfor %}
+
+    {% assign array_notfound = find_not_attr_gal | split: ',' %}
+    {% for arrayval in array_notfound %}
+
+    <swiper-container  class="d-none" data-pdp-slider="{{ arrayval }}" data-productSlider thumbs-swiper=".product-image-thumbs" slides-per-view="1.155" space-between="3" scrollbar='{
+        "el": ".swiper-scrollbar-pdp"
+    }'
+        role="region" aria-label="Product image slider"> 
+
+    {% for value in product.options_by_name['style'].values %}
+        {% assign color_variant = product.variants | where: "option1", value | first %}
+        {% assign slugvalue = value | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-' %}
+        {% if arrayval == slugvalue %}
+            {% if color_variant.featured_image %}
+                <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ color_variant.featured_image.id }}">
+                    <div class="product--media square">
+                        {%- capture attributes_list -%}
+                            data-variant-title="{{ color_variant.featured_image.alt | escape }}"
+                        {%- endcapture -%}
+                        {%- render 'image',
+                            image: color_variant.featured_image,
+                            preload: forloop.first,
+                            attributes: attributes_list
+                        -%}
+                    </div>
+                </swiper-slide>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </swiper-container>
+    {% endfor %} 
+
+    {%- if product.metafields.custom.attribute_galleries.value.count > 0 and product.variants.size > 1 and countvariants != count -%}
+        {%- for gallery in product.metafields.custom.attribute_galleries.value -%}
+            {%- assign colordowncase = gallery.style_color | downcase -%}
+            <swiper-container  class="d-none" data-pdp-slider="{{ colordowncase }}" data-productSlider thumbs-swiper=".product-image-thumbs" slides-per-view="1.155" space-between="3" scrollbar='{
+                "el": ".swiper-scrollbar-pdp"
+            }'
+                
+                role="region" aria-label="Product image slider"> 
+                
+                {% if product.tags contains 'featured-in-gallery' %}
+                {% for value in product.options_by_name['style'].values %}
+                    {% assign color_variant = product.variants | where: "option1", value | first %}
+                    {% assign slugvalue = value | downcase | strip | replace: '/', '' | replace: ' ', '-' | replace: '_', '-' | replace: ',', '' | replace: '.', '' | replace: '!', '' | replace: '?', '' | replace: '&', 'and' | replace: "'", '' | replace: '"', '' | replace: '---', '-' | replace: '--', '-' %}
+                    {% if colordowncase == slugvalue %}
+                        {% if color_variant.featured_image %}
+                            <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ color_variant.featured_image.id }}">
+                                <div class="product--media square">
+                                    {%- capture attributes_list -%}
+                                        data-variant-title="{{ color_variant.featured_image.alt | escape }}"
+                                    {%- endcapture -%}
+                                    {%- render 'image',
+                                        image: color_variant.featured_image,
+                                        sizes: img_sizes,
+                                        class: class_list,
+                                        preload: forloop.first,
+                                        attributes: attributes_list
+                                    -%}
+                                </div>
+                            </swiper-slide>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+                
+                {% for media in gallery.image_gallery.value %}
+                    <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ media.id }}">
+                    {% if media.media_type == 'image' %}
+                        <div class="product--media square">
+                            {%- capture attributes_list -%}
+                                data-variant-title="{{ media.alt | escape }}"
+                            {%- endcapture -%}
+                            {%- render 'image',
+                                image: media,
+                                sizes: img_sizes,
+                                class: class_list,
+                                preload: forloop.first,
+                                attributes: attributes_list
+                            -%}
+                        </div>
+                    {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                        {%- render 'media', media: media, class_list: 'square', placement: 'popup' -%}
+                    {% endif %}
+                    </swiper-slide>
+                {% endfor %}
+            </swiper-container>
+        {%- endfor -%}
+    {%- else -%}
+    <swiper-container data-productSlider thumbs-swiper=".product-image-thumbs" slides-per-view="1.155" space-between="3" scrollbar='{
+        "el": ".swiper-scrollbar-pdp"
+    }'
+        
+        role="region" aria-label="Product image slider">   
+        {% for media in product.media %}
+            <swiper-slide lazy="true" data-index="{{ forloop.index }}" data-mediaID="{{ media.id }}">
+            {% if media.media_type == 'image' %}
+                <div class="product--media square">
+                    {%- capture attributes_list -%}
+                        data-variant-title="{{ media.alt | escape }}"
+                    {%- endcapture -%}
+                    {%- render 'image',
+                        image: media,
+                        preload: forloop.first,
+                        attributes: attributes_list
+                    -%}
+                </div>
+            {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                {%- render 'media', media: media, class_list: 'square', placement: 'popup' -%}
+            {% endif %}
+            </swiper-slide>
+        {% endfor %}
+    </swiper-container>
+    {%- endif -%}
+</div>

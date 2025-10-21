@@ -1,0 +1,118 @@
+.parallax-text-with-image .parallax-ti-items .icon-block
+{
+    background-color: #f2f0ea;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.parallax-text-with-image .parallax-ti-items .icon-block img
+{
+    mix-blend-mode: multiply;
+} 
+.parallax-text-with-image > .image-block {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 80.4vw;
+    background-color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax-text-with-image>.image-block img {
+    position: absolute !important;
+    aspect-ratio: 1;
+    width: 92.4vw;
+    height: auto !important;
+    max-width: unset;
+}
+.parallax-text-with-image {
+    padding: 35px 0 0 !important;
+}
+@media (max-width: 991px) {
+    .parallax-text-with-image .parallax-ti-items .text-block
+    {
+        display: none;
+    }
+    .parallax-ti-items
+    {
+        padding: 25px 25px 0 25px !important;
+        align-items: stretch !important;
+    }
+    .parallax-ti-items > div > div, .parallax-ti-items > div, .parallax-ti-items > div *
+    {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .parallax-ti-items > div
+    {
+        justify-content: flex-start !important;
+        padding-block: 25px !important;
+    }
+    .parallax-ti-items > div:nth-child(even)
+    {
+        padding-left: 25px !important;
+        border-left: 1px solid #0F172B !important;
+    }
+    .parallax-ti-items > div:nth-child(odd)
+    {
+        padding-right: 25px !important;
+    }
+    .parallax-ti-items > div:nth-child(2) ~ div
+    {
+        border-top: 1px solid #0F172B !important; 
+    }
+    .parallax-ti-items > div:nth-child(2), .parallax-ti-items > div:nth-child(1)
+    {
+        padding-top: 10px !important;
+    }
+    .parallax-ti-items > div:nth-last-child(2), .parallax-ti-items > div:nth-last-child(1)
+    {
+        padding-bottom: 10px !important;
+    }
+}
+@media (min-width: 992px) {
+    .parallax-text-with-image {
+        padding: 85px 0 !important;
+        z-index: 1;
+        min-height: 63.5vw;
+    }
+    .parallax-text-with-image > .image-block {
+        position: absolute !important;
+        z-index: -1;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        width: 51.4vw;
+        background-color: #fff !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -6vw;
+    }
+    .parallax-text-with-image>.image-block img {
+        position: absolute !important;
+        aspect-ratio: 1;
+        width: 51vw;
+        height: auto !important;
+        max-width: unset;
+        margin-bottom: 30px;
+    }
+    .parallax-text-with-image .parallax-ti-items
+    {
+        gap:13vw 0 !important;
+    }
+    .parallax-text-with-image .parallax-ti-items > div:nth-of-type(1) {
+        padding-inline: 6vw 15px !important;
+    }
+    .parallax-text-with-image .parallax-ti-items > div:nth-of-type(2) {
+        padding: 70px 10vw 0 15px !important;
+    }
+    .parallax-text-with-image .parallax-ti-items > div:nth-of-type(3) {
+        padding: 97px 15px 0 10.5vw !important;
+    }
+    .parallax-text-with-image .parallax-ti-items > div:nth-of-type(4) {
+        padding: 0px 2vw 0 15px !important;
+    }
+    .main-title-for-we h2 br
+    {
+        display: none;
+    } 
+}

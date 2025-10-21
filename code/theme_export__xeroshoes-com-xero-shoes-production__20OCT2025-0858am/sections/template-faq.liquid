@@ -1,0 +1,480 @@
+{% capture spacing_class_list %}
+    {{ section.settings.section_top_spacing }} {{ section.settings.section_top_spacing_ipad }} {{ section.settings.section_top_spacing_mobile }} {{ section.settings.section_bottom_spacing }} {{ section.settings.section_bottom_spacing_ipad }} {{ section.settings.section_bottom_spacing_mobile }}
+{% endcapture %}
+
+{% comment %} Build parent FAQ options for dropdown {% endcomment %}
+{% assign parent_options = '' %}
+{% for block in section.blocks %}
+    {% if block.type == 'faq_item' and block.settings.title != blank %}
+        {% assign parent_options = parent_options | append: block.settings.title | strip_html | append: ',' %}
+    {% endif %}
+{% endfor %}
+
+<section data-section-id="{{ section.id }}" class="{{ spacing_class_list }}" style="background-color: {{ section.settings.section_bg_color }};color: {{ section.settings.section_txt_color }};">
+    <div class="{% if section.settings.container_width == 'small_container_layout' %}container-small{% endif %}{% if section.settings.container_width == 'container' %}container{% endif %}{% if section.settings.container_width == 'fluid_layout' %}container-fluid{% endif %}">
+        <div class="row">
+            {% if section.settings.heading != blank or section.settings.txt != blank %}
+                <div class="col-12 mb-5 {{ section.settings.text_alignment }}">    
+                    <{% if template.suffix == 'faq' %}h1{% else %}h2{% endif %} class="mb-2">{{ section.settings.heading }}</{% if template.name == 'faq' %}h1{% else %}h2{% endif %}>
+                    <div class="text-secondary-900">{{ section.settings.txt }}</div>
+                </div>
+            {% endif %}
+            <div class="col-12" data-faqsParent>
+                <div class="row">
+                    <div class="col-12" data-individual-section>
+                        {% for block in section.blocks %}
+                            {% if block.type == 'faq_item' and block.settings.heading != blank %}
+                                
+                                {% assign has_children = false %}
+                                {% assign child_blocks = '' %}
+
+                                {% for child_block in section.blocks %}
+                                    {% if child_block.type == 'faq_subitem' %}
+
+                                        {% assign parent_title_stripped = block.settings.heading | strip_html %}
+                                        {% assign child_parent_stripped = child_block.settings.parent_title | strip_html %}
+                                     
+                                        {% if child_parent_stripped == parent_title_stripped %}
+                                            {% assign has_children = true %}
+                                            {% assign child_blocks = child_blocks | append: child_block.id | append: ',' %}
+                                        {% endif %}
+
+                                    {% endif %}
+                                {% endfor %}
+                                
+                                <div class="faq-container collapsible_panel {% if section.settings.border_hide == true %}border-0{% endif %}" is="collapsiblePanel" data-behaviour="single">
+                                    <button id="faq-item-btn{{ forloop.index }}" tabindex="0" class="panel_toggle d-flex align-items-center py-lg-5 py-md-4 py-3 text-start {% if section.settings.width_auto == true %}w-auto{% endif %}" 
+                                        data-toggle="panel" aria-expanded="false" aria-controls="faq-item-{{ forloop.index }}"
+                                        aria-label="Toggle faq block - {{ block.settings.heading | strip_html }}">
+                                        {% unless template.name == 'collection' %}
+                                            <h2 class="h5 mb-0 text-transform-none">{{ block.settings.heading }}</h2> 
+                                        {% else %}
+                                            <h2 class="mb-0 h4 text-transform-none">{{ block.settings.heading }}</h2> 
+                                        {% endunless %}
+                                        <span class="icon-collapsible"></span>
+                                    </button>
+                                    <div id="faq-item-{{ forloop.index }}" class="panel_content toggle-content text-secondary-900"
+                                        data-type="content" data-panelcontent
+                                        aria-hidden="true" role="region" aria-labelledby="faq-item-btn{{ forloop.index }}">
+                                        
+                                        <div class="toggle-content-wrap {% if has_children %}nested-faq-content{% endif %}">
+                                            {% if block.settings.answer != blank %}
+                                                {{ block.settings.answer }}
+                                            {% endif %}
+                                            {% if block.settings.answer_html != blank %}
+                                                {{ block.settings.answer_html }}
+                                            {% endif %}
+
+                                            {% assign collection_desc = collection.metafields.custom.collection_bottom_description.value %}
+                                            {% assign outer_for_loop = forloop.index %}
+                                            {% comment %} Try accessing the specific FAQ using for loop {% endcomment %}
+                                            {% if collection_desc != blank %}
+                                                {% for item in collection_desc %}
+                                                    {% if forloop.index == outer_for_loop %}
+                                                        {% if item.image_with_text != blank %}
+                                                            <div class="faq-image-with-text">
+                                                                {{ item.image_with_text }}
+                                                            </div>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endif %}
+
+                                            {% comment %} Render child FAQ items if they exist {% endcomment %}
+                                            {% if has_children %}
+                                                <div class="nested-faq-container ps-3 ps-md-5 pe-md-5 mb-0">
+                                                    {% for child_block in section.blocks %}
+                                                        {% if child_block.type == 'faq_subitem' %}
+                                                            {% assign parent_title_stripped = block.settings.heading | strip_html %}
+                                                            {% assign child_parent_stripped = child_block.settings.parent_title | strip_html %}
+                                                            {% if child_parent_stripped == parent_title_stripped %}
+                                                                {% if child_block.settings.title != blank and child_block.settings.answer != blank %}
+                                                                    <div class="faq-container collapsible_panel border-top border-secondary-900" is="collapsiblePanel" data-behaviour="single">
+                                                                        <button tabindex="-1" id="faq-subitem-btn{{ child_block.id }}" class="panel_toggle d-flex align-items-center py-lg-5 py-md-4 py-3 text-start" 
+                                                                            data-toggle="panel" aria-expanded="false" aria-controls="faq-subitem-{{ child_block.id }}"
+                                                                            aria-label="Toggle sub faq block - {{ child_block.settings.title | strip_html }}">
+                                                                            <h5 class="mb-0 fs-xl text-transform-none pe-3">{{ child_block.settings.title }}</h5> 
+                                                                            
+                                                                            <svg aria-hidden="true" focusable="false" style="width: 14px; height: 14px;"><use href="#icon-arrow-right"></use></svg>
+                                                                           
+                                                                        </button>
+                                                                        <div id="faq-subitem-{{ child_block.id }}" class="panel_content toggle-content text-secondary-900"
+                                                                            data-type="content" data-panelcontent
+                                                                            aria-hidden="true" role="region" aria-labelledby="faq-subitem-btn{{ child_block.id }}">
+                                                                            <div class="toggle-content-wrap">
+                                                                                {% if child_block.settings.answer != blank %}
+                                                                                    {{ child_block.settings.answer }}
+                                                                                {% endif %}
+                                                                                {% if child_block.settings.answer_html != blank %}
+                                                                                    {{ child_block.settings.answer_html }}
+                                                                                {% endif %}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
+
+{% comment %}
+{%- if section.blocks.size > 0 -%}
+  <script type="application/ld+json" class="schema-faq-graph">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for block in section.blocks -%}
+        {%- if block.type == 'faq_item' and block.settings.title != blank and block.settings.answer != blank -%}
+        {
+          "@type": "Question",
+          "name": "{{ block.settings.title | strip_html | escape }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ block.settings.answer | strip_html | escape }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endif -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
+ {% endcomment %}
+
+{% schema %}
+    {
+        "name": "FAQs",
+        "class": "template-faq",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "select",
+                "id": "container_width",
+                "label": "Container Width",
+                "options": [
+                    {
+                        "value": "container",
+                        "label": "Container"
+                    },
+                    {
+                        "value": "small_container_layout",
+                        "label": "Small Container"
+                    },
+                    {
+                        "value": "fluid_layout",
+                        "label": "Full Width Layout"
+                    }
+                ],
+                "default": "container"
+            },
+            {
+                "type": "header",
+                "content": "t:spacing.section_spacing"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing",
+                "label": "t:spacing.desktop_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_ipad",
+                "label": "t:spacing.ipad_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_top_spacing_mobile",
+                "label": "t:spacing.mobile_top_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-top-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-top-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-top-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-top-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-top-mobile-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing",
+                "label": "t:spacing.desktop_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_ipad",
+                "label": "t:spacing.ipad_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-ipad-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-ipad-sm"
+            },
+            {
+                "type": "select",
+                "id": "section_bottom_spacing_mobile",
+                "label": "t:spacing.mobile_bottom_spacing",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "None"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-xs",
+                        "label": "t:spacing.tight"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-sm",
+                        "label": "t:spacing.standard"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-md",
+                        "label": "t:spacing.spacious"
+                    },
+                    {
+                        "value": "spacing-bottom-mobile-lg",
+                        "label": "t:spacing.extra_spacious"
+                    }
+                ],
+                "default": "spacing-bottom-mobile-sm"
+            },
+            {
+                "type":"paragraph",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color",
+                "id": "section_bg_color",
+                "label": "t:settings.background_color",
+                "default": "#f3f3f3"
+            },
+            {
+                "type": "color",
+                "id": "section_txt_color",
+                "label": "t:settings.text_color",
+                "default": "#0F172B"
+            },
+            {
+                "type":"header",
+                "content":"Header Content"
+            },
+            {
+                "type": "select",
+                "id": "text_alignment",
+                "label": "Text Alignment",
+                "options": [
+                    {
+                        "value": "text-left",
+                        "label": "Left"
+                    },
+                    {
+                        "value": "text-center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "text-right",
+                        "label": "Right"
+                    }
+                ],
+                "default": "text-left"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "richtext",
+                "id": "txt",
+                "label": "Lead Text",
+                "default": "<p>A lead text is an opening paragraph that gives the audience the most important information in a concise and clear manner, while still maintaining their interest.</p>"
+            },
+            {
+                "type": "checkbox",
+                "id": "border_hide",
+                "label": "Hide Border",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "width_auto",
+                "label": "Width Auto",
+                "default": false
+            }
+        ],
+        "blocks": [
+            {
+                "type": "faq_item",
+                "name": "FAQ:",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Question"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "answer",
+                        "label": "Answer"
+                    },
+                    {
+                        "type": "html",
+                        "id": "answer_html",
+                        "label": "Add HTML For Answer",
+                        "info": "Use this to add custom HTML to the answer"
+                    }
+                ]
+            },
+            {
+                "type": "faq_subitem",
+                "name": "Nested FAQ:",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "parent_title",
+                        "label": "Parent FAQ Question",
+                        "info": "Enter the exact question text of the parent FAQ item (e.g., 'What are your shipping options')"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Sub Question"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "answer",
+                        "label": "Sub Answer"
+                    },
+                    {
+                        "type": "html",
+                        "id": "answer_html",
+                        "label": "Add HTML For Sub Answer",
+                        "info": "Use this to add custom HTML to the answer"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "FAQs"
+            }
+        ]
+    }
+{% endschema %}

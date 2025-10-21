@@ -1,0 +1,155 @@
+{% liquid
+    assign product = block.settings.product
+    assign main_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image
+    assign secondary_image = product.images[1]
+    assign card_title = product.selected_variant.title | default: product.title
+    assign preload_image = false
+    assign loading = 'lazy'
+    if template == 'collection' and collection.products[0].id == product.id or collection.products[1].id == product.id
+        assign preload_image = true
+        assign loading = 'eager'
+    endif
+%}
+
+{%- capture attribute_list -%}
+    data-feauredImage
+{%- endcapture -%}
+
+{%- capture img_sizes -%}
+    (min-width: 1440px) calc((100vw - 190px) / 4), (min-width: 768px) calc((100vw - 45px) / 2.5), 65vw
+{%- endcapture -%}
+
+    <div data-customindex="{{ block.settings.custom_index }}" class="product--media product-images-wrapper w-100 position-relative">
+        <span class="badges flex-wrap gap-1 d-flex {{ settings.badge_position }}">
+            {%- liquid
+                assign on_sale = false
+                assign sold_out = false
+                assign selected_variant = product.selected_or_first_available_variant
+    
+                if settings.show_sale_badge 
+                if selected_variant.compare_at_price > selected_variant.price
+                    assign on_sale = true
+                endif
+                endif
+                if settings.show_soldout_badge and product.available == false
+                assign sold_out = true
+                endif
+        
+                assign product_badges = settings.custom_badges | newline_to_br | split: '<br />'
+            -%}
+            
+            {%- assign tags = product.tags | downcase -%}
+            {%- for badge in product_badges -%}
+                {% liquid
+                    assign badge_data = badge | strip | split: ':'
+                    assign badge_label = badge_data[1] | strip
+                    assign badgebg = badge_data[2] | strip
+                    assign badgecolor = badge_data[3] | strip
+                %}
+                {%- if tags contains badge_data[0] -%}
+                <span class="badge badge-new" style="background-color: {{ badgebg }}; color: {{ badgecolor }};">
+                    {{ badge_label}}
+                </span>
+                {%- endif -%}
+            {%- endfor -%}
+            {%- if on_sale -%}
+                <span class="badge badge-sale" >
+                {{ 'products.product.on_sale' | t | escape }}
+                </span>
+            {%- endif -%}
+            {%- if sold_out -%}
+                <span class="badge badge-sold">
+                {{ 'products.product.sold_out' | t | escape }}
+                </span>
+            {%- endif -%}
+        </span>
+        {%- if main_image == blank -%}
+            <div class="product--media" data-media-id="{{ product.featured_image.id }}">
+                <a href="{{ product.url }}" class="d-block product-link position-relative w-100" data-product-link>
+                    {% render 'placeholder-image' %}
+                </a>
+            </div>
+        {%- else -%}
+            <div class="product--media" data-mediaID="{{ main_image.id }}">
+                <a href="{{ product.url }}" class="d-block product-link position-relative w-100" data-product-link>
+                    {%- render 'image', 
+                        image: main_image,
+                        sizes: img_sizes,
+                        loading: loading,
+                        alt: card_title,
+                        preload: preload_image,
+                        attributes: attribute_list
+                    -%}
+                    {%- if block.settings.show_secondary_media and secondary_image -%}
+                        {% if product.metafields.custom.secondary_hover_image != blank %}
+                            {% render 'image', 
+                                image: product.metafields.custom.secondary_hover_image.value,
+                                sizes: "(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw",
+                                alt: card_title,
+                                loading: 'lazy'
+                            %}
+                        {% else %}
+                        {% render 'image', 
+                            image: secondary_image,
+                            sizes: "(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw",
+                            alt: card_title,
+                            loading: 'lazy'
+                            %}
+                        {% endif %}
+                    {%- endif -%}
+                    
+                </a>
+            </div>
+        {% endif %}
+    </div>
+  
+  {% schema %}
+      {
+          "name": "Product Image",
+          "tag": null,
+          "settings": [
+              {
+                  "type": "header",
+                  "content": "Layout"
+              },
+              {
+                  "type": "range",
+                  "id": "width",
+                  "min": 20,
+                  "max": 100,
+                  "step": 5,
+                  "unit": "%",
+                  "label": "Width",
+                  "default": 100
+              },
+              {
+                  "type": "header",
+                  "content": "Content"
+              },
+              {
+                  "type": "product",
+                  "id": "product",
+                  "label": "Product"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_secondary_media",
+                  "label": "Show secondary image on hover",
+                  "default": false
+              },
+              {
+                "type": "liquid",
+                "id": "custom_index",
+                "label": "Custom Index"
+              }
+          ],
+          "presets": [
+              {
+              "name": "Product Image",
+                  "settings": {
+                      "product": "{{ closest.product }}"
+                  }
+              }
+          ]
+      }
+  {% endschema %}

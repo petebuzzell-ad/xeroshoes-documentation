@@ -1,0 +1,734 @@
+{% stylesheet %}
+  .cart-discount__label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap-2xs);
+    font-size: var(--cart-font-size--sm);
+  }
+
+  .cart-discount__pill-code {
+    overflow: hidden;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .cart-discount {
+    width: 100%;
+  }
+
+  .cart-discount__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart-discount__summary:hover {
+    color: rgb(from var(--color-foreground) r g b / var(--opacity-subdued-text));
+  }
+
+  .cart-discount__codes{
+    display: none;
+  }
+  .cart-discount__codes:has(.cart-discount__pill) {
+    display: flex;
+  }
+  
+
+  .cart-discount__button {
+    height: 100%;
+  }
+
+  .cart-discount__content {
+    height: calc(var(--button-size) + var(--padding-2xs) + var(--padding-sm));
+  }
+
+  .cart-discount__pill {
+    padding: 5px 8px 3px 8px;
+  }
+
+  .cart-discount__pill > *{
+    line-height:1;
+  }
+
+  .cart-discount__error {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-block: var(--padding-2xs) var(--padding-sm);
+  }
+
+  .cart-discount__error .svg-wrapper {
+    flex-shrink: 0;
+    width: var(--icon-size-xs);
+    height: var(--icon-size-xs);
+    margin-inline: var(--margin-3xs) var(--margin-xs);
+  }
+
+  cart-discount-component {
+    display: flex;
+  }
+{% endstylesheet %}
+
+{% capture class_list %}
+    {{ block.settings.padding_top_desktop }} {{ block.settings.padding_bottom_desktop }} {{ block.settings.padding_left_desktop }} {{ block.settings.padding_right_desktop }} {{ block.settings.padding_top_mobile }} {{ block.settings.padding_bottom_mobile }} {{ block.settings.padding_left_mobile }} {{ block.settings.padding_right_mobile }}
+{% endcapture %}
+
+<div class="row no-gutters pt-1 pb-3 cart-discount" id="cart-discount-{{ section.id }}" {{ block.attributes }}>
+    {%- for discount in cart.cart_level_discount_applications %}
+    <div class="col">
+        <p class="text-capitalize my-0"><svg aria-hidden="true" focusable="false" style="width: 18px; height: 18px;"><use href="#icon-discounts"></use></svg> {{ discount.title }}:</p>
+    </div>
+    <div class="col-6 text-end">
+        -{{ discount.total_allocated_amount | money -}}
+    </div>
+    {%- endfor -%}
+</div>
+
+{% liquid
+    assign discount_codes = cart.cart_level_discount_applications | where: 'type', 'discount_code' | map: 'title'
+    for item in cart.items
+      for allocation in item.line_level_discount_allocations
+        if allocation.discount_application.type == 'discount_code'
+          assign discount_codes = item.line_level_discount_allocations | slice: forloop.index0 | map: 'discount_application' | map: 'title' | concat: discount_codes
+        endif
+      endfor
+    endfor
+  
+    assign discount_codes = discount_codes | uniq
+  %}
+  
+  <cart-discount
+    data-section-id="{{ section.id }}"  class="d-block {{ class_list }}" {{ block.attributes }} style="background: {{ block.settings.bg_color }};">
+      <div class="collapsible_panel tab_container border-bottom border-top py-3" is="collapsiblePanel" >
+          <button id="cart-discount-summary" class="panel_toggle d-flex align-items-center {{ block.settings.text_size }} {{ block.settings.font_family }} mb-0 py-0" data-toggle="panel" aria-expanded="false" aria-controls="cart-discount-element"  aria-label="Toggle cart discount" style="color:{{ block.settigns.color }}">
+                {{ block.settings.heading }} <span class="icon-collapsible"></span>
+          </button>
+          <div id="cart-discount-element" class="panel_content toggle-content" role="region" 
+              data-type="content" data-panelcontent  aria-hidden="true" aria-labelledby="cart-discount-summary" >
+              <div class="toggle-content-wrap">
+                  <div class="mt-0">
+                      <form class="cart-discount__form d-flex align-items-center gap-2 mt-3">
+                          <label for="cart-discount" class="visually-hidden" > {{ 'general.cart_discount.discount' | t }} </label>
+                          <input id="cart-discount" class="form-control" name="discount" placeholder="{{ 'general.cart_discount.discount' | t }}" >
+                          <button type="submit" class="btn {{ block.settings.style_class }} {{ block.settings.size_class }} cart-discount__button">{{ 'general.cart_discount.apply' | t }}</button>
+                      </form>
+                      <div class="cart-discount__error pt-2" style="display: none;" role="alert" data-discount-error>
+                          <span class="cart-discount__error-text text-danger fs-sm fst-italic">
+                            {{ 'general.cart_discount.discount_code_error' | t }}
+                          </span>
+                      </div>
+                  </div>
+                  <ul class="cart-discount__codes align-items-center gap-2 flex-wrap list-unstyled pt-3 mb-0" id="cart-discount-codes-{{ section.id }}">
+                      {% for discount_code in discount_codes %}
+                          <li class="cart-discount__pill bg-gray-200 rounded-2 d-flex align-items-center text-black gap-2 fs-md" data-discount-code="{{ discount_code }}" aria-label="{{ 'general.cart_discount.discount_applied' | t: code: discount_code }}" >
+                              <p class="cart-discount__pill-code">{{ discount_code }}</p>
+                              <button type="button" data-remove-discount class="border-0 bg-transparent p-0 d-flex" aria-label="{{ 'general.cart_discount.remove_discount' | t: code: discount_code }}" >
+                                  <svg aria-hidden="true" focusable="false" style="width: 10px; height: 10px;"><use href="#icon-close"></use></svg>
+                                  <span class="visually-hidden">{{ 'general.modal.close' | t }}</span>
+                              </button>
+                          </li>
+                      {% endfor %}
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </cart-discount>
+  
+  <script data-src="{{ 'cart-discount.js' | asset_url }}" defer></script>
+
+{% schema %}
+  {
+    "name": "Cart Discounts",
+    "tag": null,
+    "settings": [
+        {
+            "type":"header",
+            "content":"Block heading"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Discount"
+        },
+        {
+            "type": "select",
+            "id": "text_size",
+            "label": "Font Size",
+            "options": [
+                {
+                    "value": "h1",
+                    "label": "H1"
+                },
+                {
+                    "value": "h2",
+                    "label": "H2"
+                },
+                {
+                    "value": "h3",
+                    "label": "H3"
+                },
+                {
+                    "value": "h4",
+                    "label": "H4"
+                },
+                {
+                    "value": "h5",
+                    "label": "H5"
+                },
+                {
+                    "value": "h6",
+                    "label": "H6"
+                },
+                {
+                    "value": "fs-xs",
+                    "label": "Extra Small"
+                },
+                {
+                    "value": "fs-sm",
+                    "label": "Small"
+                },
+                {
+                    "value": "fs-md",
+                    "label": "Medium"
+                },
+                {
+                    "value": "fs-base",
+                    "label": "Default"
+                },
+                {
+                    "value": "fs-lg",
+                    "label": "Large"
+                },
+                {
+                    "value": "fs-xl",
+                    "label": "Extra Large"
+                },
+                {
+                    "value": "",
+                    "label": "Initial"
+                }
+            ],
+            "default": "fs-lg"
+        },
+        {
+            "type": "select",
+            "id": "font_family",
+            "label": "Font Family",
+            "options": [
+                {
+                    "value": "font-family-base",
+                    "label": "Body Font family"
+                },
+                {
+                    "value": "font-family-heading",
+                    "label": "Heading Font family"
+                }
+            ],
+            "default": "font-family-base"
+        },
+        {
+            "type": "color",
+            "id": "color",
+            "label": "Color"
+        },
+        {
+            "type":"header",
+            "content":"Button"
+        },
+        {
+            "type": "select",
+            "id": "style_class",
+            "label": "Style",
+            "options": [
+                {
+                    "value": "btn-primary",
+                    "label": "Primary"
+                },
+                {
+                    "value": "btn-secondary",
+                    "label": "Secondary"
+                },
+                {
+                    "value": "btn-dark",
+                    "label": "Dark"
+                },
+                {
+                    "value": "btn-light",
+                    "label": "Light"
+                },
+                {
+                    "value": "btn-link-primary",
+                    "label": "Link Primary"
+                },
+                {
+                    "value": "btn-link-secondary",
+                    "label": "Link Secondary"
+                }
+            ],
+            "default": "btn-primary"
+        },
+        {
+            "type": "select",
+            "id": "size_class",
+            "label": "Button Size",
+            "options": [
+                {
+                    "value": "btn-sm",
+                    "label": "Small"
+                },
+                {
+                    "value": "",
+                    "label": "Default"
+                },
+                {
+                    "value": "btn-lg",
+                    "label": "Large"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "type":"header",
+            "content":"t:names.styles"
+        },
+        {
+            "type": "color_background",
+            "id": "bg_color",
+            "label": "t:settings.background_color",
+            "default": "transparent"
+        },
+        {
+            "type":"header",
+            "content":"Padding: Desktop"
+        },
+        {
+            "type": "select",
+            "id": "padding_top_desktop",
+            "label": "Padding Top",
+            "options": [
+                {
+                    "value": "pt-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "pt-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "pt-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "pt-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "pt-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "pt-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "pt-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "pt-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "pt-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "pt-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "pt-md-10",
+                    "label": "50"
+                }
+            ],
+            "default": "pt-md-0"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom_desktop",
+            "label": "Padding Bottom",
+            "options": [ 
+                {
+                    "value": "pb-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "pb-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "pb-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "pb-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "pb-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "pb-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "pb-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "pb-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "pb-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "pb-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "pb-md-10",
+                    "label": "50"
+                }
+            ],
+            "default": "pb-md-4"
+        },
+        {
+            "type": "select",
+            "id": "padding_left_desktop",
+            "label": "Padding Left",
+            "options": [
+                {
+                    "value": "ps-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "ps-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "ps-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "ps-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "ps-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "ps-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "ps-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "ps-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "ps-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "ps-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "ps-md-10",
+                    "label": "50"
+                }
+            ],
+            "default": "ps-md-0"
+        },
+        {
+            "type": "select",
+            "id": "padding_right_desktop",
+            "label": "Padding Right",
+            "options": [
+                {
+                    "value": "pe-md-0",
+                    "label": "0"
+                },
+                {
+                    "value": "pe-md-1",
+                    "label": "5"
+                },
+                {
+                    "value": "pe-md-2",
+                    "label": "10"
+                },
+                {
+                    "value": "pe-md-3",
+                    "label": "15"
+                },
+                {
+                    "value": "pe-md-4",
+                    "label": "20"
+                },
+                {
+                    "value": "pe-md-5",
+                    "label": "25"
+                },
+                {
+                    "value": "pe-md-6",
+                    "label": "30"
+                },
+                {
+                    "value": "pe-md-7",
+                    "label": "35"
+                },
+                {
+                    "value": "pe-md-8",
+                    "label": "40"
+                },
+                {
+                    "value": "pe-md-9",
+                    "label": "45"
+                },
+                {
+                    "value": "pe-md-10",
+                    "label": "50"
+                }
+            ],
+            "default": "pe-md-0"
+        },
+        {
+            "type":"header",
+            "content":"Padding: Mobile"
+        },
+        {
+            "type": "select",
+            "id": "padding_top_mobile",
+            "label": "Padding Top",
+            "options": [
+                {
+                    "value": "pt-0",
+                    "label": "0"
+                },
+                {
+                    "value": "pt-1",
+                    "label": "5"
+                },
+                {
+                    "value": "pt-2",
+                    "label": "10"
+                },
+                {
+                    "value": "pt-3",
+                    "label": "15"
+                },
+                {
+                    "value": "pt-4",
+                    "label": "20"
+                },
+                {
+                    "value": "pt-5",
+                    "label": "25"
+                },
+                {
+                    "value": "pt-6",
+                    "label": "30"
+                },
+                {
+                    "value": "pt-7",
+                    "label": "35"
+                },
+                {
+                    "value": "pt-8",
+                    "label": "40"
+                },
+                {
+                    "value": "pt-9",
+                    "label": "45"
+                },
+                {
+                    "value": "pt-10",
+                    "label": "50"
+                }
+            ],
+            "default": "pt-0"
+        },
+        {
+            "type": "select",
+            "id": "padding_bottom_mobile",
+            "label": "Padding Bottom",
+            "options": [
+                {
+                    "value": "pb-0",
+                    "label": "0"
+                },
+                {
+                    "value": "pb-1",
+                    "label": "5"
+                },
+                {
+                    "value": "pb-2",
+                    "label": "10"
+                },
+                {
+                    "value": "pb-3",
+                    "label": "15"
+                },
+                {
+                    "value": "pb-4",
+                    "label": "20"
+                },
+                {
+                    "value": "pb-5",
+                    "label": "25"
+                },
+                {
+                    "value": "pb-6",
+                    "label": "30"
+                },
+                {
+                    "value": "pb-7",
+                    "label": "35"
+                },
+                {
+                    "value": "pb-8",
+                    "label": "40"
+                },
+                {
+                    "value": "pb-9",
+                    "label": "45"
+                },
+                {
+                    "value": "pb-10",
+                    "label": "50"
+                }
+            ],
+            "default": "pb-3"
+        },
+        {
+            "type": "select",
+            "id": "padding_left_mobile",
+            "label": "Padding Left",
+            "options": [
+                {
+                    "value": "ps-0",
+                    "label": "0"
+                },
+                {
+                    "value": "ps-1",
+                    "label": "5"
+                },
+                {
+                    "value": "ps-2",
+                    "label": "10"
+                },
+                {
+                    "value": "ps-3",
+                    "label": "15"
+                },
+                {
+                    "value": "ps-4",
+                    "label": "20"
+                },
+                {
+                    "value": "ps-5",
+                    "label": "25"
+                },
+                {
+                    "value": "ps-6",
+                    "label": "30"
+                },
+                {
+                    "value": "ps-7",
+                    "label": "35"
+                },
+                {
+                    "value": "ps-8",
+                    "label": "40"
+                },
+                {
+                    "value": "ps-9",
+                    "label": "45"
+                },
+                {
+                    "value": "ps-10",
+                    "label": "50"
+                }
+            ],
+            "default": "ps-0"
+        },
+        {
+            "type": "select",
+            "id": "padding_right_mobile",
+            "label": "Padding Right",
+            "options": [
+                {
+                    "value": "pe-0",
+                    "label": "0"
+                },
+                {
+                    "value": "pe-1",
+                    "label": "5"
+                },
+                {
+                    "value": "pe-2",
+                    "label": "10"
+                },
+                {
+                    "value": "pe-3",
+                    "label": "15"
+                },
+                {
+                    "value": "pe-4",
+                    "label": "20"
+                },
+                {
+                    "value": "pe-5",
+                    "label": "25"
+                },
+                {
+                    "value": "pe-6",
+                    "label": "30"
+                },
+                {
+                    "value": "pe-7",
+                    "label": "35"
+                },
+                {
+                    "value": "pe-8",
+                    "label": "40"
+                },
+                {
+                    "value": "pe-9",
+                    "label": "45"
+                },
+                {
+                    "value": "pe-10",
+                    "label": "50"
+                }
+            ],
+            "default": "pe-0"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Cart Discounts",
+        }
+    ]
+  }
+{% endschema %}

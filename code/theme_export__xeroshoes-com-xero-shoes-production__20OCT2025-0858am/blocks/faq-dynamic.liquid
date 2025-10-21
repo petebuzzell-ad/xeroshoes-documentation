@@ -1,0 +1,167 @@
+ <div class="col-12 faq-dynamic-block" data-faqsParent>
+    <div class="row">
+        <div class="col-12 ps-xl-6 ps-md-4" data-individual-section>
+            {%- for faq in block.settings.faqs  -%}
+                    <div class="faq-container collapsible_panel {% if block.settings.first_faq_open_by_default %}open{% endif %}" is="collapsiblePanel" data-behaviour="multiple">
+                        <button id="faq-item-btn{{ forloop.index }}" tabindex="0" class="panel_toggle d-flex align-items-center py-md-5 py-3 text-start" 
+                            data-toggle="panel" aria-expanded="false" aria-controls="faq-item-{{ forloop.index }}"
+                            aria-label="Toggle faq block - {{ faq.title | strip_html }}">
+                        
+                                <h3 class="h5 mb-0 text-transform-none">{{ faq.title }}</h3> 
+                            
+                            <span class="icon-collapsible"></span>
+                        </button>
+                        <div id="faq-item-{{ forloop.index }}" class="panel_content toggle-content text-secondary-900 {% if block.settings.first_faq_open_by_default %}open{% endif %}"
+                            data-type="content" data-panelcontent
+                        {% if block.settings.first_faq_open_by_default %}aria-hidden="true"{% else %}aria-hidden="false"{% endif %} role="region" aria-labelledby="faq-item-btn{{ forloop.index }}">
+                            
+                            <div class="toggle-content-wrap ">
+                                <div class="faq-dynamic-content-wrapper my-0">
+                                    {% if faq.description_multiline %}
+                                    {{ faq.description_multiline }}
+                                    {% else %}
+                                    {{ faq.description }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<style>
+    .faq-dynamic-block
+    {
+        padding-top: 31px !important;
+    }
+    .faq-dynamic-block .collapsible_panel .panel_toggle
+    {
+        padding-block: 0 20px !important;
+    }
+    .faq-dynamic-block .faq-dynamic-content-wrapper
+    {
+        padding-bottom: 20px;
+        margin-top: -5px !important;
+    }
+    .faq-dynamic-block .collapsible_panel+.collapsible_panel
+    {
+        margin-top: 19.5px !important;
+    }
+    .faq-dynamic-content-wrapper *
+    {
+        max-width: 100%;
+    }
+    .faq-dynamic-content-wrapper iframe
+    {
+        width: 100%;
+        aspect-ratio: 1277 / 718;
+        height: 100%;
+        display: block;
+    }
+    .faq-dynamic-content-wrapper center:not(:last-child), .faq-dynamic-content-wrapper img:not(:last-child)
+    {
+        margin-bottom: 25px;
+    }
+    .faq-dynamic-content-wrapper center:not(:first-child), .faq-dynamic-content-wrapper img:not(:first-child), .faq-dynamic-content-wrapper center:only-child
+    {
+        margin-top: 25px;
+    }
+    .faq-dynamic-content-wrapper img
+    {
+        height: auto;
+        /* width: 100%;
+        max-width: 300px; */
+        display: block;
+        width: revert-layer;
+    }
+    .faq-dynamic-content-wrapper ul
+    {
+        padding-left: 23px;
+        display: flex;
+        flex-direction: column;
+        list-style-type: disc;
+    }
+    .minimalist-faqs .faq-dynamic-block
+    {
+        padding-top: 0 !important;
+    }
+    .minimalist-faqs .faq-dynamic-block .collapsible_panel .panel_toggle
+    {
+        gap: 20px;
+    }
+    .faq-dynamic-content-wrapper .alignleft
+    {
+        float: left;
+        margin-right: 15px !important;
+    }
+    .faq-dynamic-content-wrapper figure:has(figcaption) img
+    {
+        margin-bottom: 0 !important;
+    }
+    .faq-dynamic-content-wrapper figure figcaption
+    {
+        margin-bottom: 15px;
+    }
+    @media (min-width: 768px)
+    {
+        .faq-dynamic-block
+        {
+            padding-top: 22px !important;
+        }
+        .faq-dynamic-block .faq-dynamic-content-wrapper
+        {
+            padding-bottom: 25px;
+            margin-top: 0 !important;
+        }
+        .faq-dynamic-block .collapsible_panel .panel_toggle
+        {
+            padding-block: 0 25px !important;
+        }
+        .faq-dynamic-block .collapsible_panel+.collapsible_panel
+        {
+            margin-top: 24px !important;
+        }
+        .faq-dynamic-content-wrapper ul
+        {
+            gap: 4px;
+        }
+        .minimalist-faqs [data-individual-section]
+        {
+            padding-inline: 22px 0 !important;
+        }
+    }
+    @media (max-width: 767px)
+    {
+        .faq-dynamic-block .icon-collapsible
+        {
+            min-width: 14px;
+            height: 14px;
+            width: 14px;
+        }
+    }
+</style>
+{% schema %}
+    {
+        "name": "Dynamic FAQ",
+        "tag": null,
+        "settings": [
+            {
+                "type": "metaobject_list",
+                "id": "faqs",
+                "label": "Select FAQs",
+                "metaobject_type": "product_faqs"
+            },
+            {
+                "type": "checkbox",
+                "id": "first_faq_open_by_default",
+                "label": "1st FAQ Open by default",
+                "default": false
+            }
+        ],
+        "presets": [
+            { "name": "Dynamic FAQ" }
+        ]
+    }
+{% endschema %}

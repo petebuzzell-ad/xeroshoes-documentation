@@ -1,0 +1,198 @@
+
+{%- if predictive_search.performed -%}
+
+    {% comment %} Count actual displayed products after filtering {% endcomment %}
+    {% assign displayed_products_count = 0 %}
+    {% for product in predictive_search.resources.products limit: 4 %}
+        {% unless product.tags contains 'hidden' %}
+            {% assign searched_variant = product.selected_or_first_available_variant %}
+            {% unless searched_variant.metafields.custom.draft_variant == true %}
+                {% assign displayed_products_count = displayed_products_count | plus: 1 %}
+            {% endunless %}
+        {% endunless %}
+    {% endfor %}
+
+    {% comment %} Count collections {% endcomment %}
+    {% assign displayed_collections_count = predictive_search.resources.collections.size %}
+
+    {% assign results_count = predictive_search.resources.queries.size
+        | plus: displayed_products_count
+        | plus: displayed_collections_count
+    %}
+
+    <div id="predictive-search-results" class="container" role="listbox">
+
+        {% if results_count > 0 %}
+
+            <div class="row row-gap-5">
+                {% comment %} Collections with Product Previews {% endcomment %}
+                {%- if predictive_search.resources.collections.size > 0 -%}
+                    <div class="col-12">
+                        <div class="predictive-search__collections mb-5">
+                            <h6 class="mb-4 mega-menu-block-1 mega-menu-block">{{- 'general.search.predictive.result_collections' | t -}}</h6>
+                            <div class="row row-gap-4">
+                                {%- for collection in predictive_search.resources.collections limit: 2 -%}
+                                    <div class="col-lg-6 col-12">
+                                        <div class="collection-preview-card border rounded p-4 h-100">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5 class="collection-title mb-0">
+                                                    <a href="{{ collection.url }}" class="text-body text-decoration-none">
+                                                        {{ collection.title }}
+                                                    </a>
+                                                </h5>
+                                                <a href="{{ collection.url }}" class="btn btn-sm btn-outline-dark">
+                                                    View All
+                                                </a>
+                                            </div>
+                                            
+                                            {%- if collection.description != blank -%}
+                                                <p class="collection-description text-muted small mb-3">
+                                                    {{ collection.description | truncate: 100 }}
+                                                </p>
+                                            {%- endif -%}
+                                            
+                                            <div class="collection-products row row-gap-2">
+                                                {%- for product in collection.products limit: 4 -%}
+                                                    {% unless product.tags contains 'hidden' %}
+                                                        {% assign searched_variant = product.selected_or_first_available_variant %}
+                                                        {% unless searched_variant.metafields.custom.draft_variant == true %}
+                                                            <div class="col-6 col-lg-3">
+                                                                <a href="{{ product.url }}" class="product-preview-link d-block text-decoration-none">
+                                                                    <div class="product-image-wrapper position-relative">
+                                                                        {%- if product.featured_media != blank -%}
+                                                                            <img class="w-100 rounded" 
+                                                                                 src="{{ product.featured_media | image_url: width: 150 }}" 
+                                                                                 alt="{{ product.title | escape }}" 
+                                                                                 width="150" 
+                                                                                 height="150"
+                                                                                 loading="lazy">
+                                                                        {%- else -%}
+                                                                            <div class="placeholder-image w-100 rounded bg-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                                                                <span class="text-muted">No Image</span>
+                                                                            </div>
+                                                                        {%- endif -%}
+                                                                    </div>
+                                                                    <div class="product-info mt-2">
+                                                                        <h6 class="product-title text-body small mb-1 lh-1">
+                                                                            {{ product.title | truncate: 30 }}
+                                                                        </h6>
+                                                                        <div class="product-price small">
+                                                                            {%- if product.price_varies -%}
+                                                                                <span class="text-muted">From {{ product.price_min | money }}</span>
+                                                                            {%- else -%}
+                                                                                <span class="text-body">{{ product.price | money }}</span>
+                                                                            {%- endif -%}
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        {% endunless %}
+                                                    {% endunless %}
+                                                {%- endfor -%}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                    </div>
+                {%- endif -%}
+
+                <div class="col-lg-12">
+                    {%- if predictive_search.resources.products.size > 0 -%}
+                        <div class="predictive-search__products pe-xl-4 d-flex flex-column h-100">
+                            <h6 class="mb-4 mega-menu-block-1 mega-menu-block">{{- 'general.search.predictive.result_products' | t -}}</h6>
+                            <div id="results-products" class="results-list list-unstyled row row-gap-lg-3 row-gap-1" role="group">
+                                {%- for product in predictive_search.resources.products limit: 4 -%}
+                                    {% unless product.tags contains 'hidden' %}
+                                    {% assign searched_variant = product.selected_or_first_available_variant %}
+                                    {% unless searched_variant.metafields.custom.draft_variant == true %}
+                                    
+                                    {% liquid 
+                                        assign main_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image
+                                        assign secondary_image = product.images[1]
+                                        for image in product.images
+                                            assign image_alt = image.alt | strip | handleize
+                                            if image_alt == 'main-image'
+                                                assign main_image = image
+                                            elsif image_alt == 'hover-image'
+                                                assign secondary_image = image
+                                            endif
+                                        endfor
+                                    %}
+                                    <div class="list-item col-md-3 col-6 mega-menu-block mega-menu-block-{{ forloop.index }}" role="option">
+                                        <a href="{{ product.url }}" class="predictive-search__image" aria-label="{{ product.title }}" title="{{ product.title }}">
+                                            {%- if main_image != blank -%}
+                                                <img class="w-100" src="{{ main_image | image_url: width: 500 }}" alt="{{ main_image.alt }}" width="50" height="{{ 50 | divided_by: main_image.aspect_ratio | round }}">
+                                                {% if secondary_image != blank %}
+                                                    <img secondary_image class="w-100" src="{{ secondary_image | image_url: width: 500 }}" alt="{{ secondary_image.alt }}" width="50" height="{{ 50 | divided_by: secondary_image.aspect_ratio | round }}">
+                                                {% endif %}
+                                            {% else %}
+                                                {% render 'placeholder-image' , class: 'w-100 h-100 object-fit-cover' %}
+                                            {%- endif -%}
+                                        </a>
+
+                                        <div class="predictive-search__item-content pt-2">
+                                            <div>
+                                                <!-- Stamped - Begin Star Rating Badge -->
+                                                <span 
+                                                class="stamped-product-reviews-badge" 
+                                                data-id="{{ product.id }}"
+                                                data-product-sku="{{ product.handle }}" 
+                                                data-product-type="{{ product.type }}" 
+                                                data-product-title="{{ product.title }}" 
+                                                style="display:block;">
+                                                </span>
+                                                <!-- Stamped - End Star Rating Badge -->
+                                            </div>
+                                            <a href="{{ product.url }}" class="item--title text-body fs-16-15 fw-medium font-family-heading lh-11 ls-2 d-inline-flex" style="margin-block: 8px 6px;" aria-labelledby="{{ product.title }}" title="{{ product.title }}">{{ product.title }}</a>
+                                            <div class="price-wrapper mt-1 lh-1">
+                                                {% comment %} <span class="actual-price money text-body fs-16-14 fw-normal font-family-heading lh-11 ls-2">{{ product.price | money }}</span> {% endcomment %}
+                                                <div class="font-family-heading ls-2 price-block ">                                         
+                                                <span class="price m-0 p-0 money fs-16-14 fw-normal {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}text-danger{% endif %}" data-currentPrice style="color:#0f172b">
+                                                    {%- if product.selected_or_first_available_variant != blank -%}
+                                                    {{ product.selected_or_first_available_variant.price | money }}
+                                                    {%- else -%}
+                                                    {{- product.price | money -}}
+                                                    {%- endif -%}
+                                                </span>
+
+                                                
+                                                {%- if product.selected_variant and product.selected_variant.compare_at_price > product.selected_variant.price -%}
+                                                    <del class="price small m-0 p-0 me-1 money {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}d-inline-block{% else %}d-none{% endif %} fs-14-12 fw-normal" data-comparePrice  style="color:#646465">{{ product.selected_variant.compare_at_price | money }}</del>
+                                                {%- elsif product.compare_at_price > product.price -%}
+                                                    <del class="price small m-0 p-0 me-1 money {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}d-inline-block{% else %}d-none{% endif %} fs-14-12 fw-light" data-comparePrice style="color:#646465">{{ product.compare_at_price | money }}</del>
+                                                {%- endif -%}
+                                                </div>  
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endunless %}
+                                {% endunless %}
+                                {%- endfor -%}
+                            </div>
+                            <div class="d-none d-lg-block pt-9 mt-auto">
+                                <a href="{{ routes.search_url }}?type=product&q={{ predictive_search.terms }}" class="btn w-100 btn-dark">{{ 'general.search.predictive.view_all' | t }}</a>
+                            </div>
+                        </div> 
+                    {%- endif -%}
+                </div>
+
+            </div>
+
+            {% comment %} <div class="predictive-search__result-group"></div> {% endcomment %}
+
+            <div class="pt-5 text-center d-lg-none">
+                <a href="{{ routes.search_url }}?type=product&q={{ predictive_search.terms }}" class="btn w-100 btn-dark">{{ 'general.search.predictive.view_all' | t }}</a>
+            </div>
+        {% else %}
+            <div class="no-results mega-menu-block mega-menu-block-1">
+                <p>{{ "general.search.predictive.no_results" | t: searchTerm: predictive_search.terms }} </p>
+            </div>
+        {% endif %}
+    </div>
+{%- endif -%}
+    

@@ -1,0 +1,45 @@
+{% assign sub_collections = section.settings.sub_collections %}
+<div class="filter__container individual-filter-block collapsible_panel" data-index="sub_collection" data-subCollections data-behaviour="single" is="collapsiblePanel">
+    <legend class="visually-hidden-skip">{{ 'templates.collection.sub_collection' | t }}</legend>
+    <button id="filter_toggle_collections_btn" class="panel_toggle"
+        aria-label="Open {{ 'templates.collection.sub_collection' | t }}" 
+        data-toggle="panel" aria-expanded="false" aria-controls="filter_toggle_collections"
+        aria-label="{{ 'templates.collection.sub_collection' | t }}">
+        <span>{{ 'templates.collection.sub_collection' | t }}</span>
+        <span class="icon-collapsible">
+            <svg viewBox="0 0 40 40">
+                <use href="#icon-arrow-down"></use>
+            </svg>
+        </span>
+    </button>
+    <div class="filter__block panel_content toggle-content" id="filter_toggle_collections"
+        data-type="content" data-panelcontent
+        aria-hidden="true" role="region" aria-labelledby="filter_toggle_collections_btn">
+        <div class="toggle-content-wrap">
+            <div class="d-flex align-items-center bg-black justify-content-center d-lg-none collection-filter-header position-relative py-3 px-3" bis_skin_checked="1">
+                <button data-back class="go-back text-white d-inline-flex align-items-center bg-transparent border-0 p-0">
+                    <svg aria-hidden="true" focusable="false" style="width:20px;height:20px;">
+                        <use href="#icon-arrow-prev"></use>
+                    </svg>
+                </button>
+                <p class="mb-0 text-center filter-title h5  text-white">{{ 'templates.collection.sub_collection' | t }}</p>
+
+                {% comment %} <button class="collection-filters-close align-items-center d-flex text-white bg-transparent border-0 p-0" data-closefilter>
+                    <svg aria-hidden="true" focusable="false" style="width:20px;height:20px;">
+                        <use href="#icon-close"></use>
+                    </svg>
+                </button> {% endcomment %}
+            </div>
+            <ul class="filter__list list-unstyled">
+                {%- for coll in sub_collections -%}
+                    <li class="filter__item">
+                        <a href="{{ coll.url }}" data-subcollectionslinks
+                            class="collection-entry subcollection-links {% if coll.handle == collection.handle %}active{% endif %}">
+                            {{ coll.title }}
+                        </a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </div>    
+    </div>
+</div>

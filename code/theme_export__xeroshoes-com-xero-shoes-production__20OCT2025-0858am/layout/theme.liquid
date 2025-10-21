@@ -1,0 +1,250 @@
+{% capture content_html %}
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
+    {% if request.page_type == 'blog' and request.path contains 'tagged' %}
+      <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+    {% render 'gcm-integration-script' %}
+    {% render 'speed-optimization-script', injectionType: 'head' %}
+    {%- render 'preload-preconnect-assets' -%}
+    {%- comment -%}Favicon Icon{%- endcomment -%}
+    {%- if settings.favicon != blank -%}
+      <link rel="shortcut icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 192, height: 192 }}">
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 152, height: 152 }}" sizes="152x152">
+      <link rel="apple-touch-icon-precomposed" href="{{ settings.favicon | image_url: width: 180, height: 180 }}" sizes="180x180">
+    {%- endif -%}
+    {%- liquid 
+      assign default_page_title = page_title | default: shop.name
+      assign default_page_description = page_description | default: shop.description | default: shop.name
+      
+      if template.name == 'search' and search.terms.size > 0
+        assign product_results = search.results | where: 'object_type', 'product'
+        assign article_results = search.results | where: 'object_type', 'article'
+        
+        assign filtered_products_count = 0
+        for item in product_results
+            assign searched_variant = item.selected_or_first_available_variant
+            unless searched_variant.metafields.custom.draft_variant == true
+              assign filtered_products_count = filtered_products_count | plus: 1
+            endunless
+        endfor
+        
+        assign total_filtered_results = filtered_products_count | plus: article_results.size
+        
+        if total_filtered_results == 0
+          assign default_page_title = 'Search: No results found for "' | append: search.terms | append: '"'
+        elsif total_filtered_results == 1
+          assign default_page_title = 'Search: 1 result found for "' | append: search.terms | append: '"'
+        else
+          assign default_page_title = 'Search: ' | append: total_filtered_results | append: ' results found for "' | append: search.terms | append: '"'
+        endif
+      endif
+    -%}
+    {%- liquid 
+      if template contains 'blog' and current_tags.size > 0
+        assign current_tag = current_tags.first | replace: '_','-' | handleize
+        assign default_page_title = shop.metaobjects.category_meta_data_meta_title_and_description[current_tag].meta_title | replace: ' - Xero Shoes',''
+        assign default_page_description = shop.metaobjects.category_meta_data_meta_title_and_description[current_tag].meta_description
+      endif
+    -%}
+    <title>{% if template == 'index' %}{{ default_page_title }}{% else %}{{ default_page_title }} - Xero Shoes{% endif %}</title>
+    {%- if default_page_description -%}
+      <meta name="description" content="{{ default_page_description | escape }}">
+    {%- else -%}
+      <meta name="description" content="{{ shop.name | escape }}">
+    {%- endif -%}
+    {%- render 'meta-tags' -%}
+    {{ content_for_header }}
+    {%- render 'critical-styles' -%}
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+  </head>
+
+  <body class="template-{{ template.name }} d-flex flex-column min-vh-100" data-suffix="{{ template.suffix }}">
+    <script type="text/javascript" src="{{ 'lozad.js' | asset_url }}" async></script>
+    <script src="{{ 'swiper-slider-component.js' | asset_url }}"></script>
+    <script type="text/javascript" id="pubsub-js">
+    {{ 'pubsub.js' | inline_asset_content }}
+    </script>
+    {% render 'svg-icons' %}
+    <a class="skip-to-content-link button visually-hidden-skip" href="#MainContent" title="{{ "accessibility.skip_to_text" | t }}">
+      {{ "accessibility.skip_to_text" | t }}
+    </a>
+    <site-overlay class="d-block" id="site-overlay" role="dialog" aria-hidden="true" style="display: none;"></site-overlay>
+    {% sections 'header-group' %}
+    <main id="MainContent" class="content-for-layout focus-none flex-grow-1" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {% sections 'footer-group' %}
+    {% if template.name != 'cart' %}
+      {%- section 'component-cart-drawer' -%}
+    {% endif %}
+
+    <custom-drawer id="quickshop-drawer" class="custom-drawer quickshop-drawer" role="dialog" aria-label="Quick Shop Drawer">
+      <div class="custom-drawer-container h-100">
+          <div class="custom-drawer-content d-flex flex-column h-100">
+            <header class="page-title cart-title mb-0 d-flex align-items-center px-5 py-4 border-bottom ps-12" role="presentation">
+              <button class="btn btn-close close-ajax--cart p-0 border-0 ms-4" aria-label="Close cart drawer" data-closedrawer>
+                <svg aria-hidden="true" focusable="false" style="width: 16px; height: 16px;"><use href="#icon-arrow-left-light"></use></svg>
+              </button>
+              <div id="drawer-title" class="drawer-header h4 mb-0 lh-11" tabindex="0">Choose Options</div>
+            </header>
+            <div class="d-flex drawer-body flex-column flex-fill overflow-auto px-5 py-5 quickshop-body" data-quickshop-body>
+             
+            </div>
+        </div>
+      </div>
+    </custom-drawer>
+
+    {%- if template.name != 'index' -%}
+    <modal-dialog id="PopupModal-video" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal">
+          <div class="modal-dialog modal-dialog-centered modal-xl" data-customVideoPopup>
+            <div class="modal-content bg-black">
+              <div class="modal-head">
+                <button type="button" class="align-items-center btn close d-flex modal-video-close p-1 text-white" id="ModalClose-PopupModal-video" aria-label="{{ 'general.modal.close' | t }}">
+                  <svg aria-hidden="true" focusable="false" style="width:16px;height:16px;"><use href="#icon-close"></use></svg>
+                </button>
+              </div>
+              <div class="modal-body video-container d-flex justify-content-center align-items-center p-0">
+              </div>
+            </div>
+          </div>
+      </div>
+    </modal-dialog>
+    {%- endif -%}
+    {%- if template.name == 'product' and product.metafields.custom.sizing_chart != blank -%}
+      <custom-drawer id="ContentPopup-{{ product.id }}" class="custom-drawer size-guide-drawer" role="dialog" aria-label="Size Guide Drawer">
+        <div class="custom-drawer-container flex-fill">
+            <div class="custom-drawer-content d-flex flex-column h-100">
+              <header class="page-title size-guide-title mb-0 d-flex align-items-center px-md-6 py-md-5 border-bottom" role="presentation">
+                <div id="drawer-title" class="drawer-header h5 mb-0 lh-12" >Size Guide</div>
+                <button class="btn btn-close close-ajax--cart p-0 border-0 ms-auto" aria-label="Close cart drawer" data-closedrawer>
+                  <svg aria-hidden="true" focusable="false" style="width: 16px; height: 16px;"><use href="#icon-close"></use></svg>
+                </button>
+              </header>
+              <div class="drawer-body flex-grow-1 p-sm-6 p-4 pb-lg-10 size-guide-body">
+                {%- if product.metafields.custom.sizing_chart != blank -%}
+                  {%- assign sizing_charts = product.metafields.custom.sizing_chart.value -%}
+                  {%- for sizing_chart in sizing_charts -%}
+                    <div class="sizing-chart-popup d-flex flex-lg-row flex-column">
+                      <div class="sizing-table">
+                        {{ sizing_chart.table }}
+                      </div>
+                      <div class="sizing-description pt-lg-0 pt-sm-6 pt-4">
+                        {%- if sizing_chart.description != blank -%}
+                          {{ sizing_chart.description | metafield_tag }}
+                        {%- endif -%}
+                        {%- if sizing_chart.description_multiline != blank -%}
+                          {{ sizing_chart.description_multiline }}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
+          </div>
+        </div>
+      </custom-drawer>
+    {%- endif -%}
+     
+    <toast-notification role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="snotifyToast" role="dialog" aria-labelledby="snotifyToast__title" aria-describedby="snotifyToast__body">
+        <div class="snotifyToast-dialog">
+          <div class="snotifyToast__progressBar">
+            <span class="snotifyToast__progressBar__percentage" data-toast-pr></span>
+          </div>
+          <div class="snotifyToast__inner">
+            <div class="snotifyToast__title"></div>
+            <div class="snotifyToast__body"></div>
+            <div class="snotify-icon">
+              {%- render 'snotify-icon' -%}
+            </div>
+          </div>
+          <div class="snotifyToast__buttons">
+            <button type="button" class="snotifyToast__close snotifyToast__buttons--bold" aria-label="Close toast notification">Close</button>
+          </div>
+        </div>
+      </div>
+    </toast-notification>
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+    </ul>
+
+    <script type="text/javascript">
+      window.globalSpace = {
+        cart: {{ cart | json }},
+        {%- if template.name == 'product' -%}product: {{ product | json }},{%- endif -%}
+        {%- if template.name == 'collection' -%}collection:{
+          handle: {{ collection.handle | json }},
+          all_products_count: {{ collection.all_products_count }},
+          products: {{ collection.products | json }}
+        },{%- endif -%}
+        template: {{ template.name | json }},
+        templateSuffix: {{ template.suffix | json }},
+        money_format: {{ shop.money_format | json }}
+      };
+
+      window.routes = {
+        predictive_searh: '{{ routes.predictive_search_url }}',
+        cart_fetch_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}'
+      };
+
+      window.variantStrings = {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        upsellAddText: `{{ 'products.product.upsell_add' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
+      }
+
+      window.volumePricingStrings = {
+        price_at_each: `{{ 'products.product.volume_pricing.price_at_each' | t }}`,
+        minimum: `{{ 'products.product.volume_pricing.minimum' | t }}`,
+        price_at_each: `{{ 'products.product.volume_pricing.price_at_each' | t }}`,
+        price_range: `{{ 'products.product.volume_pricing.price_range' | t }}`,
+        minimum_of: `{{ 'products.product.volume_pricing.minimum_of' | t }}`,
+        maximum_of: `{{ 'products.product.volume_pricing.maximum_of' | t }}`,
+        multiples_of: `{{ 'products.product.volume_pricing.multiples_of' | t }}`
+      }
+
+      window.readMoreStrings = {
+        read_more: `{{ 'general.labels.read_more' | t }}`,
+        read_less: `{{ 'general.labels.read_less' | t }}`
+      }
+    </script>
+
+    {%- liquid 
+      render 'json-structured-data'
+      render 'json-swatches-colorlist'
+      render 'script-tags'
+      render 'non-critical-styles'
+    -%}
+
+    <script type="text/javascript">usi_installed = 0; USI_installCode = function() { if (usi_installed == 0) { usi_installed = 1; var USI_headID = document.getElementsByTagName("head")[0]; var USI_installID = document.createElement('script'); USI_installID.type = 'text/javascript'; USI_installID.src = 'https://www.upsellit.com/active/xeroshoes2024.jsp'; USI_headID.appendChild(USI_installID); } }; if (typeof(document.readyState) != "undefined" && document.readyState === "complete") { USI_installCode(); } else if (window.addEventListener){ window.addEventListener('load', USI_installCode, true); } else if (window.attachEvent) { window.attachEvent('onload', USI_installCode); } else { USI_installCode(); } setTimeout("USI_installCode()", 10000);</script>
+
+
+    {% comment %} <script type="text/javascript" async data-src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=eaZLKw"></script> {% endcomment %}
+    {% comment %} {% render 'performance-optimization-script', injectionType: 'body' %} {% endcomment %}
+    {% render 'speed-optimization-script', injectionType: 'body' %}
+
+    <script>
+    /*ConvertCart.com-36625441*/(function(c,o,n,v,e,r,t,s){
+    if(/ccScript=skip/.test(c.location.search))return;s=c.fetch?'f':'',
+    c.ccartObj=e,c[e]=c[e]||function(){(c[e].q=c[e].q||[]).push(arguments)},c[e].t=Date.now(),
+    r=o.createElement(n);r.async=1;r.src=v+s+'.js';t=o.getElementsByTagName(n)[0];t.parentNode
+    .insertBefore(r,t)})(window, document,'script','//cdn.convertcart.com/36625441','ccart')
+    </script>
+  </body>
+</html>
+{% endcapture %} 
+{{ content_html }}

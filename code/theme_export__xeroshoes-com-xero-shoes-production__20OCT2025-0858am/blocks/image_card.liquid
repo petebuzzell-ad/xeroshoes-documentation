@@ -1,0 +1,43 @@
+<div class="card card-image-block border-0 {{ block.settings.content_position }}">
+    <div class="card-img">
+        {% content_for "block", type: "image", id: "image-card" %}
+    </div>
+    <div class="card-body px-0 pb-0">
+        <div class="row no-gutter">
+            <div class="col-12">
+                {% content_for "blocks" %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    { 
+        "name": "Image card",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "settings": [
+            {
+                "type": "select",
+                "id": "content_position",
+                "label": "Content Position",
+                "options": [
+                    {
+                        "value": "above-image",
+                        "label": "Above Image"
+                    },
+                    {
+                        "value": "below_image",
+                        "label": "Below Image"
+                    }
+                ],
+                "default": "below_image"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image card"
+            }
+        ]
+    }
+{% endschema %}

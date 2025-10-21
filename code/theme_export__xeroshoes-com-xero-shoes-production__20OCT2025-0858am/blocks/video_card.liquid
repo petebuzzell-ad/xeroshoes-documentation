@@ -1,0 +1,20 @@
+<div class="card card-image-block border-0">
+    <div class="card-img">
+        <div class="h-100 custom-video-container w-100">
+            {% content_for "block", type: "custom-video", id: "custom-video" %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    { 
+        "name": "Video card",
+        "tag": null,
+        "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+        "presets": [
+            {
+                "name": "Video card"
+            }
+        ]
+    }
+{% endschema %}

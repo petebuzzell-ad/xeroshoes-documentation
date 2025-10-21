@@ -1,0 +1,208 @@
+<ul class="navbar-nav align-items-stretch mx-auto" role="menu">
+    {% for link in linklists[section.settings.menu].links %}
+        {%- liquid 
+            assign menu_block = blank
+            for block in section.blocks
+                assign block_title = block.settings.title
+                if block_title == link.title 
+                    assign menu_block = block
+                    break;
+                endif
+            endfor
+        -%}
+        {%- if menu_block.type == 'megamenu' -%}
+            <li class="nav-item dropdown megamenu{% if link.active %} active{% endif %}" role="menuitem" is="drop-down">
+                <a href="{{ link.url }}"
+                    class="nav-link dropdown-toggle d-flex align-items-center justify-content-between text-capitalize {{ link.handle }}" 
+                    tabindex="0" role="button" data-toggle="dropdown" 
+                    aria-expanded="false" aria-haspopup="menu" 
+                    title="{{ link.title }}" aria-label="{{ link.title }}">
+                    <span>{{ link.title }}</span> 
+                </a>
+                <ul class="dropdown-menu">
+                    <div class="container" tabIndex="-1">
+                        <div class="row mx-xl-n3 mx-lg-n1">
+                            <div class="col ps-xl-3 ps-lg-1 d-flex flex-column">
+                                <ul class="list-unstyled d-flex gap-2 ps-xl-2">
+                                    {%- for childlink in link.links -%}
+                                    <li class="col mega-menu-block mega-menu-block-{{ forloop.index }}">
+                                        <div class="text-uppercase h6 mb-2">{{ childlink.title }}</div>
+                                        <ul class="list-unstyled">
+                                            {%- for thirdlink in childlink.links -%}
+                                            <li class="nav-item">
+                                                <a href="{{ thirdlink.url }}" class="nav-link lh-11 position-relative btn btn-link btn-link-dark text-start" title="{{ thirdlink.title }}" aria-label="{{ thirdlink.title }}">
+                                                    <span class="btn-label">{{ thirdlink.title }}</span>
+                                                </a>
+                                            </li>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </li>
+                                    {%- endfor -%}
+                                </ul>
+                                {%- if menu_block.settings.shop_all_text != blank -%}
+                                <div class="d-flex gap-2 ps-xl-2 mt-auto pt-xl-5 pt-3 mega-menu-block mega-menu-block-1">
+                                    <a href="{{ link.url }}" style="margin-bottom: -3px;"
+                                        class="h4 line-hover-animation text-body" 
+                                        tabindex="0" role="button" data-toggle="dropdown" 
+                                        aria-expanded="false" aria-haspopup="menu" 
+                                        title="{{ menu_block.settings.shop_all_text }}" aria-label="{{ menu_block.settings.shop_all_text }}">
+                                        <span>{{ menu_block.settings.shop_all_text }}</span> 
+                                    </a>
+                                </div>
+                                {%- endif -%}
+                            </div>
+                            {%- if menu_block.settings.best_sellers != blank -%}
+                                <div class="col px-2 mega-menu-block mega-menu-block-4">
+                                    <div class="best-sellers-section">
+                                        <div class="text-uppercase h6 mb-3">{{ menu_block.settings.best_sellers_heading }}</div>
+                                        <div class="row row-gap-5">
+                                            {%- for product in menu_block.settings.best_sellers -%}
+                                                <div class="col-6">
+                                                    <div class="product-card-megamenu">
+                                                        <a href="{{ product.url }}" class="d-block text-decoration-none">
+                                                            <div class="megamenu-product-image">
+                                                                {%- assign mega_menu_image = product.metafields.custom.mega_menu_image -%}
+                                                                {%- if mega_menu_image != blank -%}
+                                                                    <img data-src="{{ mega_menu_image | image_url: width: 300 }}" alt="{{ product.title | escape }}" class="img-fluid w-100 object-fit-cover" loading="lazy" width="200" height="155">
+                                                                {%- elsif product.featured_image -%}
+                                                                    {%- assign prodimage = product.featured_image -%}
+                                                                    {%- if product.selected_or_first_available_variant.featured_image != blank -%}
+                                                                        {%- assign prodimage = product.selected_or_first_available_variant.featured_image -%}
+                                                                    {%- endif -%}
+                                                                    {%- render 'image', 
+                                                                        image: prodimage,
+                                                                        sizes: '(min-width: 992px) 300px, 100px',
+                                                                        loading: 'lazy',
+                                                                        alt: product.title,
+                                                                        class: 'img-fluid w-100 object-fit-cover'
+                                                                    -%}
+                                                                {%- else -%}
+                                                                    <div class="placeholder-image bg-light d-flex align-items-center justify-content-center" style="height: 100px;">
+                                                                        <span class="text-muted">No image</span>
+                                                                    </div>
+                                                                {%- endif -%}
+                                                            </div>
+                                                            <div class="product-info-megamenu d-flex justify-content-center text-center">
+                                                                <div class="btn btn-link btn-link-dark mb-1 product-title text-dark">{{ product.title }}</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            {%- endfor -%}
+                                        </div>
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                            {%- if menu_block.settings.mega_heading != blank or menu_block.settings.mega_content != blank or menu_block.settings.link_text != blank -%}
+                            <div class="col px-xl-3 px-lg-1 mega-menu-block mega-menu-block-5">
+                                <div class="row justify-content-end mx-xl-n3 mx-lg-n1">
+                                    {%- if menu_block.settings.mega_heading != blank or menu_block.settings.mega_content != blank or menu_block.settings.link_text != blank -%}
+                                    <div class="col-md-12 ps-xl-9 px-xl-3 px-lg-1">
+                                        <div class="megamenu_img--wrapper links-wrapper-hover position-relative overflow-hidden" style="color: {{ menu_block.settings.text_color }};">
+                                            <div class="flex-column position-absolute py-xl-6 py-3 top-0 start-0 w-100 h-100 d-flex align-items-start justify-content-end z-2" style="padding-inline: 23px;">
+                                                {%- if menu_block.settings.mega_heading != blank -%}
+                                                    <div class="h3 mb-2">{{ menu_block.settings.mega_heading }}</div>
+                                                {%- endif -%}
+                                                {%- if menu_block.settings.mega_content != blank -%}
+                                                    <div class="mb-4">{{ menu_block.settings.mega_content }}</div>
+                                                {%- endif -%}
+                                                {%- if menu_block.settings.link_text != blank or menu_block.settings.link_text_2 != blank -%}
+                                                    <div class="d-flex gap-3 links-wrapper">
+                                                        {%- if menu_block.settings.link_text != blank -%}
+                                                            <a tabindex="-1" href="{{ menu_block.settings.link_url }}" class="btn btn-link z-1 btn-link-light" aria-label="{{ menu_block.settings.link_text }}"><span class="btn-label">{{ menu_block.settings.link_text }}</span></a>
+                                                            <a href="{{ menu_block.settings.link_url }}" aria-label="{{ menu_block.settings.link_text }}" class="position-absolute-link h-100 left-0 position-absolute position-absolute-link top-0 w-100">{{ menu_block.settings.link_text }}</a>
+                                                        {%- endif -%}
+                                                    </div>
+                                                {%- endif -%}
+                                            </div>
+                                            {%- if menu_block.settings.image -%}
+                                                {%- capture img_alt -%}
+                                                    Megamenu for {{ link.title }}
+                                                {%- endcapture -%}
+                                                <div class="megamenu-img">
+                                                        {%- render 'image', 
+                                                            image: menu_block.settings.image,
+                                                            sizes: '(min-width: 992px) 400px, 50px'
+                                                            loading: 'lazy',
+                                                            alt: img_alt,
+                                                            class: 'img-fluid w-100 object-fit-cover'
+                                                        -%}
+                                                        <div class="overlay" style="background-color: {{ menu_block.settings.bg_color }};"></div></div>
+                                                        {%- if menu_block.settings.badge_text != blank -%}
+                                                            <div class="badge position-absolute top-0 start-0 z-2 m-lg-3" style="background-color: {{ menu_block.settings.badge_color }}; color: {{ menu_block.settings.badge_text_color }};">
+                                                                {{ menu_block.settings.badge_text }}
+                                                            </div>
+                                                        {%- endif -%}
+                                            {%- endif -%}
+                                        </div>
+                                    </div>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </ul> 
+            </li>
+        {%- elsif menu_block.type == 'megamenu-links' -%}    
+            <li class="nav-item dropdown megamenu-links-only megamenu{% if link.active %} active{% endif %}" role="menuitem" is="drop-down">
+                <a href="{{ link.url }}"
+                    class="nav-link dropdown-toggle d-flex align-items-center justify-content-between text-capitalize {{ link.handle }}" 
+                    tabindex="0" role="button" data-toggle="dropdown" 
+                    aria-expanded="false" aria-haspopup="menu" 
+                    title="{{ link.title }}" aria-label="{{ link.title }}">
+                    <span>{{ link.title }}</span> 
+                </a>
+                <ul class="dropdown-menu">
+                    <div class="container" tabIndex="-1">
+                        <div class="row mx-lg-n1">
+                            <div class="col-md-12 d-flex flex-column px-0 px-1">
+                                <ul class="list-unstyled d-flex gap-xl-6 gap-2">
+                                    {%- for childlink in link.links -%}
+                                    <li class="col mega-menu-block mega-menu-block-{{ forloop.index }}">
+                                        <div class="text-uppercase h6 mb-2">{{ childlink.title }}</div>
+                                        <ul class="list-unstyled">
+                                            {%- for thirdlink in childlink.links -%}
+                                            <li class="nav-item">
+                                                <a href="{{ thirdlink.url }}" class="nav-link lh-11 position-relative btn btn-link btn-link-dark text-start" title="{{ thirdlink.title }}" aria-label="{{ thirdlink.title }}">
+                                                    <span class="btn-label">{{ thirdlink.title }}</span>
+                                                </a>
+                                            </li>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </li>
+                                    {%- endfor -%}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ul> 
+            </li>
+        {%- elsif link.links != blank -%}
+            <li class="nav-item dropdown {% if link.active %} active{% endif %}" is="drop-down" role="menuitem">
+                <a href="{{ link.url }}" class="nav-link dropdown-toggle d-flex align-items-center justify-content-between text-capitalize {{ link.handle }}"
+                    tabindex="0" role="button"
+                    aria-expanded="false" aria-haspopup="menu"
+                    name="{{ link.title }}" title="{{ link.title }}"
+                    aria-label="{{ link.title }}">
+                <span>{{ link.title }}</span>
+                </a>
+                <ul class="dropdown-menu border-0 rounded-0" tabIndex="-1">
+                    {%- for childlink in link.links -%}
+                            <li class="nav-item" role="menuitem">
+                                <a href="{{ childlink.url }}" class="nav-link btn btn-link position-relative text-left" title="{{ childlink.title }}" aria-label="{{ childlink.title }}">
+                                    <span class="btn-label">{{ childlink.title }}</span>
+                                </a>
+                            </li>
+                    {%- endfor -%}
+                </ul>
+            </li>
+        {%- else -%}
+            <li class="nav-item {% if link.active %} active{% endif %}" role="menuitem">
+                <a class="nav-link text-capitalize {{ link.handle }}" href="{{ link.url }}" tabindex="0" title="{{ link.title }}" aria-label="{{ link.title }}">
+                    <span>{{ link.title }}</span>
+                </a>
+            </li>
+        {%- endif -%}
+    {%- endfor -%}
+</ul>

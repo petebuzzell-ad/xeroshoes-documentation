@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-activate_account",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

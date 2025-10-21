@@ -1,0 +1,31 @@
+{% liquid
+    assign paginate_values = section.settings.products_per_page_values | strip | newline_to_br | strip_newlines | split: "<br />"
+    assign products_per_page = section.settings.products_per_page | plus: 0
+    if cart.attributes['products_per_page'] != blank
+        assign products_per_page = cart.attributes['products_per_page'] | plus: 0
+    endif
+%}
+<span class="fw-semibold">{{ 'templates.collection.product_per_page' | t }}</span> 
+<custom-select class="custom-dropdown custom-pagination-dropdown ms-2 radio-out flex-fill position-relative d-block"
+    aria-label="{{ 'templates.collection.product_per_page' | t }}">
+    <button id="productperpage-toggle" class="default tab_toggle" 
+        data-toggle="options" aria-controls="products-per-page"
+        aria-expanded="false" aria-haspopup="true">
+        <span class="option_txt">{{ products_per_page }}</span>
+        <svg aria-hidden="true" focusable="false" style="width:12px; height:12px;" class="ms-auto"><use href="#icon-arrow-down"></use></svg>
+    </button>
+    <div class="toggle-content" id="products-per-page" data-selectcontainer
+        data-type="content" role="menu" aria-hidden="true"
+        aria-labelledby="productperpage-toggle">
+        <ul class="list-unstyled m-0 toggle-content-wrap">
+            {% for value in paginate_values %}
+                {% assign products_count = value | plus: 0 %}
+                <li class="form-check py-1 {% if products_count == products_per_page %}selected{% endif %}" role="menuitem" tabindex="0">
+                    <input type="radio" name="paginateBy" value="{{ value }}" class="pagination_value form-check-input sortby_options" 
+                        id="paginate-by-{{ value }}" {% if products_count == products_per_page %}checked{% endif %} tabindex="-1">
+                    <label for="paginate-by-{{ value }}" class="option_txt form-check-label w-100" title="Paginate products by {{ value }}">{{ value }}</label>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</custom-select>

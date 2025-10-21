@@ -1,0 +1,529 @@
+{
+  "sections": {
+    "global_page_header_banner_byeUmg": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_iFmkUY": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_64KtQr": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_D7xWp4": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-1",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_3mRFbX": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>Xero Shoes 5,000 Mile Sole Limited Warranty and 24 Month Manufacturer’s Limited Warranty<\/h1>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "",
+                        "alignment": "text-md-center",
+                        "alignment_mobile": "text-center",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_3mRFbX"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_D7xWp4"
+              ]
+            }
+          },
+          "block_order": [
+            "group_64KtQr"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_iFmkUY"
+      ],
+      "custom_css": [],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+        "container_width": "container",
+        "section_top_spacing": "spacing-top-sm",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    },
+    "media_with_text_DGKLfE": {
+      "type": "media-with-text",
+      "blocks": {
+        "group_7xBJ3b": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 250,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-0",
+            "padding_right_desktop": "pe-md-0",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-0",
+            "padding_right_mobile": "pe-0",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "image_VtDRMV": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/warranty.webp",
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "object_fit": "contain",
+                "enable_link": false,
+                "url": "",
+                "enable_overlay": false,
+                "overlay_bg_color": "#000000",
+                "overlay_opacity": 0.5,
+                "blend_mode": "none",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-3",
+                "padding_right_desktop": "pe-md-3",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-4",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_VtDRMV"
+          ]
+        },
+        "group_WaKLkc": {
+          "type": "group",
+          "settings": {
+            "width": "col-lg-6",
+            "width_md": "col-md-6",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-center",
+            "align_items_mb": "align-items-center",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center",
+            "padding_top_desktop": "pt-md-6",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-6",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_wXqTit": {
+              "type": "heading",
+              "settings": {
+                "text": "<h2>Xero Shoes Warranty​<\/h2>",
+                "text_size": "",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "alignment": "text-md-center",
+                "alignment_mobile": "text-center",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-3",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-2",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "buttons_NDJ4DC": {
+              "type": "buttons",
+              "settings": {
+                "link": "https:\/\/returns.xeroshoes.com\/warranty\/submit?_gl=1*1g7dqd*_gcl_au*MTAwNDI0MzguMTc1NDA0ODQ0OA..",
+                "icon": "none",
+                "label": "Start Your Warranty Claim",
+                "style_class": "btn-primary",
+                "size_class": "",
+                "open_in_new_tab": true,
+                "hide_desktop": false,
+                "hide_mobile": false,
+                "full_width": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_wXqTit",
+            "buttons_NDJ4DC"
+          ]
+        }
+      },
+      "block_order": [
+        "group_7xBJ3b",
+        "group_WaKLkc"
+      ],
+      "custom_css": [],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "container_width": "small_container_layout",
+        "right_side_fullwidth": false,
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-md",
+        "section_top_spacing_mobile": "spacing-top-mobile-md",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-md",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-md",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mb": "flex-column",
+        "wrap": "flex-wrap",
+        "align_items": "align-items-center",
+        "justify_content": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    },
+    "custom_section_b9iGWX": {
+      "type": "custom-section",
+      "blocks": {
+        "group_GLW7gm": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": ""
+          },
+          "blocks": {
+            "heading_G8Jnja": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "text": "<h3>5,000 Mile Sole Limited Warranty & 24-Month Manufacturer’s Limited Warranty<\/h3>",
+                "text_size": "",
+                "font_family": "font-family-heading",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-4",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-4",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_bmhHPm": {
+              "type": "text",
+              "settings": {
+                "text": "<p><strong>How Long Will My Xero Shoes Last?<\/strong><\/p><p>When customers ask how long Xero Shoes last, our honest answer is:<br\/><strong>“We don’t know, but it’s going to be a long, long time!”<\/strong><br\/>(Steven has personally logged over 5,000 miles in his!)<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-4",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-3",
+                "custom_class": ""
+              },
+              "blocks": {}
+            },
+            "text_WmfFbx": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "text": "<p>That’s why we stand behind our <strong>FeelTrue® outsoles<\/strong> (or the FeelTrue® section of Z-Trail) with a <strong>5,000-mile sole warranty <\/strong>— because durability is in our DNA.<\/p>",
+                "font_family": "font-family-base",
+                "text_size": "fs-base",
+                "font_weight": "fw-normal",
+                "text_letter_spacing": "",
+                "text_style": "",
+                "alignment": "text-md-start",
+                "alignment_mobile": "text-start",
+                "color": "",
+                "margin_top_desktop": "mt-md-0",
+                "margin_bottom_desktop": "mb-md-0",
+                "margin_top_mobile": "mt-0",
+                "margin_bottom_mobile": "mb-0",
+                "custom_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_G8Jnja",
+            "text_bmhHPm",
+            "text_WmfFbx"
+          ]
+        }
+      },
+      "block_order": [
+        "group_GLW7gm"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": ""
+      }
+    },
+    "template_faq_HD9Liy": {
+      "type": "template-faq",
+      "blocks": {
+        "faq_item_RKP8Ei": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How Our Warranties Work",
+            "answer": "<h5>5,000 Mile Sole Warranty<\/h5><p>If the <strong>soles<\/strong> of your Xero Shoes wear down to less than <strong>1mm thick<\/strong>, we’ll provide a <strong>60% discount on a new pair of the same style at full retail price (MSRP)<\/strong>.<\/p><h5>24-Month Manufacturer’s Warranty<\/h5><p>If you experience a <strong>manufacturer defect<\/strong> within <strong>24 months of purchase<\/strong>, your shoes may be eligible for a replacement value under our warranty. <strong>The value of any replacement under this warranty is limited to the original purchase price.<\/strong><\/p><h5>What’s Not Covered?<\/h5><ul><li><strong>Third-Party Purchase<\/strong> – Items purchased from independent retailers, Amazon, or other third-party sellers. If you purchased from these sources, please contact the original seller for assistance.<\/li><li><strong>Misuse & Improper Care<\/strong> – Damage caused by exposure to extreme heat, prolonged direct sunlight, or other improper storage conditions.<\/li><li><strong>Sole Warranty Limitations<\/strong> – The 5,000 Mile Sole Warranty applies only to FeelTrue® outsoles and Michelin Soles with Fiberlite Technology. It does not cover the Vibram Cherry Products.<\/li><li><strong>Machine Washing & Drying<\/strong> – Shoes that have been damaged by being washed or dried in a machine.<\/li><li><strong>Unauthorized Repairs or Alterations<\/strong> – damage that has been caused by your repair or from an outside source.<\/li><li><strong>Normal Wear and Tear<\/strong> – General signs of use that naturally occur over time.<\/li><\/ul>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_aCWRcT": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Xero Shoes Direct Purchase Only​",
+            "answer": "<p>✅ <strong>All purchases made through xeroshoes.com, xeroshoes.co.uk, or xeroshoes.eu are fully covered<\/strong> under our <strong>5,000 Mile Sole Warranty<\/strong> and <strong>24-Month Manufacturer’s Warranty<\/strong>.<\/p><p>🚫 <strong>Purchases made from independent retailers, third-party sellers, or Amazon are NOT covered.<\/strong> If you purchased your shoes from a retailer, please reach out to them directly for warranty or return inquiries.<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_4Ajg3W": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "How to Submit a Warranty Claim",
+            "answer": "<p>We’ve made it easier than ever to submit a warranty claim with our new self-service portal!<\/p><p>Head to our <a href=\"https:\/\/returns.xeroshoes.com\/warranty\/submit\" target=\"_blank\">Warranty Portal<\/a> and have the following ready:<\/p><ul><li>Your <strong>order number<\/strong> and the <strong>email address used<\/strong> to place the order<\/li><li><strong>Photos of the issue<\/strong><\/li><li><strong>For closed-toe shoes<\/strong>: a clear photo of the manufacturing tag <strong>(usually found on the tongue or inner side)<\/strong><\/li><li><strong>For sandals<\/strong>: full photo of the entire sandal <strong>(no tag needed)<\/strong><\/li><\/ul><p>Once submitted, your claim will be reviewed and you’ll receive email updates as it’s processed, including approval or next steps.<\/p><h5>🔍 Customer Service Review Process<\/h5><ul><li>We’ll review your request to confirm if it qualifies for warranty coverage.<\/li><li><strong>Please keep your item(s) throughout the warranty process<\/strong>, as discarding them <strong>may void your warranty. You must be able to show photographic proof of possession of the item(s) on your claim.<\/strong><\/li><\/ul><h5>📦 Replacement or Discounted Replacement<\/h5><ul><li><strong>If your claim is approved<\/strong>, we’ll either provide <strong>a store credit for the original purchase price<\/strong> or <strong>a discount toward a replacement<\/strong>, depending on the type of warranty your item qualifies for.<\/li><\/ul><p>📌 <strong>Fun Fact<\/strong>: While our <strong>5,000-mile sole warranty<\/strong> doesn’t cover Tasmanian Devil attacks, we <em>might<\/em> make an exception if you save all the pieces. Yes, it really happened!<\/p>",
+            "answer_html": ""
+          }
+        },
+        "faq_item_a4CHpx": {
+          "type": "faq_item",
+          "settings": {
+            "heading": "Legal Information",
+            "answer": "<p>THE WARRANTIES STATED ABOVE ARE EXCLUSIVE, AND NO OTHER WARRANTIES—EXPRESS OR IMPLIED—INCLUDING BUT NOT LIMITED TO MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, ARE MADE BY <strong>FEEL THE WORLD, INC.<\/strong> OUR ONLY OBLIGATION IS TO REPAIR OR REPLACE DEFECTIVE SHOES.<\/p><p>FEEL THE WORLD SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES.<\/p><p><strong>Note:<\/strong> Some jurisdictions do not allow limitations on incidental or consequential damages, so these exclusions may not apply to you. We also reserve the right, at our sole discretion, to determine whether a particular claim or condition qualifies under our warranties.<\/p>",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_RKP8Ei",
+        "faq_item_aCWRcT",
+        "faq_item_4Ajg3W",
+        "faq_item_a4CHpx"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-md",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#0f172b",
+        "text_alignment": "text-left",
+        "heading": "",
+        "txt": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_byeUmg",
+    "main",
+    "media_with_text_DGKLfE",
+    "custom_section_b9iGWX",
+    "template_faq_HD9Liy"
+  ]
+}

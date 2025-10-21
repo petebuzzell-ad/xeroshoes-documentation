@@ -1,0 +1,302 @@
+{% style %}
+    #shopify-block-{{ block.id }} .link-block p{
+        margin-bottom:0;
+    }
+    #shopify-block-{{ block.id }}  .link-block {
+        display: flex;
+        align-items:center;
+    }
+  
+    .link-block-icon-right {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    #shopify-block-{{ block.id }} .link-block{
+        color: {{ block.settings.color }}
+    }
+    #shopify-block-{{ block.id }} .link-block:hover{
+        color: {{ block.settings.hover_color }}
+    }
+
+    .link-block svg {
+        fill: rgb(var(--fill-link-icon-color));
+    }
+
+    #shopify-block-{{ block.id }} .icon-block__icon{
+        width: {{ block.settings.width_mobile }}px;
+        height: {{ block.settings.width_mobile }}px;
+    }
+
+    @media (min-width: 992px) {
+        #shopify-block-{{ block.id }} .icon-block__icon{
+            width: {{ block.settings.width }}px;
+            height: {{ block.settings.width }}px;
+        }
+    }
+{% endstyle %}
+
+    <a href="{{ block.settings.link }}" class="link-block {{ block.settings.text_size }} {{ block.settings.text_style }} {{ block.settings.font_weight }}" {%- if block.settings.open_in_new_tab -%} target="_blank" rel="noopener noreferrer" {%- endif -%} {{ block.shopify_attributes }} >
+        {%- if block.settings.icon != 'none' and block.settings.image_upload == blank -%}
+            <svg aria-hidden="true" focusable="false" style="color:{{ block.settings.icon_color }};" class="icon-block__icon me-2"><use href="#{{ block.settings.icon }}"></use></svg> 
+        {%- elsif block.settings.image_upload != blank -%}
+            {{ block.settings.image_upload | image_url: width: 500 | image_tag: widths: '50, 100, 200, 300, 400, 500', class: 'icon-block__icon me-2' }}
+        {%- endif -%}
+        {{ block.settings.text }}
+    </a>
+  
+{% schema %}
+    {
+        "name": "Link",
+        "settings": [
+            {
+                "type": "select",
+                "id": "icon",
+                "label": "Icon",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "icon-arrow-left",
+                        "label": "Arrow left"
+                    },
+                    {
+                        "value": "icon-arrow-right",
+                        "label": "Arrow right"
+                    },
+                    {
+                        "value": "icon-arrow-next",
+                        "label": "Arrow Next"
+                    },
+                    {
+                        "value": "icon-arrow-prev",
+                        "label": "Arrow Previous"
+                    },
+                    {
+                        "value": "icon-user",
+                        "label": "User"
+                    },
+                    {
+                        "value": "icon-search",
+                        "label": "Search"
+                    },
+                    {
+                        "value": "icon-cart",
+                        "label": "Cart"
+                    },
+                    {
+                        "value": "icon-eye",
+                        "label": "Eye"
+                    },
+                    {
+                        "value": "icon-facebook",
+                        "label": "Facebook"
+                    },
+                    {
+                        "value": "icon-instagram",
+                        "label": "Instagram"
+                    },
+                    {
+                        "value": "icon-twitter",
+                        "label": "Twitter"
+                    },
+                    {
+                        "value": "icon-linkedin",
+                        "label": "Linkedin"
+                    },
+                    {
+                        "value": "icon-youtube",
+                        "label": "Youtube"
+                    },
+                    {
+                        "value": "icon-pinterest",
+                        "label": "Pinterest"
+                    },
+                    {
+                        "value": "icon-tiktok",
+                        "label": "Tiktok"
+                    },
+                    {
+                        "value": "icon-snapchat",
+                        "label": "Snapchat"
+                    },
+                    {
+                        "value": "icon-filter",
+                        "label": "Filter"
+                    },
+                    {
+                        "value": "icon-location",
+                        "label": "Location"
+                    },
+                    {
+                        "value": "icon-phone",
+                        "label": "Phone"
+                    },
+                    {
+                        "value": "icon-shipping",
+                        "label": "Shipping"
+                    },
+                    {
+                        "value": "icon-mail",
+                        "label": "Mail"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_upload",
+                "label": "Custom icon"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "<p>Link Label</p>"
+            },
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "open_in_new_tab",
+                "label": "Open this link in a new window",
+                "default": false
+            },
+            {
+                "type":"header",
+                "content":"t:names.styles"
+            },
+            {
+                "type": "color",
+                "id": "color",
+                "label": "Link Color"
+            },
+            {
+                "type": "color",
+                "id": "hover_color",
+                "label": "Link Hover Color"
+            },
+            {
+                "type": "range",
+                "id": "width",
+                "label": "Width",
+                "min": 4,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "default": 44
+            },
+            {
+                "type": "range",
+                "id": "width_mobile",
+                "label": "t:settings.width_mobile",
+                "min": 4,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "default": 36
+            },
+            {
+                "type": "select",
+                "id": "text_size",
+                "label": "Font Size",
+                "options": [
+                    {
+                        "value": "fs-xs",
+                        "label": "Extra Small"
+                    },
+                    {
+                        "value": "fs-sm",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "fs-md",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "fs-base",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "fs-lg",
+                        "label": "Large"
+                    },
+                    {
+                        "value": "fs-xl",
+                        "label": "Extra Large"
+                    }
+                ],
+                "default": "fs-base"
+            },
+            {
+                "type": "select",
+                "id": "font_weight",
+                "label": "Font Weight",
+                "options": [
+                    {
+                        "value": "fw-light",
+                        "label": "Light"
+                    },
+                    {
+                        "value": "fw-normal",
+                        "label": "Normal"
+                    },
+                    {
+                        "value": "fw-medium",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "fw-semibold",
+                        "label": "Semibold"
+                    },
+                    {
+                        "value": "fw-bold",
+                        "label": "Bold"
+                    }
+                ],
+                "default": "fw-normal"
+            },
+            {
+                "type": "select",
+                "id": "text_style",
+                "label": "Text Style",
+                "options": [
+                    {
+                        "value": "text-uppercase",
+                        "label": "Uppercase"
+                    },
+                    {
+                        "value": "text-capitalize",
+                        "label": "Capitalize"
+                    },
+                    {
+                        "value": "text-lowercase",
+                        "label": "Lowercase"
+                    },
+                    {
+                        "value": "text-math-auto",
+                        "label": "Auto"
+                    },
+                    {
+                        "value": "",
+                        "label": "Default"
+                    }
+                ],
+                "default": ""
+            }
+        ],
+        "presets": [
+            {
+                "name": "Link",
+                "settings": {
+                    "text": "<p>Link label</p>"
+                }
+            }
+        ]
+    }
+{% endschema %}
+  

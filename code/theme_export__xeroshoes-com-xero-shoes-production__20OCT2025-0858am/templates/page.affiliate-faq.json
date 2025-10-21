@@ -1,0 +1,861 @@
+{
+  "sections": {
+    "global_page_header_banner_8rAmFa": {
+      "type": "global-page-header-banner",
+      "blocks": {
+        "page_banner_8zaHDD": {
+          "type": "_page_banner",
+          "settings": {
+            "container_width": "small_container_layout",
+            "image_enable": false,
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.3,
+            "blend_mode": "none",
+            "display": "d-block",
+            "direction": "flex-md-row",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-center",
+            "justify_content_mb": "justify-content-center"
+          },
+          "blocks": {
+            "group_UFeBWn": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "width": "col-lg-12",
+                "width_md": "col-md-12",
+                "width_sm": "col-12",
+                "max_width": 0,
+                "display": "d-flex",
+                "direction": "flex-md-row",
+                "direction_mobile": "flex-row",
+                "wrap": "flex-nowrap",
+                "align_items": "align-items-md-start",
+                "align_items_mb": "align-items-start",
+                "justify_content": "justify-content-md-start",
+                "justify_content_mb": "justify-content-start",
+                "padding_top_desktop": "pt-md-0",
+                "padding_bottom_desktop": "pb-md-0",
+                "padding_left_desktop": "ps-md-0",
+                "padding_right_desktop": "pe-md-0",
+                "padding_top_mobile": "pt-0",
+                "padding_bottom_mobile": "pb-0",
+                "padding_left_mobile": "ps-0",
+                "padding_right_mobile": "pe-0",
+                "gap_column": "column-gap-md-0",
+                "gap_row": "row-gap-md-0",
+                "gap_column_mobile": "column-gap-0",
+                "gap_row_mobile": "row-gap-0",
+                "bg_color": "transparent",
+                "border": "border-0",
+                "border_width": 0,
+                "border_color": "#666666",
+                "border_radius": 0,
+                "custom_class": ""
+              },
+              "blocks": {
+                "group_REywbQ": {
+                  "type": "group",
+                  "settings": {
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "max_width": 0,
+                    "display": "d-flex",
+                    "direction": "flex-md-column",
+                    "direction_mobile": "flex-column",
+                    "wrap": "flex-nowrap",
+                    "align_items": "align-items-md-start",
+                    "align_items_mb": "align-items-start",
+                    "justify_content": "justify-content-md-start",
+                    "justify_content_mb": "justify-content-start",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-1",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "gap_column": "column-gap-md-0",
+                    "gap_row": "row-gap-md-2",
+                    "gap_column_mobile": "column-gap-0",
+                    "gap_row_mobile": "row-gap-1",
+                    "bg_color": "transparent",
+                    "border": "border-0",
+                    "border_width": 0,
+                    "border_color": "#0f172b",
+                    "border_radius": 0,
+                    "custom_class": ""
+                  },
+                  "blocks": {
+                    "heading_xqFQ9D": {
+                      "type": "heading",
+                      "settings": {
+                        "text": "<h1>{{ closest.page.title }}<\/h1>",
+                        "text_fallback": "<p>Share information about your brand with your customers.<\/p>",
+                        "text_size": "",
+                        "font_family": "font-family-heading",
+                        "text_style": "text-math-auto",
+                        "font_weight": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "#0f172b",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "heading_xqFQ9D"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_REywbQ"
+              ]
+            }
+          },
+          "block_order": [
+            "group_UFeBWn"
+          ]
+        }
+      },
+      "block_order": [
+        "page_banner_8zaHDD"
+      ],
+      "name": "Page Header Banner",
+      "settings": {
+        "container_width": "fluid_layout",
+        "section_top_spacing": "spacing-top-md",
+        "section_top_spacing_ipad": "spacing-top-ipad-sm",
+        "section_top_spacing_mobile": "spacing-top-mobile-sm",
+        "section_bottom_spacing": "",
+        "section_bottom_spacing_ipad": "",
+        "section_bottom_spacing_mobile": "",
+        "height": "content_height",
+        "caption_style": false,
+        "section_bg_color": ""
+      }
+    },
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "",
+        "section_top_spacing_ipad": "",
+        "section_top_spacing_mobile": "",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm"
+      }
+    },
+    "custom_section_XJXQ9L": {
+      "type": "custom-section",
+      "blocks": {
+        "group_czRtcY": {
+          "type": "group",
+          "name": "Group",
+          "settings": {
+            "width": "col-lg-12",
+            "width_md": "col-md-12",
+            "width_sm": "col-12",
+            "max_width": 0,
+            "display": "d-flex",
+            "direction": "flex-md-column",
+            "direction_mobile": "flex-column",
+            "wrap": "flex-nowrap",
+            "align_items": "align-items-md-start",
+            "align_items_mb": "align-items-start",
+            "justify_content": "justify-content-md-start",
+            "justify_content_mb": "justify-content-start",
+            "padding_top_desktop": "pt-md-0",
+            "padding_bottom_desktop": "pb-md-0",
+            "padding_left_desktop": "ps-md-3",
+            "padding_right_desktop": "pe-md-3",
+            "padding_top_mobile": "pt-0",
+            "padding_bottom_mobile": "pb-0",
+            "padding_left_mobile": "ps-3",
+            "padding_right_mobile": "pe-3",
+            "gap_column": "column-gap-md-0",
+            "gap_row": "row-gap-md-0",
+            "gap_column_mobile": "column-gap-0",
+            "gap_row_mobile": "row-gap-0",
+            "bg_color": "transparent",
+            "border": "border-0",
+            "border_width": 0,
+            "border_color": "#666666",
+            "border_radius": 0,
+            "custom_class": "natural-movement-collapsible faqs-block"
+          },
+          "blocks": {
+            "collapsible_row_MymQAU": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "How does the affiliate program work?",
+                "text": "<p>When you sign up, you’ll get a special link (“affiliate link”) to use to promote Xero Shoes. You can share this link on your social media, in emails, any website you have, or even in person.<\/p><p>You’ll also get access to ready-made banners, images, and other creative assets you can use in your promotions. <\/p><p>You’ll earn commissions on sales made by people who are first referred to Xero Shoes by you, through your affiliate link or the promotional assets we give you.<\/p><p>In addition to the commission you’ll earn from your referral’s first purchase, Xero Shoes offers “Lifetime Commissions.” This means that you’ll earn commissions on all the future purchases your referred customer makes, regardless of how or when they come back to XeroShoes.com or XeroShoes.eu.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_KkU4xQ": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "How do I find my affiliate link?",
+                "text": "<p><\/p><p><\/p><p><\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {
+                "text_VUetL7": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>Log in at <a href=\"https:\/\/xeroshoes.postaffiliatepro.com\/affiliates\/login.php\" target=\"_blank\" title=\"Affiliates Login\">https:\/\/xeroshoes.com\/affiliates\/<\/a> and you will find your affiliate link near the top of the page.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-0",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "image_Uah9qX": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/f1.jpg",
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "",
+                    "enable_link": false,
+                    "enable_preload": false,
+                    "url": "",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-3",
+                    "padding_bottom_desktop": "pb-md-3",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-3",
+                    "padding_bottom_mobile": "pb-3",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_V9XYxP": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>You will find banners, images, and other promotional assets when you click on Promotions (in the left-hand navigation menu), then Banners and Links.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-2",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "image_gGd4i7": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/f2.jpg",
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "",
+                    "enable_link": false,
+                    "enable_preload": false,
+                    "url": "",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-3",
+                    "padding_bottom_desktop": "pb-md-3",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-3",
+                    "padding_bottom_mobile": "pb-3",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_cia6bh": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "<p>More about these in a moment.<\/p>",
+                    "font_family": "font-family-base",
+                    "text_size": "fs-base",
+                    "font_weight": "fw-normal",
+                    "text_letter_spacing": "",
+                    "text_style": "",
+                    "alignment": "text-md-start",
+                    "alignment_mobile": "text-start",
+                    "color": "",
+                    "margin_top_desktop": "mt-md-0",
+                    "margin_bottom_desktop": "mb-md-2",
+                    "margin_top_mobile": "mt-0",
+                    "margin_bottom_mobile": "mb-2",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_VUetL7",
+                "image_Uah9qX",
+                "text_V9XYxP",
+                "image_gGd4i7",
+                "text_cia6bh"
+              ]
+            },
+            "collapsible_row_X89tcx": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "I want to promote a particular product or point to a specific page. How do I do that?",
+                "text": "<p>There are 2 ways to do that, one if you <strong>don’t have<\/strong> your own website (or are promoting somewhere other than your site, like Facebook), and the other if you <strong>do have<\/strong> your own website.<\/p><p>Here are the instructions for each of those options:  <\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {
+                "collapsible_row_YByMjc": {
+                  "type": "collapsible-row",
+                  "name": "Collapsible Row",
+                  "settings": {
+                    "width": 12,
+                    "heading": "(a) If you don’t have a website or are promoting somewhere other than your site:",
+                    "text": "",
+                    "page": "",
+                    "open_by_default": false,
+                    "text_color": "#1d293d"
+                  },
+                  "blocks": {
+                    "text_hARYxL": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>To link to a specific page, either with a ready-made banner or a regular text link, go to your affiliate dashboard, then click on “Promotions” then “Banners and Links.” From there, you can search for a particular asset, like “Prio” to find direct links to the Prio page or “Shoe Finder” to get a link to our <a href=\"\/pages\/shoe-finder\" title=\"\/pages\/shoe-finder\">Shoe Finder Quiz<\/a>.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "image_CL3ApT": {
+                      "type": "image",
+                      "name": "Image",
+                      "settings": {
+                        "image": "shopify:\/\/shop_images\/f3.jpg",
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "custom_image_width": false,
+                        "custom_image_width_value": 160,
+                        "object_fit": "cover",
+                        "aspect_ratio": "",
+                        "enable_link": false,
+                        "enable_preload": false,
+                        "url": "",
+                        "enable_overlay": false,
+                        "overlay_bg_color": "#000000",
+                        "overlay_opacity": 0.5,
+                        "blend_mode": "none",
+                        "padding_top_desktop": "pt-md-3",
+                        "padding_bottom_desktop": "pb-md-3",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-3",
+                        "padding_bottom_mobile": "pb-3",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_JhxxFW": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>If the page you want to promote isn’t listed here, you can create a “Dynamic Link” to that page. Watch <a href=\"https:\/\/drive.google.com\/file\/d\/1hQnO6YtWBfqh0atltZVNQbOgRJ19BZLs\/view\">this video<\/a> to learn how.<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_hARYxL",
+                    "image_CL3ApT",
+                    "text_JhxxFW"
+                  ]
+                },
+                "collapsible_row_TTtAjB": {
+                  "type": "collapsible-row",
+                  "name": "Collapsible Row",
+                  "settings": {
+                    "width": 12,
+                    "heading": "(b) If you have your own website and want to promote a specific product\/page:",
+                    "text": "",
+                    "page": "",
+                    "open_by_default": false,
+                    "text_color": "#1d293d"
+                  },
+                  "blocks": {
+                    "text_YD6JCW": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>If you have your own site, you can use “Direct Linking” to promote any page\/product on our website… and you don’t need to use your affiliate link. Also, you can use either the banners\/images we provide, or your own images. <\/p><p>To set up Direct Linking, go to your affiliate dashboard, then click on Promotions, then click on Direct Link URLs.<\/p><p>Fill in your domain’s name in the “Pattern” section using the syntax *sitename.com*. <\/p><p>If you want to see if you’ve entered the Pattern correctly, enter the URL for some page on your site in the Real URL section and then click Check.<\/p><p><\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-0",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "image_yDLFMp": {
+                      "type": "image",
+                      "name": "Image",
+                      "settings": {
+                        "image": "shopify:\/\/shop_images\/f4.png",
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "custom_image_width": false,
+                        "custom_image_width_value": 160,
+                        "object_fit": "cover",
+                        "aspect_ratio": "",
+                        "enable_link": false,
+                        "enable_preload": false,
+                        "url": "",
+                        "enable_overlay": false,
+                        "overlay_bg_color": "#000000",
+                        "overlay_opacity": 0.5,
+                        "blend_mode": "none",
+                        "padding_top_desktop": "pt-md-3",
+                        "padding_bottom_desktop": "pb-md-3",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-3",
+                        "padding_bottom_mobile": "pb-3",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_bczh6C": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>When the testing passes, then click Add URL.<\/p><p><\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "image_TwJ3TW": {
+                      "type": "image",
+                      "name": "Image",
+                      "settings": {
+                        "image": "shopify:\/\/shop_images\/f5.png",
+                        "width": "col-lg-12",
+                        "width_md": "col-md-12",
+                        "width_sm": "col-12",
+                        "custom_image_width": false,
+                        "custom_image_width_value": 160,
+                        "object_fit": "cover",
+                        "aspect_ratio": "",
+                        "enable_link": false,
+                        "enable_preload": false,
+                        "url": "",
+                        "enable_overlay": false,
+                        "overlay_bg_color": "#000000",
+                        "overlay_opacity": 0.5,
+                        "blend_mode": "none",
+                        "padding_top_desktop": "pt-md-3",
+                        "padding_bottom_desktop": "pb-md-3",
+                        "padding_left_desktop": "ps-md-0",
+                        "padding_right_desktop": "pe-md-0",
+                        "padding_top_mobile": "pt-3",
+                        "padding_bottom_mobile": "pb-3",
+                        "padding_left_mobile": "ps-0",
+                        "padding_right_mobile": "pe-0",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    },
+                    "text_ibwJzr": {
+                      "type": "text",
+                      "name": "Text",
+                      "settings": {
+                        "text": "<p>We will then review your Direct Link to make sure it’s valid. If it is, we will approve it for use.<\/p><p>Once your Direct Link is approved, you can then link to any page on XeroShoes.com or XeroShoes.eu with a “normal” link (e.g. <a href=\"\/\" title=\"\/\">Click Here<\/a>), and our software will recognize that you sent that visitor and will link them to your affiliate account (if they first came to our site through your referral).<\/p>",
+                        "font_family": "font-family-base",
+                        "text_size": "fs-base",
+                        "font_weight": "fw-normal",
+                        "text_letter_spacing": "",
+                        "text_style": "",
+                        "alignment": "text-md-start",
+                        "alignment_mobile": "text-start",
+                        "color": "",
+                        "margin_top_desktop": "mt-md-0",
+                        "margin_bottom_desktop": "mb-md-2",
+                        "margin_top_mobile": "mt-0",
+                        "margin_bottom_mobile": "mb-2",
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_YD6JCW",
+                    "image_yDLFMp",
+                    "text_bczh6C",
+                    "image_TwJ3TW",
+                    "text_ibwJzr"
+                  ]
+                }
+              },
+              "block_order": [
+                "collapsible_row_YByMjc",
+                "collapsible_row_TTtAjB"
+              ]
+            },
+            "collapsible_row_fy9D8e": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Can I promote XeroShoes.com and XeroShoes.eu?",
+                "text": "<p>Yes. Even though you’re setting up your account at XeroShoes.com, you can use your affiliate link to promote either or both sites.<\/p><p>If you want to promote XeroShoes.com, use xeroshoes.com\/go\/<em>username. <\/em>To direct people to XeroShoes.eu, just substitute “.eu” for “.com” like this: xeroshoes.eu\/go\/<em>username<\/em>.<\/p><p>Under Banners and Links you’ll find ready-made banners, links, and other creative assets specifically made for .com and .eu.<br\/><\/p><p><\/p><p><\/p><p><\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_t3gRCy": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Can I send people a discount instead of getting a commission?",
+                "text": "<p>We don’t offer discount codes to incentivise new customers. Instead keep our prices as low as possible (and lower than our competitors).<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_EA9by8": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Where can I see my commissions?",
+                "text": "<p>Log in at <a href=\"https:\/\/xeroshoes.postaffiliatepro.com\/affiliates\/login.php#login\" title=\"https:\/\/xeroshoes.postaffiliatepro.com\/affiliates\/login.php#login\">http:\/\/xeroshoes.com\/affiliates\/<\/a> and click on to Reports to see a traffic overview, including clicks, commissions, and more.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {
+                "image_GNMy9r": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify:\/\/shop_images\/f6.png",
+                    "width": "col-lg-12",
+                    "width_md": "col-md-12",
+                    "width_sm": "col-12",
+                    "custom_image_width": false,
+                    "custom_image_width_value": 160,
+                    "object_fit": "cover",
+                    "aspect_ratio": "",
+                    "enable_link": false,
+                    "enable_preload": false,
+                    "url": "",
+                    "enable_overlay": false,
+                    "overlay_bg_color": "#000000",
+                    "overlay_opacity": 0.5,
+                    "blend_mode": "none",
+                    "padding_top_desktop": "pt-md-0",
+                    "padding_bottom_desktop": "pb-md-0",
+                    "padding_left_desktop": "ps-md-0",
+                    "padding_right_desktop": "pe-md-0",
+                    "padding_top_mobile": "pt-0",
+                    "padding_bottom_mobile": "pb-0",
+                    "padding_left_mobile": "ps-0",
+                    "padding_right_mobile": "pe-0",
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_GNMy9r"
+              ]
+            },
+            "collapsible_row_XyQQaW": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "How do I know I’ll be paid for a referral?",
+                "text": "<p>The program is powered by Post Affiliate Pro, the leading affiliate tracking software. Post Affiliate Pro is used by thousands of Internet merchants and affiliates world-wide and it uses a combination of methods to track referrals for highest possible reliability. <\/p><p>Xero Shoes has been using Post Affiliate Pro for over a decade and has paid commissions every month during that time.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_ekijFP": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "I don’t see a referral that I made. Why not?",
+                "text": "<p>First, it takes about 15-30 minutes until the affiliate software updates and shows the clicks and\/or commissions from people you referred.<\/p><p>Secondly, a prospect or customer is assigned to the first affiliate who referred that person to Xero Shoes. So, if your referral came to XeroShoes.com or XeroShoes.eu before clicking on your affiliate link, they’re not linked to you.<\/p><p>Next, sometimes people *think* they clicked on your affiliate link, but may not have.<\/p><p>If you aren’t seeing a referral or commission that you believe you should, contact affiliates@xeroshoes.com and we’ll investigate. If there is an actual problem, we can correct it, however, Post Affiliate Pro’s tracking system is very rarely wrong.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_VXzbqe": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Why do I see a “declined” transaction?",
+                "text": "<p>Transactions are most often declined when someone’s credit card is declined, usually from a typo. More often than not, you’ll see a second transaction immediately after that did go through, marked “pending”.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_M6h9KB": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Where’s my commission?",
+                "text": "<p>We pay commissions monthly based on the following formula:<\/p><p>When a referred customer makes a purchase, any commission is marked as “Pending.” To allow a grace period for returns or other adjustments, we wait for 30 days before the commission status is changed to “Approved.” Commissions are then paid on the 5th of the following month, with a minimum payout of $20.<\/p><p>For example, if someone you refer to our site makes a purchase on January 20th, the commission is marked as “Approved” on February 20th, and paid on March 5th, assuming your total commissions due is over $20. <\/p><p>If you haven’t reached the $20 threshold, the commissions will “roll over” to subsequent months until you have, and then you will receive your commission payment.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_hyrRk8": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Can I earn commissions on shoes I buy for myself?",
+                "text": "<p>The affiliate program is designed to reward people for spreading the word about Xero Shoes. It’s not a discount program. Affiliates do not earn commissions on their own orders.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_fUFXPQ": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Can I promote you through pay-per-click search engines?",
+                "text": "<p>Certainly.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_e8hUfa": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Where can I find the full terms and conditions?",
+                "text": "<p>Our Terms & Conditions are available at <a href=\"\/pages\/terms\" title=\"\/pages\/terms\">https:\/\/xeroshoes.com\/pages\/terms<\/a>.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_MYMLMG": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Do you have any training programs for affiliates?",
+                "text": "<p>Yes, the basics of affiliate marketing and most useful tips are described in your affiliate panel. You can also find some tips and techniques in our affiliate newsletter, which you’ll get when you become an affiliate.<\/p><p>If you are serious with earning your income as an affiliate, we recommend Rosalind Gardner’s excellent <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/the-super-affiliate-handbook_4bbb7ab5-7ed5-4a67-8d54-3676bbbd8db7.pdf?v=1759383024\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0714\/9492\/6514\/files\/the-super-affiliate-handbook_4bbb7ab5-7ed5-4a67-8d54-3676bbbd8db7.pdf?v=1759383024\">SuperAffiliate Handbook<\/a>.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            },
+            "collapsible_row_waLe6D": {
+              "type": "collapsible-row",
+              "name": "Collapsible Row",
+              "settings": {
+                "width": 12,
+                "heading": "Still have questions?",
+                "text": "<p>Email <a href=\"mailto:affiliates@xeroshoes.com\" title=\"mailto:affiliates@xeroshoes.com\">affiliates@xeroshoes.com<\/a>.<\/p>",
+                "page": "",
+                "open_by_default": false,
+                "text_color": "#1d293d"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "collapsible_row_MymQAU",
+            "collapsible_row_KkU4xQ",
+            "collapsible_row_X89tcx",
+            "collapsible_row_fy9D8e",
+            "collapsible_row_t3gRCy",
+            "collapsible_row_EA9by8",
+            "collapsible_row_XyQQaW",
+            "collapsible_row_ekijFP",
+            "collapsible_row_VXzbqe",
+            "collapsible_row_M6h9KB",
+            "collapsible_row_hyrRk8",
+            "collapsible_row_fUFXPQ",
+            "collapsible_row_e8hUfa",
+            "collapsible_row_MYMLMG",
+            "collapsible_row_waLe6D"
+          ]
+        }
+      },
+      "block_order": [
+        "group_czRtcY"
+      ],
+      "name": "Custom Section",
+      "settings": {
+        "container_width": "small_container_layout",
+        "section_top_spacing": "spacing-top-xs",
+        "section_top_spacing_ipad": "spacing-top-ipad-xs",
+        "section_top_spacing_mobile": "spacing-top-mobile-xs",
+        "section_bottom_spacing": "spacing-bottom-sm",
+        "section_bottom_spacing_ipad": "spacing-bottom-ipad-sm",
+        "section_bottom_spacing_mobile": "spacing-bottom-mobile-sm",
+        "display": "d-flex",
+        "direction": "flex-md-column",
+        "direction_mobile": "flex-column",
+        "wrap": "flex-nowrap",
+        "align_items": "align-items-md-start",
+        "align_items_mb": "align-items-start",
+        "justify_content": "justify-content-md-start",
+        "justify_content_mb": "justify-content-start",
+        "gap_column": "column-gap-md-0",
+        "gap_row": "row-gap-md-0",
+        "gap_column_mobile": "column-gap-0",
+        "gap_row_mobile": "row-gap-0",
+        "section_bg_color": "",
+        "id_section_header": ""
+      }
+    }
+  },
+  "order": [
+    "global_page_header_banner_8rAmFa",
+    "main",
+    "custom_section_XJXQ9L"
+  ]
+}

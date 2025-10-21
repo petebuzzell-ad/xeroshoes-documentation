@@ -1,0 +1,212 @@
+{% style %}
+    .template-error .title + * {
+        margin-top: 1rem;
+    }
+
+    @media screen and (min-width: 750px) {
+        .template-error .title + * {
+            margin-top: 2rem;
+        }
+    }
+    .template-404 .content-for-layout{
+        display: flex;
+    }
+    .template-404 .content-for-layout .template-error{
+        min-height:100%;
+    }
+    .content-for-layout > div{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        width: 100%;
+    }
+{% endstyle %}
+
+<div class="template-error d-flex align-items-center section-content text-center" style="background:{{ section.settings.body_bg_color }}; color:{{ section.settings.txt_color }};">
+    <div class="container">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h1 class="title" {{ block.shopify_attributes }} data-block-id="{{ block.id }}" style="color: {{ block.settings.heading_color }};font-size:{{ block.settings.heading_font_size }}vw;">
+              {{ block.settings.heading }}
+            </h1>
+          {%- when 'subheading' -%}
+            <h2 class="mb-3 text-uppercase" {{ block.shopify_attributes }} data-block-id="{{ block.id }}" style="color: {{ block.settings.sub_heading_color }};">{{ block.settings.subheading }}</h2> 
+          {%- when 'text' -%}
+            <div {{ block.shopify_attributes }} data-block-id="{{ block.id }}" style="color: {{ block.settings.txt_color }};">{{ block.settings.text }}</div>
+          {%- when 'button' -%}
+            <a {{ block.shopify_attributes }} data-block-id="{{ block.id }}" {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %}class="btn btn-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}">{{ block.settings.btn_txt }}</a>
+        {%- endcase -%}    
+      {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+    {
+      "name": "404 Template",
+      "settings": [
+            {
+                "type": "header",
+                "content": "Styling"
+            },
+            {
+                "type": "color",
+                "id": "body_bg_color",
+                "label": "Page Background Color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "txt_color",
+                "label": "t:settings.text_color",
+                "default": "#0F172B"
+            }
+        ],
+      "blocks": [
+        {
+            "type": "heading",
+            "name": "Heading",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "inline_richtext",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "404"
+                },
+                {
+                    "type": "range",
+                    "id": "heading_font_size",
+                    "min": 1,
+                    "max": 50,
+                    "step": 0.5,
+                    "unit": "vw",
+                    "label": "Heading Font Size",
+                    "default": 15
+                },
+                {
+                    "type":"color",
+                    "id":"heading_color",
+                    "label":"Heading Color"
+                }
+            ]
+        },
+      {
+          "type": "subheading",
+          "name": "Sub Heading",
+          "limit": 1,
+          "settings": [
+              {
+                  "type": "inline_richtext",
+                  "id": "subheading",
+                  "label": "Sub Heading",
+                  "default": "Page not found"
+              },
+              {
+                  "type":"color",
+                  "id":"sub_heading_color",
+                  "label":"Sub Heading Color"
+              }
+          ]
+      },
+      {
+          "type": "text",
+          "name": "Text",
+          "limit": 1,
+          "settings": [
+              {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Lead Text",
+                  "default": "<p>A lead text is an opening paragraph that gives the audience the most important information in a concise and clear manner, while still maintaining their interest.</p>"
+              },
+              {
+                  "type":"color",
+                  "id":"txt_color",
+                  "label":"Text Color"
+              }
+          ]
+        },
+        {
+          "type": "button",
+          "name": "Button",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "text",
+              "id": "btn_txt",
+              "label": "Button Text",
+              "default": "Shop Now"
+            },  
+            {
+              "type": "url",
+              "id": "btn_link",
+              "label": "Button Link"
+            },    
+            {
+              "type": "select",
+              "id": "btn_variant",
+              "label": "Button Variant",
+              "options": [
+                  {
+                      "value": "primary",
+                      "label": "Primary"
+                  },
+                  {
+                      "value": "secondary",
+                      "label": "Secondary"
+                  },
+                  {
+                      "value": "light",
+                      "label": "Light"
+                  },
+                  {
+                      "value": "dark",
+                      "label": "Dark"
+                  }
+              ],
+              "default": "primary"
+            },
+            {
+              "type": "select",
+              "id": "btn_size",
+              "label": "Button Size",
+              "options": [
+                  {
+                      "value": "",
+                      "label": "Default"
+                  },
+                  {
+                      "value": "btn-sm",
+                      "label": "Small"
+                  },
+                  {
+                      "value": "btn-lg",
+                      "label": "Large"
+                  }
+              ],
+              "default": ""
+            }
+          ]
+        }
+      ],
+      "default": {
+        "blocks": [
+          {
+            "type": "heading"
+          },
+          {
+            "type": "subheading"
+          },
+          {
+            "type": "text"
+          },
+          {
+            "type": "button"
+          }
+        ]
+      }
+    }
+  {% endschema %}
+  

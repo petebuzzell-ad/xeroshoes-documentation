@@ -1,0 +1,48 @@
+{%- liquid
+    assign selected_variant = item.product.variants | where: 'id', item.variant_id | first
+-%}
+
+{%- render 'b2b-price-break-cart', variant: selected_variant -%}
+
+<div class="quantity-wrapper" data-qty-container>
+    <quantity-input>
+        <label class="d-none" for="{{ 'templates.cart.quantity.label' | t }}" title="{{ 'templates.cart.quantity.label' | t }}">{{ 'templates.cart.quantity.label' | t }}</label>
+        <div class="border border-gray-200 input-group rounded">
+            <a href="#" class="input-group-text align-items-center d-flex py-2 px-2 text-body {% if item.quantity == 1 %} disabled{% endif %}" rel="nofollow" 
+                aria-label="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}" 
+                title="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}" 
+                data-for="decrease" data-qty-btn>
+                <span class="btn-decrease d-flex align-items-center justify-content-center">
+                    <svg aria-hidden="true" focusable="false" style="width: 12px; height: 10px;">
+                        <use href="#icon-minus"></use>
+                    </svg>
+                </span>
+                <span class="visually-hidden">{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}</span>
+            </a>
+
+            <input type="text" name="updates[]" id="updates_{{ item.key }}" 
+                value="{{ item.quantity }}"
+                inputmode="numeric" data-qty-input
+                data-index="{{ index }}" 
+                aria-label="{{ 'templates.cart.quantity.input_label' | t: product: item.title | escape }}" 
+                min="{{ selected_variant.quantity_rule.min }}"
+                {% if selected_variant.quantity_rule.max != null %}
+                max="{{ selected_variant.quantity_rule.max }}"
+                {% endif %}
+                step="{{ selected_variant.quantity_rule.increment }}"
+                class="border-0 form-control px-0 py-0 quantity text-center" >
+
+            <a href="#" class="input-group-text align-items-center d-flex py-2 px-2 text-body {% if varStatus == 'modify' or varStatus == 'locked' %}disabled{% endif %}" 
+                rel="nofollow" aria-label="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}" 
+                title="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}" 
+                data-for="increase" data-qty-btn>
+                <span class="btn-increase d-flex align-items-center justify-content-center">
+                    <svg aria-hidden="true" focusable="false" style="width: 12px; height: 12px;">
+                        <use href="#icon-plus"></use>
+                    </svg>
+                </span>
+                <span class="visually-hidden">{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}</span>
+            </a>
+        </div>
+    </quantity-input>
+</div>

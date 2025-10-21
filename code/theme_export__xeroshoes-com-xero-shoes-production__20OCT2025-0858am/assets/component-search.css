@@ -1,0 +1,401 @@
+
+input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.modal__close-button {
+	padding: 0rem;
+	margin-left:1rem; 
+	background-color: transparent;
+	/* outline: none; */
+	border: 0;
+	display:flex;
+	align-items:center;
+}
+.modal__close-button [class^="icon-"]{
+	font-size: 26px;
+	color: var(--bs-body-color);
+	transition: ease-in-out 0.15s;
+}
+.modal__close-button [class^="icon-"]:hover{
+	color: var(--bs-color-primary);
+}
+@media (min-width: 576px) {
+	.modal__close-button {
+		margin-left: 2rem; 
+	}
+}
+
+.header__search.open__modal {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);    
+}
+
+.search-modal__content {
+	display: flex;
+	align-items: center; 
+	padding: 30px 0;
+}
+.search-modal__form{
+	width: 100%;
+}
+.customer .field input::-webkit-search-cancel-button {
+	display: none;
+}
+
+.field__button {
+	align-items: center;
+	background-color: transparent;
+	border: 0;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	overflow: hidden;
+	padding: 10px 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.field__button [class^="icon-"]{
+	font-size: 26px;
+	color: var(--bs-body-color);
+	transition: ease-in-out 0.25s;
+}
+.field__button [class^="icon-"]:hover{
+	color: var(--bs-color-primary);
+}
+
+/*======== Predictive Search =========*/
+.predictive-search{
+display: none;
+}
+
+.predictive-search.show-results{
+	max-height: calc(100svh - 82px);
+	display: block;
+	overflow: auto;
+	position: absolute;
+	z-index: 99;
+	background: #fff;
+	width: 100%;
+	left: 0;
+	top: 100%;
+	padding: 0 5px;
+}
+
+.predictive-search-body{
+max-width: 990px;
+}
+
+.predictive-search-footer{
+padding: 20px 0;
+}
+.predictive-search-footer a{
+text-transform: uppercase;
+font-weight: 700;
+border-bottom: 1px solid;
+}
+
+.results-list img {
+	/* aspect-ratio: 0.8231046931; */
+	aspect-ratio: 1;
+	object-fit: contain;
+}
+
+.results-list .placeholder-svg
+{
+  height: auto !important;
+}
+
+#results-queries .list-item+.list-item,
+#results-queries-col .list-item+.list-item
+{
+	margin-top: 11.5px;
+}
+mark
+{
+	background: inherit;
+	font-weight: 500;
+	color: inherit;
+}
+#results-products
+{
+	margin: -12.5px;
+}
+#results-products > *
+{
+	padding: 12.5px;
+}
+body:has(.predictive-search--header.show-results)
+{
+	overflow: hidden;
+}
+body .site-header::after
+{
+	transition: opacity .4s ease-in-out;
+	opacity: 0 !important;
+    pointer-events: none;
+	content: "";
+	background-color: #00000080;
+	width: 100%;
+	top: 0;
+	height: 100vh;
+	position: fixed;
+	z-index: 5;
+}
+body:has(.predictive-search--header.show-results) .site-header::after
+{
+	opacity: 1 !important;
+    pointer-events: all;
+}
+.predictive-search__image
+{
+  display: grid;
+  background-color: #f9f8f5;
+}
+.predictive-search__image img
+{
+	transition: all .2s ease-out;
+  	grid-area: 1 / 1 / 2 / 2;
+	mix-blend-mode: multiply;
+}
+@media (max-width: 1199px) {
+	.list-item:has(img[secondary_image]) img[secondary_image]
+	{
+		display: none !important;
+	}
+
+}
+@media (min-width: 1200px) {
+	.list-item:has(img[secondary_image]):not(:hover) [secondary_image], 
+	.list-item:has(img[secondary_image]):hover img:first-child
+	{
+		opacity: 0;
+	}
+}
+#results-queries a:hover > *:not(.text-black)
+{
+	color: var(--pe-link-hover-color);
+}
+.results-list .article-image-search ,
+.predictive-search__articles .placeholder-svg
+{
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 75px;
+}
+.results-list .article-image-search-wrapper span
+{
+  font-size: 16px;
+  text-transform: none;
+  line-height: 1.15 !important;
+  width: calc(100% - 75px);
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.article-image-search-wrapper:hover span
+{
+	text-decoration: underline;
+}
+@media (min-width:768px)
+{
+	.predictive-search-queries-col
+	{
+		width: 30%;    
+		padding-right: 5%;
+	}
+	.predictive-search__result-group-col
+	{
+		width: 70%;
+	}
+}
+@media (min-width:992px)
+{
+	.predictive-search
+	{
+		transform: translateY(-100%);
+		display: block !important;
+		position: absolute;
+		transition: transform .6s cubic-bezier(.625,.05,0,1), opacity .6s cubic-bezier(.625,.05,0,1);
+		opacity: 0;
+		pointer-events: none;
+	}
+	.predictive-search.show-results{
+    	padding: 46px 0 45px 0;
+		display: block;
+		transform: translateY(0);
+		opacity: 1;
+		pointer-events: all;
+		z-index: -1;
+  	}
+	body:has(.predictive-search--header.show-results) .site-header::after
+	{
+		/* top: 100%; */
+		z-index: -2;
+	}
+	.predictive-search.show-results{
+		max-height: calc(100svh - 170px);
+	}
+	.results-list .article-image-search-wrapper span
+	{
+		font-size: 17px;
+	}
+}
+@media (min-width:1200px)
+{
+	.predictive-search-queries-col
+	{
+		padding-right: 5%;
+	}
+}
+
+/* Collection Preview Cards */
+.collection-preview-card {
+	transition: all 0.3s ease;
+	background: #fff;
+}
+
+.collection-preview-card:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2px);
+}
+
+.collection-title a {
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+
+.collection-title a:hover {
+	color: var(--bs-primary) !important;
+}
+
+.product-preview-link {
+	transition: transform 0.2s ease;
+}
+
+.product-preview-link:hover {
+	transform: scale(1.02);
+}
+
+.product-preview-link .product-image-wrapper img {
+	transition: opacity 0.3s ease;
+}
+
+.product-preview-link:hover .product-image-wrapper img {
+	opacity: 0.9;
+}
+
+.collection-products .product-title {
+	font-size: 0.875rem;
+	line-height: 1.2;
+}
+
+.collection-products .product-price {
+	font-size: 0.8rem;
+}
+
+    @media (max-width: 768px) {
+    	.collection-preview-card {
+    		padding: 1rem !important;
+    	}
+    	
+    	.collection-title {
+    		font-size: 1.1rem;
+    	}
+    	
+    	.collection-description {
+    		font-size: 0.8rem;
+    	}
+    }
+
+/* Swatch Overflow Indicator */
+.swatch-overflow-indicator {
+	display: none !important;
+	flex-shrink: 0;
+}
+
+.swatch-overflow-indicator:not(.d-none) {
+	display: flex !important;
+}
+
+/* Override for when we want to show it */
+.swatch-overflow-indicator.show {
+	display: flex !important;
+}
+
+    .overflow-swatch {
+    	width: 35px;
+    	height: 35px;
+    	border: none;
+    	border-radius: 0;
+    	background: transparent;
+    	transition: all 0.3s ease;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+
+    .overflow-label {
+    	width: 100%;
+    	height: 100%;
+    	text-decoration: none;
+    	color: #6c757d;
+    	font-size: 16px;
+    	font-weight: 600;
+    	border-radius: 0;
+    	background: transparent;
+    	border: none;
+    	padding: 0;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+
+    .overflow-label:hover {
+    	background: transparent;
+    	border: none;
+    	color: #495057;
+    	transform: none;
+    }
+
+    .overflow-text {
+    	font-size: 11px;
+    	line-height: 1;
+    }
+
+    @media (max-width: 768px) {
+    	.overflow-swatch {
+    		width: 30px;
+    		height: 30px;
+    		min-width: 30px;
+    		flex-shrink: 0;
+    		margin-right: 0 !important;
+    	}
+    	
+    	.overflow-label {
+    		font-size: 13px;
+    		min-width: 30px;
+    		text-align: center;
+    		padding: 0 2px;
+    	}
+    	
+    	.overflow-text {
+    		font-size: 13px;
+    	}
+    	
+    	.swatch-overflow-indicator {
+    		min-width: 30px;
+    		flex-shrink: 0;
+    		margin-right: 0 !important;
+    		padding-right: 0 !important;
+    	}
+    	
+    	/* Ensure the overflow indicator container has enough space */
+    	.color-swatch-list {
+    		padding-right: 5px;
+    	}
+    }
+    

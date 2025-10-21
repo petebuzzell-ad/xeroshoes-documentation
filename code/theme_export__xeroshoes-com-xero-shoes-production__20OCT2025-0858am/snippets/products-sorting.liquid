@@ -1,0 +1,46 @@
+{% comment %}
+  Collection page sort by
+  Accepts:
+  - sort_options: {Object} available sort_options array
+  - sort_by: {String} current sort_by 
+  - type: {String} sorting placement between "desktop" / "drawer"
+
+  Usage:
+  {% render 'products-sorting', sort_options: collection.sort_options, sort_by: collection.sort_by, type: type %}
+{% endcomment %}
+
+{%- liquid
+    assign sortby_name = 'sort_by_desktop'
+    if type == 'drawer'
+        assign sortby_name = 'sort_by_mobile'
+    endif
+    assign selected_sorting = sort_options | where: 'value', sort_by | first | default: sort_options.first
+-%}
+
+<div class="d-flex align-items-center flex-grow-1">
+    <custom-select class="custom-dropdown custom-dropdown-only-text flex-fill sortby-dropdown position-relative d-flex align-items-center" aria-label="{{ 'templates.collection.sortby_label' | t }}">    
+        <legend class="visually-hidden-skip">{{ selected_sorting.name }}</legend>
+        <button id="sortby-dropdown{% if type == 'drawer' %}-drawer{% endif %}-toggle" class="default tab_toggle px-lg-9 px-7 py-xl-5 py-4" data-toggle="options" aria-expanded="false" aria-haspopup="true" aria-controls="sortby-dropdown{% if type == 'drawer' %}-drawer{% endif %}">
+            <span class="option_txt d-none">{{ selected_sorting.name }}</span>
+            <span class="font-family-heading fw-normal ls-sm lh-11 d-flex me-2">{{ 'templates.collection.sortby_label' | t }}</span>
+            <svg aria-hidden="true" focusable="false" style="width:11px; height:11px;" class="ms-auto"><use href="#icon-arrow-down"></use></svg>
+        </button>
+        <div class="toggle-content" id="sortby-dropdown{% if type == 'drawer' %}-drawer{% endif %}"  data-selectcontainer data-type="content" role="menu" aria-hidden="true" aria-labelledby="sortby-dropdown{% if type == 'drawer' %}-drawer{% endif %}-toggle">
+            <ul class="list-unstyled m-0 toggle-content-wrap">
+                {%- for option in sort_options -%}
+                    {% # theme-check-disable TranslationKeyExists %}
+                    {% assign option_name = 'general.sorting.' | append: option.value | t | default: option.name %}
+                    {% # theme-check-enable TranslationKeyExists %}
+                    <li data-value="{{ option.value | escape }}" class="form-check{% if selected_sorting.value == option.value %} selected{% endif %}" role="menuitem" tabindex="0">
+                        <input type="radio" value="{{ option.value | escape }}" class="sortby_options form-check-input" 
+                            name="{{ sortby_name }}" id="sort_by{% if type %}-{{ type }}{% endif %}-option{{ forloop.index }}" 
+                            {% if selected_sorting.value == option.value %} checked{% endif %} tabindex="-1"/>
+                        <label for="sort_by{% if type %}-{{ type }}{% endif %}-option{{ forloop.index }}" class="option_txt form-check-label" title="Label for {{ option_name }}">
+                            {{ option_name }}
+                        </label>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+    </custom-select>
+</div>
