@@ -531,6 +531,101 @@
                             <li>Variant data remains intact when hidden (pricing, inventory, etc.)</li>
                             <li>Admin users can still see and manage hidden variants in Shopify Admin</li>
                         </ul>
+                        
+                        <h4>Technical Implementation</h4>
+                        <p>The <code>custom.draft_variant</code> metafield is implemented through a sophisticated Liquid + JavaScript system that dynamically controls variant visibility on product pages.</p>
+                        
+                        <h5>Liquid Template Implementation</h5>
+                        <p>The system uses Liquid templates to process variant data and generate JavaScript configuration:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>{%- liquid
+    assign countvariants = product.variants_count
+    assign count = 0
+    for variant in product.variants
+        if variant.metafields.custom.draft_variant == true
+            assign count = count | plus: 1
+        endif
+    endfor
+-%}
+{%- if countvariants != count -%}
+    <!-- Only render variant picker if there are non-draft variants -->
+{%- endif -%}</code></pre>
+                        </div>
+                        
+                        <h5>JavaScript Configuration Generation</h5>
+                        <p>The Liquid template generates a JSON script containing draft variant IDs:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>&lt;script class="variantsJSONDraft-{{ product.id }}" data-variantJSONDraft type="application/json"&gt;
+{%- for variant in product.variants -%}
+    {%- if variant.metafields.custom.draft_variant == true -%}
+        {{- variant.id | json -}},
+    {%- endif -%}
+{%- endfor -%}
+&lt;/script&gt;</code></pre>
+                        </div>
+                        
+                        <h5>Client-Side Processing</h5>
+                        <p>The JavaScript <code>draftvariants()</code> method processes the draft variant data:</p>
+                        
+                        <div class="code-block">
+                            <pre><code>draftvariants(currentVariant) {
+    // Get draft variant IDs from JSON
+    let draftVariantIds = [];
+    if (this.variantdraft_json && this.variantdraft_json.textContent) {
+        const draftJsonText = this.variantdraft_json.textContent.trim();
+        if (draftJsonText) {
+            draftVariantIds = draftJsonText.split(',')
+                .map(id => parseInt(id.trim()))
+                .filter(id => !isNaN(id));
+        }
+    }
+    
+    // Hide option values where ALL variants are draft
+    option1Values.forEach(option1Value => {
+        const variantsWithOption1 = variants.filter(v => v.option1 === option1Value);
+        const allDraft = variantsWithOption1.every(v => draftVariantIds.includes(v.id));
+        
+        const option1Input = this.querySelector(`input[value="${CSS.escape(option1Value)}"]`);
+        if (option1Input) {
+            const swatch = option1Input.closest('.swatch');
+            if (swatch && !swatch.closest('[data-overflow-indicator]')) {
+                if (allDraft) {
+                    swatch.classList.add('d-none');
+                } else {
+                    swatch.classList.remove('d-none');
+                }
+            }
+        }
+    });
+}</code></pre>
+                        </div>
+                        
+                        <h5>Multi-Option Logic</h5>
+                        <p>The system handles complex multi-option scenarios:</p>
+                        <ul>
+                            <li><strong>Option 1 (Primary):</strong> Hides entire option values if ALL variants with that value are draft</li>
+                            <li><strong>Option 2 & 3:</strong> Applies same logic to secondary and tertiary options</li>
+                            <li><strong>Cascading Logic:</strong> When Option 1 is selected, Option 2/3 values are hidden if no non-draft variants exist for that combination</li>
+                            <li><strong>Overflow Protection:</strong> Preserves overflow indicators and pagination controls</li>
+                        </ul>
+                        
+                        <h5>Performance Optimizations</h5>
+                        <ul>
+                            <li><strong>Loop Prevention:</strong> <code>_isUpdatingDraftVariants</code> flag prevents infinite update loops</li>
+                            <li><strong>State Preservation:</strong> Maintains overflow indicator states during updates</li>
+                            <li><strong>Efficient Filtering:</strong> Uses JavaScript array methods for fast variant filtering</li>
+                            <li><strong>CSS-Only Hiding:</strong> Uses <code>d-none</code> class for instant visibility changes</li>
+                        </ul>
+                        
+                        <h5>File Locations</h5>
+                        <ul>
+                            <li><strong>Liquid Logic:</strong> <code>blocks/_product-variant-picker.liquid</code></li>
+                            <li><strong>Card Implementation:</strong> <code>snippets/product-generic-card.liquid</code></li>
+                            <li><strong>Swatch Logic:</strong> <code>snippets/variant-picker_card.liquid</code></li>
+                            <li><strong>JavaScript Engine:</strong> <code>assets/component-variant-options.js</code></li>
+                        </ul>
                     </section>
                     
                     <section id="product-workflows">
