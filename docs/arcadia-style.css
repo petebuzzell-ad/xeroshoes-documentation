@@ -1451,6 +1451,17 @@ button:hover, .cta:hover, .download-btn:hover, .video-btn:hover {
     font-size: 1.1rem;
 }
 
+.capability-item h4 a {
+    color: var(--forest-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.capability-item h4 a:hover {
+    color: var(--sage-green);
+    text-decoration: underline;
+}
+
 .capability-item p {
     color: var(--digital-gray-2);
     line-height: 1.5;
