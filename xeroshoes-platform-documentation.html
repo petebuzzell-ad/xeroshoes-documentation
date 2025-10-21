@@ -493,7 +493,44 @@
                                 <td>Activity types</td>
                                 <td>["Running", "Hiking", "Casual"]</td>
                             </tr>
+                            <tr>
+                                <td>custom.draft_variant</td>
+                                <td>Boolean</td>
+                                <td>Variant visibility control</td>
+                                <td>TRUE = hidden, FALSE/blank = visible</td>
+                            </tr>
                         </table>
+                        
+                        <h4>Critical Metafield: custom.draft_variant</h4>
+                        <p>The <code>custom.draft_variant</code> metafield is a custom implementation that extends Shopify's native variant management capabilities. This metafield provides granular control over variant visibility on product detail pages.</p>
+                        
+                        <div class="alert warning">
+                            <strong>Important:</strong> This is a custom metafield that directly impacts customer experience and product management workflows. Understanding its behavior is critical for effective product management.
+                        </div>
+                        
+                        <h5>Variant Visibility Control</h5>
+                        <ul>
+                            <li><strong>TRUE:</strong> Variant is excluded from the product detail page</li>
+                            <li><strong>FALSE or blank:</strong> Variant is included and visible on the product detail page</li>
+                        </ul>
+                        
+                        <h5>Use Cases</h5>
+                        <ul>
+                            <li><strong>Seasonal Products:</strong> Hide out-of-season variants without deleting them</li>
+                            <li><strong>Inventory Management:</strong> Hide variants that are temporarily out of stock</li>
+                            <li><strong>Product Testing:</strong> Test new variants without full public visibility</li>
+                            <li><strong>Regional Availability:</strong> Hide variants not available in specific regions</li>
+                            <li><strong>Product Lifecycle:</strong> Manage product discontinuation process</li>
+                        </ul>
+                        
+                        <h5>Implementation Notes</h5>
+                        <ul>
+                            <li>Metafield applies to individual variants, not entire products</li>
+                            <li>Changes take effect immediately upon saving</li>
+                            <li>Hidden variants are not accessible via direct URL</li>
+                            <li>Variant data remains intact when hidden (pricing, inventory, etc.)</li>
+                            <li>Admin users can still see and manage hidden variants in Shopify Admin</li>
+                        </ul>
                     </section>
                     
                     <section id="product-workflows">
@@ -525,6 +562,29 @@
                             <li>Apply same changes to corresponding instance</li>
                             <li>Verify changes on live site</li>
                         </ol>
+                        
+                        <h4>Variant Visibility Management</h4>
+                        <p>Managing variant visibility using the <code>custom.draft_variant</code> metafield:</p>
+                        <ol>
+                            <li>Access product in Shopify Admin</li>
+                            <li>Navigate to the Variants section</li>
+                            <li>Select the variant to modify</li>
+                            <li>Scroll to the Metafields section</li>
+                            <li>Locate the <code>custom.draft_variant</code> metafield</li>
+                            <li>Set value:
+                                <ul>
+                                    <li><strong>TRUE:</strong> To hide variant from product page</li>
+                                    <li><strong>FALSE or leave blank:</strong> To show variant on product page</li>
+                                </ul>
+                            </li>
+                            <li>Save the product</li>
+                            <li>Verify visibility changes on the live product page</li>
+                            <li>Apply same changes to corresponding instance if needed</li>
+                        </ol>
+                        
+                        <div class="alert info">
+                            <strong>Pro Tip:</strong> Use variant visibility management for seasonal inventory control, testing new variants, or managing regional availability without deleting variant data.
+                        </div>
                     </section>
                 </section>
                 
