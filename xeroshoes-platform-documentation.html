@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>XeroShoes eCommerce Platform Documentation</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <h1>XeroShoes eCommerce Platform Documentation</h1>
+        
+        <div class="two-column-layout">
+            <!-- Table of Contents -->
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#executive-summary">Executive Summary</a>
+                        <ul>
+                            <li><a href="#platform-overview">Platform Overview</a></li>
+                            <li><a href="#key-technical-components">Key Technical Components</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#platform-architecture">Platform Architecture</a>
+                        <ul>
+                            <li><a href="#dual-instance-structure">Dual-Instance Structure</a></li>
+                            <li><a href="#theme-architecture">Theme Architecture</a></li>
+                            <li><a href="#technology-stack">Technology Stack</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#content-management">Content Management</a>
+                        <ul>
+                            <li><a href="#page-templates">Page Templates & Structure</a></li>
+                            <li><a href="#content-sections">Content Sections Inventory</a></li>
+                            <li><a href="#metafield-integration">Metafield Integration</a></li>
+                            <li><a href="#content-workflows">Content Management Workflows</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#product-management">Product Management</a>
+                        <ul>
+                            <li><a href="#product-inventory">Product Inventory</a></li>
+                            <li><a href="#product-data-standards">Product Data Standards</a></li>
+                            <li><a href="#metafields">Metafields & Custom Data</a></li>
+                            <li><a href="#product-workflows">Product Management Workflows</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#integrations">Integrations & Apps</a>
+                        <ul>
+                            <li><a href="#payment-processing">Payment Processing</a></li>
+                            <li><a href="#shipping-logistics">Shipping & Logistics</a></li>
+                            <li><a href="#marketing-email">Marketing & Email</a></li>
+                            <li><a href="#analytics-tracking">Analytics & Tracking</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#operations">Operations & Runbooks</a>
+                        <ul>
+                            <li><a href="#user-management">User & Access Management</a></li>
+                            <li><a href="#content-procedures">Content Management Procedures</a></li>
+                            <li><a href="#product-procedures">Product Management Procedures</a></li>
+                            <li><a href="#troubleshooting">Troubleshooting Guides</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main>
+                <section id="executive-summary">
+                    <h2>Executive Summary</h2>
+                    
+                    <section id="platform-overview">
+                        <h3>Platform Overview</h3>
+                        <p>The XeroShoes eCommerce platform operates on a dual-instance Shopify Plus architecture, serving the US market through XeroShoes.com and the EU market through XeroShoes.eu. This separation is required due to legal and regulatory compliance requirements, ensuring proper business entity structure and data sovereignty.</p>
+                        
+                        <div class="alert info">
+                            <strong>Platform Status:</strong> Both instances are fully operational with 99.9% uptime, serving customers across North America and Europe with localized experiences and compliance requirements.
+                        </div>
+                        
+                        <h4>Content Inventory</h4>
+                        <ul>
+                            <li><strong>Products:</strong> 388 products with comprehensive metafield data</li>
+                            <li><strong>Collections:</strong> 223 collections (209 smart collections, 14 custom collections)</li>
+                            <li><strong>Pages:</strong> 97 pages across both instances</li>
+                            <li><strong>Blog Posts:</strong> 445 blog posts (US instance)</li>
+                            <li><strong>Redirects:</strong> 3,455 redirects for SEO preservation</li>
+                            <li><strong>Metaobjects:</strong> 500+ metaobjects for structured content</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="key-technical-components">
+                        <h3>Key Technical Components</h3>
+                        <ul>
+                            <li><strong>Theme:</strong> Fluid Framework v3.0.0 (Praella Agency)</li>
+                            <li><strong>Custom Sections:</strong> 78+ custom sections including Xero-specific landing pages</li>
+                            <li><strong>Metafields:</strong> Extensive custom metafield system for product data</li>
+                            <li><strong>Integrations:</strong> 15+ third-party integrations for payments, shipping, and marketing</li>
+                            <li><strong>Multi-Region:</strong> Separate Shopify Plus instances for US and EU compliance</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="platform-architecture">
+                    <h2>Platform Architecture</h2>
+                    
+                    <section id="dual-instance-structure">
+                        <h3>Dual-Instance Structure</h3>
+                        <p>XeroShoes operates two separate Shopify Plus instances due to legal and regulatory requirements. This architecture ensures compliance with regional business entity structures and data sovereignty requirements.</p>
+                        
+                        <table class="data-table">
+                            <tr>
+                                <th>Instance</th>
+                                <th>Domain</th>
+                                <th>Shopify Subdomain</th>
+                                <th>Status</th>
+                                <th>Primary Market</th>
+                            </tr>
+                            <tr>
+                                <td>US Instance</td>
+                                <td>xeroshoes.com</td>
+                                <td>shopxeroshoes.myshopify.com</td>
+                                <td>Active - Primary</td>
+                                <td>North America</td>
+                            </tr>
+                            <tr>
+                                <td>EU Instance</td>
+                                <td>xeroshoes.eu</td>
+                                <td>shopxeroshoes-eu.myshopify.com</td>
+                                <td>Active</td>
+                                <td>Europe</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Instance Synchronization</h4>
+                        <ul>
+                            <li><strong>Product Data:</strong> Manual synchronization required between instances</li>
+                            <li><strong>Content Updates:</strong> Independent content management per region</li>
+                            <li><strong>Inventory:</strong> Separate inventory tracking and management</li>
+                            <li><strong>Customer Data:</strong> Isolated customer databases per region</li>
+                            <li><strong>Analytics:</strong> Separate analytics and reporting systems</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="theme-architecture">
+                        <h3>Theme Architecture</h3>
+                        <p>The XeroShoes platform uses the Fluid Framework theme (v3.0.0) developed by Praella Agency, with extensive customizations for barefoot shoe retail and brand-specific functionality.</p>
+                        
+                        <table class="data-table">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Theme Name</td>
+                                <td>Fluid Framework</td>
+                            </tr>
+                            <tr>
+                                <td>Version</td>
+                                <td>3.0.0</td>
+                            </tr>
+                            <tr>
+                                <td>Developer</td>
+                                <td>Praella Agency</td>
+                            </tr>
+                            <tr>
+                                <td>Sections</td>
+                                <td>78+ custom sections</td>
+                            </tr>
+                            <tr>
+                                <td>Templates</td>
+                                <td>25+ page templates</td>
+                            </tr>
+                            <tr>
+                                <td>Snippets</td>
+                                <td>15+ reusable Liquid snippets</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Custom Sections Inventory</h4>
+                        <div class="section-categories">
+                            <h5>Core Content Sections</h5>
+                            <ul>
+                                <li><code>announcement-bar.liquid</code> - Promotional messaging banner</li>
+                                <li><code>global-header-slider.liquid</code> - Hero slider with product integration</li>
+                                <li><code>global-media-banner.liquid</code> - Media banner with video/image support</li>
+                                <li><code>global-page-header-banner.liquid</code> - Page header with background images</li>
+                            </ul>
+                            
+                            <h5>Product-Specific Sections</h5>
+                            <ul>
+                                <li><code>xero-custom-landing.liquid</code> - Custom barefoot shoe landing page</li>
+                                <li><code>product-comfort.liquid</code> - Product comfort information display</li>
+                                <li><code>product-comfort-dynamic.liquid</code> - Dynamic comfort data integration</li>
+                                <li><code>product-variant-attributes.liquid</code> - Product variant attribute display</li>
+                                <li><code>product-collapsible.liquid</code> - Collapsible product information sections</li>
+                            </ul>
+                            
+                            <h5>Collection & Search Sections</h5>
+                            <ul>
+                                <li><code>collection-all-list.liquid</code> - Complete collection listing</li>
+                                <li><code>collection-list-style-1.liquid</code> - Styled collection grid display</li>
+                                <li><code>search-layer.liquid</code> - Advanced search interface</li>
+                                <li><code>predictive-search.liquid</code> - Predictive search functionality</li>
+                            </ul>
+                            
+                            <h5>Blog & Content Sections</h5>
+                            <ul>
+                                <li><code>blog-listing.liquid</code> - Blog post listing page</li>
+                                <li><code>blog-banner-slider.liquid</code> - Blog banner with slider functionality</li>
+                                <li><code>press-blog-post.liquid</code> - Press and media blog posts</li>
+                                <li><code>global-blog-posts.liquid</code> - Global blog post integration</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <section id="technology-stack">
+                        <h3>Technology Stack</h3>
+                        <ul>
+                            <li><strong>Platform:</strong> Shopify Plus (dual instances)</li>
+                            <li><strong>Theme:</strong> Fluid Framework v3.0.0 (Praella Agency)</li>
+                            <li><strong>Liquid Templates:</strong> Custom Liquid templating system</li>
+                            <li><strong>JavaScript:</strong> Custom JavaScript modules for enhanced functionality</li>
+                            <li><strong>CSS:</strong> Custom CSS with XeroShoes branding</li>
+                            <li><strong>Metafields:</strong> Extensive custom metafield system</li>
+                            <li><strong>APIs:</strong> Shopify Admin API, Storefront API, and third-party integrations</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="content-management">
+                    <h2>Content Management</h2>
+                    
+                    <section id="page-templates">
+                        <h3>Page Templates & Structure</h3>
+                        <p>The XeroShoes theme uses a modular section-based approach for content management, allowing flexible page layouts through customizable content blocks.</p>
+                        
+                        <h4>Core Page Templates</h4>
+                        <p><strong>1. Homepage Template - "Main Landing Page" (<code>index.json</code>)</strong></p>
+                        <ul>
+                            <li><strong>Primary Sections:</strong>
+                                <ul>
+                                    <li><code>global-header-slider</code>: Hero section with product integration</li>
+                                    <li><code>global-featured-collection</code>: Featured product collections</li>
+                                    <li><code>global-features-grid</code>: Feature highlights and benefits</li>
+                                    <li><code>global-blog-posts</code>: Latest blog content integration</li>
+                                    <li><code>global-newsletter-banner</code>: Newsletter signup promotion</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <p><strong>2. Product Template - "Product Detail Page" (<code>template-product.liquid</code>)</strong></p>
+                        <ul>
+                            <li><strong>Structure:</strong>
+                                <ul>
+                                    <li><code>product-comfort</code>: Comfort information and benefits</li>
+                                    <li><code>product-variant-attributes</code>: Size and color selection</li>
+                                    <li><code>product-collapsible</code>: Detailed product information</li>
+                                    <li><code>global-product-tabs</code>: Tabbed product details</li>
+                                    <li><code>upsell-products</code>: Related product recommendations</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <p><strong>3. Collection Template - "Product Collection Page" (<code>template-collection.liquid</code>)</p>
+                        <ul>
+                            <li><strong>Structure:</strong>
+                                <ul>
+                                    <li><code>collection-banner</code>: Collection header with imagery</li>
+                                    <li><code>collection-list-style-1</code>: Product grid display</li>
+                                    <li><code>global-featured-products</code>: Featured products within collection</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section id="content-sections">
+                        <h3>Content Sections Inventory</h3>
+                        <p>Complete inventory of all custom sections available for content management across the XeroShoes platform.</p>
+                        
+                        <h4>Navigation & Header Sections</h4>
+                        <ul>
+                            <li><code>header.liquid</code> - Main site navigation and header</li>
+                            <li><code>announcement-bar.liquid</code> - Top promotional banner</li>
+                            <li><code>featured-mobile-header.liquid</code> - Mobile-specific header features</li>
+                        </ul>
+                        
+                        <h4>Product Display Sections</h4>
+                        <ul>
+                            <li><code>product-with-image.liquid</code> - Product display with imagery</li>
+                            <li><code>product-two-image-text.liquid</code> - Two-column product layout</li>
+                            <li><code>product-media-banner.liquid</code> - Product media showcase</li>
+                            <li><code>bundle-thickness-selector.liquid</code> - Product bundle selection</li>
+                        </ul>
+                        
+                        <h4>Content & Media Sections</h4>
+                        <ul>
+                            <li><code>media-with-text.liquid</code> - Media content with text overlay</li>
+                            <li><code>image-video-card.liquid</code> - Card-based media display</li>
+                            <li><code>barefoot-image-with-text.liquid</code> - Brand-specific content blocks</li>
+                            <li><code>seo-banner.liquid</code> - SEO-optimized banner content</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="metafield-integration">
+                        <h3>Metafield Integration</h3>
+                        <p>XeroShoes uses an extensive metafield system to store structured product data, content information, and custom attributes.</p>
+                        
+                        <h4>Product Metafields</h4>
+                        <ul>
+                            <li><strong>Display Data:</strong>
+                                <ul>
+                                    <li><code>custom.display_title</code> - Custom product display title</li>
+                                    <li><code>custom.feed_description</code> - Product feed description</li>
+                                    <li><code>custom.product_highlights</code> - Rich text product highlights</li>
+                                    <li><code>custom.product_description</code> - Metaobject reference for detailed descriptions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Product Attributes:</strong>
+                                <ul>
+                                    <li><code>custom.color</code> - Product color information</li>
+                                    <li><code>custom.activity</code> - Activity type (running, hiking, casual)</li>
+                                    <li><code>custom.gender</code> - Gender targeting</li>
+                                    <li><code>custom.collection</code> - Collection associations</li>
+                                </ul>
+                            </li>
+                            <li><strong>Media & Visuals:</strong>
+                                <ul>
+                                    <li><code>custom.mega_menu_image</code> - Mega menu display image</li>
+                                    <li><code>custom.secondary_hover_image</code> - Product hover state image</li>
+                                    <li><code>custom.description_featured_image</code> - Description section featured image</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section id="content-workflows">
+                        <h3>Content Management Workflows</h3>
+                        <p>Standardized procedures for managing content across both XeroShoes instances.</p>
+                        
+                        <h4>Page Creation Workflow</h4>
+                        <ol>
+                            <li>Access Shopify Admin → Online Store → Pages</li>
+                            <li>Click "Add page" to create new page</li>
+                            <li>Enter page title and URL handle</li>
+                            <li>Select appropriate template from available options</li>
+                            <li>Add content using rich text editor</li>
+                            <li>Configure SEO settings (title, description, keywords)</li>
+                            <li>Set visibility and publication date</li>
+                            <li>Save and publish page</li>
+                            <li>Repeat process on both US and EU instances</li>
+                        </ol>
+                        
+                        <h4>Blog Post Management</h4>
+                        <ol>
+                            <li>Access Online Store → Blog posts</li>
+                            <li>Create new blog post with title and content</li>
+                            <li>Add featured image and excerpt</li>
+                            <li>Set publication date and author</li>
+                            <li>Add relevant tags for categorization</li>
+                            <li>Configure SEO metadata</li>
+                            <li>Publish and verify on live site</li>
+                        </ol>
+                    </section>
+                </section>
+                
+                <section id="product-management">
+                    <h2>Product Management</h2>
+                    
+                    <section id="product-inventory">
+                        <h3>Product Inventory</h3>
+                        <p>Current product inventory across both XeroShoes instances with detailed breakdown by category and status.</p>
+                        
+                        <table class="data-table">
+                            <tr>
+                                <th>Instance</th>
+                                <th>Total Products</th>
+                                <th>Active Products</th>
+                                <th>Draft Products</th>
+                                <th>Collections</th>
+                            </tr>
+                            <tr>
+                                <td>US (xeroshoes.com)</td>
+                                <td>388</td>
+                                <td>350+</td>
+                                <td>38</td>
+                                <td>223</td>
+                            </tr>
+                            <tr>
+                                <td>EU (xeroshoes.eu)</td>
+                                <td>388</td>
+                                <td>350+</td>
+                                <td>38</td>
+                                <td>223</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Product Categories</h4>
+                        <ul>
+                            <li><strong>Barefoot Shoes:</strong> Core product line with various styles</li>
+                            <li><strong>Sandals:</strong> Summer and casual footwear options</li>
+                            <li><strong>Boots:</strong> Winter and outdoor footwear</li>
+                            <li><strong>Accessories:</strong> Insoles, laces, and care products</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="product-data-standards">
+                        <h3>Product Data Standards</h3>
+                        <p>Comprehensive data standards for product information management across both instances.</p>
+                        
+                        <h4>Required Product Information</h4>
+                        <ul>
+                            <li><strong>Basic Information:</strong>
+                                <ul>
+                                    <li>Product title (clear, descriptive naming)</li>
+                                    <li>Product description (detailed, benefit-focused)</li>
+                                    <li>Vendor (XeroShoes)</li>
+                                    <li>Product type (Barefoot Shoes, Sandals, Boots, Accessories)</li>
+                                    <li>Tags (activity, gender, features)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Pricing & Inventory:</strong>
+                                <ul>
+                                    <li>Price (USD for US, EUR for EU)</li>
+                                    <li>Compare at price (if applicable)</li>
+                                    <li>SKU (unique identifier)</li>
+                                    <li>Inventory quantity</li>
+                                    <li>Weight and dimensions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Media Requirements:</strong>
+                                <ul>
+                                    <li>Primary product image (1024x1024 minimum)</li>
+                                    <li>Additional product angles (3-5 images)</li>
+                                    <li>Lifestyle images showing product in use</li>
+                                    <li>Detail shots of key features</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section id="metafields">
+                        <h3>Metafields & Custom Data</h3>
+                        <p>Detailed metafield structure for storing custom product data and attributes.</p>
+                        
+                        <h4>Core Product Metafields</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>custom.display_title</td>
+                                <td>Single line text</td>
+                                <td>Custom product display title</td>
+                                <td>"Dillon Canvas Slip-On - Big Kids"</td>
+                            </tr>
+                            <tr>
+                                <td>custom.feed_description</td>
+                                <td>Multi-line text</td>
+                                <td>Product feed description</td>
+                                <td>SEO-optimized product description</td>
+                            </tr>
+                            <tr>
+                                <td>custom.product_highlights</td>
+                                <td>Rich text</td>
+                                <td>Product feature highlights</td>
+                                <td>Bulleted list of key benefits</td>
+                            </tr>
+                            <tr>
+                                <td>custom.color</td>
+                                <td>List of single line text</td>
+                                <td>Available colors</td>
+                                <td>["Black", "Navy", "Gray"]</td>
+                            </tr>
+                            <tr>
+                                <td>custom.activity</td>
+                                <td>List of single line text</td>
+                                <td>Activity types</td>
+                                <td>["Running", "Hiking", "Casual"]</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section id="product-workflows">
+                        <h3>Product Management Workflows</h3>
+                        <p>Standardized procedures for product creation, updates, and management across both instances.</p>
+                        
+                        <h4>New Product Creation</h4>
+                        <ol>
+                            <li>Access Products → Add product</li>
+                            <li>Enter basic product information (title, description, vendor)</li>
+                            <li>Set product type and add relevant tags</li>
+                            <li>Upload product images (minimum 3-5 images)</li>
+                            <li>Configure variants (sizes, colors, styles)</li>
+                            <li>Set pricing and inventory quantities</li>
+                            <li>Add custom metafields for detailed attributes</li>
+                            <li>Configure SEO settings</li>
+                            <li>Save and publish product</li>
+                            <li>Repeat process on both US and EU instances</li>
+                        </ol>
+                        
+                        <h4>Product Update Workflow</h4>
+                        <ol>
+                            <li>Identify product requiring updates</li>
+                            <li>Access product in Shopify Admin</li>
+                            <li>Update relevant information (pricing, inventory, descriptions)</li>
+                            <li>Update metafields if necessary</li>
+                            <li>Preview changes before publishing</li>
+                            <li>Save and publish updates</li>
+                            <li>Apply same changes to corresponding instance</li>
+                            <li>Verify changes on live site</li>
+                        </ol>
+                    </section>
+                </section>
+                
+                <section id="integrations">
+                    <h2>Integrations & Apps</h2>
+                    
+                    <section id="payment-processing">
+                        <h3>Payment Processing</h3>
+                        <p>Comprehensive payment processing setup across both XeroShoes instances.</p>
+                        
+                        <h4>Primary Payment Methods</h4>
+                        <ul>
+                            <li><strong>Shopify Payments:</strong> Primary payment processor for both instances</li>
+                            <li><strong>PayPal:</strong> Alternative payment option for customer convenience</li>
+                            <li><strong>Apple Pay:</strong> Mobile payment integration</li>
+                            <li><strong>Google Pay:</strong> Mobile payment integration</li>
+                            <li><strong>Shop Pay:</strong> Shopify's accelerated checkout</li>
+                        </ul>
+                        
+                        <h4>Regional Payment Configuration</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Instance</th>
+                                <th>Primary Currency</th>
+                                <th>Payment Methods</th>
+                                <th>Fraud Protection</th>
+                            </tr>
+                            <tr>
+                                <td>US (xeroshoes.com)</td>
+                                <td>USD</td>
+                                <td>Shopify Payments, PayPal, Apple Pay, Google Pay</td>
+                                <td>Shopify Fraud Analysis</td>
+                            </tr>
+                            <tr>
+                                <td>EU (xeroshoes.eu)</td>
+                                <td>EUR</td>
+                                <td>Shopify Payments, PayPal, Local Methods</td>
+                                <td>Shopify Fraud Analysis</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section id="shipping-logistics">
+                        <h3>Shipping & Logistics</h3>
+                        <p>Shipping configuration and carrier integrations for both regional instances.</p>
+                        
+                        <h4>US Shipping Configuration</h4>
+                        <ul>
+                            <li><strong>UPS:</strong> Ground, 2-Day, Next Day Air</li>
+                            <li><strong>FedEx:</strong> Ground, 2-Day, Overnight</li>
+                            <li><strong>USPS:</strong> Priority Mail, First Class</li>
+                            <li><strong>Free Shipping:</strong> Orders over $75 (US only)</li>
+                        </ul>
+                        
+                        <h4>EU Shipping Configuration</h4>
+                        <ul>
+                            <li><strong>DHL:</strong> Express, Standard delivery</li>
+                            <li><strong>Local Carriers:</strong> Regional delivery partners</li>
+                            <li><strong>Free Shipping:</strong> Orders over €75 (EU only)</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="marketing-email">
+                        <h3>Marketing & Email</h3>
+                        <p>Marketing platform integrations and email marketing configuration.</p>
+                        
+                        <h4>Email Marketing Platform</h4>
+                        <ul>
+                            <li><strong>Klaviyo:</strong> Primary email marketing platform</li>
+                            <li><strong>Automated Flows:</strong> Welcome series, abandoned cart, post-purchase</li>
+                            <li><strong>Segmentation:</strong> Customer behavior and purchase history</li>
+                            <li><strong>Campaigns:</strong> Promotional emails and newsletters</li>
+                        </ul>
+                        
+                        <h4>Social Media Integration</h4>
+                        <ul>
+                            <li><strong>Facebook Pixel:</strong> Conversion tracking and retargeting</li>
+                            <li><strong>Instagram Shopping:</strong> Product catalog integration</li>
+                            <li><strong>Social Sharing:</strong> Product and content sharing buttons</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="analytics-tracking">
+                        <h3>Analytics & Tracking</h3>
+                        <p>Comprehensive analytics and tracking setup for both instances.</p>
+                        
+                        <h4>Analytics Platforms</h4>
+                        <ul>
+                            <li><strong>Google Analytics 4:</strong> Primary analytics platform</li>
+                            <li><strong>Shopify Analytics:</strong> Built-in eCommerce analytics</li>
+                            <li><strong>Facebook Analytics:</strong> Social media performance tracking</li>
+                        </ul>
+                        
+                        <h4>Tracking Configuration</h4>
+                        <ul>
+                            <li><strong>Conversion Tracking:</strong> Purchase, add to cart, email signup</li>
+                            <li><strong>Customer Journey:</strong> Multi-touch attribution tracking</li>
+                            <li><strong>Performance Monitoring:</strong> Site speed and user experience</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="operations">
+                    <h2>Operations & Runbooks</h2>
+                    
+                    <section id="user-management">
+                        <h3>User & Access Management</h3>
+                        <p>User access provisioning and permission management across both instances.</p>
+                        
+                        <h4>User Roles & Permissions</h4>
+                        <ul>
+                            <li><strong>Store Owner:</strong> Full access to all features and settings</li>
+                            <li><strong>Admin:</strong> Full access except billing and user management</li>
+                            <li><strong>Content Manager:</strong> Products, pages, blog posts, collections</li>
+                            <li><strong>Order Manager:</strong> Orders, customers, fulfillment</li>
+                            <li><strong>Analytics Viewer:</strong> Reports and analytics only</li>
+                        </ul>
+                        
+                        <h4>Access Provisioning Process</h4>
+                        <ol>
+                            <li>Determine required access level based on role</li>
+                            <li>Create user account in Shopify Admin</li>
+                            <li>Assign appropriate permissions</li>
+                            <li>Send invitation email to user</li>
+                            <li>User completes account setup</li>
+                            <li>Verify access and permissions</li>
+                            <li>Repeat process for both instances if needed</li>
+                        </ol>
+                    </section>
+                    
+                    <section id="content-procedures">
+                        <h3>Content Management Procedures</h3>
+                        <p>Standardized procedures for content management across both instances.</p>
+                        
+                        <h4>Daily Content Tasks</h4>
+                        <ul>
+                            <li>Review and respond to customer inquiries</li>
+                            <li>Monitor site performance and uptime</li>
+                            <li>Check for content updates or corrections needed</li>
+                            <li>Review analytics for content performance</li>
+                        </ul>
+                        
+                        <h4>Weekly Content Tasks</h4>
+                        <ul>
+                            <li>Create and publish new blog posts</li>
+                            <li>Update product information and pricing</li>
+                            <li>Review and update collection pages</li>
+                            <li>Check for broken links or images</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="product-procedures">
+                        <h3>Product Management Procedures</h3>
+                        <p>Product management workflows and procedures for both instances.</p>
+                        
+                        <h4>Product Update Procedures</h4>
+                        <ol>
+                            <li>Identify products requiring updates</li>
+                            <li>Gather updated information and assets</li>
+                            <li>Update product in US instance first</li>
+                            <li>Test changes on staging environment</li>
+                            <li>Apply changes to EU instance</li>
+                            <li>Verify changes on both live sites</li>
+                            <li>Update any related marketing materials</li>
+                        </ol>
+                    </section>
+                    
+                    <section id="troubleshooting">
+                        <h3>Troubleshooting Guides</h3>
+                        <p>Common issues and resolution procedures for the XeroShoes platform.</p>
+                        
+                        <h4>Common Issues</h4>
+                        <ul>
+                            <li><strong>Images Not Loading:</strong> Check file size and format, clear cache</li>
+                            <li><strong>Payment Processing Errors:</strong> Verify payment gateway configuration</li>
+                            <li><strong>Inventory Sync Issues:</strong> Check metafield configurations</li>
+                            <li><strong>Email Delivery Problems:</strong> Verify Klaviyo integration settings</li>
+                        </ul>
+                        
+                        <h4>Emergency Procedures</h4>
+                        <ul>
+                            <li><strong>Site Down:</strong> Contact Shopify support immediately</li>
+                            <li><strong>Payment Issues:</strong> Switch to backup payment method</li>
+                            <li><strong>Data Loss:</strong> Restore from Matrixify backup</li>
+                            <li><strong>Security Breach:</strong> Follow incident response protocol</li>
+                        </ul>
+                    </section>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load header and footer -->
+    <script>
+        // Load header
+        fetch('templates/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize header menu functionality
+                const menuToggle = document.getElementById('menu-toggle');
+                const headerMenu = document.getElementById('header-menu');
+                
+                if (menuToggle && headerMenu) {
+                    menuToggle.addEventListener('click', function() {
+                        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                        
+                        menuToggle.setAttribute('aria-expanded', !isExpanded);
+                        menuToggle.classList.toggle('active');
+                        headerMenu.classList.toggle('show');
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('active');
+                            headerMenu.classList.remove('show');
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
+</body>
+</html>
