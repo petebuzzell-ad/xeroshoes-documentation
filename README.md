@@ -45,12 +45,6 @@ xeroshoes-documentation/
 │   │   └── [Additional CSV exports]
 │   └── apps-list.txt                      # List of 36 installed Shopify apps
 │
-└── process/                                # Development process (local only, not tracked)
-    ├── PROCESS.md                          # Arcadia documentation methodology
-    ├── QUICK_START.md                      # Setup and workflow guide
-    └── prompts/                            # AI prompts for discovery and documentation
-        ├── 01-discovery.md                 # Technical analysis prompts
-        └── 02-documentation.md             # Content creation prompts
 ```
 
 ## Key Documentation Files
@@ -179,7 +173,7 @@ xeroshoes-documentation/
 
 ### Git Workflow
 - **Main Branch:** Production documentation
-- **Local Development:** Use `process/` directory for development (not tracked)
+- **Local Development:** Use local development tools and processes
 - **GitHub Pages:** Automatic deployment from main branch
 - **File Organization:** Keep documentation files in root directory for GitHub Pages
 
