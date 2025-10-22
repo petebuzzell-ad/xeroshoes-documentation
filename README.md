@@ -1,4 +1,4 @@
-# XeroShoes Documentation Hub - AI Handoff Guide
+# XeroShoes Documentation Hub - Project Knowledge Base
 
 ## Repository Overview
 
@@ -7,6 +7,20 @@ This repository contains comprehensive technical documentation for the XeroShoes
 **Repository Purpose:** Technical documentation hub for XeroShoes.com and XeroShoes.eu Shopify Plus instances
 **Target Audience:** Developers, technical teams, business stakeholders, and future AI assistants
 **Documentation Philosophy:** Business-first approach with technical depth, designed for client ownership
+**Document Type:** Complete project knowledge base and static memory file for seamless handoff
+
+## Project Knowledge Base
+
+This README serves as the **static memory file** for the XeroShoes documentation project. It contains all essential information needed for any AI assistant, developer, or team member to understand, maintain, and extend this documentation system without requiring additional context or handoff meetings.
+
+**Key Knowledge Areas:**
+- Complete repository structure and file organization
+- Technical architecture and implementation details
+- Documentation philosophy and content strategy
+- Data sources and evidence-based approach
+- Security considerations and sensitive data handling
+- EU documentation requirements and update process
+- Future enhancement roadmap and integration opportunities
 
 ## Repository Structure & File Organization
 
@@ -156,6 +170,36 @@ xeroshoes-documentation/
 - **Financial Data:** No revenue or pricing information
 - **Internal Business Logic:** No proprietary business strategies
 
+## EU Documentation Requirements (Post-Launch)
+
+### Data Collection Requirements
+When the EU site launches (expected in 2 weeks), the following data exports are needed for complete EU documentation:
+
+- **Complete EU Theme Export** - Full Shopify theme export after launch
+- **EU Data Exports** - Products, collections, pages, blog posts, redirects, metaobjects
+- **EU Apps Configuration** - Complete app integration analysis (currently missing 6 apps)
+- **EU Custom Events** - GTM and Shopify custom events data
+- **EU Performance Data** - Analytics and conversion tracking setup
+
+### EU Documentation Update Process
+1. **Replace EU Analysis Sections** - Update all "pre-launch" warnings in platform documentation
+2. **Complete Integration Documentation** - Add missing 6 app integrations to integrations documentation
+3. **Update Platform Documentation** - Add EU-specific configurations and regional compliance details
+4. **Create EU-Specific Sections** - Regional compliance, shipping, payment methods, GDPR implementations
+5. **Update Comparison Analysis** - Complete US vs EU feature comparison with post-launch data
+
+### Files Requiring EU Updates
+- **`xeroshoes-platform-documentation.html`** - Lines 123-131 (EU analysis section), add complete EU integration analysis
+- **`xeroshoes-integrations-documentation.html`** - Complete EU app integration analysis, add missing 6 apps
+- **`codebase-comparison-analysis.md`** - Update with post-launch EU data and complete feature comparison
+- **`theme-architecture.html`** - Add EU-specific customizations if any differences found
+
+### EU Data Collection Guidelines
+- **Sanitize Before Documentation** - Remove API keys, customer PII, revenue data, internal business logic
+- **Focus on Technical Architecture** - Event structure, data layer, integration patterns, custom implementations
+- **Regional Compliance** - GDPR-specific implementations, cookie consent, data privacy configurations
+- **Performance Metrics** - Site speed, conversion tracking, analytics setup, regional performance differences
+
 ## Future Enhancements
 
 ### Planned Updates
@@ -182,13 +226,6 @@ xeroshoes-documentation/
 - **Version Control:** Track all changes with descriptive commit messages
 - **Backup:** Repository serves as backup of all documentation and code
 - **Client Handoff:** Designed for eventual client ownership and maintenance
-
-## Contact & Support
-
-**Repository Owner:** Pete Buzzell (Arcadia Digital)
-**Repository URL:** https://github.com/petebuzzell-ad/xeroshoes-documentation
-**Documentation Philosophy:** Arcadia Digital's proven documentation framework
-**Last Updated:** October 2025
 
 ---
 
