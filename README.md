@@ -52,11 +52,17 @@ xeroshoes-documentation/
 │   └── theme_export__shopxeroshoes-eu-myshopify-com-xero-shoes-eu-main__21OCT2025-0627pm/
 │       └── [Complete EU theme export - 435 files]
 │
-├── data/                                   # Data exports and configuration
+├── data/                                   # Essential data exports for documentation
 │   ├── AD-EVERYTHING-Export_2025-10-20_085832/
-│   │   ├── Export Summary.csv             # Data export summary
-│   │   ├── Products.csv                   # Product data with metafields
-│   │   └── [Additional CSV exports]
+│   │   ├── Export Summary.csv             # Data export summary and statistics
+│   │   ├── Products.csv                   # 388 products with complete metafield data
+│   │   ├── Smart Collections.csv          # 209 smart collections with rules
+│   │   ├── Custom Collections.csv         # 14 custom collections
+│   │   ├── Pages.csv                      # 97 content pages
+│   │   ├── Blog Posts.csv                 # 445 blog posts and articles
+│   │   ├── Redirects.csv                  # 3,455 SEO redirects
+│   │   ├── Metaobjects.csv                # 500+ structured content objects
+│   │   └── Menus.csv                      # 11 navigation menus
 │   └── apps-list.txt                      # List of 36 installed Shopify apps
 │
 ```
@@ -148,12 +154,24 @@ xeroshoes-documentation/
 ### Primary Sources
 - **US Theme Export:** Complete Shopify theme export from October 20, 2025
 - **EU Theme Export:** Complete Shopify theme export from October 21, 2025 (pre-launch)
-- **Data Exports:** Product data, collections, pages, blog posts, redirects, metaobjects
+- **Data Exports:** Complete Shopify data export from October 20, 2025 (AD-EVERYTHING-Export)
 - **Apps List:** 36 installed Shopify apps with theme integration evidence
+
+### Data Directory Usage
+The `/data` directory contains **essential exports** used to build this documentation:
+
+- **Products.csv (388 products)** - Used to document product metafields, variant structure, and data standards
+- **Smart Collections.csv (209 collections)** - Used to understand collection rules and organization
+- **Pages.csv (97 pages)** - Used to document content structure and page templates
+- **Blog Posts.csv (445 posts)** - Used to understand content management workflows
+- **Redirects.csv (3,455 redirects)** - Used to document SEO preservation and site migrations
+- **Metaobjects.csv (500+ objects)** - Used to document structured content and custom data
+- **Export Summary.csv** - Used to understand data scope and export statistics
 
 ### Evidence-Based Documentation
 - **App Integrations:** Only documented apps with actual theme integration evidence
 - **Custom Implementations:** Based on actual code analysis, not assumptions
+- **Data-Driven Content:** All content counts, structures, and examples based on actual data exports
 - **EU Documentation:** Clearly marked as pre-launch analysis, to be updated post-launch
 
 ## Security & Sensitive Data
@@ -176,7 +194,15 @@ xeroshoes-documentation/
 When the EU site launches (expected in 2 weeks), the following data exports are needed for complete EU documentation:
 
 - **Complete EU Theme Export** - Full Shopify theme export after launch
-- **EU Data Exports** - Products, collections, pages, blog posts, redirects, metaobjects
+- **EU Data Exports** - Complete AD-EVERYTHING-Export equivalent with:
+  - Products.csv (with metafields and variant data)
+  - Smart Collections.csv (with collection rules)
+  - Custom Collections.csv
+  - Pages.csv (content pages)
+  - Blog Posts.csv (blog content)
+  - Redirects.csv (SEO redirects)
+  - Metaobjects.csv (structured content)
+  - Menus.csv (navigation structure)
 - **EU Apps Configuration** - Complete app integration analysis (currently missing 6 apps)
 - **EU Custom Events** - GTM and Shopify custom events data
 - **EU Performance Data** - Analytics and conversion tracking setup
