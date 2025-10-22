@@ -274,347 +274,36 @@
                 
                 <section id="content-management">
                     <h2>Content Management</h2>
+                    <p>Content management documentation has been moved to a dedicated page for better organization and usability.</p>
                     
-                    <section id="page-templates">
-                        <h3>Page Templates & Structure</h3>
-                        <p>The XeroShoes theme uses a modular section-based approach for content management, allowing flexible page layouts through customizable content blocks.</p>
-                        
-                        <h4>Core Page Templates</h4>
-                        <p><strong>1. Homepage Template - "Main Landing Page" (<code>index.json</code>)</strong></p>
-                        <ul>
-                            <li><strong>Primary Sections:</strong>
-                                <ul>
-                                    <li><code>global-header-slider</code>: Hero section with product integration</li>
-                                    <li><code>global-featured-collection</code>: Featured product collections</li>
-                                    <li><code>global-features-grid</code>: Feature highlights and benefits</li>
-                                    <li><code>global-blog-posts</code>: Latest blog content integration</li>
-                                    <li><code>global-newsletter-banner</code>: Newsletter signup promotion</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <p><strong>2. Product Template - "Product Detail Page" (<code>template-product.liquid</code>)</strong></p>
-                        <ul>
-                            <li><strong>Structure:</strong>
-                                <ul>
-                                    <li><code>product-comfort</code>: Comfort information and benefits</li>
-                                    <li><code>product-variant-attributes</code>: Size and color selection</li>
-                                    <li><code>product-collapsible</code>: Detailed product information</li>
-                                    <li><code>global-product-tabs</code>: Tabbed product details</li>
-                                    <li><code>upsell-products</code>: Related product recommendations</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <p><strong>3. Collection Template - "Product Collection Page" (<code>template-collection.liquid</code>)</p>
-                        <ul>
-                            <li><strong>Structure:</strong>
-                                <ul>
-                                    <li><code>collection-banner</code>: Collection header with imagery</li>
-                                    <li><code>collection-list-style-1</code>: Product grid display</li>
-                                    <li><code>global-featured-products</code>: Featured products within collection</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
+                    <div class="alert info">
+                        <strong>Content Management Documentation:</strong> For complete content management procedures, page templates, content sections inventory, metafield integration, and workflows, see <a href="content-management.html">Content Management Documentation</a>.
+                    </div>
                     
-                    <section id="content-sections">
-                        <h3>Content Sections Inventory</h3>
-                        <p>Complete inventory of all custom sections available for content management across the XeroShoes platform.</p>
-                        
-                        <h4>Navigation & Header Sections</h4>
-                        <ul>
-                            <li><code>header.liquid</code> - Main site navigation and header</li>
-                            <li><code>announcement-bar.liquid</code> - Top promotional banner</li>
-                            <li><code>featured-mobile-header.liquid</code> - Mobile-specific header features</li>
-                        </ul>
-                        
-                        <h4>Product Display Sections</h4>
-                        <ul>
-                            <li><code>product-with-image.liquid</code> - Product display with imagery</li>
-                            <li><code>product-two-image-text.liquid</code> - Two-column product layout</li>
-                            <li><code>product-media-banner.liquid</code> - Product media showcase</li>
-                            <li><code>bundle-thickness-selector.liquid</code> - Product bundle selection</li>
-                        </ul>
-                        
-                        <h4>Content & Media Sections</h4>
-                        <ul>
-                            <li><code>media-with-text.liquid</code> - Media content with text overlay</li>
-                            <li><code>image-video-card.liquid</code> - Card-based media display</li>
-                            <li><code>barefoot-image-with-text.liquid</code> - Brand-specific content blocks</li>
-                            <li><code>seo-banner.liquid</code> - SEO-optimized banner content</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="metafield-integration">
-                        <h3>Metafield Integration</h3>
-                        <p>XeroShoes uses an extensive metafield system to store structured product data, content information, and custom attributes.</p>
-                        
-                        <h4>Product Metafields</h4>
-                        <ul>
-                            <li><strong>Display Data:</strong>
-                                <ul>
-                                    <li><code>custom.display_title</code> - Custom product display title</li>
-                                    <li><code>custom.feed_description</code> - Product feed description</li>
-                                    <li><code>custom.product_highlights</code> - Rich text product highlights</li>
-                                    <li><code>custom.product_description</code> - Metaobject reference for detailed descriptions</li>
-                                </ul>
-                            </li>
-                            <li><strong>Product Attributes:</strong>
-                                <ul>
-                                    <li><code>custom.color</code> - Product color information</li>
-                                    <li><code>custom.activity</code> - Activity type (running, hiking, casual)</li>
-                                    <li><code>custom.gender</code> - Gender targeting</li>
-                                    <li><code>custom.collection</code> - Collection associations</li>
-                                </ul>
-                            </li>
-                            <li><strong>Media & Visuals:</strong>
-                                <ul>
-                                    <li><code>custom.mega_menu_image</code> - Mega menu display image</li>
-                                    <li><code>custom.secondary_hover_image</code> - Product hover state image</li>
-                                    <li><code>custom.description_featured_image</code> - Description section featured image</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    
-                    <section id="content-workflows">
-                        <h3>Content Management Workflows</h3>
-                        <p>Standardized procedures for managing content across both XeroShoes instances.</p>
-                        
-                        <h4>Page Creation Workflow</h4>
-                        <ol>
-                            <li>Access Shopify Admin → Online Store → Pages</li>
-                            <li>Click "Add page" to create new page</li>
-                            <li>Enter page title and URL handle</li>
-                            <li>Select appropriate template from available options</li>
-                            <li>Add content using rich text editor</li>
-                            <li>Configure SEO settings (title, description, keywords)</li>
-                            <li>Set visibility and publication date</li>
-                            <li>Save and publish page</li>
-                            <li>Repeat process on both US and EU instances</li>
-                        </ol>
-                        
-                        <h4>Blog Post Management</h4>
-                        <ol>
-                            <li>Access Online Store → Blog posts</li>
-                            <li>Create new blog post with title and content</li>
-                            <li>Add featured image and excerpt</li>
-                            <li>Set publication date and author</li>
-                            <li>Add relevant tags for categorization</li>
-                            <li>Configure SEO metadata</li>
-                            <li>Publish and verify on live site</li>
-                        </ol>
-                    </section>
+                    <h3>Quick Reference</h3>
+                    <ul>
+                        <li><strong>Page Templates:</strong> Homepage, Product, Collection templates with section-based layouts</li>
+                        <li><strong>Content Sections:</strong> 78+ custom sections for navigation, product display, and media</li>
+                        <li><strong>Metafield Integration:</strong> Extensive metafield system for structured content data</li>
+                        <li><strong>Workflows:</strong> Standardized procedures for page creation, blog management, and content updates</li>
+                    </ul>
                 </section>
                 
                 <section id="product-management">
                     <h2>Product Management</h2>
+                    <p>Product management documentation has been moved to a dedicated page for better organization and usability.</p>
                     
-                    <section id="product-inventory">
-                        <h3>Product Inventory</h3>
-                        <p>Product inventory management across both XeroShoes instances with synchronized catalog structure.</p>
-                        
-                        <table class="data-table">
-                            <tr>
-                                <th>Instance</th>
-                                <th>Status</th>
-                                <th>Product Types</th>
-                                <th>Collection Structure</th>
-                            </tr>
-                            <tr>
-                                <td>US (xeroshoes.com)</td>
-                                <td>Active - Primary</td>
-                                <td>Barefoot shoes, sandals, boots, accessories</td>
-                                <td>Smart collections and custom collections</td>
-                            </tr>
-                            <tr>
-                                <td>EU (xeroshoes.eu)</td>
-                                <td>Active</td>
-                                <td>Not documented</td>
-                                <td>Not documented</td>
-                            </tr>
-                        </table>
-                        
-                        <div class="alert warning">
-                            <strong>Data Limitation:</strong> EU instance product and collection data not available in current export. Documentation based on US instance only.
-                        </div>
-                        
-                        <h4>Product Categories</h4>
-                        <ul>
-                            <li><strong>Barefoot Shoes:</strong> Core product line with various styles</li>
-                            <li><strong>Sandals:</strong> Summer and casual footwear options</li>
-                            <li><strong>Boots:</strong> Winter and outdoor footwear</li>
-                            <li><strong>Accessories:</strong> Insoles, laces, and care products</li>
-                        </ul>
-                    </section>
+                    <div class="alert info">
+                        <strong>Product Management Documentation:</strong> For complete product management procedures, data standards, metafields, and variant visibility management, see <a href="product-management.html">Product Management Documentation</a>.
+                    </div>
                     
-                    <section id="product-data-standards">
-                        <h3>Product Data Standards</h3>
-                        <p>Comprehensive data standards for product information management across both instances.</p>
-                        
-                        <h4>Required Product Information</h4>
-                        <ul>
-                            <li><strong>Basic Information:</strong>
-                                <ul>
-                                    <li>Product title (clear, descriptive naming)</li>
-                                    <li>Product description (detailed, benefit-focused)</li>
-                                    <li>Vendor (XeroShoes)</li>
-                                    <li>Product type (Barefoot Shoes, Sandals, Boots, Accessories)</li>
-                                    <li>Tags (activity, gender, features)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Pricing & Inventory:</strong>
-                                <ul>
-                                    <li>Price (USD for US, EUR for EU)</li>
-                                    <li>Compare at price (if applicable)</li>
-                                    <li>SKU (unique identifier)</li>
-                                    <li>Inventory quantity</li>
-                                    <li>Weight and dimensions</li>
-                                </ul>
-                            </li>
-                            <li><strong>Media Requirements:</strong>
-                                <ul>
-                                    <li>Primary product image (1024x1024 minimum)</li>
-                                    <li>Additional product angles (3-5 images)</li>
-                                    <li>Lifestyle images showing product in use</li>
-                                    <li>Detail shots of key features</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    
-                    <section id="metafields">
-                        <h3>Metafields & Custom Data</h3>
-                        <p>Detailed metafield structure for storing custom product data and attributes.</p>
-                        
-                        <h4>Core Product Metafields</h4>
-                        <table class="data-table">
-                            <tr>
-                                <th>Metafield</th>
-                                <th>Type</th>
-                                <th>Purpose</th>
-                                <th>Example</th>
-                            </tr>
-                            <tr>
-                                <td>custom.display_title</td>
-                                <td>Single line text</td>
-                                <td>Custom product display title</td>
-                                <td>"Dillon Canvas Slip-On - Big Kids"</td>
-                            </tr>
-                            <tr>
-                                <td>custom.feed_description</td>
-                                <td>Multi-line text</td>
-                                <td>Product feed description</td>
-                                <td>SEO-optimized product description</td>
-                            </tr>
-                            <tr>
-                                <td>custom.product_highlights</td>
-                                <td>Rich text</td>
-                                <td>Product feature highlights</td>
-                                <td>Bulleted list of key benefits</td>
-                            </tr>
-                            <tr>
-                                <td>custom.color</td>
-                                <td>List of single line text</td>
-                                <td>Available colors</td>
-                                <td>["Black", "Navy", "Gray"]</td>
-                            </tr>
-                            <tr>
-                                <td>custom.activity</td>
-                                <td>List of single line text</td>
-                                <td>Activity types</td>
-                                <td>["Running", "Hiking", "Casual"]</td>
-                            </tr>
-                            <tr>
-                                <td>custom.draft_variant</td>
-                                <td>Boolean</td>
-                                <td>Variant visibility control</td>
-                                <td>TRUE = hidden, FALSE/blank = visible</td>
-                            </tr>
-                        </table>
-                        
-                        <h4>Critical Metafield: custom.draft_variant</h4>
-                        <p>The <code>custom.draft_variant</code> metafield is a custom implementation that extends Shopify's native variant management capabilities. This metafield provides granular control over variant visibility on product detail pages.</p>
-                        
-                        <div class="alert warning">
-                            <strong>Important:</strong> This is a custom metafield that directly impacts customer experience and product management workflows. Understanding its behavior is critical for effective product management.
-                        </div>
-                        
-                        <h5>Variant Visibility Control</h5>
-                        <ul>
-                            <li><strong>TRUE:</strong> Variant is excluded from the product detail page</li>
-                            <li><strong>FALSE or blank:</strong> Variant is included and visible on the product detail page</li>
-                        </ul>
-                        
-                        <h5>Use Cases</h5>
-                        <ul>
-                            <li><strong>Seasonal Products:</strong> Hide out-of-season variants without deleting them</li>
-                            <li><strong>Inventory Management:</strong> Hide variants that are temporarily out of stock</li>
-                            <li><strong>Product Testing:</strong> Test new variants without full public visibility</li>
-                            <li><strong>Regional Availability:</strong> Hide variants not available in specific regions</li>
-                            <li><strong>Product Lifecycle:</strong> Manage product discontinuation process</li>
-                        </ul>
-                        
-                        <h5>Implementation Notes</h5>
-                        <ul>
-                            <li>Metafield applies to individual variants, not entire products</li>
-                            <li>Changes take effect immediately upon saving</li>
-                            <li>Hidden variants are not accessible via direct URL</li>
-                            <li>Variant data remains intact when hidden (pricing, inventory, etc.)</li>
-                            <li>Admin users can still see and manage hidden variants in Shopify Admin</li>
-                        </ul>
-                        
-                        <h4>Technical Implementation</h4>
-                        <p>The <code>custom.draft_variant</code> metafield is implemented through a sophisticated Liquid + JavaScript system that dynamically controls variant visibility on product pages.</p>
-                        
-                        <div class="alert info">
-                            <strong>Technical Details:</strong> For complete code examples, file locations, and implementation details, see <a href="theme-architecture.html#custom-draft-variant-implementation">Theme Architecture → Custom Draft Variant Implementation</a>.
-                        </div>
-                        
-                        <h5>Implementation Overview</h5>
-                        <ul>
-                            <li><strong>Liquid Processing:</strong> Templates process variant data and generate JavaScript configuration</li>
-                            <li><strong>JavaScript Engine:</strong> Client-side processing handles dynamic visibility control</li>
-                            <li><strong>Multi-Option Logic:</strong> Complex cascading logic for multiple variant options</li>
-                            <li><strong>Performance Optimized:</strong> Efficient filtering and state management</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="variant-visibility-management">
-                        <h3>Variant Visibility Management</h3>
-                        <p>Managing variant visibility using the <code>custom.draft_variant</code> metafield - a custom implementation specific to XeroShoes that extends beyond standard Shopify functionality.</p>
-                        
-                        <h4>Variant Visibility Control</h4>
-                        <ol>
-                            <li>Access product in Shopify Admin</li>
-                            <li>Navigate to the Variants section</li>
-                            <li>Select the variant to modify</li>
-                            <li>Scroll to the Metafields section</li>
-                            <li>Locate the <code>custom.draft_variant</code> metafield</li>
-                            <li>Set value:
-                                <ul>
-                                    <li><strong>TRUE:</strong> To hide variant from product page</li>
-                                    <li><strong>FALSE or leave blank:</strong> To show variant on product page</li>
-                                </ul>
-                            </li>
-                            <li>Save the product</li>
-                            <li>Verify visibility changes on the live product page</li>
-                            <li>Apply same changes to corresponding instance if needed</li>
-                        </ol>
-                        
-                        <div class="alert info">
-                            <strong>Pro Tip:</strong> Use variant visibility management for seasonal inventory control, testing new variants, or managing regional availability without deleting variant data.
-                        </div>
-                        
-                        <h4>Advanced Use Cases</h4>
-                        <ul>
-                            <li><strong>Seasonal Product Management:</strong> Hide winter boots during summer without losing variant data</li>
-                            <li><strong>A/B Testing:</strong> Test new color variants with limited visibility before full launch</li>
-                            <li><strong>Regional Rollouts:</strong> Gradually introduce products to different markets</li>
-                            <li><strong>Inventory Transitions:</strong> Manage product discontinuation while maintaining data integrity</li>
-                        </ul>
-                    </section>
+                    <h3>Quick Reference</h3>
+                    <ul>
+                        <li><strong>Product Inventory:</strong> 388 products across barefoot shoes, sandals, boots, and accessories</li>
+                        <li><strong>Data Standards:</strong> Comprehensive standards for product information and media requirements</li>
+                        <li><strong>Custom Metafields:</strong> Extensive metafield system including critical <code>custom.draft_variant</code></li>
+                        <li><strong>Variant Management:</strong> Custom variant visibility control system for seasonal and inventory management</li>
+                    </ul>
                 </section>
                 
                 <section id="integrations">

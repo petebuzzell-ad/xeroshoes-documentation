@@ -191,7 +191,7 @@ The `/data` directory contains **essential exports** used to build this document
 ## EU Documentation Requirements (Post-Launch)
 
 ### Data Collection Requirements
-When the EU site launches (expected in 2 weeks), the following data exports are needed for complete EU documentation:
+When the EU site launches (expected 04NOV2025), the following data exports are needed for complete EU documentation:
 
 - **Complete EU Theme Export** - Full Shopify theme export after launch
 - **EU Data Exports** - Complete AD-EVERYTHING-Export equivalent with:
@@ -255,4 +255,4 @@ When the EU site launches (expected in 2 weeks), the following data exports are 
 
 ---
 
-*This README serves as a comprehensive handoff document for AI assistants, developers, and business users working with the XeroShoes documentation repository.*
+*This README serves as a handoff document for AI assistants, developers, and business users working with the XeroShoes documentation repository.*

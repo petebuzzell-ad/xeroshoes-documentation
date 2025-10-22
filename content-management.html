@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>Content Management - XeroShoes Documentation</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <h1>Content Management</h1>
+        
+        <div class="two-column-layout">
+            <!-- Table of Contents -->
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#page-templates">Page Templates & Structure</a>
+                        <ul>
+                            <li><a href="#core-templates">Core Page Templates</a></li>
+                            <li><a href="#template-sections">Template Sections</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#content-sections">Content Sections Inventory</a>
+                        <ul>
+                            <li><a href="#navigation-sections">Navigation & Header</a></li>
+                            <li><a href="#product-display-sections">Product Display</a></li>
+                            <li><a href="#content-media-sections">Content & Media</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#metafield-integration">Metafield Integration</a>
+                        <ul>
+                            <li><a href="#product-metafields">Product Metafields</a></li>
+                            <li><a href="#content-metafields">Content Metafields</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#content-workflows">Content Management Workflows</a>
+                        <ul>
+                            <li><a href="#page-creation">Page Creation</a></li>
+                            <li><a href="#blog-management">Blog Management</a></li>
+                            <li><a href="#content-updates">Content Updates</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main>
+                <section id="page-templates">
+                    <h2>Page Templates & Structure</h2>
+                    <p>The XeroShoes theme uses a modular section-based approach for content management, allowing flexible page layouts through customizable content blocks.</p>
+                    
+                    <section id="core-templates">
+                        <h3>Core Page Templates</h3>
+                        
+                        <h4>1. Homepage Template - "Main Landing Page" (<code>index.json</code>)</h4>
+                        <ul>
+                            <li><strong>Primary Sections:</strong>
+                                <ul>
+                                    <li><code>global-header-slider</code>: Hero section with product integration</li>
+                                    <li><code>global-featured-collection</code>: Featured product collections</li>
+                                    <li><code>global-features-grid</code>: Feature highlights and benefits</li>
+                                    <li><code>global-blog-posts</code>: Latest blog content integration</li>
+                                    <li><code>global-newsletter-banner</code>: Newsletter signup promotion</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <h4>2. Product Template - "Product Detail Page" (<code>template-product.liquid</code>)</h4>
+                        <ul>
+                            <li><strong>Structure:</strong>
+                                <ul>
+                                    <li><code>product-comfort</code>: Comfort information and benefits</li>
+                                    <li><code>product-variant-attributes</code>: Size and color selection</li>
+                                    <li><code>product-collapsible</code>: Detailed product information</li>
+                                    <li><code>global-product-tabs</code>: Tabbed product details</li>
+                                    <li><code>upsell-products</code>: Related product recommendations</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <h4>3. Collection Template - "Product Collection Page" (<code>template-collection.liquid</code>)</h4>
+                        <ul>
+                            <li><strong>Structure:</strong>
+                                <ul>
+                                    <li><code>collection-banner</code>: Collection header with imagery</li>
+                                    <li><code>collection-list-style-1</code>: Product grid display</li>
+                                    <li><code>global-featured-products</code>: Featured products within collection</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section id="template-sections">
+                        <h3>Template Section Categories</h3>
+                        
+                        <h4>Core Content Sections</h4>
+                        <ul>
+                            <li><code>announcement-bar.liquid</code> - Promotional messaging banner</li>
+                            <li><code>global-header-slider.liquid</code> - Hero slider with product integration</li>
+                            <li><code>global-media-banner.liquid</code> - Media banner with video/image support</li>
+                            <li><code>global-page-header-banner.liquid</code> - Page header with background images</li>
+                        </ul>
+                        
+                        <h4>Product-Specific Sections</h4>
+                        <ul>
+                            <li><code>xero-custom-landing.liquid</code> - Custom barefoot shoe landing page</li>
+                            <li><code>product-comfort.liquid</code> - Product comfort information display</li>
+                            <li><code>product-comfort-dynamic.liquid</code> - Dynamic comfort data integration</li>
+                            <li><code>product-variant-attributes.liquid</code> - Product variant attribute display</li>
+                            <li><code>product-collapsible.liquid</code> - Collapsible product information sections</li>
+                        </ul>
+                        
+                        <h4>Collection & Search Sections</h4>
+                        <ul>
+                            <li><code>collection-all-list.liquid</code> - Complete collection listing</li>
+                            <li><code>collection-list-style-1.liquid</code> - Styled collection grid display</li>
+                            <li><code>search-layer.liquid</code> - Advanced search interface</li>
+                            <li><code>predictive-search.liquid</code> - Predictive search functionality</li>
+                        </ul>
+                        
+                        <h4>Blog & Content Sections</h4>
+                        <ul>
+                            <li><code>blog-listing.liquid</code> - Blog post listing page</li>
+                            <li><code>blog-banner-slider.liquid</code> - Blog banner with slider functionality</li>
+                            <li><code>press-blog-post.liquid</code> - Press and media blog posts</li>
+                            <li><code>global-blog-posts.liquid</code> - Global blog post integration</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="content-sections">
+                    <h2>Content Sections Inventory</h2>
+                    <p>Complete inventory of all custom sections available for content management across the XeroShoes platform.</p>
+                    
+                    <section id="navigation-sections">
+                        <h3>Navigation & Header Sections</h3>
+                        <ul>
+                            <li><code>header.liquid</code> - Main site navigation and header</li>
+                            <li><code>announcement-bar.liquid</code> - Top promotional banner</li>
+                            <li><code>featured-mobile-header.liquid</code> - Mobile-specific header features</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="product-display-sections">
+                        <h3>Product Display Sections</h3>
+                        <ul>
+                            <li><code>product-with-image.liquid</code> - Product display with imagery</li>
+                            <li><code>product-two-image-text.liquid</code> - Two-column product layout</li>
+                            <li><code>product-media-banner.liquid</code> - Product media showcase</li>
+                            <li><code>bundle-thickness-selector.liquid</code> - Product bundle selection</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="content-media-sections">
+                        <h3>Content & Media Sections</h3>
+                        <ul>
+                            <li><code>media-with-text.liquid</code> - Media content with text overlay</li>
+                            <li><code>image-video-card.liquid</code> - Card-based media display</li>
+                            <li><code>barefoot-image-with-text.liquid</code> - Brand-specific content blocks</li>
+                            <li><code>seo-banner.liquid</code> - SEO-optimized banner content</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="metafield-integration">
+                    <h2>Metafield Integration</h2>
+                    <p>XeroShoes uses an extensive metafield system to store structured product data, content information, and custom attributes.</p>
+                    
+                    <section id="product-metafields">
+                        <h3>Product Metafields</h3>
+                        <ul>
+                            <li><strong>Display Data:</strong>
+                                <ul>
+                                    <li><code>custom.display_title</code> - Custom product display title</li>
+                                    <li><code>custom.feed_description</code> - Product feed description</li>
+                                    <li><code>custom.product_highlights</code> - Rich text product highlights</li>
+                                    <li><code>custom.product_description</code> - Metaobject reference for detailed descriptions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Product Attributes:</strong>
+                                <ul>
+                                    <li><code>custom.color</code> - Product color information</li>
+                                    <li><code>custom.activity</code> - Activity type (running, hiking, casual)</li>
+                                    <li><code>custom.gender</code> - Gender targeting</li>
+                                    <li><code>custom.collection</code> - Collection associations</li>
+                                </ul>
+                            </li>
+                            <li><strong>Media & Visuals:</strong>
+                                <ul>
+                                    <li><code>custom.mega_menu_image</code> - Mega menu display image</li>
+                                    <li><code>custom.secondary_hover_image</code> - Product hover state image</li>
+                                    <li><code>custom.description_featured_image</code> - Description section featured image</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section id="content-metafields">
+                        <h3>Content Metafields</h3>
+                        <ul>
+                            <li><strong>Page Data:</strong>
+                                <ul>
+                                    <li><code>custom.page_subtitle</code> - Page subtitle for headers</li>
+                                    <li><code>custom.featured_image</code> - Page featured image</li>
+                                    <li><code>custom.content_sections</code> - Custom content blocks</li>
+                                </ul>
+                            </li>
+                            <li><strong>Blog Data:</strong>
+                                <ul>
+                                    <li><code>custom.blog_category</code> - Blog post categorization</li>
+                                    <li><code>custom.reading_time</code> - Estimated reading time</li>
+                                    <li><code>custom.author_bio</code> - Author information</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="content-workflows">
+                    <h2>Content Management Workflows</h2>
+                    <p>Standardized procedures for managing content across both XeroShoes instances.</p>
+                    
+                    <section id="page-creation">
+                        <h3>Page Creation Workflow</h3>
+                        <ol>
+                            <li>Access Shopify Admin → Online Store → Pages</li>
+                            <li>Click "Add page" to create new page</li>
+                            <li>Enter page title and URL handle</li>
+                            <li>Select appropriate template from available options</li>
+                            <li>Add content using rich text editor</li>
+                            <li>Configure SEO settings (title, description, keywords)</li>
+                            <li>Set visibility and publication date</li>
+                            <li>Save and publish page</li>
+                            <li>Repeat process on both US and EU instances</li>
+                        </ol>
+                    </section>
+                    
+                    <section id="blog-management">
+                        <h3>Blog Post Management</h3>
+                        <ol>
+                            <li>Access Online Store → Blog posts</li>
+                            <li>Create new blog post with title and content</li>
+                            <li>Add featured image and excerpt</li>
+                            <li>Set publication date and author</li>
+                            <li>Add relevant tags for categorization</li>
+                            <li>Configure SEO metadata</li>
+                            <li>Publish and verify on live site</li>
+                        </ol>
+                    </section>
+                    
+                    <section id="content-updates">
+                        <h3>Content Update Procedures</h3>
+                        <h4>Regular Content Updates</h4>
+                        <ol>
+                            <li>Review existing content for accuracy</li>
+                            <li>Update outdated information</li>
+                            <li>Refresh images and media as needed</li>
+                            <li>Update SEO metadata if content changes significantly</li>
+                            <li>Test content on both desktop and mobile</li>
+                            <li>Apply changes to both US and EU instances</li>
+                        </ol>
+                        
+                        <h4>Seasonal Content Updates</h4>
+                        <ol>
+                            <li>Identify seasonal content requiring updates</li>
+                            <li>Update product descriptions and features</li>
+                            <li>Refresh promotional banners and announcements</li>
+                            <li>Update collection pages and featured products</li>
+                            <li>Review and update blog content for seasonal relevance</li>
+                        </ol>
+                    </section>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load header and footer -->
+    <script>
+        // Load header
+        fetch('templates/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize header menu functionality
+                const menuToggle = document.getElementById('menu-toggle');
+                const headerMenu = document.getElementById('header-menu');
+                
+                if (menuToggle && headerMenu) {
+                    menuToggle.addEventListener('click', function() {
+                        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                        
+                        menuToggle.setAttribute('aria-expanded', !isExpanded);
+                        menuToggle.classList.toggle('active');
+                        headerMenu.classList.toggle('show');
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('active');
+                            headerMenu.classList.remove('show');
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
+</body>
+</html>

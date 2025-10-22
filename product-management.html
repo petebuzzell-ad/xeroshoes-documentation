@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>Product Management - XeroShoes Documentation</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <h1>Product Management</h1>
+        
+        <div class="two-column-layout">
+            <!-- Table of Contents -->
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#product-inventory">Product Inventory</a>
+                        <ul>
+                            <li><a href="#product-categories">Product Categories</a></li>
+                            <li><a href="#instance-status">Instance Status</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#product-data-standards">Product Data Standards</a>
+                        <ul>
+                            <li><a href="#required-information">Required Information</a></li>
+                            <li><a href="#media-requirements">Media Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#metafields">Metafields & Custom Data</a>
+                        <ul>
+                            <li><a href="#core-metafields">Core Product Metafields</a></li>
+                            <li><a href="#draft-variant">Draft Variant Metafield</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#variant-visibility-management">Variant Visibility Management</a>
+                        <ul>
+                            <li><a href="#visibility-control">Visibility Control</a></li>
+                            <li><a href="#use-cases">Use Cases</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main>
+                <section id="product-inventory">
+                    <h2>Product Inventory</h2>
+                    <p>Product inventory management across both XeroShoes instances with synchronized catalog structure.</p>
+                    
+                    <section id="instance-status">
+                        <h3>Instance Status</h3>
+                        <table class="data-table">
+                            <tr>
+                                <th>Instance</th>
+                                <th>Status</th>
+                                <th>Product Types</th>
+                                <th>Collection Structure</th>
+                            </tr>
+                            <tr>
+                                <td>US (xeroshoes.com)</td>
+                                <td>Active - Primary</td>
+                                <td>Barefoot shoes, sandals, boots, accessories</td>
+                                <td>Smart collections and custom collections</td>
+                            </tr>
+                            <tr>
+                                <td>EU (xeroshoes.eu)</td>
+                                <td>Active</td>
+                                <td>Not documented</td>
+                                <td>Not documented</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="alert warning">
+                            <strong>Data Limitation:</strong> EU instance product and collection data not available in current export. Documentation based on US instance only.
+                        </div>
+                    </section>
+                    
+                    <section id="product-categories">
+                        <h3>Product Categories</h3>
+                        <ul>
+                            <li><strong>Barefoot Shoes:</strong> Core product line with various styles</li>
+                            <li><strong>Sandals:</strong> Summer and casual footwear options</li>
+                            <li><strong>Boots:</strong> Winter and outdoor footwear</li>
+                            <li><strong>Accessories:</strong> Insoles, laces, and care products</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="product-data-standards">
+                    <h2>Product Data Standards</h2>
+                    <p>Comprehensive data standards for product information management across both instances.</p>
+                    
+                    <section id="required-information">
+                        <h3>Required Product Information</h3>
+                        <ul>
+                            <li><strong>Basic Information:</strong>
+                                <ul>
+                                    <li>Product title (clear, descriptive naming)</li>
+                                    <li>Product description (detailed, benefit-focused)</li>
+                                    <li>Vendor (XeroShoes)</li>
+                                    <li>Product type (Barefoot Shoes, Sandals, Boots, Accessories)</li>
+                                    <li>Tags (activity, gender, features)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Pricing & Inventory:</strong>
+                                <ul>
+                                    <li>Price (USD for US, EUR for EU)</li>
+                                    <li>Compare at price (if applicable)</li>
+                                    <li>SKU (unique identifier)</li>
+                                    <li>Inventory quantity</li>
+                                    <li>Weight and dimensions</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section id="media-requirements">
+                        <h3>Media Requirements</h3>
+                        <ul>
+                            <li><strong>Primary product image (1024x1024 minimum)</strong></li>
+                            <li><strong>Additional product angles (3-5 images)</strong></li>
+                            <li><strong>Lifestyle images showing product in use</strong></li>
+                            <li><strong>Detail shots of key features</strong></li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="metafields">
+                    <h2>Metafields & Custom Data</h2>
+                    <p>Detailed metafield structure for storing custom product data and attributes.</p>
+                    
+                    <section id="core-metafields">
+                        <h3>Core Product Metafields</h3>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>custom.display_title</td>
+                                <td>Single line text</td>
+                                <td>Custom product display title</td>
+                                <td>"Dillon Canvas Slip-On - Big Kids"</td>
+                            </tr>
+                            <tr>
+                                <td>custom.feed_description</td>
+                                <td>Multi-line text</td>
+                                <td>Product feed description</td>
+                                <td>SEO-optimized product description</td>
+                            </tr>
+                            <tr>
+                                <td>custom.product_highlights</td>
+                                <td>Rich text</td>
+                                <td>Product feature highlights</td>
+                                <td>Bulleted list of key benefits</td>
+                            </tr>
+                            <tr>
+                                <td>custom.color</td>
+                                <td>List of single line text</td>
+                                <td>Available colors</td>
+                                <td>["Black", "Navy", "Gray"]</td>
+                            </tr>
+                            <tr>
+                                <td>custom.activity</td>
+                                <td>List of single line text</td>
+                                <td>Activity types</td>
+                                <td>["Running", "Hiking", "Casual"]</td>
+                            </tr>
+                            <tr>
+                                <td>custom.draft_variant</td>
+                                <td>Boolean</td>
+                                <td>Variant visibility control</td>
+                                <td>TRUE = hidden, FALSE/blank = visible</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section id="draft-variant">
+                        <h3>Critical Metafield: custom.draft_variant</h3>
+                        <p>The <code>custom.draft_variant</code> metafield is a custom implementation that extends Shopify's native variant management capabilities. This metafield provides granular control over variant visibility on product detail pages.</p>
+                        
+                        <div class="alert warning">
+                            <strong>Important:</strong> This is a custom metafield that directly impacts customer experience and product management workflows. Understanding its behavior is critical for effective product management.
+                        </div>
+                        
+                        <h4>Variant Visibility Control</h4>
+                        <ul>
+                            <li><strong>TRUE:</strong> Variant is excluded from the product detail page</li>
+                            <li><strong>FALSE or blank:</strong> Variant is included and visible on the product detail page</li>
+                        </ul>
+                        
+                        <h4>Use Cases</h4>
+                        <ul>
+                            <li><strong>Seasonal Products:</strong> Hide out-of-season variants without deleting them</li>
+                            <li><strong>Inventory Management:</strong> Hide variants that are temporarily out of stock</li>
+                            <li><strong>Product Testing:</strong> Test new variants without full public visibility</li>
+                            <li><strong>Regional Availability:</strong> Hide variants not available in specific regions</li>
+                            <li><strong>Product Lifecycle:</strong> Manage product discontinuation process</li>
+                        </ul>
+                        
+                        <h4>Implementation Notes</h4>
+                        <ul>
+                            <li>Metafield applies to individual variants, not entire products</li>
+                            <li>Changes take effect immediately upon saving</li>
+                            <li>Hidden variants are not accessible via direct URL</li>
+                            <li>Variant data remains intact when hidden (pricing, inventory, etc.)</li>
+                            <li>Admin users can still see and manage hidden variants in Shopify Admin</li>
+                        </ul>
+                        
+                        <h4>Technical Implementation</h4>
+                        <p>The <code>custom.draft_variant</code> metafield is implemented through a sophisticated Liquid + JavaScript system that dynamically controls variant visibility on product pages.</p>
+                        
+                        <div class="alert info">
+                            <strong>Technical Details:</strong> For complete code examples, file locations, and implementation details, see <a href="theme-architecture.html#custom-draft-variant-implementation">Theme Architecture → Custom Draft Variant Implementation</a>.
+                        </div>
+                        
+                        <h5>Implementation Overview</h5>
+                        <ul>
+                            <li><strong>Liquid Processing:</strong> Templates process variant data and generate JavaScript configuration</li>
+                            <li><strong>JavaScript Engine:</strong> Client-side processing handles dynamic visibility control</li>
+                            <li><strong>Multi-Option Logic:</strong> Complex cascading logic for multiple variant options</li>
+                            <li><strong>Performance Optimized:</strong> Efficient filtering and state management</li>
+                        </ul>
+                    </section>
+                </section>
+                
+                <section id="variant-visibility-management">
+                    <h2>Variant Visibility Management</h2>
+                    <p>Managing variant visibility using the <code>custom.draft_variant</code> metafield - a custom implementation specific to XeroShoes that extends beyond standard Shopify functionality.</p>
+                    
+                    <section id="visibility-control">
+                        <h3>Variant Visibility Control</h3>
+                        <ol>
+                            <li>Access product in Shopify Admin</li>
+                            <li>Navigate to the Variants section</li>
+                            <li>Select the variant to modify</li>
+                            <li>Scroll to the Metafields section</li>
+                            <li>Locate the <code>custom.draft_variant</code> metafield</li>
+                            <li>Set value:
+                                <ul>
+                                    <li><strong>TRUE:</strong> To hide variant from product page</li>
+                                    <li><strong>FALSE or leave blank:</strong> To show variant on product page</li>
+                                </ul>
+                            </li>
+                            <li>Save the product</li>
+                            <li>Verify visibility changes on the live product page</li>
+                            <li>Apply same changes to corresponding instance if needed</li>
+                        </ol>
+                        
+                        <div class="alert info">
+                            <strong>Pro Tip:</strong> Use variant visibility management for seasonal inventory control, testing new variants, or managing regional availability without deleting variant data.
+                        </div>
+                    </section>
+                    
+                    <section id="use-cases">
+                        <h3>Advanced Use Cases</h3>
+                        <ul>
+                            <li><strong>Seasonal Product Management:</strong> Hide winter boots during summer without losing variant data</li>
+                            <li><strong>A/B Testing:</strong> Test new color variants with limited visibility before full launch</li>
+                            <li><strong>Regional Rollouts:</strong> Gradually introduce products to different markets</li>
+                            <li><strong>Inventory Transitions:</strong> Manage product discontinuation while maintaining data integrity</li>
+                        </ul>
+                    </section>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load header and footer -->
+    <script>
+        // Load header
+        fetch('templates/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize header menu functionality
+                const menuToggle = document.getElementById('menu-toggle');
+                const headerMenu = document.getElementById('header-menu');
+                
+                if (menuToggle && headerMenu) {
+                    menuToggle.addEventListener('click', function() {
+                        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                        
+                        menuToggle.setAttribute('aria-expanded', !isExpanded);
+                        menuToggle.classList.toggle('active');
+                        headerMenu.classList.toggle('show');
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('active');
+                            headerMenu.classList.remove('show');
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
+</body>
+</html>
