@@ -29,7 +29,7 @@
             margin: 0;
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 2rem;
         }
         
         .horizontal-toc li {
@@ -39,18 +39,13 @@
         .horizontal-toc a {
             color: #53CAEC;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            background: white;
-            border: 1px solid #e9ecef;
-            transition: all 0.2s ease;
-            white-space: nowrap;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
         
         .horizontal-toc a:hover {
-            background: #53CAEC;
-            color: white;
-            border-color: #53CAEC;
+            color: #0F172B;
+            text-decoration: underline;
         }
         
         /* Full width content for tables */
@@ -75,11 +70,7 @@
         @media (max-width: 768px) {
             .horizontal-toc ul {
                 flex-direction: column;
-            }
-            
-            .horizontal-toc a {
-                display: block;
-                text-align: center;
+                gap: 1rem;
             }
         }
     </style>
