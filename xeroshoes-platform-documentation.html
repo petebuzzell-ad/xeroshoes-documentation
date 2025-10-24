@@ -97,40 +97,40 @@
                         
                         <h4>Content Inventory</h4>
                         <ul>
-                            <li><strong>Products:</strong> Comprehensive product catalog with extensive metafield data (US instance documented)</li>
-                            <li><strong>Collections:</strong> Smart collections and custom collections for product organization (US instance documented)</li>
-                            <li><strong>Pages:</strong> Content pages (US instance documented)</li>
-                            <li><strong>Blog Posts:</strong> Educational content and brand storytelling (US instance documented)</li>
-                            <li><strong>Redirects:</strong> SEO preservation redirects for site migrations (US instance documented)</li>
-                            <li><strong>Metaobjects:</strong> Structured content for FAQs, features, and product data (US instance documented)</li>
-                        </ul>
-                        
-                        <div class="alert warning">
-                            <strong>Note:</strong> EU instance (XeroShoes.eu) analysis based on theme export from October 21, 2025. Limited app integration compared to US instance.
-                        </div>
-                        
-                        <h4>EU Instance Analysis (Based on Theme Export)</h4>
-                        <p>Analysis of the EU theme export reveals significant differences in app integration compared to the US instance:</p>
-                        
-                        <h5>EU Instance App Integrations (4 Apps with Theme Evidence)</h5>
-                        <ul>
-                            <li><strong>Klaviyo Email Marketing:</strong> Same app block ID as US, custom CSS styling for forms and footer integration</li>
-                            <li><strong>Redirect Hero:</strong> Both app and live redirect blocks configured (same as US)</li>
-                            <li><strong>Microsoft Clarity:</strong> Analytics tracking integration (same as US)</li>
-                            <li><strong>Stamped Reviews:</strong> Extensive custom CSS and JavaScript integration, product page implementation</li>
+                            <li><strong>Products:</strong> 14,054 products (US), 9,518 products (EU) with comprehensive metafield data</li>
+                            <li><strong>Collections:</strong> Smart collections and custom collections for product organization across both instances</li>
+                            <li><strong>Pages:</strong> Content pages with specialized templates for different regions</li>
+                            <li><strong>Blog Posts:</strong> Educational content and brand storytelling</li>
+                            <li><strong>Redirects:</strong> SEO preservation redirects for site migrations</li>
+                            <li><strong>Metaobjects:</strong> 784 metaobjects (US), 500 metaobjects (EU) for structured content</li>
                         </ul>
                         
                         <div class="alert info">
-                            <strong>Post-Launch Analysis:</strong> Complete EU integration analysis will be updated after launch (expected in 2 weeks) when all apps are configured and data import is complete.
+                            <strong>Data Analysis Complete:</strong> Both US and EU instances have been fully analyzed with complete data exports from October 20-23, 2025. See <a href="xeroshoes-metafield-mapping.html">Metafield Mapping Documentation</a> for detailed US/EU field comparisons.
                         </div>
                         
-                        <h5>EU-Specific Customizations</h5>
+                        <h4>US vs EU Instance Comparison</h4>
+                        <p>Complete analysis reveals significant differences in metafield availability and app integrations between instances:</p>
+                        
+                        <h5>Metafield Analysis</h5>
                         <ul>
-                            <li><strong>Klaviyo Forms:</strong> Custom CSS for "Born to Run" and "Xero Circle" page variants</li>
-                            <li><strong>Stamped Reviews:</strong> Custom styling with Inter font family and Paralucent headings</li>
-                            <li><strong>Product Pages:</strong> Stamped review widgets integrated on product templates</li>
-                            <li><strong>Page Templates:</strong> Multiple page templates with embedded Stamped review badges</li>
+                            <li><strong>US Instance:</strong> 61 metafields including reviews, Google Shopping, tax compliance, and Shopify taxonomy</li>
+                            <li><strong>EU Instance:</strong> 33 metafields using product.* namespace instead of custom.* namespace</li>
+                            <li><strong>Shared Fields:</strong> 8 metafields with identical namespaces across both instances</li>
+                            <li><strong>US-Only Fields:</strong> 53 metafields not available on EU site (reviews, Google Shopping, tax compliance)</li>
+                            <li><strong>EU-Only Fields:</strong> 25 metafields using product.* namespace</li>
                         </ul>
+                        
+                        <h5>App Integration Differences</h5>
+                        <ul>
+                            <li><strong>US Instance:</strong> 10+ apps including Stamped.io reviews, Google Shopping, Avalara tax, Simple Bundles</li>
+                            <li><strong>EU Instance:</strong> 4 apps with theme evidence (Klaviyo, Redirect Hero, Microsoft Clarity, Stamped Reviews)</li>
+                            <li><strong>Missing on EU:</strong> Google Shopping integration, Avalara tax compliance, Simple Bundles, advanced review features</li>
+                        </ul>
+                        
+                        <div class="alert warning">
+                            <strong>Data Synchronization:</strong> Significant metafield namespace differences require careful mapping for data synchronization between instances. See <a href="xeroshoes-metafield-mapping.html">Metafield Mapping Documentation</a> for implementation details.
+                        </div>
                     </section>
                     
                     <section id="key-technical-components">
@@ -299,7 +299,7 @@
                     
                     <h3>Quick Reference</h3>
                     <ul>
-                        <li><strong>Product Inventory:</strong> 388 products across barefoot shoes, sandals, boots, and accessories</li>
+                        <li><strong>Product Inventory:</strong> 14,054 products (US), 9,518 products (EU) across barefoot shoes, sandals, boots, and accessories</li>
                         <li><strong>Data Standards:</strong> Comprehensive standards for product information and media requirements</li>
                         <li><strong>Custom Metafields:</strong> Extensive metafield system including critical <code>custom.draft_variant</code></li>
                         <li><strong>Variant Management:</strong> Custom variant visibility control system for seasonal and inventory management</li>
