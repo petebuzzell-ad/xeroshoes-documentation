@@ -165,11 +165,21 @@
      * Highlight the first visible section on page load
      */
     function highlightInitialSection(tocLinks, sections) {
-        const firstSection = sections[0];
-        if (firstSection) {
-            const firstTocLink = document.querySelector(`${CONFIG.tocLink}[href="#${firstSection.id}"]`);
-            if (firstTocLink) {
-                firstTocLink.classList.add('active');
+        // Check if we're at the top of the page
+        if (window.scrollY === 0) {
+            // Don't highlight any section if we're at the top
+            return;
+        }
+        
+        // Find the first section that's actually visible
+        for (let section of sections) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= window.innerHeight) {
+                const tocLink = document.querySelector(`${CONFIG.tocLink}[href="#${section.id}"]`);
+                if (tocLink) {
+                    tocLink.classList.add('active');
+                }
+                break;
             }
         }
     }
