@@ -728,45 +728,17 @@
                         </tr>
                     </table>
 
-                    <h3>3. Automated Mapping Script</h3>
-                    <div class="code-block">
-                        <pre><code># Example mapping function
-def map_metafield_namespace(metafield_key, target_site):
-    if target_site == 'EU':
-        if metafield_key == 'custom.comfort_section':
-            return 'custom.comfort_section'  # Same on both sites
-        elif metafield_key == 'custom.draft_variant':
-            return 'product_variant.draft_variant'  # Special case
-        elif metafield_key.startswith('custom.'):
-            return metafield_key.replace('custom.', 'product.')
-        else:
-            return metafield_key  # App metafields, etc.
-    elif target_site == 'US':
-        if metafield_key == 'custom.comfort_section':
-            return 'custom.comfort_section'  # Same on both sites
-        elif metafield_key == 'product_variant.draft_variant':
-            return 'custom.draft_variant'  # Special case
-        elif metafield_key.startswith('product.'):
-            return metafield_key.replace('product.', 'custom.')
-        else:
-            return metafield_key  # App metafields, etc.
-    else:
-        return metafield_key
-
-# Check if field exists on target site
-def field_exists_on_target(metafield_key, target_site):
-    us_only_fields = [
-        'avalara.taxcode', 'custom.richtext_demo', 'mm-google-shopping.custom_product',
-        'reviews.rating', 'reviews.rating_count', 'stamped.badge', 'stamped.reviews',
-        'stamped.reviews_average', 'stamped.reviews_count', 'shopify.age-group',
-        'shopify.clothing-accessory-material', 'shopify.color-pattern', 'shopify.shoe-size',
-        'shopify.target-gender'
-    ]
-    
-    if target_site == 'EU' and metafield_key in us_only_fields:
-        return False
-    else:
-        return True</code></pre>
+                    <h3>3. Mapping Rules Summary</h3>
+                    <div class="alert info">
+                        <strong>Key Mapping Rules:</strong>
+                        <ul>
+                            <li><strong>US → EU:</strong> Replace <code>custom.</code> with <code>product.</code></li>
+                            <li><strong>EU → US:</strong> Replace <code>product.</code> with <code>custom.</code></li>
+                            <li><strong>Exception:</strong> <code>custom.comfort_section</code> remains the same on both sites</li>
+                            <li><strong>Variant Exception:</strong> <code>custom.draft_variant</code> → <code>product_variant.draft_variant</code></li>
+                            <li><strong>App Metafields:</strong> No translation needed (identical namespaces)</li>
+                            <li><strong>US-Only Fields:</strong> Cannot be mapped to EU site (53 fields unavailable)</li>
+                        </ul>
                     </div>
                 </section>
 
