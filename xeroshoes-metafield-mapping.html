@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XeroShoes Metafield Mapping - US to EU</title>
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>Metafield Mapping - XeroShoes Documentation</title>
     <link rel="stylesheet" href="arcadia-style.css">
-    <link rel="icon" type="image/webp" href="assets/favicon.webp">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
     <div class="container">
-        <header>
-            <div class="header-content">
-                <img src="assets/XEROSHOES_Logo.svg" alt="XeroShoes" class="logo">
-                <h1>XeroShoes Metafield Mapping</h1>
-                <p class="subtitle">US to EU Site Metafield Namespace Mapping</p>
-            </div>
-        </header>
+        <h1>Metafield Mapping - US to EU</h1>
 
         <div class="two-column-layout">
             <!-- Table of Contents -->
@@ -816,13 +814,62 @@
                         </ul>
                     </div>
                 </section>
-
-                <footer>
-                    <p>¹ Data export dates: US (October 20, 2025), EU (October 23, 2025)</p>
-                    <p>This document provides accurate metafield mapping for data synchronization between XeroShoes US and EU sites.</p>
-                </footer>
             </main>
         </div>
+    </div>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load header and footer -->
+    <script>
+        // Load header
+        fetch('templates/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize header menu functionality
+                const menuToggle = document.getElementById('menu-toggle');
+                const headerMenu = document.getElementById('header-menu');
+                
+                if (menuToggle && headerMenu) {
+                    menuToggle.addEventListener('click', function() {
+                        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                        
+                        menuToggle.setAttribute('aria-expanded', !isExpanded);
+                        menuToggle.classList.toggle('active');
+                        headerMenu.classList.toggle('show');
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('active');
+                            headerMenu.classList.remove('show');
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
+    
+    <!-- Footnotes -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666;">
+        <p><strong>Footnotes:</strong></p>
+        <p>¹ Data export dates: US (October 20, 2025), EU (October 23, 2025)</p>
+        <p>This document provides accurate metafield mapping for data synchronization between XeroShoes US and EU sites.</p>
     </div>
 </body>
 </html>
