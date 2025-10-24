@@ -530,14 +530,38 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
-            });
+                // Re-initialize header menu functionality
+                const menuToggle = document.getElementById('menu-toggle');
+                const headerMenu = document.getElementById('header-menu');
+                
+                if (menuToggle && headerMenu) {
+                    menuToggle.addEventListener('click', function() {
+                        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                        
+                        menuToggle.setAttribute('aria-expanded', !isExpanded);
+                        menuToggle.classList.toggle('active');
+                        headerMenu.classList.toggle('show');
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(event) {
+                        if (!menuToggle.contains(event.target) && !headerMenu.contains(event.target)) {
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('active');
+                            headerMenu.classList.remove('show');
+                        }
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
         
         // Load footer
         fetch('templates/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
-            });
+            })
+            .catch(error => console.error('Error loading footer:', error));
     </script>
     
     <!-- Enhanced TOC Script -->
