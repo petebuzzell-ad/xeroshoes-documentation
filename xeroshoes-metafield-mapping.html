@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XeroShoes Metafield Mapping - US to EU</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+    <link rel="icon" type="image/webp" href="assets/favicon.webp">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="assets/XEROSHOES_Logo.svg" alt="XeroShoes" class="logo">
+                <h1>XeroShoes Metafield Mapping</h1>
+                <p class="subtitle">US to EU Site Metafield Namespace Mapping</p>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <nav class="toc">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#namespace-differences">Namespace Differences</a></li>
+                    <li><a href="#shared-metafields">Shared Metafields</a></li>
+                    <li><a href="#us-only-metafields">US-Only Metafields</a></li>
+                    <li><a href="#eu-only-metafields">EU-Only Metafields</a></li>
+                    <li><a href="#product-metafields">Product Metafields</a></li>
+                    <li><a href="#variant-metafields">Variant Metafields</a></li>
+                    <li><a href="#app-metafields">App Metafields</a></li>
+                    <li><a href="#data-mapping-process">Data Mapping Process</a></li>
+                    <li><a href="#implementation-notes">Implementation Notes</a></li>
+                </ul>
+            </nav>
+
+            <main class="main-content">
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <p>This document provides a comprehensive mapping between metafields used on the US XeroShoes site (xeroshoes.com) and the EU XeroShoes site (shopxeroshoes-eu.myshopify.com). The analysis reveals significant differences in metafield availability and namespace conventions:</p>
+                    
+                    <div class="alert info">
+                        <strong>Key Findings:</strong>
+                        <ul>
+                            <li><strong>US Site:</strong> 61 metafields (14,054 products¹)</li>
+                            <li><strong>EU Site:</strong> 33 metafields (9,518 products¹)</li>
+                            <li><strong>Shared Fields:</strong> 8 metafields (identical namespaces)</li>
+                            <li><strong>US-Only Fields:</strong> 53 metafields (not available on EU site)</li>
+                            <li><strong>EU-Only Fields:</strong> 25 metafields (product.* namespace)</li>
+                        </ul>
+                    </div>
+
+                    <div class="alert warning">
+                        <strong>Data Export Dates:</strong>
+                        <ul>
+                            <li><strong>US Data:</strong> October 20, 2025 (14,054 products¹)</li>
+                            <li><strong>EU Data:</strong> October 23, 2025 (9,518 products¹)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="namespace-differences">
+                    <h2>Namespace Differences</h2>
+                    <p>The US and EU sites use different namespace conventions for custom metafields, with the EU site using a more limited set:</p>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>US Site (custom.*)</th>
+                            <th>EU Site (product.*)</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Usage</th>
+                        </tr>
+                        <tr>
+                            <td>custom.display_title</td>
+                            <td>product.display_title</td>
+                            <td>display_title</td>
+                            <td>single_line_text_field</td>
+                            <td>Custom product display title</td>
+                        </tr>
+                        <tr>
+                            <td>custom.feed_description</td>
+                            <td>product.feed_description</td>
+                            <td>feed_description</td>
+                            <td>multi_line_text_field</td>
+                            <td>Marketing feed description</td>
+                        </tr>
+                        <tr>
+                            <td>custom.product_highlights</td>
+                            <td>product.product_highlights</td>
+                            <td>product_highlights</td>
+                            <td>rich_text_field</td>
+                            <td>Product feature highlights</td>
+                        </tr>
+                        <tr>
+                            <td>custom.gender</td>
+                            <td>product.gender</td>
+                            <td>gender</td>
+                            <td>single_line_text_field</td>
+                            <td>Product gender targeting</td>
+                        </tr>
+                        <tr>
+                            <td>custom.activity</td>
+                            <td>product.activity</td>
+                            <td>activity</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product activity categories</td>
+                        </tr>
+                        <tr>
+                            <td>custom.color</td>
+                            <td>product.color</td>
+                            <td>color</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product color options</td>
+                        </tr>
+                        <tr>
+                            <td>custom.collection</td>
+                            <td>product.collection</td>
+                            <td>collection</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product collection tags</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="shared-metafields">
+                    <h2>Shared Metafields</h2>
+                    <p>These metafields exist on both sites with identical namespaces and data types:</p>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.comfort_section</td>
+                            <td>comfort_section</td>
+                            <td>metaobject_reference</td>
+                            <td>Comfort section content (same namespace on both sites)</td>
+                        </tr>
+                        <tr>
+                            <td>description_tag</td>
+                            <td>description_tag</td>
+                            <td>string</td>
+                            <td>SEO description tag</td>
+                        </tr>
+                        <tr>
+                            <td>mc-facebook</td>
+                            <td>google_product_category</td>
+                            <td>string</td>
+                            <td>Facebook Marketing product category</td>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_recommendation</td>
+                            <td>complementary_products</td>
+                            <td>list.product_reference</td>
+                            <td>Complementary product recommendations</td>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_recommendation</td>
+                            <td>related_products</td>
+                            <td>list.product_reference</td>
+                            <td>Related product recommendations</td>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_recommendation</td>
+                            <td>related_products_display</td>
+                            <td>single_line_text_field</td>
+                            <td>Related products display text</td>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_search_boost</td>
+                            <td>queries</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Search boost queries</td>
+                        </tr>
+                        <tr>
+                            <td>title_tag</td>
+                            <td>title_tag</td>
+                            <td>string</td>
+                            <td>SEO title tag</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="us-only-metafields">
+                    <h2>US-Only Metafields</h2>
+                    <p>These metafields exist only on the US site and are not available on the EU site:</p>
+                    
+                    <h3>Core Product Data (US Only)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.richtext_demo</td>
+                            <td>richtext_demo</td>
+                            <td>rich_text_field</td>
+                            <td>Rich text demonstration field</td>
+                        </tr>
+                    </table>
+
+                    <h3>Tax & Compliance (US Only)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>avalara</td>
+                            <td>taxcode</td>
+                            <td>single_line_text_field</td>
+                            <td>Avalara tax code for US tax compliance</td>
+                        </tr>
+                    </table>
+
+                    <h3>Google Shopping (US Only)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>custom_product</td>
+                            <td>boolean</td>
+                            <td>Mark product as custom for Google Shopping</td>
+                        </tr>
+                    </table>
+
+                    <h3>Reviews & Ratings (US Only)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>reviews</td>
+                            <td>rating</td>
+                            <td>rating</td>
+                            <td>Product rating value</td>
+                        </tr>
+                        <tr>
+                            <td>reviews</td>
+                            <td>rating_count</td>
+                            <td>number_integer</td>
+                            <td>Number of ratings</td>
+                        </tr>
+                        <tr>
+                            <td>stamped</td>
+                            <td>badge</td>
+                            <td>multi_line_text_field</td>
+                            <td>Stamped.io review badge</td>
+                        </tr>
+                        <tr>
+                            <td>stamped</td>
+                            <td>reviews</td>
+                            <td>multi_line_text_field</td>
+                            <td>Stamped.io review content</td>
+                        </tr>
+                        <tr>
+                            <td>stamped</td>
+                            <td>reviews_average</td>
+                            <td>single_line_text_field</td>
+                            <td>Stamped.io average rating</td>
+                        </tr>
+                        <tr>
+                            <td>stamped</td>
+                            <td>reviews_count</td>
+                            <td>single_line_text_field</td>
+                            <td>Stamped.io review count</td>
+                        </tr>
+                    </table>
+
+                    <h3>Shopify Taxonomy (US Only)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>shopify</td>
+                            <td>age-group</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Age group targeting</td>
+                        </tr>
+                        <tr>
+                            <td>shopify</td>
+                            <td>clothing-accessory-material</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Material composition</td>
+                        </tr>
+                        <tr>
+                            <td>shopify</td>
+                            <td>color-pattern</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Color and pattern information</td>
+                        </tr>
+                        <tr>
+                            <td>shopify</td>
+                            <td>shoe-size</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Shoe size information</td>
+                        </tr>
+                        <tr>
+                            <td>shopify</td>
+                            <td>target-gender</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Gender targeting</td>
+                        </tr>
+                    </table>
+
+                    <h3>Variant Metafields (US Only)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom</td>
+                            <td>draft_variant</td>
+                            <td>boolean</td>
+                            <td>Mark variant as draft</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>age_group</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping age group</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>condition</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping condition</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>custom_label_0</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping custom label 0</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>custom_label_1</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping custom label 1</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>custom_label_2</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping custom label 2</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>custom_label_3</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping custom label 3</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>custom_label_4</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping custom label 4</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>gender</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping gender</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>mpn</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping MPN</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>size_system</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping size system</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping</td>
+                            <td>size_type</td>
+                            <td>single_line_text_field</td>
+                            <td>Google Shopping size type</td>
+                        </tr>
+                        <tr>
+                            <td>simple_bundles</td>
+                            <td>bundle_custom_prices_selection</td>
+                            <td>json</td>
+                            <td>Simple Bundles custom pricing</td>
+                        </tr>
+                        <tr>
+                            <td>simple_bundles</td>
+                            <td>bundled_variants</td>
+                            <td>json</td>
+                            <td>Simple Bundles variant data</td>
+                        </tr>
+                        <tr>
+                            <td>simple_bundles</td>
+                            <td>variant_options</td>
+                            <td>json</td>
+                            <td>Simple Bundles variant options</td>
+                        </tr>
+                        <tr>
+                            <td>simple_bundles</td>
+                            <td>variant_options_v2</td>
+                            <td>json</td>
+                            <td>Simple Bundles variant options v2</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="eu-only-metafields">
+                    <h2>EU-Only Metafields</h2>
+                    <p>These metafields exist only on the EU site using the product.* namespace:</p>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>product.activity</td>
+                            <td>activity</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product activity categories</td>
+                        </tr>
+                        <tr>
+                            <td>product.attribute_galleries</td>
+                            <td>attribute_galleries</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Product attribute galleries</td>
+                        </tr>
+                        <tr>
+                            <td>product.care</td>
+                            <td>care</td>
+                            <td>metaobject_reference</td>
+                            <td>Product care instructions</td>
+                        </tr>
+                        <tr>
+                            <td>product.collection</td>
+                            <td>collection</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product collection tags</td>
+                        </tr>
+                        <tr>
+                            <td>product.color</td>
+                            <td>color</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product color options</td>
+                        </tr>
+                        <tr>
+                            <td>product.description_featured_image</td>
+                            <td>description_featured_image</td>
+                            <td>file_reference</td>
+                            <td>Featured image for product description</td>
+                        </tr>
+                        <tr>
+                            <td>product.description_featured_image_mobile</td>
+                            <td>description_featured_image_mobile</td>
+                            <td>file_reference</td>
+                            <td>Mobile version of featured image</td>
+                        </tr>
+                        <tr>
+                            <td>product.display_title</td>
+                            <td>display_title</td>
+                            <td>single_line_text_field</td>
+                            <td>Custom product display title</td>
+                        </tr>
+                        <tr>
+                            <td>product.enable_comfort_section</td>
+                            <td>enable_comfort_section</td>
+                            <td>boolean</td>
+                            <td>Enable comfort section display</td>
+                        </tr>
+                        <tr>
+                            <td>product.enable_featured_image</td>
+                            <td>enable_featured_image</td>
+                            <td>boolean</td>
+                            <td>Enable featured image display</td>
+                        </tr>
+                        <tr>
+                            <td>product.enable_multiple_image_with_text</td>
+                            <td>enable_multiple_image_with_text</td>
+                            <td>boolean</td>
+                            <td>Enable multiple image with text section</td>
+                        </tr>
+                        <tr>
+                            <td>product.faqs</td>
+                            <td>faqs</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Product FAQ metaobjects</td>
+                        </tr>
+                        <tr>
+                            <td>product.featured_quote</td>
+                            <td>featured_quote</td>
+                            <td>rich_text_field</td>
+                            <td>Featured customer quote</td>
+                        </tr>
+                        <tr>
+                            <td>product.feed_description</td>
+                            <td>feed_description</td>
+                            <td>multi_line_text_field</td>
+                            <td>Marketing feed description</td>
+                        </tr>
+                        <tr>
+                            <td>product.gender</td>
+                            <td>gender</td>
+                            <td>single_line_text_field</td>
+                            <td>Product gender targeting</td>
+                        </tr>
+                        <tr>
+                            <td>product.mega_menu_image</td>
+                            <td>mega_menu_image</td>
+                            <td>file_reference</td>
+                            <td>Mega menu display image</td>
+                        </tr>
+                        <tr>
+                            <td>product.multiple_gender_product</td>
+                            <td>multiple_gender_product</td>
+                            <td>list.product_reference</td>
+                            <td>Related products for other genders</td>
+                        </tr>
+                        <tr>
+                            <td>product.multiple_image_with_text</td>
+                            <td>multiple_image_with_text</td>
+                            <td>metaobject_reference</td>
+                            <td>Multiple image with text content</td>
+                        </tr>
+                        <tr>
+                            <td>product.mutiple_gender_product</td>
+                            <td>mutiple_gender_product</td>
+                            <td>list.product_reference</td>
+                            <td>Typo variant of multiple_gender_product</td>
+                        </tr>
+                        <tr>
+                            <td>product.product_description</td>
+                            <td>product_description</td>
+                            <td>metaobject_reference</td>
+                            <td>Detailed product description</td>
+                        </tr>
+                        <tr>
+                            <td>product.product_featured_quote</td>
+                            <td>product_featured_quote</td>
+                            <td>metaobject_reference</td>
+                            <td>Featured customer quote metaobject</td>
+                        </tr>
+                        <tr>
+                            <td>product.product_highlights</td>
+                            <td>product_highlights</td>
+                            <td>rich_text_field</td>
+                            <td>Product feature highlights</td>
+                        </tr>
+                        <tr>
+                            <td>product.secondary_hover_image</td>
+                            <td>secondary_hover_image</td>
+                            <td>file_reference</td>
+                            <td>Secondary hover state image</td>
+                        </tr>
+                        <tr>
+                            <td>product.sizing_chart</td>
+                            <td>sizing_chart</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Product sizing chart data</td>
+                        </tr>
+                        <tr>
+                            <td>product_variant</td>
+                            <td>draft_variant</td>
+                            <td>boolean</td>
+                            <td>Mark variant as draft (different namespace)</td>
+                        </tr>
+                    </table>
+
+                    <div class="alert warning">
+                        <strong>Note:</strong> The EU site has a typo in one field name: <code>product.mutiple_gender_product</code> (missing 'l' in "multiple"). This should be corrected to <code>product.multiple_gender_product</code> for consistency.
+                    </div>
+                </section>
+
+                <section id="product-metafields">
+                    <h2>Product Metafields</h2>
+                    <p>Complete mapping of all product metafields between US and EU sites:</p>
+                    
+                    <h3>Core Product Data</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>US Namespace</th>
+                            <th>EU Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.display_title</td>
+                            <td>product.display_title</td>
+                            <td>display_title</td>
+                            <td>single_line_text_field</td>
+                            <td>Custom product display title</td>
+                        </tr>
+                        <tr>
+                            <td>custom.feed_description</td>
+                            <td>product.feed_description</td>
+                            <td>feed_description</td>
+                            <td>multi_line_text_field</td>
+                            <td>Marketing feed description</td>
+                        </tr>
+                        <tr>
+                            <td>custom.product_highlights</td>
+                            <td>product.product_highlights</td>
+                            <td>product_highlights</td>
+                            <td>rich_text_field</td>
+                            <td>Product feature highlights</td>
+                        </tr>
+                        <tr>
+                            <td>custom.featured_quote</td>
+                            <td>product.featured_quote</td>
+                            <td>featured_quote</td>
+                            <td>rich_text_field</td>
+                            <td>Featured customer quote</td>
+                        </tr>
+                    </table>
+
+                    <h3>Product Classification</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>US Namespace</th>
+                            <th>EU Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.gender</td>
+                            <td>product.gender</td>
+                            <td>gender</td>
+                            <td>single_line_text_field</td>
+                            <td>Product gender targeting</td>
+                        </tr>
+                        <tr>
+                            <td>custom.activity</td>
+                            <td>product.activity</td>
+                            <td>activity</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product activity categories</td>
+                        </tr>
+                        <tr>
+                            <td>custom.color</td>
+                            <td>product.color</td>
+                            <td>color</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product color options</td>
+                        </tr>
+                        <tr>
+                            <td>custom.collection</td>
+                            <td>product.collection</td>
+                            <td>collection</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Product collection tags</td>
+                        </tr>
+                    </table>
+
+                    <h3>Product Relationships</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>US Namespace</th>
+                            <th>EU Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.multiple_gender_product</td>
+                            <td>product.multiple_gender_product</td>
+                            <td>multiple_gender_product</td>
+                            <td>list.product_reference</td>
+                            <td>Related products for other genders</td>
+                        </tr>
+                        <tr>
+                            <td>custom.product_description</td>
+                            <td>product.product_description</td>
+                            <td>product_description</td>
+                            <td>metaobject_reference</td>
+                            <td>Detailed product description</td>
+                        </tr>
+                        <tr>
+                            <td>custom.product_featured_quote</td>
+                            <td>product.product_featured_quote</td>
+                            <td>product_featured_quote</td>
+                            <td>metaobject_reference</td>
+                            <td>Featured customer quote metaobject</td>
+                        </tr>
+                    </table>
+
+                    <h3>Product Content & Media</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>US Namespace</th>
+                            <th>EU Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.mega_menu_image</td>
+                            <td>product.mega_menu_image</td>
+                            <td>mega_menu_image</td>
+                            <td>file_reference</td>
+                            <td>Mega menu display image</td>
+                        </tr>
+                        <tr>
+                            <td>custom.secondary_hover_image</td>
+                            <td>product.secondary_hover_image</td>
+                            <td>secondary_hover_image</td>
+                            <td>file_reference</td>
+                            <td>Secondary hover state image</td>
+                        </tr>
+                        <tr>
+                            <td>custom.description_featured_image</td>
+                            <td>product.description_featured_image</td>
+                            <td>description_featured_image</td>
+                            <td>file_reference</td>
+                            <td>Featured image for product description</td>
+                        </tr>
+                        <tr>
+                            <td>custom.description_featured_image_mobile</td>
+                            <td>product.description_featured_image_mobile</td>
+                            <td>description_featured_image_mobile</td>
+                            <td>file_reference</td>
+                            <td>Mobile version of featured image</td>
+                        </tr>
+                    </table>
+
+                    <h3>Product Features & Settings</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>US Namespace</th>
+                            <th>EU Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.enable_comfort_section</td>
+                            <td>product.enable_comfort_section</td>
+                            <td>enable_comfort_section</td>
+                            <td>boolean</td>
+                            <td>Enable comfort section display</td>
+                        </tr>
+                        <tr>
+                            <td>custom.enable_featured_image</td>
+                            <td>product.enable_featured_image</td>
+                            <td>enable_featured_image</td>
+                            <td>boolean</td>
+                            <td>Enable featured image display</td>
+                        </tr>
+                        <tr>
+                            <td>custom.enable_multiple_image_with_text</td>
+                            <td>product.enable_multiple_image_with_text</td>
+                            <td>enable_multiple_image_with_text</td>
+                            <td>boolean</td>
+                            <td>Enable multiple image with text section</td>
+                        </tr>
+                    </table>
+
+                    <h3>Product Metaobjects</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>US Namespace</th>
+                            <th>EU Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.care</td>
+                            <td>product.care</td>
+                            <td>care</td>
+                            <td>metaobject_reference</td>
+                            <td>Product care instructions</td>
+                        </tr>
+                        <tr>
+                            <td>custom.comfort_section</td>
+                            <td>custom.comfort_section</td>
+                            <td>comfort_section</td>
+                            <td>metaobject_reference</td>
+                            <td>Comfort section content (same namespace)</td>
+                        </tr>
+                        <tr>
+                            <td>custom.multiple_image_with_text</td>
+                            <td>product.multiple_image_with_text</td>
+                            <td>multiple_image_with_text</td>
+                            <td>metaobject_reference</td>
+                            <td>Multiple image with text content</td>
+                        </tr>
+                        <tr>
+                            <td>custom.faqs</td>
+                            <td>product.faqs</td>
+                            <td>faqs</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Product FAQ metaobjects</td>
+                        </tr>
+                        <tr>
+                            <td>custom.attribute_galleries</td>
+                            <td>product.attribute_galleries</td>
+                            <td>attribute_galleries</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Product attribute galleries</td>
+                        </tr>
+                        <tr>
+                            <td>custom.sizing_chart</td>
+                            <td>product.sizing_chart</td>
+                            <td>sizing_chart</td>
+                            <td>list.metaobject_reference</td>
+                            <td>Product sizing chart data</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="variant-metafields">
+                    <h2>Variant Metafields</h2>
+                    <p>Variant metafields mapping between US and EU sites:</p>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>US Namespace</th>
+                            <th>EU Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>custom.draft_variant</td>
+                            <td>product_variant.draft_variant</td>
+                            <td>draft_variant</td>
+                            <td>boolean</td>
+                            <td>Mark variant as draft (different namespace)</td>
+                        </tr>
+                    </table>
+
+                    <div class="alert warning">
+                        <strong>Variant Metafield Difference:</strong> The US site uses <code>custom.draft_variant</code> while the EU site uses <code>product_variant.draft_variant</code>. This is a namespace difference that needs to be handled in data mapping.
+                    </div>
+                </section>
+
+                <section id="app-metafields">
+                    <h2>App Metafields</h2>
+                    <p>App metafields are identical across both sites:</p>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Namespace</th>
+                            <th>Field Name</th>
+                            <th>Data Type</th>
+                            <th>App</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_search_boost</td>
+                            <td>queries</td>
+                            <td>list.single_line_text_field</td>
+                            <td>Shopify Search & Discovery</td>
+                            <td>Search boost queries</td>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_recommendation</td>
+                            <td>related_products</td>
+                            <td>list.product_reference</td>
+                            <td>Shopify Search & Discovery</td>
+                            <td>Related product recommendations</td>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_recommendation</td>
+                            <td>related_products_display</td>
+                            <td>single_line_text_field</td>
+                            <td>Shopify Search & Discovery</td>
+                            <td>Related products display text</td>
+                        </tr>
+                        <tr>
+                            <td>shopify--discovery--product_recommendation</td>
+                            <td>complementary_products</td>
+                            <td>list.product_reference</td>
+                            <td>Shopify Search & Discovery</td>
+                            <td>Complementary product recommendations</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="data-mapping-process">
+                    <h2>Data Mapping Process</h2>
+                    <p>Step-by-step process for mapping data between US and EU sites:</p>
+                    
+                    <h3>1. Namespace Translation</h3>
+                    <div class="alert info">
+                        <strong>Translation Rules:</strong>
+                        <ul>
+                            <li><strong>US → EU:</strong> Replace <code>custom.</code> with <code>product.</code></li>
+                            <li><strong>EU → US:</strong> Replace <code>product.</code> with <code>custom.</code></li>
+                            <li><strong>Exceptions:</strong> <code>custom.comfort_section</code> remains the same on both sites</li>
+                            <li><strong>Variant Exception:</strong> <code>custom.draft_variant</code> → <code>product_variant.draft_variant</code></li>
+                            <li><strong>App Metafields:</strong> No translation needed (identical namespaces)</li>
+                        </ul>
+                    </div>
+
+                    <h3>2. Data Validation</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Step</th>
+                            <th>Description</th>
+                            <th>Validation</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Extract metafields from source site</td>
+                            <td>Verify field names and data types</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Apply namespace translation</td>
+                            <td>Check namespace mapping accuracy</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Validate data types match</td>
+                            <td>Ensure data type compatibility</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Check for missing fields</td>
+                            <td>Identify fields not available on target site</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Test data import</td>
+                            <td>Verify successful import and display</td>
+                        </tr>
+                    </table>
+
+                    <h3>3. Automated Mapping Script</h3>
+                    <div class="code-block">
+                        <pre><code># Example mapping function
+def map_metafield_namespace(metafield_key, target_site):
+    if target_site == 'EU':
+        if metafield_key == 'custom.comfort_section':
+            return 'custom.comfort_section'  # Same on both sites
+        elif metafield_key == 'custom.draft_variant':
+            return 'product_variant.draft_variant'  # Special case
+        elif metafield_key.startswith('custom.'):
+            return metafield_key.replace('custom.', 'product.')
+        else:
+            return metafield_key  # App metafields, etc.
+    elif target_site == 'US':
+        if metafield_key == 'custom.comfort_section':
+            return 'custom.comfort_section'  # Same on both sites
+        elif metafield_key == 'product_variant.draft_variant':
+            return 'custom.draft_variant'  # Special case
+        elif metafield_key.startswith('product.'):
+            return metafield_key.replace('product.', 'custom.')
+        else:
+            return metafield_key  # App metafields, etc.
+    else:
+        return metafield_key
+
+# Check if field exists on target site
+def field_exists_on_target(metafield_key, target_site):
+    us_only_fields = [
+        'avalara.taxcode', 'custom.richtext_demo', 'mm-google-shopping.custom_product',
+        'reviews.rating', 'reviews.rating_count', 'stamped.badge', 'stamped.reviews',
+        'stamped.reviews_average', 'stamped.reviews_count', 'shopify.age-group',
+        'shopify.clothing-accessory-material', 'shopify.color-pattern', 'shopify.shoe-size',
+        'shopify.target-gender'
+    ]
+    
+    eu_only_fields = [
+        'product.activity', 'product.attribute_galleries', 'product.care',
+        'product.collection', 'product.color', 'product.description_featured_image',
+        'product.description_featured_image_mobile', 'product.display_title',
+        'product.enable_comfort_section', 'product.enable_featured_image',
+        'product.enable_multiple_image_with_text', 'product.faqs', 'product.featured_quote',
+        'product.feed_description', 'product.gender', 'product.mega_menu_image',
+        'product.multiple_gender_product', 'product.multiple_image_with_text',
+        'product.mutiple_gender_product', 'product.product_description',
+        'product.product_featured_quote', 'product.product_highlights',
+        'product.secondary_hover_image', 'product.sizing_chart'
+    ]
+    
+    if target_site == 'EU' and metafield_key in us_only_fields:
+        return False
+    elif target_site == 'US' and metafield_key in eu_only_fields:
+        return False
+    else:
+        return True</code></pre>
+                    </div>
+                </section>
+
+                <section id="implementation-notes">
+                    <h2>Implementation Notes</h2>
+                    
+                    <h3>Data Synchronization Challenges</h3>
+                    <div class="alert warning">
+                        <strong>Critical Issues:</strong>
+                        <ul>
+                            <li><strong>Field Availability:</strong> 53 US-only fields cannot be mapped to EU site</li>
+                            <li><strong>Field Count Mismatch:</strong> US has 61 metafields vs EU has 33 metafields</li>
+                            <li><strong>Data Completeness:</strong> EU site missing significant functionality (reviews, Google Shopping, tax compliance)</li>
+                            <li><strong>Metaobject References:</strong> Ensure referenced metaobjects exist on target site</li>
+                            <li><strong>File References:</strong> Verify image/file assets are available on target site</li>
+                        </ul>
+                    </div>
+
+                    <h3>Testing Requirements</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Test Type</th>
+                            <th>Description</th>
+                            <th>Validation</th>
+                        </tr>
+                        <tr>
+                            <td>Namespace Mapping</td>
+                            <td>Verify correct namespace translation</td>
+                            <td>All mappable metafields use correct namespace</td>
+                        </tr>
+                        <tr>
+                            <td>Data Type Validation</td>
+                            <td>Ensure data types match between sites</td>
+                            <td>No data type conversion errors</td>
+                        </tr>
+                        <tr>
+                            <td>Content Display</td>
+                            <td>Verify content displays correctly on frontend</td>
+                            <td>All metafield content renders properly</td>
+                        </tr>
+                        <tr>
+                            <td>Metaobject References</td>
+                            <td>Test metaobject reference integrity</td>
+                            <td>All metaobject references resolve correctly</td>
+                        </tr>
+                        <tr>
+                            <td>Missing Field Handling</td>
+                            <td>Test behavior when fields don't exist on target</td>
+                            <td>Graceful handling of unavailable fields</td>
+                        </tr>
+                    </table>
+
+                    <h3>Error Handling</h3>
+                    <div class="alert info">
+                        <strong>Common Issues and Solutions:</strong>
+                        <ul>
+                            <li><strong>Missing Metaobjects:</strong> Create missing metaobjects before importing data</li>
+                            <li><strong>File References:</strong> Upload missing image files to target site</li>
+                            <li><strong>Data Type Mismatches:</strong> Convert data to match target site data types</li>
+                            <li><strong>Namespace Conflicts:</strong> Use mapping table to resolve conflicts</li>
+                            <li><strong>Unavailable Fields:</strong> Skip or provide alternative data for US-only fields</li>
+                        </ul>
+                    </div>
+
+                    <h3>Recommendations</h3>
+                    <div class="alert success">
+                        <strong>Best Practices:</strong>
+                        <ul>
+                            <li><strong>Incremental Sync:</strong> Start with shared fields, then add site-specific fields</li>
+                            <li><strong>Data Validation:</strong> Implement comprehensive validation before data transfer</li>
+                            <li><strong>Rollback Plan:</strong> Maintain ability to revert changes if issues occur</li>
+                            <li><strong>Monitoring:</strong> Track data integrity and display issues post-sync</li>
+                            <li><strong>Documentation:</strong> Maintain this mapping document as the source of truth</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>¹ Data export dates: US (October 20, 2025), EU (October 23, 2025)</p>
+                    <p>This document provides accurate metafield mapping for data synchronization between XeroShoes US and EU sites.</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

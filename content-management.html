@@ -24,30 +24,28 @@
             <nav class="toc-sidebar">
                 <h3>Table of Contents</h3>
                 <ul>
-                    <li><a href="#page-templates">Page Templates & Structure</a>
+                    <li><a href="#content-data-standards">Content Data Standards</a>
                         <ul>
-                            <li><a href="#core-templates">Core Page Templates</a></li>
-                            <li><a href="#template-sections">Template Sections</a></li>
+                            <li><a href="#required-content-data">Required Content Data</a></li>
+                            <li><a href="#content-quality-standards">Content Quality Standards</a></li>
                         </ul>
                     </li>
-                    <li><a href="#content-sections">Content Sections Inventory</a>
+                    <li><a href="#content-metafields">Content Metafields & Custom Data</a>
                         <ul>
-                            <li><a href="#navigation-sections">Navigation & Header</a></li>
-                            <li><a href="#product-display-sections">Product Display</a></li>
-                            <li><a href="#content-media-sections">Content & Media</a></li>
+                            <li><a href="#field-ownership">Field Ownership & Management</a></li>
+                            <li><a href="#page-metafields">Page Metafields</a></li>
+                            <li><a href="#blog-metafields">Blog Post Metafields</a></li>
+                            <li><a href="#seo-metafields">SEO Metafields</a></li>
                         </ul>
                     </li>
-                    <li><a href="#metafield-integration">Metafield Integration</a>
+                    <li><a href="#content-sections">Content Sections & Templates</a>
                         <ul>
-                            <li><a href="#product-metafields">Product Metafields</a></li>
-                            <li><a href="#content-metafields">Content Metafields</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#content-workflows">Content Management Workflows</a>
-                        <ul>
-                            <li><a href="#page-creation">Page Creation</a></li>
-                            <li><a href="#blog-management">Blog Management</a></li>
-                            <li><a href="#content-updates">Content Updates</a></li>
+                            <li><a href="#page-templates">Page Templates</a></li>
+                            <li><a href="#blog-templates">Blog Templates</a></li>
+                            <li><a href="#content-blocks">Content Blocks</a></li>
+                            <li><a href="#content-configuration">Content Block Configuration</a></li>
+                            <li><a href="#media-specifications">Image & Media Specifications</a></li>
+                            <li><a href="#media-sections">Media Sections</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -55,231 +53,1041 @@
             
             <!-- Main Content -->
             <main>
-                <section id="page-templates">
-                    <h2>Page Templates & Structure</h2>
-                    <p>The XeroShoes theme uses a modular section-based approach for content management, allowing flexible page layouts through customizable content blocks.</p>
+                
+                <section id="content-data-standards">
+                    <h2>Content Data Standards</h2>
+                    <p>Minimum content requirements for publication across all business functions. Every piece of content must meet these standards before going live.</p>
                     
-                    <section id="core-templates">
-                        <h3>Core Page Templates</h3>
+                    <section id="required-content-data">
+                        <h3>Minimum Required Data</h3>
+                        <p>Content cannot be published without completing all items in this checklist:</p>
                         
-                        <h4>1. Homepage Template - "Main Landing Page" (<code>index.json</code>)</h4>
-                        <ul>
-                            <li><strong>Primary Sections:</strong>
-                                <ul>
-                                    <li><code>global-header-slider</code>: Hero section with product integration</li>
-                                    <li><code>global-featured-collection</code>: Featured product collections</li>
-                                    <li><code>global-features-grid</code>: Feature highlights and benefits</li>
-                                    <li><code>global-blog-posts</code>: Latest blog content integration</li>
-                                    <li><code>global-newsletter-banner</code>: Newsletter signup promotion</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <h4>Core Page Data</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Required For</th>
+                                <th>Minimum Standard</th>
+                                <th>Validation</th>
+                            </tr>
+                            <tr>
+                                <td>Page Title</td>
+                                <td>SEO, Navigation, Legal</td>
+                                <td>Clear, descriptive, brand-consistent</td>
+                                <td>50-60 characters, includes "XeroShoes" when appropriate</td>
+                            </tr>
+                            <tr>
+                                <td>URL Handle</td>
+                                <td>SEO, Technical</td>
+                                <td>SEO-friendly, lowercase, hyphenated</td>
+                                <td>No spaces, special characters, or uppercase letters</td>
+                            </tr>
+                            <tr>
+                                <td>Page Content</td>
+                                <td>Marketing, Legal, SEO</td>
+                                <td>Complete, accurate, benefit-focused</td>
+                                <td>Must include key information and call-to-action</td>
+                            </tr>
+                            <tr>
+                                <td>SEO Title</td>
+                                <td>SEO, Marketing</td>
+                                <td>Optimized for search engines</td>
+                                <td>50-60 characters, includes target keywords</td>
+                            </tr>
+                            <tr>
+                                <td>Meta Description</td>
+                                <td>SEO, Marketing</td>
+                                <td>Compelling description for search results</td>
+                                <td>150-160 characters, includes call-to-action</td>
+                            </tr>
+                        </table>
                         
-                        <h4>2. Product Template - "Product Detail Page" (<code>template-product.liquid</code>)</h4>
-                        <ul>
-                            <li><strong>Structure:</strong>
-                                <ul>
-                                    <li><code>product-comfort</code>: Comfort information and benefits</li>
-                                    <li><code>product-variant-attributes</code>: Size and color selection</li>
-                                    <li><code>product-collapsible</code>: Detailed product information</li>
-                                    <li><code>global-product-tabs</code>: Tabbed product details</li>
-                                    <li><code>upsell-products</code>: Related product recommendations</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <h4>3. Collection Template - "Product Collection Page" (<code>template-collection.liquid</code>)</h4>
-                        <ul>
-                            <li><strong>Structure:</strong>
-                                <ul>
-                                    <li><code>collection-banner</code>: Collection header with imagery</li>
-                                    <li><code>collection-list-style-1</code>: Product grid display</li>
-                                    <li><code>global-featured-products</code>: Featured products within collection</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <h4>Blog Post Data</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Required For</th>
+                                <th>Minimum Standard</th>
+                                <th>Validation</th>
+                            </tr>
+                            <tr>
+                                <td>Blog Title</td>
+                                <td>SEO, Marketing, Brand</td>
+                                <td>Engaging, keyword-optimized</td>
+                                <td>50-60 characters, includes target keywords</td>
+                            </tr>
+                            <tr>
+                                <td>Author</td>
+                                <td>Legal, Brand</td>
+                                <td>Valid author assignment</td>
+                                <td>Must be existing team member or approved contributor</td>
+                            </tr>
+                            <tr>
+                                <td>Featured Image</td>
+                                <td>Marketing, SEO</td>
+                                <td>High-quality, relevant imagery</td>
+                                <td>Minimum 1200x630px, optimized for social sharing</td>
+                            </tr>
+                            <tr>
+                                <td>Blog Content</td>
+                                <td>Marketing, SEO, Legal</td>
+                                <td>Complete, valuable, well-structured</td>
+                                <td>Minimum 300 words, includes headings and formatting</td>
+                            </tr>
+                            <tr>
+                                <td>Tags</td>
+                                <td>SEO, Organization</td>
+                                <td>Relevant categorization</td>
+                                <td>3-5 tags maximum, use existing tag structure</td>
+                            </tr>
+                        </table>
                     </section>
                     
-                    <section id="template-sections">
-                        <h3>Template Section Categories</h3>
+                    <section id="content-quality-standards">
+                        <h3>Content Quality Standards</h3>
+                        <p>All content must meet these quality benchmarks before publication:</p>
                         
-                        <h4>Core Content Sections</h4>
-                        <ul>
-                            <li><code>announcement-bar.liquid</code> - Promotional messaging banner</li>
-                            <li><code>global-header-slider.liquid</code> - Hero slider with product integration</li>
-                            <li><code>global-media-banner.liquid</code> - Media banner with video/image support</li>
-                            <li><code>global-page-header-banner.liquid</code> - Page header with background images</li>
-                        </ul>
+                        <h4>Writing Standards</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Standard</th>
+                                <th>Requirement</th>
+                                <th>Validation</th>
+                            </tr>
+                            <tr>
+                                <td>Tone & Voice</td>
+                                <td>Consistent with XeroShoes brand</td>
+                                <td>Review against brand guidelines</td>
+                            </tr>
+                            <tr>
+                                <td>Grammar & Spelling</td>
+                                <td>Error-free content</td>
+                                <td>Use spell-check and grammar tools</td>
+                            </tr>
+                            <tr>
+                                <td>Readability</td>
+                                <td>Clear, accessible language</td>
+                                <td>Target 8th grade reading level</td>
+                            </tr>
+                            <tr>
+                                <td>Call-to-Action</td>
+                                <td>Clear next steps for readers</td>
+                                <td>Include relevant CTA buttons or links</td>
+                            </tr>
+                        </table>
                         
-                        <h4>Product-Specific Sections</h4>
-                        <ul>
-                            <li><code>xero-custom-landing.liquid</code> - Custom barefoot shoe landing page</li>
-                            <li><code>product-comfort.liquid</code> - Product comfort information display</li>
-                            <li><code>product-comfort-dynamic.liquid</code> - Dynamic comfort data integration</li>
-                            <li><code>product-variant-attributes.liquid</code> - Product variant attribute display</li>
-                            <li><code>product-collapsible.liquid</code> - Collapsible product information sections</li>
-                        </ul>
+                        <h4>Technical Standards</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Standard</th>
+                                <th>Requirement</th>
+                                <th>Validation</th>
+                            </tr>
+                            <tr>
+                                <td>Mobile Responsiveness</td>
+                                <td>Content displays properly on all devices</td>
+                                <td>Test on mobile, tablet, and desktop</td>
+                            </tr>
+                            <tr>
+                                <td>Loading Speed</td>
+                                <td>Fast content loading</td>
+                                <td>Optimize images and media</td>
+                            </tr>
+                            <tr>
+                                <td>Accessibility</td>
+                                <td>WCAG 2.1 AA compliance</td>
+                                <td>Alt text for images, proper heading structure</td>
+                            </tr>
+                            <tr>
+                                <td>SEO Optimization</td>
+                                <td>Search engine friendly</td>
+                                <td>Proper meta tags, keyword usage, internal linking</td>
+                            </tr>
+                        </table>
                         
-                        <h4>Collection & Search Sections</h4>
-                        <ul>
-                            <li><code>collection-all-list.liquid</code> - Complete collection listing</li>
-                            <li><code>collection-list-style-1.liquid</code> - Styled collection grid display</li>
-                            <li><code>search-layer.liquid</code> - Advanced search interface</li>
-                            <li><code>predictive-search.liquid</code> - Predictive search functionality</li>
-                        </ul>
+                        <div class="alert warning">
+                            <strong>Publication Checklist:</strong> All items above must be completed before content can be published. Review each field in Shopify Admin and use the preview tools to verify how the content appears to customers.
+                        </div>
+                    </section>
+                </section>
+                
+                <section id="content-metafields">
+                    <h2>Content Metafields & Custom Data</h2>
+                    <p>XeroShoes uses metafields to store structured content data, SEO information, and custom attributes for pages and blog posts.</p>
+                    
+                    <section id="field-ownership">
+                        <h3>Field Ownership & Management</h3>
+                        <p>Understanding who controls and manages different content fields:</p>
                         
-                        <h4>Blog & Content Sections</h4>
-                        <ul>
-                            <li><code>blog-listing.liquid</code> - Blog post listing page</li>
-                            <li><code>blog-banner-slider.liquid</code> - Blog banner with slider functionality</li>
-                            <li><code>press-blog-post.liquid</code> - Press and media blog posts</li>
-                            <li><code>global-blog-posts.liquid</code> - Global blog post integration</li>
+                        <div class="alert info">
+                            <strong>Field Ownership:</strong>
+                            <ul>
+                                <li><strong>User-Editable:</strong> Content team can modify directly in Shopify Admin</li>
+                                <li><strong>App-Controlled:</strong> Managed by third-party apps (SEO, analytics, etc.)</li>
+                                <li><strong>System-Generated:</strong> Automatically created by Shopify or theme</li>
                         </ul>
+                        </div>
+                    </section>
+                    
+                    
+                    <section id="page-metafields">
+                        <h3>Page Metafields</h3>
+                        <p>Custom data fields available for page content management:</p>
+                        
+                        <h4>SEO Metafields</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>title_tag</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Custom page title for SEO</td>
+                                <td>"Barefoot Running Guide - XeroShoes"</td>
+                            </tr>
+                            <tr>
+                                <td>description_tag</td>
+                                <td>Multi-line text</td>
+                                <td>User-Editable</td>
+                                <td>Meta description for search results</td>
+                                <td>"Learn the benefits of barefoot running with our comprehensive guide. Discover proper form, benefits, and best practices."</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Content Metafields</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>custom.faqs</td>
+                                <td>List of metaobject references</td>
+                                <td>User-Editable</td>
+                                <td>FAQ sections for pages</td>
+                                <td>Links to FAQ metaobjects with questions and answers</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Page metafields in Shopify Admin showing SEO fields and custom FAQ references</p>
+                        </div>
+                    </section>
+                    
+                    <section id="blog-metafields">
+                        <h3>Blog Post Metafields</h3>
+                        <p>Custom data fields available for blog post management:</p>
+                        
+                        <h4>SEO Metafields</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>title_tag</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Custom blog post title for SEO</td>
+                                <td>"Working Out With Your Dog - XeroShoes"</td>
+                            </tr>
+                            <tr>
+                                <td>description_tag</td>
+                                <td>Multi-line text</td>
+                                <td>User-Editable</td>
+                                <td>Meta description for search results</td>
+                                <td>"Discover fun ways to exercise with your dog. Learn about the benefits of working out together and get workout ideas."</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Content Metafields</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>custom.related_products</td>
+                                <td>Collection reference</td>
+                                <td>User-Editable</td>
+                                <td>Related product recommendations</td>
+                                <td>Links to product collections relevant to blog content</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Blog post metafields in Shopify Admin showing SEO fields and related products</p>
+                        </div>
+                    </section>
+                    
+                    <section id="seo-metafields">
+                        <h3>SEO Metafields</h3>
+                        <p>Specialized metafields for search engine optimization:</p>
+                        
+                        <div class="alert info">
+                            <strong>SEO Metaobject Integration:</strong> The theme uses <code>category_meta_data_meta_title_and_description</code> metaobjects to automatically apply SEO data based on blog post tags. This ensures consistent SEO optimization across content categories.
+                        </div>
+                        
+                        <h4>Automatic SEO Application</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Trigger</th>
+                                <th>Action</th>
+                                <th>Result</th>
+                            </tr>
+                            <tr>
+                                <td>Blog post with tag</td>
+                                <td>Theme checks metaobject</td>
+                                <td>Applies custom title and description</td>
+                            </tr>
+                            <tr>
+                                <td>Tag matches category</td>
+                                <td>Uses metaobject data</td>
+                                <td>Consistent SEO across category</td>
+                            </tr>
+                            <tr>
+                                <td>No tag match</td>
+                                <td>Uses default values</td>
+                                <td>Fallback to shop name/description</td>
+                            </tr>
+                        </table>
                     </section>
                 </section>
                 
                 <section id="content-sections">
-                    <h2>Content Sections Inventory</h2>
-                    <p>Complete inventory of all custom sections available for content management across the XeroShoes platform.</p>
+                    <h2>Content Sections & Templates</h2>
+                    <p>Complete inventory of content sections and templates available for content management across the XeroShoes platform.</p>
                     
-                    <section id="navigation-sections">
-                        <h3>Navigation & Header Sections</h3>
-                        <ul>
-                            <li><code>header.liquid</code> - Main site navigation and header</li>
-                            <li><code>announcement-bar.liquid</code> - Top promotional banner</li>
-                            <li><code>featured-mobile-header.liquid</code> - Mobile-specific header features</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="product-display-sections">
-                        <h3>Product Display Sections</h3>
-                        <ul>
-                            <li><code>product-with-image.liquid</code> - Product display with imagery</li>
-                            <li><code>product-two-image-text.liquid</code> - Two-column product layout</li>
-                            <li><code>product-media-banner.liquid</code> - Product media showcase</li>
-                            <li><code>bundle-thickness-selector.liquid</code> - Product bundle selection</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="content-media-sections">
-                        <h3>Content & Media Sections</h3>
-                        <ul>
-                            <li><code>media-with-text.liquid</code> - Media content with text overlay</li>
-                            <li><code>image-video-card.liquid</code> - Card-based media display</li>
-                            <li><code>barefoot-image-with-text.liquid</code> - Brand-specific content blocks</li>
-                            <li><code>seo-banner.liquid</code> - SEO-optimized banner content</li>
-                        </ul>
-                    </section>
-                </section>
-                
-                <section id="metafield-integration">
-                    <h2>Metafield Integration</h2>
-                    <p>XeroShoes uses an extensive metafield system to store structured product data, content information, and custom attributes.</p>
-                    
-                    <section id="product-metafields">
-                        <h3>Product Metafields</h3>
-                        <ul>
-                            <li><strong>Display Data:</strong>
-                                <ul>
-                                    <li><code>custom.display_title</code> - Custom product display title</li>
-                                    <li><code>custom.feed_description</code> - Product feed description</li>
-                                    <li><code>custom.product_highlights</code> - Rich text product highlights</li>
-                                    <li><code>custom.product_description</code> - Metaobject reference for detailed descriptions</li>
-                                </ul>
-                            </li>
-                            <li><strong>Product Attributes:</strong>
-                                <ul>
-                                    <li><code>custom.color</code> - Product color information</li>
-                                    <li><code>custom.activity</code> - Activity type (running, hiking, casual)</li>
-                                    <li><code>custom.gender</code> - Gender targeting</li>
-                                    <li><code>custom.collection</code> - Collection associations</li>
-                                </ul>
-                            </li>
-                            <li><strong>Media & Visuals:</strong>
-                                <ul>
-                                    <li><code>custom.mega_menu_image</code> - Mega menu display image</li>
-                                    <li><code>custom.secondary_hover_image</code> - Product hover state image</li>
-                                    <li><code>custom.description_featured_image</code> - Description section featured image</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                    
-                    <section id="content-metafields">
-                        <h3>Content Metafields</h3>
-                        <ul>
-                            <li><strong>Page Data:</strong>
-                                <ul>
-                                    <li><code>custom.page_subtitle</code> - Page subtitle for headers</li>
-                                    <li><code>custom.featured_image</code> - Page featured image</li>
-                                    <li><code>custom.content_sections</code> - Custom content blocks</li>
-                                </ul>
-                            </li>
-                            <li><strong>Blog Data:</strong>
-                                <ul>
-                                    <li><code>custom.blog_category</code> - Blog post categorization</li>
-                                    <li><code>custom.reading_time</code> - Estimated reading time</li>
-                                    <li><code>custom.author_bio</code> - Author information</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                </section>
-                
-                <section id="content-workflows">
-                    <h2>Content Management Workflows</h2>
-                    <p>Standardized procedures for managing content across both XeroShoes instances.</p>
-                    
-                    <section id="page-creation">
-                        <h3>Page Creation Workflow</h3>
-                        <ol>
-                            <li>Access Shopify Admin → Online Store → Pages</li>
-                            <li>Click "Add page" to create new page</li>
-                            <li>Enter page title and URL handle</li>
-                            <li>Select appropriate template from available options</li>
-                            <li>Add content using rich text editor</li>
-                            <li>Configure SEO settings (title, description, keywords)</li>
-                            <li>Set visibility and publication date</li>
-                            <li>Save and publish page</li>
-                            <li>Repeat process on both US and EU instances</li>
-                        </ol>
-                    </section>
-                    
-                    <section id="blog-management">
-                        <h3>Blog Post Management</h3>
-                        <ol>
-                            <li>Access Online Store → Blog posts</li>
-                            <li>Create new blog post with title and content</li>
-                            <li>Add featured image and excerpt</li>
-                            <li>Set publication date and author</li>
-                            <li>Add relevant tags for categorization</li>
-                            <li>Configure SEO metadata</li>
-                            <li>Publish and verify on live site</li>
-                        </ol>
-                    </section>
-                    
-                    <section id="content-updates">
-                        <h3>Content Update Procedures</h3>
-                        <h4>Regular Content Updates</h4>
-                        <ol>
-                            <li>Review existing content for accuracy</li>
-                            <li>Update outdated information</li>
-                            <li>Refresh images and media as needed</li>
-                            <li>Update SEO metadata if content changes significantly</li>
-                            <li>Test content on both desktop and mobile</li>
-                            <li>Apply changes to both US and EU instances</li>
-                        </ol>
+                    <section id="page-templates">
+                        <h3>Page Templates</h3>
+                        <p>XeroShoes has 50+ specialized page templates built by Praella for different content types and use cases:</p>
                         
-                        <h4>Seasonal Content Updates</h4>
-                        <ol>
-                            <li>Identify seasonal content requiring updates</li>
-                            <li>Update product descriptions and features</li>
-                            <li>Refresh promotional banners and announcements</li>
-                            <li>Update collection pages and featured products</li>
-                            <li>Review and update blog content for seasonal relevance</li>
-                        </ol>
+                        <h4>Core Page Templates</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Template</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Standard Page</td>
+                                <td>page.json</td>
+                                <td>General content pages</td>
+                                <td>Basic informational pages</td>
+                            </tr>
+                            <tr>
+                                <td>About Us</td>
+                                <td>page.about_us.json</td>
+                                <td>Company information</td>
+                                <td>Brand story, company details</td>
+                            </tr>
+                            <tr>
+                                <td>Contact Us</td>
+                                <td>page.contact-us.json</td>
+                                <td>Contact information</td>
+                                <td>Customer service contact</td>
+                            </tr>
+                            <tr>
+                                <td>FAQ</td>
+                                <td>page.faq.json</td>
+                                <td>Frequently asked questions</td>
+                                <td>Customer support pages</td>
+                            </tr>
+                            <tr>
+                                <td>Guidelines</td>
+                                <td>page.guidelines.json</td>
+                                <td>Brand and usage guidelines</td>
+                                <td>Brand resources, sizing guides</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Product Category Templates</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Template</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Barefoot Shoes</td>
+                                <td>page.barefoot-shoes-minimalist.json</td>
+                                <td>Barefoot shoes category</td>
+                                <td>Main barefoot shoes landing</td>
+                            </tr>
+                            <tr>
+                                <td>Minimalist Sandals</td>
+                                <td>page.minimalist-sandals.json</td>
+                                <td>Sandals category</td>
+                                <td>Sandals product category</td>
+                            </tr>
+                            <tr>
+                                <td>Hiking</td>
+                                <td>page.hiking.json</td>
+                                <td>Hiking shoes category</td>
+                                <td>Hiking product category</td>
+                            </tr>
+                            <tr>
+                                <td>Trail Running</td>
+                                <td>page.trail-running.json</td>
+                                <td>Trail running category</td>
+                                <td>Trail running products</td>
+                            </tr>
+                            <tr>
+                                <td>Recovery Shoes</td>
+                                <td>page.recovery-shoes.json</td>
+                                <td>Recovery shoes category</td>
+                                <td>Recovery footwear</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Activity-Specific Templates</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Template</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Running</td>
+                                <td>page.pick-a-running-shoe.json</td>
+                                <td>Running shoe selection</td>
+                                <td>Running shoe finder</td>
+                            </tr>
+                            <tr>
+                                <td>Basketball</td>
+                                <td>page.basketball.json</td>
+                                <td>Basketball shoes</td>
+                                <td>Basketball product category</td>
+                            </tr>
+                            <tr>
+                                <td>Yoga</td>
+                                <td>page.yoga.json</td>
+                                <td>Yoga shoes</td>
+                                <td>Yoga product category</td>
+                            </tr>
+                            <tr>
+                                <td>CrossFit</td>
+                                <td>page.crossfit.json</td>
+                                <td>CrossFit shoes</td>
+                                <td>CrossFit product category</td>
+                            </tr>
+                            <tr>
+                                <td>Climbing</td>
+                                <td>page.climbing.json</td>
+                                <td>Climbing shoes</td>
+                                <td>Climbing product category</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Brand & Community Templates</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Template</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Xero Story</td>
+                                <td>page.xero-shoes-story.json</td>
+                                <td>Brand story</td>
+                                <td>Company history, mission</td>
+                            </tr>
+                            <tr>
+                                <td>Xero Circle</td>
+                                <td>page.xero-circle.json</td>
+                                <td>Community program</td>
+                                <td>Community engagement</td>
+                            </tr>
+                            <tr>
+                                <td>Xero Racing</td>
+                                <td>page.xero-racing.json</td>
+                                <td>Racing program</td>
+                                <td>Racing team, events</td>
+                            </tr>
+                            <tr>
+                                <td>Press</td>
+                                <td>page.press.json</td>
+                                <td>Media resources</td>
+                                <td>Press releases, media kit</td>
+                            </tr>
+                            <tr>
+                                <td>Reviews</td>
+                                <td>page.xero-shoes-reviews.json</td>
+                                <td>Customer reviews</td>
+                                <td>Review aggregation</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Customer Service Templates</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Template</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Returns</td>
+                                <td>page.returns.json</td>
+                                <td>Return policy</td>
+                                <td>Return instructions</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>page.warranty.json</td>
+                                <td>Warranty information</td>
+                                <td>Warranty terms</td>
+                            </tr>
+                            <tr>
+                                <td>Sizing</td>
+                                <td>page.sizing.json</td>
+                                <td>Sizing guide</td>
+                                <td>Size charts, fit guide</td>
+                            </tr>
+                            <tr>
+                                <td>Shoe Finder</td>
+                                <td>page.shoe-finder.json</td>
+                                <td>Product recommendation</td>
+                                <td>Shoe selection tool</td>
+                            </tr>
+                            <tr>
+                                <td>Accessibility Support</td>
+                                <td>page.accessibility-support.json</td>
+                                <td>Accessibility information</td>
+                                <td>Accessibility features</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="alert info">
+                            <strong>Template Selection:</strong> Each template is optimized for specific content types and includes relevant sections, styling, and functionality. Choose the template that best matches your content purpose for optimal user experience.
+                        </div>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Page template selection in Shopify Admin showing the extensive list of XeroShoes-specific templates</p>
+                        </div>
+                    </section>
+                    
+                    <section id="blog-templates">
+                        <h3>Blog Templates</h3>
+                        <p>Specialized templates for blog content management:</p>
+                        
+                        <h4>Blog Templates</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Template</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Standard Blog</td>
+                                <td>template-blog.liquid</td>
+                                <td>General blog posts</td>
+                                <td>Educational content, news</td>
+                            </tr>
+                            <tr>
+                                <td>Press Blog</td>
+                                <td>press-blog-post.liquid</td>
+                                <td>Press and media content</td>
+                                <td>Press releases, media coverage</td>
+                            </tr>
+                            <tr>
+                                <td>Article Template</td>
+                                <td>template-article.liquid</td>
+                                <td>Individual blog post display</td>
+                                <td>Single blog post pages</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Blog template showing article layout with featured image, content, and related products</p>
+                        </div>
+                    </section>
+                    
+                    <section id="content-blocks">
+                        <h3>Content Blocks</h3>
+                        <p>XeroShoes-specific content blocks built by Praella for brand-consistent content management:</p>
+                        
+                        <h4>XeroShoes Custom Sections</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Section</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Xero Complete Section</td>
+                                <td>xero-custom-landing.liquid</td>
+                                <td>Complete barefoot shoes landing page</td>
+                                <td>Main landing pages, product category pages</td>
+                            </tr>
+                            <tr>
+                                <td>Barefoot Image with Text</td>
+                                <td>barefoot-image-with-text.liquid</td>
+                                <td>Brand-specific content with dual images</td>
+                                <td>Product pages, educational content</td>
+                            </tr>
+                            <tr>
+                                <td>Custom Section</td>
+                                <td>custom-section.liquid</td>
+                                <td>Flexible custom content container</td>
+                                <td>Specialized page layouts</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Standard Content Blocks</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Block</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Page Content</td>
+                                <td>blocks/page.liquid</td>
+                                <td>Rich text content display</td>
+                                <td>General page content</td>
+                            </tr>
+                            <tr>
+                                <td>Media with Text</td>
+                                <td>media-with-text.liquid</td>
+                                <td>Image/video with text overlay</td>
+                                <td>Hero sections, feature highlights</td>
+                            </tr>
+                            <tr>
+                                <td>Image Video Card</td>
+                                <td>image-video-card.liquid</td>
+                                <td>Card-based media display</td>
+                                <td>Product showcases, testimonials</td>
+                            </tr>
+                            <tr>
+                                <td>SEO Banner</td>
+                                <td>seo-banner.liquid</td>
+                                <td>SEO-optimized banner content</td>
+                                <td>Header banners with keywords</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Global Content Sections</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Section</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Global Media Banner</td>
+                                <td>global-media-banner.liquid</td>
+                                <td>Media banner with video/image support</td>
+                                <td>Site-wide promotional banners</td>
+                            </tr>
+                            <tr>
+                                <td>Global Page Header Banner</td>
+                                <td>global-page-header-banner.liquid</td>
+                                <td>Page header with background images</td>
+                                <td>Page headers with background imagery</td>
+                            </tr>
+                            <tr>
+                                <td>Global Blog Posts</td>
+                                <td>global-blog-posts.liquid</td>
+                                <td>Global blog post integration</td>
+                                <td>Blog posts on homepage, other pages</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="alert info">
+                            <strong>XeroShoes Branding:</strong> The "Xero Complete Section" and "Barefoot Image with Text" sections are specifically built for XeroShoes branding, featuring custom colors (#53CAEC, #0F172B, #F3F0EA), fonts (Paralucent, Inter), and barefoot-specific messaging.
+                        </div>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Xero Complete Section showing hero, value proposition, and three pillars layout</p>
+                        </div>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Barefoot Image with Text section showing dual-image layout with brand messaging</p>
+                        </div>
+                    </section>
+                    
+                    <section id="content-configuration">
+                        <h3>Content Block Configuration</h3>
+                        <p>How Praella has configured XeroShoes content blocks for optimal brand consistency and user experience:</p>
+                        
+                        <h4>Barefoot Image with Text Configuration</h4>
+                        <p><strong>Purpose:</strong> Educational content about barefoot shoes with dual-image layout</p>
+                        <p><strong>Praella Configuration Example:</strong></p>
+                        
+                        <div class="alert info">
+                            <strong>Heading Configuration:</strong>
+                            <ul>
+                                <li><strong>Text:</strong> "Barefoot Shoes" (H2 heading)</li>
+                                <li><strong>Font Family:</strong> font-family-heading (Paralucent)</li>
+                                <li><strong>Alignment:</strong> Left-aligned on desktop and mobile</li>
+                                <li><strong>Spacing:</strong> No top margin, 2-unit bottom margin</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="alert info">
+                            <strong>Content Configuration:</strong>
+                            <ul>
+                                <li><strong>Text:</strong> "Barefoot Shoes give you that natural, free, fun feeling of being in bare feet — letting your toes spread, and your feet bend and move and flex — while letting you safely FEEL the world beneath you. All those sensors in your soles give your brain the feedback it needs to help your body move better, efficiently, and enjoyably. Slip on a pair of Xero Shoes and Live Life Feet First!"</li>
+                                <li><strong>Font Family:</strong> font-family-base (Inter)</li>
+                                <li><strong>Text Size:</strong> fs-base (standard body text)</li>
+                                <li><strong>Font Weight:</strong> fw-normal (regular weight)</li>
+                                <li><strong>Alignment:</strong> Left-aligned</li>
+                            </ul>
+                        </div>
+                        
+                        <h4>Global Page Header Banner Configuration</h4>
+                        <p><strong>Purpose:</strong> Hero banners for category pages with responsive images</p>
+                        <p><strong>Praella Configuration Example (Barefoot Shoes Page):</strong></p>
+                        
+                        <div class="alert info">
+                            <strong>Image Configuration:</strong>
+                            <ul>
+                                <li><strong>Desktop Image:</strong> "Best-Minimalist-barefoot-shoes.jpg"</li>
+                                <li><strong>Mobile Image:</strong> "Best-Minimalist-barefoot-shoes-m.jpg"</li>
+                                <li><strong>Container Width:</strong> fluid_layout (full width)</li>
+                                <li><strong>Overlay:</strong> Disabled for clean image display</li>
+                                </ul>
+                        </div>
+                        
+                        <div class="alert info">
+                            <strong>Layout Configuration:</strong>
+                            <ul>
+                                <li><strong>Display:</strong> d-flex (flexbox layout)</li>
+                                <li><strong>Direction:</strong> flex-md-row (horizontal on desktop)</li>
+                                <li><strong>Mobile Direction:</strong> flex-column (vertical on mobile)</li>
+                                <li><strong>Alignment:</strong> Center-aligned content</li>
+                                <li><strong>Height:</strong> medium (standard banner height)</li>
+                                </ul>
+                        </div>
+                        
+                        <h4>Custom Section Configuration</h4>
+                        <p><strong>Purpose:</strong> Flexible content containers with precise spacing and layout control</p>
+                        <p><strong>Praella Configuration Example:</strong></p>
+                        
+                        <div class="alert info">
+                            <strong>Container Configuration:</strong>
+                            <ul>
+                                <li><strong>Container Width:</strong> container (standard width)</li>
+                                <li><strong>Display:</strong> d-flex (flexbox layout)</li>
+                                <li><strong>Direction:</strong> flex-md-column (vertical on desktop)</li>
+                                <li><strong>Alignment:</strong> align-items-md-start (left-aligned)</li>
+                                <li><strong>Justify Content:</strong> justify-content-md-start (top-aligned)</li>
+                                </ul>
+                        </div>
+                        
+                        <div class="alert info">
+                            <strong>Spacing Configuration:</strong>
+                            <ul>
+                                <li><strong>Desktop Padding:</strong> pt-md-9, pb-md-9 (large top/bottom padding)</li>
+                                <li><strong>Mobile Padding:</strong> pt-5, pb-1 (medium top, small bottom)</li>
+                                <li><strong>Horizontal Padding:</strong> ps-md-3, pe-md-3 (small left/right padding)</li>
+                                <li><strong>Gap Control:</strong> No gaps between elements</li>
+                        </ul>
+                        </div>
+                        
+                        <h4>Configuration Best Practices</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Element</th>
+                                <th>Praella Standard</th>
+                                <th>Purpose</th>
+                            </tr>
+                            <tr>
+                                <td>Headings</td>
+                                <td>font-family-heading, left-aligned</td>
+                                <td>Brand consistency with Paralucent font</td>
+                            </tr>
+                            <tr>
+                                <td>Body Text</td>
+                                <td>font-family-base, fs-base, fw-normal</td>
+                                <td>Readability with Inter font</td>
+                            </tr>
+                            <tr>
+                                <td>Spacing</td>
+                                <td>Consistent margin/padding classes</td>
+                                <td>Visual rhythm and hierarchy</td>
+                            </tr>
+                            <tr>
+                                <td>Images</td>
+                                <td>Desktop + mobile variants</td>
+                                <td>Responsive optimization</td>
+                            </tr>
+                            <tr>
+                                <td>Containers</td>
+                                <td>container, small_container_layout</td>
+                                <td>Content width consistency</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="alert warning">
+                            <strong>Configuration Guidelines:</strong> When configuring content blocks, follow Praella's established patterns for spacing, typography, and responsive behavior to maintain brand consistency across all pages.
+                        </div>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Content block configuration interface in Shopify Admin showing Praella's standard settings</p>
+                        </div>
+                    </section>
+                    
+                    <section id="media-specifications">
+                        <h3>Image & Media Specifications</h3>
+                        <p>Technical requirements and specifications for images and media in XeroShoes content blocks:</p>
+                        
+                        <h4>Image Size Requirements</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Content Block</th>
+                                <th>Minimum Width</th>
+                                <th>Recommended Width</th>
+                                <th>Aspect Ratio</th>
+                                <th>Format</th>
+                            </tr>
+                            <tr>
+                                <td>Global Page Header Banner</td>
+                                <td>1200px</td>
+                                <td>1920px</td>
+                                <td>16:9 or 21:9</td>
+                                <td>JPG, WebP</td>
+                            </tr>
+                            <tr>
+                                <td>Barefoot Image with Text</td>
+                                <td>800px</td>
+                                <td>1200px</td>
+                                <td>4:3 or 3:2</td>
+                                <td>JPG, WebP</td>
+                            </tr>
+                            <tr>
+                                <td>Media with Text</td>
+                                <td>600px</td>
+                                <td>1000px</td>
+                                <td>16:9 or 4:3</td>
+                                <td>JPG, WebP, MP4</td>
+                            </tr>
+                            <tr>
+                                <td>Image Video Card</td>
+                                <td>400px</td>
+                                <td>600px</td>
+                                <td>1:1 or 4:3</td>
+                                <td>JPG, WebP, MP4</td>
+                            </tr>
+                            <tr>
+                                <td>Blog Featured Image</td>
+                                <td>1200px</td>
+                                <td>1920px</td>
+                                <td>16:9</td>
+                                <td>JPG, WebP</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Responsive Image Breakpoints</h4>
+                        <p>The theme automatically generates responsive images at these breakpoints:</p>
+                        
+                        <div class="alert info">
+                            <strong>Responsive Image Sizes:</strong>
+                            <ul>
+                                <li><strong>350w:</strong> Mobile small screens</li>
+                                <li><strong>550w:</strong> Mobile large screens</li>
+                                <li><strong>750w:</strong> Tablet portrait</li>
+                                <li><strong>991w:</strong> Tablet landscape</li>
+                                <li><strong>1200w:</strong> Desktop small</li>
+                                <li><strong>1500w:</strong> Desktop large</li>
+                            </ul>
+                        </div>
+                        
+                        <h4>Image Optimization Settings</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Setting</th>
+                                <th>Value</th>
+                                <th>Purpose</th>
+                            </tr>
+                            <tr>
+                                <td>Loading Strategy</td>
+                                <td>Lazy loading (default)</td>
+                                <td>Performance optimization</td>
+                            </tr>
+                            <tr>
+                                <td>Preload Priority</td>
+                                <td>High for above-fold images</td>
+                                <td>Critical rendering path</td>
+                            </tr>
+                            <tr>
+                                <td>Alt Text</td>
+                                <td>Required, descriptive</td>
+                                <td>Accessibility compliance</td>
+                            </tr>
+                            <tr>
+                                <td>File Size</td>
+                                <td>&lt; 500KB per image</td>
+                                <td>Loading performance</td>
+                            </tr>
+                            <tr>
+                                <td>Format Priority</td>
+                                <td>WebP, then JPG</td>
+                                <td>Modern browser optimization</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Mobile Image Requirements</h4>
+                        <p>For content blocks that support separate mobile images:</p>
+                        
+                        <div class="alert warning">
+                            <strong>Mobile Image Specifications:</strong>
+                            <ul>
+                                <li><strong>Naming Convention:</strong> Add "-m" suffix (e.g., "hero-image.jpg" → "hero-image-m.jpg")</li>
+                                <li><strong>Dimensions:</strong> 750px width minimum, 1200px recommended</li>
+                                <li><strong>Aspect Ratio:</strong> 16:9 or 4:3 for mobile optimization</li>
+                                <li><strong>File Size:</strong> &lt; 300KB for mobile performance</li>
+                                <li><strong>Content:</strong> Cropped/optimized for mobile viewing</li>
+                                </ul>
+                        </div>
+                        
+                        <h4>Video Specifications</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Video Type</th>
+                                <th>Format</th>
+                                <th>Resolution</th>
+                                <th>Duration</th>
+                                <th>File Size</th>
+                            </tr>
+                            <tr>
+                                <td>Background Video</td>
+                                <td>MP4</td>
+                                <td>1920x1080</td>
+                                <td>10-30 seconds</td>
+                                <td>&lt; 5MB</td>
+                            </tr>
+                            <tr>
+                                <td>Product Video</td>
+                                <td>MP4</td>
+                                <td>1280x720</td>
+                                <td>30-60 seconds</td>
+                                <td>&lt; 10MB</td>
+                            </tr>
+                            <tr>
+                                <td>UGC Video</td>
+                                <td>MP4</td>
+                                <td>1080x1080</td>
+                                <td>15-45 seconds</td>
+                                <td>&lt; 8MB</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Image Naming Conventions</h4>
+                        <div class="alert info">
+                            <strong>Praella Naming Standards:</strong>
+                            <ul>
+                                <li><strong>Category Pages:</strong> "Best-[Category]-[Type].jpg" (e.g., "Best-Minimalist-barefoot-shoes.jpg")</li>
+                                <li><strong>Mobile Variants:</strong> Add "-m" suffix (e.g., "Best-Minimalist-barefoot-shoes-m.jpg")</li>
+                                <li><strong>Product Images:</strong> "[STYLE]-[COLOR]_[Product-Name]_[Color-Name]_[Size].jpg"</li>
+                                <li><strong>Blog Images:</strong> "[Topic]-[descriptive-name].jpg"</li>
+                                <li><strong>Banner Images:</strong> "[Page-Name]-[descriptive].jpg"</li>
+                                </ul>
+                        </div>
+                        
+                        <h4>Accessibility Requirements</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Requirement</th>
+                                <th>Specification</th>
+                                <th>Implementation</th>
+                            </tr>
+                            <tr>
+                                <td>Alt Text</td>
+                                <td>Descriptive, contextual</td>
+                                <td>Required for all images</td>
+                            </tr>
+                            <tr>
+                                <td>Color Contrast</td>
+                                <td>WCAG 2.1 AA compliant</td>
+                                <td>4.5:1 minimum ratio</td>
+                            </tr>
+                            <tr>
+                                <td>Text Overlay</td>
+                                <td>Readable on all backgrounds</td>
+                                <td>Use overlay or text shadows</td>
+                            </tr>
+                            <tr>
+                                <td>Focus Indicators</td>
+                                <td>Visible keyboard navigation</td>
+                                <td>Theme default styling</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="alert success">
+                            <strong>Image Quality Guidelines:</strong> All images should be high-quality, professionally shot, and optimized for web delivery. Use consistent lighting, composition, and styling to maintain brand visual consistency across all content blocks.
+                        </div>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Image upload interface in Shopify Admin showing file size limits and format options</p>
+                        </div>
+                    </section>
+                    
+                    <section id="media-sections">
+                        <h3>Media Sections</h3>
+                        <p>Specialized sections for media-rich content:</p>
+                        
+                        <h4>Blog Media Sections</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Section</th>
+                                <th>File</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Blog Listing</td>
+                                <td>blog-listing.liquid</td>
+                                <td>Blog post listing page</td>
+                                <td>Main blog page with post grid</td>
+                            </tr>
+                            <tr>
+                                <td>Blog Banner Slider</td>
+                                <td>blog-banner-slider.liquid</td>
+                                <td>Blog banner with slider functionality</td>
+                                <td>Featured blog posts carousel</td>
+                            </tr>
+                            <tr>
+                                <td>Global Blog Posts</td>
+                                <td>global-blog-posts.liquid</td>
+                                <td>Global blog post integration</td>
+                                <td>Blog posts on homepage, other pages</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Blog listing page showing post grid with featured images and excerpts</p>
+                        </div>
                     </section>
                 </section>
+                
+                
+                <div class="alert info">
+                    <strong>Data Export Note:</strong> All specific counts and statistics are based on data exported on October 20, 2025.¹
+                </div>
             </main>
         </div>
     </div>

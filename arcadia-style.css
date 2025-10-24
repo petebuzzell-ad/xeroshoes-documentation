@@ -257,6 +257,28 @@ tr:nth-child(even) {
     color: #721c24;
 }
 
+/* Screenshot Placeholder Styles */
+.screenshot-placeholder {
+    background-color: #f8f9fa;
+    border: 2px dashed #6c757d;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.screenshot-placeholder p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.screenshot-placeholder strong {
+    color: #495057;
+    font-weight: 600;
+}
+
 .critical {
     background: #f8d7da;
     border-left-color: var(--deep-red);

@@ -24,12 +24,6 @@
             <nav class="toc-sidebar">
                 <h3>Table of Contents</h3>
                 <ul>
-                    <li><a href="#product-inventory">Product Inventory</a>
-                        <ul>
-                            <li><a href="#product-categories">Product Categories</a></li>
-                            <li><a href="#instance-status">Instance Status</a></li>
-                        </ul>
-                    </li>
                     <li><a href="#product-data-standards">Product Data Standards</a>
                         <ul>
                             <li><a href="#required-information">Required Information</a></li>
@@ -38,8 +32,25 @@
                     </li>
                     <li><a href="#metafields">Metafields & Custom Data</a>
                         <ul>
+                            <li><a href="#field-ownership">Field Ownership & Management</a></li>
+                            <li><a href="#data-completeness">Data Status Analysis</a></li>
                             <li><a href="#core-metafields">Core Product Metafields</a></li>
+                            <li><a href="#variant-metafields">Variant Metafields</a></li>
+                            <li><a href="#third-party-integrations">Third-Party App Integrations</a></li>
                             <li><a href="#draft-variant">Draft Variant Metafield</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#metaobjects">Metaobjects & Custom Content</a>
+                        <ul>
+                            <li><a href="#product-content-metaobjects">Product Content Metaobjects</a></li>
+                            <li><a href="#product-description-metaobject">Product Description Metaobject</a></li>
+                            <li><a href="#media-with-text-metaobject">Media with Text Metaobject</a></li>
+                            <li><a href="#faq-metaobject">FAQ Metaobject</a></li>
+                            <li><a href="#care-instructions-metaobject">Care Instructions Metaobject</a></li>
+                            <li><a href="#comfort-section-metaobject">Comfort Section Metaobject</a></li>
+                            <li><a href="#attribute-galleries-metaobject">Attribute Galleries Metaobject</a></li>
+                            <li><a href="#sizing-chart-metaobject">Sizing Chart Metaobject</a></li>
+                            <li><a href="#shopify-taxonomy-metaobjects">Shopify Taxonomy Metaobjects</a></li>
                         </ul>
                     </li>
                     <li><a href="#variant-visibility-management">Variant Visibility Management</a>
@@ -53,84 +64,290 @@
             
             <!-- Main Content -->
             <main>
-                <section id="product-inventory">
-                    <h2>Product Inventory</h2>
-                    <p>Product inventory management across both XeroShoes instances with synchronized catalog structure.</p>
+                
+                <section id="product-data-standards">
+                    <h2>Product Data Standards</h2>
+                    <p>Minimum data requirements for product publication across all business functions. Every product must meet these standards before going live.</p>
                     
-                    <section id="instance-status">
-                        <h3>Instance Status</h3>
+                    <section id="required-information">
+                        <h3>Minimum Required Data</h3>
+                        <p>Products cannot be published without completing all items in this checklist:</p>
+                        <h4>Core Product Data</h4>
                         <table class="data-table">
                             <tr>
-                                <th>Instance</th>
-                                <th>Status</th>
-                                <th>Product Types</th>
-                                <th>Collection Structure</th>
+                                <th>Field</th>
+                                <th>Required For</th>
+                                <th>Minimum Standard</th>
+                                <th>Validation</th>
                             </tr>
                             <tr>
-                                <td>US (xeroshoes.com)</td>
-                                <td>Active - Primary</td>
-                                <td>Barefoot shoes, sandals, boots, accessories</td>
-                                <td>Smart collections and custom collections</td>
+                                <td>Product Title</td>
+                                <td>SEO, Merchandising, Legal</td>
+                                <td>Clear, descriptive, includes key attributes</td>
+                                <td>50-60 characters, no special characters</td>
                             </tr>
                             <tr>
-                                <td>EU (xeroshoes.eu)</td>
-                                <td>Active</td>
-                                <td>Not documented</td>
-                                <td>Not documented</td>
+                                <td>Product Description</td>
+                                <td>SEO, Marketing, Legal</td>
+                                <td>Benefit-focused, includes materials & care (via metaobjects and feed_description)</td>
+                                <td>Must include key features and benefits. Feed description optimized for search and aio.</td>
+                            </tr>
+                            <tr>
+                                <td>Product Type</td>
+                                <td>Fulfillment, Merchandising</td>
+                                <td>Standardized category assignment</td>
+                                <td>Must match existing product types</td>
+                            </tr>
+                            <tr>
+                                <td>Vendor</td>
+                                <td>Legal, Fulfillment</td>
+                                <td>Brand/manufacturer identification</td>
+                                <td>Must be "XeroShoes" or approved vendor</td>
+                            </tr>
+                            <tr>
+                                <td>Price</td>
+                                <td>Marketing, Legal, Fulfillment</td>
+                                <td>USD pricing with tax calculation</td>
+                                <td>Must be > $0, includes currency</td>
+                            </tr>
+                            <tr>
+                                <td>SKU</td>
+                                <td>Fulfillment, Inventory</td>
+                                <td>Unique identifier per variant</td>
+                                <td>Format: [STYLE]-[COLOR]-[GENDER+SIZE] (e.g., TATW-BLCK-W05)</td>
+                            </tr>
+                            <tr>
+                                <td>Inventory Tracking</td>
+                                <td>Fulfillment, Marketing</td>
+                                <td>Track inventory levels</td>
+                                <td>Must be enabled for all variants</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Media Requirements</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Media Type</th>
+                                <th>Required For</th>
+                                <th>Minimum Standard</th>
+                                <th>Technical Specs</th>
+                            </tr>
+                            <tr>
+                                <td>Primary Image</td>
+                                <td>Marketing, SEO, Legal</td>
+                                <td>Front view, clean background</td>
+                                <td>1540x1000px, JPEG, <2MB</td>
+                            </tr>
+                            <tr>
+                                <td>Secondary Images</td>
+                                <td>Marketing, Merchandising</td>
+                                <td>Back, side, sole views</td>
+                                <td>Same specs as primary</td>
+                            </tr>
+                            <tr>
+                                <td>Alt Text</td>
+                                <td>Legal (ADA compliance)</td>
+                                <td>Descriptive text for each image</td>
+                                <td>Minimum 10 characters</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Variant Requirements</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Variant Data</th>
+                                <th>Required For</th>
+                                <th>Minimum Standard</th>
+                                <th>Validation</th>
+                            </tr>
+                            <tr>
+                                <td>Size Options</td>
+                                <td>Fulfillment, Customer Service</td>
+                                <td>All available sizes listed</td>
+                                <td>Must match size chart</td>
+                            </tr>
+                            <tr>
+                                <td>Color Options</td>
+                                <td>Marketing, Fulfillment</td>
+                                <td>All color variants available</td>
+                                <td>Must match color taxonomy</td>
+                            </tr>
+                            <tr>
+                                <td>Variant Pricing</td>
+                                <td>Legal, Marketing</td>
+                                <td>Individual pricing if different</td>
+                                <td>Must be > $0</td>
+                            </tr>
+                            <tr>
+                                <td>Variant SKUs</td>
+                                <td>Fulfillment, Inventory</td>
+                                <td>Unique SKU per variant</td>
+                                <td>Format: [STYLE]-[COLOR]-[GENDER+SIZE] (e.g., TATW-BLCK-W05)</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Marketing & SEO Requirements</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Required For</th>
+                                <th>Minimum Standard</th>
+                                <th>Validation</th>
+                            </tr>
+                            <tr>
+                                <td>Meta Title</td>
+                                <td>SEO, Marketing</td>
+                                <td>SEO-optimized title</td>
+                                <td>50-60 characters, includes keywords</td>
+                            </tr>
+                            <tr>
+                                <td>Meta Description</td>
+                                <td>SEO, Marketing</td>
+                                <td>Compelling product summary</td>
+                                <td>150-160 characters, includes CTA</td>
+                            </tr>
+                            <tr>
+                                <td>Product Tags</td>
+                                <td>SEO, Merchandising</td>
+                                <td>Relevant category tags</td>
+                                <td>Minimum 3 tags, maximum 10</td>
+                            </tr>
+                            <tr>
+                                <td>Google Shopping Data</td>
+                                <td>Marketing, Legal</td>
+                                <td>Complete feed requirements</td>
+                                <td>Age group, gender, condition</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Legal & Compliance Requirements</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field</th>
+                                <th>Required For</th>
+                                <th>Minimum Standard</th>
+                                <th>Validation</th>
+                            </tr>
+                            <tr>
+                                <td>Product Weight</td>
+                                <td>Fulfillment, Legal</td>
+                                <td>Accurate shipping weight</td>
+                                <td>Must be > 0, in pounds</td>
+                            </tr>
+                            <tr>
+                                <td>Product Dimensions</td>
+                                <td>Fulfillment, Legal</td>
+                                <td>Package dimensions for shipping</td>
+                                <td>Length x Width x Height</td>
+                            </tr>
+                            <tr>
+                                <td>Country of Origin</td>
+                                <td>Legal, Customs</td>
+                                <td>Manufacturing country</td>
+                                <td>Must be specified</td>
+                            </tr>
+                            <tr>
+                                <td>Care Instructions</td>
+                                <td>Legal, Customer Service</td>
+                                <td>Product care information</td>
+                                <td>Must be provided</td>
                             </tr>
                         </table>
                         
                         <div class="alert warning">
-                            <strong>Data Limitation:</strong> EU instance product and collection data not available in current export. Documentation based on US instance only.
+                            <strong>Publication Checklist:</strong> All items above must be completed before a product can be published. Review each field in Shopify Admin and use the preview tools to verify how the product appears to customers.
                         </div>
-                    </section>
-                    
-                    <section id="product-categories">
-                        <h3>Product Categories</h3>
-                        <ul>
-                            <li><strong>Barefoot Shoes:</strong> Core product line with various styles</li>
-                            <li><strong>Sandals:</strong> Summer and casual footwear options</li>
-                            <li><strong>Boots:</strong> Winter and outdoor footwear</li>
-                            <li><strong>Accessories:</strong> Insoles, laces, and care products</li>
-                        </ul>
-                    </section>
-                </section>
-                
-                <section id="product-data-standards">
-                    <h2>Product Data Standards</h2>
-                    <p>Comprehensive data standards for product information management across both instances.</p>
-                    
-                    <section id="required-information">
-                        <h3>Required Product Information</h3>
-                        <ul>
-                            <li><strong>Basic Information:</strong>
-                                <ul>
-                                    <li>Product title (clear, descriptive naming)</li>
-                                    <li>Product description (detailed, benefit-focused)</li>
-                                    <li>Vendor (XeroShoes)</li>
-                                    <li>Product type (Barefoot Shoes, Sandals, Boots, Accessories)</li>
-                                    <li>Tags (activity, gender, features)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Pricing & Inventory:</strong>
-                                <ul>
-                                    <li>Price (USD for US, EUR for EU)</li>
-                                    <li>Compare at price (if applicable)</li>
-                                    <li>SKU (unique identifier)</li>
-                                    <li>Inventory quantity</li>
-                                    <li>Weight and dimensions</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        
+                        <div class="alert info">
+                            <strong>Product Description Management:</strong> XeroShoes manages product descriptions through metaobjects and the custom.feed_description metafield rather than the standard Shopify Body HTML field. Body HTML is used for review widgets (e.g., Dillon Canvas Slip-On - Big Kids Clearance product).
+                        </div>
                     </section>
                     
                     <section id="media-requirements">
                         <h3>Media Requirements</h3>
+                        <p>Image standards ensuring brand consistency across all product seasons and categories.</p>
+                        
+                        <h4>Technical Specifications</h4>
                         <ul>
-                            <li><strong>Primary product image (1024x1024 minimum)</strong></li>
-                            <li><strong>Additional product angles (3-5 images)</strong></li>
-                            <li><strong>Lifestyle images showing product in use</strong></li>
-                            <li><strong>Detail shots of key features</strong></li>
+                            <li><strong>Dimensions:</strong> 1540x1000 pixels (rectangular format, 1.54:1 aspect ratio)</li>
+                            <li><strong>Resolution:</strong> 86 DPI (web-optimized)</li>
+                            <li><strong>Format:</strong> JPEG, progressive encoding</li>
+                            <li><strong>File naming:</strong> Follows XeroShoes internal conventions (some images include "_WEB" suffix indicating web-optimized versions)</li>
+                        </ul>
+                        
+                        <h4>Required Image Angles</h4>
+                        <p>Standardized product photography angles for consistent customer experience:</p>
+                        <table class="data-table">
+                            <tr>
+                                <th>Angle</th>
+                                <th>Frequency</th>
+                                <th>Purpose</th>
+                                <th>Priority</th>
+                            </tr>
+                            <tr>
+                                <td>Front</td>
+                                <td>360 products¹</td>
+                                <td>Primary product view</td>
+                                <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td>Back</td>
+                                <td>319 products¹</td>
+                                <td>Rear view details</td>
+                                <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td>Top</td>
+                                <td>310 products¹</td>
+                                <td>Overhead perspective</td>
+                                <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td>Sole</td>
+                                <td>288 products¹</td>
+                                <td>Bottom/tread view</td>
+                                <td>Required</td>
+                            </tr>
+                            <tr>
+                                <td>Bottom</td>
+                                <td>183 products¹</td>
+                                <td>Alternative bottom view</td>
+                                <td>Recommended</td>
+                            </tr>
+                            <tr>
+                                <td>Side (Left/Right)</td>
+                                <td>18 products¹</td>
+                                <td>Profile views</td>
+                                <td>Optional</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Design Consistency Standards</h4>
+                        <div class="alert info">
+                            <strong>Brand Consistency:</strong> These standards ensure visual consistency across product seasons and maintain professional brand presentation.
+                        </div>
+                        <ul>
+                            <li><strong>Background:</strong> Consistent neutral background (typically white or light gray)</li>
+                            <li><strong>Lighting:</strong> Even, professional studio lighting with minimal shadows</li>
+                            <li><strong>Product positioning:</strong> Centered composition with consistent whitespace margins</li>
+                            <li><strong>Color accuracy:</strong> True-to-life color representation for accurate customer expectations</li>
+                            <li><strong>Sharpness:</strong> High-resolution, crisp detail shots for texture and material visibility</li>
+                        </ul>
+                        
+                        <h4>File Organization</h4>
+                        <p>Standardized naming convention for efficient asset management:</p>
+                        <ul>
+                            <li><strong>Format:</strong> <code>[PRODUCT-CODE]_[COLOR]_[ANGLE]_[SHOT-NUMBER]_WEB_[UUID].jpg</code></li>
+                            <li><strong>Example:</strong> <code>CAPY-NGBU_Dillon-Canvas-Slip-On-Youth_Insignia-Blue_Front_7406_WEB_b7ade370-cf5e-427d-950d-d74f83eeafc3.jpg</code></li>
+                            <li><strong>Note:</strong> "_WEB" suffix appears in some filenames as part of XeroShoes' internal asset management system</li>
+                        </ul>
+                        
+                        <h4>Quality Assurance</h4>
+                        <ul>
+                            <li><strong>Consistency check:</strong> All angles must maintain same lighting and background</li>
+                            <li><strong>Color matching:</strong> Verify color accuracy across all product angles</li>
+                            <li><strong>Completeness:</strong> Ensure all required angles are captured for each product</li>
+                            <li><strong>File optimization:</strong> Verify web optimization and loading performance</li>
                         </ul>
                     </section>
                 </section>
@@ -139,53 +356,778 @@
                     <h2>Metafields & Custom Data</h2>
                     <p>Detailed metafield structure for storing custom product data and attributes.</p>
                     
+                    <section id="field-ownership">
+                        <h3>Field Ownership & Management</h3>
+                        <p>Understanding which fields are user-editable versus app-controlled is critical for effective product management.</p>
+                        
+                        <h4>User-Editable Fields</h4>
+                        <div class="alert info">
+                            <strong>Management:</strong> These fields should be updated by content managers and product teams through Shopify Admin or bulk import tools.
+                        </div>
+                        <ul>
+                            <li><strong>Core Product Data:</strong> All <code>custom.*</code> metafields (display_title, feed_description, product_highlights, etc.)</li>
+                            <li><strong>Content Metaobjects:</strong> Product descriptions, media blocks, FAQs, care instructions</li>
+                            <li><strong>SEO Fields:</strong> title_tag, description_tag</li>
+                            <li><strong>Variant Control:</strong> custom.draft_variant (critical for visibility management)</li>
+                            <li><strong>Google Shopping:</strong> mm-google-shopping.* fields (for product feed optimization)</li>
+                        </ul>
+                        
+                        <h4>App-Controlled Fields</h4>
+                        <div class="alert warning">
+                            <strong>Read-Only:</strong> These fields are automatically managed by apps and should not be manually edited.
+                        </div>
+                        <ul>
+                            <li><strong>Reviews & Ratings:</strong> reviews.*, stamped.* (managed by review apps)</li>
+                            <li><strong>Discovery:</strong> shopify--discovery--* (managed by Shopify Search & Discovery)</li>
+                            <li><strong>Tax Integration:</strong> avalara.taxcode (managed by Avalara app)</li>
+                            <li><strong>Bundles:</strong> simple_bundles.* (managed by Simple Bundles app)</li>
+                            <li><strong>Facebook Marketing:</strong> mc-facebook.* (managed by Facebook app)</li>
+                        </ul>
+                        
+                        <h4>Shopify Taxonomy Fields</h4>
+                        <div class="alert info">
+                            <strong>Standardized:</strong> These use Shopify's built-in taxonomy system and should be managed through the standard product interface.
+                        </div>
+                        <ul>
+                            <li><strong>Color/Pattern:</strong> shopify.color-pattern (use Shopify's color picker)</li>
+                            <li><strong>Size:</strong> shopify.shoe-size (use standardized size values)</li>
+                            <li><strong>Gender:</strong> shopify.target-gender (use predefined options)</li>
+                            <li><strong>Age Group:</strong> shopify.age-group (use standard age ranges)</li>
+                            <li><strong>Material:</strong> shopify.clothing-accessory-material (use material taxonomy)</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="data-completeness">
+                        <h3>Data Status Analysis</h3>
+                        <p>Current state of metafield data across the XeroShoes product catalog based on export analysis.</p>
+                        
+                        <h4>High-Priority Fields (User-Editable)</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field Category</th>
+                                <th>Completion Status</th>
+                                <th>Action Required</th>
+                                <th>Impact</th>
+                            </tr>
+                            <tr>
+                                <td>Core Product Metafields</td>
+                                <td>~60% Complete¹</td>
+                                <td>Fill missing display_title, product_highlights</td>
+                                <td>High - affects product pages</td>
+                            </tr>
+                            <tr>
+                                <td>Content Metaobjects</td>
+                                <td>~80% Complete¹</td>
+                                <td>Complete missing product descriptions</td>
+                                <td>High - affects SEO and conversion</td>
+                            </tr>
+                            <tr>
+                                <td>SEO Fields</td>
+                                <td>~40% Complete¹</td>
+                                <td>Add title_tag and description_tag</td>
+                                <td>High - affects search visibility</td>
+                            </tr>
+                            <tr>
+                                <td>Google Shopping</td>
+                                <td>~30% Complete¹</td>
+                                <td>Complete product feed data</td>
+                                <td>Medium - affects advertising performance</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>App-Managed Fields (Read-Only)</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Field Category</th>
+                                <th>Status</th>
+                                <th>Notes</th>
+                                <th>Dependencies</th>
+                            </tr>
+                            <tr>
+                                <td>Reviews & Ratings</td>
+                                <td>Active</td>
+                                <td>Automatically populated by review apps</td>
+                                <td>Customer reviews required</td>
+                            </tr>
+                            <tr>
+                                <td>Discovery</td>
+                                <td>Active</td>
+                                <td>Managed by Shopify Search & Discovery</td>
+                                <td>Product relationships and search data</td>
+                            </tr>
+                            <tr>
+                                <td>Tax Integration</td>
+                                <td>Active</td>
+                                <td>Automatically calculated by Avalara</td>
+                                <td>Product categorization and location</td>
+                            </tr>
+                            <tr>
+                                <td>Bundles</td>
+                                <td>Partial</td>
+                                <td>Only active for bundle products</td>
+                                <td>Simple Bundles app configuration</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Data Quality Recommendations</h4>
+                        <div class="alert warning">
+                            <strong>Priority Actions:</strong>
+                        </div>
+                        <ol>
+                            <li><strong>Core Fields:</strong> Ensure all products have custom.display_title and custom.product_highlights</li>
+                            <li><strong>SEO Optimization:</strong> Add title_tag and description_tag for all active products</li>
+                            <li><strong>Content Enhancement:</strong> Add product description metaobjects for better conversion</li>
+                            <li><strong>Feed Optimization:</strong> Add Google Shopping metafields for advertising campaigns</li>
+                            <li><strong>Variant Management:</strong> Review and update custom.draft_variant settings for seasonal products</li>
+                        </ol>
+                        
+                        <div class="alert info">
+                            <strong>Data Audit:</strong> Use Shopify's bulk edit tools or export/import functionality to efficiently update multiple products. Consider implementing data validation rules to maintain consistency.
+                        </div>
+                    </section>
+                    
                     <section id="core-metafields">
                         <h3>Core Product Metafields</h3>
                         <table class="data-table">
                             <tr>
                                 <th>Metafield</th>
                                 <th>Type</th>
+                                <th>Ownership</th>
                                 <th>Purpose</th>
                                 <th>Example</th>
                             </tr>
                             <tr>
                                 <td>custom.display_title</td>
                                 <td>Single line text</td>
-                                <td>Custom product display title</td>
-                                <td>"Dillon Canvas Slip-On - Big Kids"</td>
+                                <td>User-Editable</td>
+                                <td>Custom product display title (replaces default product title on PDP)</td>
+                                <td>"Tari II - Women"</td>
                             </tr>
                             <tr>
                                 <td>custom.feed_description</td>
                                 <td>Multi-line text</td>
-                                <td>Product feed description</td>
-                                <td>SEO-optimized product description</td>
+                                <td>User-Editable</td>
+                                <td>Product feed description (used for SEO and product feeds)</td>
+                                <td>SEO-optimized description for Tari II women's boots</td>
                             </tr>
                             <tr>
                                 <td>custom.product_highlights</td>
                                 <td>Rich text</td>
-                                <td>Product feature highlights</td>
-                                <td>Bulleted list of key benefits</td>
+                                <td>User-Editable</td>
+                                <td>Product feature highlights (displays in product highlights section)</td>
+                                <td>Bulleted list of Tari II boot features and benefits</td>
                             </tr>
                             <tr>
                                 <td>custom.color</td>
                                 <td>List of single line text</td>
-                                <td>Available colors</td>
-                                <td>["Black", "Navy", "Gray"]</td>
+                                <td>User-Editable</td>
+                                <td>Available colors (displays in variant selector)</td>
+                                <td>["Black", "Cappuccino"]</td>
                             </tr>
                             <tr>
                                 <td>custom.activity</td>
                                 <td>List of single line text</td>
-                                <td>Activity types</td>
-                                <td>["Running", "Hiking", "Casual"]</td>
+                                <td>User-Editable</td>
+                                <td>Activity types (displays in product tags/attributes)</td>
+                                <td>["Everyday Wear", "Office / Workplace"]</td>
+                            </tr>
+                            <tr>
+                                <td>custom.gender</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Target gender (displays in product information section)</td>
+                                <td>"Women"</td>
+                            </tr>
+                            <tr>
+                                <td>custom.collection</td>
+                                <td>List of single line text</td>
+                                <td>User-Editable</td>
+                                <td>Collection associations (used for navigation and filtering)</td>
+                                <td>["Boot"]</td>
+                            </tr>
+                            <tr>
+                                <td>custom.featured_quote</td>
+                                <td>Rich text</td>
+                                <td>User-Editable</td>
+                                <td>Customer testimonial (displays in featured quote section)</td>
+                                <td>Customer review highlight</td>
+                            </tr>
+                            <tr>
+                                <td>custom.richtext_demo</td>
+                                <td>Rich text</td>
+                                <td>User-Editable</td>
+                                <td>Demo content for testing (development/testing purposes)</td>
+                                <td>Test rich text formatting</td>
+                            </tr>
+                            <tr>
+                                <td>custom.mega_menu_image</td>
+                                <td>File reference</td>
+                                <td>User-Editable</td>
+                                <td>Navigation menu image (displays in main navigation dropdown)</td>
+                                <td>Category hero image</td>
+                            </tr>
+                            <tr>
+                                <td>custom.secondary_hover_image</td>
+                                <td>File reference</td>
+                                <td>User-Editable</td>
+                                <td>Product hover state image (displays on product hover in collections)</td>
+                                <td>Alternative product view</td>
+                            </tr>
+                            <tr>
+                                <td>custom.description_featured_image</td>
+                                <td>File reference</td>
+                                <td>User-Editable</td>
+                                <td>Description section hero image (displays in product description area)</td>
+                                <td>Product detail hero</td>
+                            </tr>
+                            <tr>
+                                <td>custom.description_featured_image_mobile</td>
+                                <td>File reference</td>
+                                <td>User-Editable</td>
+                                <td>Mobile-specific description image (displays on mobile devices)</td>
+                                <td>Mobile-optimized hero</td>
+                            </tr>
+                            <tr>
+                                <td>custom.enable_comfort_section</td>
+                                <td>Boolean</td>
+                                <td>User-Editable</td>
+                                <td>Show/hide comfort section (controls comfort features display on PDP)</td>
+                                <td>TRUE/FALSE</td>
+                            </tr>
+                            <tr>
+                                <td>custom.enable_featured_image</td>
+                                <td>Boolean</td>
+                                <td>User-Editable</td>
+                                <td>Show/hide featured image (controls featured image display on PDP)</td>
+                                <td>TRUE/FALSE</td>
+                            </tr>
+                            <tr>
+                                <td>custom.enable_multiple_image_with_text</td>
+                                <td>Boolean</td>
+                                <td>User-Editable</td>
+                                <td>Show/hide image-text blocks (controls image-text content blocks on PDP)</td>
+                                <td>TRUE/FALSE</td>
+                            </tr>
+                            <tr>
+                                <td>custom.multiple_gender_product</td>
+                                <td>List of product references</td>
+                                <td>User-Editable</td>
+                                <td>Cross-gender product associations (displays related products for other genders)</td>
+                                <td>Related products for other genders</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section id="variant-metafields">
+                        <h3>Variant Metafields</h3>
+                        <p>Metafields applied to individual product variants for granular control and third-party integrations.</p>
+                        
+                        <h4>Custom Variant Metafields</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
                             </tr>
                             <tr>
                                 <td>custom.draft_variant</td>
                                 <td>Boolean</td>
+                                <td>User-Editable</td>
                                 <td>Variant visibility control</td>
                                 <td>TRUE = hidden, FALSE/blank = visible</td>
                             </tr>
                         </table>
+                        
+                        <h4>Google Shopping Integration</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>mm-google-shopping.custom_label_0-4</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Custom labels for Google Shopping</td>
+                                <td>Product categorization</td>
+                            </tr>
+                            <tr>
+                                <td>mm-google-shopping.size_system</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Sizing system identifier</td>
+                                <td>"US", "EU", "UK"</td>
+                            </tr>
+                            <tr>
+                                <td>mm-google-shopping.size_type</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Size type classification</td>
+                                <td>"Regular", "Wide", "Narrow"</td>
+                            </tr>
+                            <tr>
+                                <td>mm-google-shopping.mpn</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Manufacturer part number</td>
+                                <td>Unique product identifier</td>
+                            </tr>
+                            <tr>
+                                <td>mm-google-shopping.gender</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Target gender for Google Shopping</td>
+                                <td>Allowed: male, female, unisex</td>
+                            </tr>
+                            <tr>
+                                <td>mm-google-shopping.condition</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Product condition</td>
+                                <td>Allowed: new, used, refurbished</td>
+                            </tr>
+                            <tr>
+                                <td>mm-google-shopping.age_group</td>
+                                <td>Single line text</td>
+                                <td>User-Editable</td>
+                                <td>Target age group</td>
+                                <td>Allowed: newborn, infant, toddler, kids, adult</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Simple Bundles Integration</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                            <tr>
+                                <td>simple_bundles.variant_options</td>
+                                <td>JSON</td>
+                                <td>App-Controlled</td>
+                                <td>Bundle variant configuration</td>
+                                <td>Bundle product options</td>
+                            </tr>
+                            <tr>
+                                <td>simple_bundles.variant_options_v2</td>
+                                <td>JSON</td>
+                                <td>App-Controlled</td>
+                                <td>Updated bundle configuration</td>
+                                <td>Enhanced bundle options</td>
+                            </tr>
+                            <tr>
+                                <td>simple_bundles.bundled_variants</td>
+                                <td>JSON</td>
+                                <td>App-Controlled</td>
+                                <td>Bundled product variants</td>
+                                <td>Products included in bundle</td>
+                            </tr>
+                            <tr>
+                                <td>simple_bundles.bundle_custom_prices_selection</td>
+                                <td>JSON</td>
+                                <td>App-Controlled</td>
+                                <td>Custom pricing for bundles</td>
+                                <td>Bundle pricing configuration</td>
+                            </tr>
+                        </table>
                     </section>
+                    
+                </section>
+                
+                <section id="metaobjects">
+                    <h2>Metaobjects & Custom Content</h2>
+                        <p>Structured content blocks and custom data types used throughout the product catalog. Each metaobject type has specific required fields and usage patterns.</p>
+                        
+                        <h3 id="product-content-metaobjects">Product Content Metaobjects</h3>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metaobject Type</th>
+                                <th>Count</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Product Description</td>
+                                <td>2,653¹</td>
+                                <td>Structured product descriptions</td>
+                                <td>custom.product_description</td>
+                            </tr>
+                            <tr>
+                                <td>Media with Text</td>
+                                <td>784¹</td>
+                                <td>Image-text content blocks</td>
+                                <td>custom.multiple_image_with_text</td>
+                            </tr>
+                            <tr>
+                                <td>Product Featured Quote</td>
+                                <td>Various¹</td>
+                                <td>Customer testimonials</td>
+                                <td>custom.product_featured_quote</td>
+                            </tr>
+                            <tr>
+                                <td>Care Instructions</td>
+                                <td>Various¹</td>
+                                <td>Product care information</td>
+                                <td>custom.care</td>
+                            </tr>
+                            <tr>
+                                <td>Comfort Section</td>
+                                <td>Various¹</td>
+                                <td>Comfort feature details</td>
+                                <td>custom.comfort_section</td>
+                            </tr>
+                            <tr>
+                                <td>FAQs</td>
+                                <td>Various¹</td>
+                                <td>Frequently asked questions</td>
+                                <td>custom.faqs</td>
+                            </tr>
+                            <tr>
+                                <td>Attribute Galleries</td>
+                                <td>Various¹</td>
+                                <td>Product attribute displays</td>
+                                <td>custom.attribute_galleries</td>
+                            </tr>
+                            <tr>
+                                <td>Sizing Chart</td>
+                                <td>Various¹</td>
+                                <td>Size guide information</td>
+                                <td>custom.sizing_chart</td>
+                            </tr>
+                        </table>
+                        
+                        <h3 id="product-description-metaobject">Product Description Metaobject</h3>
+                        <div class="alert info">
+                            <strong>Most Common:</strong> Used by 2,653¹ products for structured, detailed product descriptions that appear on PDPs.
+                        </div>
+                        <p><strong>Required Fields:</strong></p>
+                        <ul>
+                            <li><strong>Title:</strong> Short descriptive title for the content block</li>
+                            <li><strong>Content:</strong> Rich text content with formatting, images, and links</li>
+                            <li><strong>Display Order:</strong> Controls the order of content blocks on the product page</li>
+                        </ul>
+                        <p><strong>Usage:</strong> Replaces basic product descriptions with rich, formatted content including:</p>
+                        <ul>
+                            <li>Detailed product features and benefits</li>
+                            <li>Technical specifications</li>
+                            <li>Material and construction details</li>
+                            <li>Care instructions and maintenance tips</li>
+                            <li>Comparison charts and sizing information</li>
+                        </ul>
+                        <p><strong>PDP Appearance:</strong> Appears as a rich text section with formatting, bullet points, and embedded images. Customers see detailed product information instead of basic Shopify descriptions.</p>
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Product Description Metaobject on PDP showing rich text formatting, bullet points, and embedded images</p>
+                        </div>
+                        
+                        <h3 id="media-with-text-metaobject">Media with Text Metaobject</h3>
+                        <div class="alert info">
+                            <strong>Content Blocks:</strong> Used by 784¹ products for image-text combinations that enhance product storytelling.
+                        </div>
+                        <p><strong>Required Fields:</strong></p>
+                        <ul>
+                            <li><strong>Image:</strong> High-quality product or lifestyle image</li>
+                            <li><strong>Text Content:</strong> Rich text content with formatting</li>
+                            <li><strong>Layout:</strong> Image position (left, right, full-width)</li>
+                            <li><strong>Display Order:</strong> Controls sequence on product page</li>
+                        </ul>
+                        <p><strong>Usage:</strong> Creates engaging content blocks for:</p>
+                        <ul>
+                            <li>Product feature highlights with supporting images</li>
+                            <li>Lifestyle shots with descriptive text</li>
+                            <li>Technical details with visual aids</li>
+                            <li>Brand storytelling and product benefits</li>
+                        </ul>
+                        <p><strong>PDP Appearance:</strong> Creates alternating image-text blocks (image left, text right, or vice versa). Perfect for showcasing product features with supporting visuals.</p>
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Media with Text Metaobject showing alternating image-text layout with product feature highlights</p>
+                        </div>
+                        
+                        <h3 id="faq-metaobject">FAQ Metaobject</h3>
+                        <div class="alert info">
+                            <strong>Customer Support:</strong> Provides answers to common product questions directly on PDPs.
+                        </div>
+                        <p><strong>Required Fields:</strong></p>
+                        <ul>
+                            <li><strong>Question:</strong> Customer question text</li>
+                            <li><strong>Answer:</strong> Detailed answer with rich text formatting</li>
+                            <li><strong>Category:</strong> FAQ grouping (sizing, care, shipping, etc.)</li>
+                            <li><strong>Display Order:</strong> Controls FAQ sequence</li>
+                        </ul>
+                        <p><strong>Usage:</strong> Addresses common customer concerns:</p>
+                        <ul>
+                            <li>Sizing and fit questions</li>
+                            <li>Care and maintenance instructions</li>
+                            <li>Shipping and return policies</li>
+                            <li>Product-specific features and benefits</li>
+                        </ul>
+                        <p><strong>PDP Appearance:</strong> Displays as expandable question-answer sections. Customers can click to expand answers, reducing page length while providing detailed information.</p>
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> FAQ Metaobject showing expandable Q&A sections with common product questions</p>
+                        </div>
+                        
+                        <h3 id="care-instructions-metaobject">Care Instructions Metaobject</h3>
+                        <div class="alert info">
+                            <strong>Product Maintenance:</strong> Detailed care instructions for product longevity and proper maintenance.
+                        </div>
+                        <p><strong>Required Fields:</strong></p>
+                        <ul>
+                            <li><strong>Care Type:</strong> Category of care (cleaning, storage, maintenance)</li>
+                            <li><strong>Instructions:</strong> Step-by-step care instructions</li>
+                            <li><strong>Materials:</strong> Recommended cleaning products or tools</li>
+                            <li><strong>Frequency:</strong> How often care should be performed</li>
+                        </ul>
+                        <p><strong>PDP Appearance:</strong> Appears as a dedicated care section with step-by-step instructions, material recommendations, and frequency guidelines. Often includes visual icons or images for each care step.</p>
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Care Instructions Metaobject showing step-by-step care guide with icons and material recommendations</p>
+                        </div>
+                        
+                        <h3 id="comfort-section-metaobject">Comfort Section Metaobject</h3>
+                        <div class="alert info">
+                            <strong>Feature Highlighting:</strong> Showcases comfort features and ergonomic benefits of products.
+                        </div>
+                        <p><strong>Required Fields:</strong></p>
+                        <ul>
+                            <li><strong>Feature Title:</strong> Name of the comfort feature</li>
+                            <li><strong>Description:</strong> How the feature enhances comfort</li>
+                            <li><strong>Benefits:</strong> Specific comfort benefits for users</li>
+                            <li><strong>Visual Element:</strong> Supporting image or diagram</li>
+                        </ul>
+                        <p><strong>PDP Appearance:</strong> Displays as highlighted feature boxes with icons, descriptions, and benefits. Often uses visual elements like checkmarks or comfort icons to emphasize ergonomic advantages.</p>
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Comfort Section Metaobject showing highlighted feature boxes with comfort icons and benefits</p>
+                        </div>
+                        
+                        <h3 id="attribute-galleries-metaobject">Attribute Galleries Metaobject</h3>
+                        <div class="alert info">
+                            <strong>Visual Attributes:</strong> Displays product attributes like colors, materials, and features with visual elements.
+                        </div>
+                        <p><strong>Required Fields:</strong></p>
+                        <ul>
+                            <li><strong>Attribute Name:</strong> Name of the product attribute</li>
+                            <li><strong>Attribute Value:</strong> Specific value or option</li>
+                            <li><strong>Visual Reference:</strong> Image showing the attribute</li>
+                            <li><strong>Description:</strong> Additional details about the attribute</li>
+                        </ul>
+                        <p><strong>PDP Appearance:</strong> Creates visual galleries showing product attributes like colors, materials, or features. Each attribute displays with an image, name, and description in an organized grid or carousel format.</p>
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Attribute Galleries Metaobject showing visual grid of product attributes with images and descriptions</p>
+                        </div>
+                        
+                        <h3 id="sizing-chart-metaobject">Sizing Chart Metaobject</h3>
+                        <div class="alert info">
+                            <strong>Size Guidance:</strong> Provides detailed sizing information to help customers choose the right size.
+                        </div>
+                        <p><strong>Required Fields:</strong></p>
+                        <ul>
+                            <li><strong>Size Range:</strong> Available sizes (e.g., 5-12)</li>
+                            <li><strong>Measurement Type:</strong> US, EU, UK sizing</li>
+                            <li><strong>Size Chart:</strong> Visual chart or table</li>
+                            <li><strong>Fit Notes:</strong> Special sizing considerations</li>
+                        </ul>
+                        <p><strong>PDP Appearance:</strong> Displays as an interactive size guide with measurement tables, fit notes, and visual charts. Often includes conversion tables between different sizing systems and specific fit recommendations.</p>
+                        <div class="screenshot-placeholder">
+                            <p><strong>[Screenshot Placeholder]</strong> Sizing Chart Metaobject showing interactive size guide with measurement tables and fit recommendations</p>
+                        </div>
+                        
+                        <h3 id="shopify-taxonomy-metaobjects">Shopify Taxonomy Metaobjects</h3>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metaobject Type</th>
+                                <th>Count</th>
+                                <th>Purpose</th>
+                                <th>Usage</th>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>60¹</td>
+                                <td>Standardized color values</td>
+                                <td>shopify.color-pattern</td>
+                            </tr>
+                            <tr>
+                                <td>Shoe Size</td>
+                                <td>14¹</td>
+                                <td>Standardized shoe sizes</td>
+                                <td>shopify.shoe-size</td>
+                            </tr>
+                            <tr>
+                                <td>Target Gender</td>
+                                <td>4¹</td>
+                                <td>Gender targeting</td>
+                                <td>shopify.target-gender</td>
+                            </tr>
+                            <tr>
+                                <td>Age Group</td>
+                                <td>2¹</td>
+                                <td>Age targeting</td>
+                                <td>shopify.age-group</td>
+                            </tr>
+                            <tr>
+                                <td>Clothing Accessory Material</td>
+                                <td>2¹</td>
+                                <td>Material classification</td>
+                                <td>shopify.clothing-accessory-material</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <section id="third-party-integrations">
+                        <h3>Third-Party App Integrations</h3>
+                        <p>Metafields and integrations with external services and apps.</p>
+                        
+                        <h4>Tax & Compliance</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Service</th>
+                            </tr>
+                            <tr>
+                                <td>avalara.taxcode</td>
+                                <td>Single line text</td>
+                                <td>App-Controlled</td>
+                                <td>Tax classification code</td>
+                                <td>Avalara Tax Integration</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Reviews & Ratings</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Service</th>
+                            </tr>
+                            <tr>
+                                <td>reviews.rating_count</td>
+                                <td>Number integer</td>
+                                <td>App-Controlled</td>
+                                <td>Total review count</td>
+                                <td>Reviews App</td>
+                            </tr>
+                            <tr>
+                                <td>reviews.rating</td>
+                                <td>Rating</td>
+                                <td>App-Controlled</td>
+                                <td>Average rating</td>
+                                <td>Reviews App</td>
+                            </tr>
+                            <tr>
+                                <td>stamped.reviews</td>
+                                <td>Multi-line text</td>
+                                <td>App-Controlled</td>
+                                <td>Review content</td>
+                                <td>Stamped.io Reviews</td>
+                            </tr>
+                            <tr>
+                                <td>stamped.badge</td>
+                                <td>Multi-line text</td>
+                                <td>App-Controlled</td>
+                                <td>Review badge display</td>
+                                <td>Stamped.io Reviews</td>
+                            </tr>
+                            <tr>
+                                <td>stamped.reviews_count</td>
+                                <td>Single line text</td>
+                                <td>App-Controlled</td>
+                                <td>Review count display</td>
+                                <td>Stamped.io Reviews</td>
+                            </tr>
+                            <tr>
+                                <td>stamped.reviews_average</td>
+                                <td>Single line text</td>
+                                <td>App-Controlled</td>
+                                <td>Average rating display</td>
+                                <td>Stamped.io Reviews</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>Marketing & Discovery</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Service</th>
+                            </tr>
+                            <tr>
+                                <td>shopify--discovery--product_search_boost.queries</td>
+                                <td>List of single line text</td>
+                                <td>App-Controlled</td>
+                                <td>Search boost keywords</td>
+                                <td>Shopify Search & Discovery</td>
+                            </tr>
+                            <tr>
+                                <td>shopify--discovery--product_recommendation.related_products</td>
+                                <td>List of product references</td>
+                                <td>App-Controlled</td>
+                                <td>Related product suggestions</td>
+                                <td>Shopify Search & Discovery</td>
+                            </tr>
+                            <tr>
+                                <td>shopify--discovery--product_recommendation.related_products_display</td>
+                                <td>Single line text</td>
+                                <td>App-Controlled</td>
+                                <td>Related products display setting</td>
+                                <td>Shopify Search & Discovery</td>
+                            </tr>
+                            <tr>
+                                <td>shopify--discovery--product_recommendation.complementary_products</td>
+                                <td>List of product references</td>
+                                <td>App-Controlled</td>
+                                <td>Complementary product suggestions</td>
+                                <td>Shopify Search & Discovery</td>
+                            </tr>
+                            <tr>
+                                <td>mc-facebook.google_product_category</td>
+                                <td>String</td>
+                                <td>App-Controlled</td>
+                                <td>Facebook catalog category</td>
+                                <td>Facebook Marketing</td>
+                            </tr>
+                        </table>
+                        
+                        <h4>SEO & Content</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>Metafield</th>
+                                <th>Type</th>
+                                <th>Ownership</th>
+                                <th>Purpose</th>
+                                <th>Service</th>
+                            </tr>
+                            <tr>
+                                <td>title_tag</td>
+                                <td>String</td>
+                                <td>User-Editable</td>
+                                <td>Custom page title</td>
+                                <td>SEO Optimization</td>
+                            </tr>
+                            <tr>
+                                <td>description_tag</td>
+                                <td>String</td>
+                                <td>User-Editable</td>
+                                <td>Custom meta description</td>
+                                <td>SEO Optimization</td>
+                            </tr>
+                        </table>
+                    </section>
+                    
+                    <div class="alert info">
+                        <strong>Metafield Summary:</strong> The XeroShoes product catalog uses 50+ metafields across 7 categories: Core Product (18), Variant Control (1), Google Shopping (7), Simple Bundles (4), Reviews (6), Discovery (4), and SEO (2). Additionally, 7 metaobject types provide structured content management with 3,500+ total instances¹.
+                    </div>
                     
                     <section id="draft-variant">
                         <h3>Critical Metafield: custom.draft_variant</h3>
@@ -265,7 +1207,7 @@
                     </section>
                     
                     <section id="use-cases">
-                        <h3>Advanced Use Cases</h3>
+                        <h3>Additional Use Cases</h3>
                         <ul>
                             <li><strong>Seasonal Product Management:</strong> Hide winter boots during summer without losing variant data</li>
                             <li><strong>A/B Testing:</strong> Test new color variants with limited visibility before full launch</li>
@@ -324,5 +1266,11 @@
     
     <!-- Enhanced TOC Script -->
     <script src="enhanced-toc.js"></script>
+    
+    <!-- Footnotes -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666;">
+        <p><strong>Footnotes:</strong></p>
+        <p>¹ All counts and percentages are based on data export from October 20, 2025 (AD-EVERYTHING-Export_2025-10-20_085832). These figures represent the state of the XeroShoes product catalog at the time of export and may not reflect current inventory or recent changes.</p>
+    </div>
 </body>
 </html>
