@@ -28,7 +28,7 @@
                     <li><a href="#product-data-status">Product Data Status</a></li>
                     <li><a href="#metafield-completeness">Metafield Completeness</a></li>
                     <li><a href="#content-analysis">Content Analysis</a></li>
-                    <li><a href="#inventory-analysis">Inventory Analysis</a></li>
+                    <li><a href="#inventory-analysis">Data Completeness Analysis</a></li>
                     <li><a href="#seo-analysis">SEO Analysis</a></li>
                     <li><a href="#integration-status">Integration Status</a></li>
                     <li><a href="#recommendations">Priority Recommendations</a></li>
@@ -292,50 +292,50 @@
                 </section>
                 
                 <section id="inventory-analysis">
-                    <h2>Inventory Analysis</h2>
-                    <p>Critical insight: Only 12 products have active inventory out of 14,054 total products. This dramatically changes the priority of missing data fields.</p>
+                    <h2>Data Completeness Analysis</h2>
+                    <p>Analysis of missing data fields across the product catalog. Note: Inventory data in this export appears to be from a specific time period and may not reflect current stock levels.</p>
                     
                     <table class="data-table">
                         <tr>
                             <th>Field Category</th>
                             <th>Missing Products</th>
-                            <th>Missing WITH Inventory</th>
+                            <th>Missing Percentage</th>
                             <th>Priority Impact</th>
                         </tr>
                         <tr>
                             <td>Product Highlights</td>
-                            <td>1,114 (8%)</td>
-                            <td>0 products</td>
-                            <td>Very Low - no active inventory impact</td>
+                            <td>1,114</td>
+                            <td>8%</td>
+                            <td>Medium - affects product page conversion</td>
                         </tr>
                         <tr>
                             <td>Product Descriptions</td>
-                            <td>1,139 (8%)</td>
-                            <td>0 products</td>
-                            <td>Very Low - no active inventory impact</td>
+                            <td>1,139</td>
+                            <td>8%</td>
+                            <td>High - affects SEO and conversion</td>
                         </tr>
                         <tr>
                             <td>Google Shopping Gender</td>
-                            <td>1,220 (9%)</td>
-                            <td>10 products</td>
-                            <td>Low - minimal active inventory impact</td>
+                            <td>1,220</td>
+                            <td>9%</td>
+                            <td>Medium - affects advertising targeting</td>
                         </tr>
                         <tr>
                             <td>Google Shopping Condition</td>
-                            <td>1,220 (9%)</td>
-                            <td>10 products</td>
-                            <td>Low - minimal active inventory impact</td>
+                            <td>1,220</td>
+                            <td>9%</td>
+                            <td>Medium - affects advertising targeting</td>
                         </tr>
                         <tr>
                             <td>Google Shopping Age Group</td>
-                            <td>1,220 (9%)</td>
-                            <td>10 products</td>
-                            <td>Low - minimal active inventory impact</td>
+                            <td>1,220</td>
+                            <td>9%</td>
+                            <td>Medium - affects advertising targeting</td>
                         </tr>
                     </table>
                     
-                    <div class="alert success">
-                        <strong>Key Finding:</strong> The "missing" data primarily affects out-of-stock, draft, or seasonal products. Only 10 products with active inventory are missing Google Shopping data, and 0 products with inventory are missing core product data. This suggests excellent data quality for active, sellable products.
+                    <div class="alert info">
+                        <strong>Data Quality Assessment:</strong> 8-9% missing data across key fields represents a strong data foundation. The missing data may include draft products, seasonal items, or products in development that don't require complete data.
                     </div>
                 </section>
                 
@@ -482,16 +482,16 @@
                     <h2>Priority Recommendations</h2>
                     <p>Actionable recommendations based on data analysis to improve platform performance and data quality.</p>
                     
-                    <h3>Immediate Actions (0-30 days)</h3>
-                    <div class="alert success">
-                        <strong>Excellent Data Quality for Active Products:</strong> Only 10 products with active inventory are missing Google Shopping data. Core product data is complete for all active products.
-                    </div>
-                    <ol>
-                        <li><strong>Google Shopping Optimization:</strong> Complete age_group, gender, and condition metafields for 10 products with active inventory</li>
-                        <li><strong>Inventory Management:</strong> Review and potentially archive out-of-stock products to clean up the catalog</li>
-                        <li><strong>Seasonal Product Strategy:</strong> Consider if draft/seasonal products need complete data or can remain minimal</li>
-                        <li><strong>Content Strategy:</strong> Focus on enhancing content for active products rather than completing data for inactive ones</li>
-                    </ol>
+                <h3>Immediate Actions (0-30 days)</h3>
+                <div class="alert success">
+                    <strong>Strong Data Foundation:</strong> 90%+ completion rates for critical fields indicate excellent data quality. Focus on completing the remaining 8-9% for maximum impact.
+                </div>
+                <ol>
+                    <li><strong>Content Enhancement:</strong> Complete product description metaobjects for 8% missing products (highest impact opportunity)</li>
+                    <li><strong>Product Highlights:</strong> Complete custom.product_highlights for 8% missing products (1,114 products)</li>
+                    <li><strong>Google Shopping Optimization:</strong> Complete age_group, gender, and condition metafields for 9% missing products</li>
+                    <li><strong>Product Tag Optimization:</strong> Improve tagging consistency for better internal organization</li>
+                </ol>
                     
                     <h3>Medium-Term Improvements (30-90 days)</h3>
                     <div class="alert info">
