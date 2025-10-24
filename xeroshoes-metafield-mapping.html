@@ -7,6 +7,82 @@
     <title>Metafield Mapping - XeroShoes Documentation</title>
     <link rel="stylesheet" href="arcadia-style.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        /* Horizontal TOC for metafield mapping page */
+        .horizontal-toc {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .horizontal-toc h3 {
+            margin: 0 0 1rem 0;
+            color: #0F172B;
+            font-size: 1.1rem;
+        }
+        
+        .horizontal-toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .horizontal-toc li {
+            margin: 0;
+        }
+        
+        .horizontal-toc a {
+            color: #53CAEC;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background: white;
+            border: 1px solid #e9ecef;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        
+        .horizontal-toc a:hover {
+            background: #53CAEC;
+            color: white;
+            border-color: #53CAEC;
+        }
+        
+        /* Full width content for tables */
+        .full-width-content {
+            width: 100%;
+            max-width: none;
+        }
+        
+        /* Responsive table improvements */
+        .data-table {
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            white-space: nowrap;
+        }
+        
+        .data-table table {
+            width: 100%;
+            min-width: 800px;
+        }
+        
+        @media (max-width: 768px) {
+            .horizontal-toc ul {
+                flex-direction: column;
+            }
+            
+            .horizontal-toc a {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Include Header -->
@@ -14,25 +90,24 @@
     
     <div class="container">
         <h1>Metafield Mapping - US to EU</h1>
+        
+        <!-- Horizontal TOC Navigation -->
+        <nav class="horizontal-toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#namespace-differences">Namespace Differences</a></li>
+                <li><a href="#shared-metafields">Shared Metafields</a></li>
+                <li><a href="#us-only-metafields">US-Only Metafields</a></li>
+                <li><a href="#namespace-mapped-metafields">Namespace-Mapped Metafields</a></li>
+                <li><a href="#variant-metafields">Variant Metafields</a></li>
+                <li><a href="#app-metafields">App Metafields</a></li>
+                <li><a href="#data-mapping-process">Data Mapping Process</a></li>
+                <li><a href="#implementation-notes">Implementation Notes</a></li>
+            </ul>
+        </nav>
 
-        <div class="two-column-layout">
-            <!-- Table of Contents -->
-            <nav class="toc-sidebar">
-                <h3>Table of Contents</h3>
-                <ul>
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#namespace-differences">Namespace Differences</a></li>
-                    <li><a href="#shared-metafields">Shared Metafields</a></li>
-                    <li><a href="#us-only-metafields">US-Only Metafields</a></li>
-                    <li><a href="#namespace-mapped-metafields">Namespace-Mapped Metafields</a></li>
-                    <li><a href="#variant-metafields">Variant Metafields</a></li>
-                    <li><a href="#app-metafields">App Metafields</a></li>
-                    <li><a href="#data-mapping-process">Data Mapping Process</a></li>
-                    <li><a href="#implementation-notes">Implementation Notes</a></li>
-                </ul>
-            </nav>
-
-            <main class="main-content">
+        <main class="full-width-content">
                 <section id="overview">
                     <h2>Overview</h2>
                     <p>This document provides a comprehensive mapping between metafields used on the US XeroShoes site (xeroshoes.com) and the EU XeroShoes site (shopxeroshoes-eu.myshopify.com). The analysis reveals significant differences in metafield availability and namespace conventions:</p>
@@ -814,8 +889,7 @@
                         </ul>
                     </div>
                 </section>
-            </main>
-        </div>
+        </main>
     </div>
     
     <!-- Include Footer -->
