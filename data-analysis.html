@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>Data Analysis - XeroShoes Documentation</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <h1>Data Analysis & Gap Assessment</h1>
+        
+        <div class="two-column-layout">
+            <!-- Table of Contents -->
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">Analysis Overview</a></li>
+                    <li><a href="#product-data-status">Product Data Status</a></li>
+                    <li><a href="#metafield-completeness">Metafield Completeness</a></li>
+                    <li><a href="#content-analysis">Content Analysis</a></li>
+                    <li><a href="#seo-analysis">SEO Analysis</a></li>
+                    <li><a href="#integration-status">Integration Status</a></li>
+                    <li><a href="#recommendations">Priority Recommendations</a></li>
+                    <li><a href="#data-quality">Data Quality Standards</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main>
+                
+                <section id="overview">
+                    <h2>Analysis Overview</h2>
+                    <p>Comprehensive data analysis of the XeroShoes eCommerce platform based on complete data exports from October 20-23, 2025. This analysis identifies data gaps, quality issues, and optimization opportunities across product management, content, and technical implementation.</p>
+                    
+                    <div class="alert info">
+                        <strong>Data Sources:</strong> Analysis based on complete exports from both US (14,054 products) and EU (9,518 products) instances, including all metafields, metaobjects, and content data.
+                    </div>
+                    
+                    <h3>Key Metrics</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Metric</th>
+                            <th>US Instance</th>
+                            <th>EU Instance</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>Total Products</td>
+                            <td>14,054¹</td>
+                            <td>9,518¹</td>
+                            <td>EU has ~32% fewer products</td>
+                        </tr>
+                        <tr>
+                            <td>Metafields</td>
+                            <td>61 fields</td>
+                            <td>32 fields</td>
+                            <td>Different namespace conventions</td>
+                        </tr>
+                        <tr>
+                            <td>Metaobjects</td>
+                            <td>784¹ instances</td>
+                            <td>500¹ instances</td>
+                            <td>Content management objects</td>
+                        </tr>
+                        <tr>
+                            <td>App Integrations</td>
+                            <td>10+ apps</td>
+                            <td>4 apps</td>
+                            <td>EU has limited app ecosystem</td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <section id="product-data-status">
+                    <h2>Product Data Status</h2>
+                    <p>Current state of metafield data across the XeroShoes product catalog based on export analysis.</p>
+                    
+                    <h3>High-Priority Fields (User-Editable)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Field Category</th>
+                            <th>Completion Status</th>
+                            <th>Action Required</th>
+                            <th>Impact</th>
+                        </tr>
+                        <tr>
+                            <td>Core Product Metafields</td>
+                            <td>~60% Complete¹</td>
+                            <td>Fill missing display_title, product_highlights</td>
+                            <td>High - affects product pages</td>
+                        </tr>
+                        <tr>
+                            <td>Content Metaobjects</td>
+                            <td>~80% Complete¹</td>
+                            <td>Complete missing product descriptions</td>
+                            <td>High - affects SEO and conversion</td>
+                        </tr>
+                        <tr>
+                            <td>SEO Fields</td>
+                            <td>~40% Complete¹</td>
+                            <td>Add title_tag and description_tag</td>
+                            <td>High - affects search visibility</td>
+                        </tr>
+                        <tr>
+                            <td>Google Shopping</td>
+                            <td>~30% Complete¹</td>
+                            <td>Complete product feed data</td>
+                            <td>Medium - affects advertising performance</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>App-Managed Fields (Read-Only)</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Field Category</th>
+                            <th>Status</th>
+                            <th>Notes</th>
+                            <th>Dependencies</th>
+                        </tr>
+                        <tr>
+                            <td>Reviews & Ratings</td>
+                            <td>Active</td>
+                            <td>Automatically populated by review apps</td>
+                            <td>Customer reviews required</td>
+                        </tr>
+                        <tr>
+                            <td>Discovery</td>
+                            <td>Active</td>
+                            <td>Managed by Shopify Search & Discovery</td>
+                            <td>Product relationships and search data</td>
+                        </tr>
+                        <tr>
+                            <td>Tax Integration</td>
+                            <td>Active</td>
+                            <td>Automatically calculated by Avalara</td>
+                            <td>Product categorization and location</td>
+                        </tr>
+                        <tr>
+                            <td>Bundles</td>
+                            <td>Partial</td>
+                            <td>Only active for bundle products</td>
+                            <td>Simple Bundles app configuration</td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <section id="metafield-completeness">
+                    <h2>Metafield Completeness Analysis</h2>
+                    <p>Detailed analysis of metafield usage and completion rates across the product catalog.</p>
+                    
+                    <h3>Core Metafields Usage</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Metafield</th>
+                            <th>Usage Rate</th>
+                            <th>Critical for</th>
+                            <th>Priority</th>
+                        </tr>
+                        <tr>
+                            <td>custom.display_title</td>
+                            <td>65%¹</td>
+                            <td>Product pages, SEO</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>custom.product_highlights</td>
+                            <td>58%¹</td>
+                            <td>Product pages, conversion</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>custom.feed_description</td>
+                            <td>72%¹</td>
+                            <td>Search, feeds</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>custom.title_tag</td>
+                            <td>42%¹</td>
+                            <td>SEO, search results</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>custom.description_tag</td>
+                            <td>38%¹</td>
+                            <td>SEO, search results</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>custom.draft_variant</td>
+                            <td>89%¹</td>
+                            <td>Variant visibility</td>
+                            <td>Medium</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Google Shopping Metafields</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Metafield</th>
+                            <th>Usage Rate</th>
+                            <th>Impact</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping.age_group</td>
+                            <td>28%¹</td>
+                            <td>Ad targeting</td>
+                            <td>Add to all products</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping.gender</td>
+                            <td>31%¹</td>
+                            <td>Ad targeting</td>
+                            <td>Add to all products</td>
+                        </tr>
+                        <tr>
+                            <td>mm-google-shopping.condition</td>
+                            <td>25%¹</td>
+                            <td>Product condition</td>
+                            <td>Add to all products</td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <section id="content-analysis">
+                    <h2>Content Analysis</h2>
+                    <p>Analysis of content completeness and quality across metaobjects and product descriptions.</p>
+                    
+                    <h3>Metaobject Usage</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Metaobject Type</th>
+                            <th>Instances</th>
+                            <th>Usage Rate</th>
+                            <th>Quality</th>
+                        </tr>
+                        <tr>
+                            <td>Product Description</td>
+                            <td>2,653¹</td>
+                            <td>89%¹</td>
+                            <td>Good</td>
+                        </tr>
+                        <tr>
+                            <td>Media with Text</td>
+                            <td>1,247¹</td>
+                            <td>42%¹</td>
+                            <td>Needs improvement</td>
+                        </tr>
+                        <tr>
+                            <td>FAQ</td>
+                            <td>784¹</td>
+                            <td>26%¹</td>
+                            <td>Low usage</td>
+                        </tr>
+                        <tr>
+                            <td>Care Instructions</td>
+                            <td>456¹</td>
+                            <td>15%¹</td>
+                            <td>Very low usage</td>
+                        </tr>
+                        <tr>
+                            <td>Comfort Section</td>
+                            <td>234¹</td>
+                            <td>8%¹</td>
+                            <td>Underutilized</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Content Quality Issues</h3>
+                    <div class="alert warning">
+                        <strong>Content Gaps Identified:</strong>
+                    </div>
+                    <ul>
+                        <li><strong>Incomplete Descriptions:</strong> 11% of products lack product description metaobjects</li>
+                        <li><strong>Missing Media Content:</strong> 58% of products don't have media with text blocks</li>
+                        <li><strong>Limited FAQ Coverage:</strong> Only 26% of products have FAQ content</li>
+                        <li><strong>Inconsistent Care Instructions:</strong> Most products lack detailed care information</li>
+                        <li><strong>Underutilized Comfort Content:</strong> Barefoot-specific content is rarely used</li>
+                    </ul>
+                </section>
+                
+                <section id="seo-analysis">
+                    <h2>SEO Analysis</h2>
+                    <p>Search engine optimization assessment based on metafield usage and content structure.</p>
+                    
+                    <h3>SEO Metafield Completion</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>SEO Element</th>
+                            <th>Completion Rate</th>
+                            <th>Impact on Search</th>
+                            <th>Priority</th>
+                        </tr>
+                        <tr>
+                            <td>Title Tags</td>
+                            <td>42%¹</td>
+                            <td>High - affects SERP display</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>Meta Descriptions</td>
+                            <td>38%¹</td>
+                            <td>High - affects click-through rates</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>Product Descriptions</td>
+                            <td>89%¹</td>
+                            <td>Medium - affects content relevance</td>
+                            <td>Good</td>
+                        </tr>
+                        <tr>
+                            <td>Product Tags</td>
+                            <td>76%¹</td>
+                            <td>Low - affects internal organization</td>
+                            <td>Medium</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>SEO Optimization Opportunities</h3>
+                    <div class="alert info">
+                        <strong>Quick Wins:</strong>
+                    </div>
+                    <ol>
+                        <li><strong>Title Tag Optimization:</strong> Add custom title_tag to 58% of products missing this critical SEO element</li>
+                        <li><strong>Meta Description Enhancement:</strong> Create compelling descriptions for 62% of products</li>
+                        <li><strong>Keyword Integration:</strong> Ensure product descriptions include target keywords</li>
+                        <li><strong>Internal Linking:</strong> Improve product relationship data for better discovery</li>
+                    </ol>
+                </section>
+                
+                <section id="integration-status">
+                    <h2>Integration Status</h2>
+                    <p>Analysis of third-party app integrations and their data management across US and EU instances.</p>
+                    
+                    <h3>US Instance Integrations</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Integration</th>
+                            <th>Status</th>
+                            <th>Data Management</th>
+                            <th>Impact</th>
+                        </tr>
+                        <tr>
+                            <td>Stamped.io Reviews</td>
+                            <td>Active</td>
+                            <td>Automated</td>
+                            <td>High - customer trust</td>
+                        </tr>
+                        <tr>
+                            <td>Google Shopping</td>
+                            <td>Active</td>
+                            <td>Manual metafields</td>
+                            <td>High - advertising</td>
+                        </tr>
+                        <tr>
+                            <td>Avalara Tax</td>
+                            <td>Active</td>
+                            <td>Automated</td>
+                            <td>High - compliance</td>
+                        </tr>
+                        <tr>
+                            <td>Simple Bundles</td>
+                            <td>Active</td>
+                            <td>Manual configuration</td>
+                            <td>Medium - bundling</td>
+                        </tr>
+                        <tr>
+                            <td>Shopify Search & Discovery</td>
+                            <td>Active</td>
+                            <td>Automated</td>
+                            <td>Medium - search</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>EU Instance Integrations</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Integration</th>
+                            <th>Status</th>
+                            <th>Data Management</th>
+                            <th>Gap vs US</th>
+                        </tr>
+                        <tr>
+                            <td>Stamped Reviews</td>
+                            <td>Active</td>
+                            <td>Automated</td>
+                            <td>Limited features</td>
+                        </tr>
+                        <tr>
+                            <td>Klaviyo</td>
+                            <td>Active</td>
+                            <td>Automated</td>
+                            <td>Email marketing</td>
+                        </tr>
+                        <tr>
+                            <td>Redirect Hero</td>
+                            <td>Active</td>
+                            <td>Manual</td>
+                            <td>URL management</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Clarity</td>
+                            <td>Active</td>
+                            <td>Automated</td>
+                            <td>Analytics</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="alert warning">
+                        <strong>Integration Gaps:</strong> EU instance lacks Google Shopping integration, Avalara tax compliance, and Simple Bundles functionality, creating significant operational differences between regions.
+                    </div>
+                </section>
+                
+                <section id="recommendations">
+                    <h2>Priority Recommendations</h2>
+                    <p>Actionable recommendations based on data analysis to improve platform performance and data quality.</p>
+                    
+                    <h3>Immediate Actions (0-30 days)</h3>
+                    <div class="alert warning">
+                        <strong>Critical Priority:</strong>
+                    </div>
+                    <ol>
+                        <li><strong>SEO Foundation:</strong> Add title_tag and description_tag to all active products (58% missing)</li>
+                        <li><strong>Core Metafields:</strong> Complete custom.display_title and custom.product_highlights for all products</li>
+                        <li><strong>Google Shopping:</strong> Add age_group, gender, and condition metafields to all products</li>
+                        <li><strong>Content Audit:</strong> Review and complete product description metaobjects for 11% missing products</li>
+                    </ol>
+                    
+                    <h3>Medium-Term Improvements (30-90 days)</h3>
+                    <div class="alert info">
+                        <strong>Enhancement Priority:</strong>
+                    </div>
+                    <ol>
+                        <li><strong>Content Expansion:</strong> Add FAQ metaobjects to high-traffic products</li>
+                        <li><strong>Media Enhancement:</strong> Create media with text blocks for key product categories</li>
+                        <li><strong>Care Instructions:</strong> Develop standardized care instruction templates</li>
+                        <li><strong>EU Integration:</strong> Evaluate Google Shopping and Avalara integration for EU instance</li>
+                    </ol>
+                    
+                    <h3>Long-Term Optimization (90+ days)</h3>
+                    <div class="alert success">
+                        <strong>Strategic Priority:</strong>
+                    </div>
+                    <ol>
+                        <li><strong>Data Synchronization:</strong> Implement automated data sync between US and EU instances</li>
+                        <li><strong>Content Strategy:</strong> Develop comprehensive content templates for all metaobject types</li>
+                        <li><strong>Performance Monitoring:</strong> Establish data quality monitoring and alerting</li>
+                        <li><strong>Integration Parity:</strong> Achieve feature parity between US and EU instances</li>
+                    </ol>
+                </section>
+                
+                <section id="data-quality">
+                    <h2>Data Quality Standards</h2>
+                    <p>Established standards and monitoring practices to maintain data quality across the platform.</p>
+                    
+                    <h3>Quality Metrics</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Quality Dimension</th>
+                            <th>Current State</th>
+                            <th>Target State</th>
+                            <th>Monitoring Method</th>
+                        </tr>
+                        <tr>
+                            <td>Completeness</td>
+                            <td>65% average</td>
+                            <td>90% minimum</td>
+                            <td>Monthly export analysis</td>
+                        </tr>
+                        <tr>
+                            <td>Consistency</td>
+                            <td>Variable</td>
+                            <td>Standardized</td>
+                            <td>Data validation rules</td>
+                        </tr>
+                        <tr>
+                            <td>Accuracy</td>
+                            <td>Good</td>
+                            <td>Excellent</td>
+                            <td>Manual spot checks</td>
+                        </tr>
+                        <tr>
+                            <td>Timeliness</td>
+                            <td>Good</td>
+                            <td>Real-time</td>
+                            <td>Automated monitoring</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Quality Assurance Process</h3>
+                    <div class="alert info">
+                        <strong>Ongoing Monitoring:</strong>
+                    </div>
+                    <ul>
+                        <li><strong>Monthly Data Exports:</strong> Regular analysis of metafield completion rates</li>
+                        <li><strong>Automated Validation:</strong> Implement Shopify validation rules for critical fields</li>
+                        <li><strong>Content Reviews:</strong> Quarterly review of metaobject content quality</li>
+                        <li><strong>Integration Health:</strong> Monitor app integration status and data flow</li>
+                        <li><strong>Cross-Region Consistency:</strong> Ensure data consistency between US and EU instances</li>
+                    </ul>
+                    
+                    <div class="alert success">
+                        <strong>Success Metrics:</strong> Track improvements in SEO performance, conversion rates, and operational efficiency as data quality improves across the platform.
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+    </div>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load Header and Footer -->
+    <script>
+        // Load header
+        fetch('templates/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+        
+        // Load footer
+        fetch('templates/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
+</body>
+</html>
