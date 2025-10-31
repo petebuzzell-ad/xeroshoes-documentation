@@ -480,8 +480,9 @@ const uniqueSegments = getUniqueSegments(data.items);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Performance Analysis & Remediation</title>
-  <link rel="stylesheet" href="../arcadia-style.css">
+  <link rel="stylesheet" href="arcadia-style.css">
   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/webp" href="assets/favicon.webp">
   <style>
     .badge{display:inline-block;padding:2px 6px;border-radius:4px;background:#e0e0e0;font-size:12px}
     .badge.success{background:#d2f2e3;color:#0a6c3e}
@@ -750,8 +751,8 @@ const uniqueSegments = getUniqueSegments(data.items);
 
   <script>
     // Load header/footer
-    fetch('../templates/header.html').then(r=>r.text()).then(html=>{document.getElementById('header-placeholder').innerHTML=html});
-    fetch('../templates/footer.html').then(r=>r.text()).then(html=>{document.getElementById('footer-placeholder').innerHTML=html});
+    fetch('templates/header.html').then(r=>r.text()).then(html=>{document.getElementById('header-placeholder').innerHTML=html}).catch(e=>console.error('Error loading header:',e));
+    fetch('templates/footer.html').then(r=>r.text()).then(html=>{document.getElementById('footer-placeholder').innerHTML=html}).catch(e=>console.error('Error loading footer:',e));
     
     // Table sorting and filtering
     (function() {

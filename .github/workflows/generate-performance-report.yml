@@ -1,0 +1,93 @@
+name: Generate Performance Report
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/performance/**'
+      - 'data/performance/**'
+      - '.github/workflows/generate-performance-report.yml'
+  workflow_dispatch: # Allows manual triggering
+  schedule:
+    # Run daily at 2 AM UTC (9 PM EST previous day)
+    - cron: '0 2 * * *'
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed to commit the generated report
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: tools/performance/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: tools/performance
+        run: npm ci
+      
+      - name: Create config.json
+        working-directory: tools/performance
+        run: |
+          cat > config.json << EOF
+          {
+            "calibre": {
+              "apiToken": "${{ secrets.CALIBRE_API_TOKEN }}"
+            },
+            "googlePagespeed": {
+              "apiKey": "${{ secrets.GOOGLE_PSI_API_KEY }}",
+              "minUrgency": "high",
+              "maxPages": 10,
+              "strategy": "mobile"
+            }
+          }
+          EOF
+      
+      - name: Generate performance report
+        working-directory: tools/performance
+        run: npm run build
+        env:
+          # Calibre site slug - set in GitHub secrets if different from default
+          CALIBRE_SITE_SLUG: ${{ secrets.CALIBRE_SITE_SLUG || 'xeroshoes' }}
+      
+      - name: Verify report was generated
+        run: |
+          if [ ! -f performance-analysis.html ]; then
+            echo "❌ Report not found at performance-analysis.html"
+            echo "Checking alternative locations..."
+            ls -la tools/performance/out/ || true
+            ls -la data/performance/out/ || true
+            exit 1
+          else
+            echo "✅ Report found at performance-analysis.html"
+            ls -lh performance-analysis.html
+          fi
+      
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain performance-analysis.html)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit generated report
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add performance-analysis.html
+          git commit -m "chore: auto-generate performance analysis report [skip ci]" || exit 0
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

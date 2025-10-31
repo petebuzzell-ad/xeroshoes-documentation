@@ -1,81 +1,121 @@
 # Performance Analysis Tools
 
-Tools to merge Shopify Core Web Vitals data with Calibre performance metrics and generate actionable HTML reports.
+Tools to merge Shopify Core Web Vitals data with Calibre synthetic monitoring metrics and generate an actionable HTML performance report.
 
 ## Setup
 
+### Local Development
+
 1. **Install dependencies:**
    ```bash
+   cd tools/performance
    npm install
    ```
 
 2. **Configure API keys:**
    ```bash
    cp config.example.json config.json
+   # Edit config.json with your API keys
    ```
-   
-   Then edit `config.json` and add your actual API keys:
-   - Calibre API token
-   - Google PageSpeed Insights API key (optional, for future features)
-   - Calibre site slug/ID
 
-   > **Note:** `config.json` is gitignored and will not be committed. Only `config.example.json` is tracked in the repository.
+3. **Ensure Shopify data is in place:**
+   - Place Shopify JSONL exports in `data/performance/`
+   - Required files:
+     - `Largest Contentful Paint (LCP)_ Page URL - *.jsonl`
+     - `Cumulative Layout Shift (CLS)_ Page URL - *.jsonl`
+     - `Interaction to Next Paint (INP)_ Page URL - *.jsonl`
+     - `Largest Contentful Paint (LCP)_ Page Type - *.jsonl`
+     - `Cumulative Layout Shift (CLS)_ Page Type - *.jsonl`
+     - `Interaction to Next Paint (INP)_ Page Type - *.jsonl`
+     - `Largest Contentful Paint (LCP)_ Over Time - *.jsonl`
+     - `Cumulative Layout Shift (CLS)_ Over Time - *.jsonl`
+     - `Interaction to Next Paint (INP)_ Over Time - *.jsonl`
+     - `Sessions by device type - *.jsonl`
 
-3. **Run the analysis:**
+4. **Generate report:**
    ```bash
-   npm run all
+   npm run build
    ```
 
-   This will:
-   - Parse Shopify Core Web Vitals data
-   - Fetch Calibre TimeSeries metrics
-   - Fetch Calibre point-in-time metrics
-   - Fetch Lighthouse audits (when available)
-   - Merge all data sources
-   - Generate `performance-analysis.html`
+   Or run individual steps:
+   ```bash
+   npm run parse:shopify    # Parse Shopify JSONL files
+   npm run timeseries      # Fetch Calibre TimeSeries data
+   npm run fetch:calibre   # Fetch Calibre per-page metrics
+   npm run merge           # Merge all data sources
+   npm run report          # Generate HTML report
+   ```
 
-## Configuration
+## GitHub Actions Automation
 
-### config.json Structure
+The report is automatically generated on:
+- **Every push** to `main` (if performance tooling or data files change)
+- **Daily at 2 AM UTC** (scheduled run)
+- **Manual trigger** via GitHub Actions UI
 
-```json
-{
-  "calibre": {
-    "token": "your-calibre-api-token",
-    "site": "your-site-slug",
-    "siteId": null,
-    "pageUuids": ""
-  },
-  "googlePagespeed": {
-    "apiKey": "your-google-pagespeed-api-key"
-  },
-  "settings": {
-    "timeseriesDays": 7,
-    "snapshotCount": 10
-  }
-}
-```
+### Required GitHub Secrets
 
-### Environment Variable Fallback
+Configure these in your repository settings (`Settings > Secrets and variables > Actions`):
 
-Scripts will fall back to environment variables if `config.json` is not found:
-- `CALIBRE_TOKEN` or `CALIBRE_API_TOKEN`
-- `CALIBRE_SITE` or `CALIBRE_SITE_ID`
-- `GOOGLE_PAGESPEED_API_KEY`
+1. **`CALIBRE_API_TOKEN`** (required)
+   - Your Calibre API token with read access
+   - Get it from: https://calibreapp.com/api-keys
 
-## Scripts
+2. **`GOOGLE_PSI_API_KEY`** (optional but recommended)
+   - Google PageSpeed Insights API key
+   - Get it from: https://developers.google.com/speed/docs/insights/v5/get-started
+   - Used for critical page deep-dive analysis
 
-- `npm run all` - Run the complete pipeline
-- `npm run parse:shopify` - Parse Shopify CWV JSONL files
-- `npm run fetch:calibre` - Fetch Calibre point-in-time metrics
-- `npm run timeseries` - Fetch Calibre TimeSeries data
-- `npm run merge` - Merge Shopify and Calibre data
-- `npm run report` - Generate HTML report
-- `npm run sites` - List available Calibre sites
-- `npm run snapshots` - List Calibre snapshots
+3. **`CALIBRE_SITE_SLUG`** (optional)
+   - Calibre site slug (defaults to `xeroshoes`)
+   - Only needed if different from default
+
+### Workflow Behavior
+
+- The workflow automatically:
+  1. Installs dependencies
+  2. Creates `config.json` from GitHub secrets
+  3. Runs the full build pipeline
+  4. Commits the generated `performance-analysis.html` back to the repo
+  5. Skips CI on the commit (`[skip ci]`) to avoid loops
+
+- The workflow only commits if the report actually changed (checks git diff)
+
+### Updating Shopify Data
+
+When you export new Shopify Core Web Vitals data:
+
+1. Place new JSONL files in `data/performance/`
+2. Commit and push
+3. The workflow will automatically regenerate the report
+
+Or trigger manually:
+1. Go to **Actions** tab in GitHub
+2. Select **Generate Performance Report**
+3. Click **Run workflow**
 
 ## Output
 
-- `data/performance/out/merged.json` - Merged performance data
-- `performance-analysis.html` - Interactive HTML report with filtering and sorting
+The generated `performance-analysis.html` includes:
+- **Quick-link dashboard** with key stats
+- **Segment rollups** (weighted averages by page type)
+- **7-day performance trends** with distribution charts
+- **Page-level details** with actionable remediation recommendations
+- **Data source transparency** (footnotes, methodology)
 
+## Troubleshooting
+
+**Report not updating:**
+- Check GitHub Actions logs for errors
+- Verify API tokens are set correctly in GitHub Secrets
+- Ensure Shopify data files are present in `data/performance/`
+
+**Missing Calibre data:**
+- Verify `CALIBRE_API_TOKEN` is valid
+- Check that the site slug matches your Calibre site
+- API rate limits may prevent full data fetch (check logs)
+
+**Missing PSI data:**
+- Verify `GOOGLE_PSI_API_KEY` is set (optional)
+- PSI only runs for critical pages to conserve API quota
+- Build will continue without PSI if fetch fails
