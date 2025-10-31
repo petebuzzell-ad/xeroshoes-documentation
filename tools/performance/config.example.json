@@ -1,0 +1,20 @@
+{
+  "_comment": "Copy this file to config.json and fill in your actual API keys. config.json is gitignored and will not be committed.",
+  "calibre": {
+    "token": "YOUR_CALIBRE_API_TOKEN_HERE",
+    "site": "your-site-slug",
+    "siteId": null,
+    "pageUuids": ""
+  },
+  "googlePagespeed": {
+    "apiKey": "YOUR_GOOGLE_PAGESPEED_INSIGHTS_API_KEY_HERE",
+    "minUrgency": "critical",
+    "maxPages": 50,
+    "strategy": "mobile"
+  },
+  "settings": {
+    "timeseriesDays": 7,
+    "snapshotCount": 10
+  }
+}
+

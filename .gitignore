@@ -46,6 +46,9 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Performance tools config (contains API keys)
+tools/performance/config.json
+
 # Cache directories
 .cache/
 .parcel-cache/

@@ -1,0 +1,26 @@
+{
+  "totalSessions": 161982,
+  "totalVisitors": 134761,
+  "byDevice": {
+    "mobile": {
+      "sessions": 113835,
+      "visitors": 93428,
+      "sessionPercent": "70.3"
+    },
+    "desktop": {
+      "sessions": 46029,
+      "visitors": 39546,
+      "sessionPercent": "28.4"
+    },
+    "tablet": {
+      "sessions": 2114,
+      "visitors": 1783,
+      "sessionPercent": "1.3"
+    },
+    "other": {
+      "sessions": 4,
+      "visitors": 4,
+      "sessionPercent": "0.0"
+    }
+  }
+}

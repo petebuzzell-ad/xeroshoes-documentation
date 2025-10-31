@@ -1,0 +1,10 @@
+{"page_type":"product","percent_of_page_loads":0.502,"page_loads":"44481","inp_p75_ms":272,"inp_distribution":["15259","9298","4832","1129"]}
+{"page_type":"collection","percent_of_page_loads":0.3,"page_loads":"26558","inp_p75_ms":160,"inp_distribution":["12737","10657","1576","504"]}
+{"page_type":"index","percent_of_page_loads":0.111,"page_loads":"9799","inp_p75_ms":128,"inp_distribution":["4342","3864","350","128"]}
+{"page_type":"page","percent_of_page_loads":0.058,"page_loads":"5148","inp_p75_ms":112,"inp_distribution":["1971","1773","143","55"]}
+{"page_type":"search","percent_of_page_loads":0.016,"page_loads":"1433","inp_p75_ms":104,"inp_distribution":["734","681","39","14"]}
+{"page_type":"article","percent_of_page_loads":0.006,"page_loads":"550","inp_p75_ms":112,"inp_distribution":["161","139","17","5"]}
+{"page_type":"404","percent_of_page_loads":0.005,"page_loads":"404","inp_p75_ms":120,"inp_distribution":["146","129","13","4"]}
+{"page_type":"cart","percent_of_page_loads":0.001,"page_loads":"129","inp_p75_ms":98,"inp_distribution":["68","66","1","1"]}
+{"page_type":"blog","percent_of_page_loads":0.001,"page_loads":"69","inp_p75_ms":72,"inp_distribution":["39","36","1","2"]}
+{"page_type":"list-collections","percent_of_page_loads":0,"page_loads":"1","inp_p75_ms":0,"inp_distribution":["0","0","0","0"]}

@@ -1,0 +1,248 @@
+{
+  "LCP": [
+    {
+      "day": "2025-10-23",
+      "value": 2.488,
+      "distribution": {
+        "good": 7319,
+        "needsImprovement": 5524,
+        "poor": 1242,
+        "unknown": 553
+      }
+    },
+    {
+      "day": "2025-10-24",
+      "value": 2.487,
+      "distribution": {
+        "good": 5843,
+        "needsImprovement": 4406,
+        "poor": 978,
+        "unknown": 459
+      }
+    },
+    {
+      "day": "2025-10-25",
+      "value": 2.388,
+      "distribution": {
+        "good": 6544,
+        "needsImprovement": 5094,
+        "poor": 1015,
+        "unknown": 435
+      }
+    },
+    {
+      "day": "2025-10-26",
+      "value": 2.464,
+      "distribution": {
+        "good": 6968,
+        "needsImprovement": 5285,
+        "poor": 1188,
+        "unknown": 495
+      }
+    },
+    {
+      "day": "2025-10-27",
+      "value": 2.56,
+      "distribution": {
+        "good": 8051,
+        "needsImprovement": 5935,
+        "poor": 1453,
+        "unknown": 663
+      }
+    },
+    {
+      "day": "2025-10-28",
+      "value": 3.288,
+      "distribution": {
+        "good": 5051,
+        "needsImprovement": 3104,
+        "poor": 1064,
+        "unknown": 883
+      }
+    },
+    {
+      "day": "2025-10-29",
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "day": "2025-10-30",
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    }
+  ],
+  "CLS": [
+    {
+      "day": "2025-10-23",
+      "value": 0.01,
+      "distribution": {
+        "good": 7327,
+        "needsImprovement": 6654,
+        "poor": 302,
+        "unknown": 371
+      }
+    },
+    {
+      "day": "2025-10-24",
+      "value": 0.01,
+      "distribution": {
+        "good": 5841,
+        "needsImprovement": 5322,
+        "poor": 204,
+        "unknown": 315
+      }
+    },
+    {
+      "day": "2025-10-25",
+      "value": 0.01,
+      "distribution": {
+        "good": 6609,
+        "needsImprovement": 6029,
+        "poor": 217,
+        "unknown": 363
+      }
+    },
+    {
+      "day": "2025-10-26",
+      "value": null,
+      "distribution": {
+        "good": 6945,
+        "needsImprovement": 6390,
+        "poor": 220,
+        "unknown": 335
+      }
+    },
+    {
+      "day": "2025-10-27",
+      "value": 0.01,
+      "distribution": {
+        "good": 7924,
+        "needsImprovement": 7246,
+        "poor": 266,
+        "unknown": 412
+      }
+    },
+    {
+      "day": "2025-10-28",
+      "value": 0.01,
+      "distribution": {
+        "good": 4981,
+        "needsImprovement": 4582,
+        "poor": 170,
+        "unknown": 229
+      }
+    },
+    {
+      "day": "2025-10-29",
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "day": "2025-10-30",
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    }
+  ],
+  "INP": [
+    {
+      "day": "2025-10-23",
+      "value": 0.2,
+      "distribution": {
+        "good": 6511,
+        "needsImprovement": 4921,
+        "poor": 1225,
+        "unknown": 365
+      }
+    },
+    {
+      "day": "2025-10-24",
+      "value": 0.208,
+      "distribution": {
+        "good": 5286,
+        "needsImprovement": 3938,
+        "poor": 1083,
+        "unknown": 265
+      }
+    },
+    {
+      "day": "2025-10-25",
+      "value": 0.208,
+      "distribution": {
+        "good": 5928,
+        "needsImprovement": 4410,
+        "poor": 1216,
+        "unknown": 302
+      }
+    },
+    {
+      "day": "2025-10-26",
+      "value": 0.208,
+      "distribution": {
+        "good": 6214,
+        "needsImprovement": 4580,
+        "poor": 1306,
+        "unknown": 328
+      }
+    },
+    {
+      "day": "2025-10-27",
+      "value": 0.208,
+      "distribution": {
+        "good": 7066,
+        "needsImprovement": 5298,
+        "poor": 1391,
+        "unknown": 377
+      }
+    },
+    {
+      "day": "2025-10-28",
+      "value": 0.184,
+      "distribution": {
+        "good": 4452,
+        "needsImprovement": 3496,
+        "poor": 751,
+        "unknown": 205
+      }
+    },
+    {
+      "day": "2025-10-29",
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "day": "2025-10-30",
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    }
+  ]
+}

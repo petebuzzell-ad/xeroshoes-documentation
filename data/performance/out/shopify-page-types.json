@@ -1,0 +1,338 @@
+{
+  "LCP": {
+    "404": {
+      "loads": 404,
+      "percent": 0.005,
+      "value": 3.307,
+      "distribution": {
+        "good": 222,
+        "needsImprovement": 139,
+        "poor": 40,
+        "unknown": 43
+      }
+    },
+    "product": {
+      "loads": 44481,
+      "percent": 0.502,
+      "value": 2.579,
+      "distribution": {
+        "good": 17879,
+        "needsImprovement": 13142,
+        "poor": 2579,
+        "unknown": 2158
+      }
+    },
+    "collection": {
+      "loads": 26558,
+      "percent": 0.3,
+      "value": 2.566,
+      "distribution": {
+        "good": 13489,
+        "needsImprovement": 9878,
+        "poor": 2891,
+        "unknown": 720
+      }
+    },
+    "index": {
+      "loads": 9799,
+      "percent": 0.111,
+      "value": 2.62,
+      "distribution": {
+        "good": 4769,
+        "needsImprovement": 3386,
+        "poor": 1044,
+        "unknown": 339
+      }
+    },
+    "page": {
+      "loads": 5148,
+      "percent": 0.058,
+      "value": 2.036,
+      "distribution": {
+        "good": 2313,
+        "needsImprovement": 1899,
+        "poor": 263,
+        "unknown": 151
+      }
+    },
+    "search": {
+      "loads": 1433,
+      "percent": 0.016,
+      "value": 2.26,
+      "distribution": {
+        "good": 734,
+        "needsImprovement": 596,
+        "poor": 92,
+        "unknown": 46
+      }
+    },
+    "article": {
+      "loads": 550,
+      "percent": 0.006,
+      "value": 1.915,
+      "distribution": {
+        "good": 250,
+        "needsImprovement": 221,
+        "poor": 11,
+        "unknown": 18
+      }
+    },
+    "cart": {
+      "loads": 129,
+      "percent": 0.001,
+      "value": 3.099,
+      "distribution": {
+        "good": 70,
+        "needsImprovement": 43,
+        "poor": 17,
+        "unknown": 10
+      }
+    },
+    "blog": {
+      "loads": 69,
+      "percent": 0.001,
+      "value": 1.582,
+      "distribution": {
+        "good": 50,
+        "needsImprovement": 44,
+        "poor": 3,
+        "unknown": 3
+      }
+    },
+    "list-collections": {
+      "loads": 1,
+      "percent": 0,
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "CLS": {
+    "404": {
+      "loads": 404,
+      "percent": 0.005,
+      "value": null,
+      "distribution": {
+        "good": 215,
+        "needsImprovement": 213,
+        "poor": 2,
+        "unknown": 0
+      }
+    },
+    "product": {
+      "loads": 44481,
+      "percent": 0.502,
+      "value": null,
+      "distribution": {
+        "good": 17538,
+        "needsImprovement": 17158,
+        "poor": 219,
+        "unknown": 161
+      }
+    },
+    "collection": {
+      "loads": 26558,
+      "percent": 0.3,
+      "value": 0.03,
+      "distribution": {
+        "good": 13739,
+        "needsImprovement": 11229,
+        "poor": 1013,
+        "unknown": 1497
+      }
+    },
+    "index": {
+      "loads": 9799,
+      "percent": 0.111,
+      "value": null,
+      "distribution": {
+        "good": 4672,
+        "needsImprovement": 4642,
+        "poor": 23,
+        "unknown": 7
+      }
+    },
+    "page": {
+      "loads": 5148,
+      "percent": 0.058,
+      "value": 0.03,
+      "distribution": {
+        "good": 2352,
+        "needsImprovement": 1921,
+        "poor": 91,
+        "unknown": 340
+      }
+    },
+    "search": {
+      "loads": 1433,
+      "percent": 0.016,
+      "value": 0.01,
+      "distribution": {
+        "good": 737,
+        "needsImprovement": 695,
+        "poor": 26,
+        "unknown": 16
+      }
+    },
+    "article": {
+      "loads": 550,
+      "percent": 0.006,
+      "value": 0.01,
+      "distribution": {
+        "good": 247,
+        "needsImprovement": 241,
+        "poor": 4,
+        "unknown": 2
+      }
+    },
+    "cart": {
+      "loads": 129,
+      "percent": 0.001,
+      "value": null,
+      "distribution": {
+        "good": 75,
+        "needsImprovement": 74,
+        "poor": 0,
+        "unknown": 1
+      }
+    },
+    "blog": {
+      "loads": 69,
+      "percent": 0.001,
+      "value": null,
+      "distribution": {
+        "good": 52,
+        "needsImprovement": 50,
+        "poor": 1,
+        "unknown": 1
+      }
+    },
+    "list-collections": {
+      "loads": 1,
+      "percent": 0,
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "INP": {
+    "404": {
+      "loads": 404,
+      "percent": 0.005,
+      "value": 0.12,
+      "distribution": {
+        "good": 146,
+        "needsImprovement": 129,
+        "poor": 13,
+        "unknown": 4
+      }
+    },
+    "product": {
+      "loads": 44481,
+      "percent": 0.502,
+      "value": 0.272,
+      "distribution": {
+        "good": 15259,
+        "needsImprovement": 9298,
+        "poor": 4832,
+        "unknown": 1129
+      }
+    },
+    "collection": {
+      "loads": 26558,
+      "percent": 0.3,
+      "value": 0.16,
+      "distribution": {
+        "good": 12737,
+        "needsImprovement": 10657,
+        "poor": 1576,
+        "unknown": 504
+      }
+    },
+    "index": {
+      "loads": 9799,
+      "percent": 0.111,
+      "value": 0.128,
+      "distribution": {
+        "good": 4342,
+        "needsImprovement": 3864,
+        "poor": 350,
+        "unknown": 128
+      }
+    },
+    "page": {
+      "loads": 5148,
+      "percent": 0.058,
+      "value": 0.112,
+      "distribution": {
+        "good": 1971,
+        "needsImprovement": 1773,
+        "poor": 143,
+        "unknown": 55
+      }
+    },
+    "search": {
+      "loads": 1433,
+      "percent": 0.016,
+      "value": 0.104,
+      "distribution": {
+        "good": 734,
+        "needsImprovement": 681,
+        "poor": 39,
+        "unknown": 14
+      }
+    },
+    "article": {
+      "loads": 550,
+      "percent": 0.006,
+      "value": 0.112,
+      "distribution": {
+        "good": 161,
+        "needsImprovement": 139,
+        "poor": 17,
+        "unknown": 5
+      }
+    },
+    "cart": {
+      "loads": 129,
+      "percent": 0.001,
+      "value": 0.098,
+      "distribution": {
+        "good": 68,
+        "needsImprovement": 66,
+        "poor": 1,
+        "unknown": 1
+      }
+    },
+    "blog": {
+      "loads": 69,
+      "percent": 0.001,
+      "value": 0.072,
+      "distribution": {
+        "good": 39,
+        "needsImprovement": 36,
+        "poor": 1,
+        "unknown": 2
+      }
+    },
+    "list-collections": {
+      "loads": 1,
+      "percent": 0,
+      "value": null,
+      "distribution": {
+        "good": 0,
+        "needsImprovement": 0,
+        "poor": 0,
+        "unknown": 0
+      }
+    }
+  }
+}

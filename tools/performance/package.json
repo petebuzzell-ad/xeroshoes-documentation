@@ -1,0 +1,24 @@
+{
+  "name": "xeroshoes-performance-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tools to merge Shopify performance CSVs with Calibre metrics and generate an HTML report",
+  "scripts": {
+    "build": "node scripts/build-report.js",
+    "fetch:calibre": "node scripts/fetch-calibre.js",
+    "parse:shopify": "node scripts/parse-shopify.js",
+    "merge": "node scripts/merge-metrics.js",
+    "report": "node scripts/generate-report.js",
+    "sites": "node scripts/list-calibre-sites.js",
+    "snapshots": "node scripts/list-calibre-snapshots.js",
+    "timeseries": "node scripts/fetch-timeseries.js",
+    "psi": "node scripts/fetch-google-psi.js",
+    "all": "node scripts/build-report.js"
+  },
+  "dependencies": {
+    "calibre": "^6.0.0",
+    "csv-parse": "^5.5.6"
+  }
+}
+
